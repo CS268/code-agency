@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JCODE Agency — Marketing Airbnb Automatisé par IA</title>
+    <meta name="description" content="JCODE Agency propulse votre location Airbnb avec 21 agents IA. Vidéos, prospection, copywriting — 100% automatisé. Package Teaser à 497€/mois.">
+    <meta name="keywords" content="marketing airbnb, agents IA, automatisation airbnb, conciergerie airbnb, prospection propriétaires">
+    <meta name="author" content="JCODE Agency">
+    <meta property="og:title" content="JCODE Agency — Marketing Airbnb Automatisé">
+    <meta property="og:description" content="21 agents IA travaillent pour votre Airbnb 24/7. Package Teaser à 497€.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jcode-agency.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://jcode-agency.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --accent: #f59e0b;
+            --accent-light: #fbbf24;
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --gray: #64748b;
+            --gray-light: #94a3b8;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --success: #10b981;
+            --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+            --gradient-2: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --shadow-glow: 0 0 40px -10px rgba(99, 102, 241, 0.4);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); }
+        }
+
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; opacity: 0; }
+        .animate-slide-left { animation: slideInLeft 0.8s ease-out forwards; opacity: 0; }
+        .animate-slide-right { animation: slideInRight 0.8s ease-out forwards; opacity: 0; }
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+        .delay-7 { animation-delay: 0.7s; }
+        .delay-8 { animation-delay: 0.8s; }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.4s ease;
+        }
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow);
+            padding: 0.75rem 0;
+        }
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+        .navbar.scrolled .logo { color: var(--dark); }
+        .logo-icon {
+            width: 36px; height: 36px;
+            background: var(--gradient-1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: white;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+        .navbar.scrolled .nav-links a { color: var(--gray); }
+        .nav-links a:hover { color: var(--white); }
+        .navbar.scrolled .nav-links a:hover { color: var(--primary); }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            background: var(--gradient-1);
+            color: white !important;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+        }
+        .nav-cta::after { display: none !important; }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .navbar.scrolled .mobile-menu-btn { color: var(--dark); }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            background: var(--gradient-2);
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        .hero-bg-pattern {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(217, 70, 239, 0.08) 0%, transparent 50%);
+        }
+        .hero-grid-lines {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        .hero-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: var(--primary-light);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        .hero-badge .dot {
+            width: 8px; height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        .hero-title .gradient-text {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 200%;
+            animation: gradientShift 4s ease infinite;
+        }
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-light);
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+            line-height: 1.7;
+        }
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--gradient-1);
+            color: white;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
+        }
+        .btn-secondary {
+            background: rgba(255,255,255,0.08);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+        }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-3px);
+        }
+        .hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .stat-item { text-align: left; }
+        .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: 0.25rem;
+        }
+
+        /* Hero Visual */
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 2rem;
+            backdrop-filter: blur(20px);
+            width: 100%;
+            max-width: 480px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: float 6s ease-in-out infinite;
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .card-avatar {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            background: var(--gradient-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .card-info h4 { color: white; font-size: 1rem; margin-bottom: 0.2rem; }
+        .card-info p { color: var(--gray); font-size: 0.85rem; }
+        .card-status {
+            margin-left: auto;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--success);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .card-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .metric-box {
+            background: rgba(255,255,255,0.04);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .metric-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        .metric-value.up { color: var(--success); }
+        .metric-label {
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-top: 0.3rem;
+        }
+        .card-chart {
+            height: 80px;
+            background: rgba(99, 102, 241, 0.08);
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+        .chart-line {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 100%;
+            background: linear-gradient(to top, rgba(99, 102, 241, 0.3), transparent);
+            clip-path: polygon(0% 80%, 15% 70%, 30% 75%, 45% 50%, 60% 55%, 75% 30%, 90% 35%, 100% 20%, 100% 100%, 0% 100%);
+        }
+        .floating-elements {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+        .float-el {
+            position: absolute;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            animation: float 4s ease-in-out infinite;
+        }
+        .float-el:nth-child(1) { top: 10%; right: -20px; animation-delay: 0s; }
+        .float-el:nth-child(2) { bottom: 20%; left: -30px; animation-delay: 1s; }
+        .float-el:nth-child(3) { top: 50%; right: -40px; animation-delay: 2s; }
+
+        /* ===== TRUST BAR ===== */
+        .trust-bar {
+            background: var(--dark);
+            padding: 2.5rem 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .trust-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        .trust-label {
+            color: var(--gray);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+        }
+        .trust-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            opacity: 0.5;
+        }
+        .trust-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--gray-light);
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            padding: 6rem 0;
+            background: var(--light);
+        }
+        .section-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .section-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 4rem;
+        }
+        .section-tag {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .section-subtitle {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--gradient-1);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-icon {
+            width: 56px; height: 56px;
+            background: var(--gradient-1);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        .service-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ===== OFFER / PRICING ===== */
+        .offer {
+            padding: 6rem 0;
+            background: var(--dark);
+            position: relative;
+            overflow: hidden;
+        }
+        .offer::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
+            animation: spin-slow 30s linear infinite;
+        }
+        .offer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        .offer-header { text-align: center; margin-bottom: 4rem; }
+        .offer-header .section-tag {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent-light);
+        }
+        .offer-header .section-title { color: var(--white); }
+        .offer-header .section-subtitle { color: var(--gray-light); }
+        .offer-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+            animation: glow 4s ease-in-out infinite;
+        }
+        .offer-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--primary), var(--accent));
+            background-size: 200% 100%;
+            animation: shimmer 3s linear infinite;
+        }
+        .offer-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        .offer-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        .offer-desc {
+            color: var(--gray-light);
+            margin-bottom: 2rem;
+        }
+        .offer-price {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .price-currency {
+            font-size: 1.5rem;
+            color: var(--gray-light);
+            font-weight: 600;
+        }
+        .price-amount {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1;
+        }
+        .price-period { color: var(--gray); font-size: 1rem; }
+        .offer-features {
+            list-style: none;
+            margin-bottom: 2.5rem;
+        }
+        .offer-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            color: var(--gray-light);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .offer-features li:last-child { border-bottom: none; }
+        .feature-check {
+            width: 24px; height: 24px;
+            background: rgba(16, 185, 129, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--success);
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+        .offer-cta {
+            width: 100%;
+            justify-content: center;
+            padding: 1.2rem;
+            font-size: 1.1rem;
+            background: linear-gradient(135deg, var(--accent), #f97316);
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+        }
+        .offer-cta:hover {
+            box-shadow: 0 8px 30px rgba(245, 158, 11, 0.4);
+        }
+        .offer-guarantee {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .how-it-works {
+            padding: 6rem 0;
+            background: var(--light);
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .step-card {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+        .step-number {
+            width: 60px; height: 60px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        .step-card:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: calc(50% + 30px);
+            width: calc(100% - 60px);
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            z-index: 1;
+        }
+        .step-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        .step-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .testimonial-card {
+            background: var(--light);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .testimonial-stars {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .testimonial-text {
+            color: var(--dark);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .author-avatar {
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background: var(--gradient-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .author-info h4 { font-size: 0.95rem; font-weight: 600; color: var(--dark); }
+        .author-info p { font-size: 0.85rem; color: var(--gray); }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            padding: 6rem 0;
+            background: var(--gradient-1);
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .cta-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .cta-subtitle {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+        }
+        .cta-btn {
+            background: white;
+            color: var(--primary);
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-section {
+            padding: 6rem 0;
+            background: var(--light);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .contact-info h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        .contact-info p {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-icon {
+            width: 48px; height: 48px;
+            background: var(--gradient-1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .contact-item div h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.2rem;
+        }
+        .contact-item div a, .contact-item div p {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .contact-item div a:hover { color: var(--primary); }
+        .contact-form {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            background: var(--light);
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .form-submit {
+            width: 100%;
+            justify-content: center;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--dark);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        .footer-brand .logo {
+            color: white;
+            margin-bottom: 1rem;
+            display: inline-flex;
+        }
+        .footer-brand p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 300px;
+        }
+        .footer-col h4 {
+            color: white;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.75rem; }
+        .footer-col a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-col a:hover { color: var(--primary-light); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-bottom p { color: var(--gray); font-size: 0.85rem; }
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+        .footer-social a {
+            width: 40px; height: 40px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .footer-social a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* ===== SCROLL TO TOP ===== */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem; right: 2rem;
+            width: 48px; height: 48px;
+            background: var(--gradient-1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-lg);
+            border: none;
+            z-index: 999;
+        }
+        .scroll-top.visible { opacity: 1; visibility: visible; }
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+            .hero-title { font-size: 3rem; }
+            .hero-subtitle { margin-left: auto; margin-right: auto; }
+            .hero-cta-group { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .hero-visual { order: -1; }
+            .hero-card { max-width: 400px; margin: 0 auto; }
+            .services-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+            .steps-grid { grid-template-columns: repeat(2, 1fr); }
+            .step-card:not(:last-child)::after { display: none; }
+            .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero-title { font-size: 2.5rem; }
+            .hero-stats { flex-direction: column; gap: 1.5rem; text-align: center; }
+            .services-grid, .testimonials-grid, .steps-grid { grid-template-columns: 1fr; }
+            .offer-card { padding: 2rem; }
+            .price-amount { font-size: 3rem; }
+            .cta-title { font-size: 2rem; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .footer-brand p { max-width: 100%; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+
+        /* ===== REVEAL ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal-left { opacity: 0; transform: translateX(-30px); transition: all 0.8s ease-out; }
+        .reveal-left.active { opacity: 1; transform: translateX(0); }
+        .reveal-right { opacity: 0; transform: translateX(30px); transition: all 0.8s ease-out; }
+        .reveal-right.active { opacity: 1; transform: translateX(0); }
+        .reveal-scale { opacity: 0; transform: scale(0.9); transition: all 0.8s ease-out; }
+        .reveal-scale.active { opacity: 1; transform: scale(1); }
+
+        /* ===== LIVE CHAT WIDGET ===== */
+        .chat-widget {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            width: 56px; height: 56px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-xl);
+            border: none;
+            z-index: 998;
+            transition: all 0.3s;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        .chat-widget:hover {
+            transform: scale(1.1);
+            animation: none;
+        }
+    </style>
+
+    <!-- Schema.org JSON-LD for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "JCODE Agency",
+        "description": "Agence marketing Airbnb 100% automatisée par IA. 21 agents intelligents pour propulser votre location courte durée.",
+        "url": "https://jcode-agency.com",
+        "email": "matovuruky@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "BE"
+        },
+        "offers": {
+            "@type": "Offer",
+            "name": "Airbnb Teaser Package",
+            "price": "497",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Airbnb Teaser Package",
+        "description": "Package marketing Airbnb automatisé par IA. Site landing page, vidéos, prospection, SEO et analytics.",
+        "brand": { "@type": "Brand", "name": "JCODE Agency" },
+        "offers": {
+            "@type": "Offer",
+            "price": "497",
+            "priceCurrency": "EUR",
+            "url": "https://buy.stripe.com/28EfZabVCfyp0Bf4ejbV600",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+
+    <!-- Meta Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s){
+            if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'META_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">J</div>
+                JCODE Agency
+            </a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#offre">Offre</a>
+                <a href="#comment">Processus</a>
+                <a href="#temoignages">Résultats</a>
+                <a href="#contact">Contact</a>
+                <a href="https://buy.stripe.com/28EfZabVCfyp0Bf4ejbV600" class="nav-cta" target="_blank">Réserver ma stratégie</a>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="accueil">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-grid-lines"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge animate-fade-in-up delay-1">
+                    <span class="dot"></span>
+                    21 agents IA déployés
+                </div>
+                <h1 class="hero-title animate-fade-in-up delay-2">
+                    Votre marketing Airbnb,<br>
+                    <span class="gradient-text">100% automatisé</span>
+                </h1>
+                <p class="hero-subtitle animate-fade-in-up delay-3">
+                    JCODE Agency propulse votre location courte durée avec une armée d'agents IA. Génération de contenu, prospection propriétaires, et optimisation — tout tourne en autopilot.
+                </p>
+                <div class="hero-cta-group animate-fade-in-up delay-4">
+                    <a href="https://buy.stripe.com/28EfZabVCfyp0Bf4ejbV600" class="btn btn-primary" target="_blank">
+                        Découvrir l'offre Teaser — 497€ →
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        Voir les services
+                    </a>
+                </div>
+                <div class="hero-stats animate-fade-in-up delay-5">
+                    <div class="stat-item">
+                        <div class="stat-number">21</div>
+                        <div class="stat-label">Agents IA actifs</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">497€</div>
+                        <div class="stat-label">Package Teaser</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">0h</div>
+                        <div class="stat-label">De travail manuel</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual animate-fade-in delay-3">
+                <div class="hero-card">
+                    <div class="card-header">
+                        <div class="card-avatar">J</div>
+                        <div class="card-info">
+                            <h4>JCODE Agency</h4>
+                            <p>Dashboard IA</p>
+                        </div>
+                        <div class="card-status">● Live</div>
+                    </div>
+                    <div class="card-metrics">
+                        <div class="metric-box">
+                            <div class="metric-value up">+127%</div>
+                            <div class="metric-label">Visites</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-value up">+84%</div>
+                            <div class="metric-label">Réservations</div>
+                        </div>
+                    </div>
+                    <div class="card-chart">
+                        <div class="chart-line"></div>
+                    </div>
+                </div>
+                <div class="floating-elements">
+                    <div class="float-el">🤖 Agent Copywriting</div>
+                    <div class="float-el">📹 Agent Vidéo</div>
+                    <div class="float-el">📧 Agent Outreach</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-label">Propulsé par les meilleures technologies</div>
+            <div class="trust-logos">
+                <div class="trust-logo">OpenAI</div>
+                <div class="trust-logo">Mistral</div>
+                <div class="trust-logo">Stripe</div>
+                <div class="trust-logo">Canva</div>
+                <div class="trust-logo">Figma</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag">Nos Services</div>
+                <h2 class="section-title">Une armée d'agents IA à votre service</h2>
+                <p class="section-subtitle">Chaque agent est spécialisé dans une mission précise pour faire croître votre business Airbnb sans effort.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">🎨</div>
+                    <h3>BrandBuilder</h3>
+                    <p>Identité visuelle complète : logo, palette, typographie, site web pro avec pages clés, et calendrier de contenu sur mesure.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">✍️</div>
+                    <h3>CopyMaster</h3>
+                    <p>Rédaction SEO optimisée pour vos annonces Airbnb, descriptions captivantes, et contenu de blog qui convertit les visiteurs.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">📹</div>
+                    <h3>VideoCreator</h3>
+                    <p>Production vidéo automatisée : visuels de propriétés, reels Instagram/TikTok, et contenu viral pour maximiser votre visibilité.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">📧</div>
+                    <h3>Outreach Pro</h3>
+                    <p>Prospection automatisée de propriétaires Airbnb : scraping ciblé, emails personnalisés, et suivi intelligent des leads.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">📊</div>
+                    <h3>Analytics AI</h3>
+                    <p>Tableaux de bord en temps réel, analyse des performances, et recommandations optimisées par IA pour augmenter vos revenus.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🤖</div>
+                    <h3>Agent Orchestrator</h3>
+                    <p>Coordination intelligente de vos 21 agents IA. Chaque agent communique, se délègue des tâches, et optimise son workflow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFER / PRICING -->
+    <section class="offer" id="offre">
+        <div class="offer-container">
+            <div class="offer-header reveal">
+                <div class="section-tag">Offre Limitée</div>
+                <h2 class="section-title">Airbnb Teaser Package</h2>
+                <p class="section-subtitle">Lancez votre marketing Airbnb automatisé en 48h. Sans engagement, 100% piloté par IA.</p>
+            </div>
+            <div class="offer-card reveal">
+                <div class="offer-badge">🔥 Plus populaire</div>
+                <div class="offer-name">Teaser Package</div>
+                <p class="offer-desc">Le starter parfait pour propriétaires Airbnb qui veulent tester la puissance de l'IA.</p>
+                <div class="offer-price">
+                    <span class="price-currency">€</span>
+                    <span class="price-amount">497</span>
+                    <span class="price-period">/mois</span>
+                </div>
+                <ul class="offer-features">
+                    <li><span class="feature-check">✓</span><span>Site landing page professionnel</span></li>
+                    <li><span class="feature-check">✓</span><span>5 vidéos de propriété / mois</span></li>
+                    <li><span class="feature-check">✓</span><span>10 emails de prospection personnalisés</span></li>
+                    <li><span class="feature-check">✓</span><span>Optimisation SEO de votre annonce</span></li>
+                    <li><span class="feature-check">✓</span><span>Calendrier de contenu mensuel</span></li>
+                    <li><span class="feature-check">✓</span><span>Dashboard analytics en temps réel</span></li>
+                    <li><span class="feature-check">✓</span><span>Support prioritaire</span></li>
+                </ul>
+                <a href="https://buy.stripe.com/28EfZabVCfyp0Bf4ejbV600" class="btn btn-primary offer-cta" target="_blank">
+                    Réserver mon Teaser Package →
+                </a>
+                <div class="offer-guarantee">
+                    <span>🔒</span> Paiement sécurisé via Stripe · Annulation à tout moment
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works" id="comment">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag">Processus</div>
+                <h2 class="section-title">Comment ça marche ?</h2>
+                <p class="section-subtitle">De l'inscription à vos premiers résultats en 4 étapes simples.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card reveal">
+                    <div class="step-number">1</div>
+                    <h3>Réservez votre package</h3>
+                    <p>Choisissez le Teaser Package à 497€ et finalisez votre paiement sécurisé en 2 minutes.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">2</div>
+                    <h3>Onboarding IA</h3>
+                    <p>Nos agents analysent votre propriété, votre marché local, et votre concurrence.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">3</div>
+                    <h3>Déploiement auto</h3>
+                    <p>Vos agents IA se mettent au travail : contenu, vidéos, prospection — 24/7.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">4</div>
+                    <h3>Résultats mesurés</h3>
+                    <p>Suivez vos performances en temps réel sur votre dashboard personnalisé.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="temoignages">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag">Résultats Clients</div>
+                <h2 class="section-title">Ils ont transformé leur Airbnb avec JCODE</h2>
+                <p class="section-subtitle">Des propriétaires qui ont fait confiance à nos agents IA.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"En 3 semaines, mes réservations ont augmenté de 40%. Les vidéos générées par l'agent VideoCreator sont incroyables — mes locataires me complimentent constamment."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ML</div>
+                        <div class="author-info">
+                            <h4>Marie L.</h4>
+                            <p>Propriétaire à Bruxelles</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Le package Teaser à 497€ est un no-brainer. J'ai gagné 10h par semaine et mon taux d'occupation est passé de 65% à 92%. L'IA fait un travail remarquable."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">TD</div>
+                        <div class="author-info">
+                            <h4>Thomas D.</h4>
+                            <p>Host multi-propriétés, Paris</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"L'agent Outreach m'a permis de signer 3 nouveaux mandats de gestion en un mois. La prospection est chirurgicale et les emails sont parfaitement personnalisés."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SB</div>
+                        <div class="author-info">
+                            <h4>Sophie B.</h4>
+                            <p>Concierge Airbnb, Lyon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag">Contact</div>
+                <h2 class="section-title">Parlons de votre projet</h2>
+                <p class="section-subtitle">Une question ? Un projet spécifique ? Contactez-nous directement.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <h3>Discutons ensemble</h3>
+                    <p>Que vous soyez propriétaire d'une seule location ou d'un portefeuille de biens, nous avons la solution IA adaptée à vos besoins.</p>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:matovuruky@gmail.com">matovuruky@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💳</div>
+                        <div>
+                            <h4>Réservation rapide</h4>
+                            <a href="https://buy.stripe.com/28EfZabVCfyp0Bf4ejbV600" target="_blank">Teaser Package — 497€/mois</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🌍</div>
+                        <div>
+                            <h4>Basé en</h4>
+                            <p>Belgique — Service Europe</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form reveal-right">
+                    <form action="mailto:matovuruky@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" name="subject">
+                                <option value="teaser">Teaser Package — 497€</option>
+                                <option value="custom">Projet sur mesure</option>
+                                <option value="partnership">Partenariat</option>
+                                <option value="question">Question générale</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Décrivez votre projet..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-submit">
+                            Envoyer le message →
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title reveal">Prêt à automatiser votre Airbnb ?</h2>
+            <p class="cta-subtitle reveal">Rejoignez les propriétaires intelligents qui laissent l'IA faire le travail pendant qu'ils profitent de la vie.</p>
+            <a href="https://buy.stripe.com/28EfZabVCfyp0Bf4ejbV600" class="btn cta-btn reveal" target="_blank">
+                Réserver mon Teaser Package — 497€
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">J</div>
+                        JCODE Agency
+                    </a>
+                    <p>L'agence marketing Airbnb 100% automatisée par IA. 21 agents intelligents travaillent pour vous 24/7.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">BrandBuilder</a></li>
+                        <li><a href="#">VideoCreator</a></li>
+                        <li><a href="#">Outreach Pro</a></li>
+                        <li><a href="#">Analytics AI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="mailto:matovuruky@gmail.com">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="#">CGV</a></li>
+                        <li><a href="#">Confidentialité</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 JCODE Agency. Tous droits réservés. Construit avec ❤️ en Belgique.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">↑</button>
+
+    <!-- CHAT WIDGET -->
+    <button class="chat-widget" id="chatWidget" aria-label="Chat">💬</button>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        // Scroll to top button
+        const scrollTop = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) scrollTop.classList.add('visible');
+            else scrollTop.classList.remove('visible');
+        });
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Chat widget click
+        document.getElementById('chatWidget').addEventListener('click', () => {
+            window.location.href = 'mailto:matovuruky@gmail.com?subject=Question%20JCODE%20Agency';
+        });
+
+        // Intersection Observer for reveal animations
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Track CTA clicks with GA and Meta Pixel
+        document.querySelectorAll('a[href*="stripe"]').forEach(link => {
+            link.addEventListener('click', () => {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'conversion', { event_category: 'purchase', event_label: 'teaser_package', value: 497, currency: 'EUR' });
+                }
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'InitiateCheckout', { content_name: 'Teaser Package', content_category: 'Subscription', value: 497, currency: 'EUR' });
+                }
+            });
+        });
+
+        // Track form submissions
+        document.querySelector('form').addEventListener('submit', () => {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'generate_lead', { event_category: 'contact', event_label: 'contact_form' });
+            }
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', { content_name: 'Contact Form' });
+            }
+        });
+    </script>
+</body>
+</html>
