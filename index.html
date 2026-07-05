@@ -1212,8 +1212,46 @@
     }
     </script>
 <base target="_blank">
+<base target="_blank">
 </head>
 <body>
+
+    <!-- COOKIE BANNER RGPD -->
+    <div id="cookie-banner" style="position:fixed; bottom:0; left:0; right:0; z-index:9999; background:rgba(15,23,42,0.98); backdrop-filter:blur(20px); border-top:1px solid rgba(255,255,255,0.1); padding:1.5rem 2rem; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:1.5rem; font-family:'Inter',sans-serif; transition:transform 0.5s ease; transform:translateY(0);">
+        <div style="flex:1; min-width:260px; max-width:700px; color:var(--gray-light); font-size:0.9rem; line-height:1.6;">
+            <strong style="color:white; display:block; margin-bottom:0.3rem;">🍪 Nous utilisons des cookies</strong>
+            Ce site utilise des cookies pour améliorer votre expérience, analyser le trafic et personnaliser le contenu. Vous pouvez choisir d'accepter, de personnaliser ou de refuser.
+        </div>
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center;">
+            <button onclick="cookieChoice('refuse')" style="padding:0.6rem 1.2rem; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:transparent; color:var(--gray-light); font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.3s; font-family:'Inter',sans-serif;">Refuser</button>
+            <button onclick="cookieChoice('customize')" style="padding:0.6rem 1.2rem; border-radius:10px; border:1px solid rgba(99,102,241,0.4); background:rgba(99,102,241,0.1); color:var(--primary-light); font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.3s; font-family:'Inter',sans-serif;">Personnaliser</button>
+            <button onclick="cookieChoice('accept')" style="padding:0.6rem 1.2rem; border-radius:10px; border:none; background:var(--gradient-1); color:white; font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.3s; box-shadow:0 4px 15px rgba(99,102,241,0.3); font-family:'Inter',sans-serif;">Accepter</button>
+        </div>
+    </div>
+    <div id="cookie-customize" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9998; background:rgba(15,23,42,0.98); backdrop-filter:blur(20px); border-top:1px solid rgba(255,255,255,0.1); padding:2rem; font-family:'Inter',sans-serif;">
+        <div style="max-width:600px; margin:0 auto;">
+            <h3 style="color:white; font-family:'Space Grotesk',sans-serif; margin-bottom:1rem; font-size:1.2rem;">Personnaliser les cookies</h3>
+            <div style="display:flex; flex-direction:column; gap:1rem; margin-bottom:1.5rem;">
+                <label style="display:flex; align-items:center; gap:0.75rem; color:var(--gray-light); cursor:pointer;">
+                    <input type="checkbox" id="cookie-necessary" checked disabled style="width:18px; height:18px; accent-color:var(--primary);">
+                    <span><strong style="color:white;">Nécessaires</strong> — Requis pour le fonctionnement du site</span>
+                </label>
+                <label style="display:flex; align-items:center; gap:0.75rem; color:var(--gray-light); cursor:pointer;">
+                    <input type="checkbox" id="cookie-analytics" style="width:18px; height:18px; accent-color:var(--primary);">
+                    <span><strong style="color:white;">Analytiques</strong> — Google Analytics, Meta Pixel</span>
+                </label>
+                <label style="display:flex; align-items:center; gap:0.75rem; color:var(--gray-light); cursor:pointer;">
+                    <input type="checkbox" id="cookie-marketing" style="width:18px; height:18px; accent-color:var(--primary);">
+                    <span><strong style="color:white;">Marketing</strong> — Publicités ciblées et remarketing</span>
+                </label>
+            </div>
+            <div style="display:flex; gap:0.75rem; justify-content:flex-end;">
+                <button onclick="closeCustomize()" style="padding:0.6rem 1.2rem; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:transparent; color:var(--gray-light); font-weight:600; font-size:0.85rem; cursor:pointer; font-family:'Inter',sans-serif;">Annuler</button>
+                <button onclick="saveCustomize()" style="padding:0.6rem 1.2rem; border-radius:10px; border:none; background:var(--gradient-1); color:white; font-weight:600; font-size:0.85rem; cursor:pointer; box-shadow:0 4px 15px rgba(99,102,241,0.3); font-family:'Inter',sans-serif;">Enregistrer mes choix</button>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
@@ -1293,7 +1331,15 @@
                         <div class="stat-number">0h</div>
                         <div class="stat-label">De travail manuel</div>
                     </div>
+                
+                <!-- BADGE LANGUES -->
+                <div style="margin-top:2rem; display:flex; align-items:center; justify-content:center; gap:0.5rem;" class="animate-fade-in-up delay-6">
+                    <span style="color:var(--gray); font-size:0.8rem; margin-right:0.5rem;">🌐</span>
+                    <a href="#" style="padding:0.4rem 1rem; border-radius:50px; background:rgba(99,102,241,0.15); border:1px solid rgba(99,102,241,0.3); color:var(--primary-light); font-weight:600; font-size:0.8rem; text-decoration:none; transition:all 0.3s;">FR</a>
+                    <a href="#" style="padding:0.4rem 1rem; border-radius:50px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:var(--gray-light); font-weight:600; font-size:0.8rem; text-decoration:none; transition:all 0.3s;">NL</a>
+                    <a href="#" style="padding:0.4rem 1rem; border-radius:50px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:var(--gray-light); font-weight:600; font-size:0.8rem; text-decoration:none; transition:all 0.3s;">EN</a>
                 </div>
+</div>
             </div>
             <div class="hero-visual animate-fade-in delay-3">
                 <div class="hero-card">
@@ -1755,5 +1801,40 @@
             }
         });
     </script>
+
+    <script>
+        // Cookie Banner RGPD
+        function cookieChoice(choice) {
+            const banner = document.getElementById('cookie-banner');
+            if (choice === 'accept') {
+                localStorage.setItem('cookieConsent', JSON.stringify({necessary:true, analytics:true, marketing:true, date:new Date().toISOString()}));
+                banner.style.transform = 'translateY(100%)';
+                setTimeout(() => banner.style.display = 'none', 500);
+            } else if (choice === 'refuse') {
+                localStorage.setItem('cookieConsent', JSON.stringify({necessary:true, analytics:false, marketing:false, date:new Date().toISOString()}));
+                banner.style.transform = 'translateY(100%)';
+                setTimeout(() => banner.style.display = 'none', 500);
+            } else if (choice === 'customize') {
+                document.getElementById('cookie-customize').style.display = 'block';
+            }
+        }
+        function closeCustomize() {
+            document.getElementById('cookie-customize').style.display = 'none';
+        }
+        function saveCustomize() {
+            const analytics = document.getElementById('cookie-analytics').checked;
+            const marketing = document.getElementById('cookie-marketing').checked;
+            localStorage.setItem('cookieConsent', JSON.stringify({necessary:true, analytics:analytics, marketing:marketing, date:new Date().toISOString()}));
+            document.getElementById('cookie-customize').style.display = 'none';
+            document.getElementById('cookie-banner').style.transform = 'translateY(100%)';
+            setTimeout(() => document.getElementById('cookie-banner').style.display = 'none', 500);
+        }
+        // Vérifier si déjà consenti
+        const existingConsent = localStorage.getItem('cookieConsent');
+        if (existingConsent) {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    </script>
+
 </body>
 </html>
