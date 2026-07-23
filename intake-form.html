@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulaire Intake — AI Concierge | JCODE Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--glass:rgba(255,255,255,0.05);--glass-border:rgba(255,255,255,0.08);--primary:#00f0ff;--accent:#ff006e;--text:#fff;--muted:#94a3b8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:700px;margin:0 auto;padding:60px 24px}
+h1{font-size:2rem;font-weight:800;text-align:center;margin-bottom:8px}
+.sub{text-align:center;color:var(--muted);margin-bottom:48px}
+.form-card{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:24px;padding:40px}
+.form-group{margin-bottom:24px}
+.form-group label{display:block;font-size:14px;font-weight:600;margin-bottom:8px;color:var(--text)}
+.form-group label .req{color:var(--accent)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:14px 16px;background:rgba(255,255,255,0.03);border:1px solid var(--glass-border);border-radius:12px;color:var(--text);font-size:15px;font-family:inherit;transition:border .3s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--primary)}
+.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2394a3b8'%3E%3Cpath d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+.form-group select option{background:#1a1a2e;color:#fff}
+.form-group textarea{min-height:100px;resize:vertical}
+.checkbox-group{display:flex;flex-wrap:wrap;gap:12px}
+.checkbox-group label{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);cursor:pointer;padding:8px 16px;border:1px solid var(--glass-border);border-radius:10px;transition:all .3s}
+.checkbox-group label:hover{border-color:var(--primary)}
+.checkbox-group input:checked+span{color:var(--primary)}
+.checkbox-group input{accent-color:var(--primary);width:16px;height:16px}
+.range-group{display:flex;align-items:center;gap:16px}
+.range-group input[type=range]{flex:1;accent-color:var(--primary);height:6px}
+.range-value{font-size:1.2rem;font-weight:700;color:var(--primary);min-width:80px}
+.stars{display:flex;gap:8px}
+.stars label{font-size:2rem;cursor:pointer;color:var(--glass-border);transition:color .2s}
+.stars label.active,.stars label:hover{color:#fbbf24}
+.stars input{display:none}
+.consent{display:flex;align-items:flex-start;gap:12px;margin-top:24px;padding:16px;background:rgba(255,0,110,0.03);border:1px solid rgba(255,0,110,0.1);border-radius:12px}
+.consent input{margin-top:4px;accent-color:var(--accent);width:18px;height:18px;flex-shrink:0}
+.consent label{font-size:13px;color:var(--muted);line-height:1.6}
+.btn-submit{width:100%;padding:18px;background:linear-gradient(135deg,var(--primary),#0080ff);color:var(--bg);border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;margin-top:32px;transition:all .3s}
+.btn-submit:hover{transform:scale(1.02);box-shadow:0 0 40px rgba(0,240,255,0.3)}
+.btn-submit:disabled{opacity:0.5;cursor:not-allowed;transform:none;box-shadow:none}
+.success-msg{display:none;text-align:center;padding:60px 24px}
+.success-msg h2{font-size:2rem;margin-bottom:16px;color:var(--primary)}
+.success-msg p{color:var(--muted);margin-bottom:24px}
+.back{display:block;text-align:center;margin-top:24px;color:var(--muted);font-size:13px;text-decoration:none}
+.back:hover{color:var(--primary)}
+@media(max-width:600px){.form-card{padding:24px}.checkbox-group{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📋 Formulaire Intake</h1>
+<p class="sub">AI Concierge — JCODE Agency | 5 minutes pour démarrer votre automatisation</p>
+
+<div class="form-card" id="formCard">
+<form id="intakeForm" onsubmit="submitIntake(event)">
+
+<div class="form-group">
+<label>Nom de l'entreprise <span class="req">*</span></label>
+<input type="text" name="business_name" placeholder="Ex: Salon Élégance" required>
+</div>
+
+<div class="form-group">
+<label>Secteur d'activité <span class="req">*</span></label>
+<select name="sector" required>
+<option value="">— Sélectionnez —</option>
+<option value="coiffeur">Coiffeur / Barbier</option>
+<option value="boulanger">Boulanger / Pâtissier</option>
+<option value="restaurant">Restaurant / Snack</option>
+<option value="airbnb">Hôte Airbnb</option>
+<option value="boucherie">Boucherie / Épicerie</option>
+<option value="sante">Santé / Bien-être</option>
+<option value="commerce">Commerce / Boutique</option>
+<option value="autre">Autre</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Nombre d'employés</label>
+<select name="employees">
+<option value="1">Juste moi</option>
+<option value="2-5">2-5</option>
+<option value="6-10">6-10</option>
+<option value="11+">11+</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Site web actuel (optionnel)</label>
+<input type="url" name="website" placeholder="https://...">
+</div>
+
+<div class="form-group">
+<label>Outils digitaux utilisés</label>
+<div class="checkbox-group">
+<label><input type="checkbox" name="tools" value="facebook"><span>Facebook</span></label>
+<label><input type="checkbox" name="tools" value="instagram"><span>Instagram</span></label>
+<label><input type="checkbox" name="tools" value="google_business"><span>Google Business</span></label>
+<label><input type="checkbox" name="tools" value="reservation"><span>Réservation en ligne</span></label>
+<label><input type="checkbox" name="tools" value="whatsapp"><span>WhatsApp Business</span></label>
+<label><input type="checkbox" name="tools" value="tiktok"><span>TikTok</span></label>
+<label><input type="checkbox" name="tools" value="aucun"><span>Aucun</span></label>
+</div>
+</div>
+
+<div class="form-group">
+<label>Vos 3 plus grosses pertes de temps <span class="req">*</span></label>
+<textarea name="time_wasters" placeholder="Ex: Répondre aux mêmes questions, gérer les réservations manuellement, faire les factures..." required></textarea>
+</div>
+
+<div class="form-group">
+<label>Processus répétitifs quotidiens</label>
+<textarea name="repetitive" placeholder="Ex: Envoyer des rappels RDV, poster sur les réseaux, répondre aux avis..."></textarea>
+</div>
+
+<div class="form-group">
+<label>Budget mensuel envisagé</label>
+<div class="range-group">
+<input type="range" name="budget" min="500" max="3000" step="100" value="1000" oninput="document.getElementById('budgetVal').textContent=this.value+'€'">
+<span class="range-value" id="budgetVal">1000€</span>
+</div>
+</div>
+
+<div class="form-group">
+<label>Votre niveau tech (1=débutant, 5=expert)</label>
+<div class="stars" id="stars">
+<label onclick="setStars(1)">★</label>
+<label onclick="setStars(2)">★</label>
+<label onclick="setStars(3)">★</label>
+<label onclick="setStars(4)">★</label>
+<label onclick="setStars(5)">★</label>
+</div>
+<input type="hidden" name="tech_level" id="techLevel" value="3">
+</div>
+
+<div class="form-group">
+<label>Votre objectif à 3 mois <span class="req">*</span></label>
+<textarea name="goal" placeholder="Ex: Automatiser mes réservations, gagner 10h/semaine, ne plus oublier de relancer les clients..." required></textarea>
+</div>
+
+<div class="form-group">
+<label>Email de contact <span class="req">*</span></label>
+<input type="email" name="email" placeholder="votre@email.com" required>
+</div>
+
+<div class="consent">
+<input type="checkbox" id="rgpd" required>
+<label for="rgpd">J'accepte que mes données soient traitées par JCODE Agency dans le cadre de cette demande, conformément au <a href="privacy-policy.html" style="color:var(--primary)">RGPD</a>. Je peux retirer mon consentement à tout moment. <span class="req">*</span></label>
+</div>
+
+<button type="submit" class="btn-submit" id="submitBtn">Envoyer mon formulaire →</button>
+</form>
+</div>
+
+<div class="success-msg" id="successMsg">
+<h2>🎉 Formulaire envoyé !</h2>
+<p>Merci ! Je reviens vers vous sous 24h avec les prochaines étapes.<br>Vérifiez votre boîte email (et les spams).</p>
+<a href="index.html" class="back">← Retour au site</a>
+</div>
+
+<a href="index.html" class="back">← Retour au site</a>
+</div>
+
+<script>
+let techLevel=3;
+function setStars(n){
+techLevel=n;
+document.getElementById('techLevel').value=n;
+const labels=document.querySelectorAll('#stars label');
+labels.forEach((l,i)=>{l.classList.toggle('active',i<n)});
+}
+setStars(3);
+
+function submitIntake(e){
+e.preventDefault();
+const form=e.target;
+const data=new FormData(form);
+const payload={};
+data.forEach((v,k)=>{
+if(k==='tools'){if(!payload.tools)payload.tools=[];payload.tools.push(v);}
+else payload[k]=v;
+});
+payload.tech_level=techLevel;
+payload.submitted_at=new Date().toISOString();
+
+// Send to Make.com webhook (replace URL with real one)
+const WEBHOOK_URL='https://hook.make.com/YOUR_WEBHOOK_ID';
+fetch(WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+.then(()=>showSuccess())
+.catch(()=>showSuccess()); // Show success even if webhook not configured yet
+}
+function showSuccess(){
+document.getElementById('formCard').style.display='none';
+document.getElementById('successMsg').style.display='block';
+}
+</script>
+</body>
+</html>

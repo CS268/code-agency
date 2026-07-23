@@ -1,0 +1,39 @@
+{
+  "agency": {
+    "name": "JCODE Agency",
+    "email": "matovuruky@gmail.com",
+    "phone": "0466/06.22.73",
+    "location": "Mons, Belgique",
+    "website": "https://cs268.github.io/code-agency/"
+  },
+  "pricing": {
+    "concierge_starter": 1000,
+    "concierge_pro": 1500,
+    "concierge_elite": 2000,
+    "max_clients": 6,
+    "calls_per_month": 2,
+    "call_duration_minutes": 45,
+    "voxer_sla_hours": 12
+  },
+  "make_com": {
+    "webhook_base_url": "https://hook.make.com/",
+    "scenarios": ["intake", "reminder", "post_call", "monthly_report"]
+  },
+  "claude": {
+    "model": "claude-3-5-sonnet-20241022",
+    "max_tokens": 4000
+  },
+  "colors": {
+    "primary": "#00f0ff",
+    "secondary": "#0a0a0a",
+    "accent": "#ff006e",
+    "text": "#ffffff",
+    "text_muted": "#888888"
+  },
+  "legal": {
+    "company_number": "[NUMERO BCE]",
+    "vat_number": "[NUMERO TVA]",
+    "hosting": "GitHub Pages",
+    "dpo_email": "matovuruky@gmail.com"
+  }
+}

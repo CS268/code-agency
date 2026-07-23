@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AOA Framework — JCODE Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--glass:rgba(255,255,255,0.03);--glass-border:rgba(255,255,255,0.06);--primary:#00f0ff;--accent:#ff006e;--purple:#a855f7;--green:#22c55e;--text:#fff;--muted:#94a3b8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:900px;margin:0 auto;padding:40px 24px}
+h1{text-align:center;font-size:2rem;font-weight:800;margin-bottom:8px}
+.sub{text-align:center;color:var(--muted);margin-bottom:40px}
+
+/* TABS */
+.tabs{display:flex;gap:4px;margin-bottom:32px;background:var(--glass);border-radius:16px;padding:6px;border:1px solid var(--glass-border)}
+.tab{flex:1;padding:14px;text-align:center;border-radius:12px;cursor:pointer;font-weight:600;font-size:14px;color:var(--muted);transition:all .3s}
+.tab.active{background:rgba(0,240,255,0.1);color:var(--primary);box-shadow:0 0 20px rgba(0,240,255,0.1)}
+.tab:nth-child(2).active{background:rgba(255,0,110,0.1);color:var(--accent)}
+.tab:nth-child(3).active{background:rgba(168,85,247,0.1);color:var(--purple)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* CARDS */
+.card{background:var(--glass);border:1px solid var(--glass-border);border-radius:16px;padding:24px;margin-bottom:16px}
+.card h3{font-size:1rem;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.checklist{list-style:none}
+.checklist li{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.03);font-size:14px;color:var(--muted)}
+.checklist li:last-child{border:none}
+.checklist input{accent-color:var(--primary);width:18px;height:18px;margin-top:2px;flex-shrink:0}
+.notes{width:100%;min-height:120px;padding:16px;background:rgba(255,255,255,0.02);border:1px solid var(--glass-border);border-radius:12px;color:var(--text);font-family:inherit;font-size:14px;resize:vertical}
+.notes:focus{outline:none;border-color:var(--primary)}
+.quick-win{display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(34,197,94,0.05);border:1px solid rgba(34,197,94,0.15);border-radius:10px;margin-top:12px;font-size:13px}
+.quick-win .icon{font-size:1.2rem}
+.btn-export{display:inline-block;margin-top:24px;padding:14px 32px;background:var(--glass);border:1px solid var(--glass-border);border-radius:12px;color:var(--text);font-weight:600;font-size:14px;cursor:pointer;transition:all .3s}
+.btn-export:hover{border-color:var(--primary);color:var(--primary)}
+.score{display:flex;align-items:center;gap:16px;margin-top:16px}
+.score-bar{flex:1;height:10px;background:rgba(255,255,255,0.05);border-radius:5px;overflow:hidden}
+.score-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--primary));border-radius:5px;transition:width .5s}
+.score-val{font-size:1.5rem;font-weight:800;color:var(--primary)}
+@media(max-width:600px){.tabs{flex-direction:column}.tab{padding:12px}}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🎯 Framework A.O.A.</h1>
+<p class="sub">Audit → Optimize → Automate | Template de session JCODE AI Concierge</p>
+
+<div class="tabs">
+<div class="tab active" onclick="switchTab(0)">🔍 AUDIT</div>
+<div class="tab" onclick="switchTab(1)">⚡ OPTIMIZE</div>
+<div class="tab" onclick="switchTab(2)">🤖 AUTOMATE</div>
+</div>
+
+<!-- AUDIT -->
+<div class="tab-content active" id="tab0">
+<div class="card">
+<h3>�� Cartographie des processus</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span>Quelles tâches prenez-vous en charge chaque jour ? (liste complète)</span></li>
+<li><input type="checkbox"><span>Combien de temps passez-vous sur chaque tâche ?</span></li>
+<li><input type="checkbox"><span>Quelles tâches sont répétitives et prévisibles ?</span></li>
+<li><input type="checkbox"><span>Quelles tâches nécessitent un jugement humain ?</span></li>
+<li><input type="checkbox"><span>Quels outils utilisez-vous actuellement ?</span></li>
+<li><input type="checkbox"><span>Où sont les goulots d'étranglement ?</span></li>
+<li><input type="checkbox"><span>Quelles erreurs reviennent souvent ?</span></li>
+</ul>
+</div>
+<div class="card">
+<h3>📊 Score IA Readiness</h3>
+<div class="score">
+<div class="score-bar"><div class="score-fill" style="width:35%"></div></div>
+<div class="score-val">3.5/10</div>
+</div>
+<p style="font-size:13px;color:var(--muted);margin-top:8px;">Basé sur : digitalisation actuelle, volume de tâches répétitives, données disponibles, volonté d'adoption.</p>
+</div>
+<div class="card">
+<h3>📝 Notes de session</h3>
+<textarea class="notes" placeholder="Notes pendant l'appel Audit..."></textarea>
+</div>
+<div class="quick-win"><span class="icon">💡</span><span><strong>Quick Win identifié :</strong> Automatiser les rappels RDV par SMS/email (gain estimé : 3h/semaine)</span></div>
+</div>
+
+<!-- OPTIMIZE -->
+<div class="tab-content" id="tab1">
+<div class="card">
+<h3>🔄 Flux optimisé</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span>Supprimer les étapes redondantes identifiées</span></li>
+<li><input type="checkbox"><span>Standardiser les templates (emails, factures, réponses)</span></li>
+<li><input type="checkbox"><span>Regrouper les tâches similaires (batching)</span></li>
+<li><input type="checkbox"><span>Définir les triggers automatiques (quand X → alors Y)</span></li>
+<li><input type="checkbox"><span>Documenter le flux cible (avant/après)</span></li>
+<li><input type="checkbox"><span>Valider avec le client que le flux a du sens</span></li>
+</ul>
+</div>
+<div class="card">
+<h3>🗑️ Étapes supprimées</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span>Saisie manuelle des RDV → Calendly auto</span></li>
+<li><input type="checkbox"><span>Réponse manuelle aux avis → Template + IA</span></li>
+<li><input type="checkbox"><span>Relance manuelle impayés → Workflow Make.com</span></li>
+</ul>
+</div>
+<div class="card">
+<h3>📝 Notes de session</h3>
+<textarea class="notes" placeholder="Notes pendant l'appel Optimize..."></textarea>
+</div>
+<div class="quick-win"><span class="icon">💡</span><span><strong>Quick Win identifié :</strong> Template email post-RDV automatique (gain estimé : 2h/semaine)</span></div>
+</div>
+
+<!-- AUTOMATE -->
+<div class="tab-content" id="tab2">
+<div class="card">
+<h3>🤖 Skills Claude à créer</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span>Skill "Réponse avis Google" (ton professionnel, personnalisé)</span></li>
+<li><input type="checkbox"><span>Skill "Email post-RDV" (récap + prochain RDV)</span></li>
+<li><input type="checkbox"><span>Skill "Relance client" (J+3, J+7, J+14)</span></li>
+<li><input type="checkbox"><span>Skill "Post réseaux sociaux" (3x/semaine auto)</span></li>
+<li><input type="checkbox"><span>Skill "Facturation" (génération + envoi)</span></li>
+</ul>
+</div>
+<div class="card">
+<h3>⚙️ Workflows Make.com</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span>Trigger : Nouveau RDV → Email confirmation + Rappel J-1</span></li>
+<li><input type="checkbox"><span>Trigger : Avis Google → Réponse IA + Notification</span></li>
+<li><input type="checkbox"><span>Trigger : Facture impayée J+7 → Relance automatique</span></li>
+<li><input type="checkbox"><span>Schedule : Lundi 8h → Posts semaine programmés</span></li>
+</ul>
+</div>
+<div class="card">
+<h3>🚀 Déploiement</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span>Tester chaque workflow en mode sandbox</span></li>
+<li><input type="checkbox"><span>Validation client avant activation</span></li>
+<li><input type="checkbox"><span>Activation progressive (1 workflow/semaine)</span></li>
+<li><input type="checkbox"><span>Monitoring première semaine</span></li>
+</ul>
+</div>
+<div class="card">
+<h3>📝 Notes de session</h3>
+<textarea class="notes" placeholder="Notes pendant l'appel Automate..."></textarea>
+</div>
+<div class="quick-win"><span class="icon">💡</span><span><strong>Quick Win identifié :</strong> Workflow relance impayés (gain estimé : 4h/mois + réduction impayés 30%)</span></div>
+</div>
+
+<button class="btn-export" onclick="window.print()">📄 Exporter en PDF</button>
+</div>
+
+<script>
+function switchTab(n){
+document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',i===n));
+document.querySelectorAll('.tab-content').forEach((c,i)=>c.classList.toggle('active',i===n));
+}
+</script>
+</body>
+</html>

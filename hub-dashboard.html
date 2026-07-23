@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hub Client — JCODE Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--surface:#111318;--glass:rgba(255,255,255,0.03);--glass-border:rgba(255,255,255,0.06);--primary:#00f0ff;--accent:#ff006e;--purple:#a855f7;--green:#22c55e;--text:#fff;--muted:#64748b}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);display:flex;min-height:100vh}
+
+/* SIDEBAR */
+.sidebar{width:240px;background:var(--surface);border-right:1px solid var(--glass-border);padding:24px 0;position:fixed;top:0;bottom:0;left:0;display:flex;flex-direction:column}
+.sidebar .logo{padding:0 24px 24px;font-weight:800;font-size:1.1rem;border-bottom:1px solid var(--glass-border);margin-bottom:16px}
+.sidebar .logo span{color:var(--primary)}
+.sidebar nav{flex:1}
+.sidebar nav a{display:flex;align-items:center;gap:12px;padding:12px 24px;color:var(--muted);font-size:14px;font-weight:500;text-decoration:none;transition:all .2s;border-left:3px solid transparent}
+.sidebar nav a:hover,.sidebar nav a.active{color:var(--text);background:rgba(0,240,255,0.03);border-left-color:var(--primary)}
+.sidebar nav a .icon{font-size:18px}
+.sidebar .user{padding:16px 24px;border-top:1px solid var(--glass-border);font-size:13px;color:var(--muted)}
+.sidebar .user strong{color:var(--text);display:block}
+
+/* MAIN */
+.main{margin-left:240px;flex:1;padding:32px;min-height:100vh}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px}
+.header h1{font-size:1.5rem;font-weight:700}
+.header .next-call{background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.2);padding:10px 20px;border-radius:12px;font-size:13px;color:var(--primary)}
+
+/* CARDS */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:32px}
+.stat-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:16px;padding:24px;transition:all .3s}
+.stat-card:hover{border-color:var(--primary);transform:translateY(-2px)}
+.stat-card .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.stat-card .value{font-size:2rem;font-weight:800}
+.stat-card .value.cyan{color:var(--primary)}
+.stat-card .value.pink{color:var(--accent)}
+.stat-card .value.green{color:var(--green)}
+.stat-card .value.purple{color:var(--purple)}
+
+/* TIMELINE */
+.section-title{font-size:1.1rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.timeline{margin-bottom:32px}
+.timeline-item{display:flex;gap:16px;padding:16px;background:var(--glass);border:1px solid var(--glass-border);border-radius:12px;margin-bottom:8px;transition:all .3s}
+.timeline-item:hover{border-color:rgba(0,240,255,0.2)}
+.timeline-item .date{font-size:12px;color:var(--muted);min-width:80px}
+.timeline-item .info h4{font-size:14px;margin-bottom:4px}
+.timeline-item .info p{font-size:13px;color:var(--muted)}
+.timeline-item .status{margin-left:auto;font-size:11px;padding:4px 12px;border-radius:20px;font-weight:600}
+.status-done{background:rgba(34,197,94,0.1);color:var(--green)}
+.status-upcoming{background:rgba(0,240,255,0.1);color:var(--primary)}
+
+/* ACTION ITEMS */
+.actions{margin-bottom:32px}
+.action-item{display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--glass);border:1px solid var(--glass-border);border-radius:10px;margin-bottom:6px;font-size:14px}
+.action-item input{accent-color:var(--primary);width:18px;height:18px}
+.action-item .owner{margin-left:auto;font-size:12px;color:var(--muted);background:rgba(255,255,255,0.05);padding:4px 10px;border-radius:6px}
+.action-item .deadline{font-size:12px;color:var(--accent)}
+
+/* ROI */
+.roi-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:16px;padding:24px;margin-bottom:32px}
+.roi-bar{height:8px;background:rgba(255,255,255,0.05);border-radius:4px;margin:8px 0;overflow:hidden}
+.roi-bar .fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--primary),var(--green));transition:width 1s}
+.roi-row{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:12px}
+.roi-row .val{color:var(--text);font-weight:600}
+
+/* DELIVERABLES TABLE */
+.table-wrap{overflow-x:auto;margin-bottom:32px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:12px 16px;color:var(--muted);font-weight:600;border-bottom:1px solid var(--glass-border);font-size:12px;text-transform:uppercase;letter-spacing:1px}
+td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.02)}
+tr:hover td{background:rgba(0,240,255,0.02)}
+
+@media(max-width:768px){.sidebar{display:none}.main{margin-left:0;padding:16px}.stats{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+<div class="logo">J<span>CODE</span> Hub</div>
+<nav>
+<a href="#" class="active"><span class="icon">🏠</span> Accueil</a>
+<a href="#appels"><span class="icon">📞</span> Appels</a>
+<a href="#deliverables"><span class="icon">📦</span> Deliverables</a>
+<a href="#roi"><span class="icon">📈</span> ROI</a>
+<a href="#actions"><span class="icon">✅</span> Actions</a>
+<a href="espace-client.html"><span class="icon">⚙️</span> Déconnexion</a>
+</nav>
+<div class="user">
+<strong id="userName">Client Demo</strong>
+Formule Pro — 1 500€/mois
+</div>
+</aside>
+
+<main class="main">
+<div class="header">
+<h1>Bonjour, <span id="greetName">Client</span> 👋</h1>
+<div class="next-call">📅 Prochain appel : <strong>28 juillet 2026 — 14h00</strong></div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+<div class="stat-card"><div class="label">Appels ce mois</div><div class="value cyan">2</div></div>
+<div class="stat-card"><div class="label">Skills créés</div><div class="value purple">7</div></div>
+<div class="stat-card"><div class="label">Heures économisées</div><div class="value green">12h</div></div>
+<div class="stat-card"><div class="label">ROI estimé</div><div class="value pink">+600€</div></div>
+</div>
+
+<!-- TIMELINE -->
+<div id="appels">
+<div class="section-title">📞 Timeline des appels</div>
+<div class="timeline">
+<div class="timeline-item"><div class="date">23 Jul</div><div class="info"><h4>Session #4 — Automatisation relances</h4><p>Workflow Make.com relances clients + skill Claude email</p></div><div class="status status-done">Terminé</div></div>
+<div class="timeline-item"><div class="date">09 Jul</div><div class="info"><h4>Session #3 — Optimisation réservations</h4><p>Suppression étapes manuelles, intégration Calendly</p></div><div class="status status-done">Terminé</div></div>
+<div class="timeline-item"><div class="date">28 Jul</div><div class="info"><h4>Session #5 — Rapport mensuel + prochains steps</h4><p>Review ROI juillet, planification août</p></div><div class="status status-upcoming">À venir</div></div>
+</div>
+</div>
+
+<!-- ACTION ITEMS -->
+<div id="actions">
+<div class="section-title">✅ Action Items</div>
+<div class="actions">
+<div class="action-item"><input type="checkbox"><span>Envoyer 5 photos du salon pour le site</span><span class="owner">Client</span><span class="deadline">25 Jul</span></div>
+<div class="action-item"><input type="checkbox"><span>Configurer webhook Make.com pour relances</span><span class="owner">JCODE</span><span class="deadline">26 Jul</span></div>
+<div class="action-item"><input type="checkbox" checked><span>Valider le template d'email de relance</span><span class="owner">Client</span><span class="deadline">22 Jul</span></div>
+<div class="action-item"><input type="checkbox"><span>Créer skill Claude "réponse avis Google"</span><span class="owner">JCODE</span><span class="deadline">28 Jul</span></div>
+</div>
+</div>
+
+<!-- ROI -->
+<div id="roi">
+<div class="section-title">📈 ROI Tracker</div>
+<div class="roi-card">
+<div class="roi-row"><span>Temps économisé / mois</span><span class="val">12 heures</span></div>
+<div class="roi-bar"><div class="fill" style="width:60%"></div></div>
+<div class="roi-row"><span>Taux horaire estimé</span><span class="val">50€/h</span></div>
+<div class="roi-bar"><div class="fill" style="width:45%"></div></div>
+<div class="roi-row"><span>ROI mensuel</span><span class="val" style="color:var(--green)">+600€ (12h × 50€)</span></div>
+<div class="roi-bar"><div class="fill" style="width:40%;background:linear-gradient(90deg,var(--green),var(--primary))"></div></div>
+<div class="roi-row"><span>Investissement</span><span class="val">1 500€/mois</span></div>
+<div class="roi-row" style="margin-top:16px;padding-top:16px;border-top:1px solid var(--glass-border)"><span><strong>ROI cumulé (3 mois)</strong></span><span class="val" style="color:var(--green);font-size:1.2rem">+1 800€</span></div>
+</div>
+</div>
+
+<!-- DELIVERABLES -->
+<div id="deliverables">
+<div class="section-title">📦 Deliverables</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Nom</th><th>Date</th><th>Type</th><th>Impact</th></tr></thead>
+<tbody>
+<tr><td>Skill "Réponse avis Google"</td><td>23 Jul</td><td>Claude Skill</td><td>2h/semaine</td></tr>
+<tr><td>Workflow relances clients</td><td>23 Jul</td><td>Make.com</td><td>3h/semaine</td></tr>
+<tr><td>Intégration Calendly</td><td>09 Jul</td><td>Automatisation</td><td>4h/semaine</td></tr>
+<tr><td>Template email post-RDV</td><td>09 Jul</td><td>Email</td><td>1h/semaine</td></tr>
+<tr><td>Hub Notion configuré</td><td>25 Jun</td><td>Setup</td><td>Centralisation</td></tr>
+<tr><td>Audit processus complet</td><td>25 Jun</td><td>Document</td><td>Cartographie</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</main>
+
+<script>
+// Demo: load user from localStorage
+const session=localStorage.getItem('jcode_session');
+if(session){
+document.getElementById('userName').textContent=session.split('@')[0];
+document.getElementById('greetName').textContent=session.split('@')[0];
+}
+</script>
+</body>
+</html>
