@@ -259,13 +259,19 @@ footer a:hover{color:var(--primary)}
 
 <div class="cookie-banner" id="cookieBanner">
 <p style="color:var(--muted);font-size:13px;">🍪 Nous utilisons des cookies pour améliorer votre expérience.</p>
-<button class="cookie-btn cookie-accept" onclick="document.getElementById('cookieBanner').classList.add('hidden')">Accepter</button>
-<button class="cookie-btn cookie-refuse" onclick="document.getElementById('cookieBanner').classList.add('hidden')">Refuser</button>
+<button class="cookie-btn cookie-accept" onclick="cookieAccept()">Accepter</button>
+<button class="cookie-btn cookie-refuse" onclick="cookieRefuse()">Refuser</button>
 </div>
 
 <script>
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.1});
 document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+
+<script>
+function cookieAccept(){localStorage.setItem('jcode_cookies','accepted');document.getElementById('cookieBanner').classList.add('hidden');}
+function cookieRefuse(){localStorage.setItem('jcode_cookies','refused');document.getElementById('cookieBanner').classList.add('hidden');}
+if(localStorage.getItem('jcode_cookies')){document.getElementById('cookieBanner').classList.add('hidden');}
 </script>
 </body>
 </html>

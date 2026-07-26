@@ -183,6 +183,12 @@ else payload[k]=v;
 payload.tech_level=techLevel;
 payload.submitted_at=new Date().toISOString();
 
+// TODO SÉCURITÉ: Ajouter Cloudflare Turnstile (gratuit) avant déploiement
+// 1. Créer un site sur https://dash.cloudflare.com/?to=/:account/turnstile
+// 2. Ajouter: <div class="cf-turnstile" data-sitekey="TA_CLE_SITE"></div>
+// 3. Vérifier le token côté Make.com avant de traiter le formulaire
+// Sans CAPTCHA, ce formulaire est vulnérable au spam par bots.
+
 // Send to Make.com webhook (replace URL with real one)
 const WEBHOOK_URL='https://hook.make.com/YOUR_WEBHOOK_ID';
 fetch(WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})

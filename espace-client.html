@@ -35,6 +35,10 @@ body::after{content:'';position:absolute;bottom:-200px;left:-200px;width:500px;h
 </style>
 </head>
 <body>
+<div style="position:fixed;top:0;left:0;right:0;z-index:99999;background:#dc2626;color:white;text-align:center;padding:12px;font-family:sans-serif;font-size:14px;font-weight:bold;">
+⚠️ PAGE DÉMO — Authentification NON sécurisée (localStorage). NE PAS utiliser en production.
+</div>
+<div style="height:44px;"></div>
 <div class="login-card">
 <div class="logo">J<span>CODE</span></div>
 <h1>Espace Client</h1>
@@ -60,7 +64,8 @@ function handleLogin(e){
 e.preventDefault();
 const email=document.getElementById('email').value;
 const pass=document.getElementById('password').value;
-// Demo: check localStorage for registered users
+// ⚠️ DÉMO UNIQUEMENT — Stockage PLAIN TEXT dans localStorage. INTERDIT en production.
+// TODO: Remplacer par Supabase Auth ou Firebase Auth avant mise en ligne.
 const users=JSON.parse(localStorage.getItem('jcode_users')||'{}');
 if(users[email]&&users[email]===pass){
 localStorage.setItem('jcode_session',email);
