@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Formulaire Intake — AI Concierge | JCODE Agency</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="i18n/i18n.js"></script>
 <style>
 :root{--bg:#0a0a0a;--glass:rgba(255,255,255,0.05);--glass-border:rgba(255,255,255,0.08);--primary:#00f0ff;--accent:#ff006e;--text:#fff;--muted:#94a3b8}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -44,41 +45,53 @@ h1{font-size:2rem;font-weight:800;text-align:center;margin-bottom:8px}
 .success-msg p{color:var(--muted);margin-bottom:24px}
 .back{display:block;text-align:center;margin-top:24px;color:var(--muted);font-size:13px;text-decoration:none}
 .back:hover{color:var(--primary)}
+.nav-bar{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:rgba(10,10,10,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border)}
+.nav-bar .logo{font-weight:800;font-size:1.2rem;color:var(--text)}
+.nav-bar .logo span{color:var(--primary)}
+.lang-switcher{display:flex;gap:8px;align-items:center}
 @media(max-width:600px){.form-card{padding:24px}.checkbox-group{flex-direction:column}}
 </style>
 </head>
 <body>
+<nav class="nav-bar">
+<a href="index.html" class="logo">J<span>CODE</span> Agency</a>
+<div class="lang-switcher">
+  <a href="#" class="lang-btn" data-lang="fr" onclick="setLanguage('fr'); return false;">FR</a>
+  <a href="#" class="lang-btn" data-lang="nl" onclick="setLanguage('nl'); return false;">NL</a>
+  <a href="#" class="lang-btn" data-lang="en" onclick="setLanguage('en'); return false;">EN</a>
+</div>
+</nav>
 <div class="container">
-<h1>📋 Formulaire Intake</h1>
-<p class="sub">AI Concierge — JCODE Agency | 5 minutes pour démarrer votre automatisation</p>
+<h1 data-i18n="intake.title">📋 Formulaire Intake</h1>
+<p class="sub" data-i18n="intake.subtitle">AI Concierge — JCODE Agency | 5 minutes pour démarrer votre automatisation</p>
 
 <div class="form-card" id="formCard">
 <form id="intakeForm" onsubmit="submitIntake(event)">
 
 <div class="form-group">
-<label>Nom de l'entreprise <span class="req">*</span></label>
-<input type="text" name="business_name" placeholder="Ex: Salon Élégance" required>
+<label><span data-i18n="intake.label.business">Nom de l'entreprise</span> <span class="req">*</span></label>
+<input type="text" name="business_name" placeholder="Ex: Salon Élégance" data-i18n-attr="placeholder:intake.placeholder.business" required>
 </div>
 
 <div class="form-group">
-<label>Secteur d'activité <span class="req">*</span></label>
+<label><span data-i18n="intake.label.sector">Secteur d'activité</span> <span class="req">*</span></label>
 <select name="sector" required>
-<option value="">— Sélectionnez —</option>
-<option value="coiffeur">Coiffeur / Barbier</option>
-<option value="boulanger">Boulanger / Pâtissier</option>
-<option value="restaurant">Restaurant / Snack</option>
-<option value="airbnb">Hôte Airbnb</option>
-<option value="boucherie">Boucherie / Épicerie</option>
-<option value="sante">Santé / Bien-être</option>
-<option value="commerce">Commerce / Boutique</option>
-<option value="autre">Autre</option>
+<option value="" data-i18n="intake.sector.select">— Sélectionnez —</option>
+<option value="coiffeur" data-i18n="intake.sector.coiffeur">Coiffeur / Barbier</option>
+<option value="boulanger" data-i18n="intake.sector.boulanger">Boulanger / Pâtissier</option>
+<option value="restaurant" data-i18n="intake.sector.restaurant">Restaurant / Snack</option>
+<option value="airbnb" data-i18n="intake.sector.airbnb">Hôte Airbnb</option>
+<option value="boucherie" data-i18n="intake.sector.boucherie">Boucherie / Épicerie</option>
+<option value="sante" data-i18n="intake.sector.sante">Santé / Bien-être</option>
+<option value="commerce" data-i18n="intake.sector.commerce">Commerce / Boutique</option>
+<option value="autre" data-i18n="intake.sector.autre">Autre</option>
 </select>
 </div>
 
 <div class="form-group">
-<label>Nombre d'employés</label>
+<label data-i18n="intake.label.employees">Nombre d'employés</label>
 <select name="employees">
-<option value="1">Juste moi</option>
+<option value="1" data-i18n="intake.emp.justeMoi">Juste moi</option>
 <option value="2-5">2-5</option>
 <option value="6-10">6-10</option>
 <option value="11+">11+</option>
@@ -86,35 +99,35 @@ h1{font-size:2rem;font-weight:800;text-align:center;margin-bottom:8px}
 </div>
 
 <div class="form-group">
-<label>Site web actuel (optionnel)</label>
+<label data-i18n="intake.label.website">Site web actuel (optionnel)</label>
 <input type="url" name="website" placeholder="https://...">
 </div>
 
 <div class="form-group">
-<label>Outils digitaux utilisés</label>
+<label data-i18n="intake.label.tools">Outils digitaux utilisés</label>
 <div class="checkbox-group">
 <label><input type="checkbox" name="tools" value="facebook"><span>Facebook</span></label>
 <label><input type="checkbox" name="tools" value="instagram"><span>Instagram</span></label>
 <label><input type="checkbox" name="tools" value="google_business"><span>Google Business</span></label>
-<label><input type="checkbox" name="tools" value="reservation"><span>Réservation en ligne</span></label>
+<label><input type="checkbox" name="tools" value="reservation"><span data-i18n="intake.tool.reservation">Réservation en ligne</span></label>
 <label><input type="checkbox" name="tools" value="whatsapp"><span>WhatsApp Business</span></label>
 <label><input type="checkbox" name="tools" value="tiktok"><span>TikTok</span></label>
-<label><input type="checkbox" name="tools" value="aucun"><span>Aucun</span></label>
+<label><input type="checkbox" name="tools" value="aucun"><span data-i18n="intake.tool.aucun">Aucun</span></label>
 </div>
 </div>
 
 <div class="form-group">
-<label>Vos 3 plus grosses pertes de temps <span class="req">*</span></label>
-<textarea name="time_wasters" placeholder="Ex: Répondre aux mêmes questions, gérer les réservations manuellement, faire les factures..." required></textarea>
+<label><span data-i18n="intake.label.timewasters">Vos 3 plus grosses pertes de temps</span> <span class="req">*</span></label>
+<textarea name="time_wasters" placeholder="Ex: Répondre aux mêmes questions, gérer les réservations manuellement, faire les factures..." data-i18n-attr="placeholder:intake.placeholder.timewasters" required></textarea>
 </div>
 
 <div class="form-group">
-<label>Processus répétitifs quotidiens</label>
-<textarea name="repetitive" placeholder="Ex: Envoyer des rappels RDV, poster sur les réseaux, répondre aux avis..."></textarea>
+<label data-i18n="intake.label.repetitive">Processus répétitifs quotidiens</label>
+<textarea name="repetitive" placeholder="Ex: Envoyer des rappels RDV, poster sur les réseaux, répondre aux avis..." data-i18n-attr="placeholder:intake.placeholder.repetitive"></textarea>
 </div>
 
 <div class="form-group">
-<label>Budget mensuel envisagé</label>
+<label data-i18n="intake.label.budget">Budget mensuel envisagé</label>
 <div class="range-group">
 <input type="range" name="budget" min="500" max="3000" step="100" value="1000" oninput="document.getElementById('budgetVal').textContent=this.value+'€'">
 <span class="range-value" id="budgetVal">1000€</span>
@@ -122,7 +135,7 @@ h1{font-size:2rem;font-weight:800;text-align:center;margin-bottom:8px}
 </div>
 
 <div class="form-group">
-<label>Votre niveau tech (1=débutant, 5=expert)</label>
+<label data-i18n="intake.label.techlevel">Votre niveau tech (1=débutant, 5=expert)</label>
 <div class="stars" id="stars">
 <label onclick="setStars(1)">★</label>
 <label onclick="setStars(2)">★</label>
@@ -134,31 +147,31 @@ h1{font-size:2rem;font-weight:800;text-align:center;margin-bottom:8px}
 </div>
 
 <div class="form-group">
-<label>Votre objectif à 3 mois <span class="req">*</span></label>
-<textarea name="goal" placeholder="Ex: Automatiser mes réservations, gagner 10h/semaine, ne plus oublier de relancer les clients..." required></textarea>
+<label><span data-i18n="intake.label.goal">Votre objectif à 3 mois</span> <span class="req">*</span></label>
+<textarea name="goal" placeholder="Ex: Automatiser mes réservations, gagner 10h/semaine, ne plus oublier de relancer les clients..." data-i18n-attr="placeholder:intake.placeholder.goal" required></textarea>
 </div>
 
 <div class="form-group">
-<label>Email de contact <span class="req">*</span></label>
-<input type="email" name="email" placeholder="votre@email.com" required>
+<label><span data-i18n="intake.label.email">Email de contact</span> <span class="req">*</span></label>
+<input type="email" name="email" placeholder="votre@email.com" data-i18n-attr="placeholder:intake.placeholder.email" required>
 </div>
 
 <div class="consent">
 <input type="checkbox" id="rgpd" required>
-<label for="rgpd">J'accepte que mes données soient traitées par JCODE Agency dans le cadre de cette demande, conformément au <a href="privacy-policy.html" style="color:var(--primary)">RGPD</a>. Je peux retirer mon consentement à tout moment. <span class="req">*</span></label>
+<label for="rgpd" data-i18n-html="intake.consent">J'accepte que mes données soient traitées par JCODE Agency dans le cadre de cette demande, conformément au <a href="privacy-policy.html" style="color:var(--primary)">RGPD</a>. Je peux retirer mon consentement à tout moment. <span class="req">*</span></label>
 </div>
 
-<button type="submit" class="btn-submit" id="submitBtn">Envoyer mon formulaire →</button>
+<button type="submit" class="btn-submit" id="submitBtn" data-i18n="intake.submit">Envoyer mon formulaire →</button>
 </form>
 </div>
 
 <div class="success-msg" id="successMsg">
-<h2>🎉 Formulaire envoyé !</h2>
-<p>Merci ! Je reviens vers vous sous 24h avec les prochaines étapes.<br>Vérifiez votre boîte email (et les spams).</p>
-<a href="index.html" class="back">← Retour au site</a>
+<h2 data-i18n="intake.success.title">🎉 Formulaire envoyé !</h2>
+<p data-i18n-html="intake.success.desc">Merci ! Je reviens vers vous sous 24h avec les prochaines étapes.<br>Vérifiez votre boîte email (et les spams).</p>
+<a href="index.html" class="back" data-i18n="common.back">← Retour au site</a>
 </div>
 
-<a href="index.html" class="back">← Retour au site</a>
+<a href="index.html" class="back" data-i18n="common.back">← Retour au site</a>
 </div>
 
 <script>

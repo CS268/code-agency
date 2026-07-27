@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentions légales - JCODE Agency</title>
+    <script src="i18n/i18n.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -99,61 +100,88 @@
             margin-bottom: 0.25rem;
             color: var(--primary);
         }
+
+        .lang-switcher {
+            display: flex;
+            gap: 6px;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        .lang-btn {
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.25);
+            color: rgba(255,255,255,0.7);
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .lang-btn:hover {
+            background: rgba(255,255,255,0.25);
+            color: #fff;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>JCODE Agency</h1>
+            <h1 data-i18n="legal.title_header" style="color:white">JCODE Agency</h1>
+            <div class="lang-switcher">
+                <a href="#" class="lang-btn" data-lang="fr" onclick="setLanguage('fr'); return false;">FR</a>
+                <a href="#" class="lang-btn" data-lang="nl" onclick="setLanguage('nl'); return false;">NL</a>
+                <a href="#" class="lang-btn" data-lang="en" onclick="setLanguage('en'); return false;">EN</a>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <h1>Mentions légales</h1>
+        <h1 data-i18n="legal.title">Mentions légales</h1>
 
         <section>
-            <h2>Éditeur du site</h2>
+            <h2 data-i18n="legal.editor_title">Éditeur du site</h2>
             <div class="info-grid">
                 <div class="info-item">
-                    <strong>Nom :</strong>
+                    <strong data-i18n="legal.name_label">Nom :</strong>
                     <p>JCODE Agency</p>
                 </div>
                 <div class="info-item">
-                    <strong>Email :</strong>
+                    <strong data-i18n="legal.email_label">Email :</strong>
                     <p><a href="mailto:matovuruky@gmail.com">matovuruky@gmail.com</a></p>
                 </div>
                 <div class="info-item">
-                    <strong>Téléphone :</strong>
+                    <strong data-i18n="legal.phone_label">Téléphone :</strong>
                     <p>0466/06.22.73</p>
                 </div>
                 <div class="info-item">
-                    <strong>Siège social :</strong>
+                    <strong data-i18n="legal.hq_label">Siège social :</strong>
                     <p>Mons, Belgique</p>
                 </div>
                 <div class="info-item">
-                    <strong>Numéro BCE/KBO :</strong>
+                    <strong data-i18n="legal.bce_label">Numéro BCE/KBO :</strong>
                     <p>BE 1014.449.754</p>
                 </div>
                 <div class="info-item">
-                    <strong>Numéro TVA :</strong>
+                    <strong data-i18n="legal.vat_label">Numéro TVA :</strong>
                     <p>BE 1014.449.754</p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Hébergement</h2>
+            <h2 data-i18n="legal.hosting_title">Hébergement</h2>
             <div class="info-item">
-                <strong>Nom :</strong>
-                <p>GitHub Pages</p>
+                <strong data-i18n="legal.name_label">Nom :</strong>
+                <p data-i18n="legal.hosting_name">GitHub Pages</p>
             </div>
             <div class="info-item">
-                <strong>Adresse :</strong>
-                <p>88 Colin P. Kelly Jr. Street, San Francisco CA 94107 USA</p>
+                <strong data-i18n="legal.hq_label">Adresse :</strong>
+                <p data-i18n="legal.hosting_address">88 Colin P. Kelly Jr. Street, San Francisco CA 94107 USA</p>
             </div>
         </section>
 
-        <a href="index.html" class="back-link">Retour au site</a>
+        <a href="index.html" class="back-link" data-i18n="legal.back">Retour au site</a>
     </main>
 </body>
 </html>
