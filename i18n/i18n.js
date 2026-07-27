@@ -14,6 +14,45 @@
   // Translation store
   var T = {};
 
+  // XSS-safe HTML sanitizer — allowlist approach
+  var SAFE_TAGS = ['br','strong','em','b','i','span','p','a','ul','ol','li','small','sup','sub'];
+  var SAFE_ATTRS = ['href','class','target','rel'];
+
+  function sanitizeHtml(html) {
+    if (typeof html !== 'string') return '';
+    // Strip <script>, <iframe>, <object>, <embed>, <form>, <style> and their content
+    var dangerous = /<(script|iframe|object|embed|form|style)\b[^>]*>[\s\S]*?<\/\1>/gi;
+    var clean = html.replace(dangerous, '');
+    // Also remove self-closing dangerous tags
+    clean = clean.replace(/<(script|iframe|object|embed|form|style)\b[^>]*\/?>/gi, '');
+    // Strip event handlers (onclick, onerror, onload, etc.)
+    clean = clean.replace(/\s+on\w+\s*=\s*("[^"]*"|'[^']*'|[^\s>]*)/gi, '');
+    // Strip javascript: URLs
+    clean = clean.replace(/javascript\s*:/gi, '');
+    // Remove tags not in allowlist (keep their inner content)
+    clean = clean.replace(/<\/?([a-zA-Z][a-zA-Z0-9]*)\b[^>]*>/g, function (match, tag) {
+      var lower = tag.toLowerCase();
+      if (SAFE_TAGS.indexOf(lower) === -1) return ''; // strip disallowed tag but keep content
+      // For allowed tags, strip unsafe attributes
+      if (match.charAt(1) === '/') return match; // closing tag — no attrs
+      var attrStr = match.slice(tag.length + 2, -1); // content between <tag and >
+      var safeAttrs = [];
+      var attrRe = /([a-zA-Z][\w-]*)\s*=\s*("([^"]*)"|'([^']*)'|([^\s>]+))/g;
+      var m;
+      while ((m = attrRe.exec(attrStr)) !== null) {
+        var attrName = m[1].toLowerCase();
+        var attrVal = m[3] || m[4] || m[5] || '';
+        if (SAFE_ATTRS.indexOf(attrName) !== -1) {
+          // Double-check no javascript: in attribute values
+          if (/javascript\s*:/i.test(attrVal)) continue;
+          safeAttrs.push(attrName + '="' + attrVal.replace(/"/g, '&quot;') + '"');
+        }
+      }
+      return '<' + lower + (safeAttrs.length ? ' ' + safeAttrs.join(' ') : '') + '>';
+    });
+    return clean;
+  }
+
   function t(key) {
     return (T[lang] && T[lang][key] !== undefined) ? T[lang][key] : null;
   }
@@ -60,16 +99,16 @@
     var descEl = document.querySelector('meta[name="description"]');
     if (descEl) { var d = t('page.description'); if (d) descEl.setAttribute('content', d); }
 
-    // [data-i18n="key"] → textContent
+    // [data-i18n="key"] → innerHTML (XSS-sanitized)
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var val = t(el.getAttribute('data-i18n'));
-      if (val !== null) el.textContent = val;
+      if (val !== null) el.innerHTML = sanitizeHtml(val);
     });
 
-    // [data-i18n-html="key"] → innerHTML (rich content with tags)
+    // [data-i18n-html="key"] → innerHTML (XSS-sanitized, rich content with tags)
     document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
       var val = t(el.getAttribute('data-i18n-html'));
-      if (val !== null) el.innerHTML = val;
+      if (val !== null) el.innerHTML = sanitizeHtml(val);
     });
 
     // [data-i18n-attr="attrName:key,..."] → set attributes

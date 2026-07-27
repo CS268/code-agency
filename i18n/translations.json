@@ -1265,29 +1265,29 @@
     "nl": "1 000€"
   },
   "concierge.pricing.starter.f1": {
-    "fr": "2 appels de 45 min/mois",
-    "en": "2 x 45 min calls/month",
-    "nl": "2 calls van 45 min/maand"
+    "fr": "<strong>2 appels</strong> de 45 min/mois",
+    "en": "<strong>2 calls</strong> x 45 min/month",
+    "nl": "<strong>2 calls</strong> van 45 min/maand"
   },
   "concierge.pricing.starter.f2": {
-    "fr": "Voxer illimité (réponse <12h)",
-    "en": "Unlimited Voxer (response <12h)",
-    "nl": "Onbeperkt Voxer (reactie <12u)"
+    "fr": "<strong>Voxer illimité</strong> (réponse &lt;12h)",
+    "en": "<strong>Unlimited Voxer</strong> (response &lt;12h)",
+    "nl": "<strong>Onbeperkt Voxer</strong> (reactie &lt;12u)"
   },
   "concierge.pricing.starter.f3": {
-    "fr": "Hub Notion personnalisé",
-    "en": "Custom Notion Hub",
-    "nl": "Gepersonaliseerde Notion Hub"
+    "fr": "<strong>Hub Notion</strong> personnalisé",
+    "en": "<strong>Custom Notion Hub</strong>",
+    "nl": "<strong>Gepersonaliseerde Notion Hub</strong>"
   },
   "concierge.pricing.starter.f4": {
-    "fr": "2 skills Claude/mois",
-    "en": "2 Claude skills/month",
-    "nl": "2 Claude skills/maand"
+    "fr": "<strong>2 skills Claude</strong>/mois",
+    "en": "<strong>2 Claude skills</strong>/month",
+    "nl": "<strong>2 Claude skills</strong>/maand"
   },
   "concierge.pricing.starter.f5": {
-    "fr": "Email récap après chaque appel",
-    "en": "Summary email after each call",
-    "nl": "Samenvattende e-mail na elke call"
+    "fr": "<strong>Email récap</strong> après chaque appel",
+    "en": "<strong>Summary email</strong> after each call",
+    "nl": "<strong>Samenvattende e-mail</strong> na elke call"
   },
   "concierge.pricing.pro.plan": {
     "fr": "Pro",
@@ -1300,34 +1300,34 @@
     "nl": "1 500€"
   },
   "concierge.pricing.pro.f1": {
-    "fr": "Tout Starter +",
-    "en": "Everything in Starter +",
-    "nl": "Alles van Starter +"
+    "fr": "Tout <strong>Starter</strong> +",
+    "en": "Everything in <strong>Starter</strong> +",
+    "nl": "Alles van <strong>Starter</strong> +"
   },
   "concierge.pricing.pro.f2": {
-    "fr": "Skills Claude illimités",
-    "en": "Unlimited Claude skills",
-    "nl": "Onbeperkte Claude skills"
+    "fr": "<strong>Skills Claude illimités</strong>",
+    "en": "<strong>Unlimited Claude skills</strong>",
+    "nl": "<strong>Onbeperkte Claude skills</strong>"
   },
   "concierge.pricing.pro.f3": {
-    "fr": "Workflows Make.com",
-    "en": "Make.com workflows",
-    "nl": "Make.com workflows"
+    "fr": "<strong>Workflows Make.com</strong>",
+    "en": "<strong>Make.com workflows</strong>",
+    "nl": "<strong>Make.com workflows</strong>"
   },
   "concierge.pricing.pro.f4": {
-    "fr": "Support prioritaire Voxer (<6h)",
-    "en": "Priority Voxer support (<6h)",
-    "nl": "Prioriteit Voxer support (<6u)"
+    "fr": "<strong>Support prioritaire</strong> Voxer (&lt;6h)",
+    "en": "<strong>Priority Voxer support</strong> (&lt;6h)",
+    "nl": "<strong>Prioriteit Voxer support</strong> (&lt;6u)"
   },
   "concierge.pricing.pro.f5": {
-    "fr": "Rapports bi-mensuels",
-    "en": "Bi-weekly reports",
-    "nl": "Tweewekelijkse rapporten"
+    "fr": "<strong>Rapports bi-mensuels</strong>",
+    "en": "<strong>Bi-weekly reports</strong>",
+    "nl": "<strong>Tweewekelijkse rapporten</strong>"
   },
   "concierge.pricing.pro.f6": {
-    "fr": "Accès templates exclusifs",
-    "en": "Access to exclusive templates",
-    "nl": "Toegang tot exclusieve templates"
+    "fr": "Accès <strong>templates exclusifs</strong>",
+    "en": "Access to <strong>exclusive templates</strong>",
+    "nl": "Toegang tot <strong>exclusieve templates</strong>"
   },
   "concierge.pricing.elite.plan": {
     "fr": "Elite",
@@ -1340,34 +1340,34 @@
     "nl": "2 000€"
   },
   "concierge.pricing.elite.f1": {
-    "fr": "Tout Pro +",
-    "en": "Everything in Pro +",
-    "nl": "Alles van Pro +"
+    "fr": "Tout <strong>Pro</strong> +",
+    "en": "Everything in <strong>Pro</strong> +",
+    "nl": "Alles van <strong>Pro</strong> +"
   },
   "concierge.pricing.elite.f2": {
-    "fr": "4 appels/mois (accès prioritaire)",
-    "en": "4 calls/month (priority access)",
-    "nl": "4 calls/maand (prioriteitstoegang)"
+    "fr": "<strong>4 appels/mois</strong> (accès prioritaire)",
+    "en": "<strong>4 calls/month</strong> (priority access)",
+    "nl": "<strong>4 calls/maand</strong> (prioriteitstoegang)"
   },
   "concierge.pricing.elite.f3": {
-    "fr": "Rapports mensuels + ROI détaillé",
-    "en": "Monthly reports + detailed ROI",
-    "nl": "Maandelijkse rapporten + gedetailleerde ROI"
+    "fr": "<strong>Rapports mensuels</strong> + ROI détaillé",
+    "en": "<strong>Monthly reports</strong> + detailed ROI",
+    "nl": "<strong>Maandelijkse rapporten</strong> + gedetailleerde ROI"
   },
   "concierge.pricing.elite.f4": {
-    "fr": "Stratégie IA trimestrielle",
-    "en": "Quarterly AI strategy",
-    "nl": "Driemaandelijkse IA-strategie"
+    "fr": "<strong>Stratégie IA trimestrielle</strong>",
+    "en": "<strong>Quarterly AI strategy</strong>",
+    "nl": "<strong>Driemaandelijkse IA-strategie</strong>"
   },
   "concierge.pricing.elite.f5": {
-    "fr": "Canal Slack/Discord dédié",
-    "en": "Dedicated Slack/Discord channel",
-    "nl": "Dedicated Slack/Discord kanaal"
+    "fr": "<strong>Canal Slack/Discord dédié</strong>",
+    "en": "<strong>Dedicated Slack/Discord channel</strong>",
+    "nl": "<strong>Dedicated Slack/Discord kanaal</strong>"
   },
   "concierge.pricing.elite.f6": {
-    "fr": "Déploiement Vercel inclus",
-    "en": "Vercel deployment included",
-    "nl": "Vercel implementatie inbegrepen"
+    "fr": "<strong>Déploiement Vercel</strong> inclus",
+    "en": "<strong>Vercel deployment</strong> included",
+    "nl": "<strong>Vercel implementatie</strong> inbegrepen"
   },
   "concierge.faq.title": {
     "fr": "Questions fréquentes",
@@ -1435,9 +1435,9 @@
     "nl": "Voor welk type bedrijf?"
   },
   "concierge.faq.a6": {
-    "fr": "Coiffeurs, boulangers, restaurants, hôtes Airbnb, indépendants, TPE. Tout business local qui perd du temps sur des tâches répétitives : emails, réservations, factures, relances, réseaux sociaux.",
-    "en": "Hairdressers, bakers, restaurants, Airbnb hosts, freelancers, small businesses. Any local business wasting time on repetitive tasks: emails, bookings, invoices, follow-ups, social media.",
-    "nl": "Kappers, bakkers, restaurants, Airbnb-hosts, zelfstandigen, KMO's. Elk lokaal bedrijf dat tijd verliest aan repetitieve taken: e-mails, reserveringen, facturen, opvolging, sociale media."
+    "fr": "Coiffeurs, boulangers, restaurants, hôtes Business, indépendants, TPE. Tout business local qui perd du temps sur des tâches répétitives : emails, réservations, factures, relances, réseaux sociaux.",
+    "en": "Hairdressers, bakers, restaurants, Business hosts, freelancers, small businesses. Any local business wasting time on repetitive tasks: emails, bookings, invoices, follow-ups, social media.",
+    "nl": "Kappers, bakkers, restaurants, Business-hosts, zelfstandigen, KMO's. Elk lokaal bedrijf dat tijd verliest aan repetitieve taken: e-mails, reserveringen, facturen, opvolging, sociale media."
   },
   "concierge.faq.q7": {
     "fr": "Quelle différence avec un freelancer classique ?",
@@ -1545,9 +1545,9 @@
     "nl": "Restaurant / Snackbar"
   },
   "intake.sector.airbnb": {
-    "fr": "Hôte Airbnb",
-    "en": "Airbnb Host",
-    "nl": "Airbnb-host"
+    "fr": "Hôte Business",
+    "en": "Business Host",
+    "nl": "Business-host"
   },
   "intake.sector.boucherie": {
     "fr": "Boucherie / Épicerie",
@@ -1940,9 +1940,9 @@
     "nl": "JCODE Agency — Websites & Geautomatiseerde Marketing door AI"
   },
   "index.meta.description": {
-    "fr": "JCODE Agency propulse votre commerce (Airbnb, restaurant, coiffeur, boulanger...) avec 21 agents IA. Vidéos, prospection, copywriting, sites web — 100% automatisé. Package Teaser à 497€.",
-    "en": "JCODE Agency boosts your business (Airbnb, restaurant, hairdresser, bakery...) with 21 AI agents. Videos, prospecting, copywriting, websites — 100% automated. Teaser Package at €497.",
-    "nl": "JCODE Agency boost uw bedrijf (Airbnb, restaurant, kapper, bakker...) met 21 AI-agents. Video's, prospectie, copywriting, websites — 100% geautomatiseerd. Teaser Pakket voor €497."
+    "fr": "JCODE Agency propulse votre commerce (Business, restaurant, coiffeur, boulanger...) avec 21 agents IA. Vidéos, prospection, copywriting, sites web — 100% automatisé. Package Teaser à 497€.",
+    "en": "JCODE Agency boosts your business (Business, restaurant, hairdresser, bakery...) with 21 AI agents. Videos, prospecting, copywriting, websites — 100% automated. Teaser Package at €497.",
+    "nl": "JCODE Agency boost uw bedrijf (Business, restaurant, kapper, bakker...) met 21 AI-agents. Video's, prospectie, copywriting, websites — 100% geautomatiseerd. Teaser Pakket voor €497."
   },
   "index.hero.badge": {
     "fr": "21 agents IA déployés",
@@ -1960,9 +1960,9 @@
     "nl": "100% geautomatiseerd"
   },
   "index.hero.subtitle": {
-    "fr": "JCODE Agency propulse votre commerce (Airbnb, restaurant, coiffeur, boulanger...) avec une armée d'agents IA. Génération de contenu, prospection clients, et optimisation — tout tourne en autopilot.",
-    "en": "JCODE Agency boosts your business (Airbnb, restaurant, hairdresser, bakery...) with an army of AI agents. Content generation, client prospecting, and optimization — everything runs on autopilot.",
-    "nl": "JCODE Agency boost uw bedrijf (Airbnb, restaurant, kapper, bakker...) met een leger van AI-agents. Contentgeneratie, klantenprospecting en optimalisatie — alles draait op autopilot."
+    "fr": "JCODE Agency propulse votre commerce (Business, restaurant, coiffeur, boulanger...) avec une armée d'agents IA. Génération de contenu, prospection clients, et optimisation — tout tourne en autopilot.",
+    "en": "JCODE Agency boosts your business (Business, restaurant, hairdresser, bakery...) with an army of AI agents. Content generation, client prospecting, and optimization — everything runs on autopilot.",
+    "nl": "JCODE Agency boost uw bedrijf (Business, restaurant, kapper, bakker...) met een leger van AI-agents. Contentgeneratie, klantenprospecting en optimalisatie — alles draait op autopilot."
   },
   "index.hero.ctaPrimary": {
     "fr": "Voir tous les packages →",
@@ -2040,9 +2040,9 @@
     "nl": "Een leger van AI-agents tot uw dienst"
   },
   "index.services.subtitle": {
-    "fr": "Chaque agent est spécialisé dans une mission précise pour faire croître votre business Airbnb sans effort.",
-    "en": "Each agent is specialized in a specific mission to grow your Airbnb business effortlessly.",
-    "nl": "Elke agent is gespecialiseerd in een specifieke missie om uw Airbnb-bedrijf moeiteloos te laten groeien."
+    "fr": "Chaque agent est spécialisé dans une mission précise pour faire croître votre business Business sans effort.",
+    "en": "Each agent is specialized in a specific mission to grow your Business business effortlessly.",
+    "nl": "Elke agent is gespecialiseerd in een specifieke missie om uw Business-bedrijf moeiteloos te laten groeien."
   },
   "index.services.brandbuilder.title": {
     "fr": "BrandBuilder",
@@ -2060,9 +2060,9 @@
     "nl": "CopyMaster"
   },
   "index.services.copymaster.desc": {
-    "fr": "Rédaction SEO optimisée pour vos annonces Airbnb, descriptions captivantes, et contenu de blog qui convertit les visiteurs.",
-    "en": "SEO-optimized writing for your Airbnb listings, captivating descriptions, and blog content that converts visitors.",
-    "nl": "SEO-geoptimaliseerd schrijven voor uw Airbnb-vermeldingen, boeiende beschrijvingen en blogcontent die bezoekers converteert."
+    "fr": "Rédaction SEO optimisée pour vos annonces Business, descriptions captivantes, et contenu de blog qui convertit les visiteurs.",
+    "en": "SEO-optimized writing for your Business listings, captivating descriptions, and blog content that converts visitors.",
+    "nl": "SEO-geoptimaliseerd schrijven voor uw Business-vermeldingen, boeiende beschrijvingen en blogcontent die bezoekers converteert."
   },
   "index.services.videocreator.title": {
     "fr": "VideoCreator",
@@ -2080,9 +2080,9 @@
     "nl": "Outreach Pro"
   },
   "index.services.outreach.desc": {
-    "fr": "Prospection automatisée de propriétaires Airbnb : scraping ciblé, emails personnalisés, et suivi intelligent des leads.",
-    "en": "Automated prospecting of Airbnb owners: targeted scraping, personalized emails, and intelligent lead follow-up.",
-    "nl": "Geautomatiseerde prospectie van Airbnb-eigenaren: gerichte scraping, gepersonaliseerde e-mails en intelligente leadopvolging."
+    "fr": "Prospection automatisée de propriétaires Business : scraping ciblé, emails personnalisés, et suivi intelligent des leads.",
+    "en": "Automated prospecting of Business owners: targeted scraping, personalized emails, and intelligent lead follow-up.",
+    "nl": "Geautomatiseerde prospectie van Business-eigenaren: gerichte scraping, gepersonaliseerde e-mails en intelligente leadopvolging."
   },
   "index.services.analytics.title": {
     "fr": "Analytics AI",
@@ -2115,9 +2115,9 @@
     "nl": "Kies uw pakket"
   },
   "index.offer.subtitle": {
-    "fr": "Trois niveaux de puissance IA pour propulser votre Airbnb. Sans engagement, annulable à tout moment.",
-    "en": "Three levels of AI power to boost your Airbnb. No commitment, cancelable anytime.",
-    "nl": "Drie niveaus van AI-kracht om uw Airbnb te boosten. Geen verplichting, op elk moment opzegbaar."
+    "fr": "Trois niveaux de puissance IA pour propulser votre Business. Sans engagement, annulable à tout moment.",
+    "en": "Three levels of AI power to boost your Business. No commitment, cancelable anytime.",
+    "nl": "Drie niveaus van AI-kracht om uw Business te boosten. Geen verplichting, op elk moment opzegbaar."
   },
   "index.offer.recommended": {
     "fr": "⭐ RECOMMANDÉ",
@@ -2165,9 +2165,9 @@
     "nl": "Pro"
   },
   "index.offer.pro.desc": {
-    "fr": "Pour les propriétaires ambitieux qui veulent scaler leur business Airbnb.",
-    "en": "For ambitious owners who want to scale their Airbnb business.",
-    "nl": "Voor ambitieuze eigenaren die hun Airbnb-bedrijf willen opschalen."
+    "fr": "Pour les propriétaires ambitieux qui veulent scaler leur business Business.",
+    "en": "For ambitious owners who want to scale their Business business.",
+    "nl": "Voor ambitieuze eigenaren die hun Business-bedrijf willen opschalen."
   },
   "index.offer.pro.f1": {
     "fr": "Site vitrine professionnel (jusqu'à 3 pages)",
@@ -2380,24 +2380,24 @@
     "nl": "Starter"
   },
   "index.concierge.pricing.starter.f1": {
-    "fr": "✓ 2 appels de 45 min/mois",
-    "en": "✓ 2 x 45 min calls/month",
-    "nl": "✓ 2 calls van 45 min/maand"
+    "fr": "<strong>2 appels</strong> de 45 min/mois",
+    "en": "<strong>2 calls</strong> x 45 min/month",
+    "nl": "<strong>2 calls</strong> van 45 min/maand"
   },
   "index.concierge.pricing.starter.f2": {
-    "fr": "✓ Voxer illimité (réponse <12h)",
-    "en": "✓ Unlimited Voxer (response <12h)",
-    "nl": "✓ Onbeperkt Voxer (reactie <12u)"
+    "fr": "<strong>Voxer illimité</strong> (réponse &lt;12h)",
+    "en": "<strong>Unlimited Voxer</strong> (response &lt;12h)",
+    "nl": "<strong>Onbeperkt Voxer</strong> (reactie &lt;12u)"
   },
   "index.concierge.pricing.starter.f3": {
-    "fr": "✓ Hub Notion personnalisé",
-    "en": "✓ Custom Notion Hub",
-    "nl": "✓ Gepersonaliseerde Notion Hub"
+    "fr": "<strong>Hub Notion</strong> personnalisé",
+    "en": "<strong>Custom Notion Hub</strong>",
+    "nl": "<strong>Gepersonaliseerde Notion Hub</strong>"
   },
   "index.concierge.pricing.starter.f4": {
-    "fr": "✓ 2 skills Claude/mois",
-    "en": "✓ 2 Claude skills/month",
-    "nl": "✓ 2 Claude skills/maand"
+    "fr": "<strong>2 skills Claude</strong>/mois",
+    "en": "<strong>2 Claude skills</strong>/month",
+    "nl": "<strong>2 Claude skills</strong>/maand"
   },
   "index.concierge.pricing.pro.name": {
     "fr": "Pro",
@@ -2410,29 +2410,29 @@
     "nl": "POPULAIR"
   },
   "index.concierge.pricing.pro.f1": {
-    "fr": "✓ Tout Starter +",
-    "en": "✓ Everything Starter +",
-    "nl": "✓ Alles van Starter +"
+    "fr": "Tout <strong>Starter</strong> +",
+    "en": "Everything in <strong>Starter</strong> +",
+    "nl": "Alles van <strong>Starter</strong> +"
   },
   "index.concierge.pricing.pro.f2": {
-    "fr": "✓ Skills Claude illimités",
-    "en": "✓ Unlimited Claude skills",
-    "nl": "✓ Onbeperkt Claude skills"
+    "fr": "<strong>Skills Claude illimités</strong>",
+    "en": "<strong>Unlimited Claude skills</strong>",
+    "nl": "<strong>Onbeperkte Claude skills</strong>"
   },
   "index.concierge.pricing.pro.f3": {
-    "fr": "✓ Workflows Make.com",
-    "en": "✓ Make.com workflows",
-    "nl": "✓ Make.com workflows"
+    "fr": "<strong>Workflows Make.com</strong>",
+    "en": "<strong>Make.com workflows</strong>",
+    "nl": "<strong>Make.com workflows</strong>"
   },
   "index.concierge.pricing.pro.f4": {
-    "fr": "✓ Support prioritaire Voxer",
-    "en": "✓ Priority Voxer support",
-    "nl": "✓ Prioritaire Voxer-support"
+    "fr": "<strong>Support prioritaire</strong> Voxer",
+    "en": "<strong>Priority Voxer support</strong>",
+    "nl": "<strong>Prioritaire Voxer-support</strong>"
   },
   "index.concierge.pricing.pro.f5": {
-    "fr": "✓ Rapports bi-mensuels",
-    "en": "✓ Bi-monthly reports",
-    "nl": "✓ Tweemaandelijkse rapporten"
+    "fr": "<strong>Rapports bi-mensuels</strong>",
+    "en": "<strong>Bi-monthly reports</strong>",
+    "nl": "<strong>Tweemaandelijkse rapporten</strong>"
   },
   "index.concierge.pricing.elite.name": {
     "fr": "Elite",
@@ -2440,29 +2440,29 @@
     "nl": "Elite"
   },
   "index.concierge.pricing.elite.f1": {
-    "fr": "✓ Tout Pro +",
-    "en": "✓ Everything Pro +",
-    "nl": "✓ Alles van Pro +"
+    "fr": "Tout <strong>Pro</strong> +",
+    "en": "Everything in <strong>Pro</strong> +",
+    "nl": "Alles van <strong>Pro</strong> +"
   },
   "index.concierge.pricing.elite.f2": {
-    "fr": "✓ Accès prioritaire (4 appels/mois)",
-    "en": "✓ Priority access (4 calls/month)",
-    "nl": "✓ Prioritaire toegang (4 calls/maand)"
+    "fr": "<strong>Accès prioritaire</strong> (4 appels/mois)",
+    "en": "<strong>Priority access</strong> (4 calls/month)",
+    "nl": "<strong>Prioritaire toegang</strong> (4 calls/maand)"
   },
   "index.concierge.pricing.elite.f3": {
-    "fr": "✓ Rapports mensuels + ROI",
-    "en": "✓ Monthly reports + ROI",
-    "nl": "✓ Maandelijkse rapporten + ROI"
+    "fr": "<strong>Rapports mensuels</strong> + ROI",
+    "en": "<strong>Monthly reports</strong> + ROI",
+    "nl": "<strong>Maandelijkse rapporten</strong> + ROI"
   },
   "index.concierge.pricing.elite.f4": {
-    "fr": "✓ Stratégie IA trimestrielle",
-    "en": "✓ Quarterly IA strategy",
-    "nl": "✓ Driemaandelijkse IA-strategie"
+    "fr": "<strong>Stratégie IA trimestrielle</strong>",
+    "en": "<strong>Quarterly IA strategy</strong>",
+    "nl": "<strong>Driemaandelijkse IA-strategie</strong>"
   },
   "index.concierge.pricing.elite.f5": {
-    "fr": "✓ Slack/Discord dédié",
-    "en": "✓ Dedicated Slack/Discord",
-    "nl": "✓ Toegewijde Slack/Discord"
+    "fr": "<strong>Slack/Discord dédié</strong>",
+    "en": "<strong>Dedicated Slack/Discord</strong>",
+    "nl": "<strong>Toegewijde Slack/Discord</strong>"
   },
   "index.concierge.pricing.cta": {
     "fr": "Commencer",
@@ -2530,64 +2530,64 @@
     "nl": "Volg uw prestaties in realtime op uw gepersonaliseerde dashboard."
   },
   "index.testimonials.tag": {
-    "fr": "Résultats Clients",
-    "en": "Client Results",
-    "nl": "Klantresultaten"
+    "fr": "Ce qu'on en dit",
+    "en": "What they say",
+    "nl": "Wat ze zeggen"
   },
   "index.testimonials.title": {
-    "fr": "Ils ont transformé leur Airbnb avec JCODE",
-    "en": "They transformed their Airbnb with JCODE",
-    "nl": "Zij transformeerden hun Airbnb met JCODE"
+    "fr": "La plateforme choisie par les professionnels de la location",
+    "en": "The platform chosen by rental professionals",
+    "nl": "Het platform gekozen door verhuurprofessionals"
   },
   "index.testimonials.subtitle": {
-    "fr": "Des propriétaires qui ont fait confiance à nos agents IA.",
-    "en": "Owners who trusted our AI agents.",
-    "nl": "Eigenaren die onze AI-agents vertrouwden."
+    "fr": "Des outils IA conçus pour les gestionnaires de biens immobiliers.",
+    "en": "AI tools designed for property managers.",
+    "nl": "AI-tools ontworpen voor vastgoedbeheerders."
   },
   "index.testimonials.t1.text": {
-    "fr": "\"En 3 semaines, mes réservations ont augmenté de 40%. Les vidéos générées par l'agent VideoCreator sont incroyables — mes locataires me complimentent constamment.\"",
-    "en": "\"In 3 weeks, my bookings increased by 40%. The videos generated by the VideoCreator agent are incredible — my tenants constantly compliment me.\"",
-    "nl": "\"In 3 weken stegen mijn reserveringen met 40%. De video's gegenereerd door de VideoCreator-agent zijn ongelooflijk — mijn huurders complimenteren me constant.\""
+    "fr": "\"Les agents IA de JCODE automatisent les tâches répétitives et nous permettent de nous concentrer sur l'essentiel : l'expérience de nos voyageurs.\"",
+    "en": "\"JCODE's AI agents automate repetitive tasks and allow us to focus on what matters: the guest experience.\"",
+    "nl": "\"De AI-agents van JCODE automatiseren repetitieve taken en stellen ons in staat om ons te concentreren op wat belangrijk is: de gastervaring.\""
   },
   "index.testimonials.t1.name": {
-    "fr": "Marie L.",
-    "en": "Marie L.",
-    "nl": "Marie L."
+    "fr": "Propriétaire en location courte durée",
+    "en": "Short-term rental owner",
+    "nl": "Eigenaar van korte termijn verhuur"
   },
   "index.testimonials.t1.role": {
-    "fr": "Propriétaire à Bruxelles",
-    "en": "Owner in Brussels",
-    "nl": "Eigenaar in Brussel"
+    "fr": "Secteur résidentiel",
+    "en": "Residential sector",
+    "nl": "Residentiële sector"
   },
   "index.testimonials.t2.text": {
-    "fr": "\"Le package Teaser à 497€ est un no-brainer. J'ai gagné 10h par semaine et mon taux d'occupation est passé de 65% à 92%. L'IA fait un travail remarquable.\"",
-    "en": "\"The Teaser package at €497 is a no-brainer. I saved 10h per week and my occupancy rate went from 65% to 92%. The AI does a remarkable job.\"",
-    "nl": "\"Het Teaser-pakket voor €497 is een no-brainer. Ik bespaarde 10u per week en mijn bezettingsgraad steeg van 65% naar 92%. De AI levert uitstekend werk.\""
+    "fr": "\"La qualité des vidéos et la précision des réponses aux voyageurs font toute la différence. Un gain de temps considérable au quotidien.\"",
+    "en": "\"The quality of the videos and the accuracy of guest responses make all the difference. A considerable time saving on a daily basis.\"",
+    "nl": "\"De kwaliteit van de video's en de nauwkeurigheid van gastenantwoorden maken het verschil. Aanzienlijke tijdbesparing op dagelijkse basis.\""
   },
   "index.testimonials.t2.name": {
-    "fr": "Thomas D.",
-    "en": "Thomas D.",
-    "nl": "Thomas D."
+    "fr": "Gestionnaire de biens multiples",
+    "en": "Multi-property manager",
+    "nl": "Beheerder van meerdere eigendommen"
   },
   "index.testimonials.t2.role": {
-    "fr": "Host multi-propriétés, Paris",
-    "en": "Multi-property host, Paris",
-    "nl": "Host met meerdere eigendommen, Parijs"
+    "fr": "Secteur de la gestion immobilière",
+    "en": "Property management sector",
+    "nl": "Vastgoedbeheersector"
   },
   "index.testimonials.t3.text": {
-    "fr": "\"L'agent Outreach m'a permis de signer 3 nouveaux mandats de gestion en un mois. La prospection est chirurgicale et les emails sont parfaitement personnalisés.\"",
-    "en": "\"The Outreach agent helped me sign 3 new management contracts in one month. The prospecting is surgical and the emails are perfectly personalized.\"",
-    "nl": "\"De Outreach-agent hielp me 3 nieuwe beheerscontracten te tekenen in één maand. De prospectie is chirurgisch en de e-mails zijn perfect gepersonaliseerd.\""
+    "fr": "\"L'approche automatisée de la prospection et la personnalisation des communications nous aident à développer notre activité de conciergerie.\"",
+    "en": "\"The automated approach to prospecting and the personalization of communications help us grow our concierge business.\"",
+    "nl": "\"De geautomatiseerde aanpak van prospectie en de personalisatie van communicatie helpt ons ons conciërgediensten uit te breiden.\""
   },
   "index.testimonials.t3.name": {
-    "fr": "Sophie B.",
-    "en": "Sophie B.",
-    "nl": "Sophie B."
+    "fr": "Service de conciergerie professionnelle",
+    "en": "Professional concierge service",
+    "nl": "Professionele conciërgedienst"
   },
   "index.testimonials.t3.role": {
-    "fr": "Concierge Airbnb, Lyon",
-    "en": "Airbnb Concierge, Lyon",
-    "nl": "Airbnb-conciërge, Lyon"
+    "fr": "Secteur de l'hospitalité",
+    "en": "Hospitality sector",
+    "nl": "Horecasector"
   },
   "index.contact.tag": {
     "fr": "Contact",
@@ -2710,9 +2710,9 @@
     "nl": "Verstuur bericht →"
   },
   "index.cta.title": {
-    "fr": "Prêt à automatiser votre Airbnb ?",
-    "en": "Ready to automate your Airbnb?",
-    "nl": "Klaar om uw Airbnb te automatiseren?"
+    "fr": "Prêt à automatiser votre Business ?",
+    "en": "Ready to automate your Business?",
+    "nl": "Klaar om uw Business te automatiseren?"
   },
   "index.cta.subtitle": {
     "fr": "Rejoignez les propriétaires intelligents qui laissent l'IA faire le travail pendant qu'ils profitent de la vie.",
@@ -2790,9 +2790,9 @@
     "nl": "Bekijk aanbiedingen"
   },
   "common.footer.brandDesc": {
-    "fr": "L'agence marketing Airbnb 100% automatisée par IA. 21 agents intelligents travaillent pour vous 24/7.",
-    "en": "The Airbnb marketing agency 100% automated by AI. 21 smart agents work for you 24/7.",
-    "nl": "Het Airbnb-marketingbureau 100% geautomatiseerd door AI. 21 slimme agents werken 24/7 voor u."
+    "fr": "L'agence marketing Business 100% automatisée par IA. 21 agents intelligents travaillent pour vous 24/7.",
+    "en": "The Business marketing agency 100% automated by AI. 21 smart agents work for you 24/7.",
+    "nl": "Het Business-marketingbureau 100% geautomatiseerd door AI. 21 slimme agents werken 24/7 voor u."
   },
   "common.footer.services": {
     "fr": "Services",
