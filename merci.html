@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merci pour votre achat | JCODE Agency</title>
+    <script src="i18n/i18n.js"></script>
+    <style>
+        .lang-switcher{position:fixed;top:16px;right:16px;z-index:99999;display:flex;gap:6px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:50px;padding:4px}
+        .lang-btn{padding:0.4rem 1rem;border-radius:50px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#666;font-weight:600;font-size:0.8rem;text-decoration:none;transition:all 0.3s}
+        .lang-btn:hover{background:rgba(0,208,132,0.1);color:#00d084}
+    </style>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -69,38 +75,43 @@
     </style>
 </head>
 <body>
+    <div class="lang-switcher">
+        <a href="#" class="lang-btn" data-lang="fr" onclick="setLanguage('fr'); return false;">FR</a>
+        <a href="#" class="lang-btn" data-lang="nl" onclick="setLanguage('nl'); return false;">NL</a>
+        <a href="#" class="lang-btn" data-lang="en" onclick="setLanguage('en'); return false;">EN</a>
+    </div>
     <div class="container">
         <div class="checkmark">&#10003;</div>
-        <h1>Merci pour votre confiance !</h1>
-        <p class="subtitle">Votre commande est bien enregistr&eacute;e. Votre agent IA personnalis&eacute; est en cours de pr&eacute;paration.</p>
+        <h1 data-i18n="merci.title">Merci pour votre confiance !</h1>
+        <p class="subtitle" data-i18n="merci.subtitle">Votre commande est bien enregistr&eacute;e. Votre agent IA personnalis&eacute; est en cours de pr&eacute;paration.</p>
         
         <div class="card">
-            <h2>&#128231; Prochaine &eacute;tape</h2>
-            <p>Un email de confirmation arrive sous 5 minutes &agrave; l'adresse utilis&eacute;e pour le paiement.</p>
-            <p>Cet email contient :</p>
+            <h2 data-i18n="merci.next_step">&#128231; Prochaine &eacute;tape</h2>
+            <p data-i18n="merci.next_step_p1">Un email de confirmation arrive sous 5 minutes &agrave; l'adresse utilis&eacute;e pour le paiement.</p>
+            <p data-i18n="merci.next_step_p2">Cet email contient :</p>
             <ul>
-                <li>Votre re&ccedil;u de paiement Stripe</li>
-                <li>Un lien vers un court questionnaire (2 minutes) pour personnaliser votre agent</li>
-                <li>Notre contact direct pour toute question</li>
+                <li data-i18n="merci.next_step_li1">Votre re&ccedil;u de paiement Stripe</li>
+                <li data-i18n="merci.next_step_li2">Un lien vers un court questionnaire (2 minutes) pour personnaliser votre agent</li>
+                <li data-i18n="merci.next_step_li3">Notre contact direct pour toute question</li>
             </ul>
         </div>
         
         <div class="card">
-            <h2>&#9201; D&eacute;lais de livraison</h2>
-            <p><strong style="color:#fff;">Teaser (&euro;497) :</strong> 24 &agrave; 48h ouvr&eacute;es</p>
-            <p><strong style="color:#fff;">Pro (&euro;999/mois) :</strong> 48 &agrave; 72h ouvr&eacute;es + mise en place mensuelle</p>
-            <p><strong style="color:#fff;">Pro Max (&euro;1599/mois) :</strong> 72 &agrave; 96h ouvr&eacute;es + accompagnement prioritaire</p>
+            <h2 data-i18n="merci.delivery_title">&#9201; D&eacute;lais de livraison</h2>
+            <p data-i18n-html="merci.delivery_teaser"><strong style="color:#fff;">Teaser (&euro;497) :</strong> 24 &agrave; 48h ouvr&eacute;es</p>
+            <p data-i18n-html="merci.delivery_pro"><strong style="color:#fff;">Pro (&euro;999/mois) :</strong> 48 &agrave; 72h ouvr&eacute;es + mise en place mensuelle</p>
+            <p data-i18n-html="merci.delivery_promax"><strong style="color:#fff;">Pro Max (&euro;1599/mois) :</strong> 72 &agrave; 96h ouvr&eacute;es + accompagnement prioritaire</p>
         </div>
         
         <div class="card">
-            <h2>&#128161; Important</h2>
-            <p>Ajoutez notre email &agrave; vos contacts pour &eacute;viter les spams :</p>
+            <h2 data-i18n="merci.important_title">&#128161; Important</h2>
+            <p data-i18n="merci.important_text">Ajoutez notre email &agrave; vos contacts pour &eacute;viter les spams :</p>
             <span class="email-highlight">matovuruky@gmail.com</span>
         </div>
         
-        <a href="index.html" class="btn">Retour au site JCODE</a>
+        <a href="index.html" class="btn" data-i18n="merci.btn_back">Retour au site JCODE</a>
         
-        <p class="contact">Une question ? Contactez-nous directement par email.</p>
+        <p class="contact" data-i18n="merci.contact">Une question ? Contactez-nous directement par email.</p>
     </div>
 </body>
 </html>

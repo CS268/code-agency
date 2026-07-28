@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JCODE Agency — Sites Web & Marketing Automatisé par IA</title>
     <meta name="google-site-verification" content="DOtSxAhSdYD4LZ7ZjrpAMD9OMTbaELstmOajrGWtm48" />
-    <meta name="description" content="JCODE Agency propulse votre commerce (Airbnb, restaurant, coiffeur, boulanger...) avec 21 agents IA. Vidéos, prospection, copywriting, sites web — 100% automatisé. Package Teaser à 497€.">
-    <meta name="keywords" content="marketing digital, site web commerce, agents IA, automatisation commerce, coiffeur, restaurant, boulanger, marketing airbnb, conciergerie airbnb">
+    <meta name="description" content="JCODE Agency propulse votre commerce (Business, restaurant, coiffeur, boulanger...) avec 21 agents IA. Vidéos, prospection, copywriting, sites web — 100% automatisé. Package Teaser à 497€.">
+    <meta name="keywords" content="marketing digital, site web commerce, agents IA, automatisation commerce, coiffeur, restaurant, boulanger, marketing business, conciergerie business">
     <meta name="author" content="JCODE Agency">
     <meta property="og:title" content="JCODE Agency — Sites Web & Marketing Automatisé par IA">
     <meta property="og:description" content="21 agents IA travaillent pour votre commerce 24/7. Sites web, marketing, prospection. Package Teaser à 497€.">
@@ -1145,12 +1145,17 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "JCODE Agency",
-        "description": "Agence marketing Airbnb 100% automatisée par IA. 21 agents intelligents pour propulser votre location courte durée.",
-        "url": "https://jcode-agency.com",
+        "description": "AI-powered agency for local businesses in Mons, Belgium. Automation, marketing, and AI concierge services to save time and boost revenue.",
+        "url": "https://cs268.github.io/code-agency/",
         "email": "matovuruky@gmail.com",
         "address": {
             "@type": "PostalAddress",
+            "addressLocality": "Mons",
             "addressCountry": "BE"
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Mons, Belgium"
         },
         "offers": [
             {
@@ -1182,7 +1187,7 @@
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "JCODE Agency Packages",
-        "description": "Packages marketing Airbnb automatisé par IA. Teaser (497€), Pro (999€) et Pro Max (1,599€).",
+        "description": "Packages marketing Business automatisé par IA. Teaser (497€), Pro (999€) et Pro Max (1,599€).",
         "brand": { "@type": "Brand", "name": "JCODE Agency" },
         "offers": [
             {
@@ -1214,41 +1219,42 @@
     </script>
 <base target="_blank">
 <base target="_blank">
+<script src="i18n/i18n.js"></script>
 </head>
 <body>
 
     <!-- COOKIE BANNER RGPD -->
     <div id="cookie-banner" style="position:fixed; bottom:0; left:0; right:0; z-index:9999; background:rgba(15,23,42,0.98); backdrop-filter:blur(20px); border-top:1px solid rgba(255,255,255,0.1); padding:1.5rem 2rem; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:1.5rem; font-family:'Inter',sans-serif; transition:transform 0.5s ease; transform:translateY(0);">
         <div style="flex:1; min-width:260px; max-width:700px; color:var(--gray-light); font-size:0.9rem; line-height:1.6;">
-            <strong style="color:white; display:block; margin-bottom:0.3rem;">🍪 Nous utilisons des cookies</strong>
-            Ce site utilise des cookies pour améliorer votre expérience, analyser le trafic et personnaliser le contenu. Vous pouvez choisir d'accepter, de personnaliser ou de refuser.
+            <strong style="color:white; display:block; margin-bottom:0.3rem;" data-i18n="common.cookie.title">🍪 Nous utilisons des cookies</strong>
+            <span data-i18n="common.cookie.text">Ce site utilise des cookies pour améliorer votre expérience, analyser le trafic et personnaliser le contenu. Vous pouvez choisir d'accepter, de personnaliser ou de refuser.</span>
         </div>
         <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center;">
-            <button onclick="cookieChoice('refuse')" style="padding:0.6rem 1.2rem; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:transparent; color:var(--gray-light); font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.3s; font-family:'Inter',sans-serif;">Refuser</button>
-            <button onclick="cookieChoice('customize')" style="padding:0.6rem 1.2rem; border-radius:10px; border:1px solid rgba(99,102,241,0.4); background:rgba(99,102,241,0.1); color:var(--primary-light); font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.3s; font-family:'Inter',sans-serif;">Personnaliser</button>
-            <button onclick="cookieChoice('accept')" style="padding:0.6rem 1.2rem; border-radius:10px; border:none; background:var(--gradient-1); color:white; font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.3s; box-shadow:0 4px 15px rgba(99,102,241,0.3); font-family:'Inter',sans-serif;">Accepter</button>
+            <button onclick="cookieChoice('refuse')" data-i18n="common.cookie.refuse" style="padding:0.6rem 1.2rem; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:transparent; color:var(--gray-light); font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.3s; font-family:'Inter',sans-serif;">Refuser</button>
+            <button onclick="cookieChoice('customize')" data-i18n="common.cookie.customize" style="padding:0.6rem 1.2rem; border-radius:10px; border:1px solid rgba(99,102,241,0.4); background:rgba(99,102,241,0.1); color:var(--primary-light); font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.3s; font-family:'Inter',sans-serif;">Personnaliser</button>
+            <button onclick="cookieChoice('accept')" data-i18n="common.cookie.accept" style="padding:0.6rem 1.2rem; border-radius:10px; border:none; background:var(--gradient-1); color:white; font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.3s; box-shadow:0 4px 15px rgba(99,102,241,0.3); font-family:'Inter',sans-serif;">Accepter</button>
         </div>
     </div>
     <div id="cookie-customize" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9998; background:rgba(15,23,42,0.98); backdrop-filter:blur(20px); border-top:1px solid rgba(255,255,255,0.1); padding:2rem; font-family:'Inter',sans-serif;">
         <div style="max-width:600px; margin:0 auto;">
-            <h3 style="color:white; font-family:'Space Grotesk',sans-serif; margin-bottom:1rem; font-size:1.2rem;">Personnaliser les cookies</h3>
+            <h3 style="color:white; font-family:'Space Grotesk',sans-serif; margin-bottom:1rem; font-size:1.2rem;" data-i18n="common.cookie.customizeTitle">Personnaliser les cookies</h3>
             <div style="display:flex; flex-direction:column; gap:1rem; margin-bottom:1.5rem;">
                 <label style="display:flex; align-items:center; gap:0.75rem; color:var(--gray-light); cursor:pointer;">
                     <input type="checkbox" id="cookie-necessary" checked disabled style="width:18px; height:18px; accent-color:var(--primary);">
-                    <span><strong style="color:white;">Nécessaires</strong> — Requis pour le fonctionnement du site</span>
+                    <span data-i18n-html="common.cookie.necessary"><strong style="color:white;">Nécessaires</strong> — Requis pour le fonctionnement du site</span>
                 </label>
                 <label style="display:flex; align-items:center; gap:0.75rem; color:var(--gray-light); cursor:pointer;">
                     <input type="checkbox" id="cookie-analytics" style="width:18px; height:18px; accent-color:var(--primary);">
-                    <span><strong style="color:white;">Analytiques</strong> — Google Analytics, Meta Pixel</span>
+                    <span data-i18n-html="common.cookie.analytics"><strong style="color:white;">Analytiques</strong> — Google Analytics, Meta Pixel</span>
                 </label>
                 <label style="display:flex; align-items:center; gap:0.75rem; color:var(--gray-light); cursor:pointer;">
                     <input type="checkbox" id="cookie-marketing" style="width:18px; height:18px; accent-color:var(--primary);">
-                    <span><strong style="color:white;">Marketing</strong> — Publicités ciblées et remarketing</span>
+                    <span data-i18n-html="common.cookie.marketing"><strong style="color:white;">Marketing</strong> — Publicités ciblées et remarketing</span>
                 </label>
             </div>
             <div style="display:flex; gap:0.75rem; justify-content:flex-end;">
-                <button onclick="closeCustomize()" style="padding:0.6rem 1.2rem; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:transparent; color:var(--gray-light); font-weight:600; font-size:0.85rem; cursor:pointer; font-family:'Inter',sans-serif;">Annuler</button>
-                <button onclick="saveCustomize()" style="padding:0.6rem 1.2rem; border-radius:10px; border:none; background:var(--gradient-1); color:white; font-weight:600; font-size:0.85rem; cursor:pointer; box-shadow:0 4px 15px rgba(99,102,241,0.3); font-family:'Inter',sans-serif;">Enregistrer mes choix</button>
+                <button onclick="closeCustomize()" data-i18n="common.cookie.cancel" style="padding:0.6rem 1.2rem; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:transparent; color:var(--gray-light); font-weight:600; font-size:0.85rem; cursor:pointer; font-family:'Inter',sans-serif;">Annuler</button>
+                <button onclick="saveCustomize()" data-i18n="common.cookie.save" style="padding:0.6rem 1.2rem; border-radius:10px; border:none; background:var(--gradient-1); color:white; font-weight:600; font-size:0.85rem; cursor:pointer; box-shadow:0 4px 15px rgba(99,102,241,0.3); font-family:'Inter',sans-serif;">Enregistrer mes choix</button>
             </div>
         </div>
     </div>
@@ -1283,14 +1289,14 @@
                 JCODE Agency
             </a>
             <div class="nav-links">
-                <a href="#services">Services</a>
-                <a href="#offre">Offre</a>
+                <a href="#services" data-i18n="common.nav.services">Services</a>
+                <a href="#offre" data-i18n="common.nav.offer">Offre</a>
                 <a href="ai-concierge.html" style="color:var(--primary);position:relative;">AI Concierge <span style="background:#ff006e;color:#fff;font-size:10px;padding:2px 6px;border-radius:8px;vertical-align:super;font-weight:700;">NEW</span></a>
-                <a href="#comment">Processus</a>
-                <a href="#temoignages">Résultats</a>
-                <a href="#contact">Contact</a>
-                <a href="espace-client.html">Espace Client</a>
-                <a href="#offre" class="nav-cta">Voir les offres</a>
+                <a href="#comment" data-i18n="common.nav.process">Processus</a>
+                <a href="#temoignages" data-i18n="common.nav.results">Résultats</a>
+                <a href="#contact" data-i18n="common.nav.contact">Contact</a>
+                <a href="espace-client.html" data-i18n="common.nav.clientArea">Espace Client</a>
+                <a href="#offre" class="nav-cta" data-i18n="common.nav.viewOffers">Voir les offres</a>
             </div>
             <button class="mobile-menu-btn">☰</button>
         </div>
@@ -1304,43 +1310,43 @@
             <div class="hero-content">
                 <div class="hero-badge animate-fade-in-up delay-1">
                     <span class="dot"></span>
-                    21 agents IA déployés
+                    <span data-i18n="index.hero.badge">21 agents IA déployés</span>
                 </div>
                 <h1 class="hero-title animate-fade-in-up delay-2">
-                    Votre marketing digital,<br>
-                    <span class="gradient-text">100% automatisé</span>
+                    <span data-i18n="index.hero.titleLine1">Votre marketing digital,</span><br>
+                    <span class="gradient-text" data-i18n="index.hero.titleLine2">100% automatisé</span>
                 </h1>
-                <p class="hero-subtitle animate-fade-in-up delay-3">
-                    JCODE Agency propulse votre commerce (Airbnb, restaurant, coiffeur, boulanger...) avec une armée d'agents IA. Génération de contenu, prospection clients, et optimisation — tout tourne en autopilot.
+                <p class="hero-subtitle animate-fade-in-up delay-3" data-i18n="index.hero.subtitle">
+                    JCODE Agency propulse votre commerce (Business, restaurant, coiffeur, boulanger...) avec une armée d'agents IA. Génération de contenu, prospection clients, et optimisation — tout tourne en autopilot.
                 </p>
                 <div class="hero-cta-group animate-fade-in-up delay-4">
-                    <a href="#offre" class="btn btn-primary">
+                    <a href="#offre" class="btn btn-primary" data-i18n="index.hero.ctaPrimary">
                         Voir tous les packages →
                     </a>
-                    <a href="#services" class="btn btn-secondary">
+                    <a href="#services" class="btn btn-secondary" data-i18n="index.hero.ctaSecondary">
                         Voir les services
                     </a>
                 </div>
                 <div class="hero-stats animate-fade-in-up delay-5">
                     <div class="stat-item">
                         <div class="stat-number">21</div>
-                        <div class="stat-label">Agents IA actifs</div>
+                        <div class="stat-label" data-i18n="index.hero.statAgents">Agents IA actifs</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">3</div>
-                        <div class="stat-label">Packages disponibles</div>
+                        <div class="stat-label" data-i18n="index.hero.statPackages">Packages disponibles</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">0h</div>
-                        <div class="stat-label">De travail manuel</div>
+                        <div class="stat-label" data-i18n="index.hero.statManual">De travail manuel</div>
                     </div>
                 
                 <!-- BADGE LANGUES -->
                 <div style="margin-top:2rem; display:flex; align-items:center; justify-content:center; gap:0.5rem;" class="animate-fade-in-up delay-6">
                     <span style="color:var(--gray); font-size:0.8rem; margin-right:0.5rem;">🌐</span>
-                    <a href="#" style="padding:0.4rem 1rem; border-radius:50px; background:rgba(99,102,241,0.15); border:1px solid rgba(99,102,241,0.3); color:var(--primary-light); font-weight:600; font-size:0.8rem; text-decoration:none; transition:all 0.3s;">FR</a>
-                    <a href="#" style="padding:0.4rem 1rem; border-radius:50px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:var(--gray-light); font-weight:600; font-size:0.8rem; text-decoration:none; transition:all 0.3s;">NL</a>
-                    <a href="#" style="padding:0.4rem 1rem; border-radius:50px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:var(--gray-light); font-weight:600; font-size:0.8rem; text-decoration:none; transition:all 0.3s;">EN</a>
+                    <a href="#" class="lang-btn" data-lang="fr">FR</a>
+                    <a href="#" class="lang-btn" data-lang="nl">NL</a>
+                    <a href="#" class="lang-btn" data-lang="en">EN</a>
                 </div>
 </div>
             </div>
@@ -1350,18 +1356,18 @@
                         <div class="card-avatar">J</div>
                         <div class="card-info">
                             <h4>JCODE Agency</h4>
-                            <p>Dashboard IA</p>
+                            <p data-i18n="index.hero.cardDashboard">Dashboard IA</p>
                         </div>
-                        <div class="card-status">● Live</div>
+                        <div class="card-status" data-i18n="index.hero.cardLive">● Live</div>
                     </div>
                     <div class="card-metrics">
                         <div class="metric-box">
                             <div class="metric-value up">+127%</div>
-                            <div class="metric-label">Visites</div>
+                            <div class="metric-label" data-i18n="index.hero.cardVisits">Visites</div>
                         </div>
                         <div class="metric-box">
                             <div class="metric-value up">+84%</div>
-                            <div class="metric-label">Réservations</div>
+                            <div class="metric-label" data-i18n="index.hero.cardReservations">Réservations</div>
                         </div>
                     </div>
                     <div class="card-chart">
@@ -1369,9 +1375,9 @@
                     </div>
                 </div>
                 <div class="floating-elements">
-                    <div class="float-el">🤖 Agent Copywriting</div>
-                    <div class="float-el">📹 Agent Vidéo</div>
-                    <div class="float-el">📧 Agent Outreach</div>
+                    <div class="float-el" data-i18n="index.hero.floatCopywriting">🤖 Agent Copywriting</div>
+                    <div class="float-el" data-i18n="index.hero.floatVideo">📹 Agent Vidéo</div>
+                    <div class="float-el" data-i18n="index.hero.floatOutreach">📧 Agent Outreach</div>
                 </div>
             </div>
         </div>
@@ -1380,7 +1386,7 @@
     <!-- TRUST BAR -->
     <div class="trust-bar">
         <div class="trust-container">
-            <div class="trust-label">Propulsé par les meilleures technologies</div>
+            <div class="trust-label" data-i18n="index.trust.label">Propulsé par les meilleures technologies</div>
             <div class="trust-logos">
                 <div class="trust-logo">OpenAI</div>
                 <div class="trust-logo">Mistral</div>
@@ -1395,40 +1401,40 @@
     <section class="services" id="services">
         <div class="section-container">
             <div class="section-header reveal">
-                <div class="section-tag">Nos Services</div>
-                <h2 class="section-title">Une armée d'agents IA à votre service</h2>
-                <p class="section-subtitle">Chaque agent est spécialisé dans une mission précise pour faire croître votre business Airbnb sans effort.</p>
+                <div class="section-tag" data-i18n="index.services.tag">Nos Services</div>
+                <h2 class="section-title" data-i18n="index.services.title">Une armée d'agents IA à votre service</h2>
+                <p class="section-subtitle" data-i18n="index.services.subtitle">Chaque agent est spécialisé dans une mission précise pour faire croître votre business Business sans effort.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card reveal">
                     <div class="service-icon">🎨</div>
-                    <h3>BrandBuilder</h3>
-                    <p>Identité visuelle complète : logo, palette, typographie, site web pro avec pages clés, et calendrier de contenu sur mesure.</p>
+                    <h3 data-i18n="index.services.brandbuilder.title">BrandBuilder</h3>
+                    <p data-i18n="index.services.brandbuilder.desc">Identité visuelle complète : logo, palette, typographie, site web pro avec pages clés, et calendrier de contenu sur mesure.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">✍️</div>
-                    <h3>CopyMaster</h3>
-                    <p>Rédaction SEO optimisée pour vos annonces Airbnb, descriptions captivantes, et contenu de blog qui convertit les visiteurs.</p>
+                    <h3 data-i18n="index.services.copymaster.title">CopyMaster</h3>
+                    <p data-i18n="index.services.copymaster.desc">Rédaction SEO optimisée pour vos annonces Business, descriptions captivantes, et contenu de blog qui convertit les visiteurs.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">📹</div>
-                    <h3>VideoCreator</h3>
-                    <p>Production vidéo automatisée : visuels de propriétés, reels Instagram/TikTok, et contenu viral pour maximiser votre visibilité.</p>
+                    <h3 data-i18n="index.services.videocreator.title">VideoCreator</h3>
+                    <p data-i18n="index.services.videocreator.desc">Production vidéo automatisée : visuels de propriétés, reels Instagram/TikTok, et contenu viral pour maximiser votre visibilité.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">📧</div>
-                    <h3>Outreach Pro</h3>
-                    <p>Prospection automatisée de propriétaires Airbnb : scraping ciblé, emails personnalisés, et suivi intelligent des leads.</p>
+                    <h3 data-i18n="index.services.outreach.title">Outreach Pro</h3>
+                    <p data-i18n="index.services.outreach.desc">Prospection automatisée de propriétaires Business : scraping ciblé, emails personnalisés, et suivi intelligent des leads.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">📊</div>
-                    <h3>Analytics AI</h3>
-                    <p>Tableaux de bord en temps réel, analyse des performances, et recommandations optimisées par IA pour augmenter vos revenus.</p>
+                    <h3 data-i18n="index.services.analytics.title">Analytics AI</h3>
+                    <p data-i18n="index.services.analytics.desc">Tableaux de bord en temps réel, analyse des performances, et recommandations optimisées par IA pour augmenter vos revenus.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">🤖</div>
-                    <h3>Agent Orchestrator</h3>
-                    <p>Coordination intelligente de vos 21 agents IA. Chaque agent communique, se délègue des tâches, et optimise son workflow.</p>
+                    <h3 data-i18n="index.services.orchestrator.title">Agent Orchestrator</h3>
+                    <p data-i18n="index.services.orchestrator.desc">Coordination intelligente de vos 21 agents IA. Chaque agent communique, se délègue des tâches, et optimise son workflow.</p>
                 </div>
             </div>
         </div>
@@ -1438,31 +1444,31 @@
     <section class="offer" id="offre">
         <div class="offer-container">
             <div class="offer-header reveal">
-                <div class="section-tag">Nos Offres</div>
-                <h2 class="section-title">Choisissez votre package</h2>
-                <p class="section-subtitle">Trois niveaux de puissance IA pour propulser votre Airbnb. Sans engagement, annulable à tout moment.</p>
+                <div class="section-tag" data-i18n="index.offer.tag">Nos Offres</div>
+                <h2 class="section-title" data-i18n="index.offer.title">Choisissez votre package</h2>
+                <p class="section-subtitle" data-i18n="index.offer.subtitle">Trois niveaux de puissance IA pour propulser votre Business. Sans engagement, annulable à tout moment.</p>
             </div>
             <div class="pricing-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
                 <!-- TEASER -->
                 <div class="offer-card reveal" style="max-width: 100%;">
-                    <div class="offer-badge" style="background: #10b981; color: white; font-weight: bold; padding: 6px 16px; border-radius: 20px; display: inline-block; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">⭐ RECOMMANDÉ</div>
-                    <div class="offer-name">Teaser</div>
-                    <p class="offer-desc">Le starter parfait pour propriétaires de business local qui veulent tester la puissance de l'IA.</p>
+                    <div class="offer-badge" style="background: #10b981; color: white; font-weight: bold; padding: 6px 16px; border-radius: 20px; display: inline-block; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="index.offer.recommended">⭐ RECOMMANDÉ</div>
+                    <div class="offer-name" data-i18n="index.offer.teaser.name">Teaser</div>
+                    <p class="offer-desc" data-i18n="index.offer.teaser.desc">Le starter parfait pour propriétaires de business local qui veulent tester la puissance de l'IA.</p>
                     <div class="offer-price">
                         <span class="price-currency">€</span>
                         <span class="price-amount">497</span>
-                        <span class="price-period"> (paiement unique)</span>
+                        <span class="price-period" data-i18n="index.offer.teaser.oneTime"> (paiement unique)</span>
                     </div>
                     <ul class="offer-features">
-                        <li><span class="feature-check">✓</span><span>Site vitrine professionnel (1 page)</span></li>
-                        <li><span class="feature-check">✓</span><span>Design secteur-spécifique</span></li>
-                        <li><span class="feature-check">✓</span><span>Cookie RGPD + mentions légales</span></li>
-                        <li><span class="feature-check">✓</span><span>Support 30 jours</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.teaser.f1">Site vitrine professionnel (1 page)</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.teaser.f2">Design secteur-spécifique</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.teaser.f3">Cookie RGPD + mentions légales</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.teaser.f4">Support 30 jours</span></li>
                     </ul>
-                    <a href="https://buy.stripe.com/28EfZabVCfyp0Bf4ejbV600" class="btn btn-primary offer-cta" target="_blank" style="background: linear-gradient(135deg, var(--gray-light), var(--gray)); box-shadow: 0 4px 20px rgba(100,116,139,0.3);">
+                    <a href="https://buy.stripe.com/28EfZabVCfyp0Bf4ejbV600" class="btn btn-primary offer-cta" target="_blank" data-i18n="index.offer.cta.chooseTeaser" style="background: linear-gradient(135deg, var(--gray-light), var(--gray)); box-shadow: 0 4px 20px rgba(100,116,139,0.3);">
                         Choisir Teaser →
                     </a>
-                    <div class="offer-guarantee">
+                    <div class="offer-guarantee" data-i18n="index.offer.guarantee">
                         <span>🔒</span> Paiement sécurisé · Annulation à tout moment
                     </div>
                 </div>
@@ -1470,24 +1476,24 @@
                 <!-- PRO -->
                 <div class="offer-card reveal" style="max-width: 100%; border: 2px solid var(--accent); animation: glow 4s ease-in-out infinite;">
                     <div class="offer-badge" style="background: var(--accent); color: var(--dark);">Q4 2026</div>
-                    <div class="offer-name">Pro</div>
-                    <p class="offer-desc">Pour les propriétaires ambitieux qui veulent scaler leur business Airbnb.</p>
+                    <div class="offer-name" data-i18n="index.offer.pro.name">Pro</div>
+                    <p class="offer-desc" data-i18n="index.offer.pro.desc">Pour les propriétaires ambitieux qui veulent scaler leur business Business.</p>
                     <div class="offer-price">
                         <span class="price-currency">€</span>
                         <span class="price-amount">999</span>
-                        <span class="price-period"> (paiement unique)</span>
+                        <span class="price-period" data-i18n="index.offer.teaser.oneTime"> (paiement unique)</span>
                     </div>
                     <ul class="offer-features">
-                        <li><span class="feature-check">✓</span><span>Site vitrine professionnel (jusqu'à 3 pages)</span></li>
-                        <li><span class="feature-check">✓</span><span>Design secteur-spécifique</span></li>
-                        <li><span class="feature-check">✓</span><span>Cookie RGPD + mentions légales</span></li>
-                        <li><span class="feature-check">✓</span><span>QR Code inclus</span></li>
-                        <li><span class="feature-check">✓</span><span>Support 60 jours</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.pro.f1">Site vitrine professionnel (jusqu'à 3 pages)</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.pro.f2">Design secteur-spécifique</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.pro.f3">Cookie RGPD + mentions légales</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.pro.f4">QR Code inclus</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.pro.f5">Support 60 jours</span></li>
                     </ul>
                     <a href="https://buy.stripe.com/28EeV69Nu9a1bfT4ejbV601" class="btn btn-primary offer-cta" target="_blank" style="background: linear-gradient(135deg, var(--accent), #f97316); box-shadow: 0 4px 20px rgba(245,158,11,0.4);">
                         <span style="display:block; text-align:center; padding:12px 24px; background:#374151; color:#9ca3af; border-radius:8px; font-size:16px; cursor:not-allowed;">Q4 2026</span>
                     </a>
-                    <div class="offer-guarantee">
+                    <div class="offer-guarantee" data-i18n="index.offer.guarantee">
                         <span>🔒</span> Paiement sécurisé · Annulation à tout moment
                     </div>
                 </div>
@@ -1495,26 +1501,26 @@
                 <!-- PRO MAX -->
                 <div class="offer-card reveal" style="max-width: 100%; border: 2px solid var(--primary-light);">
                     <div class="offer-badge" style="background: var(--primary); color: white;">💎 Q1 2027</div>
-                    <div class="offer-name">Pro Max</div>
-                    <p class="offer-desc">L'expérience ultime. Accès complet aux 21 agents IA + service VIP.</p>
+                    <div class="offer-name" data-i18n="index.offer.promax.name">Pro Max</div>
+                    <p class="offer-desc" data-i18n="index.offer.promax.desc">L'expérience ultime. Accès complet aux 21 agents IA + service VIP.</p>
                     <div class="offer-price">
                         <span class="price-currency">€</span>
                         <span class="price-amount">1,599</span>
-                        <span class="price-period"> (paiement unique)</span>
+                        <span class="price-period" data-i18n="index.offer.teaser.oneTime"> (paiement unique)</span>
                     </div>
                     <ul class="offer-features">
-                        <li><span class="feature-check">✓</span><span>Site vitrine professionnel (jusqu'à 5 pages)</span></li>
-                        <li><span class="feature-check">✓</span><span>Design secteur-spécifique</span></li>
-                        <li><span class="feature-check">✓</span><span>Cookie RGPD + mentions légales</span></li>
-                        <li><span class="feature-check">✓</span><span>QR Code inclus</span></li>
-                        <li><span class="feature-check">✓</span><span>Réservation Auto inclus</span></li>
-                        <li><span class="feature-check">✓</span><span>Chatbot IA inclus</span></li>
-                        <li><span class="feature-check">✓</span><span>Support 90 jours</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.promax.f1">Site vitrine professionnel (jusqu'à 5 pages)</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.promax.f2">Design secteur-spécifique</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.promax.f3">Cookie RGPD + mentions légales</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.promax.f4">QR Code inclus</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.promax.f5">Réservation Auto inclus</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.promax.f6">Chatbot IA inclus</span></li>
+                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.promax.f7">Support 90 jours</span></li>
                     </ul>
-                    <a href="https://buy.stripe.com/fZu7sE1gYdqhes54ejbV602" class="btn btn-primary offer-cta" target="_blank" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); box-shadow: 0 4px 20px rgba(99,102,241,0.4);">
+                    <a href="https://buy.stripe.com/fZu7sE1gYdqhes54ejbV602" class="btn btn-primary offer-cta" target="_blank" data-i18n="index.offer.cta.chooseProMax" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); box-shadow: 0 4px 20px rgba(99,102,241,0.4);">
                         Choisir Pro Max →
                     </a>
-                    <div class="offer-guarantee">
+                    <div class="offer-guarantee" data-i18n="index.offer.guarantee">
                         <span>🔒</span> Paiement sécurisé · Annulation à tout moment
                     </div>
                 </div>
@@ -1527,9 +1533,9 @@
 <section class="options" style="padding: 80px 20px; background: #0f172a;">
     <div class="container" style="max-width: 1200px; margin: 0 auto;">
         <div class="section-header" style="text-align: center; margin-bottom: 60px;">
-            <span class="badge" style="display: inline-block; padding: 8px 20px; background: rgba(99,102,241,0.1); color: #818cf8; border-radius: 50px; font-size: 14px; font-weight: 600; margin-bottom: 20px;">Options supplémentaires</span>
-            <h2 style="font-size: 48px; font-weight: 800; color: #fff; margin-bottom: 16px;">Personnalisez votre site</h2>
-            <p style="font-size: 18px; color: #94a3b8; max-width: 600px; margin: 0 auto;">Ajoutez ces options à n'importe quel forfait pour booster votre commerce.</p>
+            <span class="badge" style="display: inline-block; padding: 8px 20px; background: rgba(99,102,241,0.1); color: #818cf8; border-radius: 50px; font-size: 14px; font-weight: 600; margin-bottom: 20px;" data-i18n="index.options.tag">Options supplémentaires</span>
+            <h2 style="font-size: 48px; font-weight: 800; color: #fff; margin-bottom: 16px;" data-i18n="index.options.title">Personnalisez votre site</h2>
+            <p style="font-size: 18px; color: #94a3b8; max-width: 600px; margin: 0 auto;" data-i18n="index.options.subtitle">Ajoutez ces options à n'importe quel forfait pour booster votre commerce.</p>
         </div>
 
         <div class="options-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 40px;">
@@ -1537,34 +1543,34 @@
             <!-- Option 1: QR Code -->
             <div class="option-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 40px; text-align: center;">
                 <div class="option-icon" style="width: 64px; height: 64px; background: rgba(99,102,241,0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px;">📱</div>
-                <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 12px;">Menu QR Code</h3>
-                <p style="color: #94a3b8; margin-bottom: 24px; line-height: 1.6;">Un QR code pour votre vitrine. Vos clients scannent et voient vos services, photos et prix directement sur leur téléphone.</p>
-                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;">+€99</div>
-                <div style="color: #64748b; font-size: 14px;">Paiement unique</div>
+                <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 12px;" data-i18n="index.options.qr.title">Menu QR Code</h3>
+                <p style="color: #94a3b8; margin-bottom: 24px; line-height: 1.6;" data-i18n="index.options.qr.desc">Un QR code pour votre vitrine. Vos clients scannent et voient vos services, photos et prix directement sur leur téléphone.</p>
+                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;" data-i18n="index.options.qr.price">+€99</div>
+                <div style="color: #64748b; font-size: 14px;" data-i18n="index.options.qr.oneTime">Paiement unique</div>
             </div>
 
             <!-- Option 2: Réservation auto -->
             <div class="option-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 40px; text-align: center;">
                 <div class="option-icon" style="width: 64px; height: 64px; background: rgba(16,185,129,0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px;">📅</div>
-                <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 12px;">Réservation Auto</h3>
-                <p style="color: #94a3b8; margin-bottom: 24px; line-height: 1.6;">Vos clients choisissent leur service, date et heure. Confirmation automatique par email et SMS. Vous recevez une notification.</p>
-                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;">+€149<span style="font-size: 18px; font-weight: 400; color: #64748b;">/mois</span></div>
-                <div style="color: #64748b; font-size: 14px;">Abonnement mensuel</div>
+                <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 12px;" data-i18n="index.options.booking.title">Réservation Auto</h3>
+                <p style="color: #94a3b8; margin-bottom: 24px; line-height: 1.6;" data-i18n="index.options.booking.desc">Vos clients choisissent leur service, date et heure. Confirmation automatique par email et SMS. Vous recevez une notification.</p>
+                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;" data-i18n="index.options.booking.price">+€149<span style="font-size: 18px; font-weight: 400; color: #64748b;">/mois</span></div>
+                <div style="color: #64748b; font-size: 14px;" data-i18n="index.options.booking.monthly">Abonnement mensuel</div>
             </div>
 
             <!-- Option 3: Chatbot -->
             <div class="option-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 40px; text-align: center;">
                 <div class="option-icon" style="width: 64px; height: 64px; background: rgba(245,158,11,0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px;">🤖</div>
-                <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 12px;">Chatbot IA</h3>
-                <p style="color: #94a3b8; margin-bottom: 24px; line-height: 1.6;">Un assistant virtuel sur votre site qui répond aux questions de vos clients 24h/24 et 7j/7. Horaires, prix, services — tout est couvert.</p>
-                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;">+€99<span style="font-size: 18px; font-weight: 400; color: #64748b;">/mois</span></div>
-                <div style="color: #64748b; font-size: 14px;">Abonnement mensuel</div>
+                <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 12px;" data-i18n="index.options.chatbot.title">Chatbot IA</h3>
+                <p style="color: #94a3b8; margin-bottom: 24px; line-height: 1.6;" data-i18n="index.options.chatbot.desc">Un assistant virtuel sur votre site qui répond aux questions de vos clients 24h/24 et 7j/7. Horaires, prix, services — tout est couvert.</p>
+                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;" data-i18n="index.options.chatbot.price">+€99<span style="font-size: 18px; font-weight: 400; color: #64748b;">/mois</span></div>
+                <div style="color: #64748b; font-size: 14px;" data-i18n="index.options.chatbot.monthly">Abonnement mensuel</div>
             </div>
 
         </div>
 
         <div style="text-align: center; padding: 30px; background: rgba(99,102,241,0.05); border-radius: 16px; border: 1px solid rgba(99,102,241,0.1);">
-            <p style="color: #94a3b8; font-size: 16px; margin: 0;">💡 <strong style="color: #fff;">Conseil :</strong> Commencez avec le forfait Teaser à 497€ et ajoutez les options quand vous êtes prêt. Pas d'engagement, évolution à tout moment.</p>
+            <p style="color: #94a3b8; font-size: 16px; margin: 0;" data-i18n-html="index.options.tip_html">💡 <strong style="color: #fff;">Conseil :</strong> Commencez avec le forfait Teaser à 497€ et ajoutez les options quand vous êtes prêt. Pas d'engagement, évolution à tout moment.</p>
         </div>
     </div>
 </section>
@@ -1576,69 +1582,69 @@
         <div style="position:absolute;bottom:-150px;left:-150px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,0,110,0.06) 0%,transparent 70%);border-radius:50%;"></div>
         <div class="section-container" style="max-width:1100px;margin:0 auto;position:relative;z-index:1;">
             <div class="section-header reveal" style="text-align:center;margin-bottom:60px;">
-                <div class="section-tag" style="display:inline-block;background:rgba(255,0,110,0.15);color:#ff006e;padding:8px 20px;border-radius:50px;font-size:13px;font-weight:600;letter-spacing:1px;margin-bottom:16px;">&#10024; NOUVEAU — AI CONCIERGE</div>
-                <h2 class="section-title" style="font-size:clamp(2rem,5vw,3rem);color:#fff;margin-bottom:16px;">Votre Partenaire Automatisation IA</h2>
-                <p class="section-subtitle" style="color:#94a3b8;font-size:18px;max-width:650px;margin:0 auto;">Done-with-you : on construit <strong style="color:#00f0ff;">ensemble</strong> votre automatisation. 2 appels de 45 min/mois + Voxer illimit&eacute; + Hub Notion personnalis&eacute;.</p>
+                <div class="section-tag" style="display:inline-block;background:rgba(255,0,110,0.15);color:#ff006e;padding:8px 20px;border-radius:50px;font-size:13px;font-weight:600;letter-spacing:1px;margin-bottom:16px;" data-i18n="index.concierge.tag">&#10024; NOUVEAU — AI CONCIERGE</div>
+                <h2 class="section-title" style="font-size:clamp(2rem,5vw,3rem);color:#fff;margin-bottom:16px;" data-i18n="index.concierge.title">Votre Partenaire Automatisation IA</h2>
+                <p class="section-subtitle" style="color:#94a3b8;font-size:18px;max-width:650px;margin:0 auto;" data-i18n-html="index.concierge.subtitle_html">Done-with-you : on construit <strong style="color:#00f0ff;">ensemble</strong> votre automatisation. 2 appels de 45 min/mois + Voxer illimit&eacute; + Hub Notion personnalis&eacute;.</p>
             </div>
             <!-- TIMELINE 3 PHASES -->
             <div style="display:flex;justify-content:center;gap:0;margin-bottom:60px;flex-wrap:wrap;">
                 <div style="text-align:center;padding:24px 32px;position:relative;">
                     <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#00f0ff,#0080ff);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:24px;">&#128269;</div>
-                    <h4 style="color:#fff;font-size:16px;margin-bottom:6px;">1. Audit</h4>
-                    <p style="color:#94a3b8;font-size:13px;">Cartographie de vos processus</p>
+                    <h4 style="color:#fff;font-size:16px;margin-bottom:6px;" data-i18n="index.concierge.phase1.title">1. Audit</h4>
+                    <p style="color:#94a3b8;font-size:13px;" data-i18n="index.concierge.phase1.desc">Cartographie de vos processus</p>
                 </div>
                 <div style="text-align:center;padding:24px 32px;position:relative;">
                     <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#ff006e,#ff4d94);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:24px;">&#9889;</div>
-                    <h4 style="color:#fff;font-size:16px;margin-bottom:6px;">2. Optimize</h4>
-                    <p style="color:#94a3b8;font-size:13px;">Suppression des &eacute;tapes inutiles</p>
+                    <h4 style="color:#fff;font-size:16px;margin-bottom:6px;" data-i18n="index.concierge.phase2.title">2. Optimize</h4>
+                    <p style="color:#94a3b8;font-size:13px;" data-i18n="index.concierge.phase2.desc">Suppression des &eacute;tapes inutiles</p>
                 </div>
                 <div style="text-align:center;padding:24px 32px;">
                     <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#a855f7,#7c3aed);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:24px;">&#129302;</div>
-                    <h4 style="color:#fff;font-size:16px;margin-bottom:6px;">3. Automate</h4>
-                    <p style="color:#94a3b8;font-size:13px;">D&eacute;ploiement IA + Make.com</p>
+                    <h4 style="color:#fff;font-size:16px;margin-bottom:6px;" data-i18n="index.concierge.phase3.title">3. Automate</h4>
+                    <p style="color:#94a3b8;font-size:13px;" data-i18n="index.concierge.phase3.desc">D&eacute;ploiement IA + Make.com</p>
                 </div>
             </div>
             <!-- PRICING CARDS -->
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:48px;">
                 <div style="background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:36px;transition:all .3s;">
-                    <h3 style="color:#00f0ff;font-size:14px;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;">Starter</h3>
-                    <div style="font-size:36px;font-weight:800;color:#fff;margin-bottom:4px;">1 000&euro;<span style="font-size:16px;color:#94a3b8;font-weight:400;">/mois</span></div>
+                    <h3 style="color:#00f0ff;font-size:14px;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;" data-i18n="index.concierge.pricing.starter.name">Starter</h3>
+                    <div style="font-size:36px;font-weight:800;color:#fff;margin-bottom:4px;">1 000&euro;<span style="font-size:16px;color:#94a3b8;font-weight:400;" data-i18n="index.concierge.pricing.perMonth">/mois</span></div>
                     <ul style="list-style:none;padding:0;margin:20px 0;color:#94a3b8;font-size:14px;line-height:2.2;">
-                        <li>&#10003; 2 appels de 45 min/mois</li>
-                        <li>&#10003; Voxer illimit&eacute; (r&eacute;ponse &lt;12h)</li>
-                        <li>&#10003; Hub Notion personnalis&eacute;</li>
-                        <li>&#10003; 2 skills Claude/mois</li>
+                        <li data-i18n-html="index.concierge.pricing.starter.f1">2 appels de 45 min/mois</li>
+                        <li data-i18n-html="index.concierge.pricing.starter.f2">Voxer illimit&eacute; (r&eacute;ponse &lt;12h)</li>
+                        <li data-i18n-html="index.concierge.pricing.starter.f3">Hub Notion personnalis&eacute;</li>
+                        <li data-i18n-html="index.concierge.pricing.starter.f4">2 skills Claude/mois</li>
                     </ul>
-                    <a href="intake-form.html" style="display:block;text-align:center;padding:14px;border:1px solid #00f0ff;color:#00f0ff;border-radius:12px;text-decoration:none;font-weight:600;">Commencer</a>
+                    <a href="intake-form.html" style="display:block;text-align:center;padding:14px;border:1px solid #00f0ff;color:#00f0ff;border-radius:12px;text-decoration:none;font-weight:600;" data-i18n="index.concierge.pricing.cta">Commencer</a>
                 </div>
                 <div style="background:rgba(255,0,110,0.05);backdrop-filter:blur(20px);border:2px solid #ff006e;border-radius:20px;padding:36px;position:relative;">
-                    <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#ff006e;color:#fff;padding:4px 16px;border-radius:20px;font-size:11px;font-weight:700;">POPULAIRE</div>
-                    <h3 style="color:#ff006e;font-size:14px;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;">Pro</h3>
-                    <div style="font-size:36px;font-weight:800;color:#fff;margin-bottom:4px;">1 500&euro;<span style="font-size:16px;color:#94a3b8;font-weight:400;">/mois</span></div>
+                    <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#ff006e;color:#fff;padding:4px 16px;border-radius:20px;font-size:11px;font-weight:700;" data-i18n="index.concierge.pricing.pro.popular">POPULAIRE</div>
+                    <h3 style="color:#ff006e;font-size:14px;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;" data-i18n="index.concierge.pricing.pro.name">Pro</h3>
+                    <div style="font-size:36px;font-weight:800;color:#fff;margin-bottom:4px;">1 500&euro;<span style="font-size:16px;color:#94a3b8;font-weight:400;" data-i18n="index.concierge.pricing.perMonth">/mois</span></div>
                     <ul style="list-style:none;padding:0;margin:20px 0;color:#94a3b8;font-size:14px;line-height:2.2;">
-                        <li>&#10003; Tout Starter +</li>
-                        <li>&#10003; Skills Claude illimit&eacute;s</li>
-                        <li>&#10003; Workflows Make.com</li>
-                        <li>&#10003; Support prioritaire Voxer</li>
-                        <li>&#10003; Rapports bi-mensuels</li>
+                        <li data-i18n-html="index.concierge.pricing.pro.f1">Tout Starter +</li>
+                        <li data-i18n-html="index.concierge.pricing.pro.f2">Skills Claude illimit&eacute;s</li>
+                        <li data-i18n-html="index.concierge.pricing.pro.f3">Workflows Make.com</li>
+                        <li data-i18n-html="index.concierge.pricing.pro.f4">Support prioritaire Voxer</li>
+                        <li data-i18n-html="index.concierge.pricing.pro.f5">Rapports bi-mensuels</li>
                     </ul>
-                    <a href="intake-form.html" style="display:block;text-align:center;padding:14px;background:#ff006e;color:#fff;border-radius:12px;text-decoration:none;font-weight:600;">Commencer</a>
+                    <a href="intake-form.html" style="display:block;text-align:center;padding:14px;background:#ff006e;color:#fff;border-radius:12px;text-decoration:none;font-weight:600;" data-i18n="index.concierge.pricing.cta">Commencer</a>
                 </div>
                 <div style="background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:36px;transition:all .3s;">
-                    <h3 style="color:#a855f7;font-size:14px;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;">Elite</h3>
-                    <div style="font-size:36px;font-weight:800;color:#fff;margin-bottom:4px;">2 000&euro;<span style="font-size:16px;color:#94a3b8;font-weight:400;">/mois</span></div>
+                    <h3 style="color:#a855f7;font-size:14px;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;" data-i18n="index.concierge.pricing.elite.name">Elite</h3>
+                    <div style="font-size:36px;font-weight:800;color:#fff;margin-bottom:4px;">2 000&euro;<span style="font-size:16px;color:#94a3b8;font-weight:400;" data-i18n="index.concierge.pricing.perMonth">/mois</span></div>
                     <ul style="list-style:none;padding:0;margin:20px 0;color:#94a3b8;font-size:14px;line-height:2.2;">
-                        <li>&#10003; Tout Pro +</li>
-                        <li>&#10003; Acc&egrave;s prioritaire (4 appels/mois)</li>
-                        <li>&#10003; Rapports mensuels + ROI</li>
-                        <li>&#10003; Strat&eacute;gie IA trimestrielle</li>
-                        <li>&#10003; Slack/Discord d&eacute;di&eacute;</li>
+                        <li data-i18n-html="index.concierge.pricing.elite.f1">Tout Pro +</li>
+                        <li data-i18n-html="index.concierge.pricing.elite.f2">Acc&egrave;s prioritaire (4 appels/mois)</li>
+                        <li data-i18n-html="index.concierge.pricing.elite.f3">Rapports mensuels + ROI</li>
+                        <li data-i18n-html="index.concierge.pricing.elite.f4">Strat&eacute;gie IA trimestrielle</li>
+                        <li data-i18n-html="index.concierge.pricing.elite.f5">Slack/Discord d&eacute;di&eacute;</li>
                     </ul>
-                    <a href="intake-form.html" style="display:block;text-align:center;padding:14px;border:1px solid #a855f7;color:#a855f7;border-radius:12px;text-decoration:none;font-weight:600;">Commencer</a>
+                    <a href="intake-form.html" style="display:block;text-align:center;padding:14px;border:1px solid #a855f7;color:#a855f7;border-radius:12px;text-decoration:none;font-weight:600;" data-i18n="index.concierge.pricing.cta">Commencer</a>
                 </div>
             </div>
             <div style="text-align:center;">
-                <a href="ai-concierge.html" style="display:inline-block;padding:16px 40px;background:linear-gradient(135deg,#00f0ff,#0080ff);color:#0a0a0a;border-radius:50px;text-decoration:none;font-weight:700;font-size:16px;box-shadow:0 0 30px rgba(0,240,255,0.3);">R&eacute;server un appel d&eacute;couverte gratuit &rarr;</a>
+                <a href="ai-concierge.html" data-i18n="index.concierge.cta" style="display:inline-block;padding:16px 40px;background:linear-gradient(135deg,#00f0ff,#0080ff);color:#0a0a0a;border-radius:50px;text-decoration:none;font-weight:700;font-size:16px;box-shadow:0 0 30px rgba(0,240,255,0.3);">R&eacute;server un appel d&eacute;couverte gratuit &rarr;</a>
             </div>
         </div>
     </section>
@@ -1647,30 +1653,30 @@
     <section class="how-it-works" id="comment">
         <div class="section-container">
             <div class="section-header reveal">
-                <div class="section-tag">Processus</div>
-                <h2 class="section-title">Comment ça marche ?</h2>
-                <p class="section-subtitle">De l'inscription à vos premiers résultats en 4 étapes simples.</p>
+                <div class="section-tag" data-i18n="index.how.tag">Processus</div>
+                <h2 class="section-title" data-i18n="index.how.title">Comment ça marche ?</h2>
+                <p class="section-subtitle" data-i18n="index.how.subtitle">De l'inscription à vos premiers résultats en 4 étapes simples.</p>
             </div>
             <div class="steps-grid">
                 <div class="step-card reveal">
                     <div class="step-number">1</div>
-                    <h3>Réservez votre package</h3>
-                    <p>Choisissez le Teaser Package à 497€ et finalisez votre paiement sécurisé en 2 minutes.</p>
+                    <h3 data-i18n="index.how.step1.title">Réservez votre package</h3>
+                    <p data-i18n="index.how.step1.desc">Choisissez le Teaser Package à 497€ et finalisez votre paiement sécurisé en 2 minutes.</p>
                 </div>
                 <div class="step-card reveal">
                     <div class="step-number">2</div>
-                    <h3>Onboarding IA</h3>
-                    <p>Nos agents analysent votre propriété, votre marché local, et votre concurrence.</p>
+                    <h3 data-i18n="index.how.step2.title">Onboarding IA</h3>
+                    <p data-i18n="index.how.step2.desc">Nos agents analysent votre propriété, votre marché local, et votre concurrence.</p>
                 </div>
                 <div class="step-card reveal">
                     <div class="step-number">3</div>
-                    <h3>Déploiement auto</h3>
-                    <p>Vos agents IA se mettent au travail : contenu, vidéos, prospection — 24/7.</p>
+                    <h3 data-i18n="index.how.step3.title">Déploiement auto</h3>
+                    <p data-i18n="index.how.step3.desc">Vos agents IA se mettent au travail : contenu, vidéos, prospection — 24/7.</p>
                 </div>
                 <div class="step-card reveal">
                     <div class="step-number">4</div>
-                    <h3>Résultats mesurés</h3>
-                    <p>Suivez vos performances en temps réel sur votre dashboard personnalisé.</p>
+                    <h3 data-i18n="index.how.step4.title">Résultats mesurés</h3>
+                    <p data-i18n="index.how.step4.desc">Suivez vos performances en temps réel sur votre dashboard personnalisé.</p>
                 </div>
             </div>
         </div>
@@ -1680,41 +1686,41 @@
     <section class="testimonials" id="temoignages">
         <div class="section-container">
             <div class="section-header reveal">
-                <div class="section-tag">Résultats Clients</div>
-                <h2 class="section-title">Ils ont transformé leur Airbnb avec JCODE</h2>
-                <p class="section-subtitle">Des propriétaires qui ont fait confiance à nos agents IA.</p>
+                <div class="section-tag" data-i18n="index.testimonials.tag">Ce qu'on en dit</div>
+                <h2 class="section-title" data-i18n="index.testimonials.title">La plateforme choisie par les professionnels de la location</h2>
+                <p class="section-subtitle" data-i18n="index.testimonials.subtitle">Des outils IA conçus pour les gestionnaires de biens immobiliers.</p>
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card reveal">
                     <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"En 3 semaines, mes réservations ont augmenté de 40%. Les vidéos générées par l'agent VideoCreator sont incroyables — mes locataires me complimentent constamment."</p>
+                    <p class="testimonial-text" data-i18n="index.testimonials.t1.text">"Les agents IA de JCODE automatisent les tâches répétitives et nous permettent de nous concentrer sur l'essentiel : l'expérience de nos voyageurs."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">ML</div>
+                        <div class="author-avatar">🏠</div>
                         <div class="author-info">
-                            <h4>Marie L.</h4>
-                            <p>Propriétaire à Bruxelles</p>
+                            <h4 data-i18n="index.testimonials.t1.name">Propriétaire en location courte durée</h4>
+                            <p data-i18n="index.testimonials.t1.role">Secteur résidentiel</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card reveal">
                     <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Le package Teaser à 497€ est un no-brainer. J'ai gagné 10h par semaine et mon taux d'occupation est passé de 65% à 92%. L'IA fait un travail remarquable."</p>
+                    <p class="testimonial-text" data-i18n="index.testimonials.t2.text">"La qualité des vidéos et la précision des réponses aux voyageurs font toute la différence. Un gain de temps considérable au quotidien."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">TD</div>
+                        <div class="author-avatar">🏢</div>
                         <div class="author-info">
-                            <h4>Thomas D.</h4>
-                            <p>Host multi-propriétés, Paris</p>
+                            <h4 data-i18n="index.testimonials.t2.name">Gestionnaire de biens multiples</h4>
+                            <p data-i18n="index.testimonials.t2.role">Secteur de la gestion immobilière</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card reveal">
                     <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"L'agent Outreach m'a permis de signer 3 nouveaux mandats de gestion en un mois. La prospection est chirurgicale et les emails sont parfaitement personnalisés."</p>
+                    <p class="testimonial-text" data-i18n="index.testimonials.t3.text">"L'approche automatisée de la prospection et la personnalisation des communications nous aident à développer notre activité de conciergerie."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">SB</div>
+                        <div class="author-avatar">🔑</div>
                         <div class="author-info">
-                            <h4>Sophie B.</h4>
-                            <p>Concierge Airbnb, Lyon</p>
+                            <h4 data-i18n="index.testimonials.t3.name">Service de conciergerie professionnelle</h4>
+                            <p data-i18n="index.testimonials.t3.role">Secteur de l'hospitalité</p>
                         </div>
                     </div>
                 </div>
@@ -1726,62 +1732,62 @@
     <section class="contact-section" id="contact">
         <div class="section-container">
             <div class="section-header reveal">
-                <div class="section-tag">Contact</div>
-                <h2 class="section-title">Parlons de votre projet</h2>
-                <p class="section-subtitle">Une question ? Un projet spécifique ? Contactez-nous directement.</p>
+                <div class="section-tag" data-i18n="index.contact.tag">Contact</div>
+                <h2 class="section-title" data-i18n="index.contact.title">Parlons de votre projet</h2>
+                <p class="section-subtitle" data-i18n="index.contact.subtitle">Une question ? Un projet spécifique ? Contactez-nous directement.</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-info reveal-left">
-                    <h3>Discutons ensemble</h3>
-                    <p>Que vous soyez propriétaire d'une seule location ou d'un portefeuille de biens, nous avons la solution IA adaptée à vos besoins.</p>
+                    <h3 data-i18n="index.contact.heading">Discutons ensemble</h3>
+                    <p data-i18n="index.contact.desc">Que vous soyez propriétaire d'une seule location ou d'un portefeuille de biens, nous avons la solution IA adaptée à vos besoins.</p>
                     <div class="contact-item">
                         <div class="contact-icon">✉️</div>
                         <div>
-                            <h4>Email</h4>
+                            <h4 data-i18n="index.contact.emailLabel">Email</h4>
                             <a href="mailto:matovuruky@gmail.com">matovuruky@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">💳</div>
                         <div>
-                            <h4>Réservation rapide</h4>
-                            <a href="#offre">Voir tous les packages</a>
+                            <h4 data-i18n="index.contact.bookingLabel">Réservation rapide</h4>
+                            <a href="#offre" data-i18n="index.contact.bookingLink">Voir tous les packages</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">🌍</div>
                         <div>
-                            <h4>Basé en</h4>
-                            <p>Belgique — Service Europe</p>
+                            <h4 data-i18n="index.contact.locationLabel">Basé en</h4>
+                            <p data-i18n="index.contact.locationValue">Belgique — Service Europe</p>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form reveal-right">
                     <form action="mailto:matovuruky@gmail.com" method="post" enctype="text/plain">
                         <div class="form-group">
-                            <label for="name">Nom complet</label>
-                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                            <label for="name" data-i18n="index.contact.form.name">Nom complet</label>
+                            <input type="text" id="name" name="name" data-i18n-attr="placeholder:index.contact.form.namePlaceholder" placeholder="Votre nom" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                            <label for="email" data-i18n="index.contact.form.email">Email</label>
+                            <input type="email" id="email" name="email" data-i18n-attr="placeholder:index.contact.form.emailPlaceholder" placeholder="votre@email.com" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject">Sujet</label>
+                            <label for="subject" data-i18n="index.contact.form.subject">Sujet</label>
                             <select id="subject" name="subject">
-                                <option value="teaser">Teaser — 497€ (paiement unique)</option>
-                                <option value="pro">Pro — 999€/mois</option>
-                                <option value="promax">Pro Max — 1,599€/mois</option>
-                                <option value="custom">Projet sur mesure</option>
-                                <option value="partnership">Partenariat</option>
-                                <option value="question">Question générale</option>
+                                <option value="teaser" data-i18n="index.contact.form.subjectTeaser">Teaser — 497€ (paiement unique)</option>
+                                <option value="pro" data-i18n="index.contact.form.subjectPro">Pro — 999€/mois</option>
+                                <option value="promax" data-i18n="index.contact.form.subjectProMax">Pro Max — 1,599€/mois</option>
+                                <option value="custom" data-i18n="index.contact.form.subjectCustom">Projet sur mesure</option>
+                                <option value="partnership" data-i18n="index.contact.form.subjectPartnership">Partenariat</option>
+                                <option value="question" data-i18n="index.contact.form.subjectQuestion">Question générale</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Décrivez votre projet..."></textarea>
+                            <label for="message" data-i18n="index.contact.form.message">Message</label>
+                            <textarea id="message" name="message" data-i18n-attr="placeholder:index.contact.form.messagePlaceholder" placeholder="Décrivez votre projet..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary form-submit">
+                        <button type="submit" class="btn btn-primary form-submit" data-i18n="index.contact.form.submit">
                             Envoyer le message →
                         </button>
                     </form>
@@ -1793,9 +1799,9 @@
     <!-- CTA SECTION -->
     <section class="cta-section">
         <div class="cta-container">
-            <h2 class="cta-title reveal">Prêt à automatiser votre Airbnb ?</h2>
-            <p class="cta-subtitle reveal">Rejoignez les propriétaires intelligents qui laissent l'IA faire le travail pendant qu'ils profitent de la vie.</p>
-            <a href="#offre" class="btn cta-btn reveal">
+            <h2 class="cta-title reveal" data-i18n="index.cta.title">Prêt à automatiser votre Business ?</h2>
+            <p class="cta-subtitle reveal" data-i18n="index.cta.subtitle">Rejoignez les propriétaires intelligents qui laissent l'IA faire le travail pendant qu'ils profitent de la vie.</p>
+            <a href="#offre" class="btn cta-btn reveal" data-i18n="index.cta.button">
                 Choisir mon package →
             </a>
         </div>
@@ -1810,10 +1816,10 @@
                         <div class="logo-icon">J</div>
                         JCODE Agency
                     </a>
-                    <p>L'agence marketing Airbnb 100% automatisée par IA. 21 agents intelligents travaillent pour vous 24/7.</p>
+                    <p data-i18n="common.footer.brandDesc">L'agence marketing Business 100% automatisée par IA. 21 agents intelligents travaillent pour vous 24/7.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Services</h4>
+                    <h4 data-i18n="common.footer.services">Services</h4>
                     <ul>
                         <li><a href="#">BrandBuilder</a></li>
                         <li><a href="#">VideoCreator</a></li>
@@ -1822,26 +1828,26 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Entreprise</h4>
+                    <h4 data-i18n="common.footer.company">Entreprise</h4>
                     <ul>
-                        <li><a href="#">À propos</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Carrières</a></li>
-                        <li><a href="mailto:matovuruky@gmail.com">Contact</a></li>
+                        <li><a href="#" data-i18n="common.footer.about">À propos</a></li>
+                        <li><a href="#" data-i18n="common.footer.blog">Blog</a></li>
+                        <li><a href="#" data-i18n="common.footer.careers">Carrières</a></li>
+                        <li><a href="mailto:matovuruky@gmail.com" data-i18n="common.nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Légal</h4>
+                    <h4 data-i18n="common.footer.legal">Légal</h4>
                     <ul>
-                        <li><a href="#">CGV</a></li>
-                        <li><a href="#">Confidentialité</a></li>
-                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                        <li><a href="#" data-i18n="common.footer.tos">CGV</a></li>
+                        <li><a href="#" data-i18n="common.footer.privacy">Confidentialité</a></li>
+                        <li><a href="mentions-legales.html" data-i18n="common.footer.legalNotice">Mentions légales</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="footer-legal"><a href="privacy_policy.html">Politique de confidentialité</a> | <a href="terms.html">Conditions générales</a></div>
-                <p>© 2026 JCODE Agency. Tous droits réservés. Construit avec ❤️ en Belgique.</p>
+                <div class="footer-legal"><a href="privacy_policy.html" data-i18n="common.footer.privacyPolicy">Politique de confidentialité</a> | <a href="terms.html" data-i18n="common.footer.terms">Conditions générales</a></div>
+                <p data-i18n="common.footer.copyright">© 2026 JCODE Agency. Tous droits réservés. Construit avec ❤️ en Belgique.</p>
                 <div class="footer-social">
                     <a href="#" aria-label="LinkedIn">in</a>
                     <a href="#" aria-label="Twitter">𝕏</a>
@@ -1852,7 +1858,7 @@
     </footer>
 
     <!-- SCROLL TO TOP -->
-    <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">↑</button>
+    <button class="scroll-top" id="scrollTop" data-i18n-attr="aria-label:index.scrollToTop" aria-label="Retour en haut">↑</button>
 
     <!-- CHAT WIDGET -->
     <button class="chat-widget" id="chatWidget" aria-label="Chat">💬</button>
@@ -1889,11 +1895,14 @@
         document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
 
         // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const href = this.getAttribute('href');
+                if (href && href.length > 1) {
+                    const target = document.querySelector(href);
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             });
         });
 

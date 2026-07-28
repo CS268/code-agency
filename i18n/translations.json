@@ -1,0 +1,2947 @@
+{
+  "hub.demo_warning": {
+    "fr": "⚠️ PAGE DÉMO — Authentification NON sécurisée (localStorage). NE PAS utiliser en production.",
+    "en": "⚠️ DEMO PAGE — Authentication NOT secure (localStorage). DO NOT use in production.",
+    "nl": "⚠️ DEMO PAGINA — Authenticatie NIET beveiligd (localStorage). NIET gebruiken in productie."
+  },
+  "hub.nav_home": {
+    "fr": "Accueil",
+    "en": "Home",
+    "nl": "Home"
+  },
+  "hub.nav_calls": {
+    "fr": "Appels",
+    "en": "Calls",
+    "nl": "Gesprekken"
+  },
+  "hub.nav_deliverables": {
+    "fr": "Deliverables",
+    "en": "Deliverables",
+    "nl": "Opleveringen"
+  },
+  "hub.nav_roi": {
+    "fr": "ROI",
+    "en": "ROI",
+    "nl": "ROI"
+  },
+  "hub.nav_actions": {
+    "fr": "Actions",
+    "en": "Actions",
+    "nl": "Acties"
+  },
+  "hub.nav_logout": {
+    "fr": "Déconnexion",
+    "en": "Log out",
+    "nl": "Uitloggen"
+  },
+  "hub.user_plan": {
+    "fr": "Formule Pro — 1 500€/mois",
+    "en": "Pro Plan — €1,500/month",
+    "nl": "Pro Formule — €1.500/maand"
+  },
+  "hub.greeting": {
+    "fr": "Bonjour,",
+    "en": "Hello,",
+    "nl": "Hallo,"
+  },
+  "hub.next_call": {
+    "fr": "📅 Prochain appel : 28 juillet 2026 — 14h00",
+    "en": "📅 Next call: July 28, 2026 — 2:00 PM",
+    "nl": "📅 Volgend gesprek: 28 juli 2026 — 14:00"
+  },
+  "hub.stat_calls": {
+    "fr": "Appels ce mois",
+    "en": "Calls this month",
+    "nl": "Gesprekken deze maand"
+  },
+  "hub.stat_skills": {
+    "fr": "Skills créés",
+    "en": "Skills created",
+    "nl": "Gemaakte skills"
+  },
+  "hub.stat_hours": {
+    "fr": "Heures économisées",
+    "en": "Hours saved",
+    "nl": "Bespaarde uren"
+  },
+  "hub.stat_roi": {
+    "fr": "ROI estimé",
+    "en": "Estimated ROI",
+    "nl": "Geschatte ROI"
+  },
+  "hub.timeline_title": {
+    "fr": "📞 Timeline des appels",
+    "en": "📞 Call Timeline",
+    "nl": "📞 Gesprekken tijdlijn"
+  },
+  "hub.actions_title": {
+    "fr": "✅ Action Items",
+    "en": "✅ Action Items",
+    "nl": "✅ Actiepunten"
+  },
+  "hub.roi_title": {
+    "fr": "📈 ROI Tracker",
+    "en": "📈 ROI Tracker",
+    "nl": "📈 ROI Tracker"
+  },
+  "hub.roi_time_saved": {
+    "fr": "Temps économisé / mois",
+    "en": "Time saved / month",
+    "nl": "Bespaarde tijd / maand"
+  },
+  "hub.roi_rate": {
+    "fr": "Taux horaire estimé",
+    "en": "Estimated hourly rate",
+    "nl": "Geschat uurtarief"
+  },
+  "hub.roi_monthly": {
+    "fr": "ROI mensuel",
+    "en": "Monthly ROI",
+    "nl": "Maandelijkse ROI"
+  },
+  "hub.roi_investment": {
+    "fr": "Investissement",
+    "en": "Investment",
+    "nl": "Investering"
+  },
+  "hub.roi_cumulative": {
+    "fr": "ROI cumulé (3 mois)",
+    "en": "Cumulative ROI (3 months)",
+    "nl": "Cumulatieve ROI (3 maanden)"
+  },
+  "hub.deliverables_title": {
+    "fr": "📦 Deliverables",
+    "en": "📦 Deliverables",
+    "nl": "📦 Opleveringen"
+  },
+  "hub.th_name": {
+    "fr": "Nom",
+    "en": "Name",
+    "nl": "Naam"
+  },
+  "hub.th_date": {
+    "fr": "Date",
+    "en": "Date",
+    "nl": "Datum"
+  },
+  "hub.th_type": {
+    "fr": "Type",
+    "en": "Type",
+    "nl": "Type"
+  },
+  "hub.th_impact": {
+    "fr": "Impact",
+    "en": "Impact",
+    "nl": "Impact"
+  },
+  "login.demo_warning": {
+    "fr": "⚠️ PAGE DÉMO — Authentification NON sécurisée (localStorage). NE PAS utiliser en production.",
+    "en": "⚠️ DEMO PAGE — Authentication NOT secure (localStorage). DO NOT use in production.",
+    "nl": "⚠️ DEMO PAGINA — Authenticatie NIET beveiligd (localStorage). NIET gebruiken in productie."
+  },
+  "login.title": {
+    "fr": "Espace Client",
+    "en": "Client Area",
+    "nl": "Klantenportaal"
+  },
+  "login.subtitle": {
+    "fr": "Accédez à votre hub personnalisé : appels, deliverables, ROI",
+    "en": "Access your personalized hub: calls, deliverables, ROI",
+    "nl": "Toegang tot uw gepersonaliseerde hub: gesprekken, opleveringen, ROI"
+  },
+  "login.email_label": {
+    "fr": "Email",
+    "en": "Email",
+    "nl": "E-mail"
+  },
+  "login.password_label": {
+    "fr": "Mot de passe",
+    "en": "Password",
+    "nl": "Wachtwoord"
+  },
+  "login.submit": {
+    "fr": "Se connecter",
+    "en": "Sign in",
+    "nl": "Inloggen"
+  },
+  "login.divider": {
+    "fr": "ou",
+    "en": "or",
+    "nl": "of"
+  },
+  "login.magic_link": {
+    "fr": "✉️ Recevoir un lien magique par email",
+    "en": "✉️ Receive a magic link by email",
+    "nl": "✉️ Magische link per e-mail ontvangen"
+  },
+  "login.back": {
+    "fr": "← Retour au site",
+    "en": "← Back to site",
+    "nl": "← Terug naar site"
+  },
+  "merci.title": {
+    "fr": "Merci pour votre confiance !",
+    "en": "Thank you for your trust!",
+    "nl": "Bedankt voor uw vertrouwen!"
+  },
+  "merci.subtitle": {
+    "fr": "Votre commande est bien enregistrée. Votre agent IA personnalisé est en cours de préparation.",
+    "en": "Your order has been recorded. Your personalized AI agent is being prepared.",
+    "nl": "Uw bestelling is geregistreerd. Uw gepersonaliseerde AI-agent wordt voorbereid."
+  },
+  "merci.next_step": {
+    "fr": "📧 Prochaine étape",
+    "en": "📧 Next step",
+    "nl": "📧 Volgende stap"
+  },
+  "merci.next_step_p1": {
+    "fr": "Un email de confirmation arrive sous 5 minutes à l'adresse utilisée pour le paiement.",
+    "en": "A confirmation email will arrive within 5 minutes at the address used for payment.",
+    "nl": "Een bevestigingsmail arrives binnen 5 minuten op het voor betaling gebruikte adres."
+  },
+  "merci.next_step_p2": {
+    "fr": "Cet email contient :",
+    "en": "This email contains:",
+    "nl": "Deze e-mail bevat:"
+  },
+  "merci.next_step_li1": {
+    "fr": "Votre reçu de paiement Stripe",
+    "en": "Your Stripe payment receipt",
+    "nl": "Uw Stripe-betalingsbewijs"
+  },
+  "merci.next_step_li2": {
+    "fr": "Un lien vers un court questionnaire (2 minutes) pour personnaliser votre agent",
+    "en": "A link to a short questionnaire (2 minutes) to personalize your agent",
+    "nl": "Een link naar een korte vragenlijst (2 minuten) om uw agent te personaliseren"
+  },
+  "merci.next_step_li3": {
+    "fr": "Notre contact direct pour toute question",
+    "en": "Our direct contact for any questions",
+    "nl": "Ons direct contact voor vragen"
+  },
+  "merci.delivery_title": {
+    "fr": "⏱ Délais de livraison",
+    "en": "⏱ Delivery times",
+    "nl": "⏱ Levertijden"
+  },
+  "merci.delivery_teaser": {
+    "fr": "<strong style='color:#fff;'>Teaser (€497) :</strong> 24 à 48h ouvrées",
+    "en": "<strong style='color:#fff;'>Teaser (€497):</strong> 24 to 48 business hours",
+    "nl": "<strong style='color:#fff;'>Teaser (€497):</strong> 24 tot 48 werkuren"
+  },
+  "merci.delivery_pro": {
+    "fr": "<strong style='color:#fff;'>Pro (€999/mois) :</strong> 48 à 72h ouvrées + mise en place mensuelle",
+    "en": "<strong style='color:#fff;'>Pro (€999/month):</strong> 48 to 72 business hours + monthly setup",
+    "nl": "<strong style='color:#fff;'>Pro (€999/maand):</strong> 48 tot 72 werkuren + maandelijkse opzet"
+  },
+  "merci.delivery_promax": {
+    "fr": "<strong style='color:#fff;'>Pro Max (€1599/mois) :</strong> 72 à 96h ouvrées + accompagnement prioritaire",
+    "en": "<strong style='color:#fff;'>Pro Max (€1599/month):</strong> 72 to 96 business hours + priority support",
+    "nl": "<strong style='color:#fff;'>Pro Max (€1599/maand):</strong> 72 tot 96 werkuren + prioriteitsbegeleiding"
+  },
+  "merci.important_title": {
+    "fr": "💡 Important",
+    "en": "💡 Important",
+    "nl": "💡 Belangrijk"
+  },
+  "merci.important_text": {
+    "fr": "Ajoutez notre email à vos contacts pour éviter les spams :",
+    "en": "Add our email to your contacts to avoid spam:",
+    "nl": "Voeg ons e-mailadres toe aan uw contacten om spam te vermijden:"
+  },
+  "merci.btn_back": {
+    "fr": "Retour au site JCODE",
+    "en": "Back to JCODE site",
+    "nl": "Terug naar JCODE site"
+  },
+  "merci.contact": {
+    "fr": "Une question ? Contactez-nous directement par email.",
+    "en": "Any questions? Contact us directly by email.",
+    "nl": "Vragen? Neem rechtstreeks contact met ons op via e-mail."
+  },
+  "privacy.back": {
+    "fr": "← Retour au site",
+    "en": "← Back to site",
+    "nl": "← Terug naar site"
+  },
+  "privacy.title": {
+    "fr": "Politique de Confidentialité",
+    "en": "Privacy Policy",
+    "nl": "Privacybeleid"
+  },
+  "privacy.last_update": {
+    "fr": "Dernière mise à jour : 20 juillet 2026",
+    "en": "Last updated: July 20, 2026",
+    "nl": "Laatst bijgewerkt: 20 juli 2026"
+  },
+  "privacy.s1_title": {
+    "fr": "1. Qui sommes-nous ?",
+    "en": "1. Who are we?",
+    "nl": "1. Wie zijn wij?"
+  },
+  "privacy.s1_desc": {
+    "fr": "<strong>JCODE Agency</strong> est une entreprise individuelle basée à Mons, Belgique, spécialisée dans la création de sites web pour commerçants et indépendants.",
+    "en": "<strong>JCODE Agency</strong> is a sole proprietorship based in Mons, Belgium, specializing in website creation for merchants and freelancers.",
+    "nl": "<strong>JCODE Agency</strong> is een eenmanszaak gevestigd in Bergen, België, gespecialiseerd in het maken van websites voor handelaars en zelfstandigen."
+  },
+  "privacy.s1_controller": {
+    "fr": "Responsable du traitement :",
+    "en": "Data controller:",
+    "nl": "Verwerkingsverantwoordelijke:"
+  },
+  "privacy.s1_email": {
+    "fr": "Email :",
+    "en": "Email:",
+    "nl": "E-mail:"
+  },
+  "privacy.s1_phone": {
+    "fr": "Téléphone :",
+    "en": "Phone:",
+    "nl": "Telefoon:"
+  },
+  "privacy.s1_address": {
+    "fr": "Adresse :",
+    "en": "Address:",
+    "nl": "Adres:"
+  },
+  "privacy.s2_title": {
+    "fr": "2. Quelles données collectons-nous ?",
+    "en": "2. What data do we collect?",
+    "nl": "2. Welke gegevens verzamelen wij?"
+  },
+  "privacy.s2_intro": {
+    "fr": "Nous collectons uniquement les données nécessaires à la prestation de nos services :",
+    "en": "We only collect data necessary for providing our services:",
+    "nl": "Wij verzamelen alleen gegevens die nodig zijn voor het verlenen van onze diensten:"
+  },
+  "privacy.s2_id": {
+    "fr": "<strong>Données d'identification</strong> : nom, prénom, nom de l'entreprise",
+    "en": "<strong>Identification data</strong>: name, first name, company name",
+    "nl": "<strong>Identificatiegegevens</strong>: naam, voornaam, bedrijfsnaam"
+  },
+  "privacy.s2_contact": {
+    "fr": "<strong>Données de contact</strong> : adresse email, numéro de téléphone",
+    "en": "<strong>Contact data</strong>: email address, phone number",
+    "nl": "<strong>Contactgegevens</strong>: e-mailadres, telefoonnummer"
+  },
+  "privacy.s2_payment": {
+    "fr": "<strong>Données de paiement</strong> : traitées par Stripe (nous ne stockons pas vos données bancaires)",
+    "en": "<strong>Payment data</strong>: processed by Stripe (we do not store your banking data)",
+    "nl": "<strong>Betalingsgegevens</strong>: verwerkt door Stripe (wij slaan uw bankgegevens niet op)"
+  },
+  "privacy.s2_navigation": {
+    "fr": "<strong>Données de navigation</strong> : cookies (voir section 6)",
+    "en": "<strong>Navigation data</strong>: cookies (see section 6)",
+    "nl": "<strong>Navigatiegegevens</strong>: cookies (zie sectie 6)"
+  },
+  "privacy.s2_project": {
+    "fr": "<strong>Données de projet</strong> : informations sur votre activité pour la création du site",
+    "en": "<strong>Project data</strong>: information about your business for website creation",
+    "nl": "<strong>Projectgegevens</strong>: informatie over uw activiteit voor het maken van de site"
+  },
+  "privacy.s3_title": {
+    "fr": "3. Pourquoi collectons-nous ces données ? (Finalités)",
+    "en": "3. Why do we collect this data? (Purposes)",
+    "nl": "3. Waarom verzamelen wij deze gegevens? (Doeleinden)"
+  },
+  "privacy.s3_li1": {
+    "fr": "Créer et livrer votre site web",
+    "en": "Create and deliver your website",
+    "nl": "Uw website maken en opleveren"
+  },
+  "privacy.s3_li2": {
+    "fr": "Vous envoyer des emails de confirmation et de suivi",
+    "en": "Send you confirmation and follow-up emails",
+    "nl": "U bevestigings- en opvolgingsmails sturen"
+  },
+  "privacy.s3_li3": {
+    "fr": "Gérer les paiements et la facturation",
+    "en": "Manage payments and invoicing",
+    "nl": "Betalingen en facturatie beheren"
+  },
+  "privacy.s3_li4": {
+    "fr": "Améliorer nos services et répondre à vos questions",
+    "en": "Improve our services and respond to your questions",
+    "nl": "Onze diensten verbeteren en uw vragen beantwoorden"
+  },
+  "privacy.s3_li5": {
+    "fr": "Respecter nos obligations légales (comptabilité, TVA)",
+    "en": "Comply with our legal obligations (accounting, VAT)",
+    "nl": "Voldoen aan onze wettelijke verplichtingen (boekhouding, btw)"
+  },
+  "privacy.s4_title": {
+    "fr": "4. Base légale du traitement",
+    "en": "4. Legal basis for processing",
+    "nl": "4. Rechtsgrond van de verwerking"
+  },
+  "privacy.s4_intro": {
+    "fr": "Nous traitons vos données sur les bases légales suivantes :",
+    "en": "We process your data on the following legal bases:",
+    "nl": "Wij verwerken uw gegevens op de volgende rechtsgronden:"
+  },
+  "privacy.s4_contract": {
+    "fr": "<strong>Exécution du contrat</strong> : création du site web",
+    "en": "<strong>Contract performance</strong>: website creation",
+    "nl": "<strong>Uitvoering van de overeenkomst</strong>: website creatie"
+  },
+  "privacy.s4_legal": {
+    "fr": "<strong>Obligation légale</strong> : comptabilité, facturation",
+    "en": "<strong>Legal obligation</strong>: accounting, invoicing",
+    "nl": "<strong>Wettelijke verplichting</strong>: boekhouding, facturatie"
+  },
+  "privacy.s4_consent": {
+    "fr": "<strong>Consentement</strong> : cookies non essentiels, newsletter",
+    "en": "<strong>Consent</strong>: non-essential cookies, newsletter",
+    "nl": "<strong>Toestemming</strong>: niet-essentiële cookies, nieuwsbrief"
+  },
+  "privacy.s4_interest": {
+    "fr": "<strong>Intérêt légitime</strong> : amélioration de nos services",
+    "en": "<strong>Legitimate interest</strong>: improving our services",
+    "nl": "<strong>Gerechtvaardigd belang</strong>: verbetering van onze diensten"
+  },
+  "privacy.s5_title": {
+    "fr": "5. À qui transmettons-nous vos données ?",
+    "en": "5. Who do we share your data with?",
+    "nl": "5. Aan wie geven wij uw gegevens door?"
+  },
+  "privacy.s5_intro": {
+    "fr": "Vos données peuvent être transmises à nos sous-traitants, tous situés dans l'UE ou offrant des garanties RGPD adéquates :",
+    "en": "Your data may be shared with our subcontractors, all located in the EU or offering adequate GDPR guarantees:",
+    "nl": "Uw gegevens kunnen worden doorgegeven aan onze onderaannemers, allen gevestigd in de EU of met adequate AVG-waarborgen:"
+  },
+  "privacy.s5_stripe": {
+    "fr": "<strong>Stripe</strong> (paiement) — <a href='https://stripe.com/privacy'>stripe.com/privacy</a>",
+    "en": "<strong>Stripe</strong> (payment) — <a href='https://stripe.com/privacy'>stripe.com/privacy</a>",
+    "nl": "<strong>Stripe</strong> (betalingen) — <a href='https://stripe.com/privacy'>stripe.com/privacy</a>"
+  },
+  "privacy.s5_github": {
+    "fr": "<strong>GitHub</strong> (hébergement site) — <a href='https://github.com/privacy'>github.com/privacy</a>",
+    "en": "<strong>GitHub</strong> (site hosting) — <a href='https://github.com/privacy'>github.com/privacy</a>",
+    "nl": "<strong>GitHub</strong> (hosting site) — <a href='https://github.com/privacy'>github.com/privacy</a>"
+  },
+  "privacy.s5_vercel": {
+    "fr": "<strong>Vercel</strong> (hébergement sites clients) — <a href='https://vercel.com/legal/privacy-policy'>vercel.com/legal/privacy-policy</a>",
+    "en": "<strong>Vercel</strong> (client site hosting) — <a href='https://vercel.com/legal/privacy-policy'>vercel.com/legal/privacy-policy</a>",
+    "nl": "<strong>Vercel</strong> (hosting klantsites) — <a href='https://vercel.com/legal/privacy-policy'>vercel.com/legal/privacy-policy</a>"
+  },
+  "privacy.s5_make": {
+    "fr": "<strong>Make.com</strong> (automatisation) — <a href='https://www.make.com/en/privacy-policy'>make.com/privacy</a>",
+    "en": "<strong>Make.com</strong> (automation) — <a href='https://www.make.com/en/privacy-policy'>make.com/privacy</a>",
+    "nl": "<strong>Make.com</strong> (automatisering) — <a href='https://www.make.com/en/privacy-policy'>make.com/privacy</a>"
+  },
+  "privacy.s5_mistral": {
+    "fr": "<strong>Mistral AI</strong> (génération de contenu) — <a href='https://mistral.ai/privacy'>mistral.ai/privacy</a>",
+    "en": "<strong>Mistral AI</strong> (content generation) — <a href='https://mistral.ai/privacy'>mistral.ai/privacy</a>",
+    "nl": "<strong>Mistral AI</strong> (inhoudsgeneratie) — <a href='https://mistral.ai/privacy'>mistral.ai/privacy</a>"
+  },
+  "privacy.s5_google": {
+    "fr": "<strong>Gmail / Google</strong> (emails) — <a href='https://policies.google.com/privacy'>policies.google.com/privacy</a>",
+    "en": "<strong>Gmail / Google</strong> (emails) — <a href='https://policies.google.com/privacy'>policies.google.com/privacy</a>",
+    "nl": "<strong>Gmail / Google</strong> (e-mails) — <a href='https://policies.google.com/privacy'>policies.google.com/privacy</a>"
+  },
+  "privacy.s5_no_sell": {
+    "fr": "Nous ne vendons jamais vos données à des tiers.",
+    "en": "We never sell your data to third parties.",
+    "nl": "Wij verkopen uw gegevens nooit aan derden."
+  },
+  "privacy.s6_title": {
+    "fr": "6. Cookies",
+    "en": "6. Cookies",
+    "nl": "6. Cookies"
+  },
+  "privacy.s6_intro": {
+    "fr": "Notre site utilise des cookies classés en 3 catégories :",
+    "en": "Our site uses cookies classified into 3 categories:",
+    "nl": "Onze site gebruikt cookies ingedeeld in 3 categorieën:"
+  },
+  "privacy.s6_necessary": {
+    "fr": "Nécessaires : fonctionnement du site (pas de consentement requis)",
+    "en": "Necessary: site functionality (no consent required)",
+    "nl": "Noodzakelijk: werking van de site (geen toestemming vereist)"
+  },
+  "privacy.s6_analytics": {
+    "fr": "Analytiques : statistiques de visite (consentement requis)",
+    "en": "Analytics: visit statistics (consent required)",
+    "nl": "Analytisch: bezoekstatistieken (toestemming vereist)"
+  },
+  "privacy.s6_marketing": {
+    "fr": "Marketing : publicité ciblée (consentement requis)",
+    "en": "Marketing: targeted advertising (consent required)",
+    "nl": "Marketing: gerichte reclame (toestemming vereist)"
+  },
+  "privacy.s6_manage": {
+    "fr": "Vous pouvez gérer vos préférences via la bannière cookies affichée à votre première visite.",
+    "en": "You can manage your preferences via the cookie banner displayed on your first visit.",
+    "nl": "U kunt uw voorkeuren beheren via de cookiebanner die bij uw eerste bezoek wordt weergegeven."
+  },
+  "privacy.s7_title": {
+    "fr": "7. Vos droits (Articles 15 à 22 du RGPD)",
+    "en": "7. Your rights (Articles 15 to 22 of GDPR)",
+    "nl": "7. Uw rechten (Artikelen 15 tot 22 van de AVG)"
+  },
+  "privacy.s7_intro": {
+    "fr": "Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :",
+    "en": "In accordance with the General Data Protection Regulation (GDPR), you have the following rights:",
+    "nl": "Overeenkomstig de Algemene Verordening Gegevensbescherming (AVG) beschikt u over de volgende rechten:"
+  },
+  "privacy.s7_access": {
+    "fr": "Droit d'accès (art. 15) : savoir quelles données nous détenons sur vous",
+    "en": "Right of access (art. 15): know what data we hold about you",
+    "nl": "Recht van inzage (art. 15): weten welke gegevens wij over u hebben"
+  },
+  "privacy.s7_rectification": {
+    "fr": "Droit de rectification (art. 16) : corriger des données inexactes",
+    "en": "Right to rectification (art. 16): correct inaccurate data",
+    "nl": "Recht op rectificatie (art. 16): onjuiste gegevens corrigeren"
+  },
+  "privacy.s7_erasure": {
+    "fr": "Droit à l'effacement (art. 17) : demander la suppression de vos données",
+    "en": "Right to erasure (art. 17): request deletion of your data",
+    "nl": "Recht op wissing (art. 17): verwijdering van uw gegevens vragen"
+  },
+  "privacy.s7_restriction": {
+    "fr": "Droit à la limitation du traitement (art. 18) : restreindre l'usage de vos données",
+    "en": "Right to restriction (art. 18): restrict the use of your data",
+    "nl": "Recht op beperking (art. 18): het gebruik van uw gegevens beperken"
+  },
+  "privacy.s7_portability": {
+    "fr": "Droit à la portabilité (art. 20) : recevoir vos données dans un format structuré",
+    "en": "Right to portability (art. 20): receive your data in a structured format",
+    "nl": "Recht op overdraagbaarheid (art. 20): uw gegevens ontvangen in een gestructureerd formaat"
+  },
+  "privacy.s7_objection": {
+    "fr": "Droit d'opposition (art. 21) : vous opposer au traitement de vos données",
+    "en": "Right to object (art. 21): object to the processing of your data",
+    "nl": "Recht van bezwaar (art. 21): bezwaar maken tegen de verwerking van uw gegevens"
+  },
+  "privacy.s7_automated": {
+    "fr": "Droit de ne pas faire l'objet d'une décision automatisée (art. 22)",
+    "en": "Right not to be subject to automated decision-making (art. 22)",
+    "nl": "Recht om niet aan geautomatiseerde besluitvorming te worden onderworpen (art. 22)"
+  },
+  "privacy.s7_contact": {
+    "fr": "Pour exercer ces droits, contactez-nous :",
+    "en": "To exercise these rights, contact us:",
+    "nl": "Om deze rechten uit te oefenen, neem contact met ons op:"
+  },
+  "privacy.s7_complaint": {
+    "fr": "Vous pouvez aussi déposer une plainte auprès de l'Autorité de protection des données belge :",
+    "en": "You can also file a complaint with the Belgian Data Protection Authority:",
+    "nl": "U kunt ook een klacht indienen bij de Belgische Gegevensbeschermingsautoriteit:"
+  },
+  "privacy.s8_title": {
+    "fr": "8. Durée de conservation",
+    "en": "8. Data retention",
+    "nl": "8. Bewaartermijn"
+  },
+  "privacy.s8_clients": {
+    "fr": "Données clients : 5 ans après la fin du contrat (obligation comptable)",
+    "en": "Client data: 5 years after contract end (accounting obligation)",
+    "nl": "Klantgegevens: 5 jaar na einde contract (boekhoudkundige verplichting)"
+  },
+  "privacy.s8_cookies": {
+    "fr": "Données de navigation (cookies) : 13 mois maximum",
+    "en": "Navigation data (cookies): 13 months maximum",
+    "nl": "Navigatiegegevens (cookies): maximaal 13 maanden"
+  },
+  "privacy.s8_prospecting": {
+    "fr": "Emails de prospection : 3 ans après le dernier contact, ou suppression sur demande",
+    "en": "Prospecting emails: 3 years after last contact, or deletion on request",
+    "nl": "Wervingsmails: 3 jaar na laatste contact, of verwijdering op verzoek"
+  },
+  "privacy.s9_title": {
+    "fr": "9. Sécurité",
+    "en": "9. Security",
+    "nl": "9. Beveiliging"
+  },
+  "privacy.s9_text": {
+    "fr": "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données : chiffrement SSL, accès restreint, mots de passe sécurisés, sauvegardes régulières.",
+    "en": "We implement appropriate technical and organizational measures to protect your data: SSL encryption, restricted access, secure passwords, regular backups.",
+    "nl": "Wij nemen passende technische en organisatorische maatregelen om uw gegevens te beschermen: SSL-versleuteling, beperkte toegang, beveiligde wachtwoorden, regelmatige back-ups."
+  },
+  "privacy.s10_title": {
+    "fr": "10. Modifications",
+    "en": "10. Modifications",
+    "nl": "10. Wijzigingen"
+  },
+  "privacy.s10_text": {
+    "fr": "Cette politique peut être mise à jour. La date de dernière modification est indiquée en haut de page. Nous vous informerons des changements importants.",
+    "en": "This policy may be updated. The date of last modification is indicated at the top of the page. We will inform you of significant changes.",
+    "nl": "Dit beleid kan worden bijgewerkt. De datum van de laatste wijziging staat bovenaan de pagina. Wij informeren u over belangrijke wijzigingen."
+  },
+  "privacy.s11_title": {
+    "fr": "11. Contact",
+    "en": "11. Contact",
+    "nl": "11. Contact"
+  },
+  "privacy.s11_intro": {
+    "fr": "Pour toute question relative à cette politique ou à vos données personnelles :",
+    "en": "For any questions regarding this policy or your personal data:",
+    "nl": "Voor vragen over dit beleid of uw persoonsgegevens:"
+  },
+  "privacy.copyright": {
+    "fr": "© 2026 JCODE Agency — Tous droits réservés",
+    "en": "© 2026 JCODE Agency — All rights reserved",
+    "nl": "© 2026 JCODE Agency — Alle rechten voorbehouden"
+  },
+  "privacy_short.title": {
+    "fr": "Politique de Confidentialité",
+    "en": "Privacy Policy",
+    "nl": "Privacybeleid"
+  },
+  "privacy_short.subtitle": {
+    "fr": "JCODE Agency — Conformité RGPD & Loi belge du 11/03/2003",
+    "en": "JCODE Agency — GDPR Compliance & Belgian Law of 11/03/2003",
+    "nl": "JCODE Agency — AVG-naleving & Belgische Wet van 11/03/2003"
+  },
+  "privacy_short.s1_title": {
+    "fr": "1. Responsable du traitement",
+    "en": "1. Data Controller",
+    "nl": "1. Verwerkingsverantwoordelijke"
+  },
+  "privacy_short.s1_text": {
+    "fr": "<strong>JCODE Agency</strong><br>Email : <a href='mailto:matovuruky@gmail.com'>matovuruky@gmail.com</a><br>Téléphone : 0466/06.22.73<br>Siège : Mons, Belgique",
+    "en": "<strong>JCODE Agency</strong><br>Email: <a href='mailto:matovuruky@gmail.com'>matovuruky@gmail.com</a><br>Phone: 0466/06.22.73<br>HQ: Mons, Belgium",
+    "nl": "<strong>JCODE Agency</strong><br>E-mail: <a href='mailto:matovuruky@gmail.com'>matovuruky@gmail.com</a><br>Telefoon: 0466/06.22.73<br>Zetel: Bergen, België"
+  },
+  "privacy_short.s2_title": {
+    "fr": "2. Données collectées",
+    "en": "2. Data Collected",
+    "nl": "2. Verzamelde gegevens"
+  },
+  "privacy_short.s2_intro": {
+    "fr": "Nous collectons uniquement les données strictement nécessaires à la création de votre site vitrine :",
+    "en": "We only collect data strictly necessary for creating your showcase website:",
+    "nl": "Wij verzamelen alleen gegevens die strikt noodzakelijk zijn voor het maken van uw vitrine-website:"
+  },
+  "privacy_short.s2_business": {
+    "fr": "<strong>Nom du business</strong> — pour personnaliser le site",
+    "en": "<strong>Business name</strong> — to personalize the site",
+    "nl": "<strong>Bedrijfsnaam</strong> — om de site te personaliseren"
+  },
+  "privacy_short.s2_type": {
+    "fr": "<strong>Type de business</strong> — pour adapter le design",
+    "en": "<strong>Business type</strong> — to adapt the design",
+    "nl": "<strong>Bedrijfstype</strong> — om het ontwerp aan te passen"
+  },
+  "privacy_short.s2_city": {
+    "fr": "<strong>Ville</strong> — pour le référencement local",
+    "en": "<strong>City</strong> — for local SEO",
+    "nl": "<strong>Stad</strong> — voor lokale SEO"
+  },
+  "privacy_short.s2_address": {
+    "fr": "<strong>Adresse complète</strong> — pour les mentions légales",
+    "en": "<strong>Full address</strong> — for legal notices",
+    "nl": "<strong>Volledig adres</strong> — voor wettelijke vermeldingen"
+  },
+  "privacy_short.s2_email": {
+    "fr": "<strong>Email</strong> — pour vous envoyer le site et la facture",
+    "en": "<strong>Email</strong> — to send you the site and invoice",
+    "nl": "<strong>E-mail</strong> — om u de site en factuur te sturen"
+  },
+  "privacy_short.s2_highlight": {
+    "fr": "Aucune donnée sensible n'est collectée (santé, religion, origine, etc.).",
+    "en": "No sensitive data is collected (health, religion, origin, etc.).",
+    "nl": "Er worden geen gevoelige gegevens verzameld (gezondheid, religie, afkomst, enz.)."
+  },
+  "privacy_short.s3_title": {
+    "fr": "3. Base légale",
+    "en": "3. Legal Basis",
+    "nl": "3. Rechtsgrond"
+  },
+  "privacy_short.s3_text": {
+    "fr": "Le traitement repose sur <strong>l'article 6.1.b du RGPD</strong> : exécution du contrat. Vous payez 497€ pour un site vitrine personnalisé — les données sont indispensables à ce service.",
+    "en": "Processing is based on <strong>Article 6.1.b of GDPR</strong>: contract performance. You pay €497 for a personalized showcase site — the data is essential for this service.",
+    "nl": "De verwerking is gebaseerd op <strong>artikel 6.1.b van de AVG</strong>: uitvoering van de overeenkomst. U betaalt €497 voor een gepersonaliseerde vitrine-site — de gegevens zijn onmisbaar voor deze dienst."
+  },
+  "privacy_short.s4_title": {
+    "fr": "4. Sous-traitants",
+    "en": "4. Subcontractors",
+    "nl": "4. Onderaannemers"
+  },
+  "privacy_short.s4_stripe": {
+    "fr": "<strong>Stripe</strong> — paiements (certifié PCI-DSS)",
+    "en": "<strong>Stripe</strong> — payments (PCI-DSS certified)",
+    "nl": "<strong>Stripe</strong> — betalingen (PCI-DSS gecertificeerd)"
+  },
+  "privacy_short.s4_render": {
+    "fr": "<strong>Render</strong> — serveur de génération",
+    "en": "<strong>Render</strong> — generation server",
+    "nl": "<strong>Render</strong> — generatieserver"
+  },
+  "privacy_short.s4_vercel": {
+    "fr": "<strong>Vercel</strong> — déploiement du site client",
+    "en": "<strong>Vercel</strong> — client site deployment",
+    "nl": "<strong>Vercel</strong> — deployment van de klantsite"
+  },
+  "privacy_short.s4_github": {
+    "fr": "<strong>GitHub Pages</strong> — hébergement du site client",
+    "en": "<strong>GitHub Pages</strong> — client site hosting",
+    "nl": "<strong>GitHub Pages</strong> — hosting van de klantsite"
+  },
+  "privacy_short.s4_google": {
+    "fr": "<strong>Google Places API</strong> — recherche de photos (nom + ville uniquement)",
+    "en": "<strong>Google Places API</strong> — photo search (name + city only)",
+    "nl": "<strong>Google Places API</strong> — fotozoekopdrachten (naam + stad alleen)"
+  },
+  "privacy_short.s5_title": {
+    "fr": "5. Vos droits RGPD (art. 15-22)",
+    "en": "5. Your GDPR Rights (art. 15-22)",
+    "nl": "5. Uw AVG-rechten (art. 15-22)"
+  },
+  "privacy_short.s5_intro": {
+    "fr": "Contactez <a href='mailto:matovuruky@gmail.com'>matovuruky@gmail.com</a> pour exercer vos droits :",
+    "en": "Contact <a href='mailto:matovuruky@gmail.com'>matovuruky@gmail.com</a> to exercise your rights:",
+    "nl": "Neem contact op met <a href='mailto:matovuruky@gmail.com'>matovuruky@gmail.com</a> om uw rechten uit te oefenen:"
+  },
+  "privacy_short.s5_access": {
+    "fr": "<strong>Art. 15</strong> — Droit d'accès (copie de vos données)",
+    "en": "<strong>Art. 15</strong> — Right of access (copy of your data)",
+    "nl": "<strong>Art. 15</strong> — Recht van inzage (kopie van uw gegevens)"
+  },
+  "privacy_short.s5_rectification": {
+    "fr": "<strong>Art. 16</strong> — Droit de rectification",
+    "en": "<strong>Art. 16</strong> — Right to rectification",
+    "nl": "<strong>Art. 16</strong> — Recht op rectificatie"
+  },
+  "privacy_short.s5_erasure": {
+    "fr": "<strong>Art. 17</strong> — Droit à l'effacement (droit à l'oubli)",
+    "en": "<strong>Art. 17</strong> — Right to erasure (right to be forgotten)",
+    "nl": "<strong>Art. 17</strong> — Recht op wissing (recht om vergeten te worden)"
+  },
+  "privacy_short.s5_restriction": {
+    "fr": "<strong>Art. 18</strong> — Droit à la limitation du traitement",
+    "en": "<strong>Art. 18</strong> — Right to restriction of processing",
+    "nl": "<strong>Art. 18</strong> — Recht op beperking van de verwerking"
+  },
+  "privacy_short.s5_portability": {
+    "fr": "<strong>Art. 20</strong> — Droit à la portabilité",
+    "en": "<strong>Art. 20</strong> — Right to data portability",
+    "nl": "<strong>Art. 20</strong> — Recht op overdraagbaarheid"
+  },
+  "privacy_short.s5_objection": {
+    "fr": "<strong>Art. 21</strong> — Droit d'opposition (prospection)",
+    "en": "<strong>Art. 21</strong> — Right to object (prospecting)",
+    "nl": "<strong>Art. 21</strong> — Recht van bezwaar (werving)"
+  },
+  "privacy_short.s5_automated": {
+    "fr": "<strong>Art. 22</strong> — Droit de ne pas être soumis à une décision automatisée",
+    "en": "<strong>Art. 22</strong> — Right not to be subject to automated decision-making",
+    "nl": "<strong>Art. 22</strong> — Recht om niet aan geautomatiseerde besluitvorming te worden onderworpen"
+  },
+  "privacy_short.s5_delay": {
+    "fr": "<strong>Délai de réponse :</strong> 30 jours maximum.",
+    "en": "<strong>Response time:</strong> 30 days maximum.",
+    "nl": "<strong>Responstijd:</strong> maximaal 30 dagen."
+  },
+  "privacy_short.s6_title": {
+    "fr": "6. Durée de conservation",
+    "en": "6. Data Retention",
+    "nl": "6. Bewaartermijn"
+  },
+  "privacy_short.s6_creation": {
+    "fr": "Données de création : 5 ans (prescription légale)",
+    "en": "Creation data: 5 years (legal prescription)",
+    "nl": "Creatiegegevens: 5 jaar (wettelijke verjaring)"
+  },
+  "privacy_short.s6_billing": {
+    "fr": "Données de facturation : 7 ans (obligation fiscale)",
+    "en": "Billing data: 7 years (tax obligation)",
+    "nl": "Facturatiegegevens: 7 jaar (fiscale verplichting)"
+  },
+  "privacy_short.s6_logs": {
+    "fr": "Logs serveur : 30 jours maximum",
+    "en": "Server logs: 30 days maximum",
+    "nl": "Serverlogs: maximaal 30 dagen"
+  },
+  "privacy_short.s7_title": {
+    "fr": "7. Cookies",
+    "en": "7. Cookies",
+    "nl": "7. Cookies"
+  },
+  "privacy_short.s7_text": {
+    "fr": "Aucun cookie de traçage (Google Analytics, Facebook Pixel, etc.). Seuls les cookies techniques essentiels sont utilisés (Stripe, session serveur).",
+    "en": "No tracking cookies (Google Analytics, Facebook Pixel, etc.). Only essential technical cookies are used (Stripe, server session).",
+    "nl": "Geen tracking cookies (Google Analytics, Facebook Pixel, enz.). Alleen essentiële technische cookies worden gebruikt (Stripe, serversessie)."
+  },
+  "privacy_short.s8_title": {
+    "fr": "8. Réclamation",
+    "en": "8. Complaint",
+    "nl": "8. Klacht"
+  },
+  "privacy_short.s8_text": {
+    "fr": "Autorité de Protection des Données (APD) Belgique :<br>📞 +32 2 274 48 00<br>📧 <a href='mailto:contact@apd-gba.be'>contact@apd-gba.be</a><br>🌐 <a href='https://www.apd-gba.be'>www.apd-gba.be</a>",
+    "en": "Belgian Data Protection Authority (APD):<br>📞 +32 2 274 48 00<br>📧 <a href='mailto:contact@apd-gba.be'>contact@apd-gba.be</a><br>🌐 <a href='https://www.apd-gba.be'>www.apd-gba.be</a>",
+    "nl": "Gegevensbeschermingsautoriteit (GBA) België:<br>📞 +32 2 274 48 00<br>📧 <a href='mailto:contact@apd-gba.be'>contact@apd-gba.be</a><br>🌐 <a href='https://www.apd-gba.be'>www.apd-gba.be</a>"
+  },
+  "privacy_short.s9_title": {
+    "fr": "9. Modifications",
+    "en": "9. Modifications",
+    "nl": "9. Wijzigingen"
+  },
+  "privacy_short.s9_date": {
+    "fr": "<strong>Dernière mise à jour :</strong> 13 juillet 2026",
+    "en": "<strong>Last updated:</strong> July 13, 2026",
+    "nl": "<strong>Laatst bijgewerkt:</strong> 13 juli 2026"
+  },
+  "privacy_short.footer_copyright": {
+    "fr": "© 2026 JCODE Agency —",
+    "en": "© 2026 JCODE Agency —",
+    "nl": "© 2026 JCODE Agency —"
+  },
+  "privacy_short.footer_back": {
+    "fr": "Retour au site",
+    "en": "Back to site",
+    "nl": "Terug naar site"
+  },
+  "privacy_short.footer_law": {
+    "fr": "Conforme au RGPD et à la loi belge du 30 juillet 2018.",
+    "en": "Compliant with GDPR and Belgian law of July 30, 2018.",
+    "nl": "Conform de AVG en de Belgische wet van 30 juli 2018."
+  },
+  "terms.back": {
+    "fr": "← Retour au site",
+    "en": "← Back to site",
+    "nl": "← Terug naar site"
+  },
+  "terms.title": {
+    "fr": "Mentions Légales & Conditions Générales",
+    "en": "Legal Notices & General Terms",
+    "nl": "Wettelijke Vermeldingen & Algemene Voorwaarden"
+  },
+  "terms.last_update": {
+    "fr": "Dernière mise à jour : 20 juillet 2026",
+    "en": "Last updated: July 20, 2026",
+    "nl": "Laatst bijgewerkt: 20 juli 2026"
+  },
+  "terms.s1_title": {
+    "fr": "1. Éditeur du site",
+    "en": "1. Site Publisher",
+    "nl": "1. Uitgever van de site"
+  },
+  "terms.s1_name": {
+    "fr": "JCODE Agency",
+    "en": "JCODE Agency",
+    "nl": "JCODE Agency"
+  },
+  "terms.s1_type": {
+    "fr": "Entreprise individuelle",
+    "en": "Sole proprietorship",
+    "nl": "Eenmanszaak"
+  },
+  "terms.s1_hq": {
+    "fr": "Siège social : Mons, Belgique",
+    "en": "Headquarters: Mons, Belgium",
+    "nl": "Maatschappelijke zetel: Bergen, België"
+  },
+  "terms.s1_bce": {
+    "fr": "Numéro BCE/KBO : BE 1014.449.754",
+    "en": "BCE/KBO number: BE 1014.449.754",
+    "nl": "KBO-nummer: BE 1014.449.754"
+  },
+  "terms.s1_vat": {
+    "fr": "Numéro de TVA : BE 1014.449.754",
+    "en": "VAT number: BE 1014.449.754",
+    "nl": "Btw-nummer: BE 1014.449.754"
+  },
+  "terms.s2_title": {
+    "fr": "2. Hébergement",
+    "en": "2. Hosting",
+    "nl": "2. Hosting"
+  },
+  "terms.s2_intro": {
+    "fr": "Le site est hébergé par :",
+    "en": "The site is hosted by:",
+    "nl": "De site wordt gehost door:"
+  },
+  "terms.s2_name": {
+    "fr": "GitHub, Inc.",
+    "en": "GitHub, Inc.",
+    "nl": "GitHub, Inc."
+  },
+  "terms.s3_title": {
+    "fr": "3. Propriété intellectuelle",
+    "en": "3. Intellectual Property",
+    "nl": "3. Intellectuele Eigendom"
+  },
+  "terms.s3_text": {
+    "fr": "L'ensemble du contenu de ce site (textes, images, logos, code) est la propriété exclusive de JCODE Agency. Toute reproduction, représentation ou adaptation, totale ou partielle, sans autorisation préalable écrite, est interdite.",
+    "en": "All content on this site (texts, images, logos, code) is the exclusive property of JCODE Agency. Any reproduction, representation or adaptation, in whole or in part, without prior written authorization, is prohibited.",
+    "nl": "Alle inhoud van deze site (teksten, afbeeldingen, logo's, code) is het exclusieve eigendom van JCODE Agency. Elke reproductie, weergave of aanpassing, geheel of gedeeltelijk, zonder voorafgaande schriftelijke toestemming, is verboden."
+  },
+  "terms.s4_title": {
+    "fr": "4. Services proposés",
+    "en": "4. Services Offered",
+    "nl": "4. Aangeboden diensten"
+  },
+  "terms.s4_intro": {
+    "fr": "JCODE Agency propose la création de sites web vitrines pour les commerçants et indépendants belges. Les forfaits proposés sont :",
+    "en": "JCODE Agency offers showcase website creation for Belgian merchants and freelancers. Available plans:",
+    "nl": "JCODE Agency biedt vitrine-websites voor Belgische handelaars en zelfstandigen. Beschikbare formules:"
+  },
+  "terms.s4_teaser": {
+    "fr": "Teaser : €497 (paiement unique) — Site web professionnel avec réservation en ligne, QR code, email de confirmation, bannière cookies RGPD et mentions légales.",
+    "en": "Teaser: €497 (one-time payment) — Professional website with online booking, QR code, confirmation email, GDPR cookie banner and legal notices.",
+    "nl": "Teaser: €497 (eenmalige betaling) — Professionele website met online reservering, QR-code, bevestigingsmail, AVG-cookiebanner en wettelijke vermeldingen."
+  },
+  "terms.s4_pro": {
+    "fr": "Pro : €999/mois",
+    "en": "Pro: €999/month",
+    "nl": "Pro: €999/maand"
+  },
+  "terms.s4_promax": {
+    "fr": "Pro Max : €1 599/mois",
+    "en": "Pro Max: €1,599/month",
+    "nl": "Pro Max: €1.599/maand"
+  },
+  "terms.s4_addons": {
+    "fr": "Les options add-on disponibles : QR Code personnalisé (+€99), Système de réservation automatique (+€149/mois), Chatbot IA (+€99/mois).",
+    "en": "Available add-ons: Custom QR Code (+€99), Automatic booking system (+€149/month), AI Chatbot (+€99/month).",
+    "nl": "Beschikbare add-ons: Aangepaste QR-code (+€99), Automatisch reserveringssysteem (+€149/maand), AI Chatbot (+€99/maand)."
+  },
+  "terms.s5_title": {
+    "fr": "5. Conditions de paiement",
+    "en": "5. Payment Terms",
+    "nl": "5. Betalingsvoorwaarden"
+  },
+  "terms.s5_text": {
+    "fr": "Le paiement s'effectue via Stripe. Un reçu est automatiquement envoyé par email après chaque transaction. Pour les options add-on payées par virement, une facture manuelle est envoyée sur demande.",
+    "en": "Payment is made via Stripe. A receipt is automatically sent by email after each transaction. For add-on options paid by bank transfer, a manual invoice is sent on request.",
+    "nl": "Betaling gebeurt via Stripe. Een ontvangstbewijs wordt automatisch per e-mail verzonden na elke transactie. Voor add-on opties betaald via overschrijving wordt op verzoek een handmatige factuur verzonden."
+  },
+  "terms.s6_title": {
+    "fr": "6. Délai de livraison",
+    "en": "6. Delivery Time",
+    "nl": "6. Levertijd"
+  },
+  "terms.s6_text": {
+    "fr": "Le forfait Teaser est livré dans un délai de 3 à 5 jours ouvrables après réception du paiement et du questionnaire client complété. Les délais pour les forfaits Pro et Pro Max sont convenus individuellement.",
+    "en": "The Teaser plan is delivered within 3 to 5 business days after receipt of payment and completed client questionnaire. Delivery times for Pro and Pro Max plans are agreed upon individually.",
+    "nl": "Het Teaser-pakket wordt geleverd binnen 3 tot 5 werkdagen na ontvangst van de betaling en de ingevulde klantenvragenlijst. Levertijden voor Pro en Pro Max worden individueel overeengekomen."
+  },
+  "terms.s7_title": {
+    "fr": "7. Droit de rétractation",
+    "en": "7. Right of Withdrawal",
+    "nl": "7. Herroepingsrecht"
+  },
+  "terms.s7_text": {
+    "fr": "Conformément au droit belge, le client dispose d'un délai de 14 jours calendaires pour exercer son droit de rétractation à compter de la conclusion du contrat, sauf si le service a déjà été entièrement exécuté avec l'accord préalable du client.",
+    "en": "In accordance with Belgian law, the client has a period of 14 calendar days to exercise their right of withdrawal from the conclusion of the contract, unless the service has already been fully performed with the client's prior agreement.",
+    "nl": "Overeenkomstig het Belgisch recht heeft de klant een termijn van 14 kalenderdagen om zijn herroepingsrecht uit te oefenen vanaf de sluiting van de overeenkomst, tenzij de dienst reeds volledig is uitgevoerd met voorafgaande toestemming van de klant."
+  },
+  "terms.s8_title": {
+    "fr": "8. Responsabilité",
+    "en": "8. Liability",
+    "nl": "8. Aansprakelijkheid"
+  },
+  "terms.s8_text": {
+    "fr": "JCODE Agency met tout en œuvre pour assurer l'exactitude des informations publiées. Toutefois, elle ne peut être tenue responsable des erreurs, omissions ou résultats obtenus par l'usage de ces informations. L'utilisateur est seul responsable de l'usage qu'il fait du site.",
+    "en": "JCODE Agency makes every effort to ensure the accuracy of published information. However, it cannot be held responsible for errors, omissions or results obtained through the use of this information. The user is solely responsible for their use of the site.",
+    "nl": "JCODE Agency stelt alles in het werk om de nauwkeurigheid van de gepubliceerde informatie te waarborgen. Zij kan echter niet aansprakelijk worden gesteld voor fouten, weglatingen of resultaten verkregen door het gebruik van deze informatie. De gebruiker is zelf verantwoordelijk voor het gebruik van de site."
+  },
+  "terms.s9_title": {
+    "fr": "9. Loi applicable & juridiction",
+    "en": "9. Applicable Law & Jurisdiction",
+    "nl": "9. Toepasselijk recht & bevoegdheid"
+  },
+  "terms.s9_text": {
+    "fr": "Les présentes mentions légales sont régies par le droit belge. En cas de litige, les tribunaux de l'arrondissement de Mons seront seuls compétents.",
+    "en": "These legal notices are governed by Belgian law. In case of dispute, the courts of the Mons district shall have exclusive jurisdiction.",
+    "nl": "Deze wettelijke vermeldingen worden beheerst door het Belgisch recht. In geval van geschil zijn uitsluitend de rechtbanken van het arrondissement Bergen bevoegd."
+  },
+  "terms.s10_title": {
+    "fr": "10. Contact",
+    "en": "10. Contact",
+    "nl": "10. Contact"
+  },
+  "terms.s10_intro": {
+    "fr": "Pour toute question concernant ces mentions légales, contactez-nous :",
+    "en": "For any questions regarding these legal notices, contact us:",
+    "nl": "Voor vragen over deze wettelijke vermeldingen, neem contact met ons op:"
+  },
+  "terms.copyright": {
+    "fr": "© 2026 JCODE Agency — Tous droits réservés",
+    "en": "© 2026 JCODE Agency — All rights reserved",
+    "nl": "© 2026 JCODE Agency — Alle rechten voorbehouden"
+  },
+  "legal.title_header": {
+    "fr": "JCODE Agency",
+    "en": "JCODE Agency",
+    "nl": "JCODE Agency"
+  },
+  "legal.title": {
+    "fr": "Mentions légales",
+    "en": "Legal Notices",
+    "nl": "Wettelijke Vermeldingen"
+  },
+  "legal.editor_title": {
+    "fr": "Éditeur du site",
+    "en": "Site Publisher",
+    "nl": "Uitgever van de site"
+  },
+  "legal.name_label": {
+    "fr": "Nom :",
+    "en": "Name:",
+    "nl": "Naam:"
+  },
+  "legal.email_label": {
+    "fr": "Email :",
+    "en": "Email:",
+    "nl": "E-mail:"
+  },
+  "legal.phone_label": {
+    "fr": "Téléphone :",
+    "en": "Phone:",
+    "nl": "Telefoon:"
+  },
+  "legal.hq_label": {
+    "fr": "Siège social :",
+    "en": "Headquarters:",
+    "nl": "Maatschappelijke zetel:"
+  },
+  "legal.bce_label": {
+    "fr": "Numéro BCE/KBO :",
+    "en": "BCE/KBO number:",
+    "nl": "KBO-nummer:"
+  },
+  "legal.vat_label": {
+    "fr": "Numéro TVA :",
+    "en": "VAT number:",
+    "nl": "Btw-nummer:"
+  },
+  "legal.hosting_title": {
+    "fr": "Hébergement",
+    "en": "Hosting",
+    "nl": "Hosting"
+  },
+  "legal.hosting_name": {
+    "fr": "GitHub Pages",
+    "en": "GitHub Pages",
+    "nl": "GitHub Pages"
+  },
+  "legal.hosting_address": {
+    "fr": "88 Colin P. Kelly Jr. Street, San Francisco CA 94107 USA",
+    "en": "88 Colin P. Kelly Jr. Street, San Francisco CA 94107 USA",
+    "nl": "88 Colin P. Kelly Jr. Street, San Francisco CA 94107 USA"
+  },
+  "legal.back": {
+    "fr": "Retour au site",
+    "en": "Back to site",
+    "nl": "Terug naar site"
+  },
+  "common.nav.home": {
+    "fr": "Accueil",
+    "en": "Home",
+    "nl": "Home"
+  },
+  "common.nav.method": {
+    "fr": "Méthode",
+    "en": "Method",
+    "nl": "Methode"
+  },
+  "common.nav.pricing": {
+    "fr": "Tarifs",
+    "en": "Pricing",
+    "nl": "Prijzen"
+  },
+  "common.nav.faq": {
+    "fr": "FAQ",
+    "en": "FAQ",
+    "nl": "FAQ"
+  },
+  "common.nav.cta": {
+    "fr": "Appel Gratuit",
+    "en": "Free Call",
+    "nl": "Gratis Gesprek"
+  },
+  "common.footer.location": {
+    "fr": "JCODE Agency — Mons, Belgique",
+    "en": "JCODE Agency — Mons, Belgium",
+    "nl": "JCODE Agency — Bergen, België"
+  },
+  "common.footer.privacy": {
+    "fr": "Confidentialité",
+    "en": "Privacy Policy",
+    "nl": "Privacybeleid"
+  },
+  "common.footer.terms": {
+    "fr": "Conditions",
+    "en": "Terms",
+    "nl": "Voorwaarden"
+  },
+  "common.footer.legal": {
+    "fr": "Mentions légales",
+    "en": "Legal Notice",
+    "nl": "Juridische vermeldingen"
+  },
+  "common.footer.copyright": {
+    "fr": "© 2026 JCODE Agency. Tous droits réservés.",
+    "en": "© 2026 JCODE Agency. All rights reserved.",
+    "nl": "© 2026 JCODE Agency. Alle rechten voorbehouden."
+  },
+  "common.cookie.text": {
+    "fr": "Ce site utilise des cookies pour améliorer votre expérience, analyser le trafic et personnaliser le contenu. Vous pouvez choisir d'accepter, de personnaliser ou de refuser.",
+    "en": "This site uses cookies to improve your experience, analyze traffic and personalize content. You can choose to accept, customize or decline.",
+    "nl": "Deze site gebruikt cookies om uw ervaring te verbeteren, het verkeer te analyseren en inhoud te personaliseren. U kunt kiezen om te accepteren, aan te passen of te weigeren."
+  },
+  "common.cookie.accept": {
+    "fr": "Accepter",
+    "en": "Accept",
+    "nl": "Accepteren"
+  },
+  "common.cookie.refuse": {
+    "fr": "Refuser",
+    "en": "Decline",
+    "nl": "Weigeren"
+  },
+  "common.back": {
+    "fr": "← Retour au site",
+    "en": "← Back to site",
+    "nl": "← Terug naar de site"
+  },
+  "concierge.hero.badge": {
+    "fr": "✨ NOUVEAU SERVICE",
+    "en": "✨ NEW SERVICE",
+    "nl": "✨ NIEUWE DIENST"
+  },
+  "concierge.hero.title": {
+    "fr": "AI Concierge",
+    "en": "AI Concierge",
+    "nl": "AI Concierge"
+  },
+  "concierge.hero.desc": {
+    "fr": "Votre partenaire automatisation IA. Done-with-you : on construit ensemble vos workflows, vos skills Claude, vos automatisations Make.com.",
+    "en": "Your AI automation partner. Done-with-you: we build your workflows, Claude skills, and Make.com automations together.",
+    "nl": "Uw partner in IA-automatisering. Done-with-you: samen bouwen we uw workflows, Claude skills en Make.com automatiseringen."
+  },
+  "concierge.hero.cta": {
+    "fr": "Réserver un appel découverte gratuit →",
+    "en": "Book a free discovery call →",
+    "nl": "Boek een gratis kennismakingsgesprek →"
+  },
+  "concierge.aoa.title": {
+    "fr": "La Méthode A.O.A.",
+    "en": "The A.O.A. Method",
+    "nl": "De A.O.A. Methode"
+  },
+  "concierge.aoa.subtitle": {
+    "fr": "Chaque session suit un framework éprouvé en 3 phases pour maximiser votre ROI.",
+    "en": "Every session follows a proven 3-phase framework to maximize your ROI.",
+    "nl": "Elke sessie volgt een bewezen framework in 3 fasen om uw ROI te maximaliseren."
+  },
+  "concierge.aoa.audit.title": {
+    "fr": "Audit",
+    "en": "Audit",
+    "nl": "Audit"
+  },
+  "concierge.aoa.audit.desc": {
+    "fr": "Cartographie complète de vos processus actuels. Identification des goulots d'étranglement. Score de maturité IA. Quick wins immédiats.",
+    "en": "Complete mapping of your current processes. Bottleneck identification. AI maturity score. Immediate quick wins.",
+    "nl": "Volledige mapping van uw huidige processen. Identificatie van knelpunten. IA-rijpheidsscore. Directe quick wins."
+  },
+  "concierge.aoa.optimize.title": {
+    "fr": "Optimize",
+    "en": "Optimize",
+    "nl": "Optimize"
+  },
+  "concierge.aoa.optimize.desc": {
+    "fr": "Suppression des étapes inutiles. Standardisation des flux. Documentation des processus. Préparation à l'automatisation.",
+    "en": "Remove unnecessary steps. Standardize workflows. Document processes. Prepare for automation.",
+    "nl": "Verwijdering van onnodige stappen. Standaardisatie van workflows. Documentatie van processen. Voorbereiding op automatisering."
+  },
+  "concierge.aoa.automate.title": {
+    "fr": "Automate",
+    "en": "Automate",
+    "nl": "Automate"
+  },
+  "concierge.aoa.automate.desc": {
+    "fr": "Création de skills Claude sur mesure. Déploiement de workflows Make.com. Intégrations (Gmail, Notion, Stripe, Vercel). Formation autonome.",
+    "en": "Custom Claude skills. Make.com workflow deployment. Integrations (Gmail, Notion, Stripe, Vercel). Autonomous training.",
+    "nl": "Op maat gemaakte Claude skills. Implementatie van Make.com workflows. Integraties (Gmail, Notion, Stripe, Vercel). Autonome training."
+  },
+  "concierge.deliverables.title": {
+    "fr": "Ce que vous obtenez",
+    "en": "What you get",
+    "nl": "Wat u krijgt"
+  },
+  "concierge.deliverables.subtitle": {
+    "fr": "Des livrables concrets, quantifiables, qui vous font gagner du temps chaque semaine.",
+    "en": "Concrete, measurable deliverables that save you time every week.",
+    "nl": "Concrete, meetbare deliverables die u elke week tijd besparen."
+  },
+  "concierge.del.calls.title": {
+    "fr": "2 appels/mois (45 min)",
+    "en": "2 calls/month (45 min)",
+    "nl": "2 calls/maand (45 min)"
+  },
+  "concierge.del.calls.desc": {
+    "fr": "Sessions stratégiques 1:1 pour avancer sur vos automatisations",
+    "en": "1:1 strategy sessions to advance your automations",
+    "nl": "1:1 strategische sessies om uw automatiseringen vooruit te helpen"
+  },
+  "concierge.del.voxer.title": {
+    "fr": "Voxer illimité",
+    "en": "Unlimited Voxer",
+    "nl": "Onbeperkt Voxer"
+  },
+  "concierge.del.voxer.desc": {
+    "fr": "Questions/réponses asynchrones, réponse sous 12h",
+    "en": "Async Q&A, response within 12h",
+    "nl": "Asynchroon vragen/antwoorden, reactie binnen 12u"
+  },
+  "concierge.del.hub.title": {
+    "fr": "Hub Notion personnalisé",
+    "en": "Custom Notion Hub",
+    "nl": "Gepersonaliseerde Notion Hub"
+  },
+  "concierge.del.hub.desc": {
+    "fr": "Dashboard centralisé : appels, action items, deliverables, ROI",
+    "en": "Centralized dashboard: calls, action items, deliverables, ROI",
+    "nl": "Gecentraliseerd dashboard: calls, actiepunten, deliverables, ROI"
+  },
+  "concierge.del.skills.title": {
+    "fr": "Skills Claude sur mesure",
+    "en": "Custom Claude skills",
+    "nl": "Claude skills op maat"
+  },
+  "concierge.del.skills.desc": {
+    "fr": "Prompts système optimisés pour VOTRE business",
+    "en": "System prompts optimized for YOUR business",
+    "nl": "Geoptimaliseerde systeemprompts voor UW business"
+  },
+  "concierge.del.workflows.title": {
+    "fr": "Workflows Make.com",
+    "en": "Make.com workflows",
+    "nl": "Make.com workflows"
+  },
+  "concierge.del.workflows.desc": {
+    "fr": "Automatisations email, CRM, facturation, relances",
+    "en": "Email, CRM, invoicing, follow-up automations",
+    "nl": "E-mail, CRM, facturatie, opvolging automatiseringen"
+  },
+  "concierge.del.reports.title": {
+    "fr": "Rapports ROI mensuels",
+    "en": "Monthly ROI reports",
+    "nl": "Maandelijkse ROI-rapporten"
+  },
+  "concierge.del.reports.desc": {
+    "fr": "Heures économisées × taux horaire = ROI concret",
+    "en": "Hours saved × hourly rate = concrete ROI",
+    "nl": "Bespaarde uren × uurtarief = concrete ROI"
+  },
+  "concierge.pricing.title": {
+    "fr": "Choisissez votre formule",
+    "en": "Choose your plan",
+    "nl": "Kies uw formule"
+  },
+  "concierge.pricing.subtitle": {
+    "fr": "Maximum 6 clients en parallèle pour garantir un accompagnement premium.",
+    "en": "Maximum 6 clients at a time to guarantee premium support.",
+    "nl": "Maximaal 6 klanten tegelijk om premium begeleiding te garanderen."
+  },
+  "concierge.pricing.popular": {
+    "fr": "POPULAIRE",
+    "en": "POPULAR",
+    "nl": "POPULAIR"
+  },
+  "concierge.pricing.perMonth": {
+    "fr": "/mois",
+    "en": "/month",
+    "nl": "/maand"
+  },
+  "concierge.pricing.start": {
+    "fr": "Commencer",
+    "en": "Get Started",
+    "nl": "Beginnen"
+  },
+  "concierge.pricing.starter.plan": {
+    "fr": "Starter",
+    "en": "Starter",
+    "nl": "Starter"
+  },
+  "concierge.pricing.starter.amount": {
+    "fr": "1 000€",
+    "en": "€1,000",
+    "nl": "1 000€"
+  },
+  "concierge.pricing.starter.f1": {
+    "fr": "<strong>2 appels</strong> de 45 min/mois",
+    "en": "<strong>2 calls</strong> x 45 min/month",
+    "nl": "<strong>2 calls</strong> van 45 min/maand"
+  },
+  "concierge.pricing.starter.f2": {
+    "fr": "<strong>Voxer illimité</strong> (réponse &lt;12h)",
+    "en": "<strong>Unlimited Voxer</strong> (response &lt;12h)",
+    "nl": "<strong>Onbeperkt Voxer</strong> (reactie &lt;12u)"
+  },
+  "concierge.pricing.starter.f3": {
+    "fr": "<strong>Hub Notion</strong> personnalisé",
+    "en": "<strong>Custom Notion Hub</strong>",
+    "nl": "<strong>Gepersonaliseerde Notion Hub</strong>"
+  },
+  "concierge.pricing.starter.f4": {
+    "fr": "<strong>2 skills Claude</strong>/mois",
+    "en": "<strong>2 Claude skills</strong>/month",
+    "nl": "<strong>2 Claude skills</strong>/maand"
+  },
+  "concierge.pricing.starter.f5": {
+    "fr": "<strong>Email récap</strong> après chaque appel",
+    "en": "<strong>Summary email</strong> after each call",
+    "nl": "<strong>Samenvattende e-mail</strong> na elke call"
+  },
+  "concierge.pricing.pro.plan": {
+    "fr": "Pro",
+    "en": "Pro",
+    "nl": "Pro"
+  },
+  "concierge.pricing.pro.amount": {
+    "fr": "1 500€",
+    "en": "€1,500",
+    "nl": "1 500€"
+  },
+  "concierge.pricing.pro.f1": {
+    "fr": "Tout <strong>Starter</strong> +",
+    "en": "Everything in <strong>Starter</strong> +",
+    "nl": "Alles van <strong>Starter</strong> +"
+  },
+  "concierge.pricing.pro.f2": {
+    "fr": "<strong>Skills Claude illimités</strong>",
+    "en": "<strong>Unlimited Claude skills</strong>",
+    "nl": "<strong>Onbeperkte Claude skills</strong>"
+  },
+  "concierge.pricing.pro.f3": {
+    "fr": "<strong>Workflows Make.com</strong>",
+    "en": "<strong>Make.com workflows</strong>",
+    "nl": "<strong>Make.com workflows</strong>"
+  },
+  "concierge.pricing.pro.f4": {
+    "fr": "<strong>Support prioritaire</strong> Voxer (&lt;6h)",
+    "en": "<strong>Priority Voxer support</strong> (&lt;6h)",
+    "nl": "<strong>Prioriteit Voxer support</strong> (&lt;6u)"
+  },
+  "concierge.pricing.pro.f5": {
+    "fr": "<strong>Rapports bi-mensuels</strong>",
+    "en": "<strong>Bi-weekly reports</strong>",
+    "nl": "<strong>Tweewekelijkse rapporten</strong>"
+  },
+  "concierge.pricing.pro.f6": {
+    "fr": "Accès <strong>templates exclusifs</strong>",
+    "en": "Access to <strong>exclusive templates</strong>",
+    "nl": "Toegang tot <strong>exclusieve templates</strong>"
+  },
+  "concierge.pricing.elite.plan": {
+    "fr": "Elite",
+    "en": "Elite",
+    "nl": "Elite"
+  },
+  "concierge.pricing.elite.amount": {
+    "fr": "2 000€",
+    "en": "€2,000",
+    "nl": "2 000€"
+  },
+  "concierge.pricing.elite.f1": {
+    "fr": "Tout <strong>Pro</strong> +",
+    "en": "Everything in <strong>Pro</strong> +",
+    "nl": "Alles van <strong>Pro</strong> +"
+  },
+  "concierge.pricing.elite.f2": {
+    "fr": "<strong>4 appels/mois</strong> (accès prioritaire)",
+    "en": "<strong>4 calls/month</strong> (priority access)",
+    "nl": "<strong>4 calls/maand</strong> (prioriteitstoegang)"
+  },
+  "concierge.pricing.elite.f3": {
+    "fr": "<strong>Rapports mensuels</strong> + ROI détaillé",
+    "en": "<strong>Monthly reports</strong> + detailed ROI",
+    "nl": "<strong>Maandelijkse rapporten</strong> + gedetailleerde ROI"
+  },
+  "concierge.pricing.elite.f4": {
+    "fr": "<strong>Stratégie IA trimestrielle</strong>",
+    "en": "<strong>Quarterly AI strategy</strong>",
+    "nl": "<strong>Driemaandelijkse IA-strategie</strong>"
+  },
+  "concierge.pricing.elite.f5": {
+    "fr": "<strong>Canal Slack/Discord dédié</strong>",
+    "en": "<strong>Dedicated Slack/Discord channel</strong>",
+    "nl": "<strong>Dedicated Slack/Discord kanaal</strong>"
+  },
+  "concierge.pricing.elite.f6": {
+    "fr": "<strong>Déploiement Vercel</strong> inclus",
+    "en": "<strong>Vercel deployment</strong> included",
+    "nl": "<strong>Vercel implementatie</strong> inbegrepen"
+  },
+  "concierge.faq.title": {
+    "fr": "Questions fréquentes",
+    "en": "Frequently Asked Questions",
+    "nl": "Veelgestelde vragen"
+  },
+  "concierge.faq.subtitle": {
+    "fr": "Tout ce que vous devez savoir avant de commencer.",
+    "en": "Everything you need to know before getting started.",
+    "nl": "Alles wat u moet weten voordat u begint."
+  },
+  "concierge.faq.q1": {
+    "fr": "C'est quoi exactement \"done-with-you\" ?",
+    "en": "What exactly does \"done-with-you\" mean?",
+    "nl": "Wat betekent \"done-with-you\" precies?"
+  },
+  "concierge.faq.a1": {
+    "fr": "Contrairement au \"done-for-you\" (on fait tout pour vous) ou \"DIY\" (vous vous débrouillez), le done-with-you signifie qu'on construit ENSEMBLE. Je vous guide, je crée les automatisations, mais vous apprenez à les maintenir. Résultat : vous êtes autonome à la fin.",
+    "en": "Unlike \"done-for-you\" (we do everything for you) or \"DIY\" (you figure it out), done-with-you means we build TOGETHER. I guide you, I create the automations, but you learn to maintain them. Result: you're self-sufficient at the end.",
+    "nl": "In tegenstelling tot \"done-for-you\" (wij doen alles voor u) of \"DIY\" (u redt zich zelf), betekent done-with-you dat we SAMEN bouwen. Ik begeleid u, ik maak de automatiseringen, maar u leert ze te onderhouden. Resultaat: u bent zelfstandig aan het eind."
+  },
+  "concierge.faq.q2": {
+    "fr": "Je ne suis pas technique, c'est un problème ?",
+    "en": "I'm not technical, is that a problem?",
+    "nl": "Ik ben niet technisch, is dat een probleem?"
+  },
+  "concierge.faq.a2": {
+    "fr": "Absolument pas ! 90% de mes clients n'ont aucune compétence technique. C'est justement pour ça que je m'occupe de la partie technique. Vous n'avez qu'à utiliser les outils qu'on met en place.",
+    "en": "Absolutely not! 90% of my clients have no technical skills. That's exactly why I handle the technical side. You just need to use the tools we set up.",
+    "nl": "Absoluut niet! 90% van mijn klanten heeft geen technische kennis. Daarom zorg ik voor het technische gedeelte. U hoeft alleen de tools te gebruiken die we opzetten."
+  },
+  "concierge.faq.q3": {
+    "fr": "Combien de temps avant de voir des résultats ?",
+    "en": "How long before I see results?",
+    "nl": "Hoe lang voordat ik resultaten zie?"
+  },
+  "concierge.faq.a3": {
+    "fr": "Dès le premier appel, vous repartez avec 2-3 quick wins actionnables. Les premières automatisations sont déployées sous 2 semaines. Le ROI moyen constaté est de 5-10h économisées par mois dès le 2ème mois.",
+    "en": "From the first call, you walk away with 2-3 actionable quick wins. The first automations are deployed within 2 weeks. Average ROI is 5-10 hours saved per month from the 2nd month.",
+    "nl": "Vanaf het eerste gesprek gaat u naar huis met 2-3 uitvoerbare quick wins. De eerste automatiseringen worden binnen 2 weken uitgerold. De gemiddelde ROI is 5-10 bespaarde uren per maand vanaf de 2de maand."
+  },
+  "concierge.faq.q4": {
+    "fr": "Quels outils utilisez-vous ?",
+    "en": "What tools do you use?",
+    "nl": "Welke tools gebruikt u?"
+  },
+  "concierge.faq.a4": {
+    "fr": "Principalement : Claude AI (skills/prompts), Make.com (automatisations), Notion (hub client), Voxer (communication asynchrone), Vercel (déploiement). Selon vos besoins : Stripe, Gmail, Airtable, Calendly.",
+    "en": "Mainly: Claude AI (skills/prompts), Make.com (automations), Notion (client hub), Voxer (async communication), Vercel (deployment). Depending on your needs: Stripe, Gmail, Airtable, Calendly.",
+    "nl": "Voornamelijk: Claude AI (skills/prompts), Make.com (automatiseringen), Notion (klant hub), Voxer (asynchrone communicatie), Vercel (implementatie). Afhankelijk van uw behoeften: Stripe, Gmail, Airtable, Calendly."
+  },
+  "concierge.faq.q5": {
+    "fr": "Puis-je annuler à tout moment ?",
+    "en": "Can I cancel anytime?",
+    "nl": "Kan ik op elk moment annuleren?"
+  },
+  "concierge.faq.a5": {
+    "fr": "Oui, engagement mensuel sans durée minimum. Préavis de 30 jours. Tout ce qui a été créé vous appartient (skills, workflows, templates).",
+    "en": "Yes, monthly commitment with no minimum duration. 30-day notice. Everything created belongs to you (skills, workflows, templates).",
+    "nl": "Ja, maandelijks abonnement zonder minimumduur. Opzegtermijn van 30 dagen. Alles wat gemaakt is, is van u (skills, workflows, templates)."
+  },
+  "concierge.faq.q6": {
+    "fr": "Pour quel type de business ?",
+    "en": "What type of business is this for?",
+    "nl": "Voor welk type bedrijf?"
+  },
+  "concierge.faq.a6": {
+    "fr": "Coiffeurs, boulangers, restaurants, hôtes Business, indépendants, TPE. Tout business local qui perd du temps sur des tâches répétitives : emails, réservations, factures, relances, réseaux sociaux.",
+    "en": "Hairdressers, bakers, restaurants, Business hosts, freelancers, small businesses. Any local business wasting time on repetitive tasks: emails, bookings, invoices, follow-ups, social media.",
+    "nl": "Kappers, bakkers, restaurants, Business-hosts, zelfstandigen, KMO's. Elk lokaal bedrijf dat tijd verliest aan repetitieve taken: e-mails, reserveringen, facturen, opvolging, sociale media."
+  },
+  "concierge.faq.q7": {
+    "fr": "Quelle différence avec un freelancer classique ?",
+    "en": "How is this different from a regular freelancer?",
+    "nl": "Wat is het verschil met een gewone freelancer?"
+  },
+  "concierge.faq.a7": {
+    "fr": "Un freelancer exécute une tâche ponctuelle. L'AI Concierge est un partenaire continu qui comprend votre business en profondeur, anticipe vos besoins, et construit un système d'automatisation complet qui évolue avec vous.",
+    "en": "A freelancer handles a one-off task. AI Concierge is a continuous partner who deeply understands your business, anticipates your needs, and builds a complete automation system that evolves with you.",
+    "nl": "Een freelancer voert een eenmalige taak uit. De AI Concierge is een continue partner die uw bedrijf diepgaand begrijpt, uw behoeften anticipeert en een compleet automatiseringssysteem bouwt dat met u meegroeit."
+  },
+  "concierge.faq.q8": {
+    "fr": "Que se passe-t-il pendant l'appel découverte ?",
+    "en": "What happens during the discovery call?",
+    "nl": "Wat gebeurt er tijdens het kennismakingsgesprek?"
+  },
+  "concierge.faq.a8": {
+    "fr": "30 minutes gratuites : on discute de votre business, vos douleurs, vos objectifs. Je vous donne déjà 2-3 pistes d'automatisation. Si le fit est bon, on planifie le premier appel Audit. Zéro pression.",
+    "en": "30 free minutes: we discuss your business, pain points, and goals. I already give you 2-3 automation ideas. If it's a good fit, we schedule the first Audit call. Zero pressure.",
+    "nl": "30 minuten gratis: we bespreken uw bedrijf, uw pijnpunten, uw doelen. Ik geef u alvast 2-3 automatiseringssuggesties. Als de match goed is, plannen we het eerste Audit-gesprek. Geen druk."
+  },
+  "concierge.faq.q9": {
+    "fr": "Mes données sont-elles en sécurité ?",
+    "en": "Is my data safe?",
+    "nl": "Zijn mijn gegevens veilig?"
+  },
+  "concierge.faq.a9": {
+    "fr": "Oui. RGPD compliant. Vos données restent sur des serveurs européens. Aucun partage avec des tiers. NDA disponible sur demande. Vous gardez la propriété de tout ce qui est créé.",
+    "en": "Yes. GDPR compliant. Your data stays on European servers. No sharing with third parties. NDA available on request. You own everything that's created.",
+    "nl": "Ja. AVG-conform. Uw gegevens blijven op Europese servers. Geen deling met derden. NDA beschikbaar op aanvraag. U behoudt het eigendom van alles wat gemaakt is."
+  },
+  "concierge.faq.q10": {
+    "fr": "Y a-t-il des frais cachés ?",
+    "en": "Are there hidden fees?",
+    "nl": "Zijn er verborgen kosten?"
+  },
+  "concierge.faq.a10": {
+    "fr": "Non. Le prix mensuel inclut tout. Les seuls coûts externes possibles : abonnements Make.com (~9€/mois) et Notion (gratuit pour la plupart). Je vous préviens toujours avant tout coût additionnel.",
+    "en": "No. The monthly price includes everything. The only possible external costs: Make.com subscriptions (~€9/month) and Notion (free for most). I always warn you before any additional cost.",
+    "nl": "Nee. De maandprijs is alles-inbegrepen. De enige mogelijke externe kosten: Make.com abonnementen (~9€/maand) en Notion (gratis voor de meesten). Ik waarschuw u altijd voor eventuele bijkomende kosten."
+  },
+  "concierge.cta.title": {
+    "fr": "Prêt à automatiser votre business ?",
+    "en": "Ready to automate your business?",
+    "nl": "Klaar om uw bedrijf te automatiseren?"
+  },
+  "concierge.cta.subtitle": {
+    "fr": "Réservez votre appel découverte gratuit de 30 minutes. Zéro engagement, 100% valeur.",
+    "en": "Book your free 30-minute discovery call. Zero commitment, 100% value.",
+    "nl": "Boek uw gratis kennismakingsgesprek van 30 minuten. Geen verplichting, 100% waarde."
+  },
+  "concierge.cta.button": {
+    "fr": "Réserver mon appel gratuit →",
+    "en": "Book my free call →",
+    "nl": "Boek mijn gratis gesprek →"
+  },
+  "intake.page.title": {
+    "fr": "Formulaire Intake — AI Concierge | JCODE Agency",
+    "en": "Intake Form — AI Concierge | JCODE Agency",
+    "nl": "Intakeformulier — AI Concierge | JCODE Agency"
+  },
+  "intake.title": {
+    "fr": "📋 Formulaire Intake",
+    "en": "📋 Intake Form",
+    "nl": "📋 Intakeformulier"
+  },
+  "intake.subtitle": {
+    "fr": "AI Concierge — JCODE Agency | 5 minutes pour démarrer votre automatisation",
+    "en": "AI Concierge — JCODE Agency | 5 minutes to start your automation",
+    "nl": "AI Concierge — JCODE Agency | 5 minuten om uw automatisering te starten"
+  },
+  "intake.label.business": {
+    "fr": "Nom de l'entreprise",
+    "en": "Business name",
+    "nl": "Bedrijfsnaam"
+  },
+  "intake.placeholder.business": {
+    "fr": "Ex: Salon Élégance",
+    "en": "E.g.: Elegant Salon",
+    "nl": "Bv: Salon Elegantie"
+  },
+  "intake.label.sector": {
+    "fr": "Secteur d'activité",
+    "en": "Industry",
+    "nl": "Sector"
+  },
+  "intake.sector.select": {
+    "fr": "— Sélectionnez —",
+    "en": "— Select —",
+    "nl": "— Selecteer —"
+  },
+  "intake.sector.coiffeur": {
+    "fr": "Coiffeur / Barbier",
+    "en": "Hairdresser / Barber",
+    "nl": "Kapper / Barbier"
+  },
+  "intake.sector.boulanger": {
+    "fr": "Boulanger / Pâtissier",
+    "en": "Baker / Pastry Chef",
+    "nl": "Bakker / Banketbakker"
+  },
+  "intake.sector.restaurant": {
+    "fr": "Restaurant / Snack",
+    "en": "Restaurant / Snack Bar",
+    "nl": "Restaurant / Snackbar"
+  },
+  "intake.sector.airbnb": {
+    "fr": "Hôte Business",
+    "en": "Business Host",
+    "nl": "Business-host"
+  },
+  "intake.sector.boucherie": {
+    "fr": "Boucherie / Épicerie",
+    "en": "Butcher / Grocery",
+    "nl": "Slagerij / Kruidenier"
+  },
+  "intake.sector.sante": {
+    "fr": "Santé / Bien-être",
+    "en": "Health / Wellness",
+    "nl": "Gezondheid / Welzijn"
+  },
+  "intake.sector.commerce": {
+    "fr": "Commerce / Boutique",
+    "en": "Retail / Boutique",
+    "nl": "Handel / Boetiek"
+  },
+  "intake.sector.autre": {
+    "fr": "Autre",
+    "en": "Other",
+    "nl": "Andere"
+  },
+  "intake.label.employees": {
+    "fr": "Nombre d'employés",
+    "en": "Number of employees",
+    "nl": "Aantal werknemers"
+  },
+  "intake.emp.justeMoi": {
+    "fr": "Juste moi",
+    "en": "Just me",
+    "nl": "Alleen ik"
+  },
+  "intake.label.website": {
+    "fr": "Site web actuel (optionnel)",
+    "en": "Current website (optional)",
+    "nl": "Huidige website (optioneel)"
+  },
+  "intake.label.tools": {
+    "fr": "Outils digitaux utilisés",
+    "en": "Digital tools used",
+    "nl": "Gebruikte digitale tools"
+  },
+  "intake.tool.reservation": {
+    "fr": "Réservation en ligne",
+    "en": "Online booking",
+    "nl": "Online reservering"
+  },
+  "intake.tool.aucun": {
+    "fr": "Aucun",
+    "en": "None",
+    "nl": "Geen"
+  },
+  "intake.label.timewasters": {
+    "fr": "Vos 3 plus grosses pertes de temps",
+    "en": "Your 3 biggest time wasters",
+    "nl": "Uw 3 grootste tijdverspillingen"
+  },
+  "intake.placeholder.timewasters": {
+    "fr": "Ex: Répondre aux mêmes questions, gérer les réservations manuellement, faire les factures...",
+    "en": "E.g.: Answering the same questions, managing bookings manually, doing invoices...",
+    "nl": "Bv: Dezelfde vragen beantwoorden, reserveringen handmatig beheren, facturen maken..."
+  },
+  "intake.label.repetitive": {
+    "fr": "Processus répétitifs quotidiens",
+    "en": "Daily repetitive processes",
+    "nl": "Dagelijkse repetitieve processen"
+  },
+  "intake.placeholder.repetitive": {
+    "fr": "Ex: Envoyer des rappels RDV, poster sur les réseaux, répondre aux avis...",
+    "en": "E.g.: Sending appointment reminders, posting on social media, replying to reviews...",
+    "nl": "Bv: Afspraakherinneringen sturen, posten op sociale media, reviews beantwoorden..."
+  },
+  "intake.label.budget": {
+    "fr": "Budget mensuel envisagé",
+    "en": "Planned monthly budget",
+    "nl": "Voorzien maandelijks budget"
+  },
+  "intake.label.techlevel": {
+    "fr": "Votre niveau tech (1=débutant, 5=expert)",
+    "en": "Your tech level (1=beginner, 5=expert)",
+    "nl": "Uw tech-niveau (1=beginner, 5=expert)"
+  },
+  "intake.label.goal": {
+    "fr": "Votre objectif à 3 mois",
+    "en": "Your 3-month goal",
+    "nl": "Uw doel op 3 maanden"
+  },
+  "intake.placeholder.goal": {
+    "fr": "Ex: Automatiser mes réservations, gagner 10h/semaine, ne plus oublier de relancer les clients...",
+    "en": "E.g.: Automate my bookings, save 10h/week, never forget to follow up with clients...",
+    "nl": "Bv: Mijn reserveringen automatiseren, 10u/week winnen, klanten niet meer vergeten op te volgen..."
+  },
+  "intake.label.email": {
+    "fr": "Email de contact",
+    "en": "Contact email",
+    "nl": "Contact e-mail"
+  },
+  "intake.placeholder.email": {
+    "fr": "votre@email.com",
+    "en": "your@email.com",
+    "nl": "uw@email.com"
+  },
+  "intake.consent": {
+    "fr": "J'accepte que mes données soient traitées par JCODE Agency dans le cadre de cette demande, conformément au <a href=\"privacy-policy.html\" style=\"color:var(--primary)\">RGPD</a>. Je peux retirer mon consentement à tout moment.",
+    "en": "I agree that my data will be processed by JCODE Agency as part of this request, in accordance with <a href=\"privacy-policy.html\" style=\"color:var(--primary)\">GDPR</a>. I can withdraw my consent at any time.",
+    "nl": "Ik ga ermee akkoord dat mijn gegevens worden verwerkt door JCODE Agency in het kader van deze aanvraag, conform de <a href=\"privacy-policy.html\" style=\"color:var(--primary)\">AVG</a>. Ik kan mijn toestemming op elk moment intrekken."
+  },
+  "intake.submit": {
+    "fr": "Envoyer mon formulaire →",
+    "en": "Submit my form →",
+    "nl": "Verstuur mijn formulier →"
+  },
+  "intake.success.title": {
+    "fr": "🎉 Formulaire envoyé !",
+    "en": "🎉 Form submitted!",
+    "nl": "🎉 Formulier verzonden!"
+  },
+  "intake.success.desc": {
+    "fr": "Merci ! Je reviens vers vous sous 24h avec les prochaines étapes.<br>Vérifiez votre boîte email (et les spams).",
+    "en": "Thank you! I'll get back to you within 24h with next steps.<br>Check your inbox (and spam folder).",
+    "nl": "Bedankt! Ik kom binnen 24u bij u terug met de volgende stappen.<br>Controleer uw mailbox (en spam)."
+  },
+  "aoa.page.title": {
+    "fr": "AOA Framework — JCODE Agency",
+    "en": "AOA Framework — JCODE Agency",
+    "nl": "AOA Framework — JCODE Agency"
+  },
+  "aoa.title": {
+    "fr": "🎯 Framework A.O.A.",
+    "en": "🎯 A.O.A. Framework",
+    "nl": "🎯 A.O.A. Framework"
+  },
+  "aoa.subtitle": {
+    "fr": "Audit → Optimize → Automate | Template de session JCODE AI Concierge",
+    "en": "Audit → Optimize → Automate | JCODE AI Concierge session template",
+    "nl": "Audit → Optimize → Automate | Sessietemplate JCODE AI Concierge"
+  },
+  "aoa.tab.audit": {
+    "fr": "🔍 AUDIT",
+    "en": "🔍 AUDIT",
+    "nl": "🔍 AUDIT"
+  },
+  "aoa.tab.optimize": {
+    "fr": "⚡ OPTIMIZE",
+    "en": "⚡ OPTIMIZE",
+    "nl": "⚡ OPTIMIZE"
+  },
+  "aoa.tab.automate": {
+    "fr": "🤖 AUTOMATE",
+    "en": "🤖 AUTOMATE",
+    "nl": "🤖 AUTOMATE"
+  },
+  "aoa.audit.mapping.title": {
+    "fr": "🗺️ Cartographie des processus",
+    "en": "🗺️ Process mapping",
+    "nl": "🗺️ Processen in kaart brengen"
+  },
+  "aoa.audit.mapping.q1": {
+    "fr": "Quelles tâches prenez-vous en charge chaque jour ? (liste complète)",
+    "en": "What tasks do you handle every day? (complete list)",
+    "nl": "Welke taken neemt u elke dag op zich? (volledige lijst)"
+  },
+  "aoa.audit.mapping.q2": {
+    "fr": "Combien de temps passez-vous sur chaque tâche ?",
+    "en": "How much time do you spend on each task?",
+    "nl": "Hoeveel tijd besteedt u aan elke taak?"
+  },
+  "aoa.audit.mapping.q3": {
+    "fr": "Quelles tâches sont répétitives et prévisibles ?",
+    "en": "Which tasks are repetitive and predictable?",
+    "nl": "Welke taken zijn repetitief en voorspelbaar?"
+  },
+  "aoa.audit.mapping.q4": {
+    "fr": "Quelles tâches nécessitent un jugement humain ?",
+    "en": "Which tasks require human judgment?",
+    "nl": "Welke taken vereisen menselijk oordeel?"
+  },
+  "aoa.audit.mapping.q5": {
+    "fr": "Quels outils utilisez-vous actuellement ?",
+    "en": "What tools do you currently use?",
+    "nl": "Welke tools gebruikt u momenteel?"
+  },
+  "aoa.audit.mapping.q6": {
+    "fr": "Où sont les goulots d'étranglement ?",
+    "en": "Where are the bottlenecks?",
+    "nl": "Waar zijn de knelpunten?"
+  },
+  "aoa.audit.mapping.q7": {
+    "fr": "Quelles erreurs reviennent souvent ?",
+    "en": "What errors occur frequently?",
+    "nl": "Welke fouten komen vaak terug?"
+  },
+  "aoa.audit.score.title": {
+    "fr": "📊 Score IA Readiness",
+    "en": "📊 AI Readiness Score",
+    "nl": "📊 IA-rijpheidsscore"
+  },
+  "aoa.audit.score.based": {
+    "fr": "Basé sur : digitalisation actuelle, volume de tâches répétitives, données disponibles, volonté d'adoption.",
+    "en": "Based on: current digitization, volume of repetitive tasks, available data, willingness to adopt.",
+    "nl": "Gebaseerd op: huidige digitalisering, volume repetitieve taken, beschikbare gegevens, bereidheid tot adoptie."
+  },
+  "aoa.audit.notes.title": {
+    "fr": "📝 Notes de session",
+    "en": "📝 Session notes",
+    "nl": "📝 Sessienotities"
+  },
+  "aoa.audit.notes.placeholder": {
+    "fr": "Notes pendant l'appel Audit...",
+    "en": "Notes during the Audit call...",
+    "nl": "Notities tijdens het Audit-gesprek..."
+  },
+  "aoa.audit.quickwin": {
+    "fr": "<strong>Quick Win identifié :</strong> Automatiser les rappels RDV par SMS/email (gain estimé : 3h/semaine)",
+    "en": "<strong>Quick Win identified:</strong> Automate appointment reminders via SMS/email (estimated gain: 3h/week)",
+    "nl": "<strong>Quick Win geïdentificeerd:</strong> Afspraakherinneringen automatiseren via SMS/e-mail (geschatte winst: 3u/week)"
+  },
+  "aoa.optimize.flow.title": {
+    "fr": "🔄 Flux optimisé",
+    "en": "🔄 Optimized workflow",
+    "nl": "🔄 Geoptimaliseerde workflow"
+  },
+  "aoa.optimize.flow.q1": {
+    "fr": "Supprimer les étapes redondantes identifiées",
+    "en": "Remove identified redundant steps",
+    "nl": "Verwijder de geïdentificeerde overbodige stappen"
+  },
+  "aoa.optimize.flow.q2": {
+    "fr": "Standardiser les templates (emails, factures, réponses)",
+    "en": "Standardize templates (emails, invoices, replies)",
+    "nl": "Standaardiseer templates (e-mails, facturen, antwoorden)"
+  },
+  "aoa.optimize.flow.q3": {
+    "fr": "Regrouper les tâches similaires (batching)",
+    "en": "Group similar tasks (batching)",
+    "nl": "Groepeer vergelijkbare taken (batching)"
+  },
+  "aoa.optimize.flow.q4": {
+    "fr": "Définir les triggers automatiques (quand X → alors Y)",
+    "en": "Define automatic triggers (when X → then Y)",
+    "nl": "Definieer automatische triggers (wanneer X → dan Y)"
+  },
+  "aoa.optimize.flow.q5": {
+    "fr": "Documenter le flux cible (avant/après)",
+    "en": "Document the target workflow (before/after)",
+    "nl": "Documenteer de doelworkflow (voor/na)"
+  },
+  "aoa.optimize.flow.q6": {
+    "fr": "Valider avec le client que le flux a du sens",
+    "en": "Validate with the client that the workflow makes sense",
+    "nl": "Valideer met de klant dat de workflow logisch is"
+  },
+  "aoa.optimize.removed.title": {
+    "fr": "🗑️ Étapes supprimées",
+    "en": "🗑️ Removed steps",
+    "nl": "🗑️ Verwijderde stappen"
+  },
+  "aoa.optimize.removed.q1": {
+    "fr": "Saisie manuelle des RDV → Calendly auto",
+    "en": "Manual appointment entry → Calendly auto",
+    "nl": "Handmatige afspraak invoer → Calendly auto"
+  },
+  "aoa.optimize.removed.q2": {
+    "fr": "Réponse manuelle aux avis → Template + IA",
+    "en": "Manual review replies → Template + AI",
+    "nl": "Handmatig reviews beantwoorden → Template + IA"
+  },
+  "aoa.optimize.removed.q3": {
+    "fr": "Relance manuelle impayés → Workflow Make.com",
+    "en": "Manual unpaid follow-up → Make.com workflow",
+    "nl": "Handmatige opvolging onbetaald → Make.com workflow"
+  },
+  "aoa.optimize.notes.title": {
+    "fr": "📝 Notes de session",
+    "en": "📝 Session notes",
+    "nl": "📝 Sessienotities"
+  },
+  "aoa.optimize.notes.placeholder": {
+    "fr": "Notes pendant l'appel Optimize...",
+    "en": "Notes during the Optimize call...",
+    "nl": "Notities tijdens het Optimize-gesprek..."
+  },
+  "aoa.optimize.quickwin": {
+    "fr": "<strong>Quick Win identifié :</strong> Template email post-RDV automatique (gain estimé : 2h/semaine)",
+    "en": "<strong>Quick Win identified:</strong> Automatic post-appointment email template (estimated gain: 2h/week)",
+    "nl": "<strong>Quick Win geïdentificeerd:</strong> Automatisch post-afspraak e-mail template (geschatte winst: 2u/week)"
+  },
+  "aoa.automate.skills.title": {
+    "fr": "🤖 Skills Claude à créer",
+    "en": "🤖 Claude skills to create",
+    "nl": "🤖 Te maken Claude skills"
+  },
+  "aoa.automate.skills.q1": {
+    "fr": "Skill \"Réponse avis Google\" (ton professionnel, personnalisé)",
+    "en": "Skill \"Google review reply\" (professional, personalized tone)",
+    "nl": "Skill \"Google review antwoord\" (professionele, gepersonaliseerde toon)"
+  },
+  "aoa.automate.skills.q2": {
+    "fr": "Skill \"Email post-RDV\" (récap + prochain RDV)",
+    "en": "Skill \"Post-appointment email\" (summary + next appointment)",
+    "nl": "Skill \"Post-afspraak e-mail\" (samenvatting + volgende afspraak)"
+  },
+  "aoa.automate.skills.q3": {
+    "fr": "Skill \"Relance client\" (J+3, J+7, J+14)",
+    "en": "Skill \"Client follow-up\" (D+3, D+7, D+14)",
+    "nl": "Skill \"Klantopvolging\" (D+3, D+7, D+14)"
+  },
+  "aoa.automate.skills.q4": {
+    "fr": "Skill \"Post réseaux sociaux\" (3x/semaine auto)",
+    "en": "Skill \"Social media post\" (3x/week auto)",
+    "nl": "Skill \"Sociale media post\" (3x/week automatisch)"
+  },
+  "aoa.automate.skills.q5": {
+    "fr": "Skill \"Facturation\" (génération + envoi)",
+    "en": "Skill \"Invoicing\" (generation + sending)",
+    "nl": "Skill \"Facturatie\" (generatie + verzending)"
+  },
+  "aoa.automate.workflows.title": {
+    "fr": "⚙️ Workflows Make.com",
+    "en": "⚙️ Make.com workflows",
+    "nl": "⚙️ Make.com workflows"
+  },
+  "aoa.automate.workflows.q1": {
+    "fr": "Trigger : Nouveau RDV → Email confirmation + Rappel J-1",
+    "en": "Trigger: New appointment → Confirmation email + D-1 reminder",
+    "nl": "Trigger: Nieuwe afspraak → Bevestigingsmail + Herinnering D-1"
+  },
+  "aoa.automate.workflows.q2": {
+    "fr": "Trigger : Avis Google → Réponse IA + Notification",
+    "en": "Trigger: Google review → AI reply + Notification",
+    "nl": "Trigger: Google review → IA-antwoord + Melding"
+  },
+  "aoa.automate.workflows.q3": {
+    "fr": "Trigger : Facture impayée J+7 → Relance automatique",
+    "en": "Trigger: Unpaid invoice D+7 → Automatic follow-up",
+    "nl": "Trigger: Onbetaalde factuur D+7 → Automatische herinnering"
+  },
+  "aoa.automate.workflows.q4": {
+    "fr": "Schedule : Lundi 8h → Posts semaine programmés",
+    "en": "Schedule: Monday 8am → Week posts scheduled",
+    "nl": "Schedule: Maandag 8u → Weekposts geprogrammeerd"
+  },
+  "aoa.automate.deploy.title": {
+    "fr": "🚀 Déploiement",
+    "en": "🚀 Deployment",
+    "nl": "🚀 Implementatie"
+  },
+  "aoa.automate.deploy.q1": {
+    "fr": "Tester chaque workflow en mode sandbox",
+    "en": "Test each workflow in sandbox mode",
+    "nl": "Test elke workflow in sandbox-modus"
+  },
+  "aoa.automate.deploy.q2": {
+    "fr": "Validation client avant activation",
+    "en": "Client validation before activation",
+    "nl": "Klantvalidatie voor activering"
+  },
+  "aoa.automate.deploy.q3": {
+    "fr": "Activation progressive (1 workflow/semaine)",
+    "en": "Progressive activation (1 workflow/week)",
+    "nl": "Progressieve activering (1 workflow/week)"
+  },
+  "aoa.automate.deploy.q4": {
+    "fr": "Monitoring première semaine",
+    "en": "First week monitoring",
+    "nl": "Monitoring eerste week"
+  },
+  "aoa.automate.notes.title": {
+    "fr": "📝 Notes de session",
+    "en": "📝 Session notes",
+    "nl": "📝 Sessienotities"
+  },
+  "aoa.automate.notes.placeholder": {
+    "fr": "Notes pendant l'appel Automate...",
+    "en": "Notes during the Automate call...",
+    "nl": "Notities tijdens het Automate-gesprek..."
+  },
+  "aoa.automate.quickwin": {
+    "fr": "<strong>Quick Win identifié :</strong> Workflow relance impayés (gain estimé : 4h/mois + réduction impayés 30%)",
+    "en": "<strong>Quick Win identified:</strong> Unpaid invoice follow-up workflow (estimated gain: 4h/month + 30% reduction in unpaid)",
+    "nl": "<strong>Quick Win geïdentificeerd:</strong> Workflow opvolging onbetaalde facturen (geschatte winst: 4u/maand + 30% minder onbetaald)"
+  },
+  "aoa.export": {
+    "fr": "📄 Exporter en PDF",
+    "en": "📄 Export to PDF",
+    "nl": "📄 Exporteren naar PDF"
+  },
+  "index.meta.title": {
+    "fr": "JCODE Agency — Sites Web & Marketing Automatisé par IA",
+    "en": "JCODE Agency — Websites & AI-Powered Marketing",
+    "nl": "JCODE Agency — Websites & Geautomatiseerde Marketing door AI"
+  },
+  "index.meta.description": {
+    "fr": "JCODE Agency propulse votre commerce (Business, restaurant, coiffeur, boulanger...) avec 21 agents IA. Vidéos, prospection, copywriting, sites web — 100% automatisé. Package Teaser à 497€.",
+    "en": "JCODE Agency boosts your business (Business, restaurant, hairdresser, bakery...) with 21 AI agents. Videos, prospecting, copywriting, websites — 100% automated. Teaser Package at €497.",
+    "nl": "JCODE Agency boost uw bedrijf (Business, restaurant, kapper, bakker...) met 21 AI-agents. Video's, prospectie, copywriting, websites — 100% geautomatiseerd. Teaser Pakket voor €497."
+  },
+  "index.hero.badge": {
+    "fr": "21 agents IA déployés",
+    "en": "21 AI agents deployed",
+    "nl": "21 AI-agents ingezet"
+  },
+  "index.hero.titleLine1": {
+    "fr": "Votre marketing digital,",
+    "en": "Your digital marketing,",
+    "nl": "Uw digitale marketing,"
+  },
+  "index.hero.titleLine2": {
+    "fr": "100% automatisé",
+    "en": "100% automated",
+    "nl": "100% geautomatiseerd"
+  },
+  "index.hero.subtitle": {
+    "fr": "JCODE Agency propulse votre commerce (Business, restaurant, coiffeur, boulanger...) avec une armée d'agents IA. Génération de contenu, prospection clients, et optimisation — tout tourne en autopilot.",
+    "en": "JCODE Agency boosts your business (Business, restaurant, hairdresser, bakery...) with an army of AI agents. Content generation, client prospecting, and optimization — everything runs on autopilot.",
+    "nl": "JCODE Agency boost uw bedrijf (Business, restaurant, kapper, bakker...) met een leger van AI-agents. Contentgeneratie, klantenprospecting en optimalisatie — alles draait op autopilot."
+  },
+  "index.hero.ctaPrimary": {
+    "fr": "Voir tous les packages →",
+    "en": "View all packages →",
+    "nl": "Bekijk alle pakketten →"
+  },
+  "index.hero.ctaSecondary": {
+    "fr": "Voir les services",
+    "en": "View services",
+    "nl": "Bekijk diensten"
+  },
+  "index.hero.statAgents": {
+    "fr": "Agents IA actifs",
+    "en": "Active AI agents",
+    "nl": "Actieve AI-agents"
+  },
+  "index.hero.statPackages": {
+    "fr": "Packages disponibles",
+    "en": "Packages available",
+    "nl": "Beschikbare pakketten"
+  },
+  "index.hero.statManual": {
+    "fr": "De travail manuel",
+    "en": "Of manual work",
+    "nl": "Handmatig werk"
+  },
+  "index.hero.cardDashboard": {
+    "fr": "Dashboard IA",
+    "en": "AI Dashboard",
+    "nl": "AI Dashboard"
+  },
+  "index.hero.cardLive": {
+    "fr": "● Live",
+    "en": "● Live",
+    "nl": "● Live"
+  },
+  "index.hero.cardVisits": {
+    "fr": "Visites",
+    "en": "Visits",
+    "nl": "Bezoeken"
+  },
+  "index.hero.cardReservations": {
+    "fr": "Réservations",
+    "en": "Bookings",
+    "nl": "Reserveringen"
+  },
+  "index.hero.floatCopywriting": {
+    "fr": "🤖 Agent Copywriting",
+    "en": "🤖 Copywriting Agent",
+    "nl": "🤖 Copywriting Agent"
+  },
+  "index.hero.floatVideo": {
+    "fr": "📹 Agent Vidéo",
+    "en": "📹 Video Agent",
+    "nl": "📹 Video Agent"
+  },
+  "index.hero.floatOutreach": {
+    "fr": "📧 Agent Outreach",
+    "en": "📧 Outreach Agent",
+    "nl": "📧 Outreach Agent"
+  },
+  "index.trust.label": {
+    "fr": "Propulsé par les meilleures technologies",
+    "en": "Powered by the best technologies",
+    "nl": "Aangedreven door de beste technologieën"
+  },
+  "index.services.tag": {
+    "fr": "Nos Services",
+    "en": "Our Services",
+    "nl": "Onze Diensten"
+  },
+  "index.services.title": {
+    "fr": "Une armée d'agents IA à votre service",
+    "en": "An army of AI agents at your service",
+    "nl": "Een leger van AI-agents tot uw dienst"
+  },
+  "index.services.subtitle": {
+    "fr": "Chaque agent est spécialisé dans une mission précise pour faire croître votre business Business sans effort.",
+    "en": "Each agent is specialized in a specific mission to grow your Business business effortlessly.",
+    "nl": "Elke agent is gespecialiseerd in een specifieke missie om uw Business-bedrijf moeiteloos te laten groeien."
+  },
+  "index.services.brandbuilder.title": {
+    "fr": "BrandBuilder",
+    "en": "BrandBuilder",
+    "nl": "BrandBuilder"
+  },
+  "index.services.brandbuilder.desc": {
+    "fr": "Identité visuelle complète : logo, palette, typographie, site web pro avec pages clés, et calendrier de contenu sur mesure.",
+    "en": "Complete visual identity: logo, color palette, typography, professional website with key pages, and custom content calendar.",
+    "nl": "Volledige visuele identiteit: logo, kleurenpalet, typografie, professionele website met sleutelpagina's en contentkalender op maat."
+  },
+  "index.services.copymaster.title": {
+    "fr": "CopyMaster",
+    "en": "CopyMaster",
+    "nl": "CopyMaster"
+  },
+  "index.services.copymaster.desc": {
+    "fr": "Rédaction SEO optimisée pour vos annonces Business, descriptions captivantes, et contenu de blog qui convertit les visiteurs.",
+    "en": "SEO-optimized writing for your Business listings, captivating descriptions, and blog content that converts visitors.",
+    "nl": "SEO-geoptimaliseerd schrijven voor uw Business-vermeldingen, boeiende beschrijvingen en blogcontent die bezoekers converteert."
+  },
+  "index.services.videocreator.title": {
+    "fr": "VideoCreator",
+    "en": "VideoCreator",
+    "nl": "VideoCreator"
+  },
+  "index.services.videocreator.desc": {
+    "fr": "Production vidéo automatisée : visuels de propriétés, reels Instagram/TikTok, et contenu viral pour maximiser votre visibilité.",
+    "en": "Automated video production: property visuals, Instagram/TikTok reels, and viral content to maximize your visibility.",
+    "nl": "Geautomatiseerde videoproductie: vastgoedbeelden, Instagram/TikTok reels en virale content om uw zichtbaarheid te maximaliseren."
+  },
+  "index.services.outreach.title": {
+    "fr": "Outreach Pro",
+    "en": "Outreach Pro",
+    "nl": "Outreach Pro"
+  },
+  "index.services.outreach.desc": {
+    "fr": "Prospection automatisée de propriétaires Business : scraping ciblé, emails personnalisés, et suivi intelligent des leads.",
+    "en": "Automated prospecting of Business owners: targeted scraping, personalized emails, and intelligent lead follow-up.",
+    "nl": "Geautomatiseerde prospectie van Business-eigenaren: gerichte scraping, gepersonaliseerde e-mails en intelligente leadopvolging."
+  },
+  "index.services.analytics.title": {
+    "fr": "Analytics AI",
+    "en": "Analytics AI",
+    "nl": "Analytics AI"
+  },
+  "index.services.analytics.desc": {
+    "fr": "Tableaux de bord en temps réel, analyse des performances, et recommandations optimisées par IA pour augmenter vos revenus.",
+    "en": "Real-time dashboards, performance analysis, and AI-optimized recommendations to increase your revenue.",
+    "nl": "Real-time dashboards, prestatieanalyse en AI-geoptimaliseerde aanbevelingen om uw omzet te verhogen."
+  },
+  "index.services.orchestrator.title": {
+    "fr": "Agent Orchestrator",
+    "en": "Agent Orchestrator",
+    "nl": "Agent Orchestrator"
+  },
+  "index.services.orchestrator.desc": {
+    "fr": "Coordination intelligente de vos 21 agents IA. Chaque agent communique, se délègue des tâches, et optimise son workflow.",
+    "en": "Intelligent coordination of your 21 AI agents. Each agent communicates, delegates tasks, and optimizes its workflow.",
+    "nl": "Intelligente coördinatie van uw 21 AI-agents. Elke agent communiceert, delegeert taken en optimaliseert zijn workflow."
+  },
+  "index.offer.tag": {
+    "fr": "Nos Offres",
+    "en": "Our Offers",
+    "nl": "Onze Aanbiedingen"
+  },
+  "index.offer.title": {
+    "fr": "Choisissez votre package",
+    "en": "Choose your package",
+    "nl": "Kies uw pakket"
+  },
+  "index.offer.subtitle": {
+    "fr": "Trois niveaux de puissance IA pour propulser votre Business. Sans engagement, annulable à tout moment.",
+    "en": "Three levels of AI power to boost your Business. No commitment, cancelable anytime.",
+    "nl": "Drie niveaus van AI-kracht om uw Business te boosten. Geen verplichting, op elk moment opzegbaar."
+  },
+  "index.offer.recommended": {
+    "fr": "⭐ RECOMMANDÉ",
+    "en": "⭐ RECOMMENDED",
+    "nl": "⭐ AANBEVOLEN"
+  },
+  "index.offer.teaser.name": {
+    "fr": "Teaser",
+    "en": "Teaser",
+    "nl": "Teaser"
+  },
+  "index.offer.teaser.desc": {
+    "fr": "Le starter parfait pour propriétaires de business local qui veulent tester la puissance de l'IA.",
+    "en": "The perfect starter for local business owners who want to test the power of AI.",
+    "nl": "De perfecte starter voor lokale ondernemers die de kracht van AI willen testen."
+  },
+  "index.offer.teaser.oneTime": {
+    "fr": " (paiement unique)",
+    "en": " (one-time payment)",
+    "nl": " (eenmalige betaling)"
+  },
+  "index.offer.teaser.f1": {
+    "fr": "Site vitrine professionnel (1 page)",
+    "en": "Professional showcase site (1 page)",
+    "nl": "Professionele vitrine-site (1 pagina)"
+  },
+  "index.offer.teaser.f2": {
+    "fr": "Design secteur-spécifique",
+    "en": "Sector-specific design",
+    "nl": "Sector-specifiek ontwerp"
+  },
+  "index.offer.teaser.f3": {
+    "fr": "Cookie RGPD + mentions légales",
+    "en": "GDPR cookie + legal notices",
+    "nl": "AVG-cookie + juridische vermeldingen"
+  },
+  "index.offer.teaser.f4": {
+    "fr": "Support 30 jours",
+    "en": "30-day support",
+    "nl": "30 dagen support"
+  },
+  "index.offer.pro.name": {
+    "fr": "Pro",
+    "en": "Pro",
+    "nl": "Pro"
+  },
+  "index.offer.pro.desc": {
+    "fr": "Pour les propriétaires ambitieux qui veulent scaler leur business Business.",
+    "en": "For ambitious owners who want to scale their Business business.",
+    "nl": "Voor ambitieuze eigenaren die hun Business-bedrijf willen opschalen."
+  },
+  "index.offer.pro.f1": {
+    "fr": "Site vitrine professionnel (jusqu'à 3 pages)",
+    "en": "Professional showcase site (up to 3 pages)",
+    "nl": "Professionele vitrine-site (tot 3 pagina's)"
+  },
+  "index.offer.pro.f2": {
+    "fr": "Design secteur-spécifique",
+    "en": "Sector-specific design",
+    "nl": "Sector-specifiek ontwerp"
+  },
+  "index.offer.pro.f3": {
+    "fr": "Cookie RGPD + mentions légales",
+    "en": "GDPR cookie + legal notices",
+    "nl": "AVG-cookie + juridische vermeldingen"
+  },
+  "index.offer.pro.f4": {
+    "fr": "QR Code inclus",
+    "en": "QR Code included",
+    "nl": "QR-code inbegrepen"
+  },
+  "index.offer.pro.f5": {
+    "fr": "Support 60 jours",
+    "en": "60-day support",
+    "nl": "60 dagen support"
+  },
+  "index.offer.promax.name": {
+    "fr": "Pro Max",
+    "en": "Pro Max",
+    "nl": "Pro Max"
+  },
+  "index.offer.promax.desc": {
+    "fr": "L'expérience ultime. Accès complet aux 21 agents IA + service VIP.",
+    "en": "The ultimate experience. Full access to 21 AI agents + VIP service.",
+    "nl": "De ultieme ervaring. Volledige toegang tot 21 AI-agents + VIP-service."
+  },
+  "index.offer.promax.f1": {
+    "fr": "Site vitrine professionnel (jusqu'à 5 pages)",
+    "en": "Professional showcase site (up to 5 pages)",
+    "nl": "Professionele vitrine-site (tot 5 pagina's)"
+  },
+  "index.offer.promax.f2": {
+    "fr": "Design secteur-spécifique",
+    "en": "Sector-specific design",
+    "nl": "Sector-specifiek ontwerp"
+  },
+  "index.offer.promax.f3": {
+    "fr": "Cookie RGPD + mentions légales",
+    "en": "GDPR cookie + legal notices",
+    "nl": "AVG-cookie + juridische vermeldingen"
+  },
+  "index.offer.promax.f4": {
+    "fr": "QR Code inclus",
+    "en": "QR Code included",
+    "nl": "QR-code inbegrepen"
+  },
+  "index.offer.promax.f5": {
+    "fr": "Réservation Auto inclus",
+    "en": "Auto Booking included",
+    "nl": "Automatische reservering inbegrepen"
+  },
+  "index.offer.promax.f6": {
+    "fr": "Chatbot IA inclus",
+    "en": "AI Chatbot included",
+    "nl": "AI-chatbot inbegrepen"
+  },
+  "index.offer.promax.f7": {
+    "fr": "Support 90 jours",
+    "en": "90-day support",
+    "nl": "90 dagen support"
+  },
+  "index.offer.cta.chooseTeaser": {
+    "fr": "Choisir Teaser →",
+    "en": "Choose Teaser →",
+    "nl": "Kies Teaser →"
+  },
+  "index.offer.cta.chooseProMax": {
+    "fr": "Choisir Pro Max →",
+    "en": "Choose Pro Max →",
+    "nl": "Kies Pro Max →"
+  },
+  "index.offer.guarantee": {
+    "fr": "🔒 Paiement sécurisé · Annulation à tout moment",
+    "en": "🔒 Secure payment · Cancel anytime",
+    "nl": "🔒 Veilig betalen · Op elk moment opzeggen"
+  },
+  "index.options.tag": {
+    "fr": "Options supplémentaires",
+    "en": "Additional options",
+    "nl": "Extra opties"
+  },
+  "index.options.title": {
+    "fr": "Personnalisez votre site",
+    "en": "Customize your site",
+    "nl": "Pas uw site aan"
+  },
+  "index.options.subtitle": {
+    "fr": "Ajoutez ces options à n'importe quel forfait pour booster votre commerce.",
+    "en": "Add these options to any plan to boost your business.",
+    "nl": "Voeg deze opties toe aan elk pakket om uw bedrijf te boosten."
+  },
+  "index.options.qr.title": {
+    "fr": "Menu QR Code",
+    "en": "QR Code Menu",
+    "nl": "QR-code Menu"
+  },
+  "index.options.qr.desc": {
+    "fr": "Un QR code pour votre vitrine. Vos clients scannent et voient vos services, photos et prix directement sur leur téléphone.",
+    "en": "A QR code for your storefront. Your clients scan and see your services, photos and prices directly on their phone.",
+    "nl": "Een QR-code voor uw etalage. Uw klanten scannen en bekijken uw diensten, foto's en prijzen rechtstreeks op hun telefoon."
+  },
+  "index.options.qr.price": {
+    "fr": "+€99",
+    "en": "+€99",
+    "nl": "+€99"
+  },
+  "index.options.qr.oneTime": {
+    "fr": "Paiement unique",
+    "en": "One-time payment",
+    "nl": "Eenmalige betaling"
+  },
+  "index.options.booking.title": {
+    "fr": "Réservation Auto",
+    "en": "Auto Booking",
+    "nl": "Automatische reservering"
+  },
+  "index.options.booking.desc": {
+    "fr": "Vos clients choisissent leur service, date et heure. Confirmation automatique par email et SMS. Vous recevez une notification.",
+    "en": "Your clients choose their service, date and time. Automatic confirmation by email and SMS. You receive a notification.",
+    "nl": "Uw klanten kiezen hun dienst, datum en tijd. Automatische bevestiging per e-mail en SMS. U ontvangt een melding."
+  },
+  "index.options.booking.monthly": {
+    "fr": "Abonnement mensuel",
+    "en": "Monthly subscription",
+    "nl": "Maandelijks abonnement"
+  },
+  "index.options.chatbot.title": {
+    "fr": "Chatbot IA",
+    "en": "AI Chatbot",
+    "nl": "AI-chatbot"
+  },
+  "index.options.chatbot.desc": {
+    "fr": "Un assistant virtuel sur votre site qui répond aux questions de vos clients 24h/24 et 7j/7. Horaires, prix, services — tout est couvert.",
+    "en": "A virtual assistant on your site that answers your clients' questions 24/7. Hours, prices, services — everything is covered.",
+    "nl": "Een virtuele assistent op uw site die de vragen van uw klanten 24/7 beantwoordt. Openingstijden, prijzen, diensten — alles is gedekt."
+  },
+  "index.options.chatbot.monthly": {
+    "fr": "Abonnement mensuel",
+    "en": "Monthly subscription",
+    "nl": "Maandelijks abonnement"
+  },
+  "index.options.tip_html": {
+    "fr": "💡 <strong style=\"color: #fff;\">Conseil :</strong> Commencez avec le forfait Teaser à 497€ et ajoutez les options quand vous êtes prêt. Pas d'engagement, évolution à tout moment.",
+    "en": "💡 <strong style=\"color: #fff;\">Tip:</strong> Start with the Teaser plan at €497 and add options when you're ready. No commitment, upgrade anytime.",
+    "nl": "💡 <strong style=\"color: #fff;\">Tip:</strong> Begin met het Teaser-pakket voor €497 en voeg opties toe wanneer u klaar bent. Geen verplichting, op elk moment upgraden."
+  },
+  "index.concierge.tag": {
+    "fr": "✨ NOUVEAU — AI CONCIERGE",
+    "en": "✨ NEW — AI CONCIERGE",
+    "nl": "✨ NIEUW — AI CONCIERGE"
+  },
+  "index.concierge.title": {
+    "fr": "Votre Partenaire Automatisation IA",
+    "en": "Your AI Automation Partner",
+    "nl": "Uw partner in IA-automatisering"
+  },
+  "index.concierge.subtitle_html": {
+    "fr": "Done-with-you : on construit <strong style=\"color:#00f0ff;\">ensemble</strong> votre automatisation. 2 appels de 45 min/mois + Voxer illimité + Hub Notion personnalisé.",
+    "en": "Done-with-you: we build your automation <strong style=\"color:#00f0ff;\">together</strong>. 2 x 45 min calls/month + unlimited Voxer + custom Notion Hub.",
+    "nl": "Done-with-you: samen bouwen we uw automatisering. 2 calls van 45 min/maand + onbeperkt Voxer + gepersonaliseerde Notion Hub."
+  },
+  "index.concierge.phase1.title": {
+    "fr": "1. Audit",
+    "en": "1. Audit",
+    "nl": "1. Audit"
+  },
+  "index.concierge.phase1.desc": {
+    "fr": "Cartographie de vos processus",
+    "en": "Mapping your processes",
+    "nl": "In kaart brengen van uw processen"
+  },
+  "index.concierge.phase2.title": {
+    "fr": "2. Optimize",
+    "en": "2. Optimize",
+    "nl": "2. Optimize"
+  },
+  "index.concierge.phase2.desc": {
+    "fr": "Suppression des étapes inutiles",
+    "en": "Removing unnecessary steps",
+    "nl": "Verwijderen van onnodige stappen"
+  },
+  "index.concierge.phase3.title": {
+    "fr": "3. Automate",
+    "en": "3. Automate",
+    "nl": "3. Automate"
+  },
+  "index.concierge.phase3.desc": {
+    "fr": "Déploiement IA + Make.com",
+    "en": "AI + Make.com deployment",
+    "nl": "IA + Make.com implementatie"
+  },
+  "index.concierge.cta": {
+    "fr": "Réserver un appel découverte gratuit →",
+    "en": "Book a free discovery call →",
+    "nl": "Boek een gratis kennismakingsgesprek →"
+  },
+  "index.concierge.pricing.starter.name": {
+    "fr": "Starter",
+    "en": "Starter",
+    "nl": "Starter"
+  },
+  "index.concierge.pricing.starter.f1": {
+    "fr": "<strong>2 appels</strong> de 45 min/mois",
+    "en": "<strong>2 calls</strong> x 45 min/month",
+    "nl": "<strong>2 calls</strong> van 45 min/maand"
+  },
+  "index.concierge.pricing.starter.f2": {
+    "fr": "<strong>Voxer illimité</strong> (réponse &lt;12h)",
+    "en": "<strong>Unlimited Voxer</strong> (response &lt;12h)",
+    "nl": "<strong>Onbeperkt Voxer</strong> (reactie &lt;12u)"
+  },
+  "index.concierge.pricing.starter.f3": {
+    "fr": "<strong>Hub Notion</strong> personnalisé",
+    "en": "<strong>Custom Notion Hub</strong>",
+    "nl": "<strong>Gepersonaliseerde Notion Hub</strong>"
+  },
+  "index.concierge.pricing.starter.f4": {
+    "fr": "<strong>2 skills Claude</strong>/mois",
+    "en": "<strong>2 Claude skills</strong>/month",
+    "nl": "<strong>2 Claude skills</strong>/maand"
+  },
+  "index.concierge.pricing.pro.name": {
+    "fr": "Pro",
+    "en": "Pro",
+    "nl": "Pro"
+  },
+  "index.concierge.pricing.pro.popular": {
+    "fr": "POPULAIRE",
+    "en": "POPULAR",
+    "nl": "POPULAIR"
+  },
+  "index.concierge.pricing.pro.f1": {
+    "fr": "Tout <strong>Starter</strong> +",
+    "en": "Everything in <strong>Starter</strong> +",
+    "nl": "Alles van <strong>Starter</strong> +"
+  },
+  "index.concierge.pricing.pro.f2": {
+    "fr": "<strong>Skills Claude illimités</strong>",
+    "en": "<strong>Unlimited Claude skills</strong>",
+    "nl": "<strong>Onbeperkte Claude skills</strong>"
+  },
+  "index.concierge.pricing.pro.f3": {
+    "fr": "<strong>Workflows Make.com</strong>",
+    "en": "<strong>Make.com workflows</strong>",
+    "nl": "<strong>Make.com workflows</strong>"
+  },
+  "index.concierge.pricing.pro.f4": {
+    "fr": "<strong>Support prioritaire</strong> Voxer",
+    "en": "<strong>Priority Voxer support</strong>",
+    "nl": "<strong>Prioritaire Voxer-support</strong>"
+  },
+  "index.concierge.pricing.pro.f5": {
+    "fr": "<strong>Rapports bi-mensuels</strong>",
+    "en": "<strong>Bi-monthly reports</strong>",
+    "nl": "<strong>Tweemaandelijkse rapporten</strong>"
+  },
+  "index.concierge.pricing.elite.name": {
+    "fr": "Elite",
+    "en": "Elite",
+    "nl": "Elite"
+  },
+  "index.concierge.pricing.elite.f1": {
+    "fr": "Tout <strong>Pro</strong> +",
+    "en": "Everything in <strong>Pro</strong> +",
+    "nl": "Alles van <strong>Pro</strong> +"
+  },
+  "index.concierge.pricing.elite.f2": {
+    "fr": "<strong>Accès prioritaire</strong> (4 appels/mois)",
+    "en": "<strong>Priority access</strong> (4 calls/month)",
+    "nl": "<strong>Prioritaire toegang</strong> (4 calls/maand)"
+  },
+  "index.concierge.pricing.elite.f3": {
+    "fr": "<strong>Rapports mensuels</strong> + ROI",
+    "en": "<strong>Monthly reports</strong> + ROI",
+    "nl": "<strong>Maandelijkse rapporten</strong> + ROI"
+  },
+  "index.concierge.pricing.elite.f4": {
+    "fr": "<strong>Stratégie IA trimestrielle</strong>",
+    "en": "<strong>Quarterly IA strategy</strong>",
+    "nl": "<strong>Driemaandelijkse IA-strategie</strong>"
+  },
+  "index.concierge.pricing.elite.f5": {
+    "fr": "<strong>Slack/Discord dédié</strong>",
+    "en": "<strong>Dedicated Slack/Discord</strong>",
+    "nl": "<strong>Toegewijde Slack/Discord</strong>"
+  },
+  "index.concierge.pricing.cta": {
+    "fr": "Commencer",
+    "en": "Get started",
+    "nl": "Aan de slag"
+  },
+  "index.concierge.pricing.perMonth": {
+    "fr": "/mois",
+    "en": "/month",
+    "nl": "/maand"
+  },
+  "index.how.tag": {
+    "fr": "Processus",
+    "en": "Process",
+    "nl": "Proces"
+  },
+  "index.how.title": {
+    "fr": "Comment ça marche ?",
+    "en": "How does it work?",
+    "nl": "Hoe werkt het?"
+  },
+  "index.how.subtitle": {
+    "fr": "De l'inscription à vos premiers résultats en 4 étapes simples.",
+    "en": "From sign-up to your first results in 4 simple steps.",
+    "nl": "Van aanmelding tot uw eerste resultaten in 4 eenvoudige stappen."
+  },
+  "index.how.step1.title": {
+    "fr": "Réservez votre package",
+    "en": "Book your package",
+    "nl": "Boek uw pakket"
+  },
+  "index.how.step1.desc": {
+    "fr": "Choisissez le Teaser Package à 497€ et finalisez votre paiement sécurisé en 2 minutes.",
+    "en": "Choose the Teaser Package at €497 and finalize your secure payment in 2 minutes.",
+    "nl": "Kies het Teaser Pakket voor €497 en voltooi uw veilige betaling in 2 minuten."
+  },
+  "index.how.step2.title": {
+    "fr": "Onboarding IA",
+    "en": "AI Onboarding",
+    "nl": "AI Onboarding"
+  },
+  "index.how.step2.desc": {
+    "fr": "Nos agents analysent votre propriété, votre marché local, et votre concurrence.",
+    "en": "Our agents analyze your property, your local market, and your competition.",
+    "nl": "Onze agents analyseren uw eigendom, uw lokale markt en uw concurrentie."
+  },
+  "index.how.step3.title": {
+    "fr": "Déploiement auto",
+    "en": "Auto deployment",
+    "nl": "Automatische implementatie"
+  },
+  "index.how.step3.desc": {
+    "fr": "Vos agents IA se mettent au travail : contenu, vidéos, prospection — 24/7.",
+    "en": "Your AI agents get to work: content, videos, prospecting — 24/7.",
+    "nl": "Uw AI-agents gaan aan het werk: content, video's, prospectie — 24/7."
+  },
+  "index.how.step4.title": {
+    "fr": "Résultats mesurés",
+    "en": "Measured results",
+    "nl": "Gemeten resultaten"
+  },
+  "index.how.step4.desc": {
+    "fr": "Suivez vos performances en temps réel sur votre dashboard personnalisé.",
+    "en": "Track your performance in real-time on your personalized dashboard.",
+    "nl": "Volg uw prestaties in realtime op uw gepersonaliseerde dashboard."
+  },
+  "index.testimonials.tag": {
+    "fr": "Ce qu'on en dit",
+    "en": "What they say",
+    "nl": "Wat ze zeggen"
+  },
+  "index.testimonials.title": {
+    "fr": "La plateforme choisie par les professionnels de la location",
+    "en": "The platform chosen by rental professionals",
+    "nl": "Het platform gekozen door verhuurprofessionals"
+  },
+  "index.testimonials.subtitle": {
+    "fr": "Des outils IA conçus pour les gestionnaires de biens immobiliers.",
+    "en": "AI tools designed for property managers.",
+    "nl": "AI-tools ontworpen voor vastgoedbeheerders."
+  },
+  "index.testimonials.t1.text": {
+    "fr": "\"Les agents IA de JCODE automatisent les tâches répétitives et nous permettent de nous concentrer sur l'essentiel : l'expérience de nos voyageurs.\"",
+    "en": "\"JCODE's AI agents automate repetitive tasks and allow us to focus on what matters: the guest experience.\"",
+    "nl": "\"De AI-agents van JCODE automatiseren repetitieve taken en stellen ons in staat om ons te concentreren op wat belangrijk is: de gastervaring.\""
+  },
+  "index.testimonials.t1.name": {
+    "fr": "Propriétaire en location courte durée",
+    "en": "Short-term rental owner",
+    "nl": "Eigenaar van korte termijn verhuur"
+  },
+  "index.testimonials.t1.role": {
+    "fr": "Secteur résidentiel",
+    "en": "Residential sector",
+    "nl": "Residentiële sector"
+  },
+  "index.testimonials.t2.text": {
+    "fr": "\"La qualité des vidéos et la précision des réponses aux voyageurs font toute la différence. Un gain de temps considérable au quotidien.\"",
+    "en": "\"The quality of the videos and the accuracy of guest responses make all the difference. A considerable time saving on a daily basis.\"",
+    "nl": "\"De kwaliteit van de video's en de nauwkeurigheid van gastenantwoorden maken het verschil. Aanzienlijke tijdbesparing op dagelijkse basis.\""
+  },
+  "index.testimonials.t2.name": {
+    "fr": "Gestionnaire de biens multiples",
+    "en": "Multi-property manager",
+    "nl": "Beheerder van meerdere eigendommen"
+  },
+  "index.testimonials.t2.role": {
+    "fr": "Secteur de la gestion immobilière",
+    "en": "Property management sector",
+    "nl": "Vastgoedbeheersector"
+  },
+  "index.testimonials.t3.text": {
+    "fr": "\"L'approche automatisée de la prospection et la personnalisation des communications nous aident à développer notre activité de conciergerie.\"",
+    "en": "\"The automated approach to prospecting and the personalization of communications help us grow our concierge business.\"",
+    "nl": "\"De geautomatiseerde aanpak van prospectie en de personalisatie van communicatie helpt ons ons conciërgediensten uit te breiden.\""
+  },
+  "index.testimonials.t3.name": {
+    "fr": "Service de conciergerie professionnelle",
+    "en": "Professional concierge service",
+    "nl": "Professionele conciërgedienst"
+  },
+  "index.testimonials.t3.role": {
+    "fr": "Secteur de l'hospitalité",
+    "en": "Hospitality sector",
+    "nl": "Horecasector"
+  },
+  "index.contact.tag": {
+    "fr": "Contact",
+    "en": "Contact",
+    "nl": "Contact"
+  },
+  "index.contact.title": {
+    "fr": "Parlons de votre projet",
+    "en": "Let's talk about your project",
+    "nl": "Laten we over uw project praten"
+  },
+  "index.contact.subtitle": {
+    "fr": "Une question ? Un projet spécifique ? Contactez-nous directement.",
+    "en": "A question? A specific project? Contact us directly.",
+    "nl": "Een vraag? Een specifiek project? Neem rechtstreeks contact met ons op."
+  },
+  "index.contact.heading": {
+    "fr": "Discutons ensemble",
+    "en": "Let's chat",
+    "nl": "Laten we praten"
+  },
+  "index.contact.desc": {
+    "fr": "Que vous soyez propriétaire d'une seule location ou d'un portefeuille de biens, nous avons la solution IA adaptée à vos besoins.",
+    "en": "Whether you own a single rental or a portfolio of properties, we have the AI solution tailored to your needs.",
+    "nl": "Of u nu één verhuur of een portfolio van eigendommen bezit, wij hebben de AI-oplossing op maat van uw behoeften."
+  },
+  "index.contact.emailLabel": {
+    "fr": "Email",
+    "en": "Email",
+    "nl": "E-mail"
+  },
+  "index.contact.bookingLabel": {
+    "fr": "Réservation rapide",
+    "en": "Quick booking",
+    "nl": "Snelle reservering"
+  },
+  "index.contact.bookingLink": {
+    "fr": "Voir tous les packages",
+    "en": "View all packages",
+    "nl": "Bekijk alle pakketten"
+  },
+  "index.contact.locationLabel": {
+    "fr": "Basé en",
+    "en": "Based in",
+    "nl": "Gevestigd in"
+  },
+  "index.contact.locationValue": {
+    "fr": "Belgique — Service Europe",
+    "en": "Belgium — Europe service",
+    "nl": "België — Service Europa"
+  },
+  "index.contact.form.name": {
+    "fr": "Nom complet",
+    "en": "Full name",
+    "nl": "Volledige naam"
+  },
+  "index.contact.form.namePlaceholder": {
+    "fr": "Votre nom",
+    "en": "Your name",
+    "nl": "Uw naam"
+  },
+  "index.contact.form.email": {
+    "fr": "Email",
+    "en": "Email",
+    "nl": "E-mail"
+  },
+  "index.contact.form.emailPlaceholder": {
+    "fr": "votre@email.com",
+    "en": "your@email.com",
+    "nl": "uw@email.com"
+  },
+  "index.contact.form.subject": {
+    "fr": "Sujet",
+    "en": "Subject",
+    "nl": "Onderwerp"
+  },
+  "index.contact.form.subjectTeaser": {
+    "fr": "Teaser — 497€ (paiement unique)",
+    "en": "Teaser — €497 (one-time payment)",
+    "nl": "Teaser — €497 (eenmalige betaling)"
+  },
+  "index.contact.form.subjectPro": {
+    "fr": "Pro — 999€/mois",
+    "en": "Pro — €999/month",
+    "nl": "Pro — €999/maand"
+  },
+  "index.contact.form.subjectProMax": {
+    "fr": "Pro Max — 1,599€/mois",
+    "en": "Pro Max — €1,599/month",
+    "nl": "Pro Max — €1.599/maand"
+  },
+  "index.contact.form.subjectCustom": {
+    "fr": "Projet sur mesure",
+    "en": "Custom project",
+    "nl": "Project op maat"
+  },
+  "index.contact.form.subjectPartnership": {
+    "fr": "Partenariat",
+    "en": "Partnership",
+    "nl": "Partnerschap"
+  },
+  "index.contact.form.subjectQuestion": {
+    "fr": "Question générale",
+    "en": "General question",
+    "nl": "Algemene vraag"
+  },
+  "index.contact.form.message": {
+    "fr": "Message",
+    "en": "Message",
+    "nl": "Bericht"
+  },
+  "index.contact.form.messagePlaceholder": {
+    "fr": "Décrivez votre projet...",
+    "en": "Describe your project...",
+    "nl": "Beschrijf uw project..."
+  },
+  "index.contact.form.submit": {
+    "fr": "Envoyer le message →",
+    "en": "Send message →",
+    "nl": "Verstuur bericht →"
+  },
+  "index.cta.title": {
+    "fr": "Prêt à automatiser votre Business ?",
+    "en": "Ready to automate your Business?",
+    "nl": "Klaar om uw Business te automatiseren?"
+  },
+  "index.cta.subtitle": {
+    "fr": "Rejoignez les propriétaires intelligents qui laissent l'IA faire le travail pendant qu'ils profitent de la vie.",
+    "en": "Join the smart owners who let AI do the work while they enjoy life.",
+    "nl": "Sluit u aan bij de slimme eigenaren die AI het werk laten doen terwijl ze van het leven genieten."
+  },
+  "index.cta.button": {
+    "fr": "Choisir mon package →",
+    "en": "Choose my package →",
+    "nl": "Kies mijn pakket →"
+  },
+  "index.scrollToTop": {
+    "fr": "Retour en haut",
+    "en": "Back to top",
+    "nl": "Terug naar boven"
+  },
+  "common.cookie.title": {
+    "fr": "🍪 Nous utilisons des cookies",
+    "en": "🍪 We use cookies",
+    "nl": "🍪 Wij gebruiken cookies"
+  },
+  "common.cookie.customize": {
+    "fr": "Personnaliser",
+    "en": "Customize",
+    "nl": "Aanpassen"
+  },
+  "common.cookie.customizeTitle": {
+    "fr": "Personnaliser les cookies",
+    "en": "Customize cookies",
+    "nl": "Cookies aanpassen"
+  },
+  "common.cookie.cancel": {
+    "fr": "Annuler",
+    "en": "Cancel",
+    "nl": "Annuleren"
+  },
+  "common.cookie.save": {
+    "fr": "Enregistrer mes choix",
+    "en": "Save my choices",
+    "nl": "Mijn keuzes opslaan"
+  },
+  "common.nav.services": {
+    "fr": "Services",
+    "en": "Services",
+    "nl": "Diensten"
+  },
+  "common.nav.offer": {
+    "fr": "Offre",
+    "en": "Offer",
+    "nl": "Aanbod"
+  },
+  "common.nav.process": {
+    "fr": "Processus",
+    "en": "Process",
+    "nl": "Proces"
+  },
+  "common.nav.results": {
+    "fr": "Résultats",
+    "en": "Results",
+    "nl": "Resultaten"
+  },
+  "common.nav.contact": {
+    "fr": "Contact",
+    "en": "Contact",
+    "nl": "Contact"
+  },
+  "common.nav.clientArea": {
+    "fr": "Espace Client",
+    "en": "Client Area",
+    "nl": "Klantenportaal"
+  },
+  "common.nav.viewOffers": {
+    "fr": "Voir les offres",
+    "en": "View offers",
+    "nl": "Bekijk aanbiedingen"
+  },
+  "common.footer.brandDesc": {
+    "fr": "L'agence marketing Business 100% automatisée par IA. 21 agents intelligents travaillent pour vous 24/7.",
+    "en": "The Business marketing agency 100% automated by AI. 21 smart agents work for you 24/7.",
+    "nl": "Het Business-marketingbureau 100% geautomatiseerd door AI. 21 slimme agents werken 24/7 voor u."
+  },
+  "common.footer.services": {
+    "fr": "Services",
+    "en": "Services",
+    "nl": "Diensten"
+  },
+  "common.footer.company": {
+    "fr": "Entreprise",
+    "en": "Company",
+    "nl": "Bedrijf"
+  },
+  "common.footer.about": {
+    "fr": "À propos",
+    "en": "About",
+    "nl": "Over ons"
+  },
+  "common.footer.blog": {
+    "fr": "Blog",
+    "en": "Blog",
+    "nl": "Blog"
+  },
+  "common.footer.careers": {
+    "fr": "Carrières",
+    "en": "Careers",
+    "nl": "Carrières"
+  },
+  "common.footer.tos": {
+    "fr": "CGV",
+    "en": "T&Cs",
+    "nl": "AV"
+  },
+  "common.footer.legalNotice": {
+    "fr": "Mentions légales",
+    "en": "Legal notices",
+    "nl": "Juridische vermeldingen"
+  },
+  "common.footer.privacyPolicy": {
+    "fr": "Politique de confidentialité",
+    "en": "Privacy policy",
+    "nl": "Privacybeleid"
+  },
+  "concierge.meta.title": {
+    "fr": "AI Concierge — JCODE Agency | Automatisation IA pour commerces locaux",
+    "en": "AI Concierge — JCODE Agency | AI Automation for Local Businesses",
+    "nl": "AI Concierge — JCODE Agency | IA-automatisering voor lokale bedrijven"
+  },
+  "concierge.meta.description": {
+    "fr": "Service AI Concierge done-with-you : 2 appels/mois, Voxer illimité, Hub Notion. Automatisez votre commerce avec l'IA.",
+    "en": "AI Concierge done-with-you service: 2 calls/month, unlimited Voxer, Notion Hub. Automate your business with AI.",
+    "nl": "AI Concierge done-with-you service: 2 calls/maand, onbeperkt Voxer, Notion Hub. Automatiseer uw bedrijf met AI."
+  },
+  "intake.meta.title": {
+    "fr": "Formulaire Intake — AI Concierge | JCODE Agency",
+    "en": "Intake Form — AI Concierge | JCODE Agency",
+    "nl": "Intakeformulier — AI Concierge | JCODE Agency"
+  },
+  "aoa.meta.title": {
+    "fr": "AOA Framework — JCODE Agency",
+    "en": "AOA Framework — JCODE Agency",
+    "nl": "AOA Framework — JCODE Agency"
+  },
+  "hub.meta.title": {
+    "fr": "Hub Client — JCODE Agency",
+    "en": "Client Hub — JCODE Agency",
+    "nl": "Klantenhub — JCODE Agency"
+  },
+  "login.meta.title": {
+    "fr": "Espace Client — JCODE Agency",
+    "en": "Client Area — JCODE Agency",
+    "nl": "Klantenportaal — JCODE Agency"
+  },
+  "merci.meta.title": {
+    "fr": "Merci — JCODE Agency",
+    "en": "Thank You — JCODE Agency",
+    "nl": "Bedankt — JCODE Agency"
+  },
+  "privacy.meta.title": {
+    "fr": "Politique de Confidentialité — JCODE Agency",
+    "en": "Privacy Policy — JCODE Agency",
+    "nl": "Privacybeleid — JCODE Agency"
+  },
+  "privacy_short.meta.title": {
+    "fr": "Politique de Confidentialité — JCODE Agency",
+    "en": "Privacy Policy — JCODE Agency",
+    "nl": "Privacybeleid — JCODE Agency"
+  },
+  "terms.meta.title": {
+    "fr": "Mentions Légales & CGV — JCODE Agency",
+    "en": "Legal Notices & Terms — JCODE Agency",
+    "nl": "Juridische Vermeldingen & AV — JCODE Agency"
+  },
+  "legal.meta.title": {
+    "fr": "Mentions Légales — JCODE Agency",
+    "en": "Legal Notices — JCODE Agency",
+    "nl": "Juridische Vermeldingen — JCODE Agency"
+  },
+  "common.cookie.necessary": {
+    "fr": "<strong style=\"color:white;\">Nécessaires</strong> — Requis pour le fonctionnement du site",
+    "en": "<strong style=\"color:white;\">Necessary</strong> — Required for site operation",
+    "nl": "<strong style=\"color:white;\">Noodzakelijk</strong> — Vereist voor de werking van de site"
+  },
+  "common.cookie.analytics": {
+    "fr": "<strong style=\"color:white;\">Analytiques</strong> — Google Analytics, Meta Pixel",
+    "en": "<strong style=\"color:white;\">Analytics</strong> — Google Analytics, Meta Pixel",
+    "nl": "<strong style=\"color:white;\">Analytisch</strong> — Google Analytics, Meta Pixel"
+  },
+  "common.cookie.marketing": {
+    "fr": "<strong style=\"color:white;\">Marketing</strong> — Publicités ciblées et remarketing",
+    "en": "<strong style=\"color:white;\">Marketing</strong> — Targeted ads and remarketing",
+    "nl": "<strong style=\"color:white;\">Marketing</strong> — Gerichte advertenties en remarketing"
+  },
+  "index.options.booking.price": {
+    "fr": "+€149<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/mois</span>",
+    "en": "+€149<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/month</span>",
+    "nl": "+€149<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/maand</span>"
+  },
+  "index.options.chatbot.price": {
+    "fr": "+€99<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/mois</span>",
+    "en": "+€99<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/month</span>",
+    "nl": "+€99<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/maand</span>"
+  },
+  "privacy.s5_stripe": {
+    "fr": "<strong>Stripe</strong> (paiement) — <a href=\"https://stripe.com/privacy\">stripe.com/privacy</a>",
+    "en": "<strong>Stripe</strong> (payments) — <a href=\"https://stripe.com/privacy\">stripe.com/privacy</a>",
+    "nl": "<strong>Stripe</strong> (betalingen) — <a href=\"https://stripe.com/privacy\">stripe.com/privacy</a>"
+  },
+  "privacy.s5_github": {
+    "fr": "<strong>GitHub</strong> (hébergement site) — <a href=\"https://github.com/privacy\">github.com/privacy</a>",
+    "en": "<strong>GitHub</strong> (site hosting) — <a href=\"https://github.com/privacy\">github.com/privacy</a>",
+    "nl": "<strong>GitHub</strong> (sitehosting) — <a href=\"https://github.com/privacy\">github.com/privacy</a>"
+  },
+  "privacy.s5_vercel": {
+    "fr": "<strong>Vercel</strong> (hébergement sites clients) — <a href=\"https://vercel.com/legal/privacy-policy\">vercel.com/legal/privacy-policy</a>",
+    "en": "<strong>Vercel</strong> (client site hosting) — <a href=\"https://vercel.com/legal/privacy-policy\">vercel.com/legal/privacy-policy</a>",
+    "nl": "<strong>Vercel</strong> (hosting klantsites) — <a href=\"https://vercel.com/legal/privacy-policy\">vercel.com/legal/privacy-policy</a>"
+  },
+  "privacy.s5_make": {
+    "fr": "<strong>Make.com</strong> (automatisation) — <a href=\"https://www.make.com/en/privacy-policy\">make.com/privacy</a>",
+    "en": "<strong>Make.com</strong> (automation) — <a href=\"https://www.make.com/en/privacy-policy\">make.com/privacy</a>",
+    "nl": "<strong>Make.com</strong> (automatisering) — <a href=\"https://www.make.com/en/privacy-policy\">make.com/privacy</a>"
+  },
+  "privacy.s5_mistral": {
+    "fr": "<strong>Mistral AI</strong> (génération de contenu) — <a href=\"https://mistral.ai/privacy\">mistral.ai/privacy</a>",
+    "en": "<strong>Mistral AI</strong> (content generation) — <a href=\"https://mistral.ai/privacy\">mistral.ai/privacy</a>",
+    "nl": "<strong>Mistral AI</strong> (contentgeneratie) — <a href=\"https://mistral.ai/privacy\">mistral.ai/privacy</a>"
+  },
+  "privacy.s5_google": {
+    "fr": "<strong>Gmail / Google</strong> (emails) — <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>",
+    "en": "<strong>Gmail / Google</strong> (emails) — <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>",
+    "nl": "<strong>Gmail / Google</strong> (e-mails) — <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>"
+  }
+}

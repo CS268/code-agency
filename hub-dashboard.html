@@ -4,7 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hub Client — JCODE Agency</title>
+<script src="i18n/i18n.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.lang-switcher{position:fixed;top:50px;left:250px;z-index:99998;display:flex;gap:6px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:50px;padding:4px}
+.lang-btn{padding:0.4rem 1rem;border-radius:50px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#64748b;font-weight:600;font-size:0.8rem;text-decoration:none;transition:all 0.3s}
+.lang-btn:hover{background:rgba(0,240,255,0.1);color:#00f0ff}
+@media(max-width:768px){.lang-switcher{left:10px;top:50px}}
+</style>
 <style>
 :root{--bg:#0a0a0a;--surface:#111318;--glass:rgba(255,255,255,0.03);--glass-border:rgba(255,255,255,0.06);--primary:#00f0ff;--accent:#ff006e;--purple:#a855f7;--green:#22c55e;--text:#fff;--muted:#64748b}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -75,44 +82,49 @@ tr:hover td{background:rgba(0,240,255,0.02)}
 </style>
 </head>
 <body>
+<div class="lang-switcher">
+<a href="#" class="lang-btn" data-lang="fr" onclick="setLanguage('fr'); return false;">FR</a>
+<a href="#" class="lang-btn" data-lang="nl" onclick="setLanguage('nl'); return false;">NL</a>
+<a href="#" class="lang-btn" data-lang="en" onclick="setLanguage('en'); return false;">EN</a>
+</div>
 <div style="position:fixed;top:0;left:0;right:0;z-index:99999;background:#dc2626;color:white;text-align:center;padding:12px;font-family:sans-serif;font-size:14px;font-weight:bold;">
-⚠️ PAGE DÉMO — Authentification NON sécurisée (localStorage). NE PAS utiliser en production.
+<span data-i18n="hub.demo_warning">⚠️ PAGE DÉMO — Authentification NON sécurisée (localStorage). NE PAS utiliser en production.</span>
 </div>
 <div style="height:44px;"></div>
 
 <aside class="sidebar">
 <div class="logo">J<span>CODE</span> Hub</div>
 <nav>
-<a href="#" class="active"><span class="icon">🏠</span> Accueil</a>
-<a href="#appels"><span class="icon">📞</span> Appels</a>
-<a href="#deliverables"><span class="icon">📦</span> Deliverables</a>
-<a href="#roi"><span class="icon">📈</span> ROI</a>
-<a href="#actions"><span class="icon">✅</span> Actions</a>
-<a href="espace-client.html"><span class="icon">⚙️</span> Déconnexion</a>
+<a href="#" class="active"><span class="icon">🏠</span> <span data-i18n="hub.nav_home">Accueil</span></a>
+<a href="#appels"><span class="icon">📞</span> <span data-i18n="hub.nav_calls">Appels</span></a>
+<a href="#deliverables"><span class="icon">📦</span> <span data-i18n="hub.nav_deliverables">Deliverables</span></a>
+<a href="#roi"><span class="icon">📈</span> <span data-i18n="hub.nav_roi">ROI</span></a>
+<a href="#actions"><span class="icon">✅</span> <span data-i18n="hub.nav_actions">Actions</span></a>
+<a href="espace-client.html"><span class="icon">⚙️</span> <span data-i18n="hub.nav_logout">Déconnexion</span></a>
 </nav>
 <div class="user">
 <strong id="userName">Client Demo</strong>
-Formule Pro — 1 500€/mois
+<span data-i18n="hub.user_plan">Formule Pro — 1 500€/mois</span>
 </div>
 </aside>
 
 <main class="main">
 <div class="header">
-<h1>Bonjour, <span id="greetName">Client</span> 👋</h1>
-<div class="next-call">📅 Prochain appel : <strong>28 juillet 2026 — 14h00</strong></div>
+<h1><span data-i18n="hub.greeting">Bonjour,</span> <span id="greetName">Client</span> 👋</h1>
+<div class="next-call" data-i18n="hub.next_call">📅 Prochain appel : <strong>28 juillet 2026 — 14h00</strong></div>
 </div>
 
 <!-- STATS -->
 <div class="stats">
-<div class="stat-card"><div class="label">Appels ce mois</div><div class="value cyan">2</div></div>
-<div class="stat-card"><div class="label">Skills créés</div><div class="value purple">7</div></div>
-<div class="stat-card"><div class="label">Heures économisées</div><div class="value green">12h</div></div>
-<div class="stat-card"><div class="label">ROI estimé</div><div class="value pink">+600€</div></div>
+<div class="stat-card"><div class="label" data-i18n="hub.stat_calls">Appels ce mois</div><div class="value cyan">2</div></div>
+<div class="stat-card"><div class="label" data-i18n="hub.stat_skills">Skills créés</div><div class="value purple">7</div></div>
+<div class="stat-card"><div class="label" data-i18n="hub.stat_hours">Heures économisées</div><div class="value green">12h</div></div>
+<div class="stat-card"><div class="label" data-i18n="hub.stat_roi">ROI estimé</div><div class="value pink">+600€</div></div>
 </div>
 
 <!-- TIMELINE -->
 <div id="appels">
-<div class="section-title">📞 Timeline des appels</div>
+<div class="section-title" data-i18n="hub.timeline_title">📞 Timeline des appels</div>
 <div class="timeline">
 <div class="timeline-item"><div class="date">23 Jul</div><div class="info"><h4>Session #4 — Automatisation relances</h4><p>Workflow Make.com relances clients + skill Claude email</p></div><div class="status status-done">Terminé</div></div>
 <div class="timeline-item"><div class="date">09 Jul</div><div class="info"><h4>Session #3 — Optimisation réservations</h4><p>Suppression étapes manuelles, intégration Calendly</p></div><div class="status status-done">Terminé</div></div>
@@ -122,7 +134,7 @@ Formule Pro — 1 500€/mois
 
 <!-- ACTION ITEMS -->
 <div id="actions">
-<div class="section-title">✅ Action Items</div>
+<div class="section-title" data-i18n="hub.actions_title">✅ Action Items</div>
 <div class="actions">
 <div class="action-item"><input type="checkbox"><span>Envoyer 5 photos du salon pour le site</span><span class="owner">Client</span><span class="deadline">25 Jul</span></div>
 <div class="action-item"><input type="checkbox"><span>Configurer webhook Make.com pour relances</span><span class="owner">JCODE</span><span class="deadline">26 Jul</span></div>
@@ -133,25 +145,25 @@ Formule Pro — 1 500€/mois
 
 <!-- ROI -->
 <div id="roi">
-<div class="section-title">📈 ROI Tracker</div>
+<div class="section-title" data-i18n="hub.roi_title">📈 ROI Tracker</div>
 <div class="roi-card">
-<div class="roi-row"><span>Temps économisé / mois</span><span class="val">12 heures</span></div>
+<div class="roi-row"><span data-i18n="hub.roi_time_saved">Temps économisé / mois</span><span class="val">12 heures</span></div>
 <div class="roi-bar"><div class="fill" style="width:60%"></div></div>
-<div class="roi-row"><span>Taux horaire estimé</span><span class="val">50€/h</span></div>
+<div class="roi-row"><span data-i18n="hub.roi_rate">Taux horaire estimé</span><span class="val">50€/h</span></div>
 <div class="roi-bar"><div class="fill" style="width:45%"></div></div>
-<div class="roi-row"><span>ROI mensuel</span><span class="val" style="color:var(--green)">+600€ (12h × 50€)</span></div>
+<div class="roi-row"><span data-i18n="hub.roi_monthly">ROI mensuel</span><span class="val" style="color:var(--green)">+600€ (12h × 50€)</span></div>
 <div class="roi-bar"><div class="fill" style="width:40%;background:linear-gradient(90deg,var(--green),var(--primary))"></div></div>
-<div class="roi-row"><span>Investissement</span><span class="val">1 500€/mois</span></div>
-<div class="roi-row" style="margin-top:16px;padding-top:16px;border-top:1px solid var(--glass-border)"><span><strong>ROI cumulé (3 mois)</strong></span><span class="val" style="color:var(--green);font-size:1.2rem">+1 800€</span></div>
+<div class="roi-row"><span data-i18n="hub.roi_investment">Investissement</span><span class="val">1 500€/mois</span></div>
+<div class="roi-row" style="margin-top:16px;padding-top:16px;border-top:1px solid var(--glass-border)"><span><strong data-i18n="hub.roi_cumulative">ROI cumulé (3 mois)</strong></span><span class="val" style="color:var(--green);font-size:1.2rem">+1 800€</span></div>
 </div>
 </div>
 
 <!-- DELIVERABLES -->
 <div id="deliverables">
-<div class="section-title">📦 Deliverables</div>
+<div class="section-title" data-i18n="hub.deliverables_title">📦 Deliverables</div>
 <div class="table-wrap">
 <table>
-<thead><tr><th>Nom</th><th>Date</th><th>Type</th><th>Impact</th></tr></thead>
+<thead><tr><th data-i18n="hub.th_name">Nom</th><th data-i18n="hub.th_date">Date</th><th data-i18n="hub.th_type">Type</th><th data-i18n="hub.th_impact">Impact</th></tr></thead>
 <tbody>
 <tr><td>Skill "Réponse avis Google"</td><td>23 Jul</td><td>Claude Skill</td><td>2h/semaine</td></tr>
 <tr><td>Workflow relances clients</td><td>23 Jul</td><td>Make.com</td><td>3h/semaine</td></tr>

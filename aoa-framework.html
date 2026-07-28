@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AOA Framework — JCODE Agency</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="i18n/i18n.js"></script>
 <style>
 :root{--bg:#0a0a0a;--glass:rgba(255,255,255,0.03);--glass-border:rgba(255,255,255,0.06);--primary:#00f0ff;--accent:#ff006e;--purple:#a855f7;--green:#22c55e;--text:#fff;--muted:#94a3b8}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -39,115 +40,127 @@ h1{text-align:center;font-size:2rem;font-weight:800;margin-bottom:8px}
 .score-bar{flex:1;height:10px;background:rgba(255,255,255,0.05);border-radius:5px;overflow:hidden}
 .score-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--primary));border-radius:5px;transition:width .5s}
 .score-val{font-size:1.5rem;font-weight:800;color:var(--primary)}
+.nav-bar{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:rgba(10,10,10,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border)}
+.nav-bar .logo{font-weight:800;font-size:1.2rem;color:var(--text)}
+.nav-bar .logo span{color:var(--primary)}
+.lang-switcher{display:flex;gap:8px;align-items:center}
 @media(max-width:600px){.tabs{flex-direction:column}.tab{padding:12px}}
 </style>
 </head>
 <body>
+<nav class="nav-bar">
+<a href="index.html" class="logo">J<span>CODE</span> Agency</a>
+<div class="lang-switcher">
+  <a href="#" class="lang-btn" data-lang="fr" onclick="setLanguage('fr'); return false;">FR</a>
+  <a href="#" class="lang-btn" data-lang="nl" onclick="setLanguage('nl'); return false;">NL</a>
+  <a href="#" class="lang-btn" data-lang="en" onclick="setLanguage('en'); return false;">EN</a>
+</div>
+</nav>
 <div class="container">
-<h1>🎯 Framework A.O.A.</h1>
-<p class="sub">Audit → Optimize → Automate | Template de session JCODE AI Concierge</p>
+<h1 data-i18n="aoa.title">🎯 Framework A.O.A.</h1>
+<p class="sub" data-i18n="aoa.subtitle">Audit → Optimize → Automate | Template de session JCODE AI Concierge</p>
 
 <div class="tabs">
-<div class="tab active" onclick="switchTab(0)">🔍 AUDIT</div>
-<div class="tab" onclick="switchTab(1)">⚡ OPTIMIZE</div>
-<div class="tab" onclick="switchTab(2)">🤖 AUTOMATE</div>
+<div class="tab active" onclick="switchTab(0)" data-i18n="aoa.tab.audit">🔍 AUDIT</div>
+<div class="tab" onclick="switchTab(1)" data-i18n="aoa.tab.optimize">⚡ OPTIMIZE</div>
+<div class="tab" onclick="switchTab(2)" data-i18n="aoa.tab.automate">🤖 AUTOMATE</div>
 </div>
 
 <!-- AUDIT -->
 <div class="tab-content active" id="tab0">
 <div class="card">
-<h3>�� Cartographie des processus</h3>
+<h3 data-i18n="aoa.audit.mapping.title">🗺️ Cartographie des processus</h3>
 <ul class="checklist">
-<li><input type="checkbox"><span>Quelles tâches prenez-vous en charge chaque jour ? (liste complète)</span></li>
-<li><input type="checkbox"><span>Combien de temps passez-vous sur chaque tâche ?</span></li>
-<li><input type="checkbox"><span>Quelles tâches sont répétitives et prévisibles ?</span></li>
-<li><input type="checkbox"><span>Quelles tâches nécessitent un jugement humain ?</span></li>
-<li><input type="checkbox"><span>Quels outils utilisez-vous actuellement ?</span></li>
-<li><input type="checkbox"><span>Où sont les goulots d'étranglement ?</span></li>
-<li><input type="checkbox"><span>Quelles erreurs reviennent souvent ?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q1">Quelles tâches prenez-vous en charge chaque jour ? (liste complète)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q2">Combien de temps passez-vous sur chaque tâche ?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q3">Quelles tâches sont répétitives et prévisibles ?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q4">Quelles tâches nécessitent un jugement humain ?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q5">Quels outils utilisez-vous actuellement ?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q6">Où sont les goulots d'étranglement ?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q7">Quelles erreurs reviennent souvent ?</span></li>
 </ul>
 </div>
 <div class="card">
-<h3>📊 Score IA Readiness</h3>
+<h3 data-i18n="aoa.audit.score.title">📊 Score IA Readiness</h3>
 <div class="score">
 <div class="score-bar"><div class="score-fill" style="width:35%"></div></div>
 <div class="score-val">3.5/10</div>
 </div>
-<p style="font-size:13px;color:var(--muted);margin-top:8px;">Basé sur : digitalisation actuelle, volume de tâches répétitives, données disponibles, volonté d'adoption.</p>
+<p style="font-size:13px;color:var(--muted);margin-top:8px;" data-i18n="aoa.audit.score.based">Basé sur : digitalisation actuelle, volume de tâches répétitives, données disponibles, volonté d'adoption.</p>
 </div>
 <div class="card">
-<h3>📝 Notes de session</h3>
-<textarea class="notes" placeholder="Notes pendant l'appel Audit..."></textarea>
+<h3 data-i18n="aoa.audit.notes.title">📝 Notes de session</h3>
+<textarea class="notes" placeholder="Notes pendant l'appel Audit..." data-i18n-attr="placeholder:aoa.audit.notes.placeholder"></textarea>
 </div>
-<div class="quick-win"><span class="icon">💡</span><span><strong>Quick Win identifié :</strong> Automatiser les rappels RDV par SMS/email (gain estimé : 3h/semaine)</span></div>
+<div class="quick-win"><span class="icon">💡</span><span data-i18n-html="aoa.audit.quickwin"><strong>Quick Win identifié :</strong> Automatiser les rappels RDV par SMS/email (gain estimé : 3h/semaine)</span></div>
 </div>
 
 <!-- OPTIMIZE -->
 <div class="tab-content" id="tab1">
 <div class="card">
-<h3>🔄 Flux optimisé</h3>
+<h3 data-i18n="aoa.optimize.flow.title">🔄 Flux optimisé</h3>
 <ul class="checklist">
-<li><input type="checkbox"><span>Supprimer les étapes redondantes identifiées</span></li>
-<li><input type="checkbox"><span>Standardiser les templates (emails, factures, réponses)</span></li>
-<li><input type="checkbox"><span>Regrouper les tâches similaires (batching)</span></li>
-<li><input type="checkbox"><span>Définir les triggers automatiques (quand X → alors Y)</span></li>
-<li><input type="checkbox"><span>Documenter le flux cible (avant/après)</span></li>
-<li><input type="checkbox"><span>Valider avec le client que le flux a du sens</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q1">Supprimer les étapes redondantes identifiées</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q2">Standardiser les templates (emails, factures, réponses)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q3">Regrouper les tâches similaires (batching)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q4">Définir les triggers automatiques (quand X → alors Y)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q5">Documenter le flux cible (avant/après)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q6">Valider avec le client que le flux a du sens</span></li>
 </ul>
 </div>
 <div class="card">
-<h3>🗑️ Étapes supprimées</h3>
+<h3 data-i18n="aoa.optimize.removed.title">🗑️ Étapes supprimées</h3>
 <ul class="checklist">
-<li><input type="checkbox"><span>Saisie manuelle des RDV → Calendly auto</span></li>
-<li><input type="checkbox"><span>Réponse manuelle aux avis → Template + IA</span></li>
-<li><input type="checkbox"><span>Relance manuelle impayés → Workflow Make.com</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.removed.q1">Saisie manuelle des RDV → Calendly auto</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.removed.q2">Réponse manuelle aux avis → Template + IA</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.removed.q3">Relance manuelle impayés → Workflow Make.com</span></li>
 </ul>
 </div>
 <div class="card">
-<h3>📝 Notes de session</h3>
-<textarea class="notes" placeholder="Notes pendant l'appel Optimize..."></textarea>
+<h3 data-i18n="aoa.optimize.notes.title">📝 Notes de session</h3>
+<textarea class="notes" placeholder="Notes pendant l'appel Optimize..." data-i18n-attr="placeholder:aoa.optimize.notes.placeholder"></textarea>
 </div>
-<div class="quick-win"><span class="icon">💡</span><span><strong>Quick Win identifié :</strong> Template email post-RDV automatique (gain estimé : 2h/semaine)</span></div>
+<div class="quick-win"><span class="icon">💡</span><span data-i18n-html="aoa.optimize.quickwin"><strong>Quick Win identifié :</strong> Template email post-RDV automatique (gain estimé : 2h/semaine)</span></div>
 </div>
 
 <!-- AUTOMATE -->
 <div class="tab-content" id="tab2">
 <div class="card">
-<h3>🤖 Skills Claude à créer</h3>
+<h3 data-i18n="aoa.automate.skills.title">🤖 Skills Claude à créer</h3>
 <ul class="checklist">
-<li><input type="checkbox"><span>Skill "Réponse avis Google" (ton professionnel, personnalisé)</span></li>
-<li><input type="checkbox"><span>Skill "Email post-RDV" (récap + prochain RDV)</span></li>
-<li><input type="checkbox"><span>Skill "Relance client" (J+3, J+7, J+14)</span></li>
-<li><input type="checkbox"><span>Skill "Post réseaux sociaux" (3x/semaine auto)</span></li>
-<li><input type="checkbox"><span>Skill "Facturation" (génération + envoi)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.skills.q1">Skill "Réponse avis Google" (ton professionnel, personnalisé)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.skills.q2">Skill "Email post-RDV" (récap + prochain RDV)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.skills.q3">Skill "Relance client" (J+3, J+7, J+14)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.skills.q4">Skill "Post réseaux sociaux" (3x/semaine auto)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.skills.q5">Skill "Facturation" (génération + envoi)</span></li>
 </ul>
 </div>
 <div class="card">
-<h3>⚙️ Workflows Make.com</h3>
+<h3 data-i18n="aoa.automate.workflows.title">⚙️ Workflows Make.com</h3>
 <ul class="checklist">
-<li><input type="checkbox"><span>Trigger : Nouveau RDV → Email confirmation + Rappel J-1</span></li>
-<li><input type="checkbox"><span>Trigger : Avis Google → Réponse IA + Notification</span></li>
-<li><input type="checkbox"><span>Trigger : Facture impayée J+7 → Relance automatique</span></li>
-<li><input type="checkbox"><span>Schedule : Lundi 8h → Posts semaine programmés</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.workflows.q1">Trigger : Nouveau RDV → Email confirmation + Rappel J-1</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.workflows.q2">Trigger : Avis Google → Réponse IA + Notification</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.workflows.q3">Trigger : Facture impayée J+7 → Relance automatique</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.workflows.q4">Schedule : Lundi 8h → Posts semaine programmés</span></li>
 </ul>
 </div>
 <div class="card">
-<h3>🚀 Déploiement</h3>
+<h3 data-i18n="aoa.automate.deploy.title">🚀 Déploiement</h3>
 <ul class="checklist">
-<li><input type="checkbox"><span>Tester chaque workflow en mode sandbox</span></li>
-<li><input type="checkbox"><span>Validation client avant activation</span></li>
-<li><input type="checkbox"><span>Activation progressive (1 workflow/semaine)</span></li>
-<li><input type="checkbox"><span>Monitoring première semaine</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.deploy.q1">Tester chaque workflow en mode sandbox</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.deploy.q2">Validation client avant activation</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.deploy.q3">Activation progressive (1 workflow/semaine)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.deploy.q4">Monitoring première semaine</span></li>
 </ul>
 </div>
 <div class="card">
-<h3>📝 Notes de session</h3>
-<textarea class="notes" placeholder="Notes pendant l'appel Automate..."></textarea>
+<h3 data-i18n="aoa.automate.notes.title">📝 Notes de session</h3>
+<textarea class="notes" placeholder="Notes pendant l'appel Automate..." data-i18n-attr="placeholder:aoa.automate.notes.placeholder"></textarea>
 </div>
-<div class="quick-win"><span class="icon">💡</span><span><strong>Quick Win identifié :</strong> Workflow relance impayés (gain estimé : 4h/mois + réduction impayés 30%)</span></div>
+<div class="quick-win"><span class="icon">💡</span><span data-i18n-html="aoa.automate.quickwin"><strong>Quick Win identifié :</strong> Workflow relance impayés (gain estimé : 4h/mois + réduction impayés 30%)</span></div>
 </div>
 
-<button class="btn-export" onclick="window.print()">📄 Exporter en PDF</button>
+<button class="btn-export" onclick="window.print()" data-i18n="aoa.export">📄 Exporter en PDF</button>
 </div>
 
 <script>
