@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cs268.github.io/code-agency/sitemap.xml
