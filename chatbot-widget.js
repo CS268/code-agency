@@ -281,11 +281,11 @@
       removeTypingIndicator();
       
       // Add bot response to display
-      if (data.response) {
-        showBotMessage(data.response);
+      if (data.reply) {
+        showBotMessage(data.reply);
         
         // Add to history
-        const botMessage = { role: 'assistant', content: data.response, timestamp: new Date().toISOString() };
+        const botMessage = { role: 'assistant', content: data.reply, timestamp: new Date().toISOString() };
         chatHistory.push(botMessage);
         currentHistory.push(botMessage);
         saveHistory();
