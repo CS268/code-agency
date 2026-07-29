@@ -1,0 +1,79 @@
+MISSION: Ajouter un endpoint POST /chatbot au fichier jcode_site_generator.py existant.
+
+CONTEXTE JCODE:
+- Agence web à Mons, Belgique
+- Forfaits: Teaser 497€, Pro 999€, Pro Max 1599€/mois
+- Options: QR Code +99€, Réservation +149€/mois, Chatbot IA +99€/mois
+- Email: matovuruky@gmail.com | Tél: 0466/06.22.73
+- Variables SMTP déjà sur Render: SMTP_SERVER, SMTP_PORT, SMTP_USER, SMTP_PASSWORD
+- Mistral API Key dans MISTRAL_API_KEY
+- Serveur Flask existant
+
+INSTRUCTIONS STRICTES:
+
+1. Ouvrir jcode_site_generator.py existant. Ne PAS supprimer ni modifier les endpoints existants (/generate-site, /health, etc.).
+
+2. Ajouter ces imports si manquants: from flask import jsonify, request; import re; import time; import smtplib; from email.mime.text import MIMEText
+
+3. Ajouter un rate-limit en mémoire (dictionnaire global):
+   - Clé: IP du client
+   - Valeur: liste des timestamps des 10 dernières requêtes
+   - Si plus de 10 requêtes dans les 60 dernières secondes → retourner 429 Too Many Requests
+   - Nettoyer les timestamps vieux de plus de 60s à chaque requête
+
+4. Ajouter un cap de longueur: si le message fait plus de 500 caractères → retourner 400 avec message "Message trop long. Limite: 500 caractères."
+
+5. Ajouter CORS headers pour autoriser uniquement https://cs268.github.io
+
+6. Créer l'endpoint POST /chatbot qui accepte JSON: {message: string, history: array[{role, content}]}
+
+7. Construire le SYSTEM PROMPT pour Mistral avec ce format EXACT:
+   "Tu es JCODE Assistant, commercial intelligent de JCODE Agency à Mons, Belgique. Réponds UNIQUEMENT en JSON valide sans texte avant ou après, avec cette structure exacte:
+   {
+     \"reply\": \"texte de ta réponse en français (ou néerlandais/anglais si demandé)\",
+     \"lead_name\": \"nom du client si mentionné, sinon null\",
+     \"lead_email\": \"email si mentionné, sinon null\",
+     \"lead_phone\": \"téléphone si mentionné, sinon null\",
+     \"lead_sector\": \"secteur d'activité si mentionné, sinon null\",
+     \"propose_meeting\": true/false,
+     \"conversation_status\": \"collecting_info\" | \"presenting_offer\" | \"closing\" | \"general\"
+   }
+   RÈGLES:
+   - Saluer avec enthousiasme si première interaction
+   - Poser questions qualifiantes: secteur, budget, délais, site existant
+   - Ne JAMAIS donner de prix personnalisé hors forfaits officiels
+   - Si intéressé, proposer visioconférence gratuite 15 min
+   - Si demande de générer un site maintenant, rediriger vers paiement Stripe sur la page forfaits
+   - Hors sujet → rediriger poliment
+   - Contacts: matovuruky@gmail.com, 0466/06.22.73"
+
+8. Appeler l'API Mistral avec:
+   - model: "mistral-large-latest"
+   - max_tokens: 1500
+   - temperature: 0.7
+   - messages: [{role: "system", content: system_prompt}, ...history, {role: "user", content: message}]
+
+9. PARSING DÉFENSIF du JSON retourné par Mistral:
+   - Stripper les backticks et "json" au début
+   - Extraire le premier bloc {...} avec regex r'\{.*\}'
+   - try/except json.loads()
+   - Si échec → utiliser le texte brut comme reply, tous les champs lead à null, status "general"
+
+10. Normaliser la réponse Flask en:
+    {
+      "reply": string,
+      "lead_captured": boolean (true si au moins un champ lead est non-null),
+      "lead_complete": boolean (true si lead_name ET lead_email sont non-null),
+      "conversation_id": string (hash md5 de l'IP + timestamp)
+    }
+
+11. SI lead_complete === true:
+    - Envoyer un email SMTP à matovuruky@gmail.com avec sujet "[JCODE LEAD] Nouveau prospect complet"
+    - Corps: "Nouveau lead capturé par le chatbot:\nNom: {lead_name}\nEmail: {lead_email}\nTéléphone: {lead_phone}\nSecteur: {lead_sector}\nMessage: {message}"
+    - Gérer l'erreur SMTP silencieusement (log mais ne pas casser la réponse au client)
+
+12. Gestion d'erreur globale: try/except autour de tout le endpoint. En cas de panne → retourner JSON {"reply": "Je rencontre un problème technique. Contactez-moi directement au 0466/06.22.73 ou matovuruky@gmail.com", "lead_captured": false, "lead_complete": false, "conversation_id": "error"}
+
+13. Le endpoint doit être léger (un seul appel Mistral, pas de génération de site).
+
+14. Ajouter un log print() quand un lead complet est envoyé par email.
