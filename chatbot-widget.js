@@ -276,21 +276,21 @@
       }
       return response.json();
     })
-    .then(data => {
-      // Remove typing indicator
-      removeTypingIndicator();
-      
-      // Add bot response to display
-      if (data.reply) {
+.then(data => {
+    console.log("✅ DATA RECEIVED:", data);  // AJOUTE CETTE LIGNE
+    console.log("✅ DATA.REPLY:", data.reply);  // AJOUTE CETTE LIGNE
+    
+    removeTypingIndicator();
+    
+    if (data.reply) {
+        console.log("✅ SHOWING BOT MESSAGE");  // AJOUTE CETTE LIGNE
         showBotMessage(data.reply);
-        
-        // Add to history
-        const botMessage = { role: 'assistant', content: data.reply, timestamp: new Date().toISOString() };
-        chatHistory.push(botMessage);
-        currentHistory.push(botMessage);
-        saveHistory();
-      }
-    })
+    } else {
+        console.log("❌ NO data.reply FOUND");  // AJOUTE CETTE LIGNE
+    }
+    
+    // ... le reste du code (history, etc.)
+})
     .catch(error => {
       console.error('Error:', error);
       removeTypingIndicator();
