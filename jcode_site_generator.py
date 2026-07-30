@@ -65,13 +65,17 @@ def apply_cors(response):
     return response
 
 
-@app.after_request
-def after_request(response):
-    """
-    Applique les en-têtes CORS à toutes les réponses.
-    """
-    return apply_cors(response)
 
+d@app.after_request
+def after_request(response):
+    response = apply_cors(response)
+    response.headers['Content-Security-Policy'] = "default-src 'self'; connect-src 'self' https://cs268.github.io https://www.jcode.store https://jcode.store; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+    response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
+    response.headers['X-Content-Type-Options'] = 'nosniff'
+    response.headers['X-Frame-Options'] = 'DENY'
+    response.headers['X-XSS-Protection'] = '1; mode=block'
+    response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
+    return response
 
 # Endpoint de base
 @app.route('/health', methods=['GET'])
@@ -159,16 +163,25 @@ RÈGLES:
             )
 
         return jsonify(response_data)
-
     except Exception as e:
-        # Gestion d'erreur globale
-        print(f"Erreur dans /chatbot : {e}")
+        print(f"Mistral API error (quota or down): {e}")
+        fallback_reply = """Merci pour votre message ! 🚀
+
+Je suis momentanément en maintenance (mise à jour IA). 
+Laissez-moi vos coordonnées et je vous recontacte sous 24h avec une proposition personnalisée :
+
+📩 Votre prénom
+📧 Votre email  
+📞 Votre téléphone
+🏢 Votre secteur (restaurant, coiffeur, boulangerie, etc.)
+
+À très vite !"""
         return jsonify({
-            "reply": "Je rencontre un problème technique. Contactez-moi directement au 0466/06.22.73 ou matovuruky@gmail.com",
+            "reply": fallback_reply,
+            "conversation_id": conversation_id,
             "lead_captured": False,
-            "lead_complete": False,
-            "conversation_id": "error"
-        }), 500
+            "lead_complete": False
+        })
 
 
 def call_mistral_api(messages):

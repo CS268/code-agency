@@ -277,31 +277,29 @@
       return response.json();
     })
 .then(data => {
-    console.log("✅ DATA RECEIVED:", data);  // AJOUTE CETTE LIGNE
-    console.log("✅ DATA.REPLY:", data.reply);  // AJOUTE CETTE LIGNE
-    
     removeTypingIndicator();
     
     if (data.reply) {
-        console.log("✅ SHOWING BOT MESSAGE");  // AJOUTE CETTE LIGNE
         showBotMessage(data.reply);
+        
+        const botMessage = { 
+            role: 'assistant', 
+            content: data.reply, 
+            timestamp: new Date().toISOString() 
+        };
+        chatHistory.push(botMessage);
+        currentHistory.push(botMessage);
+        saveHistory();
     } else {
-        console.log("❌ NO data.reply FOUND");  // AJOUTE CETTE LIGNE
+        showBotMessage("Désolé, je n'ai pas compris. Pouvez-vous reformuler ?");
     }
-    
-    // ... le reste du code (history, etc.)
 })
-    .catch(error => {
-      console.error('Error:', error);
-      removeTypingIndicator();
-      showBotMessage('Technical issue. Contact 0466/06.22.73 or matovuruky@gmail.com');
-      
-      // Add error to history
-      const errorMessage = { role: 'assistant', content: 'Technical issue. Contact 0466/06.22.73 or matovuruky@gmail.com', timestamp: new Date().toISOString() };
-      chatHistory.push(errorMessage);
-      currentHistory.push(errorMessage);
-      saveHistory();
-    });
+.catch(error => {
+    console.error('Chatbot error:', error);
+    removeTypingIndicator();
+    showBotMessage("Je suis momentanément indisponible. Laissez-moi vos coordonnées (prénom, email, téléphone) et je vous recontacte sous 24h ! 📩");
+});
+
   }
 
   // Show user message bubble
