@@ -35,7 +35,7 @@ def _get_cors_headers():
         "Access-Control-Allow-Headers": "Content-Type",
     }
 
-def _call_mistral_api(messages, max_tokens=1024, temperature=0.7):
+def _call_mistral_api(messages, max_tokens=512, temperature=0.7):
     """
     Call the Mistral API with the provided messages using the Mistral API key.
     Returns a dictionary with the parsed Mistral response.
