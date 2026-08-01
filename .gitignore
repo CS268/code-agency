@@ -3,3 +3,6 @@ node_modules/
 *.log
 .env
 .vercel
+# Rapport de sécurité local (ne pas commiter)
+SECURITY_AUDIT.md
+*.bak
