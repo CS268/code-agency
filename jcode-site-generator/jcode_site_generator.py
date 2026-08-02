@@ -5,6 +5,10 @@ import hashlib
 import os
 import smtplib
 from email.mime.text import MIMEText
+from langdetect import detect, DetectorFactory
+
+# Ensure consistent language detection
+DetectorFactory.seed = 0
 
 app = Flask(__name__)
 
@@ -42,6 +46,37 @@ def _call_mistral_api(messages, max_tokens=512, temperature=0.7):
     """
     import requests
     
+    # Detect language from the last user message using langdetect
+    last_user_message = ""
+    for msg in reversed(messages):
+        if msg.get('role') == 'user':
+            last_user_message = msg.get('content', '')
+            break
+    
+    # Language detection using langdetect with fallback
+    detected_language = 'fr'  # default to French
+    
+    if last_user_message and len(last_user_message.strip()) > 20:  # Only detect if message is substantial
+        try:
+            detected_language = detect(last_user_message)
+            # Normalize language codes
+            if detected_language == 'en':
+                detected_language = 'en'
+            elif detected_language == 'nl':
+                detected_language = 'nl'
+            else:
+                detected_language = 'fr'  # fallback to French for other languages
+        except:
+            detected_language = 'fr'  # fallback to French if detection fails
+    
+    # Get the appropriate system prompt for the detected language
+    if detected_language == 'en':
+        updated_system_prompt = SYSTEM_PROMPT_EN
+    elif detected_language == 'nl':
+        updated_system_prompt = SYSTEM_PROMPT_NL
+    else:
+        updated_system_prompt = SYSTEM_PROMPT_FR
+    
     # Get Mistral API key from environment
     mistral_api_key = os.getenv("MISTRAL_API_KEY")
     if not mistral_api_key:
@@ -56,10 +91,10 @@ def _call_mistral_api(messages, max_tokens=512, temperature=0.7):
         "Content-Type": "application/json"
     }
     
-    # Prepare payload
+    # Prepare payload - use updated system prompt with detected language
     payload = {
         "model": "mistral-large-latest",
-        "messages": messages,
+        "messages": [{"role": "system", "content": updated_system_prompt}] + messages,
         "max_tokens": max_tokens,
         "temperature": temperature
     }
@@ -123,6 +158,76 @@ RÈGLES:
 - Contacts: matovuruky@gmail.com, 0466/06.22.73
 """
 
+# Language-specific system prompts
+SYSTEM_PROMPT_FR = """
+Tu es JCODE Assistant, commercial intelligent de JCODE Agency à Mons, Belgique. 
+Réponds UNIQUEMENT en JSON valide sans texte avant ou après, avec cette structure exacte:
+{
+  "reply": "texte de ta réponse en français",
+  "lead_name": "nom du client si mentionné, sinon null",
+  "lead_email": "email si mentionné, sinon null",
+  "lead_phone": "téléphone si mentionné, sinon null",
+  "lead_sector": "secteur d'activité si mentionné, sinon null",
+  "propose_meeting": true/false,
+  "conversation_status": "collecting_info" | "presenting_offer" | "closing" | "general"
+}
+
+RÈGLES:
+- Saluer avec enthousiasme si première interaction
+- Poser des questions qualifiantes: secteur d'activité, budget, délais, site existant
+- Ne JAMAIS donner de prix personnalisé hors forfaits officiels
+- Si le prospect est intéressé, proposer une visioconférence gratuite de 15 minutes
+- Si demande de générer un site maintenant, rediriger vers le paiement Stripe sur la page des forfaits
+- Pour les demandes hors sujet, rediriger poliment vers les services de JCODE
+- Contacts: matovuruky@gmail.com, 0466/06.22.73
+"""
+
+SYSTEM_PROMPT_EN = """
+You are JCODE Assistant, an intelligent salesperson for JCODE Agency in Mons, Belgium. 
+Reply ONLY with valid JSON without any text before or after, using this exact structure:
+{
+  "reply": "your response text in English",
+  "lead_name": "client name if mentioned, otherwise null",
+  "lead_email": "email if mentioned, otherwise null",
+  "lead_phone": "phone if mentioned, otherwise null",
+  "lead_sector": "industry/sector if mentioned, otherwise null",
+  "propose_meeting": true/false,
+  "conversation_status": "collecting_info" | "presenting_offer" | "closing" | "general"
+}
+
+RULES:
+- Greet enthusiastically if first interaction
+- Ask qualifying questions: industry, budget, timeline, existing website
+- NEVER provide custom pricing outside official packages
+- If interested, propose a free 15-minute video conference
+- If request to generate a site now, redirect to Stripe payment on the packages page
+- For off-topic requests, politely redirect to JCODE's services
+- Contacts: matovuruky@gmail.com, 0466/06.22.73
+"""
+
+SYSTEM_PROMPT_NL = """
+Je bent JCODE Assistant, een intelligente verkoper voor JCODE Agency in Bergen, België. 
+Reageer ALLEEN met geldige JSON zonder tekst ervoor of erna, met deze exacte structuur:
+{
+  "reply": "jouw antwoordtekst in het Nederlands",
+  "lead_name": "klantnaam als genoemd, anders null",
+  "lead_email": "email als genoemd, anders null",
+  "lead_phone": "telefoon als genoemd, anders null",
+  "lead_sector": "sector/activiteit als genoemd, anders null",
+  "propose_meeting": true/false,
+  "conversation_status": "collecting_info" | "presenting_offer" | "closing" | "general"
+}
+
+REGELS:
+- Begroet enthousiast als het de eerste interactie is
+- Stel kwalificerende vragen: sector, budget, termijn, bestaande website
+- Geef NOOIT aangepaste prijzen buiten de officiële pakketten
+- Als geïnteresseerd, stel een gratis 15-minuten videogesprek voor
+- Als gevraagd wordt om nu een site te genereren, verwijs naar de Stripe-betalingspagina
+- Voor vragen buiten het bestek, verwijs beleefd naar de diensten van JCODE
+- Contacten: matovuruky@gmail.com, 0466/06.22.73
+"""
+
 @app.route('/chatbot', methods=['POST'])
 def chatbot():
     """Endpoint POST /chatbot for handling chatbot requests."""
@@ -141,11 +246,11 @@ def chatbot():
         history = data.get('history', [])
 
         # Check message length
-        if len(message) > 500:
-            return jsonify({"reply": "Message trop long. Limite: 500 caractères.", "lead_captured": False, "lead_complete": False, "conversation_id": "error"}), 400
+        if len(message) > 2000:
+            return jsonify({"reply": "Message trop long. Limite: 2000 caractères.", "lead_captured": False, "lead_complete": False, "conversation_id": "error"}), 400
 
         # Build Mistral messages
-        mistral_messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+        mistral_messages = []
         for msg in history:
             mistral_messages.append({"role": msg.get('role', 'user'), "content": msg.get('content', '')})
         mistral_messages.append({"role": "user", "content": message})
