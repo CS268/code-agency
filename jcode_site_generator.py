@@ -66,7 +66,7 @@ def apply_cors(response):
 
 
 
-d@app.after_request
+@app.after_request
 def after_request(response):
     response = apply_cors(response)
     response.headers['Content-Security-Policy'] = "default-src 'self'; connect-src 'self' https://cs268.github.io https://www.jcode.store https://jcode.store; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
