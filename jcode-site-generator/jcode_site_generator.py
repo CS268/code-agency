@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request, Response
 import re
 import time
 import hashlib
+import json
 import os
 import smtplib
 from email.mime.text import MIMEText
@@ -16,7 +17,39 @@ app = Flask(__name__)
 _rate_limit_store = {}
 
 # CORS configuration
-CORS_ALLOWED_ORIGIN = "https://cs268.github.io"
+ALLOWED_ORIGINS = ["https://cs268.github.io", "https://jcode.store", "https://www.jcode.store"]
+
+# Contrat de sortie JSON exigé de Mistral (indispensable au parsing des leads)
+JSON_OUTPUT_CONTRACT = """Tu réponds UNIQUEMENT en JSON valide, sans texte avant ou après, avec cette structure exacte:
+{
+  "reply": "ta réponse, dans la langue du visiteur (français, néerlandais ou anglais)",
+  "lead_name": "nom du client si mentionné, sinon null",
+  "lead_email": "email si mentionné, sinon null",
+  "lead_phone": "téléphone si mentionné, sinon null",
+  "lead_sector": "secteur d'activité si mentionné, sinon null",
+  "propose_meeting": true/false,
+  "conversation_status": "collecting_info" | "presenting_offer" | "closing" | "general"
+}"""
+
+# Prompts système personnalisés par client (connaissances spécifiques)
+CLIENT_PROMPTS = {
+    "ali-baba-snack": """Tu es l'assistant virtuel du Snack Ali Baba à Bruxelles. Tu connais :
+- Horaires : ouvert tous les jours 11h-23h, fermé le mardi
+- Menu : kebabs 8€, burgers 9€, frites 4€, boissons 2-3€
+- Livraison : gratuite dès 20€, zones Schaerbeek et Evere
+- Allergènes : halal, options végétariennes sur demande
+- Téléphone : 02/XXX.XX.XX
+Sois chaleureux, direct et utile.""",
+
+    "coiffeur-marie": """Tu es l'assistant virtuel du salon de coiffure de Marie. Tu connais :
+- Horaires : mardi-samedi 9h-18h, fermé lundi et dimanche
+- Prestations : coupe femme 35€, coupe homme 25€, coloration 60€, brushing 20€
+- Réservation : par téléphone ou en ligne
+- Adresse : [à compléter]
+Sois chaleureuse et professionnelle.""",
+
+    "demo-client": """Tu es un assistant commercial pour une petite entreprise. Sois concis, utile et chaleureux."""
+}
 
 def _check_rate_limit(ip):
     """Check if the IP has exceeded the rate limit (10 requests per 60 seconds)."""
@@ -32,14 +65,23 @@ def _check_rate_limit(ip):
     return True
 
 def _get_cors_headers():
-    """Return CORS headers for the allowed origin."""
-    return {
-        "Access-Control-Allow-Origin": CORS_ALLOWED_ORIGIN,
-        "Access-Control-Allow-Methods": "POST, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type",
-    }
+    """Return CORS headers if the request origin is allowed."""
+    origin = request.headers.get('Origin')
+    if origin in ALLOWED_ORIGINS:
+        return {
+            "Access-Control-Allow-Origin": origin,
+            "Access-Control-Allow-Methods": "POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type",
+        }
+    return {}
 
-def _call_mistral_api(messages, max_tokens=512, temperature=0.7):
+@app.after_request
+def after_request(response):
+    """Apply CORS headers to every response, including OPTIONS preflight."""
+    response.headers.update(_get_cors_headers())
+    return response
+
+def _call_mistral_api(messages, client_id="jcode-default", max_tokens=512, temperature=0.7):
     """
     Call the Mistral API with the provided messages using the Mistral API key.
     Returns a dictionary with the parsed Mistral response.
@@ -70,7 +112,10 @@ def _call_mistral_api(messages, max_tokens=512, temperature=0.7):
             detected_language = 'fr'  # fallback to French if detection fails
     
     # Get the appropriate system prompt for the detected language
-    if detected_language == 'en':
+    if client_id in CLIENT_PROMPTS:
+        # Multi-client : connaissance spécifique + contrat JSON (langue du visiteur)
+        updated_system_prompt = CLIENT_PROMPTS[client_id] + "\n\n" + JSON_OUTPUT_CONTRACT
+    elif detected_language == 'en':
         updated_system_prompt = SYSTEM_PROMPT_EN
     elif detected_language == 'nl':
         updated_system_prompt = SYSTEM_PROMPT_NL
@@ -110,6 +155,9 @@ def _call_mistral_api(messages, max_tokens=512, temperature=0.7):
         # Extract the assistant's reply
         if "choices" in result and len(result["choices"]) > 0:
             assistant_reply = result["choices"][0]["message"]["content"]
+            parsed = _parse_mistral_json(assistant_reply)
+            if parsed:
+                return parsed
             return {
                 "reply": assistant_reply,
                 "lead_name": None,
@@ -134,6 +182,19 @@ def _call_mistral_api(messages, max_tokens=512, temperature=0.7):
             "propose_meeting": False,
             "conversation_status": "general"
         }
+
+def _parse_mistral_json(response_text):
+    """Extract the first JSON object from the Mistral reply, if present."""
+    try:
+        cleaned = re.sub(r'^```json\s*|```|\s*json\s*', '', response_text).strip()
+        match = re.search(r'\{.*\}', cleaned, re.DOTALL)
+        if match:
+            parsed = json.loads(match.group(0))
+            if isinstance(parsed, dict):
+                return parsed
+    except Exception as e:
+        print(f"Erreur parsing Mistral JSON: {e}")
+    return None
 
 SYSTEM_PROMPT = """
 Tu es JCODE Assistant, commercial intelligent de JCODE Agency à Mons, Belgique. 
@@ -245,6 +306,8 @@ def chatbot():
         message = data.get('message')
         history = data.get('history', [])
 
+        client_id = data.get('client', 'jcode-default')
+
         # Check message length
         if len(message) > 2000:
             return jsonify({"reply": "Message trop long. Limite: 2000 caractères.", "lead_captured": False, "lead_complete": False, "conversation_id": "error"}), 400
@@ -256,7 +319,7 @@ def chatbot():
         mistral_messages.append({"role": "user", "content": message})
 
         # Call Mistral API
-        mistral_response = _call_mistral_api(mistral_messages)
+        mistral_response = _call_mistral_api(mistral_messages, client_id=client_id)
 
         # Parse Mistral response defensively
         reply_text = mistral_response.get('reply', "Désolé, je n'ai pas pu traiter votre demande.")
