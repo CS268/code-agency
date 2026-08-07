@@ -2295,7 +2295,7 @@
     "nl": "Automatische reservering"
   },
   "index.options.booking.desc": {
-    "fr": "Vos clients choisissent leur service, date et heure. Confirmation automatique par email et SMS. Vous recevez une notification.",
+    "fr": "Vos clients choisissent leur service, date et heure. Confirmation automatique par email. Vous recevez une notification.",
     "en": "Your clients choose their service, date and time. Automatic confirmation by email and SMS. You receive a notification.",
     "nl": "Uw klanten kiezen hun dienst, datum en tijd. Automatische bevestiging per e-mail en SMS. U ontvangt een melding."
   },
