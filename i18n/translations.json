@@ -2303,6 +2303,40 @@
     "fr": "Abonnement mensuel",
     "en": "Monthly subscription",
     "nl": "Maandelijks abonnement"
+  },  "index.options.booking.preview.service": {
+    "fr": "Service",
+    "en": "Service",
+    "nl": "Dienst"
+  },
+  "index.options.booking.preview.serviceName": {
+    "fr": "Coupe & Coiffage",
+    "en": "Haircut & Styling",
+    "nl": "Knippen & Stylen"
+  },
+  "index.options.booking.preview.date": {
+    "fr": "Date",
+    "en": "Date",
+    "nl": "Datum"
+  },
+  "index.options.booking.preview.dateValue": {
+    "fr": "Mar 12",
+    "en": "Mar 12",
+    "nl": "Mrt 12"
+  },
+  "index.options.booking.preview.time": {
+    "fr": "Heure",
+    "en": "Time",
+    "nl": "Tijd"
+  },
+  "index.options.booking.preview.timeValue": {
+    "fr": "14h30",
+    "en": "2:30 PM",
+    "nl": "14:30"
+  },
+  "index.options.booking.preview.confirmed": {
+    "fr": "Réservation confirmée",
+    "en": "Booking confirmed",
+    "nl": "Reservering bevestigd"
   },
   "index.options.chatbot.title": {
     "fr": "Chatbot IA",
