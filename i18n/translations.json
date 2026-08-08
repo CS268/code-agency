@@ -2239,15 +2239,15 @@
     "en": "90-day support",
     "nl": "90 dagen support"
   },
-  "index.offer.cta.chooseTeaser": {
-  "index.offer.cta.choosePro": {
-  "fr": "Choisir Pro →",
-  "en": "Choose Pro →",
-  "nl": "Kies Pro →"
-},
+    "index.offer.cta.chooseTeaser": {
     "fr": "Choisir Teaser →",
     "en": "Choose Teaser →",
     "nl": "Kies Teaser →"
+  },
+  "index.offer.cta.choosePro": {
+    "fr": "Choisir Pro →",
+    "en": "Choose Pro →",
+    "nl": "Kies Pro →"
   },
   "index.offer.cta.chooseProMax": {
     "fr": "Choisir Pro Max →",
