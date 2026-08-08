@@ -2240,12 +2240,17 @@
     "nl": "90 dagen support"
   },
   "index.offer.cta.chooseTeaser": {
+  "index.offer.cta.choosePro": {
+  "fr": "Choisir Pro →",
+  "en": "Choose Pro →",
+  "nl": "Kies Pro →"
+},
     "fr": "Choisir Teaser →",
     "en": "Choose Teaser →",
     "nl": "Kies Teaser →"
   },
   "index.offer.cta.chooseProMax": {
-    "fr": "Bientôt disponible — Q1 2027",
+    "fr": "Choisir Pro Max →",
     "en": "Choose Pro Max →",
     "nl": "Kies Pro Max →"
   },
