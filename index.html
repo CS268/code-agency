@@ -98,7 +98,10 @@
             0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
             50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); }
         }
-
+        @keyframes chatTyping {
+            0%, 100% { opacity: 0.3; transform: translateY(0); }
+            50% { opacity: 1; transform: translateY(-3px); }
+        }
         .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
         .animate-fade-in { animation: fadeIn 1s ease-out forwards; opacity: 0; }
         .animate-slide-left { animation: slideInLeft 0.8s ease-out forwards; opacity: 0; }
@@ -1566,6 +1569,21 @@
                 <p style="color: #94a3b8; margin-bottom: 24px; line-height: 1.6;" data-i18n="index.options.chatbot.desc">Un assistant virtuel sur votre site qui répond aux questions de vos clients 24h/24 et 7j/7. Horaires, prix, services — tout est couvert.</p>
                 <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;" data-i18n="index.options.chatbot.price">+€99<span style="font-size: 18px; font-weight: 400; color: #64748b;">/mois</span></div>
                 <div style="color: #64748b; font-size: 14px;" data-i18n="index.options.chatbot.monthly">Abonnement mensuel</div>
+                <div style="margin-top: 24px; max-width: 260px; width: 100%; margin-left: auto; margin-right: auto; background: #1e293b; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; text-align: left;">
+    <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 10px 14px; display: flex; align-items: center; gap: 8px;">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: #22c55e;"></span>
+        <span style="color: #fff; font-size: 12px; font-weight: 600;">JCODE Assistant</span>
+    </div>
+    <div style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+        <div style="align-self: flex-start; max-width: 80%; background: #334155; color: #e2e8f0; font-size: 11px; padding: 8px 10px; border-radius: 12px 12px 12px 2px;">Bonjour ! Besoin d'un site web pour votre commerce ?</div>
+        <div style="align-self: flex-end; max-width: 80%; background: #6366f1; color: #fff; font-size: 11px; padding: 8px 10px; border-radius: 12px 12px 2px 12px;">Montrez-moi votre menu</div>
+        <div style="align-self: flex-start; display: flex; gap: 3px; padding: 10px; background: #334155; border-radius: 12px 12px 12px 2px;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #94a3b8;"></span>
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #94a3b8;"></span>
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #94a3b8;"></span>
+        </div>
+    </div>
+                </div>
             </div>
 
         </div>
