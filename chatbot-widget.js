@@ -35,7 +35,7 @@
     const button = document.createElement('button');
     button.id = 'jcode-chat-button';
     button.style.position = 'fixed';
-    button.style.bottom = '20px';
+    button.style.bottom = '92px';
     button.style.right = '20px';
     button.style.width = config.dimensions.buttonSize;
     button.style.height = config.dimensions.buttonSize;
@@ -57,7 +57,7 @@
     const chatWindow = document.createElement('div');
     chatWindow.id = 'jcode-chat-window';
     chatWindow.style.position = 'fixed';
-    chatWindow.style.bottom = '90px';
+    chatWindow.style.bottom = '164px';
     chatWindow.style.right = '20px';
     chatWindow.style.width = config.dimensions.chatWidth;
     chatWindow.style.height = config.dimensions.chatHeight;
@@ -444,7 +444,7 @@
       } else {
         chatWindow.style.width = config.dimensions.chatWidth;
         chatWindow.style.height = config.dimensions.chatHeight;
-        chatWindow.style.bottom = '90px';
+        chatWindow.style.bottom = '164px';
         chatWindow.style.right = '20px';
         chatWindow.style.borderRadius = '16px';
       }
