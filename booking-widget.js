@@ -43,7 +43,7 @@
     button.style.color = '#fff';
     button.style.border = 'none';
     button.style.cursor = 'pointer';
-    button.style.zIndex = '9998';
+    button.style.zIndex = '10001';
     button.style.boxShadow = '0 4px 12px rgba(16, 185, 129, 0.35)';
     button.style.display = 'flex';
     button.style.alignItems = 'center';
@@ -68,7 +68,7 @@
     panel.style.display = 'none';
     panel.style.flexDirection = 'column';
     panel.style.overflow = 'hidden';
-    panel.style.zIndex = '10000';
+    panel.style.zIndex = '10002';
     panel.style.border = '1px solid rgba(255,255,255,0.08)';
 
     // Header
