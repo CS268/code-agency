@@ -6,3 +6,5 @@ node_modules/
 # Rapport de sécurité local (ne pas commiter)
 SECURITY_AUDIT.md
 *.bak
+docs/
+CONTEXT.md
