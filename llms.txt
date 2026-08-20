@@ -1,0 +1,23 @@
+# JCODE Agency
+> Agence web et automatisation IA pour commerces locaux en Belgique. Sites vitrines, e-commerce, AI Concierge.
+
+## Pages principales
+- [Accueil FR](https://jcode.store/) : Services, packages et automatisations IA pour commerces
+- [Home EN](https://jcode.store/?lang=en) : Web services, AI automation packages for local businesses
+- [Startpagina NL](https://jcode.store/?lang=nl) : Webdiensten, IA-automatisering voor lokale bedrijven
+- [AI Concierge FR](https://jcode.store/ai-concierge.html) : Service done-with-you d'automatisation IA
+- [AI Concierge EN](https://jcode.store/ai-concierge.html?lang=en) : Done-with-you AI automation service
+- [AI Concierge NL](https://jcode.store/ai-concierge.html?lang=nl) : Done-with-you IA-automatiseringsservice
+- [Espace Client](https://jcode.store/espace-client.html) : Dashboard client JCODE Agency
+- [AOA Framework](https://jcode.store/aoa-framework.html) : Méthodologie Audit-Optimize-Automate
+
+## Services / Diensten / Services
+- Création de sites web professionnels / Professionele websites / Professional websites
+- Automatisation marketing par IA (21 agents) / Marketingautomatisering door IA / AI marketing automation (21 agents)
+- AI Concierge : accompagnement personnalisé / AI Concierge : persoonlijke begeleiding / AI Concierge : personalized coaching
+- Packages : Teaser (497€), Pro (999€/mois), Pro Max (1599€/mois)
+
+## Contact
+- Email : matovuruky@gmail.com
+- Localisation : Belgique, service Europe / België, service Europa / Belgium, Europe service
+- Langues : Français, Néerlandais, Anglais / Talen : Frans, Nederlands, Engels / Languages : French, Dutch, English
