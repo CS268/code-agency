@@ -615,13 +615,13 @@
     "nl": "Wij verzamelen alleen gegevens die strikt noodzakelijk zijn voor het maken van uw vitrine-website:"
   },
   "privacy_short.s2_business": {
-    "fr": "<strong>Nom du business</strong> — pour personnaliser le site",
-    "en": "<strong>Business name</strong> — to personalize the site",
+    "fr": "<strong>Nom du commerce</strong> — pour personnaliser le site",
+    "en": "<strong>business name</strong> — to personalize the site",
     "nl": "<strong>Bedrijfsnaam</strong> — om de site te personaliseren"
   },
   "privacy_short.s2_type": {
-    "fr": "<strong>Type de business</strong> — pour adapter le design",
-    "en": "<strong>Business type</strong> — to adapt the design",
+    "fr": "<strong>Type de commerce</strong> — pour adapter le design",
+    "en": "<strong>business type</strong> — to adapt the design",
     "nl": "<strong>Bedrijfstype</strong> — om het ontwerp aan te passen"
   },
   "privacy_short.s2_city": {
@@ -1435,9 +1435,9 @@
     "nl": "Voor welk type bedrijf?"
   },
   "concierge.faq.a6": {
-    "fr": "Coiffeurs, boulangers, restaurants, hôtes Business, indépendants, TPE. Tout business local qui perd du temps sur des tâches répétitives : emails, réservations, factures, relances, réseaux sociaux.",
-    "en": "Hairdressers, bakers, restaurants, Business hosts, freelancers, small businesses. Any local business wasting time on repetitive tasks: emails, bookings, invoices, follow-ups, social media.",
-    "nl": "Kappers, bakkers, restaurants, Business-hosts, zelfstandigen, KMO's. Elk lokaal bedrijf dat tijd verliest aan repetitieve taken: e-mails, reserveringen, facturen, opvolging, sociale media."
+    "fr": "Coiffeurs, boulangers, restaurants, hôtes commerce, indépendants, TPE. Tout commerce local qui perd du temps sur des tâches répétitives : emails, réservations, factures, relances, réseaux sociaux.",
+    "en": "Hairdressers, bakers, restaurants, business hosts, freelancers, small businesses. Any local business wasting time on repetitive tasks: emails, bookings, invoices, follow-ups, social media.",
+    "nl": "Kappers, bakkers, restaurants, commerce-hosts, zelfstandigen, KMO's. Elk lokaal bedrijf dat tijd verliest aan repetitieve taken: e-mails, reserveringen, facturen, opvolging, sociale media."
   },
   "concierge.faq.q7": {
     "fr": "Quelle différence avec un freelancer classique ?",
@@ -1510,8 +1510,8 @@
     "nl": "AI Concierge — JCODE Agency | 5 minuten om uw automatisering te starten"
   },
   "intake.label.business": {
-    "fr": "Nom de l'entreprise",
-    "en": "Business name",
+    "fr": "Nom du commerce",
+    "en": "business name",
     "nl": "Bedrijfsnaam"
   },
   "intake.placeholder.business": {
@@ -1545,9 +1545,9 @@
     "nl": "Restaurant / Snackbar"
   },
   "intake.sector.airbnb": {
-    "fr": "Hôte Business",
-    "en": "Business Host",
-    "nl": "Business-host"
+    "fr": "Hôte commerce",
+    "en": "business host",
+    "nl": "commerce-host"
   },
   "intake.sector.boucherie": {
     "fr": "Boucherie / Épicerie",
@@ -1940,9 +1940,9 @@
     "nl": "JCODE Agency — Websites & Geautomatiseerde Marketing door AI"
   },
   "index.meta.description": {
-    "fr": "JCODE Agency propulse votre commerce (Business, restaurant, coiffeur, boulanger...) avec 21 agents IA. Vidéos, prospection, copywriting, sites web — 100% automatisé. Package Teaser à 497€.",
-    "en": "JCODE Agency boosts your business (Business, restaurant, hairdresser, bakery...) with 21 AI agents. Videos, prospecting, copywriting, websites — 100% automated. Teaser Package at €497.",
-    "nl": "JCODE Agency boost uw bedrijf (Business, restaurant, kapper, bakker...) met 21 AI-agents. Video's, prospectie, copywriting, websites — 100% geautomatiseerd. Teaser Pakket voor €497."
+    "fr": "JCODE Agency propulse votre commerce (commerce, restaurant, coiffeur, boulanger...) avec 21 agents IA. Vidéos, prospection, copywriting, sites web — 100% automatisé. Package Teaser à 497€.",
+    "en": "JCODE Agency boosts your business (commerce, restaurant, hairdresser, bakery...) with 21 AI agents. Videos, prospecting, copywriting, websites — 100% automated. Teaser Package at €497.",
+    "nl": "JCODE Agency boost uw bedrijf (commerce, restaurant, kapper, bakker...) met 21 AI-agents. Video's, prospectie, copywriting, websites — 100% geautomatiseerd. Teaser Pakket voor €497."
   },
   "index.hero.badge": {
     "fr": "21 agents IA déployés",
@@ -1960,9 +1960,9 @@
     "nl": "100% geautomatiseerd"
   },
   "index.hero.subtitle": {
-    "fr": "JCODE Agency propulse votre commerce (Business, restaurant, coiffeur, boulanger...) avec une armée d'agents IA. Génération de contenu, prospection clients, et optimisation — tout tourne en autopilot.",
-    "en": "JCODE Agency boosts your business (Business, restaurant, hairdresser, bakery...) with an army of AI agents. Content generation, client prospecting, and optimization — everything runs on autopilot.",
-    "nl": "JCODE Agency boost uw bedrijf (Business, restaurant, kapper, bakker...) met een leger van AI-agents. Contentgeneratie, klantenprospecting en optimalisatie — alles draait op autopilot."
+    "fr": "JCODE Agency propulse votre commerce (commerce, restaurant, coiffeur, boulanger...) avec une armée d'agents IA. Génération de contenu, prospection clients, et optimisation — tout tourne en autopilot.",
+    "en": "JCODE Agency boosts your business (commerce, restaurant, hairdresser, bakery...) with an army of AI agents. Content generation, client prospecting, and optimization — everything runs on autopilot.",
+    "nl": "JCODE Agency boost uw bedrijf (commerce, restaurant, kapper, bakker...) met een leger van AI-agents. Contentgeneratie, klantenprospecting en optimalisatie — alles draait op autopilot."
   },
   "index.hero.ctaPrimary": {
     "fr": "Voir tous les packages →",
@@ -2040,9 +2040,9 @@
     "nl": "Een leger van AI-agents tot uw dienst"
   },
   "index.services.subtitle": {
-    "fr": "Chaque agent est spécialisé dans une mission précise pour faire croître votre business sans effort.",
+    "fr": "Chaque agent est spécialisé dans une mission précise pour faire croître votre commerce sans effort.",
     "en": "Each agent is specialized in a specific mission to grow your business effortlessly.",
-    "nl": "Elke agent is gespecialiseerd in een specifieke missie om uw Business-bedrijf moeiteloos te laten groeien."
+    "nl": "Elke agent is gespecialiseerd in een specifieke missie om uw bedrijf moeiteloos te laten groeien."
   },
   "index.services.brandbuilder.title": {
     "fr": "BrandBuilder",
@@ -2060,9 +2060,9 @@
     "nl": "CopyMaster"
   },
   "index.services.copymaster.desc": {
-    "fr": "Rédaction SEO optimisée pour vos annonces Business, descriptions captivantes, et contenu de blog qui convertit les visiteurs.",
-    "en": "SEO-optimized writing for your Business listings, captivating descriptions, and blog content that converts visitors.",
-    "nl": "SEO-geoptimaliseerd schrijven voor uw Business-vermeldingen, boeiende beschrijvingen en blogcontent die bezoekers converteert."
+    "fr": "Rédaction SEO optimisée pour vos annonces commerce, descriptions captivantes, et contenu de blog qui convertit les visiteurs.",
+    "en": "SEO-optimized writing for your business listings, captivating descriptions, and blog content that converts visitors.",
+    "nl": "SEO-geoptimaliseerd schrijven voor uw bedrijfsvermeldingen, boeiende beschrijvingen en blogcontent die bezoekers converteert."
   },
   "index.services.videocreator.title": {
     "fr": "VideoCreator",
@@ -2085,9 +2085,9 @@
     "nl": "Outreach Pro"
   },
   "index.services.outreach.desc": {
-    "fr": "Prospection automatisée de propriétaires Business : scraping ciblé, emails personnalisés, et suivi intelligent des leads.",
-    "en": "Automated prospecting of Business owners: targeted scraping, personalized emails, and intelligent lead follow-up.",
-    "nl": "Geautomatiseerde prospectie van Business-eigenaren: gerichte scraping, gepersonaliseerde e-mails en intelligente leadopvolging."
+    "fr": "Prospection automatisée de commerçants : scraping ciblé, emails personnalisés, et suivi intelligent des leads.",
+    "en": "Automated prospecting of merchants: targeted scraping, personalized emails, and intelligent lead follow-up.",
+    "nl": "Geautomatiseerde prospectie van zelfstandigen: gerichte scraping, gepersonaliseerde e-mails en intelligente leadopvolging."
   },
   "index.services.analytics.title": {
     "fr": "Analytics AI",
@@ -2120,9 +2120,9 @@
     "nl": "Kies uw pakket"
   },
   "index.offer.subtitle": {
-    "fr": "Trois niveaux de puissance IA pour propulser votre Business. Sans engagement, annulable à tout moment.",
-    "en": "Three levels of AI power to boost your Business. No commitment, cancelable anytime.",
-    "nl": "Drie niveaus van AI-kracht om uw Business te boosten. Geen verplichting, op elk moment opzegbaar."
+    "fr": "Trois niveaux de puissance IA pour propulser votre commerce. Sans engagement, annulable à tout moment.",
+    "en": "Three levels of AI power to boost your business. No commitment, cancelable anytime.",
+    "nl": "Drie niveaus van AI-kracht om uw bedrijf te boosten. Geen verplichting, op elk moment opzegbaar."
   },
   "index.offer.recommended": {
     "fr": "⭐ RECOMMANDÉ",
@@ -2135,7 +2135,7 @@
     "nl": "Teaser"
   },
   "index.offer.teaser.desc": {
-    "fr": "Le starter parfait pour propriétaires de business local qui veulent tester la puissance de l'IA.",
+    "fr": "Le starter parfait pour commerçants locaux qui veulent tester la puissance de l'IA.",
     "en": "The perfect starter for local business owners who want to test the power of AI.",
     "nl": "De perfecte starter voor lokale ondernemers die de kracht van AI willen testen."
   },
@@ -2170,9 +2170,9 @@
     "nl": "Pro"
   },
   "index.offer.pro.desc": {
-    "fr": "Pour les propriétaires ambitieux qui veulent scaler leur business.",
-    "en": "For ambitious owners who want to scale their business.",
-    "nl": "Voor ambitieuze eigenaren die hun Business-bedrijf willen opschalen."
+    "fr": "Pour les commerçants ambitieux qui veulent scaler leur commerce.",
+    "en": "For ambitious merchants who want to scale their business.",
+    "nl": "Voor ambitieuze zelfstandigen die hun bedrijf willen opschalen."
   },
   "index.offer.pro.f1": {
     "fr": "Site vitrine professionnel (jusqu'à 3 pages)",
@@ -2573,66 +2573,6 @@
     "en": "Track your performance in real-time on your personalized dashboard.",
     "nl": "Volg uw prestaties in realtime op uw gepersonaliseerde dashboard."
   },
-  "index.testimonials.tag": {
-    "fr": "Ce qu'on en dit",
-    "en": "What they say",
-    "nl": "Wat ze zeggen"
-  },
-  "index.testimonials.title": {
-    "fr": "La plateforme choisie par les professionnels de la location",
-    "en": "The platform chosen by rental professionals",
-    "nl": "Het platform gekozen door verhuurprofessionals"
-  },
-  "index.testimonials.subtitle": {
-    "fr": "Des outils IA conçus pour les gestionnaires de biens immobiliers.",
-    "en": "AI tools designed for property managers.",
-    "nl": "AI-tools ontworpen voor vastgoedbeheerders."
-  },
-  "index.testimonials.t1.text": {
-    "fr": "\"Les agents IA de JCODE automatisent les tâches répétitives et nous permettent de nous concentrer sur l'essentiel : l'expérience de nos voyageurs.\"",
-    "en": "\"JCODE's AI agents automate repetitive tasks and allow us to focus on what matters: the guest experience.\"",
-    "nl": "\"De AI-agents van JCODE automatiseren repetitieve taken en stellen ons in staat om ons te concentreren op wat belangrijk is: de gastervaring.\""
-  },
-  "index.testimonials.t1.name": {
-    "fr": "Propriétaire en location courte durée",
-    "en": "Short-term rental owner",
-    "nl": "Eigenaar van korte termijn verhuur"
-  },
-  "index.testimonials.t1.role": {
-    "fr": "Secteur résidentiel",
-    "en": "Residential sector",
-    "nl": "Residentiële sector"
-  },
-  "index.testimonials.t2.text": {
-    "fr": "\"La qualité des vidéos et la précision des réponses aux voyageurs font toute la différence. Un gain de temps considérable au quotidien.\"",
-    "en": "\"The quality of the videos and the accuracy of guest responses make all the difference. A considerable time saving on a daily basis.\"",
-    "nl": "\"De kwaliteit van de video's en de nauwkeurigheid van gastenantwoorden maken het verschil. Aanzienlijke tijdbesparing op dagelijkse basis.\""
-  },
-  "index.testimonials.t2.name": {
-    "fr": "Gestionnaire de biens multiples",
-    "en": "Multi-property manager",
-    "nl": "Beheerder van meerdere eigendommen"
-  },
-  "index.testimonials.t2.role": {
-    "fr": "Secteur de la gestion immobilière",
-    "en": "Property management sector",
-    "nl": "Vastgoedbeheersector"
-  },
-  "index.testimonials.t3.text": {
-    "fr": "\"L'approche automatisée de la prospection et la personnalisation des communications nous aident à développer notre activité de conciergerie.\"",
-    "en": "\"The automated approach to prospecting and the personalization of communications help us grow our concierge business.\"",
-    "nl": "\"De geautomatiseerde aanpak van prospectie en de personalisatie van communicatie helpt ons ons conciërgediensten uit te breiden.\""
-  },
-  "index.testimonials.t3.name": {
-    "fr": "Service de conciergerie professionnelle",
-    "en": "Professional concierge service",
-    "nl": "Professionele conciërgedienst"
-  },
-  "index.testimonials.t3.role": {
-    "fr": "Secteur de l'hospitalité",
-    "en": "Hospitality sector",
-    "nl": "Horecasector"
-  },
   "index.contact.tag": {
     "fr": "Contact",
     "en": "Contact",
@@ -2654,9 +2594,9 @@
     "nl": "Laten we praten"
   },
   "index.contact.desc": {
-    "fr": "Que vous soyez propriétaire d'une seule location ou d'un portefeuille de biens, nous avons la solution IA adaptée à vos besoins.",
-    "en": "Whether you own a single rental or a portfolio of properties, we have the AI solution tailored to your needs.",
-    "nl": "Of u nu één verhuur of een portfolio van eigendommen bezit, wij hebben de AI-oplossing op maat van uw behoeften."
+    "fr": "Que vous gériez un seul établissement ou un réseau de commerces, nous avons la solution IA adaptée à vos besoins.",
+    "en": "Whether you run a single venue or a network of businesses, we have the AI solution tailored to your needs.",
+    "nl": "Of u nu één vestiging of een netwerk van bedrijven beheert, wij hebben de AI-oplossing op maat van uw behoeften."
   },
   "index.contact.emailLabel": {
     "fr": "Email",
@@ -2754,14 +2694,14 @@
     "nl": "Verstuur bericht →"
   },
   "index.cta.title": {
-    "fr": "Prêt à automatiser votre Business ?",
-    "en": "Ready to automate your Business?",
-    "nl": "Klaar om uw Business te automatiseren?"
+    "fr": "Prêt à automatiser votre commerce ?",
+    "en": "Ready to automate your business?",
+    "nl": "Klaar om uw bedrijf te automatiseren?"
   },
   "index.cta.subtitle": {
-    "fr": "Rejoignez les propriétaires intelligents qui laissent l'IA faire le travail pendant qu'ils profitent de la vie.",
-    "en": "Join the smart owners who let AI do the work while they enjoy life.",
-    "nl": "Sluit u aan bij de slimme eigenaren die AI het werk laten doen terwijl ze van het leven genieten."
+    "fr": "Rejoignez les commerçants avisés qui laissent l'IA faire le travail pendant qu'ils profitent de la vie.",
+    "en": "Join the savvy merchants who let AI do the work while they enjoy life.",
+    "nl": "Sluit u aan bij de scherpe zelfstandigen die AI het werk laten doen terwijl ze van het leven genieten."
   },
   "index.cta.button": {
     "fr": "Choisir mon package →",
@@ -2813,11 +2753,6 @@
     "en": "Process",
     "nl": "Proces"
   },
-  "common.nav.results": {
-    "fr": "Résultats",
-    "en": "Results",
-    "nl": "Resultaten"
-  },
   "common.nav.contact": {
     "fr": "Contact",
     "en": "Contact",
@@ -2834,9 +2769,9 @@
     "nl": "Bekijk aanbiedingen"
   },
   "common.footer.brandDesc": {
-    "fr": "L'agence marketing Business 100% automatisée par IA. 21 agents intelligents travaillent pour vous 24/7.",
-    "en": "The Business marketing agency 100% automated by AI. 21 smart agents work for you 24/7.",
-    "nl": "Het Business-marketingbureau 100% geautomatiseerd door AI. 21 slimme agents werken 24/7 voor u."
+    "fr": "L'agence marketing commerce 100% automatisée par IA. 21 agents intelligents travaillent pour vous 24/7.",
+    "en": "The business marketing agency 100% automated by AI. 21 smart agents work for you 24/7.",
+    "nl": "Het bedrijfsmarketingbureau 100% geautomatiseerd door AI. 21 slimme agents werken 24/7 voor u."
   },
   "common.footer.services": {
     "fr": "Services",
@@ -2880,7 +2815,7 @@
   },
   "concierge.meta.title": {
     "fr": "AI Concierge — JCODE Agency | Automatisation IA pour commerces locaux",
-    "en": "AI Concierge — JCODE Agency | AI Automation for Local Businesses",
+    "en": "AI Concierge — JCODE Agency | AI Automation for Local businesses",
     "nl": "AI Concierge — JCODE Agency | IA-automatisering voor lokale bedrijven"
   },
   "concierge.meta.description": {

@@ -6,7 +6,7 @@
     <title>JCODE Agency — Sites Web & Marketing Automatisé par IA</title>
     <meta name="google-site-verification" content="8o42LdPEl_z59uAi-Gub9OmIVYG9u2nmVitHRzBQbIA" />
     <meta name="description" content="JCODE Agency — Création de sites web professionnels pour entrepreneurs et PME. Sites vitrines, e-commerce et applications sur mesure." data-fr="JCODE Agency — Création de sites web professionnels pour entrepreneurs et PME. Sites vitrines, e-commerce et applications sur mesure." data-en="JCODE Agency — Professional websites for entrepreneurs and SMEs. Custom websites, e-commerce and web applications built for you." data-nl="JCODE Agency — Professionele websites voor ondernemers en KMO's. Op maat gemaakte websites, webshops en applicaties op maat.">
-    <meta name="keywords" content="marketing digital, site web commerce, agents IA, automatisation commerce, coiffeur, restaurant, boulanger, marketing business, conciergerie business">
+    <meta name="keywords" content="marketing digital, site web commerce, agents IA, automatisation commerce, coiffeur, restaurant, boulanger, marketing commerce, conciergerie commerce">
     <meta name="author" content="JCODE Agency">
     <meta property="og:title" content="JCODE Agency — Sites Web & Marketing Automatisé par IA">
     <meta property="og:description" content="21 agents IA travaillent pour votre commerce 24/7. Sites web, marketing, prospection. Package Teaser à 497€.">
@@ -761,59 +761,6 @@
             font-size: 0.9rem;
         }
 
-        /* ===== TESTIMONIALS ===== */
-        .testimonials {
-            padding: 6rem 0;
-            background: var(--white);
-        }
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        .testimonial-card {
-            background: var(--light);
-            border-radius: 20px;
-            padding: 2rem;
-            border: 1px solid rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-        .testimonial-stars {
-            color: var(--accent);
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-        .testimonial-text {
-            color: var(--dark);
-            font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            font-style: italic;
-        }
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .author-avatar {
-            width: 48px; height: 48px;
-            border-radius: 50%;
-            background: var(--gradient-1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 1rem;
-        }
-        .author-info h4 { font-size: 0.95rem; font-weight: 600; color: var(--dark); }
-        .author-info p { font-size: 0.85rem; color: var(--gray); }
-
         /* ===== CTA SECTION ===== */
         .cta-section {
             padding: 6rem 0;
@@ -1075,7 +1022,7 @@
             .hero-stats { justify-content: center; }
             .hero-visual { order: -1; }
             .hero-card { max-width: 400px; margin: 0 auto; }
-            .services-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
             .steps-grid { grid-template-columns: repeat(2, 1fr); }
             .step-card:not(:last-child)::after { display: none; }
             .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
@@ -1086,7 +1033,7 @@
             .mobile-menu-btn { display: block; }
             .hero-title { font-size: 2.5rem; }
             .hero-stats { flex-direction: column; gap: 1.5rem; text-align: center; }
-            .services-grid, .testimonials-grid, .steps-grid { grid-template-columns: 1fr; }
+            .services-grid, .steps-grid { grid-template-columns: 1fr; }
             .offer-card { padding: 2rem; }
             .price-amount { font-size: 3rem; }
             .cta-title { font-size: 2rem; }
@@ -1190,7 +1137,7 @@
         "@context": "https://schema.org",
         "@type": "Service",
         "name": "JCODE Agency Packages",
-        "description": "Packages marketing Business automatisé par IA. Teaser (497€), Pro (999€) et Pro Max (1,599€).",
+        "description": "Packages marketing commerce automatisé par IA. Teaser (497€), Pro (999€) et Pro Max (1,599€).",
         "provider": { "@type": "Organization", "name": "JCODE Agency" },
         "offers": [
             {
@@ -1233,42 +1180,6 @@
 </head>
 <body>
 
-    <!-- COOKIE BANNER RGPD -->
-    <div id="cookie-banner" style="position:fixed; bottom:0; left:0; right:0; z-index:9999; background:rgba(15,23,42,0.98); backdrop-filter:blur(20px); border-top:1px solid rgba(255,255,255,0.1); padding:1.5rem 2rem; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:1.5rem; font-family:'Inter',sans-serif; transition:transform 0.5s ease; transform:translateY(0);">
-        <div style="flex:1; min-width:260px; max-width:700px; color:var(--gray-light); font-size:0.9rem; line-height:1.6;">
-            <strong style="color:white; display:block; margin-bottom:0.3rem;" data-i18n="common.cookie.title">🍪 Nous utilisons des cookies</strong>
-            <span data-i18n="common.cookie.text">Ce site utilise des cookies pour améliorer votre expérience, analyser le trafic et personnaliser le contenu. Vous pouvez choisir d'accepter, de personnaliser ou de refuser.</span>
-        </div>
-        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center;">
-            <button onclick="cookieChoice('refuse')" data-i18n="common.cookie.refuse" style="padding:0.6rem 1.2rem; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:transparent; color:var(--gray-light); font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.3s; font-family:'Inter',sans-serif;">Refuser</button>
-            <button onclick="cookieChoice('customize')" data-i18n="common.cookie.customize" style="padding:0.6rem 1.2rem; border-radius:10px; border:1px solid rgba(99,102,241,0.4); background:rgba(99,102,241,0.1); color:var(--primary-light); font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.3s; font-family:'Inter',sans-serif;">Personnaliser</button>
-            <button onclick="cookieChoice('accept')" data-i18n="common.cookie.accept" style="padding:0.6rem 1.2rem; border-radius:10px; border:none; background:var(--gradient-1); color:white; font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.3s; box-shadow:0 4px 15px rgba(99,102,241,0.3); font-family:'Inter',sans-serif;">Accepter</button>
-        </div>
-    </div>
-    <div id="cookie-customize" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9998; background:rgba(15,23,42,0.98); backdrop-filter:blur(20px); border-top:1px solid rgba(255,255,255,0.1); padding:2rem; font-family:'Inter',sans-serif;">
-        <div style="max-width:600px; margin:0 auto;">
-            <h3 style="color:white; font-family:'Space Grotesk',sans-serif; margin-bottom:1rem; font-size:1.2rem;" data-i18n="common.cookie.customizeTitle">Personnaliser les cookies</h3>
-            <div style="display:flex; flex-direction:column; gap:1rem; margin-bottom:1.5rem;">
-                <label style="display:flex; align-items:center; gap:0.75rem; color:var(--gray-light); cursor:pointer;">
-                    <input type="checkbox" id="cookie-necessary" checked disabled style="width:18px; height:18px; accent-color:var(--primary);">
-                    <span data-i18n-html="common.cookie.necessary"><strong style="color:white;">Nécessaires</strong> — Requis pour le fonctionnement du site</span>
-                </label>
-                <label style="display:flex; align-items:center; gap:0.75rem; color:var(--gray-light); cursor:pointer;">
-                    <input type="checkbox" id="cookie-analytics" style="width:18px; height:18px; accent-color:var(--primary);">
-                    <span data-i18n-html="common.cookie.analytics"><strong style="color:white;">Analytiques</strong> — Google Analytics, Meta Pixel</span>
-                </label>
-                <label style="display:flex; align-items:center; gap:0.75rem; color:var(--gray-light); cursor:pointer;">
-                    <input type="checkbox" id="cookie-marketing" style="width:18px; height:18px; accent-color:var(--primary);">
-                    <span data-i18n-html="common.cookie.marketing"><strong style="color:white;">Marketing</strong> — Publicités ciblées et remarketing</span>
-                </label>
-            </div>
-            <div style="display:flex; gap:0.75rem; justify-content:flex-end;">
-                <button onclick="closeCustomize()" data-i18n="common.cookie.cancel" style="padding:0.6rem 1.2rem; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:transparent; color:var(--gray-light); font-weight:600; font-size:0.85rem; cursor:pointer; font-family:'Inter',sans-serif;">Annuler</button>
-                <button onclick="saveCustomize()" data-i18n="common.cookie.save" style="padding:0.6rem 1.2rem; border-radius:10px; border:none; background:var(--gradient-1); color:white; font-weight:600; font-size:0.85rem; cursor:pointer; box-shadow:0 4px 15px rgba(99,102,241,0.3); font-family:'Inter',sans-serif;">Enregistrer mes choix</button>
-            </div>
-        </div>
-    </div>
-
 
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
@@ -1303,7 +1214,6 @@
                 <a href="#offre" data-i18n="common.nav.offer">Offre</a>
                 <a href="ai-concierge.html" style="color:var(--primary);position:relative;">AI Concierge <span style="background:#ff006e;color:#fff;font-size:10px;padding:2px 6px;border-radius:8px;vertical-align:super;font-weight:700;">NEW</span></a>
                 <a href="#comment" data-i18n="common.nav.process">Processus</a>
-                <a href="#temoignages" data-i18n="common.nav.results">Résultats</a>
                 <a href="#contact" data-i18n="common.nav.contact">Contact</a>
                 <a href="espace-client.html" data-i18n="common.nav.clientArea">Espace Client</a>
                 <a href="#offre" class="nav-cta" data-i18n="common.nav.viewOffers">Voir les offres</a>
@@ -1327,7 +1237,7 @@
                     <span class="gradient-text" data-i18n="index.hero.titleLine2">100% automatisé</span>
                 </h1>
                 <p class="hero-subtitle animate-fade-in-up delay-3" data-i18n="index.hero.subtitle">
-                    JCODE Agency propulse votre commerce (Business, restaurant, coiffeur, boulanger...) avec une armée d'agents IA. Génération de contenu, prospection clients, et optimisation — tout tourne en autopilot.
+                    JCODE Agency propulse votre commerce (commerce, restaurant, coiffeur, boulanger...) avec une armée d'agents IA. Génération de contenu, prospection clients, et optimisation — tout tourne en autopilot.
                 </p>
                 <div class="hero-cta-group animate-fade-in-up delay-4">
                     <a href="#offre" class="btn btn-primary" data-i18n="index.hero.ctaPrimary">
@@ -1413,7 +1323,7 @@
             <div class="section-header reveal">
                 <div class="section-tag" data-i18n="index.services.tag">Nos Services</div>
                 <h2 class="section-title" data-i18n="index.services.title">Une armée d'agents IA à votre service</h2>
-                <p class="section-subtitle" data-i18n="index.services.subtitle">Chaque agent est spécialisé dans une mission précise pour faire croître votre business Business sans effort.</p>
+                <p class="section-subtitle" data-i18n="index.services.subtitle">Chaque agent est spécialisé dans une mission précise pour faire croître votre commerce sans effort.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card reveal">
@@ -1424,7 +1334,7 @@
                 <div class="service-card reveal">
                     <div class="service-icon">✍️</div>
                     <h3 data-i18n="index.services.copymaster.title">CopyMaster</h3>
-                    <p data-i18n="index.services.copymaster.desc">Rédaction SEO optimisée pour vos annonces Business, descriptions captivantes, et contenu de blog qui convertit les visiteurs.</p>
+                    <p data-i18n="index.services.copymaster.desc">Rédaction SEO optimisée pour vos annonces commerce, descriptions captivantes, et contenu de blog qui convertit les visiteurs.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">📹</div>
@@ -1435,7 +1345,7 @@
                 <div class="service-card reveal">
                     <div class="service-icon">📧</div>
                     <h3 data-i18n="index.services.outreach.title">Outreach Pro</h3>
-                    <p data-i18n="index.services.outreach.desc">Prospection automatisée de propriétaires Business : scraping ciblé, emails personnalisés, et suivi intelligent des leads.</p>
+                    <p data-i18n="index.services.outreach.desc">Prospection automatisée de propriétaires commerces : scraping ciblé, emails personnalisés, et suivi intelligent des leads.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">📊</div>
@@ -1457,14 +1367,14 @@
             <div class="offer-header reveal">
                 <div class="section-tag" data-i18n="index.offer.tag">Nos Offres</div>
                 <h2 class="section-title" data-i18n="index.offer.title">Choisissez votre package</h2>
-                <p class="section-subtitle" data-i18n="index.offer.subtitle">Trois niveaux de puissance IA pour propulser votre Business. Sans engagement, annulable à tout moment.</p>
+                <p class="section-subtitle" data-i18n="index.offer.subtitle">Trois niveaux de puissance IA pour propulser votre commerce. Sans engagement, annulable à tout moment.</p>
             </div>
             <div class="pricing-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
                 <!-- TEASER -->
                 <div class="offer-card reveal" style="max-width: 100%;">
                     <div class="offer-badge" style="background: #10b981; color: white; font-weight: bold; padding: 6px 16px; border-radius: 20px; display: inline-block; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="index.offer.recommended">⭐ RECOMMANDÉ</div>
                     <div class="offer-name" data-i18n="index.offer.teaser.name">Teaser</div>
-                    <p class="offer-desc" data-i18n="index.offer.teaser.desc">Le starter parfait pour propriétaires de business local qui veulent tester la puissance de l'IA.</p>
+                    <p class="offer-desc" data-i18n="index.offer.teaser.desc">Le starter parfait pour propriétaires de commerce local qui veulent tester la puissance de l'IA.</p>
                     <div class="offer-price">
                         <span class="price-currency">€</span>
                         <span class="price-amount">497</span>
@@ -1488,7 +1398,7 @@
                 <div class="offer-card reveal" style="max-width: 100%; border: 2px solid var(--accent); animation: glow 4s ease-in-out infinite;">
                     <div class="offer-badge" style="background: var(--accent); color: var(--dark);">LIVE</div>
                     <div class="offer-name" data-i18n="index.offer.pro.name">Pro</div>
-                    <p class="offer-desc" data-i18n="index.offer.pro.desc">Pour les propriétaires ambitieux qui veulent scaler leur business Business.</p>
+                    <p class="offer-desc" data-i18n="index.offer.pro.desc">Pour les propriétaires ambitieux qui veulent scaler leur commerce.</p>
                     <div class="offer-price">
                         <span class="price-currency">€</span>
                         <span class="price-amount">999</span>
@@ -1629,79 +1539,6 @@
 </section>
 
 
-    <!-- AI CONCIERGE -->
-    <section id="ai-concierge" style="padding:100px 20px;background:linear-gradient(180deg,#0a0a0a 0%,#0d1117 100%);position:relative;overflow:hidden;">
-        <div style="position:absolute;top:-200px;right:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(0,240,255,0.08) 0%,transparent 70%);border-radius:50%;"></div>
-        <div style="position:absolute;bottom:-150px;left:-150px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,0,110,0.06) 0%,transparent 70%);border-radius:50%;"></div>
-        <div class="section-container" style="max-width:1100px;margin:0 auto;position:relative;z-index:1;">
-            <div class="section-header reveal" style="text-align:center;margin-bottom:60px;">
-                <div class="section-tag" style="display:inline-block;background:rgba(255,0,110,0.15);color:#ff006e;padding:8px 20px;border-radius:50px;font-size:13px;font-weight:600;letter-spacing:1px;margin-bottom:16px;" data-i18n="index.concierge.tag">&#10024; NOUVEAU — AI CONCIERGE</div>
-                <h2 class="section-title" style="font-size:clamp(2rem,5vw,3rem);color:#fff;margin-bottom:16px;" data-i18n="index.concierge.title">Votre Partenaire Automatisation IA</h2>
-                <p class="section-subtitle" style="color:#94a3b8;font-size:18px;max-width:650px;margin:0 auto;" data-i18n-html="index.concierge.subtitle_html">Done-with-you : on construit <strong style="color:#00f0ff;">ensemble</strong> votre automatisation. 2 appels de 45 min/mois + Voxer illimit&eacute; + Hub Notion personnalis&eacute;.</p>
-            </div>
-            <!-- TIMELINE 3 PHASES -->
-            <div style="display:flex;justify-content:center;gap:0;margin-bottom:60px;flex-wrap:wrap;">
-                <div style="text-align:center;padding:24px 32px;position:relative;">
-                    <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#00f0ff,#0080ff);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:24px;">&#128269;</div>
-                    <h4 style="color:#fff;font-size:16px;margin-bottom:6px;" data-i18n="index.concierge.phase1.title">1. Audit</h4>
-                    <p style="color:#94a3b8;font-size:13px;" data-i18n="index.concierge.phase1.desc">Cartographie de vos processus</p>
-                </div>
-                <div style="text-align:center;padding:24px 32px;position:relative;">
-                    <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#ff006e,#ff4d94);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:24px;">&#9889;</div>
-                    <h4 style="color:#fff;font-size:16px;margin-bottom:6px;" data-i18n="index.concierge.phase2.title">2. Optimize</h4>
-                    <p style="color:#94a3b8;font-size:13px;" data-i18n="index.concierge.phase2.desc">Suppression des &eacute;tapes inutiles</p>
-                </div>
-                <div style="text-align:center;padding:24px 32px;">
-                    <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#a855f7,#7c3aed);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:24px;">&#129302;</div>
-                    <h4 style="color:#fff;font-size:16px;margin-bottom:6px;" data-i18n="index.concierge.phase3.title">3. Automate</h4>
-                    <p style="color:#94a3b8;font-size:13px;" data-i18n="index.concierge.phase3.desc">D&eacute;ploiement IA + Make.com</p>
-                </div>
-            </div>
-            <!-- PRICING CARDS -->
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:48px;">
-                <div style="background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:36px;transition:all .3s;">
-                    <h3 style="color:#00f0ff;font-size:14px;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;" data-i18n="index.concierge.pricing.starter.name">Starter</h3>
-                    <div style="font-size:36px;font-weight:800;color:#fff;margin-bottom:4px;">1 000&euro;<span style="font-size:16px;color:#94a3b8;font-weight:400;" data-i18n="index.concierge.pricing.perMonth">/mois</span></div>
-                    <ul style="list-style:none;padding:0;margin:20px 0;color:#94a3b8;font-size:14px;line-height:2.2;">
-                        <li data-i18n-html="index.concierge.pricing.starter.f1">2 appels de 45 min/mois</li>
-                        <li data-i18n-html="index.concierge.pricing.starter.f2">Voxer illimit&eacute; (r&eacute;ponse &lt;12h)</li>
-                        <li data-i18n-html="index.concierge.pricing.starter.f3">Hub Notion personnalis&eacute;</li>
-                        <li data-i18n-html="index.concierge.pricing.starter.f4">2 skills Claude/mois</li>
-                    </ul>
-                    <a href="intake-form.html" style="display:block;text-align:center;padding:14px;border:1px solid #00f0ff;color:#00f0ff;border-radius:12px;text-decoration:none;font-weight:600;" data-i18n="index.concierge.pricing.cta">Commencer</a>
-                </div>
-                <div style="background:rgba(255,0,110,0.05);backdrop-filter:blur(20px);border:2px solid #ff006e;border-radius:20px;padding:36px;position:relative;">
-                    <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#ff006e;color:#fff;padding:4px 16px;border-radius:20px;font-size:11px;font-weight:700;" data-i18n="index.concierge.pricing.pro.popular">POPULAIRE</div>
-                    <h3 style="color:#ff006e;font-size:14px;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;" data-i18n="index.concierge.pricing.pro.name">Pro</h3>
-                    <div style="font-size:36px;font-weight:800;color:#fff;margin-bottom:4px;">1 500&euro;<span style="font-size:16px;color:#94a3b8;font-weight:400;" data-i18n="index.concierge.pricing.perMonth">/mois</span></div>
-                    <ul style="list-style:none;padding:0;margin:20px 0;color:#94a3b8;font-size:14px;line-height:2.2;">
-                        <li data-i18n-html="index.concierge.pricing.pro.f1">Tout Starter +</li>
-                        <li data-i18n-html="index.concierge.pricing.pro.f2">Skills Claude illimit&eacute;s</li>
-                        <li data-i18n-html="index.concierge.pricing.pro.f3">Workflows Make.com</li>
-                        <li data-i18n-html="index.concierge.pricing.pro.f4">Support prioritaire Voxer</li>
-                        <li data-i18n-html="index.concierge.pricing.pro.f5">Rapports bi-mensuels</li>
-                    </ul>
-                    <a href="intake-form.html" style="display:block;text-align:center;padding:14px;background:#ff006e;color:#fff;border-radius:12px;text-decoration:none;font-weight:600;" data-i18n="index.concierge.pricing.cta">Commencer</a>
-                </div>
-                <div style="background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:36px;transition:all .3s;">
-                    <h3 style="color:#a855f7;font-size:14px;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;" data-i18n="index.concierge.pricing.elite.name">Elite</h3>
-                    <div style="font-size:36px;font-weight:800;color:#fff;margin-bottom:4px;">2 000&euro;<span style="font-size:16px;color:#94a3b8;font-weight:400;" data-i18n="index.concierge.pricing.perMonth">/mois</span></div>
-                    <ul style="list-style:none;padding:0;margin:20px 0;color:#94a3b8;font-size:14px;line-height:2.2;">
-                        <li data-i18n-html="index.concierge.pricing.elite.f1">Tout Pro +</li>
-                        <li data-i18n-html="index.concierge.pricing.elite.f2">Acc&egrave;s prioritaire (4 appels/mois)</li>
-                        <li data-i18n-html="index.concierge.pricing.elite.f3">Rapports mensuels + ROI</li>
-                        <li data-i18n-html="index.concierge.pricing.elite.f4">Strat&eacute;gie IA trimestrielle</li>
-                        <li data-i18n-html="index.concierge.pricing.elite.f5">Slack/Discord d&eacute;di&eacute;</li>
-                    </ul>
-                    <a href="intake-form.html" style="display:block;text-align:center;padding:14px;border:1px solid #a855f7;color:#a855f7;border-radius:12px;text-decoration:none;font-weight:600;" data-i18n="index.concierge.pricing.cta">Commencer</a>
-                </div>
-            </div>
-            <div style="text-align:center;">
-                <a href="ai-concierge.html" data-i18n="index.concierge.cta" style="display:inline-block;padding:16px 40px;background:linear-gradient(135deg,#00f0ff,#0080ff);color:#0a0a0a;border-radius:50px;text-decoration:none;font-weight:700;font-size:16px;box-shadow:0 0 30px rgba(0,240,255,0.3);">R&eacute;server un appel d&eacute;couverte gratuit &rarr;</a>
-            </div>
-        </div>
-    </section>
-
     <!-- HOW IT WORKS -->
     <section class="how-it-works" id="comment">
         <div class="section-container">
@@ -1730,52 +1567,6 @@
                     <div class="step-number">4</div>
                     <h3 data-i18n="index.how.step4.title">Résultats mesurés</h3>
                     <p data-i18n="index.how.step4.desc">Suivez vos performances en temps réel sur votre dashboard personnalisé.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="testimonials" id="temoignages">
-        <div class="section-container">
-            <div class="section-header reveal">
-                <div class="section-tag" data-i18n="index.testimonials.tag">Ce qu'on en dit</div>
-                <h2 class="section-title" data-i18n="index.testimonials.title">La plateforme choisie par les professionnels de la location</h2>
-                <p class="section-subtitle" data-i18n="index.testimonials.subtitle">Des outils IA conçus pour les gestionnaires de biens immobiliers.</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text" data-i18n="index.testimonials.t1.text">"Les agents IA de JCODE automatisent les tâches répétitives et nous permettent de nous concentrer sur l'essentiel : l'expérience de nos voyageurs."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">🏠</div>
-                        <div class="author-info">
-                            <h4 data-i18n="index.testimonials.t1.name">Propriétaire en location courte durée</h4>
-                            <p data-i18n="index.testimonials.t1.role">Secteur résidentiel</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text" data-i18n="index.testimonials.t2.text">"La qualité des vidéos et la précision des réponses aux voyageurs font toute la différence. Un gain de temps considérable au quotidien."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">🏢</div>
-                        <div class="author-info">
-                            <h4 data-i18n="index.testimonials.t2.name">Gestionnaire de biens multiples</h4>
-                            <p data-i18n="index.testimonials.t2.role">Secteur de la gestion immobilière</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text" data-i18n="index.testimonials.t3.text">"L'approche automatisée de la prospection et la personnalisation des communications nous aident à développer notre activité de conciergerie."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">🔑</div>
-                        <div class="author-info">
-                            <h4 data-i18n="index.testimonials.t3.name">Service de conciergerie professionnelle</h4>
-                            <p data-i18n="index.testimonials.t3.role">Secteur de l'hospitalité</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1852,7 +1643,7 @@
     <!-- CTA SECTION -->
     <section class="cta-section">
         <div class="cta-container">
-            <h2 class="cta-title reveal" data-i18n="index.cta.title">Prêt à automatiser votre Business ?</h2>
+            <h2 class="cta-title reveal" data-i18n="index.cta.title">Prêt à automatiser votre commerce ?</h2>
             <p class="cta-subtitle reveal" data-i18n="index.cta.subtitle">Rejoignez les propriétaires intelligents qui laissent l'IA faire le travail pendant qu'ils profitent de la vie.</p>
             <a href="#offre" class="btn cta-btn reveal" data-i18n="index.cta.button">
                 Choisir mon package →
@@ -1869,7 +1660,7 @@
                         <div class="logo-icon">J</div>
                         JCODE Agency
                     </a>
-                    <p data-i18n="common.footer.brandDesc">L'agence marketing Business 100% automatisée par IA. 21 agents intelligents travaillent pour vous 24/7.</p>
+                    <p data-i18n="common.footer.brandDesc">L'agence marketing commerce 100% automatisée par IA. 21 agents intelligents travaillent pour vous 24/7.</p>
                 </div>
                 <div class="footer-col">
                     <h4 data-i18n="common.footer.services">Services</h4>
@@ -2015,6 +1806,42 @@
             document.getElementById('cookie-banner').style.display = 'none';
         }
     </script>
+
+    <!-- COOKIE BANNER RGPD (moved to end of body for DOM hierarchy) -->
+    <div id="cookie-banner" style="position:fixed; bottom:0; left:0; right:0; z-index:9999; background:rgba(15,23,42,0.98); backdrop-filter:blur(20px); border-top:1px solid rgba(255,255,255,0.1); padding:1.5rem 2rem; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:1.5rem; font-family:'Inter',sans-serif; transition:transform 0.5s ease; transform:translateY(0);">
+        <div style="flex:1; min-width:260px; max-width:700px; color:var(--gray-light); font-size:0.9rem; line-height:1.6;">
+            <strong style="color:white; display:block; margin-bottom:0.3rem;" data-i18n="common.cookie.title">🍪 Nous utilisons des cookies</strong>
+            <span data-i18n="common.cookie.text">Ce site utilise des cookies pour améliorer votre expérience, analyser le trafic et personnaliser le contenu. Vous pouvez choisir d'accepter, de personnaliser ou de refuser.</span>
+        </div>
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center;">
+            <button onclick="cookieChoice('refuse')" data-i18n="common.cookie.refuse" style="padding:0.6rem 1.2rem; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:transparent; color:var(--gray-light); font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.3s; font-family:'Inter',sans-serif;">Refuser</button>
+            <button onclick="cookieChoice('customize')" data-i18n="common.cookie.customize" style="padding:0.6rem 1.2rem; border-radius:10px; border:1px solid rgba(99,102,241,0.4); background:rgba(99,102,241,0.1); color:var(--primary-light); font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.3s; font-family:'Inter',sans-serif;">Personnaliser</button>
+            <button onclick="cookieChoice('accept')" data-i18n="common.cookie.accept" style="padding:0.6rem 1.2rem; border-radius:10px; border:none; background:var(--gradient-1); color:white; font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.3s; box-shadow:0 4px 15px rgba(99,102,241,0.3); font-family:'Inter',sans-serif;">Accepter</button>
+        </div>
+    </div>
+    <div id="cookie-customize" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9998; background:rgba(15,23,42,0.98); backdrop-filter:blur(20px); border-top:1px solid rgba(255,255,255,0.1); padding:2rem; font-family:'Inter',sans-serif;">
+        <div style="max-width:600px; margin:0 auto;">
+            <h3 style="color:white; font-family:'Space Grotesk',sans-serif; margin-bottom:1rem; font-size:1.2rem;" data-i18n="common.cookie.customizeTitle">Personnaliser les cookies</h3>
+            <div style="display:flex; flex-direction:column; gap:1rem; margin-bottom:1.5rem;">
+                <label style="display:flex; align-items:center; gap:0.75rem; color:var(--gray-light); cursor:pointer;">
+                    <input type="checkbox" id="cookie-necessary" checked disabled style="width:18px; height:18px; accent-color:var(--primary);">
+                    <span data-i18n-html="common.cookie.necessary"><strong style="color:white;">Nécessaires</strong> — Requis pour le fonctionnement du site</span>
+                </label>
+                <label style="display:flex; align-items:center; gap:0.75rem; color:var(--gray-light); cursor:pointer;">
+                    <input type="checkbox" id="cookie-analytics" style="width:18px; height:18px; accent-color:var(--primary);">
+                    <span data-i18n-html="common.cookie.analytics"><strong style="color:white;">Analytiques</strong> — Google Analytics, Meta Pixel</span>
+                </label>
+                <label style="display:flex; align-items:center; gap:0.75rem; color:var(--gray-light); cursor:pointer;">
+                    <input type="checkbox" id="cookie-marketing" style="width:18px; height:18px; accent-color:var(--primary);">
+                    <span data-i18n-html="common.cookie.marketing"><strong style="color:white;">Marketing</strong> — Publicités ciblées et remarketing</span>
+                </label>
+            </div>
+            <div style="display:flex; gap:0.75rem; justify-content:flex-end;">
+                <button onclick="closeCustomize()" data-i18n="common.cookie.cancel" style="padding:0.6rem 1.2rem; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:transparent; color:var(--gray-light); font-weight:600; font-size:0.85rem; cursor:pointer; font-family:'Inter',sans-serif;">Annuler</button>
+                <button onclick="saveCustomize()" data-i18n="common.cookie.save" style="padding:0.6rem 1.2rem; border-radius:10px; border:none; background:var(--gradient-1); color:white; font-weight:600; font-size:0.85rem; cursor:pointer; box-shadow:0 4px 15px rgba(99,102,241,0.3); font-family:'Inter',sans-serif;">Enregistrer mes choix</button>
+            </div>
+        </div>
+    </div>
 <script src="booking-widget.js?v=2"></script>
 <script src="chatbot-widget.js?v=2"></script>
 </body>
