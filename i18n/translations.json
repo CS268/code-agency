@@ -410,34 +410,34 @@
     "nl": "Uw gegevens kunnen worden doorgegeven aan onze onderaannemers, allen gevestigd in de EU of met adequate AVG-waarborgen:"
   },
   "privacy.s5_stripe": {
-    "fr": "<strong>Stripe</strong> (paiement) — <a href='https://stripe.com/privacy'>stripe.com/privacy</a>",
-    "en": "<strong>Stripe</strong> (payment) — <a href='https://stripe.com/privacy'>stripe.com/privacy</a>",
-    "nl": "<strong>Stripe</strong> (betalingen) — <a href='https://stripe.com/privacy'>stripe.com/privacy</a>"
+    "fr": "<strong>Stripe</strong> (paiement) — <a href=\"https://stripe.com/privacy\">stripe.com/privacy</a>",
+    "en": "<strong>Stripe</strong> (payments) — <a href=\"https://stripe.com/privacy\">stripe.com/privacy</a>",
+    "nl": "<strong>Stripe</strong> (betalingen) — <a href=\"https://stripe.com/privacy\">stripe.com/privacy</a>"
   },
   "privacy.s5_github": {
-    "fr": "<strong>GitHub</strong> (hébergement site) — <a href='https://github.com/privacy'>github.com/privacy</a>",
-    "en": "<strong>GitHub</strong> (site hosting) — <a href='https://github.com/privacy'>github.com/privacy</a>",
-    "nl": "<strong>GitHub</strong> (hosting site) — <a href='https://github.com/privacy'>github.com/privacy</a>"
+    "fr": "<strong>GitHub</strong> (hébergement site) — <a href=\"https://github.com/privacy\">github.com/privacy</a>",
+    "en": "<strong>GitHub</strong> (site hosting) — <a href=\"https://github.com/privacy\">github.com/privacy</a>",
+    "nl": "<strong>GitHub</strong> (sitehosting) — <a href=\"https://github.com/privacy\">github.com/privacy</a>"
   },
   "privacy.s5_vercel": {
-    "fr": "<strong>Vercel</strong> (hébergement sites clients) — <a href='https://vercel.com/legal/privacy-policy'>vercel.com/legal/privacy-policy</a>",
-    "en": "<strong>Vercel</strong> (client site hosting) — <a href='https://vercel.com/legal/privacy-policy'>vercel.com/legal/privacy-policy</a>",
-    "nl": "<strong>Vercel</strong> (hosting klantsites) — <a href='https://vercel.com/legal/privacy-policy'>vercel.com/legal/privacy-policy</a>"
+    "fr": "<strong>Vercel</strong> (hébergement sites clients) — <a href=\"https://vercel.com/legal/privacy-policy\">vercel.com/legal/privacy-policy</a>",
+    "en": "<strong>Vercel</strong> (client site hosting) — <a href=\"https://vercel.com/legal/privacy-policy\">vercel.com/legal/privacy-policy</a>",
+    "nl": "<strong>Vercel</strong> (hosting klantsites) — <a href=\"https://vercel.com/legal/privacy-policy\">vercel.com/legal/privacy-policy</a>"
   },
   "privacy.s5_make": {
-    "fr": "<strong>Make.com</strong> (automatisation) — <a href='https://www.make.com/en/privacy-policy'>make.com/privacy</a>",
-    "en": "<strong>Make.com</strong> (automation) — <a href='https://www.make.com/en/privacy-policy'>make.com/privacy</a>",
-    "nl": "<strong>Make.com</strong> (automatisering) — <a href='https://www.make.com/en/privacy-policy'>make.com/privacy</a>"
+    "fr": "<strong>Make.com</strong> (automatisation) — <a href=\"https://www.make.com/en/privacy-policy\">make.com/privacy</a>",
+    "en": "<strong>Make.com</strong> (automation) — <a href=\"https://www.make.com/en/privacy-policy\">make.com/privacy</a>",
+    "nl": "<strong>Make.com</strong> (automatisering) — <a href=\"https://www.make.com/en/privacy-policy\">make.com/privacy</a>"
   },
   "privacy.s5_mistral": {
-    "fr": "<strong>Mistral AI</strong> (génération de contenu) — <a href='https://mistral.ai/privacy'>mistral.ai/privacy</a>",
-    "en": "<strong>Mistral AI</strong> (content generation) — <a href='https://mistral.ai/privacy'>mistral.ai/privacy</a>",
-    "nl": "<strong>Mistral AI</strong> (inhoudsgeneratie) — <a href='https://mistral.ai/privacy'>mistral.ai/privacy</a>"
+    "fr": "<strong>Mistral AI</strong> (génération de contenu) — <a href=\"https://mistral.ai/privacy\">mistral.ai/privacy</a>",
+    "en": "<strong>Mistral AI</strong> (content generation) — <a href=\"https://mistral.ai/privacy\">mistral.ai/privacy</a>",
+    "nl": "<strong>Mistral AI</strong> (contentgeneratie) — <a href=\"https://mistral.ai/privacy\">mistral.ai/privacy</a>"
   },
   "privacy.s5_google": {
-    "fr": "<strong>Gmail / Google</strong> (emails) — <a href='https://policies.google.com/privacy'>policies.google.com/privacy</a>",
-    "en": "<strong>Gmail / Google</strong> (emails) — <a href='https://policies.google.com/privacy'>policies.google.com/privacy</a>",
-    "nl": "<strong>Gmail / Google</strong> (e-mails) — <a href='https://policies.google.com/privacy'>policies.google.com/privacy</a>"
+    "fr": "<strong>Gmail / Google</strong> (emails) — <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>",
+    "en": "<strong>Gmail / Google</strong> (emails) — <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>",
+    "nl": "<strong>Gmail / Google</strong> (e-mails) — <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>"
   },
   "privacy.s5_no_sell": {
     "fr": "Nous ne vendons jamais vos données à des tiers.",
@@ -1940,14 +1940,14 @@
     "nl": "JCODE Agency — Websites & Geautomatiseerde Marketing door AI"
   },
   "index.meta.description": {
-    "fr": "JCODE Agency propulse votre commerce (commerce, restaurant, coiffeur, boulanger...) avec 21 agents IA. Vidéos, prospection, copywriting, sites web — 100% automatisé. Package Teaser à 497€.",
-    "en": "JCODE Agency boosts your business (commerce, restaurant, hairdresser, bakery...) with 21 AI agents. Videos, prospecting, copywriting, websites — 100% automated. Teaser Package at €497.",
-    "nl": "JCODE Agency boost uw bedrijf (commerce, restaurant, kapper, bakker...) met 21 AI-agents. Video's, prospectie, copywriting, websites — 100% geautomatiseerd. Teaser Pakket voor €497."
+    "fr": "JCODE Agency propulse votre commerce (commerce, restaurant, coiffeur, boulanger...) avec 8 modules IA. Vidéos, prospection, copywriting, sites web — 100% automatisé. Package Teaser à 497€.",
+    "en": "JCODE Agency boosts your business (commerce, restaurant, hairdresser, bakery...) with 8 AI modules. Videos, prospecting, copywriting, websites — 100% automated. Teaser Package at €497.",
+    "nl": "JCODE Agency boost uw bedrijf (commerce, restaurant, kapper, bakker...) met 8 AI-modules. Video's, prospectie, copywriting, websites — 100% geautomatiseerd. Teaser Pakket voor €497."
   },
   "index.hero.badge": {
-    "fr": "21 agents IA déployés",
-    "en": "21 AI agents deployed",
-    "nl": "21 AI-agents ingezet"
+    "fr": "8 modules IA déployés",
+    "en": "8 AI modules deployed",
+    "nl": "8 AI-modules ingezet"
   },
   "index.hero.titleLine1": {
     "fr": "Votre marketing digital,",
@@ -2075,9 +2075,9 @@
     "nl": "Geautomatiseerde videoproductie: vastgoedbeelden, Instagram/TikTok reels en virale content om uw zichtbaarheid te maximaliseren."
   },
   "index.services.videocreator.badge": {
-   "fr": "💎 Q1 2027",
-   "en": "💎 Q1 2027",
-   "nl": "💎 Q1 2027"
+    "fr": "💎 Q1 2027",
+    "en": "💎 Q1 2027",
+    "nl": "💎 Q1 2027"
   },
   "index.services.outreach.title": {
     "fr": "Outreach Pro",
@@ -2105,9 +2105,9 @@
     "nl": "Agent Orchestrator"
   },
   "index.services.orchestrator.desc": {
-    "fr": "Coordination intelligente de vos 21 agents IA. Chaque agent communique, se délègue des tâches, et optimise son workflow.",
-    "en": "Intelligent coordination of your 21 AI agents. Each agent communicates, delegates tasks, and optimizes its workflow.",
-    "nl": "Intelligente coördinatie van uw 21 AI-agents. Elke agent communiceert, delegeert taken en optimaliseert zijn workflow."
+    "fr": "Coordination intelligente de vos 8 modules IA. Chaque module communique, se délègue des tâches, et optimise son workflow.",
+    "en": "Intelligent coordination of your 8 AI modules. Each module communicates, delegates tasks, and optimizes its workflow.",
+    "nl": "Intelligente coördinatie van uw 8 AI-modules. Elk module communiceert, delegeert taken en optimaliseert zijn workflow."
   },
   "index.offer.tag": {
     "fr": "Nos Offres",
@@ -2205,9 +2205,9 @@
     "nl": "Pro Max"
   },
   "index.offer.promax.desc": {
-    "fr": "L'expérience ultime. Accès complet aux 21 agents IA + service VIP.",
-    "en": "The ultimate experience. Full access to 21 AI agents + VIP service.",
-    "nl": "De ultieme ervaring. Volledige toegang tot 21 AI-agents + VIP-service."
+    "fr": "L'expérience ultime. Accès complet aux 8 modules IA + service VIP.",
+    "en": "The ultimate experience. Full access to 8 AI modules + VIP service.",
+    "nl": "De ultieme ervaring. Volledige toegang tot 8 AI-modules + VIP-service."
   },
   "index.offer.promax.f1": {
     "fr": "Site vitrine professionnel (jusqu'à 5 pages)",
@@ -2244,7 +2244,7 @@
     "en": "90-day support",
     "nl": "90 dagen support"
   },
-    "index.offer.cta.chooseTeaser": {
+  "index.offer.cta.chooseTeaser": {
     "fr": "Choisir Teaser →",
     "en": "Choose Teaser →",
     "nl": "Kies Teaser →"
@@ -2313,7 +2313,8 @@
     "fr": "Abonnement mensuel",
     "en": "Monthly subscription",
     "nl": "Maandelijks abonnement"
-  },  "index.options.booking.preview.service": {
+  },
+  "index.options.booking.preview.service": {
     "fr": "Service",
     "en": "Service",
     "nl": "Dienst"
@@ -2769,9 +2770,9 @@
     "nl": "Bekijk aanbiedingen"
   },
   "common.footer.brandDesc": {
-    "fr": "L'agence marketing commerce 100% automatisée par IA. 21 agents intelligents travaillent pour vous 24/7.",
-    "en": "The business marketing agency 100% automated by AI. 21 smart agents work for you 24/7.",
-    "nl": "Het bedrijfsmarketingbureau 100% geautomatiseerd door AI. 21 slimme agents werken 24/7 voor u."
+    "fr": "L'agence marketing commerce 100% automatisée par IA. 8 modules intelligents travaillent pour vous 24/7.",
+    "en": "The business marketing agency 100% automated by AI. 8 intelligent modules work for you 24/7.",
+    "nl": "Het bedrijfsmarketingbureau 100% geautomatiseerd door AI. 8 intelligente modules werken 24/7 voor u."
   },
   "common.footer.services": {
     "fr": "Services",
@@ -2892,35 +2893,5 @@
     "fr": "+€99<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/mois</span>",
     "en": "+€99<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/month</span>",
     "nl": "+€99<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/maand</span>"
-  },
-  "privacy.s5_stripe": {
-    "fr": "<strong>Stripe</strong> (paiement) — <a href=\"https://stripe.com/privacy\">stripe.com/privacy</a>",
-    "en": "<strong>Stripe</strong> (payments) — <a href=\"https://stripe.com/privacy\">stripe.com/privacy</a>",
-    "nl": "<strong>Stripe</strong> (betalingen) — <a href=\"https://stripe.com/privacy\">stripe.com/privacy</a>"
-  },
-  "privacy.s5_github": {
-    "fr": "<strong>GitHub</strong> (hébergement site) — <a href=\"https://github.com/privacy\">github.com/privacy</a>",
-    "en": "<strong>GitHub</strong> (site hosting) — <a href=\"https://github.com/privacy\">github.com/privacy</a>",
-    "nl": "<strong>GitHub</strong> (sitehosting) — <a href=\"https://github.com/privacy\">github.com/privacy</a>"
-  },
-  "privacy.s5_vercel": {
-    "fr": "<strong>Vercel</strong> (hébergement sites clients) — <a href=\"https://vercel.com/legal/privacy-policy\">vercel.com/legal/privacy-policy</a>",
-    "en": "<strong>Vercel</strong> (client site hosting) — <a href=\"https://vercel.com/legal/privacy-policy\">vercel.com/legal/privacy-policy</a>",
-    "nl": "<strong>Vercel</strong> (hosting klantsites) — <a href=\"https://vercel.com/legal/privacy-policy\">vercel.com/legal/privacy-policy</a>"
-  },
-  "privacy.s5_make": {
-    "fr": "<strong>Make.com</strong> (automatisation) — <a href=\"https://www.make.com/en/privacy-policy\">make.com/privacy</a>",
-    "en": "<strong>Make.com</strong> (automation) — <a href=\"https://www.make.com/en/privacy-policy\">make.com/privacy</a>",
-    "nl": "<strong>Make.com</strong> (automatisering) — <a href=\"https://www.make.com/en/privacy-policy\">make.com/privacy</a>"
-  },
-  "privacy.s5_mistral": {
-    "fr": "<strong>Mistral AI</strong> (génération de contenu) — <a href=\"https://mistral.ai/privacy\">mistral.ai/privacy</a>",
-    "en": "<strong>Mistral AI</strong> (content generation) — <a href=\"https://mistral.ai/privacy\">mistral.ai/privacy</a>",
-    "nl": "<strong>Mistral AI</strong> (contentgeneratie) — <a href=\"https://mistral.ai/privacy\">mistral.ai/privacy</a>"
-  },
-  "privacy.s5_google": {
-    "fr": "<strong>Gmail / Google</strong> (emails) — <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>",
-    "en": "<strong>Gmail / Google</strong> (emails) — <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>",
-    "nl": "<strong>Gmail / Google</strong> (e-mails) — <a href=\"https://policies.google.com/privacy\">policies.google.com/privacy</a>"
   }
 }
