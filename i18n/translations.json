@@ -1965,9 +1965,9 @@
     "nl": "JCODE Agency boost uw bedrijf (commerce, restaurant, kapper, bakker...) met een leger van AI-agents. Contentgeneratie, klantenprospecting en optimalisatie — alles draait op autopilot."
   },
   "index.hero.ctaPrimary": {
-    "fr": "Voir tous les packages →",
-    "en": "View all packages →",
-    "nl": "Bekijk alle pakketten →"
+    "fr": "Voir la promo →",
+    "en": "View promo →",
+    "nl": "Bekijk promo →"
   },
   "index.hero.ctaSecondary": {
     "fr": "Voir les services",
@@ -2610,9 +2610,9 @@
     "nl": "Snelle reservering"
   },
   "index.contact.bookingLink": {
-    "fr": "Voir tous les packages",
-    "en": "View all packages",
-    "nl": "Bekijk alle pakketten"
+    "fr": "Voir la promo 37€",
+    "en": "View 37€ promo",
+    "nl": "Bekijk 37€ promo"
   },
   "index.contact.locationLabel": {
     "fr": "Basé en",
@@ -2705,9 +2705,9 @@
     "nl": "Sluit u aan bij de scherpe zelfstandigen die AI het werk laten doen terwijl ze van het leven genieten."
   },
   "index.cta.button": {
-    "fr": "Choisir mon package →",
-    "en": "Choose my package →",
-    "nl": "Kies mijn pakket →"
+    "fr": "Profiter de la promo 37€ →",
+    "en": "Get 37€ promo →",
+    "nl": "Profiteer van 37€ promo →"
   },
   "index.scrollToTop": {
     "fr": "Retour en haut",
@@ -2745,9 +2745,9 @@
     "nl": "Diensten"
   },
   "common.nav.offer": {
-    "fr": "Offre",
-    "en": "Offer",
-    "nl": "Aanbod"
+    "fr": "PROMO",
+    "en": "PROMO",
+    "nl": "PROMO"
   },
   "common.nav.process": {
     "fr": "Processus",
@@ -2765,9 +2765,9 @@
     "nl": "Klantenportaal"
   },
   "common.nav.viewOffers": {
-    "fr": "Voir les offres",
-    "en": "View offers",
-    "nl": "Bekijk aanbiedingen"
+    "fr": "PROMO 37€",
+    "en": "PROMO 37€",
+    "nl": "PROMO 37€"
   },
   "common.footer.brandDesc": {
     "fr": "L'agence marketing commerce 100% automatisée par IA. 8 modules intelligents travaillent pour vous 24/7.",
