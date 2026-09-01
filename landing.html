@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-gumroad-field="name">Mon Produit Gumroad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff90e8', // Couleur emblématique de Gumroad, adaptable
+                        dark: '#121212',
+                        light: '#ffffff'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Styles de base pour l'accessibilité et les contrastes */
+        body { font-family: system-ui, -apple-system, sans-serif; }
+        .high-contrast-text { color: #1a1a1a; }
+        .dark .high-contrast-text { color: #f3f4f6; }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-dark high-contrast-text transition-colors duration-300">
+
+    <!-- En-tête simple -->
+    <header class="max-w-3xl mx-auto px-6 py-12 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4" data-gumroad-field="name">
+            Chargement du titre...
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8" data-gumroad-field="description">
+            Chargement de la description...
+        </p>
+        
+        <!-- Affichage du prix avec fallback si aucun avis -->
+        <div class="flex items-center justify-center gap-4 mb-8">
+            <span class="text-3xl font-bold text-gray-900 dark:text-white" data-gumroad-field="price">
+                --
+            </span>
+            <span class="text-sm text-gray-500 dark:text-gray-400">
+                <span data-gumroad-field="rating">★★★★★</span> 
+                (<span data-gumroad-field="review-count">Soyez le premier à évaluer</span>)
+            </span>
+        </div>
+
+        <!-- Bouton d'achat principal (OBLIGATOIRE pour que le produit soit achetable) -->
+        <a href="#checkout" 
+           data-gumroad-action="buy" 
+           class="inline-block bg-black dark:bg-white text-white dark:text-black font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-transform transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary">
+            Obtenir ce produit maintenant
+        </a>
+        
+        <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+            Paiement sécurisé via Gumroad. Accès immédiat après l'achat.
+        </p>
+    </header>
+
+    <!-- Section de contenu (exemple de ce que vous pourriez ajouter) -->
+    <main class="max-w-3xl mx-auto px-6 py-8 space-y-8">
+        <section class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm">
+            <h2 class="text-2xl font-semibold mb-4">Ce que vous allez apprendre</h2>
+            <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+                <li class="flex items-start gap-3">
+                    <span class="text-green-500 mt-1">✓</span>
+                    <span>Contenu détaillé du module 1</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-green-500 mt-1">✓</span>
+                    <span>Contenu détaillé du module 2</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-green-500 mt-1">✓</span>
+                    <span>Fichiers sources inclus (PDF et EPUB)</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="max-w-3xl mx-auto px-6 py-12 text-center text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700 mt-12">
+        <p>&copy; 2026 JCODE Agency. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

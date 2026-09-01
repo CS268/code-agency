@@ -407,6 +407,8 @@
             }
         }
     </style>
+    <!-- Plausible Analytics -->
+    <script defer data-domain="jcode.store" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -521,7 +523,15 @@
                 <li>Pas de risque : preuve de fonctionnement avant paiement</li>
                 <li>Support JCODE inclus</li>
             </ul>
-            <a href="https://5530461069795.gumroad.com/l/BOT_TEAM" class="cta-button"> Découvrez les forfaits sur jcode.store</a>
+            <a href="https://5530461069795.gumroad.com/l/BOT_TEAM" target="_blank" rel="noopener noreferrer" class="cta-button"> Découvrez les forfaits sur jcode.store</a>
+        </div>
+
+        <!-- Share Section -->
+        <div class="share-section" style="text-align: center; margin: 3rem 0;">
+          <button id="share-btn" class="btn-primary" style="cursor: pointer; border: none; font-size: 1rem;">
+            Partager cet article 📤
+          </button>
+          <p id="share-msg" style="margin-top: 1rem; color: var(--accent-ambre); display: none;">Lien copié dans le presse-papier !</p>
         </div>
 
         <!-- Author Box -->
@@ -540,6 +550,34 @@
             <p>© 2026 JCODE Agency. Tous droits réservés.</p>
             <p><a href="/blog" style="color: var(--primary-indigo); text-decoration: none;">← Retour au blog</a></p>
         </div>
-    </footer>
+      <p style="margin-top: 1rem; font-size: 0.875rem; text-align: center; color: var(--text-secondary);">
+    <a href="/mentions-legales.html" style="color: var(--text-secondary); text-decoration: underline;">Mentions légales</a> •
+    <a href="/privacy-policy.html" style="color: var(--text-secondary); text-decoration: underline;">Politique de confidentialité</a>
+  </p>
+</footer>
+
+<script>
+  document.getElementById('share-btn').addEventListener('click', async () => {
+    const shareData = {
+      title: document.title,
+      text: 'Découvrez cet article de JCODE Agency',
+      url: window.location.href
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch (err) {
+        console.log('Partage annulé');
+      }
+    } else {
+      // Fallback pour desktop : copier dans le presse-papier
+      navigator.clipboard.writeText(window.location.href);
+      const msg = document.getElementById('share-msg');
+      msg.style.display = 'block';
+      setTimeout(() => { msg.style.display = 'none'; }, 3000);
+    }
+  });
+</script>
 </body>
 </html>
