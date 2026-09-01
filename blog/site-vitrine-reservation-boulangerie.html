@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment une boulangerie pourrait augmenter ses réservations avec un site vitrine + réservation automatique | JCODE Agency</title>
+    <meta name="description" content="Scénario hypothétique : comment une boulangerie artisanale en Belgique peut automatiser ses réservations 24h/24 avec un site vitrine professionnel. Forfaits dès 497€.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Comment une boulangerie pourrait augmenter ses réservations avec un site vitrine + réservation automatique">
+    <meta property="og:description" content="Scénario hypothétique : comment une boulangerie artisanale en Belgique peut automatiser ses réservations 24h/24 avec un site vitrine professionnel.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jcode.store/blog/site-vitrine-reservation-boulangerie.html">
+    <meta property="og:image" content="https://jcode.store/blog-og.png">
+    <meta property="article:published_time" content="2026-08-30">
+    <meta property="article:author" content="JCODE Agency">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Comment une boulangerie pourrait augmenter ses réservations avec un site vitrine + réservation automatique">
+    <meta name="twitter:description" content="Scénario hypothétique : comment une boulangerie artisanale en Belgique peut automatiser ses réservations 24h/24.">
+    
+    <link rel="canonical" href="https://jcode.store/blog/site-vitrine-reservation-boulangerie.html">
+    
+    <!-- JSON-LD BlogPosting -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Comment une boulangerie pourrait augmenter ses réservations avec un site vitrine + réservation automatique",
+        "description": "Scénario hypothétique : comment une boulangerie artisanale en Belgique peut automatiser ses réservations 24h/24 avec un site vitrine professionnel.",
+        "image": "https://jcode.store/blog-og.png",
+        "datePublished": "2026-08-30",
+        "author": {
+            "@type": "Organization",
+            "name": "JCODE Agency",
+            "url": "https://jcode.store"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "JCODE Agency",
+            "url": "https://jcode.store"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://jcode.store/blog/site-vitrine-reservation-boulangerie.html"
+        }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary-indigo: #6366f1;
+            --indigo-dark: #4f46e5;
+            --violet: #8b5cf6;
+            --fuchsia: #d946ef;
+            --accent-ambre: #f59e0b;
+            --slate-dark: #0f172a;
+            --slate-medium: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, var(--slate-dark) 0%, var(--slate-medium) 100%);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        
+        /* Navbar */
+        .navbar {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-indigo), var(--violet));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-indigo), var(--violet));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+        }
+        
+        /* Article Header */
+        .article-header {
+            padding: 4rem 2rem 2rem;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(217, 70, 239, 0.1) 100%);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .article-category {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--accent-ambre);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        
+        .article-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--violet) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-top: 1.5rem;
+        }
+        
+        .article-meta time {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Article Content */
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .article-content h2 {
+            font-size: 1.75rem;
+            margin: 2.5rem 0 1rem;
+            color: var(--text-primary);
+        }
+        
+        .article-content h3 {
+            font-size: 1.25rem;
+            margin: 2rem 0 0.75rem;
+            color: var(--violet);
+        }
+        
+        .article-content p {
+            margin-bottom: 1.25rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        .article-content ul {
+            margin: 1rem 0 1.5rem 2rem;
+            color: var(--text-secondary);
+        }
+        
+        .article-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+        
+        .article-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .highlight-box {
+            background: rgba(99, 102, 241, 0.1);
+            border-left: 4px solid var(--primary-indigo);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight-box p {
+            margin: 0;
+            color: var(--text-primary);
+        }
+        
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid var(--accent-ambre);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .warning-box p {
+            margin: 0;
+            color: var(--text-primary);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .cta-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section ul {
+            list-style: none;
+            margin: 1.5rem 0;
+            padding: 0;
+            text-align: left;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-section li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        
+        .cta-section li::before {
+            content: "✓";
+            color: var(--accent-ambre);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-indigo), var(--violet));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+        }
+        
+        /* Author Box */
+        .author-box {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 3rem 0;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-indigo), var(--violet));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .author-info h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+        
+        .author-info p {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin: 0;
+        }
+        
+        /* Footer */
+        .footer {
+            background: rgba(15, 23, 42, 0.9);
+            border-top: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-header h1 {
+                font-size: 1.75rem;
+            }
+            
+            .article-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .author-box {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <div class="logo-icon">J</div>
+                <span>JCODE Agency</span>
+            </a>
+            <div class="nav-links">
+                <a href="/">Accueil</a>
+                <a href="/#services">Services</a>
+                <a href="/blog">Blog</a>
+                <a href="https://jcode.store" class="btn-primary">Démarrer →</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="article-container">
+            <span class="article-category">Réservation automatique</span>
+            <h1>Comment une boulangerie pourrait augmenter ses réservations avec un site vitrine + réservation automatique</h1>
+            <div class="article-meta">
+                <time datetime="2026-08-30">📅 30 août 2026</time>
+                <span>•</span>
+                <span>⏱️ 8 min de lecture</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <article class="article-content">
+        <h2>Intro</h2>
+        <p>Imaginez une boulangerie artisanale en Belgique confrontée à un problème classique : des clients qui passent, mais très peu de réservations pour les événements (commandes, gâteaux sur mesure, pains spéciaux). Les appels téléphoniques ne sont pas disponibles en dehors des heures d'ouverture. Le propriétaire perd des clients par simple manque de visibilité et de canal de réservation facile.</p>
+
+        <h2>La situation avant</h2>
+        <ul>
+            <li>Aucun site web visible</li>
+            <li>Les réservations se faisaient uniquement par appel (limité aux horaires d'ouverture)</li>
+            <li>Les clients potentiels ne trouvaient pas les tarifs, les horaires, ou les services spécialisés</li>
+            <li>Aucun suivi automatique des commandes — confirmations par SMS manuel</li>
+        </ul>
+
+        <h2>La solution : Site vitrine + réservation automatique</h2>
+        <p>Le propriétaire a choisi le forfait <strong>[Teaser (497 € unique) ou Pro (999 € unique)]</strong> de JCODE Agency, complété par l'add-on <strong>Réservation Auto (+149 €/mois)</strong>, qui comprend :</p>
+        <ul>
+            <li>Un site vitrine professionnel avec galerie produits (pains, gâteaux, pâtisseries)</li>
+            <li>La réservation automatique 24h/24, 7j/7 : le client choisit son créneau en ligne, le système met à jour l'agenda</li>
+            <li>Confirmations par email et SMS auto-générées</li>
+            <li>Zéro double-réservation (le système gère les créneaux)</li>
+        </ul>
+        
+        <div class="highlight-box">
+            <p><strong>[CROCHET]</strong> : le forfait précis sera celui du futur vrai cas client</p>
+        </div>
+
+        <h2>Les étapes concrètes</h2>
+        <h3>Audit (par JCODE)</h3>
+        <p>Analyse des concurrents locaux, identification des services clés, choix de photos de qualité.</p>
+        
+        <h3>Création du site</h3>
+        <p>24-48h, déploiement en production, réservation active et liée à l'agenda.</p>
+        
+        <h3>Premier mois de live</h3>
+        <p>Suivi et ajustements, retours clients intégrés.</p>
+
+        <h2>Les résultats — cas hypothétique</h2>
+        <div class="warning-box">
+            <p><strong>⚠️ Note :</strong> Ces chiffres sont des exemples hypothétiques. [À remplacer par les vrais chiffres d'un cas client réel, avec son accord] avant publication.</p>
+        </div>
+        
+        <p>Imaginons une petite boulangerie qui aurait capturé :</p>
+        <ul>
+            <li><strong>Gain de temps :</strong> [X] heures/semaine libérées</li>
+            <li><strong>Nouvelles réservations :</strong> [+X%] d'augmentation du volume de commandes</li>
+            <li><strong>Chiffre d'affaires :</strong> [+X €/mois] en nouveaux revenus directs</li>
+            <li><strong>Satisfaction client :</strong> [X]% des clients trouvent plus facile de réserver 24h/24</li>
+        </ul>
+
+        <h2>Analyse : pourquoi ça marche</h2>
+        <ul>
+            <li><strong>Accessibilité 24/7 :</strong> les clients réservent quand ils ont le temps</li>
+            <li><strong>Zéro friction :</strong> une réservation simple, pas de mise en attente</li>
+            <li><strong>Traçabilité :</strong> les confirmations automatiques évitent les malentendus</li>
+            <li><strong>Visibilité locale :</strong> meilleure présence sur Google Maps et ranking local</li>
+            <li><strong>Professionalisme :</strong> un site vitrine renforce la confiance</li>
+        </ul>
+
+        <h2>Coûts et ROI hypothétique</h2>
+        <ul>
+            <li><strong>Site :</strong> Teaser 497 € unique ou Pro 999 € unique (JCODE Agency)</li>
+            <li><strong>Réservation Auto :</strong> +149 €/mois (add-on)</li>
+            <li><strong>ROI hypothétique :</strong> avec [X] réservations/mois à [Y €/commande], rentabilisé en [Z] semaines</li>
+        </ul>
+
+        <h2>Leçons clés</h2>
+        <ul>
+            <li><strong>Pas besoin d'être développeur :</strong> JCODE génère tout automatiquement en quelques heures</li>
+            <li><strong>Photos vraies :</strong> les clients veulent voir des produits réels</li>
+            <li><strong>SEO local :</strong> Google Maps + site = clientèle locale</li>
+            <li><strong>Automatisation = liberté :</strong> le propriétaire se concentre sur la qualité, la réservation gère les commandes</li>
+        </ul>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Appel à l'action</h2>
+            <p>Vous êtes boulanger, coiffeur, restaurateur ou commerçant local en Belgique ? Lancez votre site, avec ou sans réservation automatique et chatbot IA, en 48h :</p>
+            <ul>
+                <li>Site vitrine dès 497 € (Teaser) ou 999 € (Pro) — paiement unique</li>
+                <li>Réservation automatique (+149 €/mois) et Chatbot IA (+99 €/mois) en options</li>
+                <li>Pas de risque : preuve de fonctionnement avant paiement</li>
+                <li>Support JCODE inclus</li>
+            </ul>
+            <a href="https://5530461069795.gumroad.com/l/BOT_TEAM" class="cta-button"> Découvrez les forfaits sur jcode.store</a>
+        </div>
+
+        <!-- Author Box -->
+        <div class="author-box">
+            <div class="author-avatar">J</div>
+            <div class="author-info">
+                <h4>JCODE Agency</h4>
+                <p>Agence web belge, sites + IA pour PME</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 JCODE Agency. Tous droits réservés.</p>
+            <p><a href="/blog" style="color: var(--primary-indigo); text-decoration: none;">← Retour au blog</a></p>
+        </div>
+    </footer>
+</body>
+</html>

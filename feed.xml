@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JCODE Agency Blog — Sites web &amp; IA pour PME en Belgique</title>
+    <link>https://jcode.store/blog/</link>
+    <description>Conseils pratiques pour commerçants et indépendants : créer un site conforme, automatiser vos réservations, gagner du temps avec l'IA. Rédigé par l'équipe JCODE.</description>
+    <language>fr-be</language>
+    <lastBuildDate>Tue, 01 Sep 2026 12:00:00 +0200</lastBuildDate>
+    <atom:link href="https://jcode.store/feed.xml" rel="self" type="application/rss+xml"/>
+    
+    <!-- Article : Boulangerie -->
+    <item>
+      <title>Comment une boulangerie pourrait augmenter ses réservations avec un site vitrine + réservation automatique</title>
+      <link>https://jcode.store/blog/site-vitrine-reservation-boulangerie.html</link>
+      <description>Scénario hypothétique : comment une boulangerie artisanale en Belgique peut automatiser ses réservations 24h/24 avec un site vitrine professionnel. Découvrez les étapes concrètes, les coûts et le ROI.</description>
+      <pubDate>Sat, 30 Aug 2026 10:00:00 +0200</pubDate>
+      <guid>https://jcode.store/blog/site-vitrine-reservation-boulangerie.html</guid>
+    </item>
+    
+    <!-- Article : RGPD (à décommenter quand l'article sera publié) -->
+    <!--
+    <item>
+      <title>RGPD et site web pour PME belges : ce qu'il faut vérifier avant d'ajouter de l'IA</title>
+      <link>https://jcode.store/blog/rgpd-pme-belges.html</link>
+      <description>Bandeau cookie, mentions légales, chatbot IA : le guide pratique pour les commerçants et indépendants belges sur la conformité RGPD.</description>
+      <pubDate>Fri, 29 Aug 2026 10:00:00 +0200</pubDate>
+      <guid>https://jcode.store/blog/rgpd-pme-belges.html</guid>
+    </item>
+    -->
+    
+  </channel>
+</rss>

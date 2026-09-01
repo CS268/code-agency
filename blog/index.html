@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog JCODE Agency — Sites web & IA pour PME en Belgique</title>
+    <meta name="description" content="Conseils pratiques pour commerçants et indépendants : créer un site conforme, automatiser vos réservations, gagner du temps avec l'IA. Rédigé par l'équipe JCODE.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog JCODE Agency — Sites web & IA pour PME en Belgique">
+    <meta property="og:description" content="Conseils pratiques pour commerçants et indépendants : créer un site conforme, automatiser vos réservations, gagner du temps avec l'IA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jcode.store/blog/">
+    <meta property="og:image" content="https://jcode.store/blog-og.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog JCODE Agency — Sites web & IA pour PME en Belgique">
+    <meta name="twitter:description" content="Conseils pratiques pour commerçants et indépendants : créer un site conforme, automatiser vos réservations, gagner du temps avec l'IA.">
+    
+    <link rel="canonical" href="https://jcode.store/blog/">
+    
+    <style>
+        :root {
+            --primary-indigo: #6366f1;
+            --indigo-dark: #4f46e5;
+            --violet: #8b5cf6;
+            --fuchsia: #d946ef;
+            --accent-ambre: #f59e0b;
+            --slate-dark: #0f172a;
+            --slate-medium: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, var(--slate-dark) 0%, var(--slate-medium) 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        /* Navbar */
+        .navbar {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-indigo), var(--violet));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-indigo), var(--violet));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(217, 70, 239, 0.1) 100%);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--accent-ambre);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--violet) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        /* Articles Grid */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .article-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(99, 102, 241, 0.3);
+            border-color: rgba(99, 102, 241, 0.4);
+        }
+        
+        .article-category {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+            color: var(--violet);
+        }
+        
+        .article-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .article-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        
+        .article-date {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .read-more {
+            color: var(--primary-indigo);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: rgba(15, 23, 42, 0.9);
+            border-top: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .footer-section h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .author-card {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-indigo), var(--violet));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 1.25rem;
+        }
+        
+        .author-info h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .author-info p {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <div class="logo-icon">J</div>
+                <span>JCODE Agency</span>
+            </a>
+            <div class="nav-links">
+                <a href="/">Accueil</a>
+                <a href="/#services">Services</a>
+                <a href="/blog">Blog</a>
+                <a href="https://jcode.store" class="btn-primary">Démarrer →</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">● LE BLOG JCODE AGENCY</div>
+            <h1>Sites web & IA pour PME en Belgique</h1>
+            <p>Conseils pratiques pour commerçants et indépendants : créer un site conforme, automatiser vos réservations, gagner du temps avec l'IA. Rédigé par l'équipe JCODE.</p>
+        </div>
+    </section>
+
+    <!-- Articles -->
+    <div class="container">
+        <h2 class="section-title">Articles récents</h2>
+        <div class="articles-grid">
+            <!-- Article 1: Boulangerie -->
+            <a href="/blog/site-vitrine-reservation-boulangerie.html" class="article-card">
+                <span class="article-category">Réservation automatique</span>
+                <h2>Comment une boulangerie pourrait augmenter ses réservations avec un site vitrine + réservation automatique</h2>
+                <p>Scénario hypothétique : et si une boulangerie locale gérait ses commandes 24h/24 sans décrocher le téléphone ? Découvrez comment l'automatisation peut transformer votre commerce.</p>
+                <div class="article-meta">
+                    <span class="article-date">📅 30 août 2026</span>
+                    <span class="read-more">Lire l'article →</span>
+                </div>
+            </a>
+
+            <!-- Article 2: RGPD (placeholder) -->
+            <div class="article-card" style="opacity: 0.6;">
+                <span class="article-category">Conformité RGPD</span>
+                <h2>RGPD et site web pour PME belges : ce qu'il faut vérifier avant d'ajouter de l'IA</h2>
+                <p>Bandeau cookie, mentions légales, chatbot IA : le guide pratique pour les commerçants et indépendants belges.</p>
+                <div class="article-meta">
+                    <span class="article-date"> 29 août 2026</span>
+                    <span style="color: var(--accent-ambre); font-size: 0.875rem;">⏳ Bientôt disponible</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Envie d'automatiser votre propre marketing ?</h3>
+                <p>Apprenez à construire vos propres automatisations IA avec la formation BOT BOT — pensée pour les non-codeurs.</p>
+                <br>
+                <a href="https://5530461069795.gumroad.com/l/BOT_TEAM" class="btn-primary">Découvrir la formation BOT BOT →</a>
+            </div>
+            <div class="footer-section">
+                <div class="author-card">
+                    <div class="author-avatar">J</div>
+                    <div class="author-info">
+                        <h4>JCODE Agency</h4>
+                        <p>Agence web belge spécialisée dans les sites et l'IA pour PME et commerces locaux.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
