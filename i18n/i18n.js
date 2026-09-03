@@ -93,11 +93,15 @@
   function apply() {
     document.documentElement.lang = lang;
 
-    // SEO: title and meta description
+    // SEO: title and meta description (per-page override keys via <meta>)
     var titleEl = document.querySelector('title');
-    if (titleEl) { var v = t('page.title'); if (v) titleEl.textContent = v; }
+    var tKeyEl = document.querySelector('meta[name="i18n-title-key"]');
+    var tKey = tKeyEl ? tKeyEl.getAttribute('content') : null;
+    if (titleEl) { var v = t(tKey || 'page.title'); if (v) titleEl.textContent = v; }
     var descEl = document.querySelector('meta[name="description"]');
-    if (descEl) { var d = t('page.description'); if (d) descEl.setAttribute('content', d); }
+    var dKeyEl = document.querySelector('meta[name="i18n-desc-key"]');
+    var dKey = dKeyEl ? dKeyEl.getAttribute('content') : null;
+    if (descEl) { var d = t(dKey || 'page.description'); if (d) descEl.setAttribute('content', d); }
 
     // [data-i18n="key"] → innerHTML (XSS-sanitized)
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
