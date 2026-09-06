@@ -319,6 +319,36 @@
                 display: none;
             }
         }
+        /* Mobile menu button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            line-height: 1;
+            cursor: pointer;
+            padding: 0.25rem 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: block; }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(15, 23, 42, 0.98);
+                padding: 1.5rem 2rem;
+                gap: 1.25rem;
+                border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+                z-index: 1001;
+            }
+            .nav-links.open { display: flex; }
+        }
     </style>
 <!-- Plausible Analytics -->
 <script data-domain="jcode.store" defer="" src="https://plausible.io/js/script.js"></script>
@@ -337,6 +367,7 @@
 <a data-i18n="blog.nav.blog" href="/blog">Blog</a><a class="lang-btn" data-lang="fr" href="#">FR</a><a class="lang-btn" data-lang="nl" href="#">NL</a><a class="lang-btn" data-lang="en" href="#">EN</a>
 <a class="btn-primary" data-i18n="blog.nav.start" href="https://jcode.store">Démarrer →</a>
 </div>
+<button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">☰</button>
 </div>
 </nav>
 <!-- Hero -->
@@ -407,5 +438,25 @@
     <a data-i18n="blog.footer.privacy" href="/privacy-policy.html" style="color: var(--text-secondary); text-decoration: underline;">Politique de confidentialité</a>
 </p>
 </footer>
-<script src="/i18n/i18n.js"></script></body>
+<script src="/i18n/i18n.js"></script>
+<script>
+(function () {
+  var btn = document.querySelector('.mobile-menu-btn');
+  var nav = document.querySelector('.nav-links');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    btn.textContent = open ? '\u2715' : '\u2630';
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target && e.target.closest && e.target.closest('a')) {
+      nav.classList.remove('open');
+      btn.textContent = '\u2630';
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
+</body>
 </html>
