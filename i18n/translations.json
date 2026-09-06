@@ -1474,6 +1474,11 @@
     "en": "Are there hidden fees?",
     "nl": "Zijn er verborgen kosten?"
   },
+  "concierge.faq.compareLink": {
+    "fr": "Envie d'approfondir ? Lisez notre article comparatif freelance vs logiciel DIY vs AI Concierge →",
+    "en": "Want to dig deeper? Read our comparison article: freelancer vs DIY software vs AI Concierge →",
+    "nl": "Wil je dieper gaan? Lees ons vergelijkingsartikel: freelancer vs DIY-software vs AI Concierge →"
+  },
   "concierge.faq.a10": {
     "fr": "Non. Le prix mensuel inclut tout. Les seuls coûts externes possibles : abonnements Make.com (~9€/mois) et Notion (gratuit pour la plupart). Je vous préviens toujours avant tout coût additionnel.",
     "en": "No. The monthly price includes everything. The only possible external costs: Make.com subscriptions (~€9/month) and Notion (free for most). I always warn you before any additional cost.",
