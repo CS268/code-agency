@@ -322,20 +322,20 @@
     </style>
 <!-- Plausible Analytics -->
 <script data-domain="jcode.store" defer="" src="https://plausible.io/js/script.js"></script>
-</head>
+<meta content="blog.index.title" name="i18n-title-key"/><meta content="blog.index.desc" name="i18n-desc-key"/></head>
 <body>
 <!-- Navbar -->
 <nav class="navbar">
 <div class="nav-container">
-<a class="logo" href="/">
+<a class="logo" data-i18n="blog.nav.home" href="/">
 <div class="logo-icon">J</div>
 <span>JCODE Agency</span>
 </a>
 <div class="nav-links">
 <a href="/">Accueil</a>
-<a href="/#services">Services</a>
-<a href="/blog">Blog</a>
-<a class="btn-primary" href="https://jcode.store">Démarrer →</a>
+<a data-i18n="blog.nav.services" href="/#services">Services</a>
+<a data-i18n="blog.nav.blog" href="/blog">Blog</a><a class="lang-btn" data-lang="fr" href="#">FR</a><a class="lang-btn" data-lang="nl" href="#">NL</a><a class="lang-btn" data-lang="en" href="#">EN</a>
+<a class="btn-primary" data-i18n="blog.nav.start" href="https://jcode.store">Démarrer →</a>
 </div>
 </div>
 </nav>
@@ -343,14 +343,14 @@
 <section class="hero">
 <div class="hero-content">
 <div class="badge">● LE BLOG JCODE AGENCY</div>
-<h1>Sites web &amp; IA pour PME en Belgique</h1>
-<p>Conseils pratiques pour commerçants et indépendants : créer un site conforme, automatiser vos réservations, gagner du temps avec l'IA. Rédigé par l'équipe JCODE.</p>
+<h1 data-i18n="blog.index.h1">Sites web &amp; IA pour PME en Belgique</h1>
+<p data-i18n="blog.index.subtitle">Conseils pratiques pour commerçants et indépendants : créer un site conforme, automatiser vos réservations, gagner du temps avec l'IA. Rédigé par l'équipe JCODE.</p>
 </div>
 </section>
 <!-- Articles -->
 <div class="container">
-<h2 class="section-title">Articles récents</h2>
-<div class="articles-grid">
+<h2 class="section-title" data-i18n="blog.index.section">Articles récents</h2>
+<div class="articles-grid" data-i18n-html="blog.index.grid">
 <!-- Article 0: Pro Max -->
 <a class="article-card" href="/blog/ai-concierge-automatiser-commerce.html"><span class="article-category">Automatisation IA</span><h2>AI Concierge : votre partenaire IA pour automatiser votre commerce</h2><p>Un expert qui construit vos automatisations IA avec vous : méthode Audit, Optimize, Automate. Trois formules sans frais cachés, 5 à 10 heures économisées par mois.</p><div class="article-meta"><span class="article-date">📅 6 septembre 2026</span><span class="read-more">Lire l'article →</span></div></a><a class="article-card" href="/blog/creer-site-vitrine-sans-coder-pme.html"><span class="article-category">Guide pratique</span><h2>Créer un site vitrine sans coder : le guide pratique des PME belges</h2><p>Vous n'avez jamais écrit une ligne de code ? Préparez vos contenus, comparez les options et lancez votre site vitrine en 4 étapes, sans abonnement.</p><div class="article-meta"><span class="article-date">📅 4 septembre 2026</span><span class="read-more">Lire l'article →</span></div></a><a class="article-card" href="/blog/site-web-sans-abonnement-belgique.html"><span class="article-category">Tarification</span><h2>Site web sans abonnement en Belgique : payer une fois, pas chaque mois</h2><p>Wix, Squarespace, Shopify facturent chaque mois. Découvrez le vrai coût sur 5 ans et pourquoi le paiement unique change la donne pour votre commerce.</p><div class="article-meta"><span class="article-date">📅 4 septembre 2026</span><span class="read-more">Lire l'article →</span></div></a><a class="article-card" href="/blog/alternative-agence-web-belgique.html"><span class="article-category">Alternatives</span><h2>Alternative à une agence web classique en Belgique : 6 options comparées</h2><p>Freelance, Wix, WordPress, agence traditionnelle ou générateur IA : comparatif honnête des 6 options pour créer un site en Belgique, avec les prix réels.</p><div class="article-meta"><span class="article-date">📅 4 septembre 2026</span><span class="read-more">Lire l'article →</span></div></a><a class="article-card" href="/blog/site-pro-max-ia-pme-belges.html">
 <span class="article-category">Offre &amp; forfaits</span>
@@ -387,25 +387,25 @@
 <footer class="footer">
 <div class="footer-content">
 <div class="footer-section">
-<h3>Envie d'automatiser votre propre marketing ?</h3>
-<p>Apprenez à construire vos propres automatisations IA avec la formation BOT BOT — pensée pour les non-codeurs.</p>
+<h3 data-i18n="blog.footer.cta_h3">Envie d'automatiser votre propre marketing ?</h3>
+<p data-i18n="blog.footer.cta_p">Apprenez à construire vos propres automatisations IA avec la formation BOT BOT — pensée pour les non-codeurs.</p>
 <br/>
-<a class="btn-primary" href="https://5530461069795.gumroad.com/l/BOT_TEAM" rel="noopener noreferrer" target="_blank">Découvrir la formation BOT BOT →</a>
+<a class="btn-primary" data-i18n="blog.footer.cta_btn" href="https://5530461069795.gumroad.com/l/BOT_TEAM" rel="noopener noreferrer" target="_blank">Découvrir la formation BOT BOT →</a>
 </div>
 <div class="footer-section">
 <div class="author-card">
 <div class="author-avatar">J</div>
 <div class="author-info">
 <h4>JCODE Agency</h4>
-<p>Agence web belge spécialisée dans les sites et l'IA pour PME et commerces locaux.</p>
+<p data-i18n="blog.footer.about_p">Agence web belge spécialisée dans les sites et l'IA pour PME et commerces locaux.</p>
 </div>
 </div>
 </div>
 </div>
 <p style="margin-top: 1rem; font-size: 0.875rem; text-align: center; color: var(--text-secondary);">
-<a href="/mentions-legales.html" style="color: var(--text-secondary); text-decoration: underline;">Mentions légales</a> • 
-    <a href="/privacy-policy.html" style="color: var(--text-secondary); text-decoration: underline;">Politique de confidentialité</a>
+<a data-i18n="blog.footer.legal" href="/mentions-legales.html" style="color: var(--text-secondary); text-decoration: underline;">Mentions légales</a> • 
+    <a data-i18n="blog.footer.privacy" href="/privacy-policy.html" style="color: var(--text-secondary); text-decoration: underline;">Politique de confidentialité</a>
 </p>
 </footer>
-</body>
+<script src="/i18n/i18n.js"></script></body>
 </html>

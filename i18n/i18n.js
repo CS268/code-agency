@@ -6,7 +6,7 @@
   // Anti-FOUC: hide page until translations are applied
   document.documentElement.style.visibility = 'hidden';
 
-  var CACHE_KEY = 'jcode_i18n_cache_v1';
+  var CACHE_KEY = 'jcode_i18n_cache_v2';
 
   // Language detection: localStorage only, default 'fr'
   var lang = localStorage.getItem('jcode_lang') || 'fr';
@@ -15,8 +15,8 @@
   var T = {};
 
   // XSS-safe HTML sanitizer — allowlist approach
-  var SAFE_TAGS = ['br','strong','em','b','i','span','p','a','ul','ol','li','small','sup','sub'];
-  var SAFE_ATTRS = ['href','class','target','rel'];
+  var SAFE_TAGS = ['h1','h2','h3','h4','br','strong','em','b','i','span','p','a','ul','ol','li','small','sup','sub','div','time','table','thead','tbody','tr','th','td','hr'];
+  var SAFE_ATTRS = ['href','class','target','rel','style'];
 
   function sanitizeHtml(html) {
     if (typeof html !== 'string') return '';
@@ -62,7 +62,7 @@
     var cached = localStorage.getItem(CACHE_KEY);
     if (cached) { try { T = JSON.parse(cached); } catch (e) { /* ignore */ } }
 
-    fetch('i18n/translations.json')
+    fetch('/i18n/translations.json')
       .then(function (r) {
         if (!r.ok) throw new Error(r.status);
         return r.json();
