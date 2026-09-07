@@ -225,14 +225,14 @@
     "nl": "⏱ Levertijden"
   },
   "merci.delivery_teaser": {
-    "fr": "<strong style='color:#fff;'>Teaser (€497) :</strong> 24 à 48h ouvrées",
-    "en": "<strong style='color:#fff;'>Teaser (€497):</strong> 24 to 48 business hours",
-    "nl": "<strong style='color:#fff;'>Teaser (€497):</strong> 24 tot 48 werkuren"
+    "fr": "<strong style='color:#fff;'>Teaser (37€ ce mois-ci, code PROMO460, au lieu de €497) :</strong> 24 à 48h ouvrées",
+    "en": "<strong style='color:#fff;'>Teaser (€37 this month, code PROMO460, instead of €497):</strong> 24 to 48 business hours",
+    "nl": "<strong style='color:#fff;'>Teaser (37€ deze maand, code PROMO460, in plaats van €497):</strong> 24 tot 48 werkuren"
   },
   "merci.delivery_pro": {
-    "fr": "<strong style='color:#fff;'>Pro (€999/mois) :</strong> 48 à 72h ouvrées + mise en place mensuelle",
-    "en": "<strong style='color:#fff;'>Pro (€999/month):</strong> 48 to 72 business hours + monthly setup",
-    "nl": "<strong style='color:#fff;'>Pro (€999/maand):</strong> 48 tot 72 werkuren + maandelijkse opzet"
+    "fr": "<strong style='color:#fff;'>Pro (539€ ce mois-ci, code PROMO460, au lieu de €999) :</strong> 48 à 72h ouvrées + mise en place mensuelle",
+    "en": "<strong style='color:#fff;'>Pro (€539 this month, code PROMO460, instead of €999):</strong> 48 to 72 business hours + monthly setup",
+    "nl": "<strong style='color:#fff;'>Pro (539€ deze maand, code PROMO460, in plaats van €999):</strong> 48 tot 72 werkuren + maandelijkse opzet"
   },
   "merci.delivery_promax": {
     "fr": "<strong style='color:#fff;'>Pro Max (€1599/mois) :</strong> 72 à 96h ouvrées + accompagnement prioritaire",
@@ -880,19 +880,19 @@
     "nl": "JCODE Agency biedt vitrine-websites voor Belgische handelaars en zelfstandigen. Beschikbare formules:"
   },
   "terms.s4_teaser": {
-    "fr": "Teaser : €497 (paiement unique) — Site web professionnel avec réservation en ligne, QR code, email de confirmation, bannière cookies RGPD et mentions légales.",
-    "en": "Teaser: €497 (one-time payment) — Professional website with online booking, QR code, confirmation email, GDPR cookie banner and legal notices.",
-    "nl": "Teaser: €497 (eenmalige betaling) — Professionele website met online reservering, QR-code, bevestigingsmail, AVG-cookiebanner en wettelijke vermeldingen."
+    "fr": "Teaser : 37€ ce mois-ci (code PROMO460, au lieu de €497), paiement unique — Site web professionnel avec réservation en ligne, QR code, email de confirmation, bannière cookies RGPD et mentions légales.",
+    "en": "Teaser: €37 this month (code PROMO460, instead of €497), one-time payment — Professional website with online booking, QR code, confirmation email, GDPR cookie banner and legal notices.",
+    "nl": "Teaser: 37€ deze maand (code PROMO460, in plaats van €497), eenmalige betaling — Professionele website met online reservering, QR-code, bevestigingsmail, AVG-cookiebanner en wettelijke vermeldingen."
   },
   "terms.s4_pro": {
-    "fr": "Pro : €999/mois",
-    "en": "Pro: €999/month",
-    "nl": "Pro: €999/maand"
+    "fr": "Pro : 539€ ce mois-ci (code PROMO460, au lieu de €999)",
+    "en": "Pro: €539 this month (code PROMO460, instead of €999)",
+    "nl": "Pro: 539€ deze maand (code PROMO460, in plaats van €999)"
   },
   "terms.s4_promax": {
-    "fr": "Pro Max : €1 599/mois",
-    "en": "Pro Max: €1,599/month",
-    "nl": "Pro Max: €1.599/maand"
+    "fr": "Pro Max : 1 139€ ce mois-ci (code PROMO460, au lieu de €1 599)",
+    "en": "Pro Max: €1,139 this month (code PROMO460, instead of €1,599)",
+    "nl": "Pro Max: €1.139 deze maand (code PROMO460, in plaats van €1.599)"
   },
   "terms.s4_addons": {
     "fr": "Les options add-on disponibles : QR Code personnalisé (+€99), Système de réservation automatique (+€149/mois), Chatbot IA (+€99/mois).",
