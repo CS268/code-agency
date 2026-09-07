@@ -650,9 +650,9 @@
     "nl": "3. Rechtsgrond"
   },
   "privacy_short.s3_text": {
-    "fr": "Le traitement repose sur <strong>l'article 6.1.b du RGPD</strong> : exécution du contrat. Vous payez 497€ pour un site vitrine personnalisé — les données sont indispensables à ce service.",
-    "en": "Processing is based on <strong>Article 6.1.b of GDPR</strong>: contract performance. You pay €497 for a personalized showcase site — the data is essential for this service.",
-    "nl": "De verwerking is gebaseerd op <strong>artikel 6.1.b van de AVG</strong>: uitvoering van de overeenkomst. U betaalt €497 voor een gepersonaliseerde vitrine-site — de gegevens zijn onmisbaar voor deze dienst."
+    "fr": "Le traitement repose sur <strong>l'article 6.1.b du RGPD</strong> : exécution du contrat. Vous payez 37€ ce mois-ci (code PROMO460, au lieu de 497€) pour un site vitrine personnalisé — les données sont indispensables à ce service.",
+    "en": "Processing is based on <strong>Article 6.1.b of GDPR</strong>: contract performance. You pay €37 this month (code PROMO460, instead of €497) for a personalized showcase site — the data is essential for this service.",
+    "nl": "De verwerking is gebaseerd op <strong>artikel 6.1.b van de AVG</strong>: uitvoering van de overeenkomst. U betaalt 37€ deze maand (code PROMO460, in plaats van €497) voor een gepersonaliseerde vitrine-site — de gegevens zijn onmisbaar voor deze dienst."
   },
   "privacy_short.s4_title": {
     "fr": "4. Sous-traitants",
@@ -1945,9 +1945,9 @@
     "nl": "JCODE Agency — Websites & Geautomatiseerde Marketing door AI"
   },
   "index.meta.description": {
-    "fr": "JCODE Agency propulse votre commerce (commerce, restaurant, coiffeur, boulanger...) avec 8 modules IA. Vidéos, prospection, copywriting, sites web — 100% automatisé. Package Teaser à 497€.",
-    "en": "JCODE Agency boosts your business (commerce, restaurant, hairdresser, bakery...) with 8 AI modules. Videos, prospecting, copywriting, websites — 100% automated. Teaser Package at €497.",
-    "nl": "JCODE Agency boost uw bedrijf (commerce, restaurant, kapper, bakker...) met 8 AI-modules. Video's, prospectie, copywriting, websites — 100% geautomatiseerd. Teaser Pakket voor €497."
+    "fr": "JCODE Agency propulse votre commerce (commerce, restaurant, coiffeur, boulanger...) avec 8 modules IA. Vidéos, prospection, copywriting, sites web — 100% automatisé. Package Teaser à 37€ ce mois-ci (code PROMO460, au lieu de 497€).",
+    "en": "JCODE Agency boosts your business (commerce, restaurant, hairdresser, bakery...) with 8 AI modules. Videos, prospecting, copywriting, websites — 100% automated. Teaser Package at €37 this month (code PROMO460, instead of €497).",
+    "nl": "JCODE Agency boost uw bedrijf (commerce, restaurant, kapper, bakker...) met 8 AI-modules. Video's, prospectie, copywriting, websites — 100% geautomatiseerd. Teaser Pakket voor 37€ deze maand (code PROMO460, in plaats van €497)."
   },
   "index.hero.badge": {
     "fr": "8 modules IA déployés",
@@ -2370,9 +2370,9 @@
     "nl": "Maandelijks abonnement"
   },
   "index.options.tip_html": {
-    "fr": "💡 <strong style=\"color: #fff;\">Conseil :</strong> Commencez avec le forfait Teaser à 497€ et ajoutez les options quand vous êtes prêt. Pas d'engagement, évolution à tout moment.",
-    "en": "💡 <strong style=\"color: #fff;\">Tip:</strong> Start with the Teaser plan at €497 and add options when you're ready. No commitment, upgrade anytime.",
-    "nl": "💡 <strong style=\"color: #fff;\">Tip:</strong> Begin met het Teaser-pakket voor €497 en voeg opties toe wanneer u klaar bent. Geen verplichting, op elk moment upgraden."
+    "fr": "💡 <strong style=\"color: #fff;\">Conseil :</strong> Commencez avec le forfait Teaser à 37€ ce mois-ci (code PROMO460, au lieu de 497€) et ajoutez les options quand vous êtes prêt. Pas d'engagement, évolution à tout moment.",
+    "en": "💡 <strong style=\"color: #fff;\">Tip:</strong> Start with the Teaser plan at €37 this month (code PROMO460, instead of €497) and add options when you're ready. No commitment, upgrade anytime.",
+    "nl": "💡 <strong style=\"color: #fff;\">Tip:</strong> Begin met het Teaser-pakket voor 37€ deze maand (code PROMO460, in plaats van €497) en voeg opties toe wanneer u klaar bent. Geen verplichting, op elk moment upgraden."
   },
   "index.concierge.tag": {
     "fr": "✨ NOUVEAU — AI CONCIERGE",
@@ -2545,9 +2545,9 @@
     "nl": "Boek uw pakket"
   },
   "index.how.step1.desc": {
-    "fr": "Choisissez le Teaser Package à 497€ et finalisez votre paiement sécurisé en 2 minutes.",
-    "en": "Choose the Teaser Package at €497 and finalize your secure payment in 2 minutes.",
-    "nl": "Kies het Teaser Pakket voor €497 en voltooi uw veilige betaling in 2 minuten."
+    "fr": "Choisissez le Teaser Package à 37€ ce mois-ci (code PROMO460, au lieu de 497€) et finalisez votre paiement sécurisé en 2 minutes.",
+    "en": "Choose the Teaser Package at €37 this month (code PROMO460, instead of €497) and finalize your secure payment in 2 minutes.",
+    "nl": "Kies het Teaser Pakket voor 37€ deze maand (code PROMO460, in plaats van €497) en voltooi uw veilige betaling in 2 minuten."
   },
   "index.how.step2.title": {
     "fr": "Onboarding IA",
@@ -2655,19 +2655,19 @@
     "nl": "Onderwerp"
   },
   "index.contact.form.subjectTeaser": {
-    "fr": "Teaser — 497€ (paiement unique)",
-    "en": "Teaser — €497 (one-time payment)",
-    "nl": "Teaser — €497 (eenmalige betaling)"
+    "fr": "Teaser — 37€ ce mois-ci (code PROMO460, au lieu de 497€)",
+    "en": "Teaser — €37 this month (code PROMO460, instead of €497)",
+    "nl": "Teaser — 37€ deze maand (code PROMO460, in plaats van €497)"
   },
   "index.contact.form.subjectPro": {
-    "fr": "Pro — 999€/mois",
-    "en": "Pro — €999/month",
-    "nl": "Pro — €999/maand"
+    "fr": "Pro — 539€ ce mois-ci (code PROMO460, au lieu de 999€) — paiement unique",
+    "en": "Pro — €539 this month (code PROMO460, instead of €999) — one-time payment",
+    "nl": "Pro — 539€ deze maand (code PROMO460, in plaats van €999) — eenmalige betaling"
   },
   "index.contact.form.subjectProMax": {
-    "fr": "Pro Max — 1,599€/mois",
-    "en": "Pro Max — €1,599/month",
-    "nl": "Pro Max — €1.599/maand"
+    "fr": "Pro Max — 1 139€ ce mois-ci (code PROMO460, au lieu de 1 599€) — paiement unique",
+    "en": "Pro Max — €1,139 this month (code PROMO460, instead of €1,599) — one-time payment",
+    "nl": "Pro Max — €1.139 deze maand (code PROMO460, in plaats van €1.599) — eenmalige betaling"
   },
   "index.contact.form.subjectCustom": {
     "fr": "Projet sur mesure",
@@ -2905,9 +2905,9 @@
     "nl": "Ja, u krijgt een premium, responsive design dat voldoet aan de GDPR-normen. De website wordt door onze AI gegenereerd met dezelfde standaarden als onze premiumpakketten."
   },
   "promo.a2": {
-    "fr": "Oui, vous pouvez passer au forfait Pro à 999€ pour une personnalisation avancée avec photos, textes sur mesure et menu détaillé.",
-    "en": "Yes, you can move up to the Pro plan at €999 for advanced customisation with photos, custom texts and a detailed menu.",
-    "nl": "Ja, u kunt overstappen naar het Pro-pakket aan 999€ voor geavanceerde aanpassingen met foto's, maatteksten en een gedetailleerd menu."
+    "fr": "Oui, vous pouvez passer au forfait Pro à 539€ ce mois-ci (code PROMO460, au lieu de 999€) pour une personnalisation avancée avec photos, textes sur mesure et menu détaillé.",
+    "en": "Yes, you can move up to the Pro plan at €539 this month (code PROMO460, instead of €999) for advanced customisation with photos, custom texts and a detailed menu.",
+    "nl": "Ja, u kunt overstappen naar het Pro-pakket voor 539€ deze maand (code PROMO460, in plaats van 999€) voor geavanceerde aanpassingen met foto's, maatteksten en een gedetailleerd menu."
   },
   "promo.a3": {
     "fr": "60 secondes après paiement. Votre site est automatiquement généré et déployé sur Vercel.",
