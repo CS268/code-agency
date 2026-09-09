@@ -691,6 +691,7 @@
         .offer-price { flex-wrap: wrap; row-gap: .25rem; }
         .price-amount.is-was { color: var(--gray-light); text-decoration: line-through 3px rgba(255,255,255,.35); }
         .price-promo { align-self: flex-start; font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem; font-weight: 800; color: var(--accent); background: rgba(245,158,11,.15); border: 1px solid rgba(245,158,11,.45); padding: .1rem .55rem; border-radius: 10px; margin-left: .25rem; }
+        .price-amount.is-was.on-accent { color: #e2e8f0; text-decoration: line-through 3px rgba(226,232,240,.6); }
 
         .offer-features {
             list-style: none;
@@ -1240,6 +1241,7 @@
                 <a href="/promo-septembre.html" data-i18n="common.nav.offer">PROMO</a>
                 <a href="ai-concierge.html" style="color:var(--primary);position:relative;">AI Concierge <span style="background:#ff006e;color:#fff;font-size:10px;padding:2px 6px;border-radius:8px;vertical-align:super;font-weight:700;">NEW</span></a>
                 <a href="#comment" data-i18n="common.nav.process">Processus</a>
+                <a href="/blog">Blog</a>
                 <a href="#contact" data-i18n="common.nav.contact">Contact</a>
                 <a href="espace-client.html" data-i18n="common.nav.clientArea">Espace Client</a>
                 <a href="/promo-septembre.html" class="nav-cta" data-i18n="common.nav.viewOffers">PROMO 37€</a>
@@ -1427,7 +1429,7 @@
                     <p class="offer-desc" data-i18n="index.offer.pro.desc">Pour les propriétaires ambitieux qui veulent scaler leur commerce.</p>
                     <div class="offer-price">
                         <span class="price-currency">€</span>
-                        <span class="price-amount is-was">999</span><span class="price-promo">539€</span>
+                        <span class="price-amount is-was on-accent">999</span><span class="price-promo">539€</span>
                         <span class="price-period" data-i18n="index.offer.teaser.oneTime"> (paiement unique)</span>
                     </div>
                     <ul class="offer-features">
