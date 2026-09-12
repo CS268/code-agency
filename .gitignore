@@ -1,10 +1,2 @@
+*.bak*
 .DS_Store
-node_modules/
-*.log
-.env
-.vercel
-# Rapport de sécurité local (ne pas commiter)
-SECURITY_AUDIT.md
-*.bak
-docs/
-CONTEXT.md
