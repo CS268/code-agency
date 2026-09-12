@@ -3,30 +3,72 @@
   <channel>
     <title>JCODE Agency Blog — Sites web &amp; IA pour PME en Belgique</title>
     <link>https://jcode.store/blog/</link>
-    <description>Conseils pratiques pour commerçants et indépendants : créer un site conforme, automatiser vos réservations, gagner du temps avec l'IA. Rédigé par l'équipe JCODE.</description>
+    <description>Conseils pratiques pour commerçants et indépendants : créer un site conforme, automatiser vos réservations, gagner du temps avec l'IA.</description>
     <language>fr-be</language>
-    <lastBuildDate>Tue, 01 Sep 2026 12:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 18:28:13 +0200</lastBuildDate>
     <atom:link href="https://jcode.store/feed.xml" rel="self" type="application/rss+xml"/>
-    
-    <!-- Article : Boulangerie -->
+    <item>
+      <title>RGPD, QR code, réservation en ligne et chatbot : ce que votre site PME doit inclure en 2026</title>
+      <link>https://jcode.store/blog/site-web-pme-rgpd-reservation-chatbot-2026.html</link>
+      <description>Les 4 éléments qu</description>
+      <pubDate>Sat, 12 Sep 2026 10:00:00 +0200</pubDate>
+      <guid>https://jcode.store/blog/site-web-pme-rgpd-reservation-chatbot-2026.html</guid>
+    </item>
+    <item>
+      <title>Pro Max à 1 139 € avec PROMO460 : Réservation Auto + Chatbot IA</title>
+      <link>https://jcode.store/blog/pro-max-reservation-auto-chatbot-ia.html</link>
+      <description>Réservation Auto et Chatbot IA inclus dans le forfait Pro Max à 1 139 € avec le code PROMO460. Automatisez vos rendez-vous et répondez à vos clients 24/7.</description>
+      <pubDate>Thu, 10 Sep 2026 10:00:00 +0200</pubDate>
+      <guid>https://jcode.store/blog/pro-max-reservation-auto-chatbot-ia.html</guid>
+    </item>
+    <item>
+      <title>Les 5 occasions manquées sur votre site actuel</title>
+      <link>https://jcode.store/blog/5-occasions-manquees-site-pme.html</link>
+      <description>Chatbot IA, réservation automatique, QR code, tableau de bord de performance et contenu : les 5 fonctionnalités que la plupart des sites de PME n</description>
+      <pubDate>Wed, 09 Sep 2026 10:00:00 +0200</pubDate>
+      <guid>https://jcode.store/blog/5-occasions-manquees-site-pme.html</guid>
+    </item>
+    <item>
+      <title>AI Concierge : votre partenaire IA pour automatiser votre commerce | JCODE Agency</title>
+      <link>https://jcode.store/blog/ai-concierge-automatiser-commerce.html</link>
+      <description></description>
+      <pubDate>Sun, 06 Sep 2026 10:00:00 +0200</pubDate>
+      <guid>https://jcode.store/blog/ai-concierge-automatiser-commerce.html</guid>
+    </item>
+    <item>
+      <title>Alternative à une agence web classique en Belgique : 6 options comparées | JCODE Agency</title>
+      <link>https://jcode.store/blog/alternative-agence-web-belgique.html</link>
+      <description></description>
+      <pubDate>Fri, 04 Sep 2026 10:00:00 +0200</pubDate>
+      <guid>https://jcode.store/blog/alternative-agence-web-belgique.html</guid>
+    </item>
+    <item>
+      <title>Créer un site vitrine sans coder en 2026 : le guide pratique des PME | JCODE Agency</title>
+      <link>https://jcode.store/blog/creer-site-vitrine-sans-coder-pme.html</link>
+      <description></description>
+      <pubDate>Fri, 04 Sep 2026 10:00:00 +0200</pubDate>
+      <guid>https://jcode.store/blog/creer-site-vitrine-sans-coder-pme.html</guid>
+    </item>
+    <item>
+      <title>Site web sans abonnement en Belgique : le paiement unique expliqué | JCODE Agency</title>
+      <link>https://jcode.store/blog/site-web-sans-abonnement-belgique.html</link>
+      <description></description>
+      <pubDate>Fri, 04 Sep 2026 10:00:00 +0200</pubDate>
+      <guid>https://jcode.store/blog/site-web-sans-abonnement-belgique.html</guid>
+    </item>
+    <item>
+      <title>Pro Max à 1 139 € au lieu de 1 599 € : le site web qui vend pour vous</title>
+      <link>https://jcode.store/blog/site-pro-max-ia-pme-belges.html</link>
+      <description>Le forfait Pro Max de JCODE : site jusqu</description>
+      <pubDate>Thu, 03 Sep 2026 10:00:00 +0200</pubDate>
+      <guid>https://jcode.store/blog/site-pro-max-ia-pme-belges.html</guid>
+    </item>
     <item>
       <title>Comment une boulangerie pourrait augmenter ses réservations avec un site vitrine + réservation automatique</title>
       <link>https://jcode.store/blog/site-vitrine-reservation-boulangerie.html</link>
-      <description>Scénario hypothétique : comment une boulangerie artisanale en Belgique peut automatiser ses réservations 24h/24 avec un site vitrine professionnel. Découvrez les étapes concrètes, les coûts et le ROI.</description>
-      <pubDate>Sat, 30 Aug 2026 10:00:00 +0200</pubDate>
+      <description>Scénario hypothétique : comment une boulangerie artisanale en Belgique peut automatiser ses réservations 24h/24 avec un site vitrine professionnel. Forfaits dès 497€.</description>
+      <pubDate>Sun, 30 Aug 2026 10:00:00 +0200</pubDate>
       <guid>https://jcode.store/blog/site-vitrine-reservation-boulangerie.html</guid>
     </item>
-    
-    <!-- Article : RGPD (à décommenter quand l'article sera publié) -->
-    <!--
-    <item>
-      <title>RGPD et site web pour PME belges : ce qu'il faut vérifier avant d'ajouter de l'IA</title>
-      <link>https://jcode.store/blog/rgpd-pme-belges.html</link>
-      <description>Bandeau cookie, mentions légales, chatbot IA : le guide pratique pour les commerçants et indépendants belges sur la conformité RGPD.</description>
-      <pubDate>Fri, 29 Aug 2026 10:00:00 +0200</pubDate>
-      <guid>https://jcode.store/blog/rgpd-pme-belges.html</guid>
-    </item>
-    -->
-    
   </channel>
 </rss>
