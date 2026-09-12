@@ -186,18 +186,21 @@
         }
         .nav-links a:hover::after { width: 100%; }
         .nav-cta {
-            background: var(--gradient-1);
-            color: white !important;
-            padding: 0.6rem 1.5rem;
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--primary-light) !important;
+            padding: 0.5rem 1.25rem;
             border-radius: 50px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
             font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            font-size: 0.8rem;
+            transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .nav-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+            background: rgba(99, 102, 241, 0.25);
+            border-color: rgba(99, 102, 241, 0.5);
         }
+        .nav-cta:active { transform: scale(0.95); }
+        .lang-btn:active { transform: scale(0.93); transition: transform 100ms ease-out; }
         .nav-cta::after { display: none !important; }
         .mobile-menu-btn {
             display: none;
@@ -324,10 +327,11 @@
             font-weight: 600;
             font-size: 1rem;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
             cursor: pointer;
             border: none;
         }
+        .btn:active { transform: scale(0.97); transition: transform 100ms ease-out; }
         .btn-primary {
             background: var(--gradient-1);
             color: white;
@@ -406,8 +410,8 @@
         .card-info p { color: var(--gray); font-size: 0.85rem; }
         .card-status {
             margin-left: auto;
-            background: rgba(16, 185, 129, 0.15);
-            color: var(--success);
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--gray-light);
             padding: 0.3rem 0.8rem;
             border-radius: 50px;
             font-size: 0.75rem;
@@ -584,6 +588,7 @@
             margin-bottom: 1.5rem;
             color: white;
         }
+        .service-icon svg { width: 28px; height: 28px; }
         .service-card h3 {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.25rem;
@@ -636,7 +641,6 @@
             backdrop-filter: blur(20px);
             position: relative;
             overflow: hidden;
-            animation: glow 4s ease-in-out infinite;
         }
         .offer-card::after {
             content: '';
@@ -1073,15 +1077,27 @@
         .reveal {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.8s ease-out;
+            transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .reveal.active { opacity: 1; transform: translateY(0); }
-        .reveal-left { opacity: 0; transform: translateX(-30px); transition: all 0.8s ease-out; }
+        .reveal-left { opacity: 0; transform: translateX(-30px); transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
         .reveal-left.active { opacity: 1; transform: translateX(0); }
-        .reveal-right { opacity: 0; transform: translateX(30px); transition: all 0.8s ease-out; }
+        .reveal-right { opacity: 0; transform: translateX(30px); transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
         .reveal-right.active { opacity: 1; transform: translateX(0); }
-        .reveal-scale { opacity: 0; transform: scale(0.9); transition: all 0.8s ease-out; }
+        .reveal-scale { opacity: 0; transform: scale(0.9); transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
         .reveal-scale.active { opacity: 1; transform: scale(1); }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.001ms !important;
+                scroll-behavior: auto !important;
+            }
+            .reveal, .reveal-left, .reveal-right, .reveal-scale {
+                transform: none !important;
+                opacity: 1 !important;
+            }
+        }
 
         /* ===== LIVE CHAT WIDGET ===== */
         .chat-widget {
@@ -1304,8 +1320,9 @@
                             <h4>JCODE Agency</h4>
                             <p data-i18n="index.hero.cardDashboard">Dashboard IA</p>
                         </div>
-                        <div class="card-status" data-i18n="index.hero.cardLive">● Live</div>
+                        <div class="card-status" data-i18n="index.hero.cardLive">Exemple</div>
                     </div>
+                    <p class="card-example-note" style="margin:0 0 0.5rem; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:var(--gray-light); opacity:0.85;" data-i18n="index.hero.cardExampleNote">Exemple de résultats</p>
                     <div class="card-metrics">
                         <div class="metric-box">
                             <div class="metric-value up">+127%</div>
@@ -1353,35 +1370,37 @@
             </div>
             <div class="services-grid">
                 <div class="service-card reveal">
-                    <div class="service-icon">🎨</div>
+                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
                     <h3 data-i18n="index.services.brandbuilder.title">BrandBuilder</h3>
                     <p data-i18n="index.services.brandbuilder.desc">Identité visuelle complète : logo, palette, typographie, site web pro avec pages clés, et calendrier de contenu sur mesure.</p>
                 </div>
                 <div class="service-card reveal">
-                    <div class="service-icon">✍️</div>
+                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
                     <h3 data-i18n="index.services.copymaster.title">CopyMaster</h3>
                     <p data-i18n="index.services.copymaster.desc">Rédaction SEO optimisée pour vos annonces commerce, descriptions captivantes, et contenu de blog qui convertit les visiteurs.</p>
                 </div>
                 <div class="service-card reveal">
-                    <div class="service-icon">📹</div>
-                    <div class="service-card-badge" style="position:absolute; top:16px; right:16px; background:linear-gradient(135deg, var(--primary), var(--primary-dark)); color:#fff; padding:4px 12px; border-radius:50px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; box-shadow:0 2px 8px rgba(99,102,241,0.3);" data-i18n="index.services.videocreator.badge">💎 Q1 2027</div>
-                    <h3 data-i18n="index.services.videocreator.title">VideoCreator</h3>
-                    <p data-i18n="index.services.videocreator.desc">Production vidéo automatisée : visuels de propriétés, reels Instagram/TikTok, et contenu viral pour maximiser votre visibilité.</p>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon">📧</div>
+                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
                     <h3 data-i18n="index.services.outreach.title">Outreach Pro</h3>
                     <p data-i18n="index.services.outreach.desc">Prospection automatisée de propriétaires commerces : scraping ciblé, emails personnalisés, et suivi intelligent des leads.</p>
                 </div>
                 <div class="service-card reveal">
-                    <div class="service-icon">📊</div>
+                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
                     <h3 data-i18n="index.services.analytics.title">Analytics AI</h3>
                     <p data-i18n="index.services.analytics.desc">Tableaux de bord en temps réel, analyse des performances, et recommandations optimisées par IA pour augmenter vos revenus.</p>
                 </div>
                 <div class="service-card reveal">
-                    <div class="service-icon">🤖</div>
+                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
                     <h3 data-i18n="index.services.orchestrator.title">Agent Orchestrator</h3>
                     <p data-i18n="index.services.orchestrator.desc">Coordination intelligente de vos 8 modules IA. Chaque module communique, se délègue des tâches, et optimise son workflow.</p>
+                </div>
+            </div>
+            <div class="services-upcoming reveal" style="margin-top:2.5rem; padding:1.5rem 2rem; border:1px dashed rgba(255,255,255,0.15); border-radius:16px; display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+                <div class="service-icon" style="width:44px; height:44px; background:rgba(255,255,255,0.06); flex-shrink:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+                <div>
+                    <span style="display:inline-block; background:rgba(255,255,255,0.08); color:var(--gray-light); padding:4px 12px; border-radius:50px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:0.5rem;" data-i18n="index.services.videocreator.badge">⏳ Bientôt disponible — Q1 2027</span>
+                    <h3 style="margin:0.25rem 0; font-family:'Space Grotesk',sans-serif; font-size:1.1rem; color:var(--gray-light);" data-i18n="index.services.videocreator.title">VideoCreator</h3>
+                    <p style="margin:0; font-size:0.9rem; color:var(--gray);" data-i18n="index.services.videocreator.desc">Production vidéo automatisée : visuels de propriétés, reels Instagram/TikTok, et contenu viral pour maximiser votre visibilité.</p>
                 </div>
             </div>
         </div>
@@ -1398,7 +1417,6 @@
             <div class="pricing-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
                 <!-- TEASER -->
                 <div class="offer-card reveal" style="max-width: 100%;">
-                    <div class="offer-badge" style="background: #10b981; color: white; font-weight: bold; padding: 6px 16px; border-radius: 20px; display: inline-block; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="index.offer.recommended">⭐ RECOMMANDÉ</div>
                     <div class="offer-name" data-i18n="index.offer.teaser.name">Teaser</div>
                     <p class="offer-desc" data-i18n="index.offer.teaser.desc">Le starter parfait pour propriétaires de commerce local qui veulent tester la puissance de l'IA.</p>
                     <div class="offer-price">
@@ -1422,7 +1440,7 @@
 
                 <!-- PRO -->
                 <div class="offer-card reveal" style="max-width: 100%; border: 2px solid var(--accent); animation: glow 4s ease-in-out infinite;">
-                    <div class="offer-badge" style="background: var(--accent); color: var(--dark);">LIVE</div>
+                    <div class="offer-badge" style="background: #10b981; color: white; font-weight: bold; padding: 6px 16px; border-radius: 20px; display: inline-block; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="index.offer.recommended">⭐ RECOMMANDÉ</div>
                     <div class="offer-name" data-i18n="index.offer.pro.name">Pro</div>
                     <p class="offer-desc" data-i18n="index.offer.pro.desc">Pour les propriétaires ambitieux qui veulent scaler leur commerce.</p>
                     <div class="offer-price">
@@ -1448,7 +1466,6 @@
 
                 <!-- PRO MAX -->
                 <div class="offer-card reveal" style="max-width: 100%; border: 2px solid var(--primary-light);">
-                    <div class="offer-badge" style="background: var(--primary); color: white;">LIVE</div>
                     <div class="offer-name" data-i18n="index.offer.promax.name">Pro Max</div>
                     <p class="offer-desc" data-i18n="index.offer.promax.desc">L'expérience ultime. Accès complet aux 8 modules IA + service VIP.</p>
                     <div class="offer-price">

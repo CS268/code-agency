@@ -152,7 +152,15 @@
   window.setLanguage = function (newLang) {
     lang = newLang;
     localStorage.setItem('jcode_lang', newLang);
-    apply();
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) { apply(); return; }
+    document.body.style.transition = 'opacity 150ms ease-out';
+    document.body.style.opacity = '0.4';
+    setTimeout(function () {
+      apply();
+      document.body.style.transition = 'opacity 200ms ease-out';
+      document.body.style.opacity = '1';
+    }, 150);
   };
 
   // Init on DOMContentLoaded

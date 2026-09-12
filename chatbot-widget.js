@@ -53,6 +53,14 @@
     button.innerHTML = '💬';
     button.title = 'JCODE Assistant';
 
+    // Press feedback + reduced-motion fallback (injected once, since all widget styles are inline)
+    const styleEl = document.createElement('style');
+    styleEl.textContent =
+      '#jcode-chat-button { transition: transform 150ms cubic-bezier(0.22,1,0.36,1); }' +
+      '#jcode-chat-button:active { transform: scale(0.92); }' +
+      '@media (prefers-reduced-motion: reduce) { #jcode-chat-window { transition: opacity 150ms ease !important; transform: none !important; } }';
+    document.head.appendChild(styleEl);
+
     // Chat window
     const chatWindow = document.createElement('div');
     chatWindow.id = 'jcode-chat-window';
@@ -64,7 +72,12 @@
     chatWindow.style.backgroundColor = 'white';
     chatWindow.style.borderRadius = '16px';
     chatWindow.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.2)';
-    chatWindow.style.display = 'none';
+    chatWindow.style.display = 'flex';
+    chatWindow.style.opacity = '0';
+    chatWindow.style.transform = 'scale(0.92) translateY(12px)';
+    chatWindow.style.transformOrigin = 'bottom right';
+    chatWindow.style.pointerEvents = 'none';
+    chatWindow.style.transition = 'opacity 220ms cubic-bezier(0.22,1,0.36,1), transform 220ms cubic-bezier(0.22,1,0.36,1)';
     chatWindow.style.flexDirection = 'column';
     chatWindow.style.overflow = 'hidden';
     chatWindow.style.zIndex = '10000';
@@ -201,19 +214,23 @@
     const button = document.getElementById('jcode-chat-button');
     
     if (isOpen) {
-      chatWindow.style.display = 'flex';
+      chatWindow.style.opacity = '1';
+      chatWindow.style.transform = 'scale(1) translateY(0)';
+      chatWindow.style.pointerEvents = 'auto';
       button.style.backgroundColor = '#4f46e5';
-      
+
       // Focus input field
       const inputField = document.querySelector('#jcode-chat-window input');
       setTimeout(() => inputField.focus(), 100);
-      
+
       // Show welcome message if no history
       if (chatHistory.length === 0) {
         showBotMessage('Welcome to JCODE Assistant! How can I help you today?');
       }
     } else {
-      chatWindow.style.display = 'none';
+      chatWindow.style.opacity = '0';
+      chatWindow.style.transform = 'scale(0.92) translateY(12px)';
+      chatWindow.style.pointerEvents = 'none';
       button.style.backgroundColor = config.colors.primary;
     }
   }

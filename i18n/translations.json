@@ -2000,9 +2000,14 @@
     "nl": "AI Dashboard"
   },
   "index.hero.cardLive": {
-    "fr": "● Live",
-    "en": "● Live",
-    "nl": "● Live"
+    "fr": "Exemple",
+    "en": "Example",
+    "nl": "Voorbeeld"
+  },
+  "index.hero.cardExampleNote": {
+    "fr": "Exemple de résultats",
+    "en": "Example results",
+    "nl": "Voorbeeld van resultaten"
   },
   "index.hero.cardVisits": {
     "fr": "Visites",
@@ -2080,9 +2085,9 @@
     "nl": "Geautomatiseerde videoproductie: vastgoedbeelden, Instagram/TikTok reels en virale content om uw zichtbaarheid te maximaliseren."
   },
   "index.services.videocreator.badge": {
-    "fr": "💎 Q1 2027",
-    "en": "💎 Q1 2027",
-    "nl": "💎 Q1 2027"
+    "fr": "⏳ Bientôt disponible — Q1 2027",
+    "en": "⏳ Coming soon — Q1 2027",
+    "nl": "⏳ Binnenkort beschikbaar — Q1 2027"
   },
   "index.services.outreach.title": {
     "fr": "Outreach Pro",
