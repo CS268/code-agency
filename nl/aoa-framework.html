@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head><base href="/"><style>.lang-btn[data-lang-active]{background:rgba(99,102,241,0.15);border-color:rgba(99,102,241,0.3);color:var(--primary-light);}</style>
+    <meta property="og:url" content="https://jcode.store/nl/aoa-framework.html">
+    <link rel="canonical" href="https://jcode.store/nl/aoa-framework.html">
+    <link rel="alternate" hreflang="fr" href="https://jcode.store/aoa-framework.html">
+    <link rel="alternate" hreflang="en" href="https://jcode.store/en/aoa-framework.html">
+    <link rel="alternate" hreflang="nl" href="https://jcode.store/nl/aoa-framework.html">
+    <link rel="alternate" hreflang="x-default" href="https://jcode.store/aoa-framework.html">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AOA Framework — JCODE Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{--bg:#0a0a0a;--glass:rgba(255,255,255,0.03);--glass-border:rgba(255,255,255,0.06);--primary:#00f0ff;--accent:#ff006e;--purple:#a855f7;--green:#22c55e;--text:#fff;--muted:#94a3b8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:900px;margin:0 auto;padding:40px 24px}
+h1{text-align:center;font-size:2rem;font-weight:800;margin-bottom:8px}
+.sub{text-align:center;color:var(--muted);margin-bottom:40px}
+
+/* TABS */
+.tabs{display:flex;gap:4px;margin-bottom:32px;background:var(--glass);border-radius:16px;padding:6px;border:1px solid var(--glass-border)}
+.tab{flex:1;padding:14px;text-align:center;border-radius:12px;cursor:pointer;font-weight:600;font-size:14px;color:var(--muted);transition:all .3s}
+.tab.active{background:rgba(0,240,255,0.1);color:var(--primary);box-shadow:0 0 20px rgba(0,240,255,0.1)}
+.tab:nth-child(2).active{background:rgba(255,0,110,0.1);color:var(--accent)}
+.tab:nth-child(3).active{background:rgba(168,85,247,0.1);color:var(--purple)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* CARDS */
+.card{background:var(--glass);border:1px solid var(--glass-border);border-radius:16px;padding:24px;margin-bottom:16px}
+.card h3{font-size:1rem;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.checklist{list-style:none}
+.checklist li{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.03);font-size:14px;color:var(--muted)}
+.checklist li:last-child{border:none}
+.checklist input{accent-color:var(--primary);width:18px;height:18px;margin-top:2px;flex-shrink:0}
+.notes{width:100%;min-height:120px;padding:16px;background:rgba(255,255,255,0.02);border:1px solid var(--glass-border);border-radius:12px;color:var(--text);font-family:inherit;font-size:14px;resize:vertical}
+.notes:focus{outline:none;border-color:var(--primary)}
+.quick-win{display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(34,197,94,0.05);border:1px solid rgba(34,197,94,0.15);border-radius:10px;margin-top:12px;font-size:13px}
+.quick-win .icon{font-size:1.2rem}
+.btn-export{display:inline-block;margin-top:24px;padding:14px 32px;background:var(--glass);border:1px solid var(--glass-border);border-radius:12px;color:var(--text);font-weight:600;font-size:14px;cursor:pointer;transition:all .3s}
+.btn-export:hover{border-color:var(--primary);color:var(--primary)}
+.score{display:flex;align-items:center;gap:16px;margin-top:16px}
+.score-bar{flex:1;height:10px;background:rgba(255,255,255,0.05);border-radius:5px;overflow:hidden}
+.score-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--primary));border-radius:5px;transition:width .5s}
+.score-val{font-size:1.5rem;font-weight:800;color:var(--primary)}
+.nav-bar{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:rgba(10,10,10,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border)}
+.nav-bar .logo{font-weight:800;font-size:1.2rem;color:var(--text)}
+.nav-bar .logo span{color:var(--primary)}
+.lang-switcher{display:flex;gap:8px;align-items:center}
+@media(max-width:600px){.tabs{flex-direction:column}.tab{padding:12px}}
+</style>
+</head>
+<body>
+<nav class="nav-bar">
+<a href="/nl/" class="logo">J<span>CODE</span> Agency</a>
+<div class="lang-switcher">
+  <a href="/aoa-framework.html" class="lang-btn" data-lang="fr" data-lang-active="fr" aria-current="true">FR</a>
+  <a href="/nl/aoa-framework.html" class="lang-btn" data-lang="nl" data-lang-active="nl" aria-current="true">NL</a>
+  <a href="/en/aoa-framework.html" class="lang-btn" data-lang="en">EN</a>
+</div>
+</nav>
+<div class="container">
+<h1 data-i18n="aoa.title">🎯 A.O.A. Framework</h1>
+<p class="sub" data-i18n="aoa.subtitle">Audit → Optimize → Automate | Sessietemplate JCODE AI Concierge</p>
+
+<div class="tabs">
+<div class="tab active" onclick="switchTab(0)" data-i18n="aoa.tab.audit">🔍 AUDIT</div>
+<div class="tab" onclick="switchTab(1)" data-i18n="aoa.tab.optimize">⚡ OPTIMIZE</div>
+<div class="tab" onclick="switchTab(2)" data-i18n="aoa.tab.automate">🤖 AUTOMATE</div>
+</div>
+
+<!-- AUDIT -->
+<div class="tab-content active" id="tab0">
+<div class="card">
+<h3 data-i18n="aoa.audit.mapping.title">🗺️ Processen in kaart brengen</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q1">Welke taken neemt u elke dag op zich? (volledige lijst)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q2">Hoeveel tijd besteedt u aan elke taak?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q3">Welke taken zijn repetitief en voorspelbaar?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q4">Welke taken vereisen menselijk oordeel?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q5">Welke tools gebruikt u momenteel?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q6">Waar zijn de knelpunten?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q7">Welke fouten komen vaak terug?</span></li>
+</ul>
+</div>
+<div class="card">
+<h3 data-i18n="aoa.audit.score.title">📊 IA-rijpheidsscore</h3>
+<div class="score">
+<div class="score-bar"><div class="score-fill" style="width:35%"></div></div>
+<div class="score-val">3.5/10</div>
+</div>
+<p style="font-size:13px;color:var(--muted);margin-top:8px;" data-i18n="aoa.audit.score.based">Gebaseerd op: huidige digitalisering, volume repetitieve taken, beschikbare gegevens, bereidheid tot adoptie.</p>
+</div>
+<div class="card">
+<h3 data-i18n="aoa.audit.notes.title">📝 Sessienotities</h3>
+<textarea class="notes" placeholder="Notities tijdens het Audit-gesprek..." data-i18n-attr="placeholder:aoa.audit.notes.placeholder"></textarea>
+</div>
+<div class="quick-win"><span class="icon">💡</span><span data-i18n-html="aoa.audit.quickwin"><strong>Quick Win geïdentificeerd:</strong> Afspraakherinneringen automatiseren via SMS/e-mail (geschatte winst: 3u/week)</span></div>
+</div>
+
+<!-- OPTIMIZE -->
+<div class="tab-content" id="tab1">
+<div class="card">
+<h3 data-i18n="aoa.optimize.flow.title">🔄 Geoptimaliseerde workflow</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q1">Verwijder de geïdentificeerde overbodige stappen</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q2">Standaardiseer templates (e-mails, facturen, antwoorden)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q3">Groepeer vergelijkbare taken (batching)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q4">Definieer automatische triggers (wanneer X → dan Y)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q5">Documenteer de doelworkflow (voor/na)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q6">Valideer met de klant dat de workflow logisch is</span></li>
+</ul>
+</div>
+<div class="card">
+<h3 data-i18n="aoa.optimize.removed.title">🗑️ Verwijderde stappen</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span data-i18n="aoa.optimize.removed.q1">Handmatige afspraak invoer → Calendly auto</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.removed.q2">Handmatig reviews beantwoorden → Template + IA</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.removed.q3">Handmatige opvolging onbetaald → Make.com workflow</span></li>
+</ul>
+</div>
+<div class="card">
+<h3 data-i18n="aoa.optimize.notes.title">📝 Sessienotities</h3>
+<textarea class="notes" placeholder="Notities tijdens het Optimize-gesprek..." data-i18n-attr="placeholder:aoa.optimize.notes.placeholder"></textarea>
+</div>
+<div class="quick-win"><span class="icon">💡</span><span data-i18n-html="aoa.optimize.quickwin"><strong>Quick Win geïdentificeerd:</strong> Automatisch post-afspraak e-mail template (geschatte winst: 2u/week)</span></div>
+</div>
+
+<!-- AUTOMATE -->
+<div class="tab-content" id="tab2">
+<div class="card">
+<h3 data-i18n="aoa.automate.skills.title">🤖 Te maken Claude skills</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span data-i18n="aoa.automate.skills.q1">Skill "Google review antwoord" (professionele, gepersonaliseerde toon)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.skills.q2">Skill "Post-afspraak e-mail" (samenvatting + volgende afspraak)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.skills.q3">Skill "Klantopvolging" (D+3, D+7, D+14)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.skills.q4">Skill "Sociale media post" (3x/week automatisch)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.skills.q5">Skill "Facturatie" (generatie + verzending)</span></li>
+</ul>
+</div>
+<div class="card">
+<h3 data-i18n="aoa.automate.workflows.title">⚙️ Make.com workflows</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span data-i18n="aoa.automate.workflows.q1">Trigger: Nieuwe afspraak → Bevestigingsmail + Herinnering D-1</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.workflows.q2">Trigger: Google review → IA-antwoord + Melding</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.workflows.q3">Trigger: Onbetaalde factuur D+7 → Automatische herinnering</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.workflows.q4">Schedule: Maandag 8u → Weekposts geprogrammeerd</span></li>
+</ul>
+</div>
+<div class="card">
+<h3 data-i18n="aoa.automate.deploy.title">🚀 Implementatie</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span data-i18n="aoa.automate.deploy.q1">Test elke workflow in sandbox-modus</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.deploy.q2">Klantvalidatie voor activering</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.deploy.q3">Progressieve activering (1 workflow/week)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.deploy.q4">Monitoring eerste week</span></li>
+</ul>
+</div>
+<div class="card">
+<h3 data-i18n="aoa.automate.notes.title">📝 Sessienotities</h3>
+<textarea class="notes" placeholder="Notities tijdens het Automate-gesprek..." data-i18n-attr="placeholder:aoa.automate.notes.placeholder"></textarea>
+</div>
+<div class="quick-win"><span class="icon">💡</span><span data-i18n-html="aoa.automate.quickwin"><strong>Quick Win geïdentificeerd:</strong> Workflow opvolging onbetaalde facturen (geschatte winst: 4u/maand + 30% minder onbetaald)</span></div>
+</div>
+
+<button class="btn-export" onclick="window.print()" data-i18n="aoa.export">📄 Exporteren naar PDF</button>
+</div>
+
+<script>
+function switchTab(n){
+document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',i===n));
+document.querySelectorAll('.tab-content').forEach((c,i)=>c.classList.toggle('active',i===n));
+}
+</script>
+<!-- SEO-INTERNAL-LINKS:START -->
+<section class="seo-internal-links" style="max-width:1100px;margin:2.5rem auto;padding:1.5rem 2rem;border-top:1px solid rgba(128,128,128,0.3);">
+  <p style="margin:0 0 0.75rem;font-weight:600;">À découvrir chez JCODE</p>
+  <ul style="margin:0;padding-left:1.1rem;line-height:1.9;">
+      <li><a href="/nl/ai-concierge.html" style="color:inherit;text-decoration:underline;">AI Concierge : automatiser votre commerce</a></li>
+      <li><a href="/nl/blog/" style="color:inherit;text-decoration:underline;">Le blog : conseils web & IA pour PME belges</a></li>
+      <li><a href="/nl/" style="color:inherit;text-decoration:underline;">Retour à l'accueil JCODE</a></li>
+  </ul>
+</section>
+<!-- SEO-INTERNAL-LINKS:END -->
+</body>
+</html>

@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+<head><style>.lang-btn[data-lang-active]{background:rgba(99,102,241,0.15);border-color:rgba(99,102,241,0.3);color:var(--primary-light);}</style>
     <meta property="og:url" content="https://jcode.store/aoa-framework.html">
     <link rel="canonical" href="https://jcode.store/aoa-framework.html">
+    <link rel="alternate" hreflang="fr" href="https://jcode.store/aoa-framework.html">
+    <link rel="alternate" hreflang="en" href="https://jcode.store/en/aoa-framework.html">
+    <link rel="alternate" hreflang="nl" href="https://jcode.store/nl/aoa-framework.html">
+    <link rel="alternate" hreflang="x-default" href="https://jcode.store/aoa-framework.html">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AOA Framework — JCODE Agency</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="i18n/i18n.js"></script>
+
 <style>
 :root{--bg:#0a0a0a;--glass:rgba(255,255,255,0.03);--glass-border:rgba(255,255,255,0.06);--primary:#00f0ff;--accent:#ff006e;--purple:#a855f7;--green:#22c55e;--text:#fff;--muted:#94a3b8}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -51,11 +56,11 @@ h1{text-align:center;font-size:2rem;font-weight:800;margin-bottom:8px}
 </head>
 <body>
 <nav class="nav-bar">
-<a href="index.html" class="logo">J<span>CODE</span> Agency</a>
+<a href="/" class="logo">J<span>CODE</span> Agency</a>
 <div class="lang-switcher">
-  <a href="#" class="lang-btn" data-lang="fr" onclick="setLanguage('fr'); return false;">FR</a>
-  <a href="#" class="lang-btn" data-lang="nl" onclick="setLanguage('nl'); return false;">NL</a>
-  <a href="#" class="lang-btn" data-lang="en" onclick="setLanguage('en'); return false;">EN</a>
+  <a href="/aoa-framework.html" class="lang-btn" data-lang="fr" data-lang-active="fr" aria-current="true">FR</a>
+  <a href="/nl/aoa-framework.html" class="lang-btn" data-lang="nl">NL</a>
+  <a href="/en/aoa-framework.html" class="lang-btn" data-lang="en">EN</a>
 </div>
 </nav>
 <div class="container">

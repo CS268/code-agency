@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><base href="/"><style>.lang-btn[data-lang-active]{background:rgba(99,102,241,0.15);border-color:rgba(99,102,241,0.3);color:var(--primary-light);}</style>
+    <meta property="og:url" content="https://jcode.store/en/aoa-framework.html">
+    <link rel="canonical" href="https://jcode.store/en/aoa-framework.html">
+    <link rel="alternate" hreflang="fr" href="https://jcode.store/aoa-framework.html">
+    <link rel="alternate" hreflang="en" href="https://jcode.store/en/aoa-framework.html">
+    <link rel="alternate" hreflang="nl" href="https://jcode.store/nl/aoa-framework.html">
+    <link rel="alternate" hreflang="x-default" href="https://jcode.store/aoa-framework.html">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AOA Framework — JCODE Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{--bg:#0a0a0a;--glass:rgba(255,255,255,0.03);--glass-border:rgba(255,255,255,0.06);--primary:#00f0ff;--accent:#ff006e;--purple:#a855f7;--green:#22c55e;--text:#fff;--muted:#94a3b8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:900px;margin:0 auto;padding:40px 24px}
+h1{text-align:center;font-size:2rem;font-weight:800;margin-bottom:8px}
+.sub{text-align:center;color:var(--muted);margin-bottom:40px}
+
+/* TABS */
+.tabs{display:flex;gap:4px;margin-bottom:32px;background:var(--glass);border-radius:16px;padding:6px;border:1px solid var(--glass-border)}
+.tab{flex:1;padding:14px;text-align:center;border-radius:12px;cursor:pointer;font-weight:600;font-size:14px;color:var(--muted);transition:all .3s}
+.tab.active{background:rgba(0,240,255,0.1);color:var(--primary);box-shadow:0 0 20px rgba(0,240,255,0.1)}
+.tab:nth-child(2).active{background:rgba(255,0,110,0.1);color:var(--accent)}
+.tab:nth-child(3).active{background:rgba(168,85,247,0.1);color:var(--purple)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* CARDS */
+.card{background:var(--glass);border:1px solid var(--glass-border);border-radius:16px;padding:24px;margin-bottom:16px}
+.card h3{font-size:1rem;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.checklist{list-style:none}
+.checklist li{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.03);font-size:14px;color:var(--muted)}
+.checklist li:last-child{border:none}
+.checklist input{accent-color:var(--primary);width:18px;height:18px;margin-top:2px;flex-shrink:0}
+.notes{width:100%;min-height:120px;padding:16px;background:rgba(255,255,255,0.02);border:1px solid var(--glass-border);border-radius:12px;color:var(--text);font-family:inherit;font-size:14px;resize:vertical}
+.notes:focus{outline:none;border-color:var(--primary)}
+.quick-win{display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(34,197,94,0.05);border:1px solid rgba(34,197,94,0.15);border-radius:10px;margin-top:12px;font-size:13px}
+.quick-win .icon{font-size:1.2rem}
+.btn-export{display:inline-block;margin-top:24px;padding:14px 32px;background:var(--glass);border:1px solid var(--glass-border);border-radius:12px;color:var(--text);font-weight:600;font-size:14px;cursor:pointer;transition:all .3s}
+.btn-export:hover{border-color:var(--primary);color:var(--primary)}
+.score{display:flex;align-items:center;gap:16px;margin-top:16px}
+.score-bar{flex:1;height:10px;background:rgba(255,255,255,0.05);border-radius:5px;overflow:hidden}
+.score-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--primary));border-radius:5px;transition:width .5s}
+.score-val{font-size:1.5rem;font-weight:800;color:var(--primary)}
+.nav-bar{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:rgba(10,10,10,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border)}
+.nav-bar .logo{font-weight:800;font-size:1.2rem;color:var(--text)}
+.nav-bar .logo span{color:var(--primary)}
+.lang-switcher{display:flex;gap:8px;align-items:center}
+@media(max-width:600px){.tabs{flex-direction:column}.tab{padding:12px}}
+</style>
+</head>
+<body>
+<nav class="nav-bar">
+<a href="/en/" class="logo">J<span>CODE</span> Agency</a>
+<div class="lang-switcher">
+  <a href="/aoa-framework.html" class="lang-btn" data-lang="fr" data-lang-active="fr" aria-current="true">FR</a>
+  <a href="/nl/aoa-framework.html" class="lang-btn" data-lang="nl">NL</a>
+  <a href="/en/aoa-framework.html" class="lang-btn" data-lang="en" data-lang-active="en" aria-current="true">EN</a>
+</div>
+</nav>
+<div class="container">
+<h1 data-i18n="aoa.title">🎯 A.O.A. Framework</h1>
+<p class="sub" data-i18n="aoa.subtitle">Audit → Optimize → Automate | JCODE AI Concierge session template</p>
+
+<div class="tabs">
+<div class="tab active" onclick="switchTab(0)" data-i18n="aoa.tab.audit">🔍 AUDIT</div>
+<div class="tab" onclick="switchTab(1)" data-i18n="aoa.tab.optimize">⚡ OPTIMIZE</div>
+<div class="tab" onclick="switchTab(2)" data-i18n="aoa.tab.automate">🤖 AUTOMATE</div>
+</div>
+
+<!-- AUDIT -->
+<div class="tab-content active" id="tab0">
+<div class="card">
+<h3 data-i18n="aoa.audit.mapping.title">🗺️ Process mapping</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q1">What tasks do you handle every day? (complete list)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q2">How much time do you spend on each task?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q3">Which tasks are repetitive and predictable?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q4">Which tasks require human judgment?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q5">What tools do you currently use?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q6">Where are the bottlenecks?</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.audit.mapping.q7">What errors occur frequently?</span></li>
+</ul>
+</div>
+<div class="card">
+<h3 data-i18n="aoa.audit.score.title">📊 AI Readiness Score</h3>
+<div class="score">
+<div class="score-bar"><div class="score-fill" style="width:35%"></div></div>
+<div class="score-val">3.5/10</div>
+</div>
+<p style="font-size:13px;color:var(--muted);margin-top:8px;" data-i18n="aoa.audit.score.based">Based on: current digitization, volume of repetitive tasks, available data, willingness to adopt.</p>
+</div>
+<div class="card">
+<h3 data-i18n="aoa.audit.notes.title">📝 Session notes</h3>
+<textarea class="notes" placeholder="Notes during the Audit call..." data-i18n-attr="placeholder:aoa.audit.notes.placeholder"></textarea>
+</div>
+<div class="quick-win"><span class="icon">💡</span><span data-i18n-html="aoa.audit.quickwin"><strong>Quick Win identified:</strong> Automate appointment reminders via SMS/email (estimated gain: 3h/week)</span></div>
+</div>
+
+<!-- OPTIMIZE -->
+<div class="tab-content" id="tab1">
+<div class="card">
+<h3 data-i18n="aoa.optimize.flow.title">🔄 Optimized workflow</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q1">Remove identified redundant steps</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q2">Standardize templates (emails, invoices, replies)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q3">Group similar tasks (batching)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q4">Define automatic triggers (when X → then Y)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q5">Document the target workflow (before/after)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.flow.q6">Validate with the client that the workflow makes sense</span></li>
+</ul>
+</div>
+<div class="card">
+<h3 data-i18n="aoa.optimize.removed.title">🗑️ Removed steps</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span data-i18n="aoa.optimize.removed.q1">Manual appointment entry → Calendly auto</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.removed.q2">Manual review replies → Template + AI</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.optimize.removed.q3">Manual unpaid follow-up → Make.com workflow</span></li>
+</ul>
+</div>
+<div class="card">
+<h3 data-i18n="aoa.optimize.notes.title">📝 Session notes</h3>
+<textarea class="notes" placeholder="Notes during the Optimize call..." data-i18n-attr="placeholder:aoa.optimize.notes.placeholder"></textarea>
+</div>
+<div class="quick-win"><span class="icon">💡</span><span data-i18n-html="aoa.optimize.quickwin"><strong>Quick Win identified:</strong> Automatic post-appointment email template (estimated gain: 2h/week)</span></div>
+</div>
+
+<!-- AUTOMATE -->
+<div class="tab-content" id="tab2">
+<div class="card">
+<h3 data-i18n="aoa.automate.skills.title">🤖 Claude skills to create</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span data-i18n="aoa.automate.skills.q1">Skill "Google review reply" (professional, personalized tone)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.skills.q2">Skill "Post-appointment email" (summary + next appointment)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.skills.q3">Skill "Client follow-up" (D+3, D+7, D+14)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.skills.q4">Skill "Social media post" (3x/week auto)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.skills.q5">Skill "Invoicing" (generation + sending)</span></li>
+</ul>
+</div>
+<div class="card">
+<h3 data-i18n="aoa.automate.workflows.title">⚙️ Make.com workflows</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span data-i18n="aoa.automate.workflows.q1">Trigger: New appointment → Confirmation email + D-1 reminder</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.workflows.q2">Trigger: Google review → AI reply + Notification</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.workflows.q3">Trigger: Unpaid invoice D+7 → Automatic follow-up</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.workflows.q4">Schedule: Monday 8am → Week posts scheduled</span></li>
+</ul>
+</div>
+<div class="card">
+<h3 data-i18n="aoa.automate.deploy.title">🚀 Deployment</h3>
+<ul class="checklist">
+<li><input type="checkbox"><span data-i18n="aoa.automate.deploy.q1">Test each workflow in sandbox mode</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.deploy.q2">Client validation before activation</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.deploy.q3">Progressive activation (1 workflow/week)</span></li>
+<li><input type="checkbox"><span data-i18n="aoa.automate.deploy.q4">First week monitoring</span></li>
+</ul>
+</div>
+<div class="card">
+<h3 data-i18n="aoa.automate.notes.title">📝 Session notes</h3>
+<textarea class="notes" placeholder="Notes during the Automate call..." data-i18n-attr="placeholder:aoa.automate.notes.placeholder"></textarea>
+</div>
+<div class="quick-win"><span class="icon">💡</span><span data-i18n-html="aoa.automate.quickwin"><strong>Quick Win identified:</strong> Unpaid invoice follow-up workflow (estimated gain: 4h/month + 30% reduction in unpaid)</span></div>
+</div>
+
+<button class="btn-export" onclick="window.print()" data-i18n="aoa.export">📄 Export to PDF</button>
+</div>
+
+<script>
+function switchTab(n){
+document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',i===n));
+document.querySelectorAll('.tab-content').forEach((c,i)=>c.classList.toggle('active',i===n));
+}
+</script>
+<!-- SEO-INTERNAL-LINKS:START -->
+<section class="seo-internal-links" style="max-width:1100px;margin:2.5rem auto;padding:1.5rem 2rem;border-top:1px solid rgba(128,128,128,0.3);">
+  <p style="margin:0 0 0.75rem;font-weight:600;">À découvrir chez JCODE</p>
+  <ul style="margin:0;padding-left:1.1rem;line-height:1.9;">
+      <li><a href="/en/ai-concierge.html" style="color:inherit;text-decoration:underline;">AI Concierge : automatiser votre commerce</a></li>
+      <li><a href="/en/blog/" style="color:inherit;text-decoration:underline;">Le blog : conseils web & IA pour PME belges</a></li>
+      <li><a href="/en/" style="color:inherit;text-decoration:underline;">Retour à l'accueil JCODE</a></li>
+  </ul>
+</section>
+<!-- SEO-INTERNAL-LINKS:END -->
+</body>
+</html>

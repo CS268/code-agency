@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><base href="/"><style>.lang-btn[data-lang-active]{background:rgba(99,102,241,0.15);border-color:rgba(99,102,241,0.3);color:var(--primary-light);}</style>
+    <meta property="og:url" content="https://jcode.store/en/ai-concierge.html">
+    <link rel="canonical" href="https://jcode.store/en/ai-concierge.html">
+    <link rel="alternate" hreflang="fr" href="https://jcode.store/ai-concierge.html">
+    <link rel="alternate" hreflang="en" href="https://jcode.store/en/ai-concierge.html">
+    <link rel="alternate" hreflang="nl" href="https://jcode.store/nl/ai-concierge.html">
+    <link rel="alternate" hreflang="x-default" href="https://jcode.store/ai-concierge.html">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Concierge — JCODE Agency | AI Automation for Local Businesses</title>
+<meta name="description" content="Done-with-you AI Concierge service: 2 calls a month, unlimited Voxer, Notion Hub. Automate your local business with AI.">
+<meta property="og:title" content="AI Concierge — JCODE Agency | AI Automation for Local Businesses">
+<meta property="og:description" content="Done-with-you AI Concierge service: 2 calls a month, unlimited Voxer, Notion Hub. Automate your local business with AI.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{--bg:#0a0a0a;--surface:rgba(255,255,255,0.03);--glass:rgba(255,255,255,0.05);--glass-border:rgba(255,255,255,0.08);--primary:#00f0ff;--accent:#ff006e;--purple:#a855f7;--text:#fff;--muted:#94a3b8;--dark2:#0d1117}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+html{scroll-behavior:smooth}
+a{color:var(--primary);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,10,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border)}
+.nav .logo{font-weight:800;font-size:1.2rem;color:var(--text)}
+.nav .logo span{color:var(--primary)}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{color:var(--muted);font-size:14px;font-weight:500;transition:color .3s}
+.nav-links a:hover{color:var(--primary)}
+.nav-cta{background:var(--primary);color:var(--bg);padding:10px 24px;border-radius:50px;font-weight:700;font-size:13px}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;position:relative}
+.hero::before{content:'';position:absolute;top:-300px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(0,240,255,0.06) 0%,transparent 70%);border-radius:50%}
+.hero::after{content:'';position:absolute;bottom:-200px;left:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,0,110,0.05) 0%,transparent 70%);border-radius:50%}
+.hero h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;margin-bottom:24px;background:linear-gradient(135deg,var(--text),var(--primary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:var(--muted);font-size:1.2rem;max-width:600px;margin:0 auto 40px}
+.hero-cta{display:inline-block;padding:18px 48px;background:linear-gradient(135deg,var(--primary),#0080ff);color:var(--bg);border-radius:50px;font-weight:700;font-size:16px;box-shadow:0 0 40px rgba(0,240,255,0.3);transition:all .3s}
+.hero-cta:hover{transform:scale(1.05);box-shadow:0 0 60px rgba(0,240,255,0.5)}
+.badge-new{display:inline-block;background:var(--accent);color:#fff;padding:6px 16px;border-radius:50px;font-size:12px;font-weight:700;margin-bottom:20px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 10px rgba(255,0,110,0.3)}50%{box-shadow:0 0 25px rgba(255,0,110,0.6)}}
+
+/* SECTIONS */
+section{padding:100px 24px}
+.section-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;text-align:center;margin-bottom:16px}
+.section-sub{text-align:center;color:var(--muted);max-width:600px;margin:0 auto 60px;font-size:1.1rem}
+
+/* AOA */
+.aoa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.aoa-card{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:20px;padding:36px;transition:all .4s}
+.aoa-card:hover{transform:translateY(-8px);border-color:var(--primary)}
+.aoa-card .icon{font-size:2.5rem;margin-bottom:16px}
+.aoa-card h3{font-size:1.3rem;margin-bottom:12px;color:var(--primary)}
+.aoa-card p{color:var(--muted);line-height:1.8}
+
+/* DELIVERABLES */
+.deliverables{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.del-item{display:flex;align-items:flex-start;gap:12px;padding:20px;background:var(--glass);border:1px solid var(--glass-border);border-radius:16px}
+.del-item .icon{font-size:1.5rem;flex-shrink:0}
+.del-item h4{font-size:14px;margin-bottom:4px}
+.del-item p{font-size:13px;color:var(--muted)}
+
+/* FAQ */
+.faq-item{border:1px solid var(--glass-border);border-radius:16px;margin-bottom:12px;overflow:hidden}
+.faq-q{padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;transition:background .3s}
+.faq-q:hover{background:var(--glass)}
+.faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:all .4s;color:var(--muted);line-height:1.8}
+.faq-item.open .faq-a{padding:0 24px 20px;max-height:300px}
+.faq-item.open .faq-q .arrow{transform:rotate(180deg)}
+.arrow{transition:transform .3s}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.price-card{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:24px;padding:40px;text-align:center;transition:all .3s;position:relative}
+.price-card.featured{border-color:var(--accent);background:rgba(255,0,110,0.03)}
+.price-card:hover{transform:translateY(-6px)}
+.price-card .plan{font-size:13px;text-transform:uppercase;letter-spacing:2px;color:var(--primary);font-weight:700;margin-bottom:12px}
+.price-card .amount{font-size:3rem;font-weight:900;margin-bottom:4px}
+.price-card .period{color:var(--muted);font-size:14px;margin-bottom:24px}
+.price-card ul{list-style:none;text-align:left;margin-bottom:32px}
+.price-card li{padding:8px 0;color:var(--muted);font-size:14px;border-bottom:1px solid rgba(255,255,255,0.03)}
+.price-card li::before{content:'✓ ';color:var(--primary);font-weight:700}
+.price-btn{display:block;padding:16px;border-radius:12px;text-align:center;font-weight:700;transition:all .3s}
+.price-btn-primary{background:var(--accent);color:#fff}
+.price-btn-outline{border:1px solid var(--primary);color:var(--primary)}
+
+/* FOOTER */
+footer{padding:40px 24px;text-align:center;border-top:1px solid var(--glass-border)}
+footer a{color:var(--muted);margin:0 12px;font-size:13px}
+footer a:hover{color:var(--primary)}
+
+/* COOKIE */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);padding:16px 24px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;border-top:1px solid var(--glass-border)}
+.cookie-banner.hidden{display:none}
+.cookie-btn{padding:10px 24px;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer;border:none}
+.cookie-accept{background:var(--primary);color:var(--bg)}
+.cookie-refuse{background:transparent;border:1px solid var(--glass-border);color:var(--muted)}
+
+/* ANIMATIONS */
+.fade-in{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(0.16,1,0.3,1)}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+.lang-switcher{display:flex;gap:8px;align-items:center;margin-left:16px}
+@media(max-width:768px){.nav-links{display:none}.hero h1{font-size:2.2rem}.aoa-grid,.pricing-grid{grid-template-columns:1fr}}
+/* Lien FAQ vers l'article — affiché seulement quand la page est en français (article pas encore traduit) */
+.lang-gated-fr{display:none!important}
+html[lang="fr"] .lang-gated-fr{display:block!important}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"fr","mainEntity":[{"@type":"Question","name":"C'est quoi exactement done-with-you ?","acceptedAnswer":{"@type":"Answer","text":"Contrairement au done-for-you ou DIY, le done-with-you signifie qu'on construit ENSEMBLE. Je vous guide, je crée les automatisations, mais vous apprenez à les maintenir. Résultat : vous êtes autonome à la fin."}},{"@type":"Question","name":"Je ne suis pas technique, c'est un problème ?","acceptedAnswer":{"@type":"Answer","text":"Absolument pas ! 90% de mes clients ne sont pas techniques. C'est justement pour ça que je m'occupe de la partie technique. Vous n'avez qu'à utiliser les outils qu'on met en place."}},{"@type":"Question","name":"Combien de temps avant de voir des résultats ?","acceptedAnswer":{"@type":"Answer","text":"Dès le premier appel, vous repartez avec 2-3 quick wins actionnables. Les premières automatisations sont déployées sous 2 semaines. Le ROI moyen est de 5-10h économisées par mois."}},{"@type":"Question","name":"Quels outils utilisez-vous ?","acceptedAnswer":{"@type":"Answer","text":"Principalement : Claude AI, Notion, Voxer, Vercel. Selon vos besoins : Stripe, Gmail, Airtable, Calendly, Make.com."}},{"@type":"Question","name":"Puis-je annuler à tout moment ?","acceptedAnswer":{"@type":"Answer","text":"Oui, engagement mensuel sans durée minimum. Préavis de 30 jours. Tout ce qui a été créé vous appartient."}},{"@type":"Question","name":"Pour quel type de business ?","acceptedAnswer":{"@type":"Answer","text":"Coiffeurs, boulangers, restaurants, commerces locaux, TPE. Tout business qui perd du temps sur des tâches répétitives."}},{"@type":"Question","name":"Quelle différence avec un freelancer classique ?","acceptedAnswer":{"@type":"Answer","text":"Un freelancer exécute une tâche ponctuelle. L'AI Concierge est un partenaire continu qui comprend votre business, anticipe vos besoins, et construit un système d'automatisation avec vous."}},{"@type":"Question","name":"Que se passe-t-il pendant l'appel découverte ?","acceptedAnswer":{"@type":"Answer","text":"30 minutes gratuites : on discute de vos douleurs et objectifs. Je vous donne déjà 2-3 pistes d'automatisation. Zéro pression."}},{"@type":"Question","name":"Mes données sont-elles en sécurité ?","acceptedAnswer":{"@type":"Answer","text":"Oui. RGPD compliant. Serveurs européens. Aucun partage avec des tiers. NDA disponible. Vous gardez la propriété de tout ce qui est créé."}},{"@type":"Question","name":"Y a-t-il des frais cachés ?","acceptedAnswer":{"@type":"Answer","text":"Non. Le prix mensuel inclut tout. Seuls coûts possibles : Make.com (~9€/mois) et Notion (gratuit). Je vous préviens toujours avant tout coût additionnel."}}]}
+</script>
+
+
+</head>
+<body>
+
+<nav class="nav">
+<a href="/en/" class="logo">J<span>CODE</span> Agency</a>
+<div class="nav-links">
+<a href="/en/" data-i18n="common.nav.home">Home</a>
+<a href="#aoa" data-i18n="common.nav.method">Method</a>
+<a href="#pricing" data-i18n="common.nav.pricing">Pricing</a>
+<a href="#faq" data-i18n="common.nav.faq">FAQ</a>
+<a href="/intake-form.html" class="nav-cta" data-i18n="common.nav.cta">Free Call</a>
+<div class="lang-switcher">
+  <a href="/ai-concierge.html" class="lang-btn" data-lang="fr" data-lang-active="fr" aria-current="true">FR</a>
+  <a href="/nl/ai-concierge.html" class="lang-btn" data-lang="nl">NL</a>
+  <a href="/en/ai-concierge.html" class="lang-btn" data-lang="en" data-lang-active="en" aria-current="true">EN</a>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<div style="position:relative;z-index:1;">
+<div class="badge-new" data-i18n="concierge.hero.badge">✨ NEW SERVICE</div>
+<h1 data-i18n="concierge.hero.title">AI Concierge</h1>
+<p data-i18n="concierge.hero.desc">Your AI automation partner. Done-with-you: we build your workflows, Claude skills, and Make.com automations together.</p>
+<a href="/intake-form.html" class="hero-cta" data-i18n="concierge.hero.cta">Book a free discovery call →</a>
+</div>
+</section>
+
+<!-- AOA FRAMEWORK -->
+<section id="aoa">
+<div class="container">
+<h2 class="section-title fade-in" data-i18n="concierge.aoa.title">The A.O.A. Method</h2>
+<p class="section-sub fade-in" data-i18n="concierge.aoa.subtitle">Every session follows a proven 3-phase framework to maximize your ROI.</p>
+<div class="aoa-grid">
+<div class="aoa-card fade-in">
+<div class="icon">🔍</div>
+<h3 data-i18n="concierge.aoa.audit.title">Audit</h3>
+<p data-i18n="concierge.aoa.audit.desc">Complete mapping of your current processes. Bottleneck identification. AI maturity score. Immediate quick wins.</p>
+</div>
+<div class="aoa-card fade-in">
+<div class="icon">⚡</div>
+<h3 data-i18n="concierge.aoa.optimize.title">Optimize</h3>
+<p data-i18n="concierge.aoa.optimize.desc">Remove unnecessary steps. Standardize workflows. Document processes. Prepare for automation.</p>
+</div>
+<div class="aoa-card fade-in">
+<div class="icon">🤖</div>
+<h3 data-i18n="concierge.aoa.automate.title">Automate</h3>
+<p data-i18n="concierge.aoa.automate.desc">Custom Claude skills. Make.com workflow deployment. Integrations (Gmail, Notion, Stripe, Vercel). Autonomous training.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- DELIVERABLES -->
+<section style="background:var(--dark2);">
+<div class="container">
+<h2 class="section-title fade-in" data-i18n="concierge.deliverables.title">What you get</h2>
+<p class="section-sub fade-in" data-i18n="concierge.deliverables.subtitle">Concrete, measurable deliverables that save you time every week.</p>
+<div class="deliverables">
+<div class="del-item fade-in"><div class="icon">📞</div><div><h4 data-i18n="concierge.del.calls.title">2 calls/month (45 min)</h4><p data-i18n="concierge.del.calls.desc">1:1 strategy sessions to advance your automations</p></div></div>
+<div class="del-item fade-in"><div class="icon">🎙️</div><div><h4 data-i18n="concierge.del.voxer.title">Unlimited Voxer</h4><p data-i18n="concierge.del.voxer.desc">Async Q&amp;A, response within 12h</p></div></div>
+<div class="del-item fade-in"><div class="icon">📊</div><div><h4 data-i18n="concierge.del.hub.title">Custom Notion Hub</h4><p data-i18n="concierge.del.hub.desc">Centralized dashboard: calls, action items, deliverables, ROI</p></div></div>
+<div class="del-item fade-in"><div class="icon">🧠</div><div><h4 data-i18n="concierge.del.skills.title">Custom Claude skills</h4><p data-i18n="concierge.del.skills.desc">System prompts optimized for YOUR business</p></div></div>
+<div class="del-item fade-in"><div class="icon">⚙️</div><div><h4 data-i18n="concierge.del.workflows.title">Make.com workflows</h4><p data-i18n="concierge.del.workflows.desc">Email, CRM, invoicing, follow-up automations</p></div></div>
+<div class="del-item fade-in"><div class="icon">📈</div><div><h4 data-i18n="concierge.del.reports.title">Monthly ROI reports</h4><p data-i18n="concierge.del.reports.desc">Hours saved × hourly rate = concrete ROI</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+<div class="container">
+<h2 class="section-title fade-in" data-i18n="concierge.pricing.title">Choose your plan</h2>
+<p class="section-sub fade-in" data-i18n="concierge.pricing.subtitle">Maximum 6 clients at a time to guarantee premium support.</p>
+<div class="pricing-grid">
+<div class="price-card fade-in">
+<div class="plan" data-i18n="concierge.pricing.starter.plan">Starter</div>
+<div class="amount" data-i18n="concierge.pricing.starter.amount">€1,000</div>
+<div class="period" data-i18n="concierge.pricing.perMonth">/month</div>
+<ul>
+<li data-i18n-html="concierge.pricing.starter.f1"><strong>2 calls</strong> x 45 min/month</li>
+<li data-i18n-html="concierge.pricing.starter.f2"><strong>Unlimited Voxer</strong> (response &lt;12h)</li>
+<li data-i18n-html="concierge.pricing.starter.f3"><strong>Custom Notion Hub</strong></li>
+<li data-i18n-html="concierge.pricing.starter.f4"><strong>2 Claude skills</strong>/month</li>
+<li data-i18n-html="concierge.pricing.starter.f5"><strong>Summary email</strong> after each call</li>
+</ul>
+<a href="/intake-form.html" class="price-btn price-btn-outline" data-i18n="concierge.pricing.start">Get Started</a>
+</div>
+<div class="price-card featured fade-in">
+<div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:4px 16px;border-radius:20px;font-size:11px;font-weight:700;" data-i18n="concierge.pricing.popular">POPULAR</div>
+<div class="plan" style="color:var(--accent)" data-i18n="concierge.pricing.pro.plan">Pro</div>
+<div class="amount" data-i18n="concierge.pricing.pro.amount">€1,500</div>
+<div class="period" data-i18n="concierge.pricing.perMonth">/month</div>
+<ul>
+<li data-i18n-html="concierge.pricing.pro.f1">Everything in <strong>Starter</strong> +</li>
+<li data-i18n-html="concierge.pricing.pro.f2"><strong>Unlimited Claude skills</strong></li>
+<li data-i18n-html="concierge.pricing.pro.f3"><strong>Make.com workflows</strong></li>
+<li data-i18n-html="concierge.pricing.pro.f4"><strong>Priority Voxer support</strong> (&lt;6h)</li>
+<li data-i18n-html="concierge.pricing.pro.f5"><strong>Bi-weekly reports</strong></li>
+<li data-i18n-html="concierge.pricing.pro.f6">Access to <strong>exclusive templates</strong></li>
+</ul>
+<a href="/intake-form.html" class="price-btn price-btn-primary" data-i18n="concierge.pricing.start">Get Started</a>
+</div>
+<div class="price-card fade-in">
+<div class="plan" style="color:var(--purple)" data-i18n="concierge.pricing.elite.plan">Elite</div>
+<div class="amount" data-i18n="concierge.pricing.elite.amount">€2,000</div>
+<div class="period" data-i18n="concierge.pricing.perMonth">/month</div>
+<ul>
+<li data-i18n-html="concierge.pricing.elite.f1">Everything in <strong>Pro</strong> +</li>
+<li data-i18n-html="concierge.pricing.elite.f2"><strong>4 calls/month</strong> (priority access)</li>
+<li data-i18n-html="concierge.pricing.elite.f3"><strong>Monthly reports</strong> + detailed ROI</li>
+<li data-i18n-html="concierge.pricing.elite.f4"><strong>Quarterly AI strategy</strong></li>
+<li data-i18n-html="concierge.pricing.elite.f5"><strong>Dedicated Slack/Discord channel</strong></li>
+<li data-i18n-html="concierge.pricing.elite.f6"><strong>Vercel deployment</strong> included</li>
+</ul>
+<a href="/intake-form.html" class="price-btn price-btn-outline" style="border-color:var(--purple);color:var(--purple)" data-i18n="concierge.pricing.start">Get Started</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="background:var(--dark2);">
+<div class="container" style="max-width:700px;">
+<h2 class="section-title fade-in" data-i18n="concierge.faq.title">Frequently Asked Questions</h2>
+<p class="section-sub fade-in" data-i18n="concierge.faq.subtitle">Everything you need to know before getting started.</p>
+
+<div class="faq-item fade-in"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-i18n="concierge.faq.q1">What exactly does "done-with-you" mean?</span><span class="arrow">▼</span></div><div class="faq-a" data-i18n="concierge.faq.a1">Unlike "done-for-you" (we do everything for you) or "DIY" (you figure it out), done-with-you means we build TOGETHER. I guide you, I create the automations, but you learn to maintain them. Result: you're self-sufficient at the end.</div></div>
+
+<div class="faq-item fade-in"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-i18n="concierge.faq.q2">I'm not technical, is that a problem?</span><span class="arrow">▼</span></div><div class="faq-a" data-i18n="concierge.faq.a2">Absolutely not! 90% of my clients have no technical skills. That's exactly why I handle the technical side. You just need to use the tools we set up.</div></div>
+
+<div class="faq-item fade-in"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-i18n="concierge.faq.q3">How long before I see results?</span><span class="arrow">▼</span></div><div class="faq-a" data-i18n="concierge.faq.a3">From the first call, you walk away with 2-3 actionable quick wins. The first automations are deployed within 2 weeks. Average ROI is 5-10 hours saved per month from the 2nd month.</div></div>
+
+<div class="faq-item fade-in"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-i18n="concierge.faq.q4">What tools do you use?</span><span class="arrow">▼</span></div><div class="faq-a" data-i18n="concierge.faq.a4">Mainly: Claude AI (skills/prompts), Make.com (automations), Notion (client hub), Voxer (async communication), Vercel (deployment). Depending on your needs: Stripe, Gmail, Airtable, Calendly.</div></div>
+
+<div class="faq-item fade-in"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-i18n="concierge.faq.q5">Can I cancel anytime?</span><span class="arrow">▼</span></div><div class="faq-a" data-i18n="concierge.faq.a5">Yes, monthly commitment with no minimum duration. 30-day notice. Everything created belongs to you (skills, workflows, templates).</div></div>
+
+<div class="faq-item fade-in"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-i18n="concierge.faq.q6">What type of business is this for?</span><span class="arrow">▼</span></div><div class="faq-a" data-i18n="concierge.faq.a6">Hairdressers, bakers, restaurants, business hosts, freelancers, small businesses. Any local business wasting time on repetitive tasks: emails, bookings, invoices, follow-ups, social media.</div></div>
+
+<div class="faq-item fade-in"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-i18n="concierge.faq.q7">How is this different from a regular freelancer?</span><span class="arrow">▼</span></div><div class="faq-a" data-i18n="concierge.faq.a7">A freelancer handles a one-off task. AI Concierge is a continuous partner who deeply understands your business, anticipates your needs, and builds a complete automation system that evolves with you.</div></div>
+
+<div class="faq-item fade-in"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-i18n="concierge.faq.q8">What happens during the discovery call?</span><span class="arrow">▼</span></div><div class="faq-a" data-i18n="concierge.faq.a8">30 free minutes: we discuss your business, pain points, and goals. I already give you 2-3 automation ideas. If it's a good fit, we schedule the first Audit call. Zero pressure.</div></div>
+
+<div class="faq-item fade-in"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-i18n="concierge.faq.q9">Is my data safe?</span><span class="arrow">▼</span></div><div class="faq-a" data-i18n="concierge.faq.a9">Yes. GDPR compliant. Your data stays on European servers. No sharing with third parties. NDA available on request. You own everything that's created.</div></div>
+
+<div class="faq-item fade-in"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span data-i18n="concierge.faq.q10">Are there hidden fees?</span><span class="arrow">▼</span></div><div class="faq-a" data-i18n="concierge.faq.a10">No. The monthly price includes everything. The only possible external costs: Make.com subscriptions (~€9/month) and Notion (free for most). I always warn you before any additional cost.</div></div>
+<p class="fade-in lang-gated-fr" style="text-align:center;margin-top:32px;color:var(--muted);font-size:14px;">
+<a href="/blog/ai-concierge-automatiser-commerce.html" style="color:var(--primary);" data-i18n="concierge.faq.compareLink">Want to dig deeper? Read our comparison article: freelancer vs DIY software vs AI Concierge →</a>
+</p>
+</div>
+</section>
+
+<!-- CTA FINAL -->
+<section style="text-align:center;">
+<div class="container">
+<h2 class="section-title fade-in" data-i18n="concierge.cta.title">Ready to automate your business?</h2>
+<p class="section-sub fade-in" data-i18n="concierge.cta.subtitle">Book your free 30-minute discovery call. Zero commitment, 100% value.</p>
+<a href="/intake-form.html" class="hero-cta fade-in" data-i18n="concierge.cta.button">Book my free call →</a>
+</div>
+</section>
+
+<!-- SEO-INTERNAL-LINKS:START -->
+<section class="seo-internal-links" style="max-width:1100px;margin:2.5rem auto;padding:1.5rem 2rem;border-top:1px solid rgba(128,128,128,0.3);">
+  <p style="margin:0 0 0.75rem;font-weight:600;">À découvrir chez JCODE</p>
+  <ul style="margin:0;padding-left:1.1rem;line-height:1.9;">
+      <li><a href="/en/aoa-framework.html" style="color:inherit;text-decoration:underline;">Notre méthode AOA</a></li>
+      <li><a href="/en/blog/" style="color:inherit;text-decoration:underline;">Le blog : conseils web & IA pour PME belges</a></li>
+      <li><a href="/en/" style="color:inherit;text-decoration:underline;">Retour à l'accueil JCODE</a></li>
+  </ul>
+</section>
+<!-- SEO-INTERNAL-LINKS:END -->
+<footer>
+<p style="margin-bottom:16px;font-weight:700;" data-i18n="common.footer.location">JCODE Agency — Mons, Belgium</p>
+<a href="/privacy-policy.html" data-i18n="common.footer.privacy">Privacy Policy</a>
+<a href="/terms.html" data-i18n="common.footer.terms">Terms</a>
+<a href="/mentions-legales.html" data-i18n="common.footer.legal">Legal Notice</a>
+<p style="margin-top:16px;color:var(--muted);font-size:12px;" data-i18n="common.footer.copyright">© 2026 JCODE Agency. All rights reserved.</p>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+<p style="color:var(--muted);font-size:13px;" data-i18n="common.cookie.text">This site uses cookies to improve your experience, analyze traffic and personalize content. You can choose to accept, customize or decline.</p>
+<button class="cookie-btn cookie-accept" onclick="cookieAccept()" data-i18n="common.cookie.accept">Accept</button>
+<button class="cookie-btn cookie-refuse" onclick="cookieRefuse()" data-i18n="common.cookie.refuse">Decline</button>
+</div>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+
+<script>
+function cookieAccept(){localStorage.setItem('jcode_cookies','accepted');document.getElementById('cookieBanner').classList.add('hidden');}
+function cookieRefuse(){localStorage.setItem('jcode_cookies','refused');document.getElementById('cookieBanner').classList.add('hidden');}
+if(localStorage.getItem('jcode_cookies')){document.getElementById('cookieBanner').classList.add('hidden');}
+</script>
+</body>
+</html>
