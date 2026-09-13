@@ -11,11 +11,21 @@
 - [Espace Client](https://jcode.store/espace-client.html) : Dashboard client JCODE Agency
 - [AOA Framework](https://jcode.store/aoa-framework.html) : Méthodologie Audit-Optimize-Automate
 
+## Blog
+- [Blog](https://jcode.store/blog/) : Articles sur le web, l'automatisation IA et le marketing digital pour PME belges
+
 ## Services / Diensten / Services
 - Création de sites web professionnels / Professionele websites / Professional websites
 - Automatisation marketing par IA (21 agents) / Marketingautomatisering door IA / AI marketing automation (21 agents)
 - AI Concierge : accompagnement personnalisé / AI Concierge : persoonlijke begeleiding / AI Concierge : personalized coaching
-- Packages : Teaser (497€), Pro (999€/mois), Pro Max (1599€/mois)
+
+## Tarifs (paiement unique, avec code promo PROMO460)
+- Teaser : 37€ (au lieu de 497€) — site 1 page
+- Pro : 539€ (au lieu de 999€) — site jusqu'à 3 pages, QR code inclus
+- Pro Max : 1 139€ (au lieu de 1 599€) — site jusqu'à 5 pages, QR code + réservation auto + chatbot IA inclus
+
+## Abonnement (mensuel, distinct des forfaits ci-dessus)
+- Pro abonnement : 1 500€/mois — skills illimités + Make.com
 
 ## Contact
 - Email : matovuruky@gmail.com
