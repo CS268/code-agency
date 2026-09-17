@@ -420,7 +420,11 @@ def render(page, lang, translations):
     r = Renderer(translations, page, lang, translate_body=(lang != "fr"))
     r.feed(src)
     r.close()
-    return r.result()
+    out = r.result()
+    if lang != "fr":
+        out = out.replace('src="booking-widget.js', 'src="/booking-widget.js')
+        out = out.replace('src="chatbot-widget.js', 'src="/chatbot-widget.js')
+    return out
 
 
 def update_sitemap():
