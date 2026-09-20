@@ -233,6 +233,9 @@ class Renderer(HTMLParser):
     def handle_startendtag(self, tag, attrs):
         if self.suppress or self.skip_script:
             return
+        if tag in ("link", "meta"):
+            self.handle_starttag(tag, attrs)
+            return
         raw = self.get_starttag_text()
         if tag == "script":
             self.out.write(raw)
