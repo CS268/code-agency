@@ -46,8 +46,13 @@ paras = [p.strip() for p in body_md.split('\n\n') if p.strip() and not p.startsw
 first_para = re.sub(r'\*\*(.*?)\*\*', r'\1', paras[0]) if paras else title
 description = (first_para[:155] + '…') if len(first_para) > 155 else first_para
 
+def md_inline(s):
+    s = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', s)
+    s = re.sub(r'\[([^\]]+)\]\(((?:https?://|/)[^)\s]+)\)', r'<a href="\2" style="color: var(--primary-indigo);">\1</a>', s)
+    s = re.sub(r'\*([^*\n]+)\*', r'<em>\1</em>', s)
+    return s
+
 def md_to_html(md):
-    md = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', md)
     blocks = md.split('\n\n')
     html = []
     in_list = False
@@ -58,19 +63,27 @@ def md_to_html(md):
         if block.startswith('## '):
             if in_list:
                 html.append('</ul>'); in_list = False
-            html.append(f'<h2>{block[3:].strip()}</h2>')
+            html.append(f'<h2>{md_inline(block[3:].strip())}</h2>')
         elif block.startswith('# '):
             continue
+        elif block == '---':
+            if in_list:
+                html.append('</ul>'); in_list = False
+            html.append('<hr>')
         elif block.startswith('- '):
             if not in_list:
                 html.append('<ul>'); in_list = True
             for item in block.split('\n'):
                 if item.startswith('- '):
-                    html.append(f'<li>{item[2:].strip()}</li>')
+                    html.append(f'<li>{md_inline(item[2:].strip())}</li>')
         else:
             if in_list:
                 html.append('</ul>'); in_list = False
-            html.append(f'<p>{block}</p>')
+            m = re.fullmatch(r'\[([^\]]+)\]\(((?:https?://|/)[^)\s]+)\)', block)
+            if m:
+                html.append('<p><a href="' + m.group(2) + '" style="display: inline-block; padding: 14px 28px; background: var(--primary-indigo); color: #ffffff; border-radius: 10px; text-decoration: none; font-weight: 600;">' + m.group(1) + '</a></p>')
+            else:
+                html.append(f'<p>{md_inline(block)}</p>')
     if in_list:
         html.append('</ul>')
     return '\n        '.join(html)
