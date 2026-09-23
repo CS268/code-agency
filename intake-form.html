@@ -206,10 +206,18 @@ payload.submitted_at=new Date().toISOString();
 // Sans CAPTCHA, ce formulaire est vulnérable au spam par bots.
 
 // Send to Make.com webhook (replace URL with real one)
-const WEBHOOK_URL='https://hook.make.com/YOUR_WEBHOOK_ID';
-fetch(WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
-.then(()=>showSuccess())
-.catch(()=>showSuccess()); // Show success even if webhook not configured yet
+const WEBHOOK_URL='https://formspree.io/f/moevwjkb';
+fetch(WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
+.then(response=>{
+    if(response.ok){
+        showSuccess();
+    }else{
+        alert("Erreur lors de l'envoi. Merci de réessayer ou de me contacter directement.");
+    }
+})
+.catch(()=>{
+    alert("Erreur de connexion. Merci de réessayer ou de me contacter directement.");
+});
 }
 function showSuccess(){
 document.getElementById('formCard').style.display='none';
