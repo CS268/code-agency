@@ -23,6 +23,12 @@ with open(DRAFT_PATH, encoding='utf-8') as f:
 
 raw = re.sub(r'\n---\n\*\[Note pour l.humain.*?\]\*\s*$', '', raw, flags=re.S)
 
+
+_r0 = raw.lstrip()
+_fm = re.match(r"---\s*\n(.*?)\n---\s*\n", _r0, re.S)
+if _fm:
+    _tm = re.search(r'^title:\s*"?(.*?)"?\s*$', _fm.group(1), re.M)
+    raw = "# " + (_tm.group(1) if _tm else "Sans titre") + "\n\n" + _r0[_fm.end():]
 lines = raw.strip().split('\n')
 title = lines[0].lstrip('#').strip()
 body_md = '\n'.join(lines[1:]).strip()
