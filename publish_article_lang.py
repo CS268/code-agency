@@ -220,6 +220,8 @@ if m:
     raw = raw[m.end():]
 raw = re.sub(r"\n---\n\*\[[^\]]*\]\*\s*$", "", raw, flags=re.S)  # note finale entre crochets pour l'humain
 raw = raw.strip()
+if not raw.startswith("# ") and meta.get("title"):
+    raw = "# " + meta["title"] + "\n\n" + raw
 lines = raw.split("\n")
 title = lines[0].lstrip("#").strip()
 body_md = "\n".join(lines[1:]).strip()
@@ -238,7 +240,7 @@ if re.search(r"calendly", raw, re.I):
 for e in sorted(set(re.findall(r"[\w.+-]+@[\w-]+\.[\w.-]+", raw))):
     problems.append("adresse e-mail : " + e)
 targets = set(re.findall(r"\]\(([^)\s]+)\)", raw))
-targets |= set(re.findall(r"https?://[^\s)\]\"<>]+", raw))
+targets |= set(t.rstrip(".,;:!?") for t in re.findall(r"https?://[^\s)\]\"<>]+", raw))
 targets |= set(re.findall(r"mailto:[^\s)\]\"<>]+", raw))
 for t in sorted(targets):
     if t.startswith("mailto:"):
