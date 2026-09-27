@@ -1,6 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+<script>
+// ─── STUDIO I18N SAFE ───
+(function(){
+// Lecture du paramètre lang dans l'URL (ex: ?lang=en)
+const params = new URLSearchParams(window.location.search);
+const urlLang = params.get('lang');
+if (urlLang && ['fr','nl','en'].includes(urlLang)) {
+    localStorage.setItem('studio-lang', urlLang);
+}
+    const LANG_KEY = 'studio-lang';
+    let LANG = (localStorage.getItem(LANG_KEY) || document.documentElement.lang || 'fr').toLowerCase();
+
+    function applyLang(lang) {
+        if (!['fr','nl','en'].includes(lang)) lang = 'fr';
+        LANG = lang;
+        localStorage.setItem(LANG_KEY, lang);
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll('[data-fr]').forEach(el => {
+            const text = el.dataset[lang];
+            if (text) el.innerText = text;           // innerText préserve le contenu HTML simple
+        });
+        document.querySelectorAll('[data-fr-placeholder]').forEach(el => {
+            const ph = el.dataset.frPlaceholder;     // attr data-fr-placeholder
+            el.placeholder = ph;
+        });
+        var langBar = document.getElementById('studioLangBar');
+        if (langBar) langBar.querySelectorAll('button').forEach(b => {
+            b.style.background = b.dataset.lang === lang ? '#6366f1' : 'none';
+            b.style.color = b.dataset.lang === lang ? '#fff' : 'inherit';
+        });
+    }
+
+    window.applyStudioLang = applyLang;
+
+    window.addEventListener('DOMContentLoaded', () => {
+        applyLang(LANG);
+    });
+})();
+</script>
+
+<!-- Language selector (style emballé par le site) -->
+<div id="studioLangBar" style="position:fixed; bottom:20px; right:20px; background:rgba(15,23,42,0.95); padding:10px 16px; border-radius:50px; box-shadow:0 10px 40px rgba(0,0,0,0.15); z-index:9999; display:flex; gap:8px; backdrop-filter:blur(10px); align-items:center;">
+    <button data-lang="fr" onclick="applyStudioLang('fr')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;">FR</button>
+    <button data-lang="nl" onclick="applyStudioLang('nl')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;">NL</button>
+    <button data-lang="en" onclick="applyStudioLang('en')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;">EN</button>
+</div>
 <meta name="robots" content="noindex">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
