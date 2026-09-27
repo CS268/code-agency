@@ -1,57 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-<script>
-// ─── STUDIO I18N SAFE ───
-(function(){
-// Lecture du paramètre lang dans l'URL (ex: ?lang=en)
-const params = new URLSearchParams(window.location.search);
-const urlLang = params.get('lang');
-if (urlLang && ['fr','nl','en'].includes(urlLang)) {
-    localStorage.setItem('studio-lang', urlLang);
-}
-    const LANG_KEY = 'studio-lang';
-    let LANG = (localStorage.getItem(LANG_KEY) || document.documentElement.lang || 'fr').toLowerCase();
-
-    function applyLang(lang) {
-        if (!['fr','nl','en'].includes(lang)) lang = 'fr';
-        LANG = lang;
-        localStorage.setItem(LANG_KEY, lang);
-        document.documentElement.lang = lang;
-
-        document.querySelectorAll('[data-fr]').forEach(el => {
-            const text = el.dataset[lang];
-            if (text) el.innerText = text;           // innerText préserve le contenu HTML simple
-        });
-        document.querySelectorAll('[data-fr-placeholder]').forEach(el => {
-            const ph = el.dataset.frPlaceholder;     // attr data-fr-placeholder
-            el.placeholder = ph;
-        });
-        var langBar = document.getElementById('studioLangBar');
-        if (langBar) langBar.querySelectorAll('button').forEach(b => {
-            b.style.background = b.dataset.lang === lang ? '#6366f1' : 'none';
-            b.style.color = b.dataset.lang === lang ? '#fff' : 'inherit';
-        });
-    }
-
-    window.applyStudioLang = applyLang;
-
-    window.addEventListener('DOMContentLoaded', () => {
-        applyLang(LANG);
-    });
-})();
-</script>
 
 <!-- Language selector (style emballé par le site) -->
 <div id="studioLangBar" style="position:fixed; bottom:20px; right:20px; background:rgba(15,23,42,0.95); padding:10px 16px; border-radius:50px; box-shadow:0 10px 40px rgba(0,0,0,0.15); z-index:9999; display:flex; gap:8px; backdrop-filter:blur(10px); align-items:center;">
-    <button data-lang="fr" onclick="applyStudioLang('fr')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;">FR</button>
-    <button data-lang="nl" onclick="applyStudioLang('nl')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;">NL</button>
-    <button data-lang="en" onclick="applyStudioLang('en')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;">EN</button>
+    <button data-lang="fr" onclick="applyStudioLang('fr')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;" data-fr="FR">FR</button>
+    <button data-lang="nl" onclick="applyStudioLang('nl')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;" data-fr="NL">NL</button>
+    <button data-lang="en" onclick="applyStudioLang('en')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;" data-fr="EN">EN</button>
 </div>
 <meta name="robots" content="noindex">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prompt Studio IA Vidéo — JCODE</title>
+    <title data-fr="Prompt Studio IA Vidéo — JCODE">Prompt Studio IA Vidéo — JCODE</title>
     <meta name="description" content="Landing page premium pour Prompt Studio IA Vidéo, inspirée par jcode.store." />
     <style>
       :root {
@@ -593,18 +553,18 @@ if (urlLang && ['fr','nl','en'].includes(urlLang)) {
       <div class="container nav">
         <a href="https://jcode.store" target="_blank" rel="noreferrer" class="brand brand-lockup" aria-label="Aller sur jcode.store">
           <span class="brand-mark">J</span>
-          <span class="brand-word">JCODE</span>
+          <span class="brand-word" data-fr="JCODE">JCODE</span>
         </a>
 
         <nav class="nav-links" aria-label="Navigation principale">
-          <a href="#fonctionnalites">Fonctionnalités</a>
-          <a href="#avantages">Avantages</a>
-          <a href="#demo">Démo</a>
+          <a href="#fonctionnalites" data-fr="Fonctionnalités">Fonctionnalités</a>
+          <a href="#avantages" data-fr="Avantages">Avantages</a>
+          <a href="#demo" data-fr="Démo">Démo</a>
         </nav>
 
         <div class="nav-actions">
-          <a class="btn btn-secondary" href="https://jcode.store" target="_blank" rel="noreferrer">Voir le site</a>
-          <a class="btn btn-primary" href="#contact">Commencer</a>
+          <a class="btn btn-secondary" href="https://jcode.store" target="_blank" rel="noreferrer" data-fr="Voir le site">Voir le site</a>
+          <a class="btn btn-primary" href="#contact" data-fr="Commencer">Commencer</a>
         </div>
       </div>
     </header>
@@ -613,21 +573,21 @@ if (urlLang && ['fr','nl','en'].includes(urlLang)) {
       <section class="hero">
         <div class="container hero-grid">
           <div>
-            <div class="eyebrow">Studio de production visuelle • IA</div>
-            <h1>Des contenus vidéo <span class="gradient">qui captent, convertissent et mémorisent</span></h1>
-            <p class="lead">
+            <div class="eyebrow" data-fr="Studio de production visuelle • IA">Studio de production visuelle • IA</div>
+            <h1>Des contenus vidéo <span class="gradient" data-fr="qui captent, convertissent et mémorisent">qui captent, convertissent et mémorisent</span></h1>
+            <p class="lead" data-fr="JCODE structure la direction visuelle, le storytelling et la production vidéo pour les marques qui veulent un contenu premium, cohérent et plus rapide à lancer sur tous leurs canaux.">
               JCODE structure la direction visuelle, le storytelling et la production vidéo pour les marques qui veulent un contenu premium, cohérent et plus rapide à lancer sur tous leurs canaux.
             </p>
 
             <div class="cta-row">
-              <a class="btn btn-primary" href="https://jcode.store" target="_blank" rel="noreferrer">Découvrir JCODE</a>
-              <a class="btn btn-secondary" href="#fonctionnalites">Explorer les services</a>
+              <a class="btn btn-primary" href="https://jcode.store" target="_blank" rel="noreferrer" data-fr="Découvrir JCODE">Découvrir JCODE</a>
+              <a class="btn btn-secondary" href="#fonctionnalites" data-fr="Explorer les services">Explorer les services</a>
             </div>
 
             <div class="meta-row">
-              <span class="meta-pill">🎥 Direction créative</span>
-              <span class="meta-pill">⚡ Production rapide</span>
-              <span class="meta-pill">✨ Branding visuel</span>
+              <span class="meta-pill" data-fr="🎥 Direction créative">🎥 Direction créative</span>
+              <span class="meta-pill" data-fr="⚡ Production rapide">⚡ Production rapide</span>
+              <span class="meta-pill" data-fr="✨ Branding visuel">✨ Branding visuel</span>
             </div>
           </div>
 
@@ -643,27 +603,27 @@ if (urlLang && ['fr','nl','en'].includes(urlLang)) {
                 <div class="mini-header">
                   <div class="mini-brand">
                     <span class="brand-mark" style="width:24px;height:24px;border-radius:8px;font-size:0.8rem;">J</span>
-                    <span>Prompt Studio</span>
+                    <span data-fr="Prompt Studio">Prompt Studio</span>
                   </div>
-                  <span class="mini-badge">IA Vidéo</span>
+                  <span class="mini-badge" data-fr="IA Vidéo">IA Vidéo</span>
                 </div>
 
                 <div class="card-grid">
                   <div class="mini-card">
-                    <strong>Recherche</strong>
-                    <span>drone • néon • ralenti • portrait</span>
+                    <strong data-fr="Recherche">Recherche</strong>
+                    <span data-fr="drone • néon • ralenti • portrait">drone • néon • ralenti • portrait</span>
                   </div>
                   <div class="mini-card">
-                    <strong>Catégories</strong>
-                    <span>action • sport • voyage • fantasy</span>
+                    <strong data-fr="Catégories">Catégories</strong>
+                    <span data-fr="action • sport • voyage • fantasy">action • sport • voyage • fantasy</span>
                   </div>
                   <div class="mini-card">
-                    <strong>Storyboard</strong>
-                    <span>5 plans, effets, prompt structuré</span>
+                    <strong data-fr="Storyboard">Storyboard</strong>
+                    <span data-fr="5 plans, effets, prompt structuré">5 plans, effets, prompt structuré</span>
                   </div>
                   <div class="mini-card">
-                    <strong>Export</strong>
-                    <span>JSON + copier prompt</span>
+                    <strong data-fr="Export">Export</strong>
+                    <span data-fr="JSON + copier prompt">JSON + copier prompt</span>
                   </div>
                 </div>
               </div>
@@ -671,8 +631,8 @@ if (urlLang && ['fr','nl','en'].includes(urlLang)) {
 
             <div class="floating-card">
               <b>Impact</b>
-              <strong>+3x</strong>
-              <span style="color:var(--muted); font-size:0.82rem;">gain de vitesse créative</span>
+              <strong data-fr="+3x">+3x</strong>
+              <span style="color:var(--muted); font-size:0.82rem;" data-fr="gain de vitesse créative">gain de vitesse créative</span>
             </div>
           </div>
         </div>
@@ -681,27 +641,27 @@ if (urlLang && ['fr','nl','en'].includes(urlLang)) {
       <section class="section" id="fonctionnalites">
         <div class="container">
           <div class="section-head">
-            <h2>Une agence de contenu pensée pour la vitesse créative</h2>
-            <p>On transforme une idée en direction visuelle, en plan de tournage, en séquence de contenu et en vidéo prête à diffuser.</p>
+            <h2 data-fr="Une agence de contenu pensée pour la vitesse créative">Une agence de contenu pensée pour la vitesse créative</h2>
+            <p data-fr="On transforme une idée en direction visuelle, en plan de tournage, en séquence de contenu et en vidéo prête à diffuser.">On transforme une idée en direction visuelle, en plan de tournage, en séquence de contenu et en vidéo prête à diffuser.</p>
           </div>
 
           <div class="features">
             <article class="feature">
               <div class="feature-icon">🎞️</div>
-              <h3>Concept visuel</h3>
-              <p>On structure le message, l’ambiance, le ton visuel et la narration avant même la production.</p>
+              <h3 data-fr="Concept visuel">Concept visuel</h3>
+              <p data-fr="On structure le message, l’ambiance, le ton visuel et la narration avant même la production.">On structure le message, l’ambiance, le ton visuel et la narration avant même la production.</p>
             </article>
 
             <article class="feature">
               <div class="feature-icon">🎬</div>
-              <h3>Motion design</h3>
-              <p>On crée des séquences dynamiques, lisibles et impactantes pour capter l’attention en quelques secondes.</p>
+              <h3 data-fr="Motion design">Motion design</h3>
+              <p data-fr="On crée des séquences dynamiques, lisibles et impactantes pour capter l’attention en quelques secondes.">On crée des séquences dynamiques, lisibles et impactantes pour capter l’attention en quelques secondes.</p>
             </article>
 
             <article class="feature">
               <div class="feature-icon">⚡</div>
-              <h3>Production IA</h3>
-              <p>On accélère le workflow avec des prompts, des styles et des idées de contenus prêts à être montés.</p>
+              <h3 data-fr="Production IA">Production IA</h3>
+              <p data-fr="On accélère le workflow avec des prompts, des styles et des idées de contenus prêts à être montés.">On accélère le workflow avec des prompts, des styles et des idées de contenus prêts à être montés.</p>
             </article>
           </div>
         </div>
@@ -711,37 +671,37 @@ if (urlLang && ['fr','nl','en'].includes(urlLang)) {
         <div class="container">
           <div class="showcase">
             <div class="showcase-panel">
-              <h3>Pour les marques, créatifs et studios</h3>
-              <p>On transforme une idée vague en direction créative exploitable, avec narration, style visuel clair et production fluide.</p>
+              <h3 data-fr="Pour les marques, créatifs et studios">Pour les marques, créatifs et studios</h3>
+              <p data-fr="On transforme une idée vague en direction créative exploitable, avec narration, style visuel clair et production fluide.">On transforme une idée vague en direction créative exploitable, avec narration, style visuel clair et production fluide.</p>
 
               <ul class="points">
-                <li>Storytelling clair, orienté conversion et engagement.</li>
-                <li>Direction artistique cohérente sur chaque format.</li>
-                <li>Prompt structuré pour un tournage ou un montage plus rapide.</li>
-                <li>Format adapté pour réseaux sociaux, landing pages et publicité.</li>
+                <li data-fr="Storytelling clair, orienté conversion et engagement.">Storytelling clair, orienté conversion et engagement.</li>
+                <li data-fr="Direction artistique cohérente sur chaque format.">Direction artistique cohérente sur chaque format.</li>
+                <li data-fr="Prompt structuré pour un tournage ou un montage plus rapide.">Prompt structuré pour un tournage ou un montage plus rapide.</li>
+                <li data-fr="Format adapté pour réseaux sociaux, landing pages et publicité.">Format adapté pour réseaux sociaux, landing pages et publicité.</li>
               </ul>
             </div>
 
             <div class="showcase-panel">
-              <h3>Un moteur créatif pensé pour la production</h3>
-              <p>On combine inspiration visuelle, esthétique de marque et workflow IA pour accélérer l’idée jusqu’à la diffusion finale.</p>
+              <h3 data-fr="Un moteur créatif pensé pour la production">Un moteur créatif pensé pour la production</h3>
+              <p data-fr="On combine inspiration visuelle, esthétique de marque et workflow IA pour accélérer l’idée jusqu’à la diffusion finale.">On combine inspiration visuelle, esthétique de marque et workflow IA pour accélérer l’idée jusqu’à la diffusion finale.</p>
 
               <ul class="points">
-                <li>Plusieurs ambiances visuelles possibles.</li>
-                <li>Adapté au content marketing, reel, pub et motion design.</li>
-                <li>Idéal pour agences, marques et créateurs qui veulent aller vite.</li>
-                <li>Travail pro, premium et orienté résultat.</li>
+                <li data-fr="Plusieurs ambiances visuelles possibles.">Plusieurs ambiances visuelles possibles.</li>
+                <li data-fr="Adapté au content marketing, reel, pub et motion design.">Adapté au content marketing, reel, pub et motion design.</li>
+                <li data-fr="Idéal pour agences, marques et créateurs qui veulent aller vite.">Idéal pour agences, marques et créateurs qui veulent aller vite.</li>
+                <li data-fr="Travail pro, premium et orienté résultat.">Travail pro, premium et orienté résultat.</li>
               </ul>
             </div>
           </div>
 
           <div class="callout" id="contact">
             <div>
-              <h3>Prêt à faire bouger votre marque ?</h3>
-              <p>Une direction créative premium, pensée pour accélérer la production sans perdre en qualité ni en identité.</p>
+              <h3 data-fr="Prêt à faire bouger votre marque ?">Prêt à faire bouger votre marque ?</h3>
+              <p data-fr="Une direction créative premium, pensée pour accélérer la production sans perdre en qualité ni en identité.">Une direction créative premium, pensée pour accélérer la production sans perdre en qualité ni en identité.</p>
             </div>
 
-            <a class="btn btn-primary" href="https://jcode.store" target="_blank" rel="noreferrer">Démarrer le projet</a>
+            <a class="btn btn-primary" href="https://jcode.store" target="_blank" rel="noreferrer" data-fr="Démarrer le projet">Démarrer le projet</a>
           </div>
         </div>
       </section>
@@ -749,9 +709,49 @@ if (urlLang && ['fr','nl','en'].includes(urlLang)) {
 
     <footer>
       <div class="container footer-inner">
-        <div>© 2026 JCODE — Prompt Studio IA Vidéo</div>
-        <a href="https://jcode.store" target="_blank" rel="noreferrer">jcode.store</a>
+        <div data-fr="© 2026 JCODE — Prompt Studio IA Vidéo">© 2026 JCODE — Prompt Studio IA Vidéo</div>
+        <a href="https://jcode.store" target="_blank" rel="noreferrer" data-fr="jcode.store">jcode.store</a>
       </div>
     </footer>
+<script>
+// ─── STUDIO I18N SAFE ───
+(function(){
+// Lecture du paramètre lang dans l'URL (ex: ?lang=en)
+const params = new URLSearchParams(window.location.search);
+const urlLang = params.get('lang');
+if (urlLang && ['fr','nl','en'].includes(urlLang)) {
+    localStorage.setItem('studio-lang', urlLang);
+}
+    const LANG_KEY = 'studio-lang';
+    let LANG = (localStorage.getItem(LANG_KEY) || document.documentElement.lang || 'fr').toLowerCase();
+
+    function applyLang(lang) {
+        if (!['fr','nl','en'].includes(lang)) lang = 'fr';
+        LANG = lang;
+        localStorage.setItem(LANG_KEY, lang);
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll('[data-fr]').forEach(el => {
+            const text = el.dataset[lang];
+            if (text) el.innerText = text;           // innerText préserve le contenu HTML simple
+        });
+        document.querySelectorAll('[data-fr-placeholder]').forEach(el => {
+            const ph = el.dataset[lang + 'Placeholder'] || el.dataset.frPlaceholder;  // suit la langue active, repli sur FR si non traduit
+            el.placeholder = ph;
+        });
+        var langBar = document.getElementById('studioLangBar');
+        if (langBar) langBar.querySelectorAll('button').forEach(b => {
+            b.style.background = b.dataset.lang === lang ? '#6366f1' : 'none';
+            b.style.color = b.dataset.lang === lang ? '#fff' : 'inherit';
+        });
+    }
+
+    window.applyStudioLang = applyLang;
+
+    window.addEventListener('DOMContentLoaded', () => {
+        applyLang(LANG);
+    });
+})();
+</script>
   </body>
 </html>
