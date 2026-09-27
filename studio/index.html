@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
 
 <!-- Language selector (style emballé par le site) -->
-<div id="studioLangBar" style="position:fixed; bottom:20px; right:20px; background:rgba(15,23,42,0.95); padding:10px 16px; border-radius:50px; box-shadow:0 10px 40px rgba(0,0,0,0.15); z-index:9999; display:flex; gap:8px; backdrop-filter:blur(10px); align-items:center;">
-    <button data-lang="fr" onclick="applyStudioLang('fr')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;" data-fr="FR">FR</button>
-    <button data-lang="nl" onclick="applyStudioLang('nl')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;" data-fr="NL">NL</button>
-    <button data-lang="en" onclick="applyStudioLang('en')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;" data-fr="EN">EN</button>
-</div>
 <meta name="robots" content="noindex">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-fr="Prompt Studio IA Vidéo — JCODE">Prompt Studio IA Vidéo — JCODE</title>
+    <title data-fr="Prompt Studio IA Vidéo — JCODE" data-nl="Prompt Studio AI Video — JCODE" data-en="Prompt Studio AI Video — JCODE">Prompt Studio IA Vidéo — JCODE</title>
     <meta name="description" content="Landing page premium pour Prompt Studio IA Vidéo, inspirée par jcode.store." />
     <style>
       :root {
@@ -549,22 +543,27 @@
     </style>
   </head>
   <body>
+<div id="studioLangBar" style="position:fixed; top:96px; right:20px; background:rgba(15,23,42,0.95); padding:10px 16px; border-radius:50px; box-shadow:0 10px 40px rgba(0,0,0,0.15); z-index:9999; display:flex; gap:8px; backdrop-filter:blur(10px); align-items:center;">
+    <button data-lang="fr" onclick="applyStudioLang('fr')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;" data-fr="FR" data-nl="FR" data-en="FR">FR</button>
+    <button data-lang="nl" onclick="applyStudioLang('nl')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;" data-fr="NL" data-nl="NL" data-en="NL">NL</button>
+    <button data-lang="en" onclick="applyStudioLang('en')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;" data-fr="EN" data-nl="EN" data-en="EN">EN</button>
+</div>
     <header class="topbar">
       <div class="container nav">
         <a href="https://jcode.store" target="_blank" rel="noreferrer" class="brand brand-lockup" aria-label="Aller sur jcode.store">
           <span class="brand-mark">J</span>
-          <span class="brand-word" data-fr="JCODE">JCODE</span>
+          <span class="brand-word" data-fr="JCODE" data-nl="JCODE" data-en="JCODE">JCODE</span>
         </a>
 
         <nav class="nav-links" aria-label="Navigation principale">
-          <a href="#fonctionnalites" data-fr="Fonctionnalités">Fonctionnalités</a>
-          <a href="#avantages" data-fr="Avantages">Avantages</a>
-          <a href="#demo" data-fr="Démo">Démo</a>
+          <a href="#fonctionnalites" data-fr="Fonctionnalités" data-nl="Functionaliteiten" data-en="Features">Fonctionnalités</a>
+          <a href="#avantages" data-fr="Avantages" data-nl="Voordelen" data-en="Benefits">Avantages</a>
+          <a href="#demo" data-fr="Démo" data-nl="Demo" data-en="Demo">Démo</a>
         </nav>
 
         <div class="nav-actions">
-          <a class="btn btn-secondary" href="https://jcode.store" target="_blank" rel="noreferrer" data-fr="Voir le site">Voir le site</a>
-          <a class="btn btn-primary" href="#contact" data-fr="Commencer">Commencer</a>
+          <a class="btn btn-secondary" href="https://jcode.store" target="_blank" rel="noreferrer" data-fr="Voir le site" data-nl="Bekijk de site" data-en="View the site">Voir le site</a>
+          <a class="btn btn-primary" href="prompts/" data-fr="Commencer" data-nl="Beginnen" data-en="Get started">Commencer</a>
         </div>
       </div>
     </header>
@@ -573,21 +572,21 @@
       <section class="hero">
         <div class="container hero-grid">
           <div>
-            <div class="eyebrow" data-fr="Studio de production visuelle • IA">Studio de production visuelle • IA</div>
-            <h1>Des contenus vidéo <span class="gradient" data-fr="qui captent, convertissent et mémorisent">qui captent, convertissent et mémorisent</span></h1>
-            <p class="lead" data-fr="JCODE structure la direction visuelle, le storytelling et la production vidéo pour les marques qui veulent un contenu premium, cohérent et plus rapide à lancer sur tous leurs canaux.">
+            <div class="eyebrow" data-fr="Studio de production visuelle • IA" data-nl="Studio voor visuele productie • AI" data-en="Visual production studio • AI">Studio de production visuelle • IA</div>
+            <h1><span data-fr="Des contenus vidéo" data-nl="Videoclips" data-en="Videos">Des contenus vidéo</span> <span class="gradient" data-fr="qui captent, convertissent et mémorisent" data-nl="die boeien, overtuigen en blijven hangen" data-en="that capture, convert and stick">qui captent, convertissent et mémorisent</span></h1>
+            <p class="lead" data-fr="JCODE structure la direction visuelle, le storytelling et la production vidéo pour les marques qui veulent un contenu premium, cohérent et plus rapide à lancer sur tous leurs canaux." data-nl="JCODE structureert de visuele richting, het storytelling en de videoproductie voor merken die premium, coherente content willen die sneller op al hun kanalen kan worden gelanceerd." data-en="JCODE structures the visual direction, storytelling and video production for brands that want premium, consistent content, launched faster across all their channels.">
               JCODE structure la direction visuelle, le storytelling et la production vidéo pour les marques qui veulent un contenu premium, cohérent et plus rapide à lancer sur tous leurs canaux.
             </p>
 
             <div class="cta-row">
-              <a class="btn btn-primary" href="https://jcode.store" target="_blank" rel="noreferrer" data-fr="Découvrir JCODE">Découvrir JCODE</a>
-              <a class="btn btn-secondary" href="#fonctionnalites" data-fr="Explorer les services">Explorer les services</a>
+              <a class="btn btn-primary" href="https://jcode.store" target="_blank" rel="noreferrer" data-fr="Découvrir JCODE" data-nl="Ontdek JCODE" data-en="Discover JCODE">Découvrir JCODE</a>
+              <a class="btn btn-secondary" href="#fonctionnalites" data-fr="Explorer les services" data-nl="Ontdek de diensten" data-en="Explore the services">Explorer les services</a>
             </div>
 
             <div class="meta-row">
-              <span class="meta-pill" data-fr="🎥 Direction créative">🎥 Direction créative</span>
-              <span class="meta-pill" data-fr="⚡ Production rapide">⚡ Production rapide</span>
-              <span class="meta-pill" data-fr="✨ Branding visuel">✨ Branding visuel</span>
+              <span class="meta-pill" data-fr="🎥 Direction créative" data-nl="🎥 Creatieve regie" data-en="🎥 Creative direction">🎥 Direction créative</span>
+              <span class="meta-pill" data-fr="⚡ Production rapide" data-nl="⚡ Snelle productie" data-en="⚡ Fast production">⚡ Production rapide</span>
+              <span class="meta-pill" data-fr="✨ Branding visuel" data-nl="✨ Visuele branding" data-en="✨ Visual branding">✨ Branding visuel</span>
             </div>
           </div>
 
@@ -603,27 +602,27 @@
                 <div class="mini-header">
                   <div class="mini-brand">
                     <span class="brand-mark" style="width:24px;height:24px;border-radius:8px;font-size:0.8rem;">J</span>
-                    <span data-fr="Prompt Studio">Prompt Studio</span>
+                    <span data-fr="Prompt Studio" data-nl="Prompt Studio" data-en="Prompt Studio">Prompt Studio</span>
                   </div>
-                  <span class="mini-badge" data-fr="IA Vidéo">IA Vidéo</span>
+                  <span class="mini-badge" data-fr="IA Vidéo" data-nl="AI Video" data-en="AI Video">IA Vidéo</span>
                 </div>
 
                 <div class="card-grid">
                   <div class="mini-card">
-                    <strong data-fr="Recherche">Recherche</strong>
-                    <span data-fr="drone • néon • ralenti • portrait">drone • néon • ralenti • portrait</span>
+                    <strong data-fr="Recherche" data-nl="Zoeken" data-en="Search">Recherche</strong>
+                    <span data-fr="drone • néon • ralenti • portrait" data-nl="drone • neon • slow motion • portret" data-en="drone • neon • slow motion • portrait">drone • néon • ralenti • portrait</span>
                   </div>
                   <div class="mini-card">
-                    <strong data-fr="Catégories">Catégories</strong>
-                    <span data-fr="action • sport • voyage • fantasy">action • sport • voyage • fantasy</span>
+                    <strong data-fr="Catégories" data-nl="Categorieën" data-en="Categories">Catégories</strong>
+                    <span data-fr="action • sport • voyage • fantasy" data-nl="actie • sport • reizen • fantasy" data-en="action • sport • travel • fantasy">action • sport • voyage • fantasy</span>
                   </div>
                   <div class="mini-card">
-                    <strong data-fr="Storyboard">Storyboard</strong>
-                    <span data-fr="5 plans, effets, prompt structuré">5 plans, effets, prompt structuré</span>
+                    <strong data-fr="Storyboard" data-nl="Storyboard" data-en="Storyboard">Storyboard</strong>
+                    <span data-fr="5 plans, effets, prompt structuré" data-nl="5 shots, effecten, gestructureerde prompt" data-en="5 shots, effects, structured prompt">5 plans, effets, prompt structuré</span>
                   </div>
                   <div class="mini-card">
-                    <strong data-fr="Export">Export</strong>
-                    <span data-fr="JSON + copier prompt">JSON + copier prompt</span>
+                    <strong data-fr="Export" data-nl="Export" data-en="Export">Export</strong>
+                    <span data-fr="JSON + copier prompt" data-nl="JSON + prompt kopiëren" data-en="JSON + copy prompt">JSON + copier prompt</span>
                   </div>
                 </div>
               </div>
@@ -631,8 +630,8 @@
 
             <div class="floating-card">
               <b>Impact</b>
-              <strong data-fr="+3x">+3x</strong>
-              <span style="color:var(--muted); font-size:0.82rem;" data-fr="gain de vitesse créative">gain de vitesse créative</span>
+              <strong data-fr="+3x" data-nl="+3x" data-en="+3x">+3x</strong>
+              <span style="color:var(--muted); font-size:0.82rem;" data-fr="gain de vitesse créative" data-nl="winst in creatieve snelheid" data-en="creative speed gain">gain de vitesse créative</span>
             </div>
           </div>
         </div>
@@ -641,27 +640,27 @@
       <section class="section" id="fonctionnalites">
         <div class="container">
           <div class="section-head">
-            <h2 data-fr="Une agence de contenu pensée pour la vitesse créative">Une agence de contenu pensée pour la vitesse créative</h2>
-            <p data-fr="On transforme une idée en direction visuelle, en plan de tournage, en séquence de contenu et en vidéo prête à diffuser.">On transforme une idée en direction visuelle, en plan de tournage, en séquence de contenu et en vidéo prête à diffuser.</p>
+            <h2 data-fr="Une agence de contenu pensée pour la vitesse créative" data-nl="Een contentbureau ontworpen voor creatieve snelheid" data-en="A content agency built for creative speed">Une agence de contenu pensée pour la vitesse créative</h2>
+            <p data-fr="On transforme une idée en direction visuelle, en plan de tournage, en séquence de contenu et en vidéo prête à diffuser." data-nl="We zetten een idee om in een visuele richting, een draaiplan, een contentreeks en een uitzendklare video." data-en="We turn an idea into a visual direction, a shot plan, a content sequence and a ready-to-publish video.">On transforme une idée en direction visuelle, en plan de tournage, en séquence de contenu et en vidéo prête à diffuser.</p>
           </div>
 
           <div class="features">
             <article class="feature">
               <div class="feature-icon">🎞️</div>
-              <h3 data-fr="Concept visuel">Concept visuel</h3>
-              <p data-fr="On structure le message, l’ambiance, le ton visuel et la narration avant même la production.">On structure le message, l’ambiance, le ton visuel et la narration avant même la production.</p>
+              <h3 data-fr="Concept visuel" data-nl="Visueel concept" data-en="Visual concept">Concept visuel</h3>
+              <p data-fr="On structure le message, l’ambiance, le ton visuel et la narration avant même la production." data-nl="We structureren de boodschap, de sfeer, de visuele toon en het verhaal nog vóór de productie." data-en="We structure the message, the mood, the visual tone and the narrative before production even starts.">On structure le message, l’ambiance, le ton visuel et la narration avant même la production.</p>
             </article>
 
             <article class="feature">
               <div class="feature-icon">🎬</div>
-              <h3 data-fr="Motion design">Motion design</h3>
-              <p data-fr="On crée des séquences dynamiques, lisibles et impactantes pour capter l’attention en quelques secondes.">On crée des séquences dynamiques, lisibles et impactantes pour capter l’attention en quelques secondes.</p>
+              <h3 data-fr="Motion design" data-nl="Motion design" data-en="Motion design">Motion design</h3>
+              <p data-fr="On crée des séquences dynamiques, lisibles et impactantes pour capter l’attention en quelques secondes." data-nl="We maken dynamische, heldere en impactvolle sequenties die binnen enkele seconden de aandacht grijpen." data-en="We create dynamic, clear and impactful sequences that capture attention within seconds.">On crée des séquences dynamiques, lisibles et impactantes pour capter l’attention en quelques secondes.</p>
             </article>
 
             <article class="feature">
               <div class="feature-icon">⚡</div>
-              <h3 data-fr="Production IA">Production IA</h3>
-              <p data-fr="On accélère le workflow avec des prompts, des styles et des idées de contenus prêts à être montés.">On accélère le workflow avec des prompts, des styles et des idées de contenus prêts à être montés.</p>
+              <h3 data-fr="Production IA" data-nl="AI-productie" data-en="AI production">Production IA</h3>
+              <p data-fr="On accélère le workflow avec des prompts, des styles et des idées de contenus prêts à être montés." data-nl="We versnellen de workflow met prompts, stijlen en content-ideeën die klaar zijn om te monteren." data-en="We speed up the workflow with prompts, styles and content ideas ready to be edited.">On accélère le workflow avec des prompts, des styles et des idées de contenus prêts à être montés.</p>
             </article>
           </div>
         </div>
@@ -671,37 +670,37 @@
         <div class="container">
           <div class="showcase">
             <div class="showcase-panel">
-              <h3 data-fr="Pour les marques, créatifs et studios">Pour les marques, créatifs et studios</h3>
-              <p data-fr="On transforme une idée vague en direction créative exploitable, avec narration, style visuel clair et production fluide.">On transforme une idée vague en direction créative exploitable, avec narration, style visuel clair et production fluide.</p>
+              <h3 data-fr="Pour les marques, créatifs et studios" data-nl="Voor merken, creatievelingen en studio&#x27;s" data-en="For brands, creatives and studios">Pour les marques, créatifs et studios</h3>
+              <p data-fr="On transforme une idée vague en direction créative exploitable, avec narration, style visuel clair et production fluide." data-nl="We zetten een vaag idee om in een bruikbare creatieve richting, met verhaal, duidelijke visuele stijl en vlotte productie." data-en="We turn a vague idea into an actionable creative direction, with narrative, a clear visual style and smooth production.">On transforme une idée vague en direction créative exploitable, avec narration, style visuel clair et production fluide.</p>
 
               <ul class="points">
-                <li data-fr="Storytelling clair, orienté conversion et engagement.">Storytelling clair, orienté conversion et engagement.</li>
-                <li data-fr="Direction artistique cohérente sur chaque format.">Direction artistique cohérente sur chaque format.</li>
-                <li data-fr="Prompt structuré pour un tournage ou un montage plus rapide.">Prompt structuré pour un tournage ou un montage plus rapide.</li>
-                <li data-fr="Format adapté pour réseaux sociaux, landing pages et publicité.">Format adapté pour réseaux sociaux, landing pages et publicité.</li>
+                <li data-fr="Storytelling clair, orienté conversion et engagement." data-nl="Helder storytelling, gericht op conversie en engagement." data-en="Clear storytelling, focused on conversion and engagement.">Storytelling clair, orienté conversion et engagement.</li>
+                <li data-fr="Direction artistique cohérente sur chaque format." data-nl="Consistente art direction op elk formaat." data-en="Consistent art direction across every format.">Direction artistique cohérente sur chaque format.</li>
+                <li data-fr="Prompt structuré pour un tournage ou un montage plus rapide." data-nl="Gestructureerde prompt voor een snellere opname of montage." data-en="Structured prompt for faster shooting or editing.">Prompt structuré pour un tournage ou un montage plus rapide.</li>
+                <li data-fr="Format adapté pour réseaux sociaux, landing pages et publicité." data-nl="Formaat afgestemd op sociale media, landingspagina&#x27;s en advertenties." data-en="Format tailored for social media, landing pages and advertising.">Format adapté pour réseaux sociaux, landing pages et publicité.</li>
               </ul>
             </div>
 
             <div class="showcase-panel">
-              <h3 data-fr="Un moteur créatif pensé pour la production">Un moteur créatif pensé pour la production</h3>
-              <p data-fr="On combine inspiration visuelle, esthétique de marque et workflow IA pour accélérer l’idée jusqu’à la diffusion finale.">On combine inspiration visuelle, esthétique de marque et workflow IA pour accélérer l’idée jusqu’à la diffusion finale.</p>
+              <h3 data-fr="Un moteur créatif pensé pour la production" data-nl="Een creatieve motor ontworpen voor productie" data-en="A creative engine built for production">Un moteur créatif pensé pour la production</h3>
+              <p data-fr="On combine inspiration visuelle, esthétique de marque et workflow IA pour accélérer l’idée jusqu’à la diffusion finale." data-nl="We combineren visuele inspiratie, merkesthetiek en AI-workflow om het idee te versnellen tot de uiteindelijke uitzending." data-en="We combine visual inspiration, brand aesthetics and AI workflow to speed up the idea all the way to final release.">On combine inspiration visuelle, esthétique de marque et workflow IA pour accélérer l’idée jusqu’à la diffusion finale.</p>
 
               <ul class="points">
-                <li data-fr="Plusieurs ambiances visuelles possibles.">Plusieurs ambiances visuelles possibles.</li>
-                <li data-fr="Adapté au content marketing, reel, pub et motion design.">Adapté au content marketing, reel, pub et motion design.</li>
-                <li data-fr="Idéal pour agences, marques et créateurs qui veulent aller vite.">Idéal pour agences, marques et créateurs qui veulent aller vite.</li>
-                <li data-fr="Travail pro, premium et orienté résultat.">Travail pro, premium et orienté résultat.</li>
+                <li data-fr="Plusieurs ambiances visuelles possibles." data-nl="Meerdere visuele sferen mogelijk." data-en="Multiple visual moods possible.">Plusieurs ambiances visuelles possibles.</li>
+                <li data-fr="Adapté au content marketing, reel, pub et motion design." data-nl="Geschikt voor contentmarketing, reels, advertenties en motion design." data-en="Suited for content marketing, reels, ads and motion design.">Adapté au content marketing, reel, pub et motion design.</li>
+                <li data-fr="Idéal pour agences, marques et créateurs qui veulent aller vite." data-nl="Ideaal voor bureaus, merken en makers die snel willen gaan." data-en="Ideal for agencies, brands and creators who want to move fast.">Idéal pour agences, marques et créateurs qui veulent aller vite.</li>
+                <li data-fr="Travail pro, premium et orienté résultat." data-nl="Professioneel, premium werk, gericht op resultaat." data-en="Professional, premium work, focused on results.">Travail pro, premium et orienté résultat.</li>
               </ul>
             </div>
           </div>
 
           <div class="callout" id="contact">
             <div>
-              <h3 data-fr="Prêt à faire bouger votre marque ?">Prêt à faire bouger votre marque ?</h3>
-              <p data-fr="Une direction créative premium, pensée pour accélérer la production sans perdre en qualité ni en identité.">Une direction créative premium, pensée pour accélérer la production sans perdre en qualité ni en identité.</p>
+              <h3 data-fr="Prêt à faire bouger votre marque ?" data-nl="Klaar om uw merk in beweging te brengen?" data-en="Ready to get your brand moving?">Prêt à faire bouger votre marque ?</h3>
+              <p data-fr="Une direction créative premium, pensée pour accélérer la production sans perdre en qualité ni en identité." data-nl="Een premium creatieve richting, ontworpen om de productie te versnellen zonder in te boeten aan kwaliteit of identiteit." data-en="A premium creative direction, designed to speed up production without losing quality or identity.">Une direction créative premium, pensée pour accélérer la production sans perdre en qualité ni en identité.</p>
             </div>
 
-            <a class="btn btn-primary" href="https://jcode.store" target="_blank" rel="noreferrer" data-fr="Démarrer le projet">Démarrer le projet</a>
+            <a class="btn btn-primary" href="https://jcode.store" target="_blank" rel="noreferrer" data-fr="Démarrer le projet" data-nl="Start het project" data-en="Start the project">Démarrer le projet</a>
           </div>
         </div>
       </section>
@@ -709,8 +708,8 @@
 
     <footer>
       <div class="container footer-inner">
-        <div data-fr="© 2026 JCODE — Prompt Studio IA Vidéo">© 2026 JCODE — Prompt Studio IA Vidéo</div>
-        <a href="https://jcode.store" target="_blank" rel="noreferrer" data-fr="jcode.store">jcode.store</a>
+        <div data-fr="© 2026 JCODE — Prompt Studio IA Vidéo" data-nl="© 2026 JCODE — Prompt Studio AI Video" data-en="© 2026 JCODE — Prompt Studio AI Video">© 2026 JCODE — Prompt Studio IA Vidéo</div>
+        <a href="https://jcode.store" target="_blank" rel="noreferrer" data-fr="jcode.store" data-nl="jcode.store" data-en="jcode.store">jcode.store</a>
       </div>
     </footer>
 <script>

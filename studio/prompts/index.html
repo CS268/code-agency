@@ -176,6 +176,11 @@ footer a:hover{color:#fff}
 </style>
 </head>
 <body>
+<div id="studioLangBar" style="position:fixed; top:96px; right:20px; background:rgba(15,23,42,0.95); padding:10px 16px; border-radius:50px; box-shadow:0 10px 40px rgba(0,0,0,0.15); z-index:9999; display:flex; gap:8px; backdrop-filter:blur(10px); align-items:center;">
+    <button data-lang="fr" onclick="applyStudioLang('fr')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;" data-fr="FR" data-nl="FR" data-en="FR">FR</button>
+    <button data-lang="nl" onclick="applyStudioLang('nl')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;" data-fr="NL" data-nl="NL" data-en="NL">NL</button>
+    <button data-lang="en" onclick="applyStudioLang('en')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;" data-fr="EN" data-nl="EN" data-en="EN">EN</button>
+</div>
 
 <div class="aurora"></div>
 <div class="grid-overlay"></div>
@@ -185,53 +190,53 @@ footer a:hover{color:#fff}
     <a href="#" class="logo">
       <div class="logo-mark">J</div>
       <div class="logo-txt">J<span>CODE</span></div>
-      <div class="logo-sub">Studio IA Vidéo</div>
+      <div class="logo-sub" data-fr="Studio IA Vidéo" data-nl="AI-videostudio" data-en="AI Video Studio">Studio IA Vidéo</div>
     </a>
     <div class="nav-spacer"></div>
     <div class="nav-links">
-      <a href="#studio">Studio</a>
-      <a href="#categories">Catégories</a>
-      <a href="#comment">Comment ça marche</a>
+      <a href="#studio" data-fr="Studio" data-nl="Studio" data-en="Studio">Studio</a>
+      <a href="#categories" data-fr="Catégories" data-nl="Categorieën" data-en="Categories">Catégories</a>
+      <a href="#comment" data-fr="Comment ça marche" data-nl="Hoe het werkt" data-en="How it works">Comment ça marche</a>
     </div>
     <a href="https://jcode.store" target="_blank" rel="noopener" class="btn btn-primary">jcode.store ↗</a>
   </div>
 </nav>
 
 <header class="hero wrap" id="studio">
-  <div class="pill"><span class="pill-dot"></span><b id="pillCount">—</b> effets cinématiques · moteur de prompts IA</div>
-  <h1>Génère des vidéos IA<br><span class="grad">au niveau cinéma.</span></h1>
-  <p>Sélectionne des actions, des mouvements de caméra, des effets VFX et des directions artistiques. Le studio assemble un prompt structuré, prêt à coller dans Sora, Runway, Kling ou Veo.</p>
+  <div class="pill"><span class="pill-dot"></span><b id="pillCount">—</b> <span data-fr="effets cinématiques · moteur de prompts IA" data-nl="cinematische effecten · AI-promptmotor" data-en="cinematic effects · AI prompt engine">effets cinématiques · moteur de prompts IA</span></div>
+  <h1><span data-fr="Génère des vidéos IA" data-nl="Genereer AI-video&#x27;s" data-en="Generate AI videos">Génère des vidéos IA</span><br><span class="grad" data-fr="au niveau cinéma." data-nl="op bioscoopniveau." data-en="at a cinematic level.">au niveau cinéma.</span></h1>
+  <p data-fr="Sélectionne des actions, des mouvements de caméra, des effets VFX et des directions artistiques. Le studio assemble un prompt structuré, prêt à coller dans Sora, Runway, Kling ou Veo." data-nl="Selecteer acties, camerabewegingen, VFX-effecten en artistieke richtingen. De studio bouwt een gestructureerde prompt, klaar om te plakken in Sora, Runway, Kling of Veo." data-en="Select actions, camera moves, VFX and art directions. The studio builds a structured prompt, ready to paste into Sora, Runway, Kling or Veo.">Sélectionne des actions, des mouvements de caméra, des effets VFX et des directions artistiques. Le studio assemble un prompt structuré, prêt à coller dans Sora, Runway, Kling ou Veo.</p>
 
   <div class="searchbar">
     <span class="ico">⌕</span>
-    <input id="search" type="text" placeholder="Rechercher un effet, un style, une émotion…" autocomplete="off" spellcheck="false">
+    <input id="search" type="text" placeholder="Rechercher un effet, un style, une émotion…" data-fr-placeholder="Rechercher un effet, un style, une émotion…" data-nl-placeholder="Zoek een effect, stijl of emotie…" data-en-placeholder="Search for an effect, style or emotion…" autocomplete="off" spellcheck="false">
     <kbd>/</kbd>
   </div>
 
   <div class="hero-actions">
-    <button class="btn btn-primary" id="btnRandom">⚡ Combo aléatoire</button>
-    <button class="btn btn-ghost" id="btnFav">★ Mes favoris <span id="favCount" style="opacity:.6">(0)</span></button>
-    <button class="btn btn-ghost" id="btnReset">Réinitialiser</button>
+    <button class="btn btn-primary" id="btnRandom" data-fr="⚡ Combo aléatoire" data-nl="⚡ Willekeurige combo" data-en="⚡ Random combo">⚡ Combo aléatoire</button>
+    <button class="btn btn-ghost" id="btnFav"><span data-fr="★ Mes favoris" data-nl="★ Mijn favorieten" data-en="★ My favorites">★ Mes favoris</span> <span id="favCount" style="opacity:.6">(0)</span></button>
+    <button class="btn btn-ghost" id="btnReset" data-fr="Réinitialiser" data-nl="Resetten" data-en="Reset">Réinitialiser</button>
   </div>
 
   <div class="stats">
-    <div class="stat"><div class="stat-v" id="statTotal">—</div><div class="stat-l">Effets</div></div>
-    <div class="stat"><div class="stat-v">23</div><div class="stat-l">Catégories</div></div>
-    <div class="stat"><div class="stat-v" id="statSel">0</div><div class="stat-l">Sélectionnés</div></div>
-    <div class="stat"><div class="stat-v">5</div><div class="stat-l">Modèles IA</div></div>
+    <div class="stat"><div class="stat-v" id="statTotal">—</div><div class="stat-l" data-fr="Effets" data-nl="Effecten" data-en="Effects">Effets</div></div>
+    <div class="stat"><div class="stat-v">23</div><div class="stat-l" data-fr="Catégories" data-nl="Categorieën" data-en="Categories">Catégories</div></div>
+    <div class="stat"><div class="stat-v" id="statSel">0</div><div class="stat-l" data-fr="Sélectionnés" data-nl="Geselecteerd" data-en="Selected">Sélectionnés</div></div>
+    <div class="stat"><div class="stat-v">5</div><div class="stat-l" data-fr="Modèles IA" data-nl="AI-modellen" data-en="AI models">Modèles IA</div></div>
   </div>
 </header>
 
 <section class="wrap" id="categories">
   <div class="filters" id="filters"></div>
   <div class="toolbar">
-    <div class="tb-count"><b id="shown">—</b> effets affichés</div>
+    <div class="tb-count"><b id="shown">—</b> <span data-fr="effets affichés" data-nl="weergegeven effecten" data-en="effects shown">effets affichés</span></div>
     <div class="tb-spacer"></div>
     <select class="mini" id="sort">
-      <option value="num">Tri · Numéro</option>
-      <option value="num-desc">Tri · Numéro inversé</option>
-      <option value="az">Tri · A → Z</option>
-      <option value="cat">Tri · Catégorie</option>
+      <option value="num" data-fr="Tri · Numéro" data-nl="Sorteer · Nummer" data-en="Sort · Number">Tri · Numéro</option>
+      <option value="num-desc" data-fr="Tri · Numéro inversé" data-nl="Sorteer · Nummer aflopend" data-en="Sort · Number reversed">Tri · Numéro inversé</option>
+      <option value="az" data-fr="Tri · A → Z" data-nl="Sorteer · A → Z" data-en="Sort · A → Z">Tri · A → Z</option>
+      <option value="cat" data-fr="Tri · Catégorie" data-nl="Sorteer · Categorie" data-en="Sort · Category">Tri · Catégorie</option>
     </select>
   </div>
   <div class="grid" id="grid"></div>
@@ -240,95 +245,95 @@ footer a:hover{color:#fff}
 <!-- FIX #2 — vraie section "comment ça marche", bon endroit pour le SEO -->
 <section class="howto" id="comment">
   <div class="wrap">
-    <h2>Comment ça marche</h2>
+    <h2 data-fr="Comment ça marche" data-nl="Hoe het werkt" data-en="How it works">Comment ça marche</h2>
     <div class="howto-grid">
       <div class="howto-step">
-        <div class="n">ÉTAPE 1</div>
-        <h3>Sélectionne des effets</h3>
-        <p>Parcours 260 effets cinématiques classés par catégorie — action, caméra, VFX, style, genre. Clique pour ajouter un effet à ta combinaison.</p>
+        <div class="n" data-fr="ÉTAPE 1" data-nl="STAP 1" data-en="STEP 1">ÉTAPE 1</div>
+        <h3 data-fr="Sélectionne des effets" data-nl="Selecteer effecten" data-en="Select effects">Sélectionne des effets</h3>
+        <p data-fr="Parcours 260 effets cinématiques classés par catégorie — action, caméra, VFX, style, genre. Clique pour ajouter un effet à ta combinaison." data-nl="Blader door 260 cinematische effecten per categorie — actie, camera, VFX, stijl, genre. Klik om een effect aan je combinatie toe te voegen." data-en="Browse 260 cinematic effects by category — action, camera, VFX, style, genre. Click to add an effect to your combo.">Parcours 260 effets cinématiques classés par catégorie — action, caméra, VFX, style, genre. Clique pour ajouter un effet à ta combinaison.</p>
       </div>
       <div class="howto-step">
-        <div class="n">ÉTAPE 2</div>
-        <h3>Choisis ton modèle</h3>
-        <p>Sora 2, Runway Gen-4, Kling 2.0, Veo 3 ou Luma — chaque modèle a ses forces. Le studio adapte le format et la durée à ton choix.</p>
+        <div class="n" data-fr="ÉTAPE 2" data-nl="STAP 2" data-en="STEP 2">ÉTAPE 2</div>
+        <h3 data-fr="Choisis ton modèle" data-nl="Kies je model" data-en="Choose your model">Choisis ton modèle</h3>
+        <p data-fr="Sora 2, Runway Gen-4, Kling 2.0, Veo 3 ou Luma — chaque modèle a ses forces. Le studio adapte le format et la durée à ton choix." data-nl="Sora 2, Runway Gen-4, Kling 2.0, Veo 3 of Luma — elk model heeft zijn sterktes. De studio past formaat en duur aan jouw keuze aan." data-en="Sora 2, Runway Gen-4, Kling 2.0, Veo 3 or Luma — each model has its strengths. The studio adapts format and duration to your choice.">Sora 2, Runway Gen-4, Kling 2.0, Veo 3 ou Luma — chaque modèle a ses forces. Le studio adapte le format et la durée à ton choix.</p>
       </div>
       <div class="howto-step">
-        <div class="n">ÉTAPE 3</div>
-        <h3>Génère et colle</h3>
-        <p>Le studio assemble un prompt long, une version courte optimisée mots-clés, et un negative prompt. Copie et colle dans ton générateur préféré.</p>
+        <div class="n" data-fr="ÉTAPE 3" data-nl="STAP 3" data-en="STEP 3">ÉTAPE 3</div>
+        <h3 data-fr="Génère et colle" data-nl="Genereer en plak" data-en="Generate and paste">Génère et colle</h3>
+        <p data-fr="Le studio assemble un prompt long, une version courte optimisée mots-clés, et un negative prompt. Copie et colle dans ton générateur préféré." data-nl="De studio bouwt een lange prompt, een korte keyword-versie en een negative prompt. Kopieer en plak in je favoriete generator." data-en="The studio builds a long prompt, a short keyword version, and a negative prompt. Copy and paste into your preferred generator.">Le studio assemble un prompt long, une version courte optimisée mots-clés, et un negative prompt. Copie et colle dans ton générateur préféré.</p>
       </div>
     </div>
     <div class="kbd-list">
-      <span><kbd>/</kbd> rechercher</span>
-      <span><kbd>Shift</kbd>+<kbd>R</kbd> combo aléatoire</span>
-      <span><kbd>⌘</kbd>+<kbd>Enter</kbd> générer le prompt</span>
-      <span><kbd>Échap</kbd> fermer</span>
-      <span>clic droit ou bouton ★ au survol · ajouter aux favoris</span>
+      <span><kbd>/</kbd> <span data-fr="rechercher" data-nl="zoeken" data-en="search">rechercher</span></span>
+      <span><kbd>Shift</kbd>+<kbd>R</kbd> <span data-fr="combo aléatoire" data-nl="willekeurige combo" data-en="random combo">combo aléatoire</span></span>
+      <span><kbd>⌘</kbd>+<kbd>Enter</kbd> <span data-fr="générer le prompt" data-nl="prompt genereren" data-en="generate prompt">générer le prompt</span></span>
+      <span><kbd>Échap</kbd> <span data-fr="fermer" data-nl="sluiten" data-en="close">fermer</span></span>
+      <span data-fr="clic droit ou bouton ★ au survol · ajouter aux favoris" data-nl="rechterklik of ★-knop bij hover · toevoegen aan favorieten" data-en="right-click or ★ button on hover · add to favorites">clic droit ou bouton ★ au survol · ajouter aux favoris</span>
     </div>
   </div>
 </section>
 
 <div class="dock" id="dock">
   <div class="dock-info">
-    <div class="dock-n"><span id="dockCount">0</span> élément(s) sélectionné(s)</div>
+    <div class="dock-n"><span id="dockCount">0</span> <span data-fr="élément(s) sélectionné(s)" data-nl="geselecteerde item(s)" data-en="item(s) selected">élément(s) sélectionné(s)</span></div>
     <div class="dock-preview" id="dockPreview"></div>
   </div>
-  <button class="dock-clear" id="dockClear">Vider</button>
-  <button class="btn btn-primary" id="btnGenerate">Générer le prompt ✦</button>
+  <button class="dock-clear" id="dockClear" data-fr="Vider" data-nl="Leegmaken" data-en="Clear">Vider</button>
+  <button class="btn btn-primary" id="btnGenerate" data-fr="Générer le prompt ✦" data-nl="Prompt genereren ✦" data-en="Generate prompt ✦">Générer le prompt ✦</button>
 </div>
 
 <div class="overlay" id="overlay">
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-head">
       <div style="flex:1">
-        <h2 id="modalTitle">Prompt vidéo IA</h2>
+        <h2 id="modalTitle" data-fr="Prompt vidéo IA" data-nl="AI-videoprompt" data-en="AI video prompt">Prompt vidéo IA</h2>
         <div class="sub" id="modalSub">—</div>
       </div>
-      <button class="x" id="modalClose" aria-label="Fermer">✕</button>
+      <button class="x" id="modalClose" aria-label="Fermer" data-fr="Fermer" data-nl="Sluiten" data-en="Close">✕</button>
     </div>
     <div class="modal-body">
       <div class="opts">
         <div class="opt">
-          <label for="oModel">Modèle cible</label>
+          <label for="oModel" data-fr="Modèle cible" data-nl="Doelmodel" data-en="Target model">Modèle cible</label>
           <select id="oModel">
             <option>Sora 2</option><option>Runway Gen-4</option><option>Kling 2.0</option><option>Google Veo 3</option><option>Luma Dream Machine</option>
           </select>
         </div>
         <div class="opt">
-          <label for="oRatio">Format</label>
+          <label for="oRatio" data-fr="Format" data-nl="Formaat" data-en="Format">Format</label>
           <select id="oRatio">
-            <option value="16:9">16:9 — Cinéma / YouTube</option>
-            <option value="9:16">9:16 — TikTok / Reels</option>
-            <option value="1:1">1:1 — Carré</option>
-            <option value="2.39:1">2.39:1 — Anamorphique</option>
+            <option value="16:9" data-fr="16:9 — Cinéma / YouTube" data-nl="16:9 — Bioscoop / YouTube" data-en="16:9 — Cinema / YouTube">16:9 — Cinéma / YouTube</option>
+            <option value="9:16" data-fr="9:16 — TikTok / Reels" data-nl="9:16 — TikTok / Reels" data-en="9:16 — TikTok / Reels">9:16 — TikTok / Reels</option>
+            <option value="1:1" data-fr="1:1 — Carré" data-nl="1:1 — Vierkant" data-en="1:1 — Square">1:1 — Carré</option>
+            <option value="2.39:1" data-fr="2.39:1 — Anamorphique" data-nl="2.39:1 — Anamorfisch" data-en="2.39:1 — Anamorphic">2.39:1 — Anamorphique</option>
           </select>
         </div>
         <div class="opt">
-          <label for="oDur">Durée</label>
+          <label for="oDur" data-fr="Durée" data-nl="Duur" data-en="Duration">Durée</label>
           <select id="oDur">
-            <option value="5 s">5 secondes</option>
-            <option value="10 s" selected>10 secondes</option>
-            <option value="15 s">15 secondes</option>
-            <option value="30 s">30 secondes</option>
+            <option value="5 s" data-fr="5 secondes" data-nl="5 seconden" data-en="5 seconds">5 secondes</option>
+            <option value="10 s" selected data-fr="10 secondes" data-nl="10 seconden" data-en="10 seconds">10 secondes</option>
+            <option value="15 s" data-fr="15 secondes" data-nl="15 seconden" data-en="15 seconds">15 secondes</option>
+            <option value="30 s" data-fr="30 secondes" data-nl="30 seconden" data-en="30 seconds">30 secondes</option>
           </select>
         </div>
       </div>
       <div class="prompt-out" id="promptOut"></div>
       <div class="modal-actions">
-        <button class="btn btn-primary" id="btnCopy">⧉ Copier le prompt</button>
-        <button class="btn btn-ghost" id="btnDownload">↓ Télécharger .txt</button>
-        <button class="btn btn-ghost" id="btnShuffle">⟳ Variante</button>
+        <button class="btn btn-primary" id="btnCopy" data-fr="⧉ Copier le prompt" data-nl="⧉ Prompt kopiëren" data-en="⧉ Copy prompt">⧉ Copier le prompt</button>
+        <button class="btn btn-ghost" id="btnDownload" data-fr="↓ Télécharger .txt" data-nl="↓ Download .txt" data-en="↓ Download .txt">↓ Télécharger .txt</button>
+        <button class="btn btn-ghost" id="btnShuffle" data-fr="⟳ Variante" data-nl="⟳ Variant" data-en="⟳ Variant">⟳ Variante</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="toast" id="toast"><span class="dot"></span><span id="toastMsg">Copié !</span></div>
+<div class="toast" id="toast"><span class="dot"></span><span id="toastMsg" data-fr="Copié !" data-nl="Gekopieerd!" data-en="Copied!">Copié !</span></div>
 
 <footer>
   <div class="wrap">
-    <p>JCODE Studio — <span id="footTotal">260</span> effets cinématiques pour la génération vidéo IA.</p>
-    <p style="font-size:12px;color:var(--txt-3);margin-bottom:0">Propulsé par <a href="https://jcode.store" target="_blank" rel="noopener">jcode.store</a> · Agence de contenu & motion design</p>
+    <p>JCODE Studio — <span id="footTotal">260</span> <span data-fr="effets cinématiques pour la génération vidéo IA." data-nl="cinematische effecten voor AI-videogeneratie." data-en="cinematic effects for AI video generation.">effets cinématiques pour la génération vidéo IA.</span></p>
+    <p style="font-size:12px;color:var(--txt-3);margin-bottom:0"><span data-fr="Propulsé par" data-nl="Aangedreven door" data-en="Powered by">Propulsé par</span> <a href="https://jcode.store" target="_blank" rel="noopener">jcode.store</a> · <span data-fr="Agence de contenu & motion design" data-nl="Content- &amp; motiondesignbureau" data-en="Content &amp; motion design agency">Agence de contenu & motion design</span></p>
   </div>
 </footer>
 
@@ -913,6 +918,46 @@ updateDock();
 updateStats();
 
 console.log(`%cJCODE STUDIO%c  ${TOTAL} effets chargés · prêt.`, "background:linear-gradient(90deg,#6366f1,#8b5cf6);color:#07070d;padding:4px 10px;border-radius:5px;font-weight:800", "color:#8b8ba3;padding-left:8px");
+</script>
+<script>
+// ─── STUDIO I18N SAFE ───
+(function(){
+// Lecture du paramètre lang dans l'URL (ex: ?lang=en)
+const params = new URLSearchParams(window.location.search);
+const urlLang = params.get('lang');
+if (urlLang && ['fr','nl','en'].includes(urlLang)) {
+    localStorage.setItem('studio-lang', urlLang);
+}
+    const LANG_KEY = 'studio-lang';
+    let LANG = (localStorage.getItem(LANG_KEY) || document.documentElement.lang || 'fr').toLowerCase();
+
+    function applyLang(lang) {
+        if (!['fr','nl','en'].includes(lang)) lang = 'fr';
+        LANG = lang;
+        localStorage.setItem(LANG_KEY, lang);
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll('[data-fr]').forEach(el => {
+            const text = el.dataset[lang];
+            if (text) el.innerText = text;           // innerText préserve le contenu HTML simple
+        });
+        document.querySelectorAll('[data-fr-placeholder]').forEach(el => {
+            const ph = el.dataset[lang + 'Placeholder'] || el.dataset.frPlaceholder;  // suit la langue active, repli sur FR si non traduit
+            el.placeholder = ph;
+        });
+        var langBar = document.getElementById('studioLangBar');
+        if (langBar) langBar.querySelectorAll('button').forEach(b => {
+            b.style.background = b.dataset.lang === lang ? '#6366f1' : 'none';
+            b.style.color = b.dataset.lang === lang ? '#fff' : 'inherit';
+        });
+    }
+
+    window.applyStudioLang = applyLang;
+
+    window.addEventListener('DOMContentLoaded', () => {
+        applyLang(LANG);
+    });
+})();
 </script>
 </body>
 </html>
