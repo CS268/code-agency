@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+<meta name="robots" content="noindex">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt Studio IA Vidéo — JCODE</title>
+    <meta name="description" content="Landing page premium pour Prompt Studio IA Vidéo, inspirée par jcode.store." />
+    <style>
+      :root {
+        --bg: #0f172a;
+        --bg-soft: #1e293b;
+        --panel: rgba(15, 23, 42, 0.82);
+        --panel-strong: rgba(15, 23, 42, 0.96);
+        --panel-light: #f8fafc;
+        --line: rgba(99, 102, 241, 0.24);
+        --text: #f8fafc;
+        --text-soft: #cbd5e1;
+        --muted: #94a3b8;
+        --gold: #fbbf24;
+        --gold-strong: #f59e0b;
+        --stone: #f8fafc;
+        --mauve: #6366f1;
+        --mauve-soft: #8b5cf6;
+        --accent: #fbbf24;
+        --accent-2: #10b981;
+        --shadow: rgba(15, 23, 42, 0.45);
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background:
+          radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.22), transparent 20%),
+          radial-gradient(circle at 80% 10%, rgba(16, 185, 129, 0.12), transparent 24%),
+          radial-gradient(circle at 70% 65%, rgba(251, 191, 36, 0.08), transparent 30%),
+          linear-gradient(180deg, #05070b 0%, #0b1018 42%, #070b12 100%);
+        color: var(--text);
+      }
+
+      a { color: inherit; text-decoration: none; }
+
+      .container {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(14px);
+        background: rgba(7, 9, 14, 0.72);
+        border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 80px;
+        gap: 18px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+      }
+
+      .brand-mark {
+        position: relative;
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--mauve), var(--mauve-soft), var(--gold));
+        display: grid;
+        place-items: center;
+        color: #110f18;
+        font-weight: 900;
+        box-shadow:
+          0 0 0 1px rgba(255,255,255,0.12),
+          0 14px 28px rgba(99, 102, 241, 0.46),
+          0 0 20px rgba(99, 102, 241, 0.34),
+          0 0 26px rgba(251,191,36,0.2),
+          inset 0 1px 6px rgba(255,255,255,0.24);
+        overflow: hidden;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: -25% auto auto -18%;
+        width: 140%;
+        height: 140%;
+        background: radial-gradient(circle, rgba(255,255,255,0.55), transparent 42%);
+        filter: blur(10px);
+      }
+
+      .brand-lockup {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        letter-spacing: 0.08em;
+      }
+
+      .brand-lockup .brand-word {
+        font-size: 0.8rem;
+        font-weight: 800;
+        color: var(--text);
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        color: var(--text-soft);
+        font-size: 0.95rem;
+      }
+
+      .nav-links a:hover { color: var(--text); }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        padding: 0.9rem 1.4rem;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+
+      .btn:hover { transform: translateY(-1px); }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--mauve), var(--mauve-soft), var(--gold));
+        color: #100f18;
+        box-shadow: 0 20px 40px rgba(99, 102, 241, 0.34), 0 0 26px rgba(251,191,36,0.18), 0 0 28px rgba(99,102,241,0.22);
+      }
+
+      .btn-secondary {
+        background: rgba(255,255,255,0.04);
+        border-color: var(--line);
+        color: var(--text);
+      }
+
+      .hero {
+        padding: 72px 0 26px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.12fr 0.88fr;
+        align-items: center;
+        gap: 42px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border: 1px solid rgba(99, 102, 241, 0.38);
+        border-radius: 999px;
+        background: rgba(99, 102, 241, 0.08);
+        color: var(--mauve-soft);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-weight: 700;
+        box-shadow: inset 0 0 18px rgba(99, 102, 241, 0.08), 0 0 18px rgba(99,102,241,0.10);
+      }
+
+      h1 {
+        margin: 20px 0 18px;
+        font-size: clamp(3rem, 5vw, 6.2rem);
+        line-height: 0.92;
+        letter-spacing: -0.07em;
+      }
+
+      h1 .gradient {
+        background: linear-gradient(90deg, #6366f1, #8b5cf6, #d946ef);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .lead {
+        max-width: 620px;
+        color: var(--text-soft);
+        font-size: 1.12rem;
+        line-height: 1.8;
+        margin-bottom: 28px;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-bottom: 28px;
+      }
+
+      .meta-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 24px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .meta-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.02);
+        border-radius: 999px;
+      }
+
+      .visual {
+        position: relative;
+      }
+
+      .mockup {
+        position: relative;
+        background: linear-gradient(180deg, rgba(16, 21, 31, 0.96), rgba(8, 12, 17, 0.98));
+        border: 1px solid rgba(99, 102, 241, 0.26);
+        border-radius: 28px;
+        padding: 20px;
+        box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42), 0 0 0 1px rgba(99, 102, 241, 0.14), 0 0 28px rgba(99, 102, 241, 0.18), 0 0 32px rgba(251,191,36,0.12);
+        overflow: hidden;
+      }
+
+      .mockup::before {
+        content: "";
+        position: absolute;
+        inset: -20% auto auto -10%;
+        width: 60%;
+        height: 60%;
+        background: radial-gradient(circle, rgba(99, 102, 241, 0.34), transparent 62%);
+        filter: blur(30px);
+      }
+
+      .browser-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-bottom: 16px;
+      }
+
+      .dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .dot.red { background: #ff6b6b; }
+      .dot.yellow { background: #ffbf69; }
+      .dot.green { background: #62d39d; }
+
+      .screen {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: linear-gradient(180deg, rgba(148, 163, 184, 0.04), rgba(148, 163, 184, 0.02));
+        padding: 18px;
+      }
+
+      .mini-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .mini-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+      }
+
+      .mini-badge {
+        padding: 7px 10px;
+        border-radius: 999px;
+        background: rgba(99, 102, 241, 0.08);
+        border: 1px solid rgba(99, 102, 241, 0.24);
+        color: var(--mauve-soft);
+        font-size: 0.72rem;
+        font-weight: 700;
+        box-shadow: inset 0 0 18px rgba(99, 102, 241, 0.06);
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .mini-card {
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.02);
+        padding: 14px;
+      }
+
+      .mini-card strong {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--text);
+      }
+
+      .mini-card span {
+        color: var(--muted);
+        font-size: 0.84rem;
+        line-height: 1.6;
+      }
+
+      .floating-card {
+        position: absolute;
+        right: -12px;
+        top: -24px;
+        background: rgba(17, 24, 39, 0.94);
+        border: 1px solid rgba(245, 158, 11, 0.2);
+        border-radius: 18px;
+        padding: 14px 16px;
+        box-shadow: 0 20px 45px rgba(0,0,0,0.27);
+      }
+
+      .floating-card b {
+        display: block;
+        font-size: 0.74rem;
+        color: var(--gold);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-bottom: 6px;
+      }
+
+      .floating-card strong {
+        display: block;
+        font-size: 1.5rem;
+        color: var(--text);
+      }
+
+      .section {
+        padding: 56px 0;
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 16px;
+        margin-bottom: 28px;
+      }
+
+      .section-head h2 {
+        margin: 0;
+        font-size: clamp(2rem, 3vw, 3rem);
+        letter-spacing: -0.05em;
+      }
+
+      .section-head p {
+        margin: 0;
+        color: var(--muted);
+        max-width: 540px;
+        line-height: 1.7;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .feature {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 22px 18px;
+      }
+
+      .feature-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 16px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.28), rgba(251,191,36,0.18), rgba(16,185,129,0.12));
+        border: 1px solid rgba(99, 102, 241, 0.28);
+        color: var(--mauve-soft);
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+        box-shadow: inset 0 0 18px rgba(99, 102, 241, 0.08), 0 0 18px rgba(99,102,241,0.12);
+      }
+
+      .feature h3 {
+        margin: 0 0 10px;
+        font-size: 1.2rem;
+      }
+
+      .feature p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .showcase {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: stretch;
+      }
+
+      .showcase-panel {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        padding: 28px;
+      }
+
+      .showcase-panel h3 {
+        margin: 0 0 12px;
+        font-size: clamp(1.6rem, 2vw, 2.2rem);
+        letter-spacing: -0.04em;
+      }
+
+      .showcase-panel p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .points {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 12px;
+      }
+
+      .points li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        color: var(--text-soft);
+        line-height: 1.6;
+      }
+
+      .points li::before {
+        content: "✓";
+        display: inline-grid;
+        place-items: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: rgba(16, 185, 129, 0.12);
+        color: var(--accent-2);
+        font-weight: 900;
+        flex-shrink: 0;
+      }
+
+      .callout {
+        margin-top: 28px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(245, 158, 11, 0.05));
+        border: 1px solid rgba(245, 158, 11, 0.2);
+        border-radius: 24px;
+        padding: 28px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .callout h3 {
+        margin: 0 0 6px;
+        font-size: 1.6rem;
+        letter-spacing: -0.04em;
+      }
+
+      .callout p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      footer {
+        padding: 34px 0 60px;
+        color: var(--muted);
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        border-top: 1px solid var(--line);
+        padding-top: 22px;
+      }
+
+      @media (max-width: 920px) {
+        .hero-grid, .features, .showcase {
+          grid-template-columns: 1fr;
+        }
+
+        .nav-links { display: none; }
+      }
+
+      @media (max-width: 620px) {
+        .nav {
+          min-height: 72px;
+        }
+
+        .nav-actions {
+          width: 100%;
+          justify-content: flex-end;
+        }
+
+        .cta-row { flex-direction: column; align-items: stretch; }
+        .btn { width: 100%; }
+        .callout { flex-direction: column; align-items: flex-start; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a href="https://jcode.store" target="_blank" rel="noreferrer" class="brand brand-lockup" aria-label="Aller sur jcode.store">
+          <span class="brand-mark">J</span>
+          <span class="brand-word">JCODE</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Navigation principale">
+          <a href="#fonctionnalites">Fonctionnalités</a>
+          <a href="#avantages">Avantages</a>
+          <a href="#demo">Démo</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="btn btn-secondary" href="https://jcode.store" target="_blank" rel="noreferrer">Voir le site</a>
+          <a class="btn btn-primary" href="#contact">Commencer</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">Studio de production visuelle • IA</div>
+            <h1>Des contenus vidéo <span class="gradient">qui captent, convertissent et mémorisent</span></h1>
+            <p class="lead">
+              JCODE structure la direction visuelle, le storytelling et la production vidéo pour les marques qui veulent un contenu premium, cohérent et plus rapide à lancer sur tous leurs canaux.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://jcode.store" target="_blank" rel="noreferrer">Découvrir JCODE</a>
+              <a class="btn btn-secondary" href="#fonctionnalites">Explorer les services</a>
+            </div>
+
+            <div class="meta-row">
+              <span class="meta-pill">🎥 Direction créative</span>
+              <span class="meta-pill">⚡ Production rapide</span>
+              <span class="meta-pill">✨ Branding visuel</span>
+            </div>
+          </div>
+
+          <div class="visual" aria-label="Aperçu du produit">
+            <div class="mockup">
+              <div class="browser-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+
+              <div class="screen">
+                <div class="mini-header">
+                  <div class="mini-brand">
+                    <span class="brand-mark" style="width:24px;height:24px;border-radius:8px;font-size:0.8rem;">J</span>
+                    <span>Prompt Studio</span>
+                  </div>
+                  <span class="mini-badge">IA Vidéo</span>
+                </div>
+
+                <div class="card-grid">
+                  <div class="mini-card">
+                    <strong>Recherche</strong>
+                    <span>drone • néon • ralenti • portrait</span>
+                  </div>
+                  <div class="mini-card">
+                    <strong>Catégories</strong>
+                    <span>action • sport • voyage • fantasy</span>
+                  </div>
+                  <div class="mini-card">
+                    <strong>Storyboard</strong>
+                    <span>5 plans, effets, prompt structuré</span>
+                  </div>
+                  <div class="mini-card">
+                    <strong>Export</strong>
+                    <span>JSON + copier prompt</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-card">
+              <b>Impact</b>
+              <strong>+3x</strong>
+              <span style="color:var(--muted); font-size:0.82rem;">gain de vitesse créative</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="fonctionnalites">
+        <div class="container">
+          <div class="section-head">
+            <h2>Une agence de contenu pensée pour la vitesse créative</h2>
+            <p>On transforme une idée en direction visuelle, en plan de tournage, en séquence de contenu et en vidéo prête à diffuser.</p>
+          </div>
+
+          <div class="features">
+            <article class="feature">
+              <div class="feature-icon">🎞️</div>
+              <h3>Concept visuel</h3>
+              <p>On structure le message, l’ambiance, le ton visuel et la narration avant même la production.</p>
+            </article>
+
+            <article class="feature">
+              <div class="feature-icon">🎬</div>
+              <h3>Motion design</h3>
+              <p>On crée des séquences dynamiques, lisibles et impactantes pour capter l’attention en quelques secondes.</p>
+            </article>
+
+            <article class="feature">
+              <div class="feature-icon">⚡</div>
+              <h3>Production IA</h3>
+              <p>On accélère le workflow avec des prompts, des styles et des idées de contenus prêts à être montés.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="avantages">
+        <div class="container">
+          <div class="showcase">
+            <div class="showcase-panel">
+              <h3>Pour les marques, créatifs et studios</h3>
+              <p>On transforme une idée vague en direction créative exploitable, avec narration, style visuel clair et production fluide.</p>
+
+              <ul class="points">
+                <li>Storytelling clair, orienté conversion et engagement.</li>
+                <li>Direction artistique cohérente sur chaque format.</li>
+                <li>Prompt structuré pour un tournage ou un montage plus rapide.</li>
+                <li>Format adapté pour réseaux sociaux, landing pages et publicité.</li>
+              </ul>
+            </div>
+
+            <div class="showcase-panel">
+              <h3>Un moteur créatif pensé pour la production</h3>
+              <p>On combine inspiration visuelle, esthétique de marque et workflow IA pour accélérer l’idée jusqu’à la diffusion finale.</p>
+
+              <ul class="points">
+                <li>Plusieurs ambiances visuelles possibles.</li>
+                <li>Adapté au content marketing, reel, pub et motion design.</li>
+                <li>Idéal pour agences, marques et créateurs qui veulent aller vite.</li>
+                <li>Travail pro, premium et orienté résultat.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout" id="contact">
+            <div>
+              <h3>Prêt à faire bouger votre marque ?</h3>
+              <p>Une direction créative premium, pensée pour accélérer la production sans perdre en qualité ni en identité.</p>
+            </div>
+
+            <a class="btn btn-primary" href="https://jcode.store" target="_blank" rel="noreferrer">Démarrer le projet</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>© 2026 JCODE — Prompt Studio IA Vidéo</div>
+        <a href="https://jcode.store" target="_blank" rel="noreferrer">jcode.store</a>
+      </div>
+    </footer>
+  </body>
+</html>
