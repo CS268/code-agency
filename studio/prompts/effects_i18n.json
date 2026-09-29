@@ -1,0 +1,2602 @@
+{
+  "41": {
+    "en": {
+      "t": "Cinematic Kung Fu",
+      "d": "Fluid kung-fu movements, jumps, kicks, Matrix-style slow motion."
+    },
+    "nl": {
+      "t": "Cinematische Kung Fu",
+      "d": "Vloeiende kungfubewegingen, sprongen, trappen, Matrix-achtige slow motion."
+    }
+  },
+  "42": {
+    "en": {
+      "t": "Karate Impact",
+      "d": "Powerful strikes, shockwaves, speed effects."
+    },
+    "nl": {
+      "t": "Karate Impact",
+      "d": "Krachtige klappen, schokgolven, snelheidseffecten."
+    }
+  },
+  "43": {
+    "en": {
+      "t": "Boxing / MMA",
+      "d": "Dodges, punches, sweat, dramatic slow motion."
+    },
+    "nl": {
+      "t": "Boksen / MMA",
+      "d": "Ontwijkingen, klappen, zweet, dramatische slow motion."
+    }
+  },
+  "44": {
+    "en": {
+      "t": "Samurai / Katana",
+      "d": "Sword duel, cherry blossom petals, tension."
+    },
+    "nl": {
+      "t": "Samoerai / Katana",
+      "d": "Zwaardduel, kersenbloesemblaadjes, spanning."
+    }
+  },
+  "45": {
+    "en": {
+      "t": "Stealth Ninja",
+      "d": "Silent movements, smoke, shurikens."
+    },
+    "nl": {
+      "t": "Stiekeme Ninja",
+      "d": "Geluidloze bewegingen, rook, shurikens."
+    }
+  },
+  "46": {
+    "en": {
+      "t": "Fantasy Martial Arts",
+      "d": "Energy aura, flight, magic projectiles."
+    },
+    "nl": {
+      "t": "Fantasy Vechtkunst",
+      "d": "Energie-aura, vliegen, magische projectielen."
+    }
+  },
+  "47": {
+    "en": {
+      "t": "Car Chase Scene",
+      "d": "Urban vehicle chase, jumps, stunts."
+    },
+    "nl": {
+      "t": "Achtervolgingsscène met Auto",
+      "d": "Stedelijke voertuigachtervolging, sprongen, stunts."
+    }
+  },
+  "48": {
+    "en": {
+      "t": "Slow-Motion Combat",
+      "d": "Slow-motion impact, 300/Matrix style."
+    },
+    "nl": {
+      "t": "Gevecht in Slow Motion",
+      "d": "Slow-motion impact, 300/Matrix-stijl."
+    }
+  },
+  "49": {
+    "en": {
+      "t": "Wuxia",
+      "d": "Aerial combat in bamboo forests, visual poetry."
+    },
+    "nl": {
+      "t": "Wuxia",
+      "d": "Luchtgevechten in bamboebossen, visuele poëzie."
+    }
+  },
+  "50": {
+    "en": {
+      "t": "Street Fight",
+      "d": "Raw street fighting, handheld camera."
+    },
+    "nl": {
+      "t": "Straatgevecht",
+      "d": "Ruwe straatgevechten, handheld camera."
+    }
+  },
+  "51": {
+    "en": {
+      "t": "Hip-Hop / Breakdance",
+      "d": "Urban moves, freezes, battles."
+    },
+    "nl": {
+      "t": "Hip-Hop / Breakdance",
+      "d": "Urban moves, freezes, battles."
+    }
+  },
+  "52": {
+    "en": {
+      "t": "Classical Ballet",
+      "d": "Grace, pirouettes, stage lighting."
+    },
+    "nl": {
+      "t": "Klassiek Ballet",
+      "d": "Gratie, pirouettes, podiumverlichting."
+    }
+  },
+  "53": {
+    "en": {
+      "t": "Contemporary Dance",
+      "d": "Fluid movements, emotion, fabrics."
+    },
+    "nl": {
+      "t": "Hedendaagse Dans",
+      "d": "Vloeiende bewegingen, emotie, stoffen."
+    }
+  },
+  "54": {
+    "en": {
+      "t": "K-pop Choreography",
+      "d": "Perfect synchronization, neon, stage."
+    },
+    "nl": {
+      "t": "K-pop Choreografie",
+      "d": "Perfecte synchronisatie, neon, podium."
+    }
+  },
+  "55": {
+    "en": {
+      "t": "Salsa / Tango",
+      "d": "Passion, closeness, hip movements."
+    },
+    "nl": {
+      "t": "Salsa / Tango",
+      "d": "Passie, nabijheid, heupbewegingen."
+    }
+  },
+  "56": {
+    "en": {
+      "t": "Tap Dance",
+      "d": "Rhythm, footwork, sound."
+    },
+    "nl": {
+      "t": "Tapdansen",
+      "d": "Ritme, voetenwerk, geluid."
+    }
+  },
+  "57": {
+    "en": {
+      "t": "Tribal Fire Dance",
+      "d": "Fire, hypnotic movements, percussion."
+    },
+    "nl": {
+      "t": "Tribale Vuurdans",
+      "d": "Vuur, hypnotiserende bewegingen, percussie."
+    }
+  },
+  "58": {
+    "en": {
+      "t": "Vogue / Ballroom",
+      "d": "Poses, attitude, strut, catwalk."
+    },
+    "nl": {
+      "t": "Vogue / Ballroom",
+      "d": "Poses, attitude, strut, catwalk."
+    }
+  },
+  "59": {
+    "en": {
+      "t": "Bollywood Dance",
+      "d": "Colors, energy, group movements."
+    },
+    "nl": {
+      "t": "Bollywooddans",
+      "d": "Kleuren, energie, groepsbewegingen."
+    }
+  },
+  "60": {
+    "en": {
+      "t": "Slow Motion Dance",
+      "d": "Slow-motion dance with particles."
+    },
+    "nl": {
+      "t": "Slow Motion Dans",
+      "d": "Dans in slow motion met deeltjes."
+    }
+  },
+  "61": {
+    "en": {
+      "t": "Dolly Zoom (Vertigo)",
+      "d": "Hitchcock effect, perspective distortion."
+    },
+    "nl": {
+      "t": "Dolly Zoom (Vertigo)",
+      "d": "Hitchcock-effect, perspectiefvervorming."
+    }
+  },
+  "62": {
+    "en": {
+      "t": "360° Orbit",
+      "d": "The camera rotates around the subject."
+    },
+    "nl": {
+      "t": "360° Orbit",
+      "d": "De camera draait rond het onderwerp."
+    }
+  },
+  "63": {
+    "en": {
+      "t": "Aerial Drone",
+      "d": "Sky view, flyover, landscape reveal."
+    },
+    "nl": {
+      "t": "Luchtdrone",
+      "d": "Uitzicht vanuit de lucht, overvlucht, landschapsonthulling."
+    }
+  },
+  "64": {
+    "en": {
+      "t": "Crane Shot",
+      "d": "Dramatic vertical rise."
+    },
+    "nl": {
+      "t": "Kraanshot",
+      "d": "Dramatische verticale stijging."
+    }
+  },
+  "65": {
+    "en": {
+      "t": "Smooth Steadicam",
+      "d": "Following the subject without jitter."
+    },
+    "nl": {
+      "t": "Vloeiende Steadicam",
+      "d": "Het onderwerp volgen zonder schokken."
+    }
+  },
+  "66": {
+    "en": {
+      "t": "Snorricam",
+      "d": "Camera fixed to the subject, spinning world."
+    },
+    "nl": {
+      "t": "Snorricam",
+      "d": "Camera bevestigd aan het onderwerp, draaiende wereld."
+    }
+  },
+  "67": {
+    "en": {
+      "t": "Dramatic Push-In",
+      "d": "Slow zoom toward the face."
+    },
+    "nl": {
+      "t": "Dramatische Push-In",
+      "d": "Langzame zoom naar het gezicht."
+    }
+  },
+  "68": {
+    "en": {
+      "t": "Reveal Pull-Out",
+      "d": "Zoom-out that reveals the context."
+    },
+    "nl": {
+      "t": "Onthullende Pull-Out",
+      "d": "Uitzoomen dat de context onthult."
+    }
+  },
+  "69": {
+    "en": {
+      "t": "Whip Pan",
+      "d": "Fast rotation between two scenes."
+    },
+    "nl": {
+      "t": "Whip Pan",
+      "d": "Snelle rotatie tussen twee scènes."
+    }
+  },
+  "70": {
+    "en": {
+      "t": "Rack Focus",
+      "d": "Sharp/blurry transition between foreground and background."
+    },
+    "nl": {
+      "t": "Rack Focus",
+      "d": "Scherp/onscherp overgang tussen voor- en achtergrond."
+    }
+  },
+  "71": {
+    "en": {
+      "t": "2.5D Parallax",
+      "d": "Depth created from a 2D image."
+    },
+    "nl": {
+      "t": "2.5D Parallax",
+      "d": "Diepte gecreëerd vanuit een 2D-beeld."
+    }
+  },
+  "72": {
+    "en": {
+      "t": "Tilt Up / Tilt Down",
+      "d": "Vertical reveal."
+    },
+    "nl": {
+      "t": "Tilt Up / Tilt Down",
+      "d": "Verticale onthulling."
+    }
+  },
+  "73": {
+    "en": {
+      "t": "Lateral Tracking Shot",
+      "d": "Smooth horizontal movement."
+    },
+    "nl": {
+      "t": "Zijwaartse Tracking Shot",
+      "d": "Vloeiende horizontale beweging."
+    }
+  },
+  "74": {
+    "en": {
+      "t": "Point of View (POV)",
+      "d": "Seeing through the subject's eyes."
+    },
+    "nl": {
+      "t": "Point of View (POV)",
+      "d": "Zien door de ogen van het onderwerp."
+    }
+  },
+  "75": {
+    "en": {
+      "t": "Handheld Camera",
+      "d": "Organic shake, urgency."
+    },
+    "nl": {
+      "t": "Handheld Camera",
+      "d": "Organische trilling, urgentie."
+    }
+  },
+  "76": {
+    "en": {
+      "t": "Jump Cut",
+      "d": "Rhythmic hard cuts."
+    },
+    "nl": {
+      "t": "Jump Cut",
+      "d": "Ritmische harde overgangen."
+    }
+  },
+  "77": {
+    "en": {
+      "t": "Match Cut",
+      "d": "Transition between two similar shapes."
+    },
+    "nl": {
+      "t": "Match Cut",
+      "d": "Overgang tussen twee vergelijkbare vormen."
+    }
+  },
+  "78": {
+    "en": {
+      "t": "Cut on Action",
+      "d": "Cut at the moment of a movement."
+    },
+    "nl": {
+      "t": "Cut on Action",
+      "d": "Overgang op het moment van een beweging."
+    }
+  },
+  "79": {
+    "en": {
+      "t": "Smash Cut",
+      "d": "Abrupt shift in tone/mood."
+    },
+    "nl": {
+      "t": "Smash Cut",
+      "d": "Abrupte verandering van toon/sfeer."
+    }
+  },
+  "80": {
+    "en": {
+      "t": "Cross Cutting",
+      "d": "Alternating between two parallel scenes."
+    },
+    "nl": {
+      "t": "Cross Cutting",
+      "d": "Afwisselen tussen twee parallelle scènes."
+    }
+  },
+  "81": {
+    "en": {
+      "t": "Rapid Montage",
+      "d": "Sequence of short, intense shots."
+    },
+    "nl": {
+      "t": "Snelle Montage",
+      "d": "Reeks korte, intense shots."
+    }
+  },
+  "82": {
+    "en": {
+      "t": "Serial Montage",
+      "d": "Accumulation of images to build an idea."
+    },
+    "nl": {
+      "t": "Seriële Montage",
+      "d": "Opeenstapeling van beelden om een idee op te bouwen."
+    }
+  },
+  "83": {
+    "en": {
+      "t": "Beat Cut",
+      "d": "Cuts synchronized to the music."
+    },
+    "nl": {
+      "t": "Beat Cut",
+      "d": "Overgangen gesynchroniseerd met de muziek."
+    }
+  },
+  "84": {
+    "en": {
+      "t": "Flash Transition",
+      "d": "White flash between two shots."
+    },
+    "nl": {
+      "t": "Flitsovergang",
+      "d": "Witte flits tussen twee shots."
+    }
+  },
+  "85": {
+    "en": {
+      "t": "Glitch Transition",
+      "d": "Digital breakup, distortion."
+    },
+    "nl": {
+      "t": "Glitch-overgang",
+      "d": "Digitale storing, vervorming."
+    }
+  },
+  "86": {
+    "en": {
+      "t": "Morphing Transition",
+      "d": "Smooth transformation from one image to another."
+    },
+    "nl": {
+      "t": "Morphing-overgang",
+      "d": "Vloeiende transformatie van het ene beeld naar het andere."
+    }
+  },
+  "87": {
+    "en": {
+      "t": "Match Color Transition",
+      "d": "Cut on a shared color."
+    },
+    "nl": {
+      "t": "Match Color-overgang",
+      "d": "Overgang op een gedeelde kleur."
+    }
+  },
+  "88": {
+    "en": {
+      "t": "Object Transition",
+      "d": "An object covers the screen and changes the scene."
+    },
+    "nl": {
+      "t": "Object-overgang",
+      "d": "Een object bedekt het scherm en verandert de scène."
+    }
+  },
+  "89": {
+    "en": {
+      "t": "Zoom Cut",
+      "d": "Fast zoom that becomes the next shot."
+    },
+    "nl": {
+      "t": "Zoom Cut",
+      "d": "Snelle zoom die overgaat in het volgende shot."
+    }
+  },
+  "90": {
+    "en": {
+      "t": "Cut to Black",
+      "d": "Total darkness, then return."
+    },
+    "nl": {
+      "t": "Cut to Black",
+      "d": "Volledige duisternis, daarna terugkeer."
+    }
+  },
+  "91": {
+    "en": {
+      "t": "Cinematic Explosion",
+      "d": "Fireball, shockwave, debris."
+    },
+    "nl": {
+      "t": "Cinematische Explosie",
+      "d": "Vuurbal, schokgolf, puin."
+    }
+  },
+  "92": {
+    "en": {
+      "t": "Super Speed",
+      "d": "Flash-style effect, trails, distortion."
+    },
+    "nl": {
+      "t": "Superspeed",
+      "d": "Flash-achtig effect, sporen, vervorming."
+    }
+  },
+  "93": {
+    "en": {
+      "t": "Invisible Force",
+      "d": "Telekinesis, flying objects."
+    },
+    "nl": {
+      "t": "Onzichtbare Kracht",
+      "d": "Telekinese, vliegende voorwerpen."
+    }
+  },
+  "94": {
+    "en": {
+      "t": "Fireball / Energy",
+      "d": "Energy projection between the hands."
+    },
+    "nl": {
+      "t": "Vuurbal / Energie",
+      "d": "Energieprojectie tussen de handen."
+    }
+  },
+  "95": {
+    "en": {
+      "t": "Lightning / Thunder",
+      "d": "Electric power, glowing eyes."
+    },
+    "nl": {
+      "t": "Bliksem / Donder",
+      "d": "Elektrische kracht, gloeiende ogen."
+    }
+  },
+  "96": {
+    "en": {
+      "t": "Ice / Frost",
+      "d": "Ice power, crystals, cold breath."
+    },
+    "nl": {
+      "t": "IJs / Vorst",
+      "d": "IJskracht, kristallen, koude adem."
+    }
+  },
+  "97": {
+    "en": {
+      "t": "Teleportation",
+      "d": "Disappearing/appearing with smoke."
+    },
+    "nl": {
+      "t": "Teleportatie",
+      "d": "Verdwijnen/verschijnen met rook."
+    }
+  },
+  "98": {
+    "en": {
+      "t": "Levitation",
+      "d": "The subject floats in the air."
+    },
+    "nl": {
+      "t": "Levitatie",
+      "d": "Het onderwerp zweeft in de lucht."
+    }
+  },
+  "99": {
+    "en": {
+      "t": "Transformation",
+      "d": "The subject transforms (human → animal, etc.)."
+    },
+    "nl": {
+      "t": "Transformatie",
+      "d": "Het onderwerp verandert (mens → dier, enz.)."
+    }
+  },
+  "100": {
+    "en": {
+      "t": "Summoning",
+      "d": "A creature or element appears."
+    },
+    "nl": {
+      "t": "Oproeping",
+      "d": "Een wezen of element verschijnt."
+    }
+  },
+  "101": {
+    "en": {
+      "t": "Magic Shield",
+      "d": "Protective energy dome."
+    },
+    "nl": {
+      "t": "Magisch Schild",
+      "d": "Beschermende energiekoepel."
+    }
+  },
+  "102": {
+    "en": {
+      "t": "Regeneration",
+      "d": "A wound healing in fast motion."
+    },
+    "nl": {
+      "t": "Regeneratie",
+      "d": "Een wond die in versnelde tijd geneest."
+    }
+  },
+  "103": {
+    "en": {
+      "t": "Time Control",
+      "d": "Freeze, rewind, fast-forward."
+    },
+    "nl": {
+      "t": "Tijdcontrole",
+      "d": "Bevriezen, terugspoelen, versnellen."
+    }
+  },
+  "104": {
+    "en": {
+      "t": "Dimensional Portal",
+      "d": "Opening to another world."
+    },
+    "nl": {
+      "t": "Dimensionaal Portaal",
+      "d": "Opening naar een andere wereld."
+    }
+  },
+  "105": {
+    "en": {
+      "t": "Meteor Shower",
+      "d": "A sky that ignites."
+    },
+    "nl": {
+      "t": "Meteorenregen",
+      "d": "Een hemel die vlam vat."
+    }
+  },
+  "106": {
+    "en": {
+      "t": "Tornado",
+      "d": "Violent wind, debris, black sky."
+    },
+    "nl": {
+      "t": "Tornado",
+      "d": "Heftige wind, puin, zwarte lucht."
+    }
+  },
+  "107": {
+    "en": {
+      "t": "Tsunami",
+      "d": "A giant wave approaching."
+    },
+    "nl": {
+      "t": "Tsunami",
+      "d": "Een reusachtige golf die nadert."
+    }
+  },
+  "108": {
+    "en": {
+      "t": "Earthquake",
+      "d": "Trembling ground, cracks."
+    },
+    "nl": {
+      "t": "Aardbeving",
+      "d": "Trillende grond, scheuren."
+    }
+  },
+  "109": {
+    "en": {
+      "t": "Volcanic Eruption",
+      "d": "Lava, smoke, ash."
+    },
+    "nl": {
+      "t": "Vulkaanuitbarsting",
+      "d": "Lava, rook, as."
+    }
+  },
+  "110": {
+    "en": {
+      "t": "Sandstorm",
+      "d": "An advancing wall of dust."
+    },
+    "nl": {
+      "t": "Zandstorm",
+      "d": "Een oprukkende stofmuur."
+    }
+  },
+  "111": {
+    "en": {
+      "t": "Blizzard",
+      "d": "Heavy snow, freezing wind."
+    },
+    "nl": {
+      "t": "Sneeuwstorm",
+      "d": "Zware sneeuw, ijzige wind."
+    }
+  },
+  "112": {
+    "en": {
+      "t": "Electric Storm",
+      "d": "Multiple lightning strikes, pouring rain."
+    },
+    "nl": {
+      "t": "Elektrische Storm",
+      "d": "Meerdere bliksemschichten, gietende regen."
+    }
+  },
+  "113": {
+    "en": {
+      "t": "Northern Lights",
+      "d": "Moving green/pink sky."
+    },
+    "nl": {
+      "t": "Noorderlicht",
+      "d": "Bewegende groene/roze hemel."
+    }
+  },
+  "114": {
+    "en": {
+      "t": "Eclipse",
+      "d": "Black sun, strange atmosphere."
+    },
+    "nl": {
+      "t": "Eclips",
+      "d": "Zwarte zon, vreemde sfeer."
+    }
+  },
+  "115": {
+    "en": {
+      "t": "Shooting Star Shower",
+      "d": "Magical night sky."
+    },
+    "nl": {
+      "t": "Vallende Sterrenregen",
+      "d": "Magische nachtelijke hemel."
+    }
+  },
+  "116": {
+    "en": {
+      "t": "Football",
+      "d": "Goal, celebration, slow motion."
+    },
+    "nl": {
+      "t": "Voetbal",
+      "d": "Doelpunt, viering, slow motion."
+    }
+  },
+  "117": {
+    "en": {
+      "t": "Basketball",
+      "d": "Dunk, hang time, crowd."
+    },
+    "nl": {
+      "t": "Basketbal",
+      "d": "Dunk, hangtijd, publiek."
+    }
+  },
+  "118": {
+    "en": {
+      "t": "Tennis",
+      "d": "Fast rally, smash."
+    },
+    "nl": {
+      "t": "Tennis",
+      "d": "Snelle rally, smash."
+    }
+  },
+  "119": {
+    "en": {
+      "t": "Running",
+      "d": "Sprint, sweat, overtaking."
+    },
+    "nl": {
+      "t": "Hardlopen",
+      "d": "Sprint, zweet, inhalen."
+    }
+  },
+  "120": {
+    "en": {
+      "t": "Swimming",
+      "d": "Dive, fluid movements, splashes."
+    },
+    "nl": {
+      "t": "Zwemmen",
+      "d": "Duik, vloeiende bewegingen, spatten."
+    }
+  },
+  "121": {
+    "en": {
+      "t": "Skateboarding",
+      "d": "Trick, grind, fall."
+    },
+    "nl": {
+      "t": "Skateboarden",
+      "d": "Truc, grind, val."
+    }
+  },
+  "122": {
+    "en": {
+      "t": "Surfing",
+      "d": "Wave, tube, spray."
+    },
+    "nl": {
+      "t": "Surfen",
+      "d": "Golf, tube, spray."
+    }
+  },
+  "123": {
+    "en": {
+      "t": "Climbing",
+      "d": "Ascent, effort, summit."
+    },
+    "nl": {
+      "t": "Klimmen",
+      "d": "Beklimming, inspanning, top."
+    }
+  },
+  "124": {
+    "en": {
+      "t": "Gymnastics",
+      "d": "Jumps, rotations, grace."
+    },
+    "nl": {
+      "t": "Gymnastiek",
+      "d": "Sprongen, rotaties, gratie."
+    }
+  },
+  "125": {
+    "en": {
+      "t": "MMA Octagon",
+      "d": "Round, KO, slow motion, cage."
+    },
+    "nl": {
+      "t": "MMA-kooi",
+      "d": "Ronde, KO, slow motion, kooi."
+    }
+  },
+  "126": {
+    "en": {
+      "t": "Cycling",
+      "d": "Descent, speed, scenery."
+    },
+    "nl": {
+      "t": "Wielrennen",
+      "d": "Afdaling, snelheid, landschap."
+    }
+  },
+  "127": {
+    "en": {
+      "t": "Ski / Snowboard",
+      "d": "Powder snow, jump, mountain."
+    },
+    "nl": {
+      "t": "Ski / Snowboard",
+      "d": "Poedersneeuw, sprong, berg."
+    }
+  },
+  "128": {
+    "en": {
+      "t": "Formula 1",
+      "d": "Speed, overtaking, pit stop."
+    },
+    "nl": {
+      "t": "Formule 1",
+      "d": "Snelheid, inhalen, pitstop."
+    }
+  },
+  "129": {
+    "en": {
+      "t": "Parkour",
+      "d": "Urban jumps on foot, obstacle crossing, fluidity."
+    },
+    "nl": {
+      "t": "Parkour",
+      "d": "Stedelijke sprongen te voet, obstakels overwinnen, vloeiendheid."
+    }
+  },
+  "130": {
+    "en": {
+      "t": "Yoga",
+      "d": "Poses, breathing, serenity."
+    },
+    "nl": {
+      "t": "Yoga",
+      "d": "Houdingen, ademhaling, sereniteit."
+    }
+  },
+  "131": {
+    "en": {
+      "t": "Sports Car",
+      "d": "Drift, acceleration, reflections."
+    },
+    "nl": {
+      "t": "Sportwagen",
+      "d": "Drift, acceleratie, reflecties."
+    }
+  },
+  "132": {
+    "en": {
+      "t": "Motorcycle",
+      "d": "Wheelie, turn, speed."
+    },
+    "nl": {
+      "t": "Motorfiets",
+      "d": "Wheelie, bocht, snelheid."
+    }
+  },
+  "133": {
+    "en": {
+      "t": "Airplane",
+      "d": "Takeoff, clouds, cockpit view."
+    },
+    "nl": {
+      "t": "Vliegtuig",
+      "d": "Opstijgen, wolken, cockpitzicht."
+    }
+  },
+  "134": {
+    "en": {
+      "t": "Helicopter",
+      "d": "Flyover, rotation, wind blast."
+    },
+    "nl": {
+      "t": "Helikopter",
+      "d": "Overvlucht, rotatie, windstoot."
+    }
+  },
+  "135": {
+    "en": {
+      "t": "Boat",
+      "d": "Waves, speed, spray."
+    },
+    "nl": {
+      "t": "Boot",
+      "d": "Golven, snelheid, sproeiwater."
+    }
+  },
+  "136": {
+    "en": {
+      "t": "Train",
+      "d": "Passing by, scrolling landscape."
+    },
+    "nl": {
+      "t": "Trein",
+      "d": "Voorbijkomen, voorbijglijdend landschap."
+    }
+  },
+  "137": {
+    "en": {
+      "t": "Bicycle",
+      "d": "Ride, wheel, path."
+    },
+    "nl": {
+      "t": "Fiets",
+      "d": "Tochtje, wiel, pad."
+    }
+  },
+  "138": {
+    "en": {
+      "t": "Tractor / Agricultural",
+      "d": "Field, plowing, season."
+    },
+    "nl": {
+      "t": "Tractor / Landbouw",
+      "d": "Veld, ploegen, seizoen."
+    }
+  },
+  "139": {
+    "en": {
+      "t": "Robot / Mecha",
+      "d": "Walk, transformation, combat."
+    },
+    "nl": {
+      "t": "Robot / Mecha",
+      "d": "Lopen, transformatie, gevecht."
+    }
+  },
+  "140": {
+    "en": {
+      "t": "Spaceship",
+      "d": "Takeoff, hyperspace, planet."
+    },
+    "nl": {
+      "t": "Ruimteschip",
+      "d": "Opstijgen, hyperruimte, planeet."
+    }
+  },
+  "141": {
+    "en": {
+      "t": "Joy",
+      "d": "Smile, laughter, sparkling eyes."
+    },
+    "nl": {
+      "t": "Vreugde",
+      "d": "Glimlach, lachen, sprankelende ogen."
+    }
+  },
+  "142": {
+    "en": {
+      "t": "Sadness",
+      "d": "Tear, downcast gaze, rain."
+    },
+    "nl": {
+      "t": "Verdriet",
+      "d": "Traan, neergeslagen blik, regen."
+    }
+  },
+  "143": {
+    "en": {
+      "t": "Anger",
+      "d": "Intense stare, clenched fists, red."
+    },
+    "nl": {
+      "t": "Woede",
+      "d": "Intense blik, gebalde vuisten, rood."
+    }
+  },
+  "144": {
+    "en": {
+      "t": "Fear",
+      "d": "Trembling, recoil, shadow."
+    },
+    "nl": {
+      "t": "Angst",
+      "d": "Trillen, terugdeinzen, schaduw."
+    }
+  },
+  "145": {
+    "en": {
+      "t": "Surprise",
+      "d": "Startle, wide eyes, open mouth."
+    },
+    "nl": {
+      "t": "Verrassing",
+      "d": "Schrikken, wijd opengesperde ogen, open mond."
+    }
+  },
+  "146": {
+    "en": {
+      "t": "Love",
+      "d": "Tender gaze, closeness, warm light."
+    },
+    "nl": {
+      "t": "Liefde",
+      "d": "Tedere blik, nabijheid, warm licht."
+    }
+  },
+  "147": {
+    "en": {
+      "t": "Nostalgia",
+      "d": "Memory, blur, sepia."
+    },
+    "nl": {
+      "t": "Nostalgie",
+      "d": "Herinnering, wazig, sepia."
+    }
+  },
+  "148": {
+    "en": {
+      "t": "Determination",
+      "d": "Fixed gaze, clenched jaw, rising music."
+    },
+    "nl": {
+      "t": "Vastberadenheid",
+      "d": "Vaste blik, gespannen kaak, opzwellende muziek."
+    }
+  },
+  "149": {
+    "en": {
+      "t": "Madness",
+      "d": "Nervous laughter, unstable gaze, distortion."
+    },
+    "nl": {
+      "t": "Waanzin",
+      "d": "Nerveus gelach, onstabiele blik, vervorming."
+    }
+  },
+  "150": {
+    "en": {
+      "t": "Serenity",
+      "d": "Slow breathing, closing eyes, peace."
+    },
+    "nl": {
+      "t": "Sereniteit",
+      "d": "Langzame ademhaling, ogen sluiten, vrede."
+    }
+  },
+  "151": {
+    "en": {
+      "t": "Let's Play",
+      "d": "Reacting avatar, webcam, gameplay."
+    },
+    "nl": {
+      "t": "Let's Play",
+      "d": "Reagerende avatar, webcam, gameplay."
+    }
+  },
+  "152": {
+    "en": {
+      "t": "Game Cinematic",
+      "d": "Epic AAA-style intro."
+    },
+    "nl": {
+      "t": "Game Cinematic",
+      "d": "Epische AAA-stijl intro."
+    }
+  },
+  "153": {
+    "en": {
+      "t": "RPG Character",
+      "d": "Talking portrait, stats, inventory."
+    },
+    "nl": {
+      "t": "RPG-personage",
+      "d": "Pratend portret, statistieken, inventaris."
+    }
+  },
+  "154": {
+    "en": {
+      "t": "Game Card",
+      "d": "Animated card, units, spells."
+    },
+    "nl": {
+      "t": "Spelkaart",
+      "d": "Geanimeerde kaart, eenheden, spreuken."
+    }
+  },
+  "155": {
+    "en": {
+      "t": "Streaming Overlay",
+      "d": "Animated background, alerts, webcam."
+    },
+    "nl": {
+      "t": "Streaming Overlay",
+      "d": "Geanimeerde achtergrond, meldingen, webcam."
+    }
+  },
+  "156": {
+    "en": {
+      "t": "VTuber Avatar",
+      "d": "2D/3D character that talks and moves."
+    },
+    "nl": {
+      "t": "VTuber-avatar",
+      "d": "2D/3D-personage dat praat en beweegt."
+    }
+  },
+  "157": {
+    "en": {
+      "t": "Voxel World",
+      "d": "Animated Minecraft-style."
+    },
+    "nl": {
+      "t": "Voxelwereld",
+      "d": "Geanimeerde Minecraft-stijl."
+    }
+  },
+  "158": {
+    "en": {
+      "t": "Low Poly World",
+      "d": "Minimalist geometric style."
+    },
+    "nl": {
+      "t": "Low Poly-wereld",
+      "d": "Minimalistische geometrische stijl."
+    }
+  },
+  "159": {
+    "en": {
+      "t": "Augmented Reality",
+      "d": "3D object in a real photo."
+    },
+    "nl": {
+      "t": "Augmented Reality",
+      "d": "3D-object in een echte foto."
+    }
+  },
+  "160": {
+    "en": {
+      "t": "Virtual Reality",
+      "d": "Immersive 360° view."
+    },
+    "nl": {
+      "t": "Virtual Reality",
+      "d": "Meeslepend 360°-zicht."
+    }
+  },
+  "161": {
+    "en": {
+      "t": "Rap Video",
+      "d": "Urban vibe, chains, neon."
+    },
+    "nl": {
+      "t": "Rapclip",
+      "d": "Stedelijke sfeer, kettingen, neon."
+    }
+  },
+  "162": {
+    "en": {
+      "t": "Pop Video",
+      "d": "Bright colors, dance, confetti."
+    },
+    "nl": {
+      "t": "Popclip",
+      "d": "Felle kleuren, dans, confetti."
+    }
+  },
+  "163": {
+    "en": {
+      "t": "Rock Video",
+      "d": "Guitar, smoke, stage."
+    },
+    "nl": {
+      "t": "Rockclip",
+      "d": "Gitaar, rook, podium."
+    }
+  },
+  "164": {
+    "en": {
+      "t": "Electro Video",
+      "d": "Neon, lasers, crowd."
+    },
+    "nl": {
+      "t": "Electroclip",
+      "d": "Neon, lasers, menigte."
+    }
+  },
+  "165": {
+    "en": {
+      "t": "Jazz Video",
+      "d": "Dim club, saxophone, smoke."
+    },
+    "nl": {
+      "t": "Jazzclip",
+      "d": "Donkere club, saxofoon, rook."
+    }
+  },
+  "166": {
+    "en": {
+      "t": "Classical Video",
+      "d": "Orchestra, chandeliers, elegance."
+    },
+    "nl": {
+      "t": "Klassieke Clip",
+      "d": "Orkest, kroonluchters, elegantie."
+    }
+  },
+  "167": {
+    "en": {
+      "t": "Reggaeton Video",
+      "d": "Beach, dance, warm colors."
+    },
+    "nl": {
+      "t": "Reggaetonclip",
+      "d": "Strand, dans, warme kleuren."
+    }
+  },
+  "168": {
+    "en": {
+      "t": "Country Video",
+      "d": "Road, countryside, sunset."
+    },
+    "nl": {
+      "t": "Countryclip",
+      "d": "Weg, platteland, zonsondergang."
+    }
+  },
+  "169": {
+    "en": {
+      "t": "Metal Video",
+      "d": "Fire, chaos, contrast."
+    },
+    "nl": {
+      "t": "Metalclip",
+      "d": "Vuur, chaos, contrast."
+    }
+  },
+  "170": {
+    "en": {
+      "t": "Lo-Fi Video",
+      "d": "Calm mood, anime, rain."
+    },
+    "nl": {
+      "t": "Lo-Fi Clip",
+      "d": "Rustige sfeer, anime, regen."
+    }
+  },
+  "171": {
+    "en": {
+      "t": "Scientific Explanation",
+      "d": "Animated diagram, particles, DNA."
+    },
+    "nl": {
+      "t": "Wetenschappelijke Uitleg",
+      "d": "Geanimeerd diagram, deeltjes, DNA."
+    }
+  },
+  "172": {
+    "en": {
+      "t": "History",
+      "d": "Historical period reenactment."
+    },
+    "nl": {
+      "t": "Geschiedenis",
+      "d": "Reconstructie van een historische periode."
+    }
+  },
+  "173": {
+    "en": {
+      "t": "Geography",
+      "d": "Unfolding map, 3D terrain."
+    },
+    "nl": {
+      "t": "Aardrijkskunde",
+      "d": "Ontvouwende kaart, 3D-reliëf."
+    }
+  },
+  "174": {
+    "en": {
+      "t": "Mathematics",
+      "d": "Shapes, equations, demonstration."
+    },
+    "nl": {
+      "t": "Wiskunde",
+      "d": "Vormen, vergelijkingen, demonstratie."
+    }
+  },
+  "175": {
+    "en": {
+      "t": "Languages",
+      "d": "Illustrated word, pronunciation, context."
+    },
+    "nl": {
+      "t": "Talen",
+      "d": "Geïllustreerd woord, uitspraak, context."
+    }
+  },
+  "176": {
+    "en": {
+      "t": "Cooking",
+      "d": "Animated step-by-step recipe."
+    },
+    "nl": {
+      "t": "Koken",
+      "d": "Geanimeerd stap-voor-stap recept."
+    }
+  },
+  "177": {
+    "en": {
+      "t": "DIY",
+      "d": "Visual tutorial, hands, tools."
+    },
+    "nl": {
+      "t": "Doe-het-zelf",
+      "d": "Visuele tutorial, handen, gereedschap."
+    }
+  },
+  "178": {
+    "en": {
+      "t": "Medical",
+      "d": "Anatomy, organ, circulation."
+    },
+    "nl": {
+      "t": "Medisch",
+      "d": "Anatomie, orgaan, bloedsomloop."
+    }
+  },
+  "179": {
+    "en": {
+      "t": "Astronomy",
+      "d": "Planets, galaxies, black holes."
+    },
+    "nl": {
+      "t": "Astronomie",
+      "d": "Planeten, sterrenstelsels, zwarte gaten."
+    }
+  },
+  "180": {
+    "en": {
+      "t": "Nature Documentary",
+      "d": "Animal, plant, ecosystem."
+    },
+    "nl": {
+      "t": "Natuurdocumentaire",
+      "d": "Dier, plant, ecosysteem."
+    }
+  },
+  "181": {
+    "en": {
+      "t": "Product Presentation",
+      "d": "Rotation, zoom, key points."
+    },
+    "nl": {
+      "t": "Productpresentatie",
+      "d": "Rotatie, zoom, kernpunten."
+    }
+  },
+  "182": {
+    "en": {
+      "t": "Customer Testimonial",
+      "d": "Talking portrait, quote."
+    },
+    "nl": {
+      "t": "Klantgetuigenis",
+      "d": "Pratend portret, citaat."
+    }
+  },
+  "183": {
+    "en": {
+      "t": "Company Announcement",
+      "d": "Animated logo, team, vision."
+    },
+    "nl": {
+      "t": "Bedrijfsaankondiging",
+      "d": "Geanimeerd logo, team, visie."
+    }
+  },
+  "184": {
+    "en": {
+      "t": "Recruitment",
+      "d": "Office, team, company culture."
+    },
+    "nl": {
+      "t": "Werving",
+      "d": "Kantoor, team, bedrijfscultuur."
+    }
+  },
+  "185": {
+    "en": {
+      "t": "Internal Training",
+      "d": "Animated slides, diagrams."
+    },
+    "nl": {
+      "t": "Interne Training",
+      "d": "Geanimeerde slides, schema's."
+    }
+  },
+  "186": {
+    "en": {
+      "t": "Annual Report",
+      "d": "Figures, charts, growth."
+    },
+    "nl": {
+      "t": "Jaarverslag",
+      "d": "Cijfers, grafieken, groei."
+    }
+  },
+  "187": {
+    "en": {
+      "t": "Real Estate",
+      "d": "Virtual tour, floor plans, neighborhood."
+    },
+    "nl": {
+      "t": "Vastgoed",
+      "d": "Virtuele rondleiding, plattegronden, buurt."
+    }
+  },
+  "188": {
+    "en": {
+      "t": "Restaurant",
+      "d": "Dish, ambiance, service."
+    },
+    "nl": {
+      "t": "Restaurant",
+      "d": "Gerecht, sfeer, service."
+    }
+  },
+  "189": {
+    "en": {
+      "t": "Hotel",
+      "d": "Room, pool, view."
+    },
+    "nl": {
+      "t": "Hotel",
+      "d": "Kamer, zwembad, uitzicht."
+    }
+  },
+  "190": {
+    "en": {
+      "t": "Shop",
+      "d": "Storefront, product, promotion."
+    },
+    "nl": {
+      "t": "Winkel",
+      "d": "Etalage, product, promotie."
+    }
+  },
+  "191": {
+    "en": {
+      "t": "Animated Postcard",
+      "d": "A monument coming to life."
+    },
+    "nl": {
+      "t": "Geanimeerde Ansichtkaart",
+      "d": "Een monument dat tot leven komt."
+    }
+  },
+  "192": {
+    "en": {
+      "t": "Tourist Guide",
+      "d": "Place, history, tips."
+    },
+    "nl": {
+      "t": "Toeristische Gids",
+      "d": "Plek, geschiedenis, tips."
+    }
+  },
+  "193": {
+    "en": {
+      "t": "Road Trip",
+      "d": "Road, scenery, stops."
+    },
+    "nl": {
+      "t": "Road Trip",
+      "d": "Weg, landschap, stops."
+    }
+  },
+  "194": {
+    "en": {
+      "t": "Cruise",
+      "d": "Sea, deck, ports of call."
+    },
+    "nl": {
+      "t": "Cruise",
+      "d": "Zee, dek, tussenstops."
+    }
+  },
+  "195": {
+    "en": {
+      "t": "Safari",
+      "d": "Animals, savanna, sunset."
+    },
+    "nl": {
+      "t": "Safari",
+      "d": "Dieren, savanne, zonsondergang."
+    }
+  },
+  "196": {
+    "en": {
+      "t": "Mountain",
+      "d": "Summit, snow, hiking."
+    },
+    "nl": {
+      "t": "Berg",
+      "d": "Top, sneeuw, wandeling."
+    }
+  },
+  "197": {
+    "en": {
+      "t": "Paradise Beach",
+      "d": "Sand, palm trees, waves."
+    },
+    "nl": {
+      "t": "Paradijselijk Strand",
+      "d": "Zand, palmbomen, golven."
+    }
+  },
+  "198": {
+    "en": {
+      "t": "City at Night",
+      "d": "Lights, traffic, life."
+    },
+    "nl": {
+      "t": "Stad bij Nacht",
+      "d": "Lichten, verkeer, leven."
+    }
+  },
+  "199": {
+    "en": {
+      "t": "Traditional Village",
+      "d": "Houses, alleys, craftsmanship."
+    },
+    "nl": {
+      "t": "Traditioneel Dorp",
+      "d": "Huizen, steegjes, ambacht."
+    }
+  },
+  "200": {
+    "en": {
+      "t": "Extreme Adventure",
+      "d": "Jump, waterfall, adrenaline."
+    },
+    "nl": {
+      "t": "Extreem Avontuur",
+      "d": "Sprong, waterval, adrenaline."
+    }
+  },
+  "201": {
+    "en": {
+      "t": "Prehistory",
+      "d": "Dinosaurs, volcanoes, wild nature."
+    },
+    "nl": {
+      "t": "Prehistorie",
+      "d": "Dinosaurussen, vulkanen, wilde natuur."
+    }
+  },
+  "202": {
+    "en": {
+      "t": "Ancient Egypt",
+      "d": "Pyramids, hieroglyphs, pharaoh."
+    },
+    "nl": {
+      "t": "Oud-Egypte",
+      "d": "Piramides, hiërogliefen, farao."
+    }
+  },
+  "203": {
+    "en": {
+      "t": "Ancient Greece",
+      "d": "Temple, philosophers, mythology."
+    },
+    "nl": {
+      "t": "Oud-Griekenland",
+      "d": "Tempel, filosofen, mythologie."
+    }
+  },
+  "204": {
+    "en": {
+      "t": "Ancient Rome",
+      "d": "Colosseum, legions, emperor."
+    },
+    "nl": {
+      "t": "Oud-Rome",
+      "d": "Colosseum, legioenen, keizer."
+    }
+  },
+  "205": {
+    "en": {
+      "t": "Middle Ages",
+      "d": "Castle, knights, tournament."
+    },
+    "nl": {
+      "t": "Middeleeuwen",
+      "d": "Kasteel, ridders, toernooi."
+    }
+  },
+  "206": {
+    "en": {
+      "t": "Renaissance",
+      "d": "Art, inventors, cities."
+    },
+    "nl": {
+      "t": "Renaissance",
+      "d": "Kunst, uitvinders, steden."
+    }
+  },
+  "207": {
+    "en": {
+      "t": "18th Century",
+      "d": "Versailles, carriages, lights."
+    },
+    "nl": {
+      "t": "18e Eeuw",
+      "d": "Versailles, koetsen, lichten."
+    }
+  },
+  "208": {
+    "en": {
+      "t": "1920s",
+      "d": "Charleston, Art Deco, jazz."
+    },
+    "nl": {
+      "t": "Jaren 1920",
+      "d": "Charleston, Art Deco, jazz."
+    }
+  },
+  "209": {
+    "en": {
+      "t": "1950s",
+      "d": "Rock'n'roll, cars, drive-in."
+    },
+    "nl": {
+      "t": "Jaren 1950",
+      "d": "Rock-'n-roll, auto's, drive-in."
+    }
+  },
+  "210": {
+    "en": {
+      "t": "1980s",
+      "d": "Neon, VHS, synthwave."
+    },
+    "nl": {
+      "t": "Jaren 1980",
+      "d": "Neon, VHS, synthwave."
+    }
+  },
+  "211": {
+    "en": {
+      "t": "2000s",
+      "d": "Y2K, MSN, fashion."
+    },
+    "nl": {
+      "t": "Jaren 2000",
+      "d": "Y2K, MSN, mode."
+    }
+  },
+  "212": {
+    "en": {
+      "t": "Future 2100",
+      "d": "High-tech city, AI, robots."
+    },
+    "nl": {
+      "t": "Toekomst 2100",
+      "d": "High-tech stad, AI, robots."
+    }
+  },
+  "213": {
+    "en": {
+      "t": "Impressionism",
+      "d": "Brushstrokes, light, nature."
+    },
+    "nl": {
+      "t": "Impressionisme",
+      "d": "Penseelstreken, licht, natuur."
+    }
+  },
+  "214": {
+    "en": {
+      "t": "Cubism",
+      "d": "Geometric shapes, multiple viewpoints."
+    },
+    "nl": {
+      "t": "Kubisme",
+      "d": "Geometrische vormen, meerdere gezichtspunten."
+    }
+  },
+  "215": {
+    "en": {
+      "t": "Surrealism",
+      "d": "Dream, absurdity, Dalí."
+    },
+    "nl": {
+      "t": "Surrealisme",
+      "d": "Droom, absurditeit, Dalí."
+    }
+  },
+  "216": {
+    "en": {
+      "t": "Pop Art",
+      "d": "Bright colors, Warhol, comics."
+    },
+    "nl": {
+      "t": "Pop Art",
+      "d": "Felle kleuren, Warhol, strips."
+    }
+  },
+  "217": {
+    "en": {
+      "t": "Art Nouveau",
+      "d": "Curves, flowers, Mucha."
+    },
+    "nl": {
+      "t": "Art Nouveau",
+      "d": "Krommen, bloemen, Mucha."
+    }
+  },
+  "218": {
+    "en": {
+      "t": "Art Deco",
+      "d": "Geometry, gold, the 1920s."
+    },
+    "nl": {
+      "t": "Art Deco",
+      "d": "Geometrie, goud, jaren 20."
+    }
+  },
+  "219": {
+    "en": {
+      "t": "Bauhaus",
+      "d": "Minimalism, function, shapes."
+    },
+    "nl": {
+      "t": "Bauhaus",
+      "d": "Minimalisme, functie, vormen."
+    }
+  },
+  "220": {
+    "en": {
+      "t": "Expressionism",
+      "d": "Raw emotion, intense colors."
+    },
+    "nl": {
+      "t": "Expressionisme",
+      "d": "Rauwe emotie, intense kleuren."
+    }
+  },
+  "221": {
+    "en": {
+      "t": "Minimalism",
+      "d": "Clean, silent, essential."
+    },
+    "nl": {
+      "t": "Minimalisme",
+      "d": "Strak, stil, essentieel."
+    }
+  },
+  "222": {
+    "en": {
+      "t": "Baroque",
+      "d": "Opulence, movement, theatricality."
+    },
+    "nl": {
+      "t": "Barok",
+      "d": "Weelde, beweging, theatraliteit."
+    }
+  },
+  "223": {
+    "en": {
+      "t": "Trompe-l'œil",
+      "d": "The image seems to break out of the frame."
+    },
+    "nl": {
+      "t": "Trompe-l'œil",
+      "d": "Het beeld lijkt uit het kader te breken."
+    }
+  },
+  "224": {
+    "en": {
+      "t": "Anamorphosis",
+      "d": "Distorted image revealed from an angle."
+    },
+    "nl": {
+      "t": "Anamorfose",
+      "d": "Vervormd beeld dat vanuit een hoek zichtbaar wordt."
+    }
+  },
+  "225": {
+    "en": {
+      "t": "Double Meaning",
+      "d": "Two images in one."
+    },
+    "nl": {
+      "t": "Dubbele Betekenis",
+      "d": "Twee beelden in één."
+    }
+  },
+  "226": {
+    "en": {
+      "t": "Escher",
+      "d": "Impossible staircases, loops."
+    },
+    "nl": {
+      "t": "Escher",
+      "d": "Onmogelijke trappen, lussen."
+    }
+  },
+  "227": {
+    "en": {
+      "t": "Optical Illusion",
+      "d": "Perceived motion without real movement."
+    },
+    "nl": {
+      "t": "Optische Illusie",
+      "d": "Waargenomen beweging zonder echte beweging."
+    }
+  },
+  "228": {
+    "en": {
+      "t": "Forced Perspective",
+      "d": "Size distorted by perspective."
+    },
+    "nl": {
+      "t": "Forced Perspective",
+      "d": "Grootte vervormd door perspectief."
+    }
+  },
+  "229": {
+    "en": {
+      "t": "Infinite Reflection",
+      "d": "Mirrors, repetition."
+    },
+    "nl": {
+      "t": "Oneindige Reflectie",
+      "d": "Spiegels, herhaling."
+    }
+  },
+  "230": {
+    "en": {
+      "t": "Composite Portrait",
+      "d": "A face made of other images."
+    },
+    "nl": {
+      "t": "Compositieportret",
+      "d": "Een gezicht gemaakt van andere beelden."
+    }
+  },
+  "231": {
+    "en": {
+      "t": "TikTok Hook",
+      "d": "3 seconds to capture attention."
+    },
+    "nl": {
+      "t": "TikTok Hook",
+      "d": "3 seconden om te boeien."
+    }
+  },
+  "232": {
+    "en": {
+      "t": "Reel Transition",
+      "d": "Viral transition."
+    },
+    "nl": {
+      "t": "Reel-overgang",
+      "d": "Virale overgang."
+    }
+  },
+  "233": {
+    "en": {
+      "t": "YouTube Intro",
+      "d": "Animated logo, music."
+    },
+    "nl": {
+      "t": "YouTube-intro",
+      "d": "Geanimeerd logo, muziek."
+    }
+  },
+  "234": {
+    "en": {
+      "t": "Viral Short",
+      "d": "Perfect loop."
+    },
+    "nl": {
+      "t": "Virale Short",
+      "d": "Perfecte loop."
+    }
+  },
+  "235": {
+    "en": {
+      "t": "Instagram Story",
+      "d": "Poll, question, swipe."
+    },
+    "nl": {
+      "t": "Instagram Story",
+      "d": "Poll, vraag, swipe."
+    }
+  },
+  "236": {
+    "en": {
+      "t": "Live Stream",
+      "d": "Overlay, chat, alerts."
+    },
+    "nl": {
+      "t": "Livestream",
+      "d": "Overlay, chat, meldingen."
+    }
+  },
+  "237": {
+    "en": {
+      "t": "Podcast Visual",
+      "d": "Waveforms, quote, guest."
+    },
+    "nl": {
+      "t": "Podcast Visual",
+      "d": "Golfvormen, citaat, gast."
+    }
+  },
+  "238": {
+    "en": {
+      "t": "Meme Trend",
+      "d": "Current format twisted for humor."
+    },
+    "nl": {
+      "t": "Meme Trend",
+      "d": "Actueel format met een twist."
+    }
+  },
+  "239": {
+    "en": {
+      "t": "Before / After",
+      "d": "Striking transformation."
+    },
+    "nl": {
+      "t": "Voor / Na",
+      "d": "Opvallende transformatie."
+    }
+  },
+  "240": {
+    "en": {
+      "t": "Day in the Life",
+      "d": "Fast-forwarded routine."
+    },
+    "nl": {
+      "t": "Day in the Life",
+      "d": "Versnelde routine."
+    }
+  },
+  "241": {
+    "en": {
+      "t": "DNA",
+      "d": "Rotating double helix."
+    },
+    "nl": {
+      "t": "DNA",
+      "d": "Draaiende dubbele helix."
+    }
+  },
+  "242": {
+    "en": {
+      "t": "Cell",
+      "d": "Mitosis, organelles, movement."
+    },
+    "nl": {
+      "t": "Cel",
+      "d": "Mitose, organellen, beweging."
+    }
+  },
+  "243": {
+    "en": {
+      "t": "Brain",
+      "d": "Neurons, synapses, activity."
+    },
+    "nl": {
+      "t": "Brein",
+      "d": "Neuronen, synapsen, activiteit."
+    }
+  },
+  "244": {
+    "en": {
+      "t": "Space",
+      "d": "Galaxy, black hole, nebula."
+    },
+    "nl": {
+      "t": "Ruimte",
+      "d": "Melkwegstelsel, zwart gat, nevel."
+    }
+  },
+  "245": {
+    "en": {
+      "t": "Robotics",
+      "d": "Arm, drone, AI."
+    },
+    "nl": {
+      "t": "Robotica",
+      "d": "Arm, drone, AI."
+    }
+  },
+  "246": {
+    "en": {
+      "t": "Nanotechnology",
+      "d": "Microscopic scale."
+    },
+    "nl": {
+      "t": "Nanotechnologie",
+      "d": "Microscopische schaal."
+    }
+  },
+  "247": {
+    "en": {
+      "t": "Quantum Reality",
+      "d": "Particles, superposition."
+    },
+    "nl": {
+      "t": "Kwantumrealiteit",
+      "d": "Deeltjes, superpositie."
+    }
+  },
+  "248": {
+    "en": {
+      "t": "Cloning",
+      "d": "Duplication of the subject."
+    },
+    "nl": {
+      "t": "Klonen",
+      "d": "Duplicatie van het onderwerp."
+    }
+  },
+  "249": {
+    "en": {
+      "t": "Terraforming",
+      "d": "A planet becoming habitable."
+    },
+    "nl": {
+      "t": "Terraforming",
+      "d": "Een planeet die bewoonbaar wordt."
+    }
+  },
+  "250": {
+    "en": {
+      "t": "Post-Apocalyptic",
+      "d": "Ruins, survival, nature reclaiming."
+    },
+    "nl": {
+      "t": "Post-apocalyptisch",
+      "d": "Ruïnes, overleven, natuur die terugkeert."
+    }
+  },
+  "251": {
+    "en": {
+      "t": "Dragon",
+      "d": "Flight, fire, scales."
+    },
+    "nl": {
+      "t": "Draak",
+      "d": "Vlucht, vuur, schubben."
+    }
+  },
+  "252": {
+    "en": {
+      "t": "Unicorn",
+      "d": "Magic forest, rainbow."
+    },
+    "nl": {
+      "t": "Eenhoorn",
+      "d": "Magisch bos, regenboog."
+    }
+  },
+  "253": {
+    "en": {
+      "t": "Mermaid",
+      "d": "Ocean, song, tail."
+    },
+    "nl": {
+      "t": "Zeemeermin",
+      "d": "Oceaan, gezang, staart."
+    }
+  },
+  "254": {
+    "en": {
+      "t": "Phoenix",
+      "d": "Rebirth in flames."
+    },
+    "nl": {
+      "t": "Feniks",
+      "d": "Wedergeboorte in vlammen."
+    }
+  },
+  "255": {
+    "en": {
+      "t": "Werewolf",
+      "d": "Transformation, full moon."
+    },
+    "nl": {
+      "t": "Weerwolf",
+      "d": "Transformatie, volle maan."
+    }
+  },
+  "256": {
+    "en": {
+      "t": "Vampire",
+      "d": "Night, castle, fangs."
+    },
+    "nl": {
+      "t": "Vampier",
+      "d": "Nacht, kasteel, slagtanden."
+    }
+  },
+  "257": {
+    "en": {
+      "t": "Ghost",
+      "d": "Apparition, transparency, cold."
+    },
+    "nl": {
+      "t": "Spook",
+      "d": "Verschijning, transparantie, kou."
+    }
+  },
+  "258": {
+    "en": {
+      "t": "Angel / Demon",
+      "d": "Wings, halo, contrast."
+    },
+    "nl": {
+      "t": "Engel / Demon",
+      "d": "Vleugels, halo, contrast."
+    }
+  },
+  "259": {
+    "en": {
+      "t": "Norse God",
+      "d": "Thunder, hammer, Valhalla."
+    },
+    "nl": {
+      "t": "Noorse God",
+      "d": "Donder, hamer, Walhalla."
+    }
+  },
+  "260": {
+    "en": {
+      "t": "Abyssal Creature",
+      "d": "Depth, tentacles, darkness."
+    },
+    "nl": {
+      "t": "Wezen uit de Diepzee",
+      "d": "Diepte, tentakels, duisternis."
+    }
+  },
+  "261": {
+    "en": {
+      "t": "Western",
+      "d": "Duel, dust, sunset."
+    },
+    "nl": {
+      "t": "Western",
+      "d": "Duel, stof, zonsondergang."
+    }
+  },
+  "262": {
+    "en": {
+      "t": "Crime Noir",
+      "d": "Investigation, rain, trench coat."
+    },
+    "nl": {
+      "t": "Misdaadfilm",
+      "d": "Onderzoek, regen, regenjas."
+    }
+  },
+  "263": {
+    "en": {
+      "t": "Horror",
+      "d": "Jump scare, shadow, silence."
+    },
+    "nl": {
+      "t": "Horror",
+      "d": "Schrikmoment, schaduw, stilte."
+    }
+  },
+  "264": {
+    "en": {
+      "t": "Comedy",
+      "d": "Gag, timing, expression."
+    },
+    "nl": {
+      "t": "Komedie",
+      "d": "Gag, timing, expressie."
+    }
+  },
+  "265": {
+    "en": {
+      "t": "Romance",
+      "d": "Gaze, rain, kiss."
+    },
+    "nl": {
+      "t": "Romantiek",
+      "d": "Blik, regen, kus."
+    }
+  },
+  "266": {
+    "en": {
+      "t": "Science Fiction",
+      "d": "Future, technology, question."
+    },
+    "nl": {
+      "t": "Sciencefiction",
+      "d": "Toekomst, technologie, vraag."
+    }
+  },
+  "267": {
+    "en": {
+      "t": "Fantasy",
+      "d": "Quest, magic, creature."
+    },
+    "nl": {
+      "t": "Fantasy",
+      "d": "Queeste, magie, wezen."
+    }
+  },
+  "268": {
+    "en": {
+      "t": "Thriller",
+      "d": "Tension, chase, twist."
+    },
+    "nl": {
+      "t": "Thriller",
+      "d": "Spanning, achtervolging, twist."
+    }
+  },
+  "269": {
+    "en": {
+      "t": "Documentary",
+      "d": "Real footage, testimony, archive."
+    },
+    "nl": {
+      "t": "Documentaire",
+      "d": "Echte beelden, getuigenis, archief."
+    }
+  },
+  "270": {
+    "en": {
+      "t": "Film Noir",
+      "d": "Shadow, cigarette, femme fatale."
+    },
+    "nl": {
+      "t": "Film Noir",
+      "d": "Schaduw, sigaret, femme fatale."
+    }
+  },
+  "271": {
+    "en": {
+      "t": "Musical",
+      "d": "Dance, singing, color."
+    },
+    "nl": {
+      "t": "Musical",
+      "d": "Dans, zang, kleur."
+    }
+  },
+  "272": {
+    "en": {
+      "t": "War",
+      "d": "Battlefield, soldier, sacrifice."
+    },
+    "nl": {
+      "t": "Oorlog",
+      "d": "Slagveld, soldaat, opoffering."
+    }
+  },
+  "273": {
+    "en": {
+      "t": "Espionage",
+      "d": "Gadget, infiltration, twist."
+    },
+    "nl": {
+      "t": "Spionage",
+      "d": "Gadget, infiltratie, twist."
+    }
+  },
+  "274": {
+    "en": {
+      "t": "Disaster",
+      "d": "Chaos, survival, rescue."
+    },
+    "nl": {
+      "t": "Ramp",
+      "d": "Chaos, overleven, redding."
+    }
+  },
+  "275": {
+    "en": {
+      "t": "Biopic",
+      "d": "Life, era, transformation."
+    },
+    "nl": {
+      "t": "Biopic",
+      "d": "Leven, tijdperk, transformatie."
+    }
+  },
+  "276": {
+    "en": {
+      "t": "Rotoscoping",
+      "d": "Animation over real footage."
+    },
+    "nl": {
+      "t": "Rotoscoop",
+      "d": "Animatie over echte beelden."
+    }
+  },
+  "277": {
+    "en": {
+      "t": "Cel Shading",
+      "d": "3D cartoon rendering."
+    },
+    "nl": {
+      "t": "Cel Shading",
+      "d": "3D-cartoonweergave."
+    }
+  },
+  "278": {
+    "en": {
+      "t": "Low Poly",
+      "d": "Geometric facets."
+    },
+    "nl": {
+      "t": "Low Poly",
+      "d": "Geometrische facetten."
+    }
+  },
+  "279": {
+    "en": {
+      "t": "Pixel Art",
+      "d": "8/16-bit style."
+    },
+    "nl": {
+      "t": "Pixel Art",
+      "d": "8/16-bit-stijl."
+    }
+  },
+  "280": {
+    "en": {
+      "t": "Vector",
+      "d": "Flat, crisp outlines."
+    },
+    "nl": {
+      "t": "Vector",
+      "d": "Plat, scherpe contouren."
+    }
+  },
+  "281": {
+    "en": {
+      "t": "Engraving",
+      "d": "Hatching, ink, antique."
+    },
+    "nl": {
+      "t": "Gravure",
+      "d": "Arcering, inkt, antiek."
+    }
+  },
+  "282": {
+    "en": {
+      "t": "Stained Glass",
+      "d": "Lead, color, light."
+    },
+    "nl": {
+      "t": "Glas-in-lood",
+      "d": "Lood, kleur, licht."
+    }
+  },
+  "283": {
+    "en": {
+      "t": "Mosaic",
+      "d": "Tesserae, antique."
+    },
+    "nl": {
+      "t": "Mozaïek",
+      "d": "Tesserae, antiek."
+    }
+  },
+  "284": {
+    "en": {
+      "t": "Origami",
+      "d": "Folded paper, angles."
+    },
+    "nl": {
+      "t": "Origami",
+      "d": "Gevouwen papier, hoeken."
+    }
+  },
+  "285": {
+    "en": {
+      "t": "Papercut",
+      "d": "Cut paper, shadows."
+    },
+    "nl": {
+      "t": "Papercut",
+      "d": "Uitgesneden papier, schaduwen."
+    }
+  },
+  "286": {
+    "en": {
+      "t": "Neon Sign",
+      "d": "Glowing tube, night."
+    },
+    "nl": {
+      "t": "Neonbord",
+      "d": "Gloeiende buis, nacht."
+    }
+  },
+  "287": {
+    "en": {
+      "t": "Hologram",
+      "d": "Transparency, scanlines."
+    },
+    "nl": {
+      "t": "Hologram",
+      "d": "Transparantie, scanlines."
+    }
+  },
+  "288": {
+    "en": {
+      "t": "X-Ray",
+      "d": "View through matter."
+    },
+    "nl": {
+      "t": "Röntgen",
+      "d": "Zicht door materie."
+    }
+  },
+  "289": {
+    "en": {
+      "t": "Thermal",
+      "d": "Infrared camera."
+    },
+    "nl": {
+      "t": "Thermisch",
+      "d": "Infraroodcamera."
+    }
+  },
+  "290": {
+    "en": {
+      "t": "Sonar / Radar",
+      "d": "Detection, waves."
+    },
+    "nl": {
+      "t": "Sonar / Radar",
+      "d": "Detectie, golven."
+    }
+  },
+  "291": {
+    "en": {
+      "t": "Full Creative Studio",
+      "d": "All effects in one app with categories."
+    },
+    "nl": {
+      "t": "Volledige Creatieve Studio",
+      "d": "Alle effecten in één app met categorieën."
+    }
+  },
+  "292": {
+    "en": {
+      "t": "Full Random Mode",
+      "d": "The AI chooses style, movement, camera, lighting."
+    },
+    "nl": {
+      "t": "Volledig Willekeurige Modus",
+      "d": "De AI kiest stijl, beweging, camera, belichting."
+    }
+  },
+  "293": {
+    "en": {
+      "t": "YouTube Channel Mode",
+      "d": "Generates intro + video + outro."
+    },
+    "nl": {
+      "t": "YouTube-kanaalmodus",
+      "d": "Genereert intro + video + outro."
+    }
+  },
+  "294": {
+    "en": {
+      "t": "Ad Mode",
+      "d": "Hook + product + CTA."
+    },
+    "nl": {
+      "t": "Advertentiemodus",
+      "d": "Hook + product + CTA."
+    }
+  },
+  "295": {
+    "en": {
+      "t": "5-Shot Story Mode",
+      "d": "Automatic breakdown."
+    },
+    "nl": {
+      "t": "5-Shot Story-modus",
+      "d": "Automatische opdeling."
+    }
+  },
+  "296": {
+    "en": {
+      "t": "Music Video Mode",
+      "d": "Beat sync + cuts."
+    },
+    "nl": {
+      "t": "Muziekvideomodus",
+      "d": "Beat-synchronisatie + overgangen."
+    }
+  },
+  "297": {
+    "en": {
+      "t": "Living Portrait Mode",
+      "d": "Eyes, mouth, breathing."
+    },
+    "nl": {
+      "t": "Levend Portret-modus",
+      "d": "Ogen, mond, ademhaling."
+    }
+  },
+  "298": {
+    "en": {
+      "t": "Old Photo Mode",
+      "d": "Restoration + animation."
+    },
+    "nl": {
+      "t": "Oude Foto-modus",
+      "d": "Restauratie + animatie."
+    }
+  },
+  "299": {
+    "en": {
+      "t": "Talking Avatar Mode",
+      "d": "TTS + lip sync."
+    },
+    "nl": {
+      "t": "Pratende Avatar-modus",
+      "d": "TTS + lipsynchronisatie."
+    }
+  },
+  "300": {
+    "en": {
+      "t": "Multi-Image → 1 Video Mode",
+      "d": "Cinematic slideshow."
+    },
+    "nl": {
+      "t": "Multi-Beeld → 1 Video-modus",
+      "d": "Cinematische diavoorstelling."
+    }
+  }
+}

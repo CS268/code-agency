@@ -353,6 +353,36 @@ const CATS = {
   systeme:{label:"Systèmes Complets",icon:"🎁",color:"#00e5ff"}
 };
 
+const CATS_I18N = {
+  en: {
+    all:"All",
+    action:"Action & Combat", danse:"Dance & Movement", camera:"Camera Movements", cut:"Cuts & Editing",
+    vfx:"Special Effects", nature:"Natural Disasters", sport:"Sport & Performance", vehicule:"Vehicles & Machines",
+    emotion:"Emotions & Expressions", gaming:"Gaming & Virtual", musique:"Music & Audio", education:"Education",
+    business:"Business", voyage:"Travel & Tourism", epoque:"Eras & History", art:"Art Movements",
+    illusion:"Illusions & Optics", social:"Social Formats", science:"Science & Future", mytho:"Fantasy & Mythology",
+    genre:"Film Genres", style:"Style Effects", systeme:"Complete Systems"
+  },
+  nl: {
+    all:"Alles",
+    action:"Actie & Gevecht", danse:"Dans & Beweging", camera:"Camerabewegingen", cut:"Cut & Montage",
+    vfx:"Speciale Effecten", nature:"Natuurrampen", sport:"Sport & Prestatie", vehicule:"Voertuigen & Machines",
+    emotion:"Emoties & Expressies", gaming:"Gaming & Virtueel", musique:"Muziek & Audio", education:"Educatie",
+    business:"Business", voyage:"Reizen & Toerisme", epoque:"Tijdperken & Geschiedenis", art:"Kunststromingen",
+    illusion:"Illusies & Optiek", social:"Sociale Formats", science:"Wetenschap & Toekomst", mytho:"Fantasie & Mythologie",
+    genre:"Filmgenres", style:"Stijleffecten", systeme:"Volledige Systemen"
+  }
+};
+
+function tCatLabel(key){
+  const lang = currentLang();
+  if (lang === "fr" || key === "all") {
+    if (key === "all") return (CATS_I18N[lang] && CATS_I18N[lang].all) || "Tout";
+    return CATS[key].label;
+  }
+  return (CATS_I18N[lang] && CATS_I18N[lang][key]) || CATS[key].label;
+}
+
 const RAW = [
 [41,"Kung Fu Cinématique","Mouvements de kung-fu fluides, sauts, coups de pied, ralenti à la Matrix.","action"],
 [42,"Karaté Impact","Coups puissants, ondes de choc, effets de vitesse.","action"],
@@ -632,6 +662,95 @@ const GROUPS = [
 
 const NEGATIVE = "flou, déformation des mains, visages déformés, membres en trop, artefacts numériques, watermark, texte illisible, logo, basse résolution, saccades, morphing involontaire, yeux asymétriques, peau plastique, surexposition";
 
+const UI_I18N = {
+  fr: {
+    brief: "🎬  BRIEF VIDÉO IA — JCODE STUDIO",
+    modelLabel: "Modèle cible", formatLabel: "Format", durationLabel: "Durée", elementsLabel: "Éléments combinés",
+    partLabels: { sujet:"Sujet et action", genre:"Genre et ton", camera:"Caméra", montage:"Montage et rythme", vfx:"Effets visuels", art:"Direction artistique", audio:"Ambiance sonore" },
+    groupLabels: { sujet:"SUJET & ACTION", camera:"MOUVEMENT DE CAMÉRA", montage:"MONTAGE & RYTHME", vfx:"EFFETS & VFX", art:"DIRECTION ARTISTIQUE", genre:"GENRE & TON", audio:"AUDIO", system:"FORMAT / SYSTÈME" },
+    promptHeader: "PROMPT — À COLLER DANS LE GÉNÉRATEUR",
+    scenePrefix: "Plan cinématographique.",
+    sceneSuffix: "Rendu photoréaliste, éclairage volumétrique, profondeur de champ marquée, étalonnage filmique, grain argentique subtil, définition 4K, 24 images par seconde, textures détaillées, composition soignée, mouvement de caméra fluide et motivé, cohérence temporelle parfaite, qualité ARRI Alexa.",
+    formatDur: (ratio, dur) => `Format ${ratio}, durée ${dur}.`,
+    shortHeader: "VERSION COURTE (max. attention du modèle)",
+    styleHeader: "STYLE KEYWORDS",
+    negativeHeader: "NEGATIVE PROMPT",
+    negative: "flou, déformation des mains, visages déformés, membres en trop, artefacts numériques, watermark, texte illisible, logo, basse résolution, saccades, morphing involontaire, yeux asymétriques, peau plastique, surexposition",
+    settingsHeader: "RÉGLAGES RECOMMANDÉS",
+    motionLabel: "Motion strength", motionHigh: "élevé", motionMed: "moyen",
+    coherenceLabel: "Cohérence sujet", coherenceVal: "élevée",
+    seedLabel: "Seed", seedVal: "aléatoire puis fixe après validation",
+    variants: "Générer 3 variantes, garder la meilleure, itérer par petites touches",
+    modalSub: (n, model, ratio) => `${n} élément(s) · ${model} · ${ratio}`
+  },
+  en: {
+    brief: "🎬  AI VIDEO BRIEF — JCODE STUDIO",
+    modelLabel: "Target model", formatLabel: "Format", durationLabel: "Duration", elementsLabel: "Combined elements",
+    partLabels: { sujet:"Subject and action", genre:"Genre and tone", camera:"Camera", montage:"Editing and pace", vfx:"Visual effects", art:"Art direction", audio:"Sound design" },
+    groupLabels: { sujet:"SUBJECT & ACTION", camera:"CAMERA MOVEMENT", montage:"EDITING & PACE", vfx:"EFFECTS & VFX", art:"ART DIRECTION", genre:"GENRE & TONE", audio:"AUDIO", system:"FORMAT / SYSTEM" },
+    promptHeader: "PROMPT — PASTE INTO THE GENERATOR",
+    scenePrefix: "Cinematic shot.",
+    sceneSuffix: "Photorealistic rendering, volumetric lighting, pronounced depth of field, filmic color grading, subtle film grain, 4K definition, 24 frames per second, detailed textures, polished composition, smooth and motivated camera movement, perfect temporal coherence, ARRI Alexa quality.",
+    formatDur: (ratio, dur) => `Format ${ratio}, duration ${dur}.`,
+    shortHeader: "SHORT VERSION (max. model attention)",
+    styleHeader: "STYLE KEYWORDS",
+    negativeHeader: "NEGATIVE PROMPT",
+    negative: "blur, deformed hands, distorted faces, extra limbs, digital artifacts, watermark, unreadable text, logo, low resolution, stutter, unwanted morphing, asymmetrical eyes, plastic skin, overexposure",
+    settingsHeader: "RECOMMENDED SETTINGS",
+    motionLabel: "Motion strength", motionHigh: "high", motionMed: "medium",
+    coherenceLabel: "Subject coherence", coherenceVal: "high",
+    seedLabel: "Seed", seedVal: "random, then locked after validation",
+    variants: "Generate 3 variants, keep the best one, iterate with small tweaks",
+    modalSub: (n, model, ratio) => `${n} element(s) · ${model} · ${ratio}`
+  },
+  nl: {
+    brief: "🎬  AI-VIDEOBRIEF — JCODE STUDIO",
+    modelLabel: "Doelmodel", formatLabel: "Formaat", durationLabel: "Duur", elementsLabel: "Gecombineerde elementen",
+    partLabels: { sujet:"Onderwerp en actie", genre:"Genre en toon", camera:"Camera", montage:"Montage en ritme", vfx:"Visuele effecten", art:"Art direction", audio:"Geluidsontwerp" },
+    groupLabels: { sujet:"ONDERWERP & ACTIE", camera:"CAMERABEWEGING", montage:"MONTAGE & RITME", vfx:"EFFECTEN & VFX", art:"ART DIRECTION", genre:"GENRE & TOON", audio:"AUDIO", system:"FORMAAT / SYSTEEM" },
+    promptHeader: "PROMPT — PLAK IN DE GENERATOR",
+    scenePrefix: "Cinematografisch shot.",
+    sceneSuffix: "Fotorealistische weergave, volumetrische belichting, uitgesproken scherptediepte, filmische kleurcorrectie, subtiele filmkorrel, 4K-definitie, 24 beelden per seconde, gedetailleerde texturen, verzorgde compositie, vloeiende en gemotiveerde camerabeweging, perfecte temporele coherentie, ARRI Alexa-kwaliteit.",
+    formatDur: (ratio, dur) => `Formaat ${ratio}, duur ${dur}.`,
+    shortHeader: "KORTE VERSIE (max. aandacht van het model)",
+    styleHeader: "STYLE KEYWORDS",
+    negativeHeader: "NEGATIVE PROMPT",
+    negative: "wazig, vervormde handen, vervormde gezichten, extra ledematen, digitale artefacten, watermerk, onleesbare tekst, logo, lage resolutie, haperingen, ongewenste morphing, asymmetrische ogen, plastic huid, overbelichting",
+    settingsHeader: "AANBEVOLEN INSTELLINGEN",
+    motionLabel: "Motion strength", motionHigh: "hoog", motionMed: "gemiddeld",
+    coherenceLabel: "Onderwerpcoherentie", coherenceVal: "hoog",
+    seedLabel: "Seed", seedVal: "willekeurig, daarna vastgezet na validatie",
+    variants: "Genereer 3 varianten, behoud de beste, itereer met kleine aanpassingen",
+    modalSub: (n, model, ratio) => `${n} element(en) · ${model} · ${ratio}`
+  }
+};
+
+let EFFECTS_I18N = {};
+fetch("effects_i18n.json").then(r => r.json()).then(j => {
+  EFFECTS_I18N = j;
+  renderGrid();
+  updateDock();
+  var ov = document.getElementById("overlay");
+  if (ov && ov.classList.contains("show")) refreshPrompt();
+}).catch(() => {});
+
+function currentLang(){
+  var l = (localStorage.getItem("studio-lang") || document.documentElement.lang || "fr").toLowerCase();
+  return UI_I18N[l] ? l : "fr";
+}
+function tTitle(d){
+  var lang = currentLang();
+  if (lang === "fr") return d.title;
+  var tr = EFFECTS_I18N[String(d.n)];
+  return (tr && tr[lang] && tr[lang].t) || d.title;
+}
+function tDesc(d){
+  var lang = currentLang();
+  if (lang === "fr") return d.desc;
+  var tr = EFFECTS_I18N[String(d.n)];
+  return (tr && tr[lang] && tr[lang].d) || d.desc;
+}
+
 let state = { selected:new Set(), favorites:new Set(), filter:"all", query:"", sort:"num", favMode:false };
 const $ = (s) => document.querySelector(s);
 
@@ -649,10 +768,10 @@ function renderFilters(){
   const box = $("#filters");
   const counts = {};
   DATA.forEach(d => counts[d.cat] = (counts[d.cat] || 0) + 1);
-  let html = `<button class="chip ${state.filter==='all'&&!state.favMode?'on':''}" data-cat="all">✦ Tout <span class="ct">${TOTAL}</span></button>`;
+  let html = `<button class="chip ${state.filter==='all'&&!state.favMode?'on':''}" data-cat="all">✦ ${tCatLabel("all")} <span class="ct">${TOTAL}</span></button>`;
   Object.entries(CATS).forEach(([k,v]) => {
     if (!counts[k]) return;
-    html += `<button class="chip ${state.filter===k&&!state.favMode?'on':''}" data-cat="${k}">${v.icon} ${v.label} <span class="ct">${counts[k]}</span></button>`;
+    html += `<button class="chip ${state.filter===k&&!state.favMode?'on':''}" data-cat="${k}">${v.icon} ${tCatLabel(k)} <span class="ct">${counts[k]}</span></button>`;
   });
   box.innerHTML = html;
   box.querySelectorAll(".chip").forEach(c => {
@@ -668,9 +787,9 @@ function renderGrid(){
   else if (state.filter !== "all") list = list.filter(d => d.cat === state.filter);
   if (state.query.trim()) {
     const q = state.query.toLowerCase().trim();
-    list = list.filter(d => d.title.toLowerCase().includes(q) || d.desc.toLowerCase().includes(q) || CATS[d.cat].label.toLowerCase().includes(q) || String(d.n) === q);
+    list = list.filter(d => d.title.toLowerCase().includes(q) || d.desc.toLowerCase().includes(q) || tTitle(d).toLowerCase().includes(q) || tDesc(d).toLowerCase().includes(q) || CATS[d.cat].label.toLowerCase().includes(q) || String(d.n) === q);
   }
-  const sorters = { "num":(a,b)=>a.n-b.n, "num-desc":(a,b)=>b.n-a.n, "az":(a,b)=>a.title.localeCompare(b.title,"fr"), "cat":(a,b)=>a.cat.localeCompare(b.cat)||a.n-b.n };
+  const sorters = { "num":(a,b)=>a.n-b.n, "num-desc":(a,b)=>b.n-a.n, "az":(a,b)=>tTitle(a).localeCompare(tTitle(b),currentLang()), "cat":(a,b)=>a.cat.localeCompare(b.cat)||a.n-b.n };
   list.sort(sorters[state.sort] || sorters.num);
   $("#shown").textContent = list.length;
 
@@ -687,7 +806,7 @@ function renderGrid(){
     const delay = Math.min(animIdx++ * 9, 320);
     return `<article class="card ${on?'on':''} ${fav?'fav':''}" data-n="${d.n}" style="animation-delay:${delay}ms">
       <div class="card-top"><span class="num">${d.n}</span><span class="card-cat" style="color:${c.color}">${c.icon}</span></div>
-      <h3>${d.title}</h3><p>${d.desc}</p>
+      <h3>${tTitle(d)}</h3><p>${tDesc(d)}</p>
       <button class="fav-btn ${fav?'on':''}" aria-label="Ajouter aux favoris" data-favbtn="${d.n}">★</button>
       <div class="tick">✓</div>
     </article>`;
@@ -747,7 +866,7 @@ function updateDock(){
   const n = state.selected.size;
   $("#dockCount").textContent = n;
   if (!n) { dock.classList.remove("show"); return; }
-  const titles = [...state.selected].map(num => DATA.find(d => d.n === num)?.title).filter(Boolean);
+  const titles = [...state.selected].map(num => { const d = DATA.find(d => d.n === num); return d ? tTitle(d) : null; }).filter(Boolean);
   $("#dockPreview").textContent = titles.slice(0,4).join(" · ") + (titles.length > 4 ? ` +${titles.length - 4}` : "");
   dock.classList.add("show");
   updateStats();
@@ -757,43 +876,44 @@ let lastPrompt = "";
 function buildPrompt(){
   const items = [...state.selected].map(n => DATA.find(d => d.n === n)).filter(Boolean).sort((a,b) => a.n - b.n);
   if (!items.length) return "";
+  const T = UI_I18N[currentLang()];
   const model = $("#oModel").value, ratio = $("#oRatio").value, dur = $("#oDur").value;
   const buckets = {}; GROUPS.forEach(g => buckets[g.key] = []);
   items.forEach(it => { const g = GROUPS.find(g => g.cats.includes(it.cat)); if (g) buckets[g.key].push(it); });
 
   const lines = [];
-  lines.push("🎬  BRIEF VIDÉO IA — JCODE STUDIO");
+  lines.push(T.brief);
   lines.push("─".repeat(52));
-  lines.push(`Modèle cible : ${model}`);
-  lines.push(`Format : ${ratio}   ·   Durée : ${dur}`);
-  lines.push(`Éléments combinés : ${items.length}`);
+  lines.push(`${T.modelLabel} : ${model}`);
+  lines.push(`${T.formatLabel} : ${ratio}   ·   ${T.durationLabel} : ${dur}`);
+  lines.push(`${T.elementsLabel} : ${items.length}`);
   lines.push("");
 
   GROUPS.forEach(g => {
     const arr = buckets[g.key];
     if (!arr.length) return;
-    lines.push(`▸ ${g.label}`);
-    arr.forEach(i => lines.push(`   • ${i.title} — ${i.desc}`));
+    lines.push(`▸ ${T.groupLabels[g.key] || g.label}`);
+    arr.forEach(i => lines.push(`   • ${tTitle(i)} — ${tDesc(i)}`));
     lines.push("");
   });
 
-  const desc = (k) => buckets[k].map(i => i.desc).join(" ");
+  const desc = (k) => buckets[k].map(i => tDesc(i)).join(" ");
   const parts = [];
-  if (buckets.sujet.length) parts.push(`Sujet et action : ${desc("sujet")}`);
-  if (buckets.genre.length) parts.push(`Genre et ton : ${desc("genre")}`);
-  if (buckets.camera.length) parts.push(`Caméra : ${desc("camera")}`);
-  if (buckets.montage.length) parts.push(`Montage et rythme : ${desc("montage")}`);
-  if (buckets.vfx.length) parts.push(`Effets visuels : ${desc("vfx")}`);
-  if (buckets.art.length) parts.push(`Direction artistique : ${desc("art")}`);
-  if (buckets.audio.length) parts.push(`Ambiance sonore : ${desc("audio")}`);
+  if (buckets.sujet.length) parts.push(`${T.partLabels.sujet} : ${desc("sujet")}`);
+  if (buckets.genre.length) parts.push(`${T.partLabels.genre} : ${desc("genre")}`);
+  if (buckets.camera.length) parts.push(`${T.partLabels.camera} : ${desc("camera")}`);
+  if (buckets.montage.length) parts.push(`${T.partLabels.montage} : ${desc("montage")}`);
+  if (buckets.vfx.length) parts.push(`${T.partLabels.vfx} : ${desc("vfx")}`);
+  if (buckets.art.length) parts.push(`${T.partLabels.art} : ${desc("art")}`);
+  if (buckets.audio.length) parts.push(`${T.partLabels.audio} : ${desc("audio")}`);
 
   lines.push("─".repeat(52));
-  lines.push("▸ PROMPT — À COLLER DANS LE GÉNÉRATEUR");
+  lines.push(`▸ ${T.promptHeader}`);
   lines.push("");
-  lines.push(`Plan cinématographique. ${parts.join(" ")} Rendu photoréaliste, éclairage volumétrique, profondeur de champ marquée, étalonnage filmique, grain argentique subtil, définition 4K, 24 images par seconde, textures détaillées, composition soignée, mouvement de caméra fluide et motivé, cohérence temporelle parfaite, qualité ARRI Alexa. Format ${ratio}, durée ${dur}.`);
+  lines.push(`${T.scenePrefix} ${parts.join(" ")} ${T.sceneSuffix} ${T.formatDur(ratio, dur)}`);
   lines.push("");
 
-  const pick = (k) => buckets[k].map(i => i.title).join(", ");
+  const pick = (k) => buckets[k].map(i => tTitle(i)).join(", ");
   const shortBits = [];
   if (buckets.sujet.length) shortBits.push(pick("sujet"));
   if (buckets.camera.length) shortBits.push(pick("camera"));
@@ -801,24 +921,24 @@ function buildPrompt(){
   if (buckets.art.length) shortBits.push(pick("art"));
   if (buckets.genre.length) shortBits.push(pick("genre"));
 
-  lines.push("▸ VERSION COURTE (max. attention du modèle)");
+  lines.push(`▸ ${T.shortHeader}`);
   lines.push(`${shortBits.join(", ")} — cinematic, ${ratio}, ${dur}, 4K, film grain.`);
   lines.push("");
 
   // FIX #10 — mots-clés des effets, favorisés par les modèles récents
-  lines.push("▸ STYLE KEYWORDS");
-  lines.push(items.map(i => i.title).join(", "));
+  lines.push(`▸ ${T.styleHeader}`);
+  lines.push(items.map(i => tTitle(i)).join(", "));
   lines.push("");
 
-  lines.push("▸ NEGATIVE PROMPT");
-  lines.push(NEGATIVE);
+  lines.push(`▸ ${T.negativeHeader}`);
+  lines.push(T.negative);
   lines.push("");
 
-  lines.push("▸ RÉGLAGES RECOMMANDÉS");
-  lines.push(`• Motion strength : ${buckets.camera.length > 2 ? "élevé" : "moyen"}`);
-  lines.push(`• Cohérence sujet : élevée`);
-  lines.push(`• Seed : aléatoire puis fixe après validation`);
-  lines.push(`• Générer 3 variantes, garder la meilleure, itérer par petites touches`);
+  lines.push(`▸ ${T.settingsHeader}`);
+  lines.push(`• ${T.motionLabel} : ${buckets.camera.length > 2 ? T.motionHigh : T.motionMed}`);
+  lines.push(`• ${T.coherenceLabel} : ${T.coherenceVal}`);
+  lines.push(`• ${T.seedLabel} : ${T.seedVal}`);
+  lines.push(`• ${T.variants}`);
 
   return lines.join("\n");
 }
@@ -826,7 +946,7 @@ function buildPrompt(){
 function refreshPrompt(){
   lastPrompt = buildPrompt();
   $("#promptOut").textContent = lastPrompt;
-  $("#modalSub").textContent = `${state.selected.size} élément(s) · ${$("#oModel").value} · ${$("#oRatio").value}`;
+  $("#modalSub").textContent = UI_I18N[currentLang()].modalSub(state.selected.size, $("#oModel").value, $("#oRatio").value);
 }
 
 function openModal(){
@@ -945,6 +1065,14 @@ if (urlLang && ['fr','nl','en'].includes(urlLang)) {
             const ph = el.dataset[lang + 'Placeholder'] || el.dataset.frPlaceholder;  // suit la langue active, repli sur FR si non traduit
             el.placeholder = ph;
         });
+        // Rafraichit la grille d'effets, le dock et le prompt ouvert dans la nouvelle langue
+        if (typeof renderFilters === 'function') renderFilters();
+        if (typeof renderGrid === 'function') renderGrid();
+        if (typeof updateDock === 'function') updateDock();
+        if (typeof refreshPrompt === 'function') {
+            var ov = document.getElementById('overlay');
+            if (ov && ov.classList.contains('show')) refreshPrompt();
+        }
         var langBar = document.getElementById('studioLangBar');
         if (langBar) langBar.querySelectorAll('button').forEach(b => {
             b.style.background = b.dataset.lang === lang ? '#6366f1' : 'none';
