@@ -116,7 +116,8 @@ function cleanupFiles(files) {
 app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res) => {
   try {
     const { mode, prompt, lang = "fr", duration = "5" } = req.body;
-    console.log("[DEBUG] req.body:", JSON.stringify(req.body));
+    const { pin: _omitPin, ...safeBody } = req.body || {};
+    console.log("[DEBUG] req.body:", JSON.stringify(safeBody));
     console.log("[DEBUG] req.body:", JSON.stringify(req.body));
     const files = req.files || [];
     const clientIp = req.ip || 'unknown';
@@ -128,6 +129,16 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
     if (!checkRateLimit(clientIp)) {
       cleanupFiles(files);
       return res.status(429).json({ error: 'rate_limited', message_fr: 'Trop de tentatives', message_en: 'Rate limited' });
+    }
+
+    const accessPin = process.env.STUDIO_ACCESS_PIN;
+    if (!accessPin) {
+      cleanupFiles(files);
+      return res.status(503).json({ error: 'pin_not_configured', message_fr: 'Accès temporairement désactivé', message_en: 'Access temporarily disabled' });
+    }
+    if (String(req.body?.pin || '') !== accessPin) {
+      cleanupFiles(files);
+      return res.status(401).json({ error: 'access_denied', message_fr: "Code d'accès invalide", message_en: 'Invalid access code' });
     }
 
     if (!['keyframe', 'reference-images', 'reference-video', 'mix'].includes(mode)) {
