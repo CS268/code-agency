@@ -4,7 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 import { randomUUID } from 'crypto';
-import { unlinkSync, existsSync, mkdirSync } from 'fs';
+import { unlinkSync, existsSync, mkdirSync, readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -185,7 +185,13 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
       return res.status(400).json({ error: 'duration_invalid', message_fr: 'Durée invalide (1-30s)', message_en: 'Invalid duration (1-30s)' });
     }
 
-    const publicUrls = files.map(file => `${process.env.PUBLIC_URL}/uploads/${file.filename}`);
+    const publicUrls = files.map((file) => {
+      const absPath = file.path || join(UPLOAD_DIR, file.filename);
+      const buf = readFileSync(absPath);
+      const mime = file.mimetype || 'application/octet-stream';
+      return `data:${mime};base64,${buf.toString('base64')}`;
+    });
+    console.log('[DEBUG] media data-uris', publicUrls.map(u => u.slice(0, 48) + ' len=' + u.length));
 
     const agnesRequest = {
       model: 'agnes-video-2.5',
