@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 import { randomUUID } from 'crypto';
 import { unlinkSync, existsSync, mkdirSync, readFileSync } from 'fs';
+import sharp from 'sharp';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -185,12 +186,34 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
       return res.status(400).json({ error: 'duration_invalid', message_fr: 'Durée invalide (1-30s)', message_en: 'Invalid duration (1-30s)' });
     }
 
-    const publicUrls = files.map((file) => {
+    const publicUrls = [];
+    for (const file of files) {
       const absPath = file.path || join(UPLOAD_DIR, file.filename);
-      const buf = readFileSync(absPath);
       const mime = file.mimetype || 'application/octet-stream';
-      return `data:${mime};base64,${buf.toString('base64')}`;
-    });
+      const isImage = IMAGE_FORMATS.includes(mime);
+      if (isImage) {
+        const meta = await sharp(absPath).metadata();
+        const w = meta.width || 1;
+        const h = meta.height || 1;
+        const ratio = w / h;
+        console.log('[DEBUG] image dims', file.originalname, w + 'x' + h, 'ratio', Number(ratio.toFixed(3)));
+        let pipeline = sharp(absPath);
+        if (ratio < 0.4) {
+          const newH = Math.max(1, Math.round(w / 0.5));
+          const top = Math.max(0, Math.floor((h - newH) / 2));
+          pipeline = pipeline.extract({ left: 0, top, width: w, height: Math.min(newH, h) });
+        } else if (ratio > 2.5) {
+          const newW = Math.max(1, Math.round(h * 2.0));
+          const left = Math.max(0, Math.floor((w - newW) / 2));
+          pipeline = pipeline.extract({ left, top: 0, width: Math.min(newW, w), height: h });
+        }
+        const buf = await pipeline.png().toBuffer();
+        publicUrls.push(`data:image/png;base64,${buf.toString('base64')}`);
+      } else {
+        const buf = readFileSync(absPath);
+        publicUrls.push(`data:${mime};base64,${buf.toString('base64')}`);
+      }
+    }
     console.log('[DEBUG] media data-uris', publicUrls.map(u => u.slice(0, 48) + ' len=' + u.length));
 
     const agnesRequest = {
