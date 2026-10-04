@@ -118,7 +118,6 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
     const { mode, prompt, lang = "fr", duration = "5" } = req.body;
     const { pin: _omitPin, ...safeBody } = req.body || {};
     console.log("[DEBUG] req.body:", JSON.stringify(safeBody));
-    console.log("[DEBUG] req.body:", JSON.stringify(req.body));
     const files = req.files || [];
     const clientIp = req.ip || 'unknown';
 
