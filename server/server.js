@@ -191,9 +191,9 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
 
     // FIX — validation de la durée, pas de valeur arbitraire envoyée telle quelle à Agnes
     const durationNum = Number(duration);
-    if (!Number.isFinite(durationNum) || durationNum < 1 || durationNum > 30) {
+    if (!Number.isInteger(durationNum) || durationNum < 4 || durationNum > 12) {
       cleanupFiles(files);
-      return res.status(400).json({ error: 'duration_invalid', message_fr: 'Durée invalide (1-30s)', message_en: 'Invalid duration (1-30s)' });
+      return res.status(400).json({ error: 'duration_invalid', message_fr: 'Durée invalide (4 à 12 secondes)', message_en: 'Invalid duration (4-12 seconds)', message_nl: 'Ongeldige duur (4 tot 12 seconden)' });
     }
 
     const publicUrls = [];
