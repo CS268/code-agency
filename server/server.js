@@ -280,6 +280,15 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
       if (!response.ok) {
         const errorText = await response.text();
         console.error('Agnes API error:', errorText);
+        if (/video_queue_full/.test(errorText)) {
+          cleanupFiles(files);
+          return res.status(503).json({
+            error: 'queue_full',
+            message_fr: "La file d'attente de génération est pleine, réessayez dans quelques minutes.",
+            message_en: 'The generation queue is full, please try again in a few minutes.',
+            message_nl: 'De wachtrij voor generatie is vol, probeer het over een paar minuten opnieuw.',
+          });
+        }
         cleanupFiles(files);
         return res.status(response.status).json({
           error: 'agnes_api_error',
