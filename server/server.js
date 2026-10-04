@@ -35,6 +35,8 @@ const MAX_MIX_IMAGES = 8;
 const MAX_MIX_VIDEOS = 1;
 const MIN_PROMPT = 10;
 const MAX_PROMPT = 3000;
+const VIDEO_SECONDS = 12; // durée unique de l'offre : le client ne choisit pas
+const MAX_TOTAL_SIZE = 50 * 1024 * 1024; // limite de requête Agnes, tous fichiers confondus
 
 const rateLimitMap = new Map();
 const RATE_LIMIT_WINDOW = 60 * 60 * 1000;
@@ -117,7 +119,7 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
   try {
     const { mode, prompt, lang = "fr", duration = "5" } = req.body;
     const { pin: _omitPin, ...safeBody } = req.body || {};
-    console.log("[DEBUG] req.body:", JSON.stringify(safeBody));
+    console.log("[DEBUG] generate request, mode:", mode);
     const files = req.files || [];
     const clientIp = req.ip || 'unknown';
 
@@ -140,7 +142,7 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
       return res.status(401).json({ error: 'access_denied', message_fr: "Code d'accès invalide", message_en: 'Invalid access code' });
     }
 
-    if (!['keyframe', 'reference-images', 'reference-video', 'mix'].includes(mode)) {
+    if (!['reference-images', 'reference-video', 'mix'].includes(mode)) {
       cleanupFiles(files);
       return res.status(400).json({ error: 'invalid_mode', message_fr: 'Mode invalide', message_en: 'Invalid mode' });
     }
@@ -163,9 +165,18 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
       }
     }
 
-    if (mode === 'keyframe' && files.length > MAX_KEYFRAME_IMAGES) {
+    const imgCount = files.filter(f => IMAGE_FORMATS.includes(f.mimetype)).length;
+    const vidCount = files.filter(f => VIDEO_FORMATS.includes(f.mimetype)).length;
+    if ((mode === 'reference-images' && (imgCount < 1 || vidCount > 0)) ||
+        (mode === 'reference-video' && (vidCount !== 1 || imgCount > 0)) ||
+        (mode === 'mix' && (vidCount !== 1 || imgCount < 1))) {
       cleanupFiles(files);
-      return res.status(400).json({ error: 'too_many_files', message_fr: 'Trop de fichiers (max 2)', message_en: 'Too many files (max 2)' });
+      return res.status(400).json({ error: 'files_invalid_for_mode', message_fr: 'Fichiers non conformes au mode choisi', message_en: 'Files do not match the selected mode', message_nl: 'Bestanden komen niet overeen met de gekozen modus' });
+    }
+    const totalSize = files.reduce((sum, f) => sum + f.size, 0);
+    if (totalSize > MAX_TOTAL_SIZE) {
+      cleanupFiles(files);
+      return res.status(400).json({ error: 'total_too_large', message_fr: 'Taille totale trop élevée (max 50 Mo)', message_en: 'Total size too large (max 50 MB)', message_nl: 'Totale grootte te groot (max 50 MB)' });
     }
 
     if (mode === 'reference-images' && files.length > MAX_REFERENCE_IMAGES) {
@@ -189,12 +200,7 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
       return res.status(400).json({ error: 'prompt_invalid', message_fr: 'Prompt invalide (10-3000 caractères)', message_en: 'Invalid prompt (10-3000 chars)' });
     }
 
-    // FIX — validation de la durée, pas de valeur arbitraire envoyée telle quelle à Agnes
-    const durationNum = Number(duration);
-    if (!Number.isInteger(durationNum) || durationNum < 4 || durationNum > 12) {
-      cleanupFiles(files);
-      return res.status(400).json({ error: 'duration_invalid', message_fr: 'Durée invalide (4 à 12 secondes)', message_en: 'Invalid duration (4-12 seconds)', message_nl: 'Ongeldige duur (4 tot 12 seconden)' });
-    }
+    const durationNum = VIDEO_SECONDS; // durée unique de l'offre : la valeur du client est ignorée
 
     const publicUrls = [];
     for (const file of files) {
@@ -229,7 +235,7 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
     const MODEL_PAID = 'agnes-video-2.5';
     const MODEL_FLASH = 'agnes-video-2.5-flash';
     const FLASH_MAX_IMAGES = 5;
-    const wantedSize = String(req.body?.resolution || '720P').toUpperCase() === '1080P' ? '1080P' : '720P';
+    const wantedSize = '720P'; // résolution unique de l'offre : le client ne choisit pas
     const agnesRequest = {
       model: MODEL_PAID, // ajusté plus bas selon le mode, les médias et la résolution
       prompt,
@@ -238,11 +244,7 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
       aspect_ratio: '9:16',
     };
 
-    if (mode === 'keyframe') {
-      agnesRequest.mode = 'keyframe';
-      if (publicUrls[0]) agnesRequest.first_frame = publicUrls[0];
-      if (publicUrls[1]) agnesRequest.last_frame = publicUrls[1];
-    } else if (mode === 'reference-images') {
+    if (mode === 'reference-images') {
       agnesRequest.mode = 'reference';
       agnesRequest.images = publicUrls;
     } else if (mode === 'reference-video') {
@@ -261,7 +263,7 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
     // Routage de modèle : le modèle gratuit (flash) ne gère ni vidéo de référence, ni plus de 5 images, ni le 1080P
     const refImages = agnesRequest.images ? agnesRequest.images.length : 0;
     const refVideos = agnesRequest.videos ? agnesRequest.videos.length : 0;
-    const needsPaidModel = wantedSize === '1080P' || refVideos > 0 || refImages > FLASH_MAX_IMAGES;
+    const needsPaidModel = true; // offre payante : jamais le modèle gratuit (flash), sa file est saturée
     agnesRequest.model = needsPaidModel ? MODEL_PAID : MODEL_FLASH;
     agnesRequest.size = needsPaidModel ? wantedSize : '720P';
     console.log('[ROUTING]', mode, '->', agnesRequest.model, agnesRequest.size);
@@ -294,7 +296,7 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
           error: 'agnes_api_error',
           message_fr: 'Erreur API Agnes',
           message_en: 'Agnes API error',
-          details: errorText,
+          message_nl: 'Agnes API-fout',
         });
       }
 
