@@ -226,11 +226,15 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
     }
     console.log('[DEBUG] media data-uris', publicUrls.map(u => u.slice(0, 48) + ' len=' + u.length));
 
+    const MODEL_PAID = 'agnes-video-2.5';
+    const MODEL_FLASH = 'agnes-video-2.5-flash';
+    const FLASH_MAX_IMAGES = 5;
+    const wantedSize = String(req.body?.resolution || '720P').toUpperCase() === '1080P' ? '1080P' : '720P';
     const agnesRequest = {
-      model: 'agnes-video-2.5',
+      model: MODEL_PAID, // ajusté plus bas selon le mode, les médias et la résolution
       prompt,
       seconds: String(durationNum),
-      size: '1080P',
+      size: wantedSize,
       aspect_ratio: '9:16',
     };
 
@@ -253,6 +257,14 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
       if (imageUrls.length > 0) agnesRequest.images = imageUrls;
       if (videoUrls.length > 0) agnesRequest.videos = videoUrls.map(url => ({ url, start_seconds: 0, require_audio: false }));
     }
+
+    // Routage de modèle : le modèle gratuit (flash) ne gère ni vidéo de référence, ni plus de 5 images, ni le 1080P
+    const refImages = agnesRequest.images ? agnesRequest.images.length : 0;
+    const refVideos = agnesRequest.videos ? agnesRequest.videos.length : 0;
+    const needsPaidModel = wantedSize === '1080P' || refVideos > 0 || refImages > FLASH_MAX_IMAGES;
+    agnesRequest.model = needsPaidModel ? MODEL_PAID : MODEL_FLASH;
+    agnesRequest.size = needsPaidModel ? wantedSize : '720P';
+    console.log('[ROUTING]', mode, '->', agnesRequest.model, agnesRequest.size);
 
     let agnesResponse;
     try {
@@ -296,6 +308,8 @@ app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res
     const jobId = randomUUID();
     jobs.set(jobId, {
       jobId,
+      model: agnesRequest.model,
+      size: agnesRequest.size,
       videoId: agnesResponse.video_id,
       status: 'queued',
       progress: 0,
@@ -329,7 +343,7 @@ app.get('/api/studio-video/status/:jobId', async (req, res) => {
 
     try {
       const response = await fetch(
-        `${AGNES_BASE_URL.replace('/v1', '')}/agnesapi?video_id=${job.videoId}&model_name=agnes-video-2.5`,
+        `${AGNES_BASE_URL.replace('/v1', '')}/agnesapi?video_id=${job.videoId}&model_name=${job.model || 'agnes-video-2.5'}`,
         { headers: { 'Authorization': `Bearer ${AGNES_API_KEY}` } }
       );
 
