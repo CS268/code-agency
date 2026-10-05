@@ -8,6 +8,7 @@ import { unlinkSync, existsSync, mkdirSync, readFileSync } from 'fs';
 import sharp from 'sharp';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { createPayments } from './payments.js';
 
 dotenv.config();
 
@@ -97,6 +98,23 @@ const app = express();
 // sinon le rate-limit s'applique à tort à l'ensemble des visiteurs confondus
 app.set('trust proxy', 1);
 
+// --- Paiement Stripe : actif seulement si STRIPE_SECRET_KEY et STRIPE_WEBHOOK_SECRET sont définis (sinon accès par PIN) ---
+const payments = (process.env.STRIPE_SECRET_KEY && process.env.STRIPE_WEBHOOK_SECRET)
+  ? createPayments({
+      stripeSecretKey: process.env.STRIPE_SECRET_KEY,
+      webhookSecret: process.env.STRIPE_WEBHOOK_SECRET,
+      agnesApiKey: AGNES_API_KEY,
+      agnesBaseUrl: AGNES_BASE_URL,
+      publicBaseUrl: process.env.PUBLIC_BASE_URL || 'https://video.jcode.store',
+      fetchFn: fetch,
+    })
+  : null;
+console.log('[PAYMENTS]', payments ? 'Stripe actif' : 'desactive (acces par PIN)');
+// Le webhook doit recevoir le corps brut : il est déclaré AVANT express.json()
+if (payments) {
+  app.post('/api/stripe/webhook', express.raw({ type: 'application/json' }), payments.webhookHandler);
+}
+
 app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static(UPLOAD_DIR));
@@ -113,6 +131,13 @@ function cleanupFiles(files) {
       try { unlinkSync(filePath); } catch (err) { console.error('Delete failed:', err); }
     }
   });
+}
+
+if (payments) {
+  // Paiement actif : ces routes remplacent l'accès par PIN (déclarées avant l'ancienne route, qui n'est alors plus atteinte)
+  app.post('/api/studio-video/generate', payments.rateLimit, upload.array('files', 9), payments.createOrderHandler);
+  app.get('/api/orders/:id', payments.getOrderHandler);
+  payments.startBackgroundTasks();
 }
 
 app.post('/api/studio-video/generate', upload.array('files', 9), async (req, res) => {
