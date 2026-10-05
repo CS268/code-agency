@@ -28,7 +28,17 @@ _r0 = raw.lstrip()
 _fm = re.match(r"---\s*\n(.*?)\n---\s*\n", _r0, re.S)
 if _fm:
     _tm = re.search(r'^title:\s*"?(.*?)"?\s*$', _fm.group(1), re.M)
-    raw = "# " + (_tm.group(1) if _tm else "Sans titre") + "\n\n" + _r0[_fm.end():]
+    _fm_body = _r0[_fm.end():]
+    if _tm and _tm.group(1).strip():
+        _fm_title = _tm.group(1).strip()
+    else:
+        _hm = re.search(r'^#\s+(.+?)\s*$', _fm_body, re.M)
+        if not _hm:
+            print("PUBLICATION BLOQUEE : titre introuvable (ni 'title:' dans l'en-tete, ni ligne '# Titre')")
+            raise SystemExit(2)
+        _fm_title = _hm.group(1).strip()
+        _fm_body = _fm_body[:_hm.start()] + _fm_body[_hm.end():].lstrip("\n")
+    raw = "# " + _fm_title + "\n\n" + _fm_body
 lines = raw.strip().split('\n')
 title = lines[0].lstrip('#').strip()
 body_md = '\n'.join(lines[1:]).strip()
