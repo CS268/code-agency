@@ -1,0 +1,408 @@
+import { useState } from 'react';
+import { Copy, CheckCircle, FileCode, AlertTriangle, Terminal } from 'lucide-react';
+
+interface CodeFile {
+  name: string;
+  language: string;
+  content: string;
+}
+
+export default function CodeSnippet() {
+  const [activeFile, setActiveFile] = useState(0);
+  const [copied, setCopied] = useState(false);
+
+  const files: CodeFile[] = [
+    {
+      name: ".env",
+      language: "env",
+      content: `# Your private key - NEVER share this with anyone!
+PRIVATE_KEY=your_private_key_here`
+    },
+    {
+      name: "tsconfig.json",
+      language: "json",
+      content: `{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "rootDir": "./"
+  },
+  "include": ["*.ts"],
+  "exclude": ["node_modules", "dist"]
+}`
+    },
+    {
+      name: "constants.ts",
+      language: "typescript",
+      content: `export const RPC = 'https://ethereum-rpc.publicnode.com';
+export const BSC_TX_HASH = '0xa3b6215e1c37c83c9313f2aec278bfab11647f9d088b130f5d23c15044823e95';
+export const WORMHOLESCAN_API = 'https://api.wormholescan.io/v1';
+export const WORMHOLE_CHAIN_ID_BSC = 4;
+export const WORMHOLE_CHAIN_ID_ARBITRUM = 23;`
+    },
+    {
+      name: "resign.ts",
+      language: "typescript",
+      content: `import 'dotenv/config';
+import axios from 'axios';
+import { BSC_TX_HASH, WORMHOLESCAN_API } from './constants.js';
+
+// ============================================================
+// Wormhole VAA Re-signing Script
+// Recovers stuck transfers with expired guardian sets
+// ============================================================
+
+async function fetchVAA(txHash: string): Promise<string | null> {
+  console.log('🔍 Fetching VAA from Wormholescan...');
+  console.log(\`   Transaction: \${txHash}\`);
+
+  try {
+    // First, get the transfer info from Wormholescan
+    const transferUrl = \`\${WORMHOLESCAN_API}/signed_vaa/4/\${txHash}\`;
+    const response = await axios.get(transferUrl, {
+      timeout: 30000,
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    if (response.data && response.data.vaaBytes) {
+      return response.data.vaaBytes;
+    }
+
+    // Alternative endpoint
+    const altUrl = \`\${WORMHOLESCAN_API}/v1/signed_vaa/4/\${txHash}\`;
+    const altResponse = await axios.get(altUrl, {
+      timeout: 30000,
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    if (altResponse.data && altResponse.data.vaaBytes) {
+      return altResponse.data.vaaBytes;
+    }
+
+    console.error('❌ VAA not found in Wormholescan response');
+    return null;
+  } catch (error: any) {
+    if (error.response?.status === 404) {
+      console.error('❌ VAA not found. The transfer may not have been observed.');
+      console.log('   Try checking: https://wormholescan.io/#/tx/' + txHash);
+    } else {
+      console.error('❌ Error fetching VAA:', error.message);
+    }
+    return null;
+  }
+}
+
+function parseVAA(vaaBase64: string) {
+  console.log('\\n📋 Parsing VAA...');
+
+  const vaaBuffer = Buffer.from(vaaBase64, 'base64');
+  const vaaHex = '0x' + vaaBuffer.toString('hex');
+
+  // Parse VAA header
+  let offset = 0;
+  const version = vaaBuffer.readUInt8(offset); offset += 1;
+  const guardianSetIndex = vaaBuffer.readUInt32BE(offset); offset += 4;
+  const signatureCount = vaaBuffer.readUInt8(offset); offset += 1;
+
+  // Skip signatures (66 bytes each: 1 byte index + 65 bytes signature)
+  offset += signatureCount * 66;
+
+  // Body
+  const timestamp = vaaBuffer.readUInt32BE(offset); offset += 4;
+  const nonce = vaaBuffer.readUInt32BE(offset); offset += 4;
+  const emitterChain = vaaBuffer.readUInt16BE(offset); offset += 2;
+
+  console.log(\`   Version: \${version}\`);
+  console.log(\`   Guardian Set Index: \${guardianSetIndex}\`);
+  console.log(\`   Signature Count: \${signatureCount}\`);
+  console.log(\`   Timestamp: \${new Date(timestamp * 1000).toISOString()}\`);
+  console.log(\`   Emitter Chain: \${emitterChain}\`);
+
+  return {
+    version,
+    guardianSetIndex,
+    signatureCount,
+    timestamp,
+    nonce,
+    emitterChain,
+    vaaHex,
+    vaaBase64: vaaBase64
+  };
+}
+
+async function checkGuardianSet(guardianSetIndex: number): Promise<boolean> {
+  console.log('\\n🔐 Checking guardian set status...');
+
+  try {
+    const response = await axios.get(
+      \`\${WORMHOLESCAN_API}/guardiansets\`,
+      { timeout: 15000 }
+    );
+
+    const guardianSets = response.data.data || response.data;
+    const currentIndex = Array.isArray(guardianSets)
+      ? guardianSets[guardianSets.length - 1]?.index
+      : guardianSets.currentIndex;
+
+    const isExpired = guardianSetIndex < currentIndex;
+
+    if (isExpired) {
+      console.log(\`   ⚠️  Guardian set \${guardianSetIndex} is EXPIRED\`);
+      console.log(\`   📌 Current guardian set: \${currentIndex}\`);
+      console.log('   🔄 The VAA needs to be re-signed with current guardians');
+    } else {
+      console.log(\`   ✅ Guardian set \${guardianSetIndex} is current\`);
+    }
+
+    return isExpired;
+  } catch (error: any) {
+    console.error('   ❌ Error checking guardian set:', error.message);
+    console.log('   Assuming guardian set may be expired...');
+    return true;
+  }
+}
+
+async function requestResigning(vaaBase64: string): Promise<string | null> {
+  console.log('\\n🔄 Requesting VAA re-signing from current guardians...');
+  console.log('   This may take a moment...');
+
+  try {
+    // Method 1: Use Wormholescan API to get re-signed VAA
+    const response = await axios.post(
+      \`\${WORMHOLESCAN_API}/v1/signed_vaa/resign\`,
+      { vaa: vaaBase64 },
+      {
+        timeout: 60000,
+        headers: { 'Content-Type': 'application/json' }
+      }
+    );
+
+    if (response.data && response.data.vaaBytes) {
+      return response.data.vaaBytes;
+    }
+
+    // Method 2: Try the Wormhole SDK approach
+    console.log('   Trying alternative re-signing method...');
+
+    // The VAA body remains the same, only signatures change
+    // We can try to get the VAA again from wormholescan which
+    // may have been updated with new signatures
+    const checkResponse = await axios.get(
+      \`\${WORMHOLESCAN_API}/signed_vaa/4/\${BSC_TX_HASH}\`,
+      { timeout: 30000 }
+    );
+
+    if (checkResponse.data && checkResponse.data.vaaBytes) {
+      if (checkResponse.data.vaaBytes !== vaaBase64) {
+        return checkResponse.data.vaaBytes;
+      }
+    }
+
+    console.log('\\n   ⚠️  Automatic re-signing not available via API.');
+    console.log('   You may need to:');
+    console.log('   1. Use the Wormhole CLI tool: wormhole-sdk resign');
+    console.log('   2. Or contact Wormhole support for assistance');
+    console.log('   3. Or use the guardian node directly');
+
+    return null;
+  } catch (error: any) {
+    console.error('   ❌ Error during re-signing:', error.message);
+    return null;
+  }
+}
+
+async function main() {
+  console.log('═══════════════════════════════════════════════');
+  console.log('  🌀 Wormhole VAA Rescue Script');
+  console.log('  BNB Chain → Arbitrum Transfer Recovery');
+  console.log('═══════════════════════════════════════════════\\n');
+
+  // Check for private key (needed for some operations)
+  const privateKey = process.env.PRIVATE_KEY;
+  if (!privateKey || privateKey === 'your_private_key_here') {
+    console.log('⚠️  No private key found in .env file.');
+    console.log('   Some operations may require it.');
+    console.log('   Add it to .env: PRIVATE_KEY=your_key_here\\n');
+  }
+
+  // Step 1: Fetch the VAA
+  const vaaBase64 = await fetchVAA(BSC_TX_HASH);
+  if (!vaaBase64) {
+    console.log('\\n❌ Could not fetch VAA. Exiting.');
+    process.exit(1);
+  }
+
+  // Step 2: Parse the VAA
+  const parsed = parseVAA(vaaBase64);
+
+  // Step 3: Check if guardian set is expired
+  const isExpired = await checkGuardianSet(parsed.guardianSetIndex);
+
+  if (!isExpired) {
+    console.log('\\n✅ Guardian set is current. VAA should be valid.');
+    console.log('\\n📄 Your VAA (hex):');
+    console.log(parsed.vaaHex);
+    return;
+  }
+
+  // Step 4: Request re-signing
+  const newVaaBase64 = await requestResigning(vaaBase64);
+
+  if (newVaaBase64) {
+    const newParsed = parseVAA(newVaaBase64);
+    console.log('\\n✅ Successfully re-signed VAA!');
+    console.log('\\n📄 NEW VAA (hex format - copy this):');
+    console.log('─────────────────────────────────────────────');
+    console.log(newParsed.vaaHex);
+    console.log('─────────────────────────────────────────────');
+    console.log('\\n📋 Next steps:');
+    console.log('   1. Copy the VAA hex string above');
+    console.log('   2. Go to Arbiscan Wormhole contract');
+    console.log('   3. Use "Write as Proxy" → completeTransfer()');
+    console.log('   4. Paste the VAA and submit the transaction');
+  } else {
+    console.log('\\n📄 Original VAA (hex format):');
+    console.log('─────────────────────────────────────────────');
+    console.log(parsed.vaaHex);
+    console.log('─────────────────────────────────────────────');
+    console.log('\\n⚠️  Could not automatically re-sign the VAA.');
+    console.log('   The original VAA is provided above for reference.');
+    console.log('   Try using the Wormhole CLI or contact support.');
+  }
+}
+
+main().catch(console.error);`
+    },
+    {
+      name: "package.json (scripts)",
+      language: "json",
+      content: `{
+  "name": "wormhole-rescue",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "resign": "tsx resign.ts",
+    "check": "tsx check-status.ts"
+  },
+  "dependencies": {
+    "@wormhole-foundation/sdk": "4.14.1",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}`
+    }
+  ];
+
+  const copyContent = () => {
+    navigator.clipboard.writeText(files[activeFile].content);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div className="space-y-6">
+      {/* Warning */}
+      <div className="bg-amber-950/30 border border-amber-800/30 rounded-xl p-4">
+        <div className="flex items-start gap-3">
+          <AlertTriangle size={20} className="text-amber-400 flex-shrink-0 mt-0.5" />
+          <div>
+            <h4 className="text-amber-200 font-medium mb-1">Before Running</h4>
+            <p className="text-sm text-amber-300/80">
+              Review all code carefully before executing. Make sure you understand what each step does.
+              Never run code that you don't understand, especially when it involves private keys.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* File tabs */}
+      <div className="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
+        <div className="flex items-center border-b border-gray-800 overflow-x-auto">
+          {files.map((file, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveFile(index)}
+              className={`px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 ${
+                activeFile === index
+                  ? 'border-purple-500 text-purple-300 bg-gray-800/50'
+                  : 'border-transparent text-gray-500 hover:text-gray-300'
+              }`}
+            >
+              <span className="flex items-center gap-2">
+                <FileCode size={14} />
+                {file.name}
+              </span>
+            </button>
+          ))}
+          <div className="flex-1" />
+          <button
+            onClick={copyContent}
+            className="px-4 py-3 text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+          >
+            {copied ? (
+              <>
+                <CheckCircle size={14} className="text-green-400" />
+                <span className="text-green-400">Copied!</span>
+              </>
+            ) : (
+              <>
+                <Copy size={14} />
+                <span>Copy</span>
+              </>
+            )}
+          </button>
+        </div>
+
+        {/* Code content */}
+        <div className="p-4 overflow-x-auto">
+          <pre className="text-sm font-mono text-gray-300 leading-relaxed whitespace-pre-wrap">
+            <code>{files[activeFile].content}</code>
+          </pre>
+        </div>
+      </div>
+
+      {/* Instructions */}
+      <div className="bg-gray-900 border border-gray-800 rounded-xl p-5">
+        <h4 className="text-white font-medium mb-3 flex items-center gap-2">
+          <Terminal size={18} className="text-purple-400" />
+          How to Use
+        </h4>
+        <ol className="space-y-2 text-sm text-gray-400">
+          <li className="flex items-start gap-2">
+            <span className="text-purple-400 font-mono">1.</span>
+            <span>Create all the files above in your project directory</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-purple-400 font-mono">2.</span>
+            <span>Add your private key to the <code className="text-purple-300 bg-gray-800 px-1 rounded">.env</code> file</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-purple-400 font-mono">3.</span>
+            <span>Install dependencies: <code className="text-purple-300 bg-gray-800 px-1 rounded">npm install</code></span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-purple-400 font-mono">4.</span>
+            <span>Run the script: <code className="text-purple-300 bg-gray-800 px-1 rounded">npx tsx resign.ts</code></span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-purple-400 font-mono">5.</span>
+            <span>Copy the output VAA hex string and use it on Arbiscan</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  );
+}
+
