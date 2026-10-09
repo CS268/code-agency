@@ -1425,17 +1425,17 @@ const MARKETING_EFFECTS = [
 // PRESETS DE PROMPT
 // ══════════════════════════════════════════════════════════════════
 const PROMPT_PRESETS = [
-    { label: mktT('art_chip_0', '✨ Premium silencieux'),
+    { get label() { return mktT('art_chip_0', '✨ Premium silencieux'); },
       text: 'Ambiance luxueuse et silencieuse. Le produit reste parfaitement identique à la photo. Lumière dorée, ralenti élégant, reflets subtils. Aucune transformation du sujet.' },
-    { label: mktT('art_chip_1', '⚡ Impact viral'),
+    { get label() { return mktT('art_chip_1', '⚡ Impact viral'); },
       text: 'Style TikTok accrocheur. Mouvement dynamique, lumière pulsée, effet glitch subtil au début. Le sujet reste identique. Conçu pour stopper le scroll.' },
-    { label: mktT('art_chip_2', '🌿 Authentique naturel'),
+    { get label() { return mktT('art_chip_2', '🌿 Authentique naturel'); },
       text: 'Ambiance authentique et naturelle. Lumière douce de jour, mouvement léger, atmosphère chaleureuse et vraie. Le sujet reste identique.' },
-    { label: mktT('art_chip_3', '🎬 Cinématique pub'),
+    { get label() { return mktT('art_chip_3', '🎬 Cinématique pub'); },
       text: 'Qualité cinématographique de publicité nationale. Éclairage dramatique, profondeur de champ, grain film subtil. Le sujet reste parfaitement identique.' },
-    { label: mktT('art_chip_4', '🏆 Énergie sportive'),
+    { get label() { return mktT('art_chip_4', '🏆 Énergie sportive'); },
       text: 'Énergie sportive et performance. Mouvement fort, éclairage contrasté, sensation de puissance. Le sujet reste identique.' },
-    { label: mktT('art_chip_5', '🌸 Beauté délicate'),
+    { get label() { return mktT('art_chip_5', '🌸 Beauté délicate'); },
       text: 'Ambiance beauté délicate. Tons pastel, lumière douce et diffuse, atmosphère sophistiquée et féminine. Le sujet reste identique.' }
 ];
 
