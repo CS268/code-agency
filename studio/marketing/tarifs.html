@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tarifs — Studio Marketing | JCode</title>
+<title data-fr="Tarifs — Studio Marketing | JCode" data-en="Pricing — Marketing Studio | JCode" data-nl="Prijzen — Marketing Studio | JCode">Tarifs — Studio Marketing | JCode</title>
 <style>
 :root{
   --bg:#0f172a; --bg-2:#1e293b;
@@ -82,84 +82,379 @@ h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:tex
       <span class="logo-sub">STUDIO IA VIDÉO</span>
     </a>
     <div class="nav-links">
-      <a href="/studio/prompts/">Studio</a>
-      <a href="/studio/marketing/">Marketing</a>
-      <a class="active" href="/studio/marketing/tarifs.html">Tarifs</a>
+      <a href="/studio/prompts/" data-fr="Studio" data-en="Studio" data-nl="Studio">Studio</a>
+      <a href="/studio/marketing/" data-fr="Marketing" data-en="Marketing" data-nl="Marketing">Marketing</a>
+      <a class="active" href="/studio/marketing/tarifs.html" data-fr="Tarifs" data-en="Pricing" data-nl="Prijzen">Tarifs</a>
       <a class="nav-cta" href="https://jcode.store" target="_blank" rel="noopener">jcode.store ↗</a>
+        <span id="studioLangBar" style="display:flex;gap:0.3rem;margin-left:0.6rem;">
+            <button data-lang="fr" onclick="applyStudioLang('fr')" style="background:none;border:1px solid rgba(255,255,255,0.2);border-radius:50px;padding:6px 12px;cursor:pointer;font-weight:600;font-size:12px;color:#fff;">FR</button>
+            <button data-lang="nl" onclick="applyStudioLang('nl')" style="background:none;border:1px solid rgba(255,255,255,0.2);border-radius:50px;padding:6px 12px;cursor:pointer;font-weight:600;font-size:12px;color:#fff;">NL</button>
+            <button data-lang="en" onclick="applyStudioLang('en')" style="background:none;border:1px solid rgba(255,255,255,0.2);border-radius:50px;padding:6px 12px;cursor:pointer;font-weight:600;font-size:12px;color:#fff;">EN</button>
+        </span>
     </div>
   </div>
 </nav>
 
 <header class="hero wrap">
-  <div class="badge"><span class="dot"></span> Studio Marketing · abonnement</div>
-  <h1>Tes pubs IA, <span class="grad">sans le prix d'agence.</span></h1>
-  <p class="sub">À partir de 9,90 € / mois pour 5 vidéos publicitaires prêtes à publier. Sans engagement.</p>
+  <div class="badge"><span class="dot"></span> <span data-fr="Studio Marketing · abonnement" data-en="Marketing Studio · subscription" data-nl="Marketing Studio · abonnement">Studio Marketing · abonnement</span></div>
+  <h1 data-i18n-html="hero_h1_html">Tes pubs IA, <span class="grad">sans le prix d'agence.</span></h1>
+  <p class="sub" data-fr="À partir de 9,90 € / mois pour 5 vidéos publicitaires prêtes à publier. Sans engagement." data-en="From €9.90 / month for 5 ad videos ready to publish. No commitment." data-nl="Vanaf €9,90 / maand voor 5 advertentievideo's klaar om te publiceren. Zonder verplichting.">À partir de 9,90 € / mois pour 5 vidéos publicitaires prêtes à publier. Sans engagement.</p>
 </header>
 
 <main class="wrap">
   <div class="grid">
 
     <div class="plan">
-      <div class="plan-name">Découverte</div>
-      <div class="price">9,90 € <small>/ mois</small></div>
-      <div class="per">≈ 2,00 € par vidéo · 5 vidéos / mois</div>
+      <div class="plan-name" data-fr="Découverte" data-en="Discovery" data-nl="Ontdekking">Découverte</div>
+      <div class="price" data-i18n-html="price_9_html">9,90 € <small>/ mois</small></div>
+      <div class="per" data-fr="≈ 2,00 € par vidéo · 5 vidéos / mois" data-en="≈ €2.00 per video · 5 videos / month" data-nl="≈ €2,00 per video · 5 video's / maand">≈ 2,00 € par vidéo · 5 vidéos / mois</div>
       <ul class="feat">
-        <li><span class="ck">✓</span> 5 vidéos publicitaires / mois</li>
-        <li><span class="ck">✓</span> 10 types de campagne (produit, immo, resto…)</li>
-        <li><span class="ck">✓</span> Formats 9:16 · 1:1 · 16:9 prêts à publier</li>
-        <li><span class="ck">✓</span> Accroche + appel à l'action intégrés</li>
-        <li><span class="ck">✓</span> Produit fidèle à ta photo (non déformé)</li>
+        <li><span class="ck">✓</span> <span data-fr="5 vidéos publicitaires / mois" data-en="5 ad videos / month" data-nl="5 advertentievideo's / maand">5 vidéos publicitaires / mois</span></li>
+        <li><span class="ck">✓</span> <span data-fr="10 types de campagne (produit, immo, resto…)" data-en="10 campaign types (product, real estate, restaurant…)" data-nl="10 campagnetypes (product, vastgoed, restaurant…)">10 types de campagne (produit, immo, resto…)</span></li>
+        <li><span class="ck">✓</span> <span data-fr="Formats 9:16 · 1:1 · 16:9 prêts à publier" data-en="9:16 · 1:1 · 16:9 formats ready to publish" data-nl="9:16 · 1:1 · 16:9 formaten klaar om te publiceren">Formats 9:16 · 1:1 · 16:9 prêts à publier</span></li>
+        <li><span class="ck">✓</span> <span data-fr="Accroche + appel à l'action intégrés" data-en="Hook + call to action built-in" data-nl="Hook + call-to-action ingebouwd">Accroche + appel à l'action intégrés</span></li>
+        <li><span class="ck">✓</span> <span data-fr="Produit fidèle à ta photo (non déformé)" data-en="Product faithful to your photo (not distorted)" data-nl="Product trouw aan je foto (niet vervormd)">Produit fidèle à ta photo (non déformé)</span></li>
       </ul>
       <!-- REMPLACE href PAR TON LIEN DE CHECKOUT (Stripe / Lemon Squeezy) -->
-      <a class="btn btn-line" href="https://buy.stripe.com/dRmcMY8Jq4TL0BfeSXbV608">Commencer</a>
+      <a class="btn btn-line" href="https://buy.stripe.com/dRmcMY8Jq4TL0BfeSXbV608" data-fr="Commencer" data-en="Get started" data-nl="Aan de slag">Commencer</a>
     </div>
 
     <div class="plan pop">
-      <div class="pop-badge">Le plus populaire</div>
-      <div class="plan-name">Pro</div>
-      <div class="price">24,90 € <small>/ mois</small></div>
-      <div class="per">≈ 1,66 € par vidéo · 15 vidéos / mois</div>
+      <div class="pop-badge" data-fr="Le plus populaire" data-en="Most popular" data-nl="Meest populair">Le plus populaire</div>
+      <div class="plan-name" data-fr="Pro" data-en="Pro" data-nl="Pro">Pro</div>
+      <div class="price" data-i18n-html="price_24_html">24,90 € <small>/ mois</small></div>
+      <div class="per" data-fr="≈ 1,66 € par vidéo · 15 vidéos / mois" data-en="≈ €1.66 per video · 15 videos / month" data-nl="≈ €1,66 per video · 15 video's / maand">≈ 1,66 € par vidéo · 15 vidéos / mois</div>
       <ul class="feat">
-        <li><span class="ck">✓</span> 15 vidéos publicitaires / mois</li>
-        <li><span class="ck">✓</span> Tout le palier Découverte</li>
-        <li><span class="ck">✓</span> 12 effets marketing (luxe, néon, cinématique…)</li>
-        <li><span class="ck">✓</span> File d'attente multi-visuels</li>
-        <li><span class="ck">✓</span> Support prioritaire</li>
+        <li><span class="ck">✓</span> <span data-fr="15 vidéos publicitaires / mois" data-en="15 ad videos / month" data-nl="15 advertentievideo's / maand">15 vidéos publicitaires / mois</span></li>
+        <li><span class="ck">✓</span> <span data-fr="Tout le palier Découverte" data-en="Everything in the Discovery tier" data-nl="Alles uit het Ontdekking-pakket">Tout le palier Découverte</span></li>
+        <li><span class="ck">✓</span> <span data-fr="12 effets marketing (luxe, néon, cinématique…)" data-en="12 marketing effects (luxury, neon, cinematic…)" data-nl="12 marketingeffecten (luxe, neon, cinematografisch…)">12 effets marketing (luxe, néon, cinématique…)</span></li>
+        <li><span class="ck">✓</span> <span data-fr="File d'attente multi-visuels" data-en="Multi-visual queue" data-nl="Multi-visual wachtrij">File d'attente multi-visuels</span></li>
+        <li><span class="ck">✓</span> <span data-fr="Support prioritaire" data-en="Priority support" data-nl="Prioriteitsondersteuning">Support prioritaire</span></li>
       </ul>
       <!-- REMPLACE href PAR TON LIEN DE CHECKOUT (Stripe / Lemon Squeezy) -->
-      <a class="btn btn-grad" href="https://buy.stripe.com/5kQeV6f7O9a1fw9dOTbV609">Choisir Pro</a>
+      <a class="btn btn-grad" href="https://buy.stripe.com/5kQeV6f7O9a1fw9dOTbV609" data-fr="Choisir Pro" data-en="Choose Pro" data-nl="Kies Pro">Choisir Pro</a>
     </div>
 
     <div class="plan">
-      <div class="plan-name">Agence</div>
-      <div class="price">59,90 € <small>/ mois</small></div>
-      <div class="per">≈ 1,50 € par vidéo · 40 vidéos / mois</div>
+      <div class="plan-name" data-fr="Agence" data-en="Agency" data-nl="Agentschap">Agence</div>
+      <div class="price" data-i18n-html="price_59_html">59,90 € <small>/ mois</small></div>
+      <div class="per" data-fr="≈ 1,50 € par vidéo · 40 vidéos / mois" data-en="≈ €1.50 per video · 40 videos / month" data-nl="≈ €1,50 per video · 40 video's / maand">≈ 1,50 € par vidéo · 40 vidéos / mois</div>
       <ul class="feat">
-        <li><span class="ck">✓</span> 40 vidéos publicitaires / mois</li>
-        <li><span class="ck">✓</span> Tout le palier Pro</li>
-        <li><span class="ck">✓</span> Multi-marques / multi-clients</li>
-        <li><span class="ck">✓</span> Volume pour campagnes à grande échelle</li>
-        <li><span class="ck">✓</span> Accompagnement dédié</li>
+        <li><span class="ck">✓</span> <span data-fr="40 vidéos publicitaires / mois" data-en="40 ad videos / month" data-nl="40 advertentievideo's / maand">40 vidéos publicitaires / mois</span></li>
+        <li><span class="ck">✓</span> <span data-fr="Tout le palier Pro" data-en="Everything in the Pro tier" data-nl="Alles uit het Pro-pakket">Tout le palier Pro</span></li>
+        <li><span class="ck">✓</span> <span data-fr="Multi-marques / multi-clients" data-en="Multi-brand / multi-client" data-nl="Multi-merk / multi-klant">Multi-marques / multi-clients</span></li>
+        <li><span class="ck">✓</span> <span data-fr="Volume pour campagnes à grande échelle" data-en="Volume for large-scale campaigns" data-nl="Volume voor grootschalige campagnes">Volume pour campagnes à grande échelle</span></li>
+        <li><span class="ck">✓</span> <span data-fr="Accompagnement dédié" data-en="Dedicated support" data-nl="Toegewijde ondersteuning">Accompagnement dédié</span></li>
       </ul>
       <!-- REMPLACE href PAR TON LIEN DE CHECKOUT (Stripe / Lemon Squeezy) -->
-      <a class="btn btn-line" href="https://buy.stripe.com/cNi3co2l2fypdo15inbV60a">Choisir Agence</a>
+      <a class="btn btn-line" href="https://buy.stripe.com/cNi3co2l2fypdo15inbV60a" data-fr="Choisir Agence" data-en="Choose Agency" data-nl="Kies Agentschap">Choisir Agence</a>
     </div>
 
   </div>
 
-  <p class="unit">Tu préfères payer à l'unité ? <a href="https://video.jcode.store" target="_blank" rel="noopener">Studio Vidéo</a> → 1,50 € à 2,50 € par génération, sans abonnement.</p>
+  <p class="unit" data-i18n-html="unit_html">Tu préfères payer à l'unité ? <a href="https://video.jcode.store" target="_blank" rel="noopener">Studio Vidéo</a> → 1,50 € à 2,50 € par génération, sans abonnement.</p>
 
   <section class="why">
-    <h2>Pourquoi un abonnement plutôt que le faire toi-même ?</h2>
+    <h2 data-fr="Pourquoi un abonnement plutôt que le faire toi-même ?" data-en="Why subscribe instead of doing it yourself?" data-nl="Waarom abonneren in plaats van het zelf te doen?">Pourquoi un abonnement plutôt que le faire toi-même ?</h2>
     <div class="why-grid">
-      <div class="why-card"><div class="ic">⏱️</div><h3>2 minutes, pas 2 jours</h3><p>Une pub vidéo humaine coûte cher et prend plusieurs jours. Ici : tu déposes ta photo, tu cliques, tu publies.</p></div>
-      <div class="why-card"><div class="ic">🎯</div><h3>Prêt à publier</h3><p>Accroche des 3 premières secondes, appel à l'action, bon format par plateforme : tout est déjà structuré pour convertir.</p></div>
-      <div class="why-card"><div class="ic">🔒</div><h3>Ton produit reste ton produit</h3><p>L'IA anime ton visuel sans le déformer : même produit, même visage, même identité. Zéro mauvaise surprise.</p></div>
+      <div class="why-card"><div class="ic">⏱️</div><h3 data-fr="2 minutes, pas 2 jours" data-en="2 minutes, not 2 days" data-nl="2 minuten, geen 2 dagen">2 minutes, pas 2 jours</h3><p data-fr="Une pub vidéo humaine coûte cher et prend plusieurs jours. Ici : tu déposes ta photo, tu cliques, tu publies." data-en="A human-made video ad costs a lot and takes several days. Here: drop your photo, click, publish." data-nl="Een menselijke video-advertentie kost veel en duurt meerdere dagen. Hier: plaats je foto, klik, publiceer.">Une pub vidéo humaine coûte cher et prend plusieurs jours. Ici : tu déposes ta photo, tu cliques, tu publies.</p></div>
+      <div class="why-card"><div class="ic">🎯</div><h3 data-fr="Prêt à publier" data-en="Ready to publish" data-nl="Klaar om te publiceren">Prêt à publier</h3><p data-fr="Accroche des 3 premières secondes, appel à l'action, bon format par plateforme : tout est déjà structuré pour convertir." data-en="Hook for the first 3 seconds, call to action, right format per platform: everything is already structured to convert." data-nl="Hook voor de eerste 3 seconden, call-to-action, juist formaat per platform: alles is al gestructureerd om te converteren.">Accroche des 3 premières secondes, appel à l'action, bon format par plateforme : tout est déjà structuré pour convertir.</p></div>
+      <div class="why-card"><div class="ic">🔒</div><h3 data-fr="Ton produit reste ton produit" data-en="Your product stays your product" data-nl="Je product blijft je product">Ton produit reste ton produit</h3><p data-fr="L'IA anime ton visuel sans le déformer : même produit, même visage, même identité. Zéro mauvaise surprise." data-en="AI animates your visual without distorting it: same product, same face, same identity. Zero nasty surprises." data-nl="AI animeert je visual zonder te vervormen: zelfde product, zelfde gezicht, zelfde identiteit. Geen nare verrassingen.">L'IA anime ton visuel sans le déformer : même produit, même visage, même identité. Zéro mauvaise surprise.</p></div>
     </div>
   </section>
 
-  <p class="fine">Sans engagement · Annulable à tout moment · Génération IA via Agnes AI</p>
+  <p class="fine" data-fr="Sans engagement · Annulable à tout moment · Génération IA via Agnes AI" data-en="No commitment · Cancel anytime · AI generation via Agnes AI" data-nl="Zonder verplichting · Altijd opzegbaar · AI-generatie via Agnes AI">Sans engagement · Annulable à tout moment · Génération IA via Agnes AI</p>
 </main>
+
+<!-- i18n-tarifs-v1 -->
+
+<script>
+(function () {
+    const TARIFS_I18N = {
+  "nav_studio": {
+    "fr": "Studio",
+    "en": "Studio",
+    "nl": "Studio"
+  },
+  "nav_marketing": {
+    "fr": "Marketing",
+    "en": "Marketing",
+    "nl": "Marketing"
+  },
+  "nav_tarifs": {
+    "fr": "Tarifs",
+    "en": "Pricing",
+    "nl": "Prijzen"
+  },
+  "page_title": {
+    "fr": "Tarifs — Studio Marketing | JCode",
+    "en": "Pricing — Marketing Studio | JCode",
+    "nl": "Prijzen — Marketing Studio | JCode"
+  },
+  "hero_badge": {
+    "fr": "Studio Marketing · abonnement",
+    "en": "Marketing Studio · subscription",
+    "nl": "Marketing Studio · abonnement"
+  },
+  "hero_h1_html": {
+    "fr": "Tes pubs IA, <span class=\"grad\">sans le prix d'agence.</span>",
+    "en": "Your AI ads, <span class=\"grad\">without agency prices.</span>",
+    "nl": "Jouw AI-ads, <span class=\"grad\">zonder bureauprijzen.</span>"
+  },
+  "hero_sub": {
+    "fr": "À partir de 9,90 € / mois pour 5 vidéos publicitaires prêtes à publier. Sans engagement.",
+    "en": "From €9.90 / month for 5 ad videos ready to publish. No commitment.",
+    "nl": "Vanaf €9,90 / maand voor 5 advertentievideo's klaar om te publiceren. Zonder verplichting."
+  },
+  "plan_discovery": {
+    "fr": "Découverte",
+    "en": "Discovery",
+    "nl": "Ontdekking"
+  },
+  "plan_pro": {
+    "fr": "Pro",
+    "en": "Pro",
+    "nl": "Pro"
+  },
+  "plan_agency": {
+    "fr": "Agence",
+    "en": "Agency",
+    "nl": "Agentschap"
+  },
+  "price_9_html": {
+    "fr": "9,90 € <small>/ mois</small>",
+    "en": "€9.90 <small>/ month</small>",
+    "nl": "€9,90 <small>/ maand</small>"
+  },
+  "price_24_html": {
+    "fr": "24,90 € <small>/ mois</small>",
+    "en": "€24.90 <small>/ month</small>",
+    "nl": "€24,90 <small>/ maand</small>"
+  },
+  "price_59_html": {
+    "fr": "59,90 € <small>/ mois</small>",
+    "en": "€59.90 <small>/ month</small>",
+    "nl": "€59,90 <small>/ maand</small>"
+  },
+  "per_5": {
+    "fr": "≈ 2,00 € par vidéo · 5 vidéos / mois",
+    "en": "≈ €2.00 per video · 5 videos / month",
+    "nl": "≈ €2,00 per video · 5 video's / maand"
+  },
+  "per_15": {
+    "fr": "≈ 1,66 € par vidéo · 15 vidéos / mois",
+    "en": "≈ €1.66 per video · 15 videos / month",
+    "nl": "≈ €1,66 per video · 15 video's / maand"
+  },
+  "per_40": {
+    "fr": "≈ 1,50 € par vidéo · 40 vidéos / mois",
+    "en": "≈ €1.50 per video · 40 videos / month",
+    "nl": "≈ €1,50 per video · 40 video's / maand"
+  },
+  "feat_d1": {
+    "fr": "5 vidéos publicitaires / mois",
+    "en": "5 ad videos / month",
+    "nl": "5 advertentievideo's / maand"
+  },
+  "feat_d2": {
+    "fr": "10 types de campagne (produit, immo, resto…)",
+    "en": "10 campaign types (product, real estate, restaurant…)",
+    "nl": "10 campagnetypes (product, vastgoed, restaurant…)"
+  },
+  "feat_d3": {
+    "fr": "Formats 9:16 · 1:1 · 16:9 prêts à publier",
+    "en": "9:16 · 1:1 · 16:9 formats ready to publish",
+    "nl": "9:16 · 1:1 · 16:9 formaten klaar om te publiceren"
+  },
+  "feat_d4": {
+    "fr": "Accroche + appel à l'action intégrés",
+    "en": "Hook + call to action built-in",
+    "nl": "Hook + call-to-action ingebouwd"
+  },
+  "feat_d5": {
+    "fr": "Produit fidèle à ta photo (non déformé)",
+    "en": "Product faithful to your photo (not distorted)",
+    "nl": "Product trouw aan je foto (niet vervormd)"
+  },
+  "feat_p1": {
+    "fr": "15 vidéos publicitaires / mois",
+    "en": "15 ad videos / month",
+    "nl": "15 advertentievideo's / maand"
+  },
+  "feat_p2": {
+    "fr": "Tout le palier Découverte",
+    "en": "Everything in the Discovery tier",
+    "nl": "Alles uit het Ontdekking-pakket"
+  },
+  "feat_p3": {
+    "fr": "12 effets marketing (luxe, néon, cinématique…)",
+    "en": "12 marketing effects (luxury, neon, cinematic…)",
+    "nl": "12 marketingeffecten (luxe, neon, cinematografisch…)"
+  },
+  "feat_p4": {
+    "fr": "File d'attente multi-visuels",
+    "en": "Multi-visual queue",
+    "nl": "Multi-visual wachtrij"
+  },
+  "feat_p5": {
+    "fr": "Support prioritaire",
+    "en": "Priority support",
+    "nl": "Prioriteitsondersteuning"
+  },
+  "feat_a1": {
+    "fr": "40 vidéos publicitaires / mois",
+    "en": "40 ad videos / month",
+    "nl": "40 advertentievideo's / maand"
+  },
+  "feat_a2": {
+    "fr": "Tout le palier Pro",
+    "en": "Everything in the Pro tier",
+    "nl": "Alles uit het Pro-pakket"
+  },
+  "feat_a3": {
+    "fr": "Multi-marques / multi-clients",
+    "en": "Multi-brand / multi-client",
+    "nl": "Multi-merk / multi-klant"
+  },
+  "feat_a4": {
+    "fr": "Volume pour campagnes à grande échelle",
+    "en": "Volume for large-scale campaigns",
+    "nl": "Volume voor grootschalige campagnes"
+  },
+  "feat_a5": {
+    "fr": "Accompagnement dédié",
+    "en": "Dedicated support",
+    "nl": "Toegewijde ondersteuning"
+  },
+  "pop_badge": {
+    "fr": "Le plus populaire",
+    "en": "Most popular",
+    "nl": "Meest populair"
+  },
+  "btn_start": {
+    "fr": "Commencer",
+    "en": "Get started",
+    "nl": "Aan de slag"
+  },
+  "btn_choose_p": {
+    "fr": "Choisir Pro",
+    "en": "Choose Pro",
+    "nl": "Kies Pro"
+  },
+  "btn_choose_a": {
+    "fr": "Choisir Agence",
+    "en": "Choose Agency",
+    "nl": "Kies Agentschap"
+  },
+  "unit_html": {
+    "fr": "Tu préfères payer à l'unité ? <a href=\"https://video.jcode.store\" target=\"_blank\" rel=\"noopener\">Studio Vidéo</a> → 1,50 € à 2,50 € par génération, sans abonnement.",
+    "en": "Prefer pay-as-you-go? <a href=\"https://video.jcode.store\" target=\"_blank\" rel=\"noopener\">Video Studio</a> → €1.50 to €2.50 per generation, no subscription.",
+    "nl": "Liever per stuk betalen? <a href=\"https://video.jcode.store\" target=\"_blank\" rel=\"noopener\">Video Studio</a> → €1,50 tot €2,50 per generatie, zonder abonnement."
+  },
+  "why_title": {
+    "fr": "Pourquoi un abonnement plutôt que le faire toi-même ?",
+    "en": "Why subscribe instead of doing it yourself?",
+    "nl": "Waarom abonneren in plaats van het zelf te doen?"
+  },
+  "why_1_title": {
+    "fr": "2 minutes, pas 2 jours",
+    "en": "2 minutes, not 2 days",
+    "nl": "2 minuten, geen 2 dagen"
+  },
+  "why_1_desc": {
+    "fr": "Une pub vidéo humaine coûte cher et prend plusieurs jours. Ici : tu déposes ta photo, tu cliques, tu publies.",
+    "en": "A human-made video ad costs a lot and takes several days. Here: drop your photo, click, publish.",
+    "nl": "Een menselijke video-advertentie kost veel en duurt meerdere dagen. Hier: plaats je foto, klik, publiceer."
+  },
+  "why_2_title": {
+    "fr": "Prêt à publier",
+    "en": "Ready to publish",
+    "nl": "Klaar om te publiceren"
+  },
+  "why_2_desc": {
+    "fr": "Accroche des 3 premières secondes, appel à l'action, bon format par plateforme : tout est déjà structuré pour convertir.",
+    "en": "Hook for the first 3 seconds, call to action, right format per platform: everything is already structured to convert.",
+    "nl": "Hook voor de eerste 3 seconden, call-to-action, juist formaat per platform: alles is al gestructureerd om te converteren."
+  },
+  "why_3_title": {
+    "fr": "Ton produit reste ton produit",
+    "en": "Your product stays your product",
+    "nl": "Je product blijft je product"
+  },
+  "why_3_desc": {
+    "fr": "L'IA anime ton visuel sans le déformer : même produit, même visage, même identité. Zéro mauvaise surprise.",
+    "en": "AI animates your visual without distorting it: same product, same face, same identity. Zero nasty surprises.",
+    "nl": "AI animeert je visual zonder te vervormen: zelfde product, zelfde gezicht, zelfde identiteit. Geen nare verrassingen."
+  },
+  "footer_fine": {
+    "fr": "Sans engagement · Annulable à tout moment · Génération IA via Agnes AI",
+    "en": "No commitment · Cancel anytime · AI generation via Agnes AI",
+    "nl": "Zonder verplichting · Altijd opzegbaar · AI-generatie via Agnes AI"
+  },
+  "lang_fr": {
+    "fr": "FR",
+    "en": "FR",
+    "nl": "FR"
+  },
+  "lang_nl": {
+    "fr": "NL",
+    "en": "NL",
+    "nl": "NL"
+  },
+  "lang_en": {
+    "fr": "EN",
+    "en": "EN",
+    "nl": "EN"
+  }
+};
+
+    const LANG_KEY = 'studio-lang'; // même clé que /marketing/ -> cohérence cross-pages
+    function getLang() {
+        const params = new URLSearchParams(window.location.search);
+        const urlLang = params.get('lang');
+        if (urlLang && ['fr','nl','en'].includes(urlLang)) {
+            try { localStorage.setItem(LANG_KEY, urlLang); } catch(e){}
+            return urlLang;
+        }
+        try {
+            const saved = localStorage.getItem(LANG_KEY);
+            if (saved && ['fr','nl','en'].includes(saved)) return saved;
+        } catch(e){}
+        return document.documentElement.lang || 'fr';
+    }
+
+    function applyLang(lang) {
+        if (!['fr','nl','en'].includes(lang)) lang = 'fr';
+        document.documentElement.lang = lang;
+        try { localStorage.setItem(LANG_KEY, lang); } catch(e){}
+
+        // Textes simples
+        document.querySelectorAll('[data-fr]').forEach(el => {
+            const t = el.dataset[lang];
+            if (t) el.innerText = t;
+        });
+
+        // HTML complexe (titres avec balises, etc.)
+        document.querySelectorAll('[data-i18n-html]').forEach(el => {
+            const key = el.dataset.i18nHtml;
+            const entry = TARIFS_I18N[key];
+            if (entry && entry[lang]) el.innerHTML = entry[lang];
+            else if (entry && entry.fr) el.innerHTML = entry.fr;
+        });
+
+        // Mise à jour de la barre de langue
+        const bar = document.getElementById('studioLangBar');
+        if (bar) {
+            bar.querySelectorAll('button').forEach(b => {
+                b.style.background = (b.dataset.lang === lang) ? '#6366f1' : 'none';
+            });
+        }
+    }
+
+    window.applyStudioLang = applyLang;
+    window.addEventListener('DOMContentLoaded', () => applyLang(getLang()));
+})();
+</script>
 
 </body>
 </html>
