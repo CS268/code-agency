@@ -487,54 +487,59 @@ h1 { background: none; -webkit-text-fill-color: #f8fafc; }
         <span class="logo-sub" style="color:var(--ink-faint);font-size:0.68rem;letter-spacing:0.18em;font-weight:600;">STUDIO IA VIDÉO</span>
     </a>
     <div class="nav-links" style="display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap;">
-        <a href="/studio/prompts/" style="color:var(--ink-dim);text-decoration:none;font-size:0.85rem;">Studio</a>
-        <a href="/studio/marketing/" style="color:#fff;text-decoration:none;font-size:0.85rem;font-weight:600;">Marketing</a>
-        <a href="/studio/marketing/tarifs.html" style="color:var(--ink-dim);text-decoration:none;font-size:0.85rem;">Tarifs</a>
+        <a href="/studio/prompts/" style="color:var(--ink-dim);text-decoration:none;font-size:0.85rem;" data-fr="Studio" data-en="Studio" data-nl="Studio">Studio</a>
+        <a href="/studio/marketing/" style="color:#fff;text-decoration:none;font-size:0.85rem;font-weight:600;" data-fr="Marketing" data-en="Marketing" data-nl="Marketing">Marketing</a>
+        <a href="/studio/marketing/tarifs.html" style="color:var(--ink-dim);text-decoration:none;font-size:0.85rem;" data-fr="Tarifs" data-en="Pricing" data-nl="Prijzen">Tarifs</a>
         <a href="https://jcode.store" target="_blank" rel="noopener" style="background:var(--grad);color:#fff !important;padding:0.5rem 1rem;border-radius:999px;font-weight:600;text-decoration:none;font-size:0.85rem;">jcode.store ↗</a>
+        <span id="studioLangBar" style="display:flex;gap:0.3rem;">
+            <button data-lang="fr" onclick="applyStudioLang('fr')" style="background:#6366f1;border:1px solid rgba(255,255,255,0.2);border-radius:50px;padding:6px 12px;cursor:pointer;font-weight:600;font-size:12px;color:#fff;">FR</button>
+            <button data-lang="nl" onclick="applyStudioLang('nl')" style="background:none;border:1px solid rgba(255,255,255,0.2);border-radius:50px;padding:6px 12px;cursor:pointer;font-weight:600;font-size:12px;color:#fff;">NL</button>
+            <button data-lang="en" onclick="applyStudioLang('en')" style="background:none;border:1px solid rgba(255,255,255,0.2);border-radius:50px;padding:6px 12px;cursor:pointer;font-weight:600;font-size:12px;color:#fff;">EN</button>
+        </span>
     </div>
 </nav>
 
 <header>
     <div style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--panel);border:1px solid var(--border);padding:0.4rem 0.95rem;border-radius:999px;font-size:0.72rem;color:var(--ink-dim);margin-bottom:1rem;">
         <span style="width:7px;height:7px;border-radius:50%;background:var(--success);"></span>
-        Nouveau · génération directe de pubs IA
+        <span data-fr="Nouveau · génération directe de pubs IA" data-en="New · direct AI ad generation" data-nl="Nieuw · directe AI-advertentiegeneratie">Nouveau · génération directe de pubs IA</span>
     </div>
     <h1>Studio <span class="grad">Marketing</span></h1>
-    <p class="subtitle">Vidéos publicitaires générées par IA</p>
+    <p class="subtitle" data-fr="Vidéos publicitaires générées par IA" data-en="AI-generated ad videos" data-nl="Door AI gegenereerde advertentievideo's">Vidéos publicitaires générées par IA</p>
 </header>
 
-<div class="info-banner">
+<div class="info-banner" id="info-banner" data-i18n-html="info_banner_html">
     <strong>🎯 Mode marketing :</strong> Choisissez un type de campagne, un format, ajoutez votre accroche et votre appel à l'action.
     Chaque vidéo est une <strong>publicité animée</strong> construite autour de votre image — mouvement, lumière, ambiance, et message clair pour convertir. <strong>Important :</strong> l'accroche et l'appel à l'action orientent l'ambiance de la vidéo, ils ne sont pas écrits à l'écran (aucun texte n'est ajouté dans l'image).
 </div>
 
 <div class="api-panel" id="api-panel">
     <input type="password" class="api-key-input" id="api-key-input"
-           placeholder="Collez votre clé API ici (sk-...)" autocomplete="off" spellcheck="false">
-    <button type="button" class="api-save-btn" id="api-save-btn">Enregistrer la clé</button>
+           placeholder="Collez votre clé API ici (sk-...)" data-fr-placeholder="Collez votre clé API ici (sk-...)" data-en-placeholder="Paste your API key here (sk-...)" data-nl-placeholder="Plak hier je API-sleutel (sk-...)" autocomplete="off" spellcheck="false">
+    <button type="button" class="api-save-btn" id="api-save-btn" data-fr="Enregistrer la clé" data-en="Save key" data-nl="Sleutel opslaan">Enregistrer la clé</button>
     <div class="api-status-line" id="api-status-line">
         <span class="status-dot"></span>
         <span id="api-status-text">Aucune clé API enregistrée</span>
     </div>
     <div class="api-hint">
-        Clé sur <a href="https://platform.agnes-ai.com" target="_blank" rel="noopener">platform.agnes-ai.com</a> → Settings → API Keys.<br>
-        <em>🔒 Votre clé reste stockée uniquement dans votre navigateur (localStorage) et n'est jamais envoyée à nos serveurs.</em>
+        <span data-i18n-html="api_hint_html">Clé sur <a href="https://platform.agnes-ai.com" target="_blank" rel="noopener">platform.agnes-ai.com</a> → Settings → API Keys.</span><br>
+        <em data-fr="🔒 Votre clé reste stockée uniquement dans votre navigateur (localStorage) et n'est jamais envoyée à nos serveurs." data-en="🔒 Your key is stored only in your browser (localStorage) and is never sent to our servers." data-nl="🔒 Je sleutel wordt alleen in je browser (localStorage) opgeslagen en nooit naar onze servers verzonden.">🔒 Votre clé reste stockée uniquement dans votre navigateur (localStorage) et n'est jamais envoyée à nos serveurs.</em>
     </div>
     <div class="stat-line" id="stat-line">
-        <span>📊 Vitesse moyenne : <span id="stat-speed">en attente</span></span>
+        <span data-fr="📊 Vitesse moyenne :" data-en="📊 Average speed:" data-nl="📊 Gemiddelde snelheid:">📊 Vitesse moyenne :</span> <span id="stat-speed">en attente</span>
         <span id="stat-samples">0 génération</span>
     </div>
     <div class="wake-status" id="wake-status">
-        <span id="wake-status-text">💤 Veille automatique</span>
-        <button type="button" id="wake-toggle-btn">Garder l'écran allumé</button>
+        <span id="wake-status-text" data-fr="💤 Veille automatique" data-en="💤 Auto sleep" data-nl="💤 Automatische sluimerstand">💤 Veille automatique</span>
+        <button type="button" id="wake-toggle-btn" data-fr="Garder l'écran allumé" data-en="Keep screen awake" data-nl="Scherm wakker houden">Garder l'écran allumé</button>
     </div>
 </div>
 
 <div class="upload-zone" id="upload-zone">
     <input type="file" id="file-input" accept="image/*" multiple>
     <div class="upload-icon">📸</div>
-    <div class="upload-text">Ajoutez vos visuels</div>
-    <div class="upload-hint">Produit, portrait, lieu, plat… chacune deviendra une pub</div>
+    <div class="upload-text" data-fr="Ajoutez vos visuels" data-en="Add your visuals" data-nl="Voeg je visuals toe">Ajoutez vos visuels</div>
+    <div class="upload-hint" data-fr="Produit, portrait, lieu, plat… chacune deviendra une pub" data-en="Product, portrait, location, dish… each one becomes an ad" data-nl="Product, portret, locatie, gerecht… elk wordt een advertentie">Produit, portrait, lieu, plat… chacune deviendra une pub</div>
 </div>
 
 <div class="images-grid" id="images-grid"></div>
@@ -542,7 +547,7 @@ h1 { background: none; -webkit-text-fill-color: #f8fafc; }
 <!-- TYPE DE CAMPAGNE -->
 <div class="section open" id="section-campaign">
     <div class="section-header" data-toggle="section-campaign">
-        <span class="section-title">🎯 Type de campagne <span class="badge">requis</span></span>
+        <span class="section-title" data-i18n-html="section_campaign_html">🎯 Type de campagne <span class="badge">requis</span></span>
         <span class="chevron">▼</span>
     </div>
     <div class="section-body">
@@ -555,7 +560,7 @@ h1 { background: none; -webkit-text-fill-color: #f8fafc; }
 <!-- FORMAT -->
 <div class="section open" id="section-format">
     <div class="section-header" data-toggle="section-format">
-        <span class="section-title">📐 Format & plateforme</span>
+        <span class="section-title" data-i18n-html="section_format_html">📐 Format & plateforme</span>
         <span class="chevron">▼</span>
     </div>
     <div class="section-body">
@@ -568,25 +573,25 @@ h1 { background: none; -webkit-text-fill-color: #f8fafc; }
 <!-- MESSAGE MARKETING -->
 <div class="section open" id="section-message">
     <div class="section-header" data-toggle="section-message">
-        <span class="section-title">💬 Message publicitaire <span class="badge">requis</span></span>
+        <span class="section-title" data-i18n-html="section_message_html">💬 Message publicitaire <span class="badge">requis</span></span>
         <span class="chevron">▼</span>
     </div>
     <div class="section-body">
         <div class="section-content">
             <div class="input-row">
-                <label class="input-label">Accroche (hook) — donne le ton des 3 premières secondes (non écrite dans la vidéo)</label>
+                <label class="input-label" data-fr="Accroche (hook) — donne le ton des 3 premières secondes (non écrite dans la vidéo)" data-en="Hook — sets the tone for the first 3 seconds (not written in the video)" data-nl="Hook — bepaalt de toon van de eerste 3 seconden (niet in de video geschreven)">Accroche (hook) — donne le ton des 3 premières secondes (non écrite dans la vidéo)</label>
                 <input type="text" class="input-text" id="hook-input"
-                       placeholder="Ex : Découvrez la nouvelle collection" maxlength="80">
+                       placeholder="Ex : Découvrez la nouvelle collection" data-fr-placeholder="Ex : Découvrez la nouvelle collection" data-en-placeholder="E.g. Discover the new collection" data-nl-placeholder="Bijv. Ontdek de nieuwe collectie" maxlength="80">
             </div>
             <div class="input-row">
-                <label class="input-label">Appel à l'action (CTA) — guide le message (non écrit dans la vidéo)</label>
+                <label class="input-label" data-fr="Appel à l'action (CTA) — guide le message (non écrit dans la vidéo)" data-en="Call to action (CTA) — guides the message (not written in the video)" data-nl="Call-to-action (CTA) — stuurt de boodschap (niet in de video geschreven)">Appel à l'action (CTA) — guide le message (non écrit dans la vidéo)</label>
                 <input type="text" class="input-text" id="cta-input"
-                       placeholder="Ex : Commandez maintenant sur notre site" maxlength="80">
+                       placeholder="Ex : Commandez maintenant sur notre site" data-fr-placeholder="Ex : Commandez maintenant sur notre site" data-en-placeholder="E.g. Order now on our website" data-nl-placeholder="Bijv. Bestel nu op onze website" maxlength="80">
             </div>
             <div class="input-row">
-                <label class="input-label">Nom de marque / produit (optionnel)</label>
+                <label class="input-label" data-fr="Nom de marque / produit (optionnel)" data-en="Brand / product name (optional)" data-nl="Merk- / productnaam (optioneel)">Nom de marque / produit (optionnel)</label>
                 <input type="text" class="input-text" id="brand-input"
-                       placeholder="Ex : Maison Lumière" maxlength="40">
+                       placeholder="Ex : Maison Lumière" data-fr-placeholder="Ex : Maison Lumière" data-en-placeholder="E.g. Maison Lumière" data-nl-placeholder="Bijv. Maison Lumière" maxlength="40">
             </div>
         </div>
     </div>
@@ -595,18 +600,18 @@ h1 { background: none; -webkit-text-fill-color: #f8fafc; }
 <!-- VISION -->
 <div class="section" id="section-prompt">
     <div class="section-header" data-toggle="section-prompt">
-        <span class="section-title">✍️ Direction artistique <span class="badge">optionnel</span></span>
+        <span class="section-title" data-i18n-html="section_art_html">✍️ Direction artistique <span class="badge">optionnel</span></span>
         <span class="chevron">▼</span>
     </div>
     <div class="section-body">
         <div class="section-content">
             <textarea class="prompt-main" id="main-prompt"
-                placeholder="Décrivez l'ambiance, le style, le ton de votre pub. Ex :
+                placeholder="Décrivez l'ambiance, le style, le ton de votre pub. Ex :" data-fr-placeholder="Décrivez l'ambiance, le style, le ton de votre pub. Ex :" data-en-placeholder="Describe the ambiance, style, tone of your ad. E.g.:" data-nl-placeholder="Beschrijf de sfeer, stijl, toon van je advertentie. Bijv.:"
 
 « Ambiance luxueuse, éclairage doré, ralenti élégant, reflets de lumière sur le produit. Le produit reste parfaitement identique à la photo. »"></textarea>
             <div class="prompt-presets" id="prompt-presets"></div>
             <div class="prompt-main-hint">
-                💡 Ce texte s'ajoute à la campagne et à l'effet choisis. Plus vous êtes précis, plus la pub sera proche de votre marque.
+                <span data-fr="💡 Ce texte s'ajoute à la campagne et à l'effet choisis. Plus vous êtes précis, plus la pub sera proche de votre marque." data-en="💡 This text is added to the chosen campaign and effect. The more precise you are, the closer the ad will be to your brand." data-nl="💡 Deze tekst wordt toegevoegd aan de gekozen campagne en het effect. Hoe nauwkeuriger je bent, hoe dichter de advertentie bij je merk zal aansluiten.">💡 Ce texte s'ajoute à la campagne et à l'effet choisis. Plus vous êtes précis, plus la pub sera proche de votre marque.</span>
             </div>
         </div>
     </div>
@@ -615,7 +620,7 @@ h1 { background: none; -webkit-text-fill-color: #f8fafc; }
 <!-- STYLE MARKETING -->
 <div class="section" id="section-style">
     <div class="section-header" data-toggle="section-style">
-        <span class="section-title">🎨 Effet marketing <span class="badge">optionnel</span></span>
+        <span class="section-title" data-i18n-html="section_effect_html">🎨 Effet marketing <span class="badge">optionnel</span></span>
         <span class="chevron">▼</span>
     </div>
     <div class="section-body">
@@ -628,61 +633,61 @@ h1 { background: none; -webkit-text-fill-color: #f8fafc; }
 <!-- TECHNIQUE -->
 <div class="section" id="section-tech">
     <div class="section-header" data-toggle="section-tech">
-        <span class="section-title">⚙️ Réglages techniques</span>
+        <span class="section-title" data-i18n-html="section_tech_html_fr">⚙️ Réglages techniques</span>
         <span class="chevron">▼</span>
     </div>
     <div class="section-body">
         <div class="section-content">
             <div class="input-row">
-                <label class="input-label">Durée de la pub</label>
+                <label class="input-label" data-fr="Durée de la pub" data-en="Ad duration" data-nl="Advertentieduur">Durée de la pub</label>
                 <select id="duration-select">
-                    <option value="121">5 secondes (teaser)</option>
-                    <option value="153" selected>6,4 secondes (recommandé)</option>
-                    <option value="241">10 secondes (spot complet)</option>
+                    <option value="121" data-fr="5 secondes (teaser)" data-en="5 seconds (teaser)" data-nl="5 seconden (teaser)">5 secondes (teaser)</option>
+                    <option value="153" selected data-fr="6,4 secondes (recommandé)" data-en="6.4 seconds (recommended)" data-nl="6,4 seconden (aanbevolen)">6,4 secondes (recommandé)</option>
+                    <option value="241" data-fr="10 secondes (spot complet)" data-en="10 seconds (full spot)" data-nl="10 seconden (volledige spot)">10 secondes (spot complet)</option>
                 </select>
             </div>
             <div class="input-row">
-                <label class="input-label">Cadrage</label>
+                <label class="input-label" data-fr="Cadrage" data-en="Framing" data-nl="Uitsnede">Cadrage</label>
                 <select id="framing-select">
-                    <option value="random">Aléatoire</option>
-                    <option value="close">Très serré (produit)</option>
-                    <option value="medium">Moyen (buste)</option>
-                    <option value="wide">Large (ambiance)</option>
+                    <option value="random" data-fr="Aléatoire" data-en="Random" data-nl="Willekeurig">Aléatoire</option>
+                    <option value="close" data-fr="Très serré (produit)" data-en="Very tight (product)" data-nl="Zeer close-up (product)">Très serré (produit)</option>
+                    <option value="medium" data-fr="Moyen (buste)" data-en="Medium (bust)" data-nl="Medium (borststuk)">Moyen (buste)</option>
+                    <option value="wide" data-fr="Large (ambiance)" data-en="Wide (ambiance)" data-nl="Breed (sfeer)">Large (ambiance)</option>
                 </select>
             </div>
             <div class="input-row">
-                <label class="input-label">Intensité du mouvement</label>
+                <label class="input-label" data-fr="Intensité du mouvement" data-en="Motion intensity" data-nl="Bewegingsintensiteit">Intensité du mouvement</label>
                 <select id="intensity-select">
-                    <option value="random">Aléatoire</option>
-                    <option value="subtle">Subtile (élégant)</option>
-                    <option value="moderate" selected>Modérée (dynamique)</option>
-                    <option value="strong">Forte (impact)</option>
+                    <option value="random" data-fr="Aléatoire" data-en="Random" data-nl="Willekeurig">Aléatoire</option>
+                    <option value="subtle" data-fr="Subtile (élégant)" data-en="Subtle (elegant)" data-nl="Subtiel (elegant)">Subtile (élégant)</option>
+                    <option value="moderate" selected data-fr="Modérée (dynamique)" data-en="Moderate (dynamic)" data-nl="Gematigd (dynamisch)">Modérée (dynamique)</option>
+                    <option value="strong" data-fr="Forte (impact)" data-en="Strong (impact)" data-nl="Sterk (impact)">Forte (impact)</option>
                 </select>
             </div>
                     <div class="input-row">
-                <label class="input-label">Qualité vidéo</label>
+                <label class="input-label" data-fr="Qualité vidéo" data-en="Video quality" data-nl="Videokwaliteit">Qualité vidéo</label>
                 <select id="resolution-select">
-                    <option value="720P" selected>720P HD · standard (inclus)</option>
-                    <option value="1080P">1080P Full HD · premium</option>
+                    <option value="720P" selected data-fr="720P HD · standard (inclus)" data-en="720P HD · standard (included)" data-nl="720P HD · standaard (inbegrepen)">720P HD · standard (inclus)</option>
+                    <option value="1080P" data-fr="1080P Full HD · premium" data-en="1080P Full HD · premium" data-nl="1080P Full HD · premium">1080P Full HD · premium</option>
                 </select>
                 <div class="prompt-main-hint" style="margin-top:0.4rem;">
-                    💡 La 1080P offre des détails plus nets pour YouTube / site web. La 720P est optimisée TikTok / Reels / Instagram et réduit le coût de génération.
+                    <span data-fr="💡 La 1080P offre des détails plus nets pour YouTube / site web. La 720P est optimisée TikTok / Reels / Instagram et réduit le coût de génération." data-en="💡 1080P offers sharper details for YouTube / websites. 720P is optimized for TikTok / Reels / Instagram and reduces generation cost." data-nl="💡 1080P biedt scherpere details voor YouTube / websites. 720P is geoptimaliseerd voor TikTok / Reels / Instagram en verlaagt de generatiekosten.">💡 La 1080P offre des détails plus nets pour YouTube / site web. La 720P est optimisée TikTok / Reels / Instagram et réduit le coût de génération.</span>
                 </div>
             </div>
         </div>
-<div style="max-width:900px;margin:0 auto 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;background:var(--grad-soft);border:1px solid var(--border);border-radius:999px;padding:0.7rem 1.2rem;font-size:0.82rem;color:var(--ink-dim);flex-wrap:wrap;"><span>💡 <strong style="color:var(--ink);">Besoin de volume ?</strong> Des abonnements pour 5, 15 ou 40 vidéos par mois.</span><a href="/studio/marketing/tarifs.html" style="color:#a5b4fc;font-weight:700;text-decoration:none;white-space:nowrap;">Voir les abonnements →</a></div>
+<div style="max-width:900px;margin:0 auto 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;background:var(--grad-soft);border:1px solid var(--border);border-radius:999px;padding:0.7rem 1.2rem;font-size:0.82rem;color:var(--ink-dim);flex-wrap:wrap;"><span data-i18n-html="volume_banner_html">💡 <strong style="color:var(--ink);">Besoin de volume ?</strong> Des abonnements pour 5, 15 ou 40 vidéos par mois.</span><a href="/studio/marketing/tarifs.html" style="color:#a5b4fc;font-weight:700;text-decoration:none;white-space:nowrap;" data-fr="Voir les abonnements →" data-en="View subscriptions →" data-nl="Bekijk abonnementen →">Voir les abonnements →</a></div>
 <button type="button" class="btn-primary" id="generate-btn" disabled>
-    Créer les vidéos
+    <span data-fr="Créer les vidéos" data-en="Create videos" data-nl="Video's maken">Créer les vidéos</span>
 </button>
 
 <button type="button" class="btn-stop" id="stop-btn">
-    ⏹ Arrêter la génération
+    <span data-fr="⏹ Arrêter la génération" data-en="⏹ Stop generation" data-nl="⏹ Stop generatie">⏹ Arrêter la génération</span>
 </button>
 
 <div class="queue" id="queue" style="display:none;"></div>
 
 <div class="gallery" id="gallery" style="display:none;">
-    <div class="section-title" style="margin-bottom:0.8rem;">Vidéos marketing générées</div>
+    <div class="section-title" style="margin-bottom:0.8rem;" data-fr="Vidéos marketing générées" data-en="Generated marketing videos" data-nl="Gegenereerde marketingvideo's">Vidéos marketing générées</div>
     <div class="gallery-grid" id="gallery-grid"></div>
 </div>
 
@@ -725,6 +730,597 @@ const MAX_IMAGE_SIZE = 12 * 1024 * 1024;
 const THUMBNAIL_MAX_WIDTH = 200;
 
 // ══════════════════════════════════════════════════════════════════
+// =====================================================================
+// MARKETING_I18N - Dictionnaire de traductions (FR/NL/EN)
+// =====================================================================
+const MARKETING_I18N = {
+  "campaign_product_name": {
+    "fr": "Packshot Produit",
+    "en": "Product Packshot",
+    "nl": "Product Packshot"
+  },
+  "campaign_product_desc": {
+    "fr": "Mise en valeur produit e-commerce",
+    "en": "E-commerce product showcase",
+    "nl": "E-commerce productpresentatie"
+  },
+  "campaign_social_name": {
+    "fr": "Réseaux sociaux",
+    "en": "Social Media",
+    "nl": "Social Media"
+  },
+  "campaign_social_desc": {
+    "fr": "TikTok · Reels · Shorts viraux",
+    "en": "TikTok · Reels · Viral Shorts",
+    "nl": "TikTok · Reels · Virale Shorts"
+  },
+  "campaign_realestate_name": {
+    "fr": "Immobilier",
+    "en": "Real Estate",
+    "nl": "Vastgoed"
+  },
+  "campaign_realestate_desc": {
+    "fr": "Visite virtuelle de biens",
+    "en": "Virtual property tours",
+    "nl": "Virtuele rondleidingen"
+  },
+  "campaign_restaurant_name": {
+    "fr": "Restaurant",
+    "en": "Restaurant",
+    "nl": "Restaurant"
+  },
+  "campaign_restaurant_desc": {
+    "fr": "Plats, ambiance, service",
+    "en": "Dishes, ambiance, service",
+    "nl": "Gerechten, sfeer, bediening"
+  },
+  "campaign_hotel_name": {
+    "fr": "Hôtel & Tourisme",
+    "en": "Hotel & Tourism",
+    "nl": "Hotel & Toerisme"
+  },
+  "campaign_hotel_desc": {
+    "fr": "Séjours, chambres, destinations",
+    "en": "Stays, rooms, destinations",
+    "nl": "Verblijven, kamers, bestemmingen"
+  },
+  "campaign_testimonial_name": {
+    "fr": "Témoignage client",
+    "en": "Customer Testimonial",
+    "nl": "Klantenreview"
+  },
+  "campaign_testimonial_desc": {
+    "fr": "Portrait authentique et confiance",
+    "en": "Authentic portrait and trust",
+    "nl": "Authentiek portret en vertrouwen"
+  },
+  "campaign_fashion_name": {
+    "fr": "Mode & Lifestyle",
+    "en": "Fashion & Lifestyle",
+    "nl": "Mode & Lifestyle"
+  },
+  "campaign_fashion_desc": {
+    "fr": "Lookbook et défilé",
+    "en": "Lookbook and runway",
+    "nl": "Lookbook en catwalk"
+  },
+  "campaign_corporate_name": {
+    "fr": "Corporate",
+    "en": "Corporate",
+    "nl": "Zakelijk (Corporate)"
+  },
+  "campaign_corporate_desc": {
+    "fr": "Marque employeur et B2B",
+    "en": "Employer branding and B2B",
+    "nl": "Employer branding en B2B"
+  },
+  "campaign_personal_name": {
+    "fr": "Personal Branding",
+    "en": "Personal Branding",
+    "nl": "Personal Branding"
+  },
+  "campaign_personal_desc": {
+    "fr": "Coach, créateur, influenceur",
+    "en": "Coach, creator, influencer",
+    "nl": "Coach, maker, influencer"
+  },
+  "campaign_event_name": {
+    "fr": "Événement",
+    "en": "Event",
+    "nl": "Evenement"
+  },
+  "campaign_event_desc": {
+    "fr": "Lancement, concert, festival",
+    "en": "Launch, concert, festival",
+    "nl": "Lancering, concert, festival"
+  },
+  "format_portrait_name": {
+    "fr": "Vertical",
+    "en": "Vertical",
+    "nl": "Verticaal"
+  },
+  "format_square_name": {
+    "fr": "Carré",
+    "en": "Square",
+    "nl": "Vierkant"
+  },
+  "format_landscape_name": {
+    "fr": "Horizontal",
+    "en": "Horizontal",
+    "nl": "Horizontaal"
+  },
+  "effect_packshot-luxury_name": {
+    "fr": "Packshot Luxe",
+    "en": "Luxury Packshot",
+    "nl": "Luxe Packshot"
+  },
+  "effect_packshot-luxury_desc": {
+    "fr": "Studio premium doré",
+    "en": "Premium golden studio",
+    "nl": "Premium gouden studio"
+  },
+  "effect_neon-promo_name": {
+    "fr": "Néon Promo",
+    "en": "Neon Promo",
+    "nl": "Neon Promo"
+  },
+  "effect_neon-promo_desc": {
+    "fr": "Vibrant urbain nocturne",
+    "en": "Vibrant urban night",
+    "nl": "Levendige stedelijke nacht"
+  },
+  "effect_lifestyle-bright_name": {
+    "fr": "Lifestyle Lumineux",
+    "en": "Bright Lifestyle",
+    "nl": "Lichte Lifestyle"
+  },
+  "effect_lifestyle-bright_desc": {
+    "fr": "Naturel & authentique",
+    "en": "Natural & authentic",
+    "nl": "Natuurlijk & authentiek"
+  },
+  "effect_cinematic-commercial_name": {
+    "fr": "Pub Cinématique",
+    "en": "Cinematic Ad",
+    "nl": "Cinematische Advertentie"
+  },
+  "effect_cinematic-commercial_desc": {
+    "fr": "Grand écran, dramatique",
+    "en": "Big screen, dramatic",
+    "nl": "Bioscoopformaat, dramatisch"
+  },
+  "effect_glitch-promo_name": {
+    "fr": "Glitch Promo",
+    "en": "Glitch Promo",
+    "nl": "Glitch Promo"
+  },
+  "effect_glitch-promo_desc": {
+    "fr": "Impact digital tendance",
+    "en": "Trendy digital impact",
+    "nl": "Trendy digitale impact"
+  },
+  "effect_minimal-white_name": {
+    "fr": "Minimal Blanc",
+    "en": "Minimal White",
+    "nl": "Minimaal Wit"
+  },
+  "effect_minimal-white_desc": {
+    "fr": "Épuré Apple-like",
+    "en": "Clean Apple-style",
+    "nl": "Strak (Apple-stijl)"
+  },
+  "effect_golden-lifestyle_name": {
+    "fr": "Golden Lifestyle",
+    "en": "Golden Lifestyle",
+    "nl": "Gouden Lifestyle"
+  },
+  "effect_golden-lifestyle_desc": {
+    "fr": "Chaleur dorée premium",
+    "en": "Premium golden warmth",
+    "nl": "Premium gouden warmte"
+  },
+  "effect_dynamic-energy_name": {
+    "fr": "Énergie Dynamique",
+    "en": "Dynamic Energy",
+    "nl": "Dynamische Energie"
+  },
+  "effect_dynamic-energy_desc": {
+    "fr": "Sport & performance",
+    "en": "Sport & performance",
+    "nl": "Sport & prestatie"
+  },
+  "effect_elegant-feminine_name": {
+    "fr": "Élégant Féminin",
+    "en": "Feminine Elegant",
+    "nl": "Vrouwelijk Elegant"
+  },
+  "effect_elegant-feminine_desc": {
+    "fr": "Beauté et douceur",
+    "en": "Beauty and softness",
+    "nl": "Schoonheid en zachtheid"
+  },
+  "effect_tech-futurist_name": {
+    "fr": "Tech Futuriste",
+    "en": "Futuristic Tech",
+    "nl": "Futuristische Tech"
+  },
+  "effect_tech-futurist_desc": {
+    "fr": "Innovation et modernité",
+    "en": "Innovation and modernity",
+    "nl": "Innovatie en moderniteit"
+  },
+  "effect_vintage-retro_name": {
+    "fr": "Vintage Rétro",
+    "en": "Vintage Retro",
+    "nl": "Vintage Retro"
+  },
+  "effect_vintage-retro_desc": {
+    "fr": "Nostalgie authentique",
+    "en": "Authentic nostalgia",
+    "nl": "Authentieke nostalgie"
+  },
+  "effect_organic-natural_name": {
+    "fr": "Bio & Naturel",
+    "en": "Organic & Natural",
+    "nl": "Biologisch & Natuurlijk"
+  },
+  "effect_organic-natural_desc": {
+    "fr": "Éco-responsable",
+    "en": "Eco-friendly",
+    "nl": "Eco-verantwoord"
+  }
+};
+
+/**
+ * Traduit une clé en utilisant la langue courante.
+ * Fallback : texte français d'origine passé en 2ème argument.
+ */
+function mktT(key, fallback) {
+    const lang = (typeof mktCurrentLang === 'function') ? mktCurrentLang() : 'fr';
+    const entry = MARKETING_I18N[key];
+    if (!entry) return fallback || key;
+    return entry[lang] || entry.fr || fallback || key;
+}
+
+Object.assign(MARKETING_I18N, {
+  "badge_new": {
+    "fr": "Nouveau · génération directe de pubs IA",
+    "en": "New · direct AI ad generation",
+    "nl": "Nieuw · directe AI-advertentiegeneratie"
+  },
+  "info_banner_html": {
+    "fr": "<strong>🎯 Mode marketing :</strong> Choisissez un type de campagne, un format, ajoutez votre accroche et votre appel à l'action. Chaque vidéo est une <strong>publicité animée</strong> construite autour de votre image — mouvement, lumière, ambiance, et message clair pour convertir. <strong>Important :</strong> l'accroche et l'appel à l'action orientent l'ambiance de la vidéo, ils ne sont pas écrits à l'écran (aucun texte n'est ajouté dans l'image).",
+    "en": "<strong>🎯 Marketing mode:</strong> Choose a campaign type, a format, add your hook and your call to action. Each video is an <strong>animated ad</strong> built around your image — movement, lighting, ambiance, and a clear message to convert. <strong>Important:</strong> the hook and call to action guide the video's ambiance, they are not written on screen (no text is added to the image).",
+    "nl": "<strong>🎯 Marketingmodus:</strong> Kies een campagnetype, een formaat, voeg je hook en je call-to-action toe. Elke video is een <strong>geanimeerde advertentie</strong> opgebouwd rond je afbeelding — beweging, belichting, sfeer en een duidelijke boodschap om te converteren. <strong>Belangrijk:</strong> de hook en call-to-action sturen de sfeer van de video, ze worden niet op het scherm geschreven (er wordt geen tekst aan de afbeelding toegevoegd)."
+  },
+  "api_hint_html": {
+    "fr": "Clé sur <a href=\"https://platform.agnes-ai.com\" target=\"_blank\" rel=\"noopener\">platform.agnes-ai.com</a> → Settings → API Keys.",
+    "en": "Key on <a href=\"https://platform.agnes-ai.com\" target=\"_blank\" rel=\"noopener\">platform.agnes-ai.com</a> → Settings → API Keys.",
+    "nl": "Sleutel op <a href=\"https://platform.agnes-ai.com\" target=\"_blank\" rel=\"noopener\">platform.agnes-ai.com</a> → Instellingen → API-sleutels."
+  },
+  "stat_waiting": {
+    "fr": "en attente",
+    "en": "waiting",
+    "nl": "wachten"
+  },
+  "stat_0_gen": {
+    "fr": "0 génération",
+    "en": "0 generations",
+    "nl": "0 generaties"
+  },
+  "stat_x_gen": {
+    "fr": "générations",
+    "en": "generations",
+    "nl": "generaties"
+  },
+  "stat_1_gen": {
+    "fr": "génération",
+    "en": "generation",
+    "nl": "generatie"
+  }
+});
+
+Object.assign(MARKETING_I18N, {
+  "section_campaign_html": {
+    "fr": "🎯 Type de campagne <span class=\"badge\">requis</span>",
+    "en": "🎯 Campaign type <span class=\"badge\">required</span>",
+    "nl": "🎯 Campagnetype <span class=\"badge\">vereist</span>"
+  },
+  "section_format_html": {
+    "fr": "📐 Format & plateforme",
+    "en": "📐 Format & platform",
+    "nl": "📐 Formaat & platform"
+  },
+  "section_message_html": {
+    "fr": "💬 Message publicitaire <span class=\"badge\">requis</span>",
+    "en": "💬 Ad message <span class=\"badge\">required</span>",
+    "nl": "💬 Advertentieboodschap <span class=\"badge\">vereist</span>"
+  },
+  "section_art_html": {
+    "fr": "✍️ Direction artistique <span class=\"badge\">optionnel</span>",
+    "en": "✍️ Artistic direction <span class=\"badge\">optional</span>",
+    "nl": "✍️ Artistieke richting <span class=\"badge\">optioneel</span>"
+  },
+  "section_effect_html": {
+    "fr": "🎨 Marketing effect <span class=\"badge\">optionnel</span>",
+    "en": "🎨 Marketing effect <span class=\"badge\">optional</span>",
+    "nl": "🎨 Marketingeffect <span class=\"badge\">optioneel</span>"
+  },
+  "section_tech_html": {
+    "fr": "⚙️ Technical settings",
+    "en": "⚙️ Technical settings",
+    "nl": "⚙️ Technische instellingen"
+  },
+  "section_tech_html_fr": {
+    "fr": "⚙️ Réglages techniques",
+    "en": "⚙️ Technical settings",
+    "nl": "⚙️ Technische instellingen"
+  },
+  "results_title": {
+    "fr": "Vidéos marketing générées",
+    "en": "Generated marketing videos",
+    "nl": "Gegenereerde marketingvideo's"
+  },
+  "art_textarea_placeholder": {
+    "fr": "Décrivez l'ambiance, le style, le ton de votre pub. Ex :",
+    "en": "Describe the ambiance, style, tone of your ad. E.g.:",
+    "nl": "Beschrijf de sfeer, stijl, toon van je advertentie. Bijv.:"
+  },
+  "art_textarea_default": {
+    "fr": "« Ambiance luxueuse, éclairage doré, ralenti élégant, reflets de lumière sur le produit. Le produit reste parfaitement identique à la photo. »",
+    "en": "\"Luxurious ambiance, golden lighting, elegant slow motion, light reflections on the product. The product remains perfectly identical to the photo.\"",
+    "nl": "\"Luxe sfeer, gouden belichting, elegante slow motion, lichtreflecties op het product. Het product blijft perfect identiek aan de foto.\""
+  },
+  "art_hint": {
+    "fr": "💡 Ce texte s'ajoute à la campagne et à l'effet choisis. Plus vous êtes précis, plus la pub sera proche de votre marque.",
+    "en": "💡 This text is added to the chosen campaign and effect. The more precise you are, the closer the ad will be to your brand.",
+    "nl": "💡 Deze tekst wordt toegevoegd aan de gekozen campagne en het effect. Hoe nauwkeuriger je bent, hoe dichter de advertentie bij je merk zal aansluiten."
+  },
+  "art_chip_0": {
+    "fr": "✨ Premium silencieux",
+    "en": "✨ Silent premium",
+    "nl": "✨ Stille premium"
+  },
+  "art_chip_1": {
+    "fr": "⚡ Impact viral",
+    "en": "⚡ Viral impact",
+    "nl": "⚡ Virale impact"
+  },
+  "art_chip_2": {
+    "fr": "🌿 Authentique naturel",
+    "en": "🌿 Natural authentic",
+    "nl": "🌿 Natuurlijk authentiek"
+  },
+  "art_chip_3": {
+    "fr": "🎬 Cinématique pub",
+    "en": "🎬 Cinematic ad",
+    "nl": "🎬 Cinematische advertentie"
+  },
+  "art_chip_4": {
+    "fr": "🏆 Énergie sportive",
+    "en": "🏆 Sports energy",
+    "nl": "🏆 Sportieve energie"
+  },
+  "art_chip_5": {
+    "fr": "🌸 Beauté délicate",
+    "en": "🌸 Delicate beauty",
+    "nl": "🌸 Delicate schoonheid"
+  },
+  "tech_duration_label": {
+    "fr": "Durée de la pub",
+    "en": "Ad duration",
+    "nl": "Advertentieduur"
+  },
+  "tech_framing_label": {
+    "fr": "Cadrage",
+    "en": "Framing",
+    "nl": "Uitsnede"
+  },
+  "tech_intensity_label": {
+    "fr": "Intensité du mouvement",
+    "en": "Motion intensity",
+    "nl": "Bewegingsintensiteit"
+  },
+  "tech_quality_label": {
+    "fr": "Qualité vidéo",
+    "en": "Video quality",
+    "nl": "Videokwaliteit"
+  },
+  "tech_duration_5": {
+    "fr": "5 secondes (teaser)",
+    "en": "5 seconds (teaser)",
+    "nl": "5 seconden (teaser)"
+  },
+  "tech_duration_6": {
+    "fr": "6,4 secondes (recommandé)",
+    "en": "6.4 seconds (recommended)",
+    "nl": "6,4 seconden (aanbevolen)"
+  },
+  "tech_duration_10": {
+    "fr": "10 secondes (spot complet)",
+    "en": "10 seconds (full spot)",
+    "nl": "10 seconden (volledige spot)"
+  },
+  "tech_framing_close": {
+    "fr": "Très serré (produit)",
+    "en": "Very tight (product)",
+    "nl": "Zeer close-up (product)"
+  },
+  "tech_framing_medium": {
+    "fr": "Moyen (buste)",
+    "en": "Medium (bust)",
+    "nl": "Medium (borststuk)"
+  },
+  "tech_framing_wide": {
+    "fr": "Large (ambiance)",
+    "en": "Wide (ambiance)",
+    "nl": "Breed (sfeer)"
+  },
+  "tech_intensity_subtle": {
+    "fr": "Subtile (élégant)",
+    "en": "Subtle (elegant)",
+    "nl": "Subtiel (elegant)"
+  },
+  "tech_intensity_moderate": {
+    "fr": "Modérée (dynamique)",
+    "en": "Moderate (dynamic)",
+    "nl": "Gematigd (dynamisch)"
+  },
+  "tech_intensity_strong": {
+    "fr": "Forte (impact)",
+    "en": "Strong (impact)",
+    "nl": "Sterk (impact)"
+  },
+  "tech_quality_720": {
+    "fr": "720P HD · standard (inclus)",
+    "en": "720P HD · standard (included)",
+    "nl": "720P HD · standaard (inbegrepen)"
+  },
+  "tech_quality_1080": {
+    "fr": "1080P Full HD · premium",
+    "en": "1080P Full HD · premium",
+    "nl": "1080P Full HD · premium"
+  },
+  "tech_hint": {
+    "fr": "💡 La 1080P offre des détails plus nets pour YouTube / site web. La 720P est optimisée TikTok / Reels / Instagram et réduit le coût de génération.",
+    "en": "💡 1080P offers sharper details for YouTube / websites. 720P is optimized for TikTok / Reels / Instagram and reduces generation cost.",
+    "nl": "💡 1080P biedt scherpere details voor YouTube / websites. 720P is geoptimaliseerd voor TikTok / Reels / Instagram en verlaagt de generatiekosten."
+  },
+  "effects_no_effect": {
+    "fr": "✓ Aucun effet — la campagne seule gère le style",
+    "en": "✓ No effect — campaign alone handles the style",
+    "nl": "✓ Geen effect — de campagne bepaalt de stijl"
+  },
+  "effects_no_effect_marketing": {
+    "fr": "🚫 Aucun effet marketing",
+    "en": "🚫 No marketing effect",
+    "nl": "🚫 Geen marketingeffect"
+  },
+  "effects_header": {
+    "fr": "🎨 Effets marketing",
+    "en": "🎨 Marketing effects",
+    "nl": "🎨 Marketingeffecten"
+  },
+  "generate_btn_tpl": {
+    "fr": "🎬 Générer",
+    "en": "🎬 Generate",
+    "nl": "🎬 Genereer"
+  },
+  "generate_btn_suffix_s": {
+    "fr": "pub",
+    "en": "ad",
+    "nl": "advertentie"
+  },
+  "generate_btn_suffix_p": {
+    "fr": "pubs",
+    "en": "ads",
+    "nl": "advertenties"
+  }
+});
+
+Object.assign(MARKETING_I18N, {
+  "api_no_key_status": {
+    "fr": "Aucune clé API",
+    "en": "No API key",
+    "nl": "Geen API-sleutel"
+  },
+  "api_no_key_placeholder": {
+    "fr": "Collez votre clé API ici (sk-...)",
+    "en": "Paste your API key here (sk-...)",
+    "nl": "Plak je API-sleutel hier (sk-...)"
+  },
+  "api_active_prefix": {
+    "fr": "Clé active · ",
+    "en": "Key active · ",
+    "nl": "Sleutel actief · "
+  },
+  "btn_loading_tpl": {
+    "fr": "Chargement…",
+    "en": "Loading…",
+    "nl": "Laden…"
+  },
+  "btn_creating_tpl": {
+    "fr": "Création…",
+    "en": "Creating…",
+    "nl": "Maken…"
+  },
+  "btn_add_key": {
+    "fr": "Ajoutez votre clé API",
+    "en": "Add your API key",
+    "nl": "Voeg je API-sleutel toe"
+  },
+  "btn_add_visuals": {
+    "fr": "Ajoutez des visuels",
+    "en": "Add visuals",
+    "nl": "Voeg visuals toe"
+  },
+  "btn_create_default": {
+    "fr": "Créer les vidéos",
+    "en": "Create videos",
+    "nl": "Video's maken"
+  },
+  "btn_stop": {
+    "fr": "⏹ Arrêter la génération",
+    "en": "⏹ Stop generation",
+    "nl": "⏹ Stop generatie"
+  },
+  "wake_not_supported": {
+    "fr": "⚠️ Non supporté",
+    "en": "⚠️ Not supported",
+    "nl": "⚠️ Niet ondersteund"
+  },
+  "wake_on": {
+    "fr": "✅ Écran allumé",
+    "en": "✅ Screen on",
+    "nl": "✅ Scherm aan"
+  },
+  "wake_off_btn": {
+    "fr": "Désactiver",
+    "en": "Disable",
+    "nl": "Uitschakelen"
+  },
+  "wake_waiting": {
+    "fr": "⏳ En attente",
+    "en": "⏳ Waiting",
+    "nl": "⏳ Wachten"
+  },
+  "wake_auto": {
+    "fr": "💤 Veille automatique",
+    "en": "💤 Auto sleep",
+    "nl": "💤 Automatische sluimerstand"
+  },
+  "wake_keep_btn": {
+    "fr": "Garder l'écran allumé",
+    "en": "Keep screen awake",
+    "nl": "Scherm wakker houden"
+  },
+  "wake_toast_reactivated": {
+    "fr": "Veille réactivée",
+    "en": "Sleep reactivated",
+    "nl": "Sluimerstand heractiveerd"
+  },
+  "stat_speed_label": {
+    "fr": "📊 Vitesse moyenne :",
+    "en": "📊 Average speed:",
+    "nl": "📊 Gemiddelde snelheid:"
+  },
+  "tech_random": {
+    "fr": "Aléatoire",
+    "en": "Random",
+    "nl": "Willekeurig"
+  },
+  "volume_banner_html": {
+    "fr": "<span>💡 <strong style=\"color:var(--ink);\">Besoin de volume ?</strong> Des abonnements pour 5, 15 ou 40 vidéos par mois.</span>",
+    "en": "<span>💡 <strong style=\"color:var(--ink);\">Need volume?</strong> Subscriptions for 5, 15 or 40 videos per month.</span>",
+    "nl": "<span>💡 <strong style=\"color:var(--ink);\">Volume nodig?</strong> Abonnementen voor 5, 15 of 40 video's per maand.</span>"
+  },
+  "volume_banner_link": {
+    "fr": "Voir les abonnements →",
+    "en": "View subscriptions →",
+    "nl": "Bekijk abonnementen →"
+  }
+});
+
 // CAMPAGNES MARKETING
 // ══════════════════════════════════════════════════════════════════
 const CAMPAIGNS = [
@@ -829,17 +1425,17 @@ const MARKETING_EFFECTS = [
 // PRESETS DE PROMPT
 // ══════════════════════════════════════════════════════════════════
 const PROMPT_PRESETS = [
-    { label: '✨ Premium silencieux',
+    { label: mktT('art_chip_0', '✨ Premium silencieux'),
       text: 'Ambiance luxueuse et silencieuse. Le produit reste parfaitement identique à la photo. Lumière dorée, ralenti élégant, reflets subtils. Aucune transformation du sujet.' },
-    { label: '⚡ Impact viral',
+    { label: mktT('art_chip_1', '⚡ Impact viral'),
       text: 'Style TikTok accrocheur. Mouvement dynamique, lumière pulsée, effet glitch subtil au début. Le sujet reste identique. Conçu pour stopper le scroll.' },
-    { label: '🌿 Authentique naturel',
+    { label: mktT('art_chip_2', '🌿 Authentique naturel'),
       text: 'Ambiance authentique et naturelle. Lumière douce de jour, mouvement léger, atmosphère chaleureuse et vraie. Le sujet reste identique.' },
-    { label: '🎬 Cinématique pub',
+    { label: mktT('art_chip_3', '🎬 Cinématique pub'),
       text: 'Qualité cinématographique de publicité nationale. Éclairage dramatique, profondeur de champ, grain film subtil. Le sujet reste parfaitement identique.' },
-    { label: '🏆 Énergie sportive',
+    { label: mktT('art_chip_4', '🏆 Énergie sportive'),
       text: 'Énergie sportive et performance. Mouvement fort, éclairage contrasté, sensation de puissance. Le sujet reste identique.' },
-    { label: '🌸 Beauté délicate',
+    { label: mktT('art_chip_5', '🌸 Beauté délicate'),
       text: 'Ambiance beauté délicate. Tons pastel, lumière douce et diffuse, atmosphère sophistiquée et féminine. Le sujet reste identique.' }
 ];
 
@@ -1023,7 +1619,7 @@ function updateWakeStatus() {
     const hasAny = isWakeLockSupported() || (document.getElementById('noSleepCanvas')?.captureStream);
     if (!hasAny) {
         el.classList.add('warn');
-        txt.textContent = '⚠️ Non supporté';
+        txt.textContent = mktT('wake_not_supported', '⚠️ Non supporté');
         btn.style.display = 'none';
         return;
     }
@@ -1031,15 +1627,15 @@ function updateWakeStatus() {
     const isActive = wakeLockSentinel !== null || canvasStream !== null;
     if (wakeLockEnabled && isActive) {
         el.classList.add('active');
-        txt.textContent = '✅ Écran allumé';
-        btn.textContent = 'Désactiver';
+        txt.textContent = mktT('wake_on', '✅ Écran allumé');
+        btn.textContent = mktT('wake_off_btn', 'Désactiver');
     } else if (wakeLockEnabled && !isActive) {
         el.classList.add('warn');
-        txt.textContent = '⏳ En attente';
-        btn.textContent = 'Désactiver';
+        txt.textContent = mktT('wake_waiting', '⏳ En attente');
+        btn.textContent = mktT('wake_off_btn', 'Désactiver');
     } else {
-        txt.textContent = '💤 Veille automatique';
-        btn.textContent = 'Garder l\'écran allumé';
+        txt.textContent = mktT('wake_auto', '💤 Veille automatique');
+        btn.textContent = mktT('wake_keep_btn', 'Garder l\'écran allumé');
     }
 }
 
@@ -1048,7 +1644,7 @@ async function toggleWakeLock() {
         wakeLockEnabled = false;
         await deactivateWakeLock();
         try { localStorage.setItem(WAKE_LOCK_PREF, '0'); } catch (e) {}
-        showToast('Veille réactivée', 'warn');
+        showToast(mktT('wake_toast_reactivated', 'Veille réactivée'), 'warn');
     } else {
         wakeLockEnabled = true;
         const ok = await activateWakeLock();
@@ -1109,13 +1705,13 @@ function updateTimingDisplay() {
     const samplesEl = document.getElementById('stat-samples');
     if (!speedEl || !samplesEl) return;
     if (all.length === 0) {
-        speedEl.textContent = 'en attente';
-        samplesEl.textContent = '0 génération';
+        speedEl.textContent = mktT('stat_waiting', 'en attente');
+        samplesEl.textContent = mktT('stat_0_gen', '0 génération');
         return;
     }
     const avg = all.reduce((a, b) => a + b, 0) / all.length;
     speedEl.textContent = (avg / 1000).toFixed(1) + ' s';
-    samplesEl.textContent = all.length + ' génération' + (all.length > 1 ? 's' : '');
+    samplesEl.textContent = all.length + ' ' + (all.length > 1 ? mktT('stat_x_gen', 'générations') : mktT('stat_1_gen', 'génération'));
 }
 
 // ══════════════════════════════════════════════════════════════════
@@ -1155,15 +1751,15 @@ function updateApiPanel() {
     if (key) {
         panel.classList.add('ok');
         statusLine.classList.add('ok');
-        statusText.textContent = 'Clé active · ' + key.slice(0, 8) + '…' + key.slice(-4);
+        statusText.textContent = mktT('api_active_prefix', 'Clé active · ') + key.slice(0, 8) + '…' + key.slice(-4);
         input.value = key;
         input.placeholder = '';
     } else {
         panel.classList.remove('ok');
         statusLine.classList.remove('ok');
-        statusText.textContent = 'Aucune clé API';
+        statusText.textContent = mktT('api_no_key_status', 'Aucune clé API');
         input.value = '';
-        input.placeholder = 'Collez votre clé API ici (sk-...)';
+        input.placeholder = mktT('api_no_key_placeholder', 'Collez votre clé API ici (sk-...)');
     }
     updateGenerateBtn();
 }
@@ -1176,17 +1772,17 @@ function updateGenerateBtn() {
     btn.disabled = !hasImages || !hasKey || state.isRunning || state.isLoadingImages;
 
     if (state.isLoadingImages) {
-        btn.textContent = 'Chargement… (' + state.images.length + ')';
+        btn.textContent = mktT('btn_loading_tpl', 'Chargement…') + ' (' + state.images.length + ')';
     } else if (state.isRunning) {
         const total = state.queue.length;
         const done = state.completed + state.failed;
-        btn.textContent = 'Création… (' + done + '/' + total + ')';
+        btn.textContent = mktT('btn_creating_tpl', 'Création…') + ' (' + done + '/' + total + ')';
     } else if (!hasKey) {
-        btn.textContent = 'Ajoutez votre clé API';
+        btn.textContent = mktT('btn_add_key', 'Ajoutez votre clé API');
     } else if (!hasImages) {
-        btn.textContent = 'Ajoutez des visuels';
+        btn.textContent = mktT('btn_add_visuals', 'Ajoutez des visuels');
     } else {
-        btn.textContent = '🎬 Générer ' + state.images.length + ' pub' + (state.images.length > 1 ? 's' : '');
+        btn.textContent = mktT('generate_btn_tpl', '🎬 Générer') + ' ' + state.images.length + ' ' + (state.images.length > 1 ? mktT('generate_btn_suffix_p', 'pubs') : mktT('generate_btn_suffix_s', 'pub'));
     }
 }
 
@@ -1310,9 +1906,9 @@ function renderCampaigns() {
         return '<div class="campaign-card ' + sel + '" data-campaign="' + c.id + '">' +
             '<div class="c-head">' +
                 '<div class="c-emoji">' + c.emoji + '</div>' +
-                '<div class="c-name">' + esc(c.name) + '</div>' +
+                '<div class="c-name">' + esc(mktT('campaign_' + c.id + '_name', c.name)) + '</div>' +
             '</div>' +
-            '<div class="c-desc">' + esc(c.desc) + '</div>' +
+            '<div class="c-desc">' + esc(mktT('campaign_' + c.id + '_desc', c.desc)) + '</div>' +
         '</div>';
     }).join('');
     container.querySelectorAll('[data-campaign]').forEach(el => {
@@ -1329,7 +1925,7 @@ function renderFormats() {
         const sel = state.selectedFormat === f.id ? 'selected' : '';
         return '<div class="format-card ' + sel + '" data-format="' + f.id + '">' +
             '<div class="f-icon">' + f.icon + '</div>' +
-            '<div class="f-name">' + esc(f.name) + '</div>' +
+            '<div class="f-name">' + esc(mktT('format_' + f.id + '_name', f.name)) + '</div>' +
             '<div class="f-ratio">' + esc(f.ratio) + '</div>' +
         '</div>';
     }).join('');
@@ -1364,18 +1960,18 @@ function renderStyles() {
     let html = '';
     html += '<div class="no-style-card ' + (state.selectedEffect === null ? 'selected' : '') + '" data-effect="none">' +
         (state.selectedEffect === null
-            ? '✓ Aucun effet — la campagne seule gère le style'
-            : '🚫 Aucun effet marketing') +
+            ? mktT('effects_no_effect', '✓ Aucun effet — la campagne seule gère le style')
+            : mktT('effects_no_effect_marketing', '🚫 Aucun effet marketing')) +
         '</div>';
-    html += '<div class="style-category-header">🎨 Effets marketing</div>';
+    html += '<div class="style-category-header">' + mktT('effects_header', '🎨 Effets marketing') + '</div>';
     html += '<div class="style-category-desc">Chaque effet donne un ton commercial précis à votre pub.</div>';
     html += MARKETING_EFFECTS.map(s => {
         const sel = state.selectedEffect === s.id ? 'selected' : '';
         return '<div class="style-card ' + sel + '" data-effect="' + s.id + '">' +
             '<div class="style-emoji">' + s.emoji + '</div>' +
             '<div>' +
-                '<div class="style-name">' + esc(s.name) + '</div>' +
-                '<div class="style-desc">' + esc(s.desc) + '</div>' +
+                '<div class="style-name">' + esc(mktT('effect_' + s.id + '_name', s.name)) + '</div>' +
+                '<div class="style-desc">' + esc(mktT('effect_' + s.id + '_desc', s.desc)) + '</div>' +
             '</div>' +
         '</div>';
     }).join('');
@@ -1861,7 +2457,70 @@ function stopGeneration() {
     renderQueue();
     log('Prêt.');
 })();
+
+(function(){
+    var params = new URLSearchParams(window.location.search);
+    var urlLang = params.get('lang');
+    if (urlLang && ['fr','nl','en'].includes(urlLang)) {
+        localStorage.setItem('studio-lang', urlLang);
+    }
+    var LANG_KEY = 'studio-lang';
+    var LANG = (localStorage.getItem(LANG_KEY) || document.documentElement.lang || 'fr').toLowerCase();
+
+    function applyLang(lang) {
+        if (!['fr','nl','en'].includes(lang)) lang = 'fr';
+        LANG = lang;
+        localStorage.setItem(LANG_KEY, lang);
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll('[data-fr]').forEach(function(el){
+            var text = el.dataset[lang];
+            if (text) el.innerText = text;
+        });
+        document.querySelectorAll('[data-i18n-html]').forEach(function(el){
+            var key = el.dataset.i18nHtml;
+            var entry = MARKETING_I18N[key];
+            if (entry && entry[lang]) {
+                el.innerHTML = entry[lang];
+            } else if (entry && entry.fr) {
+                el.innerHTML = entry.fr;
+            }
+        });
+        document.querySelectorAll('[data-fr-placeholder]').forEach(function(el){
+            var ph = el.dataset[lang + 'Placeholder'] || el.dataset.frPlaceholder;
+            el.placeholder = ph;
+        });
+        if (typeof renderCampaigns === 'function') renderCampaigns();
+        if (typeof renderFormats === 'function') renderFormats();
+        if (typeof renderPromptPresets === 'function') renderPromptPresets();
+        if (typeof renderStyles === 'function') renderStyles();
+        if (typeof renderPromptPresets === 'function') renderPromptPresets();
+        if (typeof updateApiPanel === 'function') updateApiPanel();
+        if (typeof updateTimingDisplay === 'function') updateTimingDisplay();
+        if (typeof updateWakeStatus === 'function') updateWakeStatus();
+
+        var langBar = document.getElementById('studioLangBar');
+        if (langBar) langBar.querySelectorAll('button').forEach(function(b){
+            b.style.background = b.dataset.lang === lang ? '#6366f1' : 'none';
+            b.style.color = '#fff';
+        });
+    }
+
+    window.applyStudioLang = applyLang;
+    window.mktCurrentLang = function(){
+        var l = (localStorage.getItem(LANG_KEY) || document.documentElement.lang || 'fr').toLowerCase();
+        return ['fr','nl','en'].includes(l) ? l : 'fr';
+    };
+
+    window.addEventListener('DOMContentLoaded', function(){
+        applyLang(LANG);
+    });
+})();
 </script>
 
+<!-- i18n-static-v1 -->
+<!-- i18n-final-v2 -->
+<!-- i18n-final-v4 -->
+<!-- i18n-final-v5 -->
 </body>
 </html>
