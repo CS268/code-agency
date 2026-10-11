@@ -341,7 +341,7 @@ def chatbot():
         # Send email if lead is complete
         if response_data["lead_complete"]:
             try:
-                sender_email = os.getenv("SMTP_USER", "matovuruky@gmail.com")
+                sender_email = os.getenv("SMTP_USER", "contact@jcode.store")
                 smtp_server = os.getenv("SMTP_SERVER", "smtp.gmail.com")
                 smtp_port = int(os.getenv("SMTP_PORT", 587))
                 smtp_password = os.getenv("SMTP_PASSWORD", "")
@@ -354,7 +354,7 @@ Secteur: {lead_sector}
 Message: {message}""")
                 msg['Subject'] = f"[JCODE LEAD] Nouveau prospect complet"
                 msg['From'] = sender_email
-                msg['To'] = "matovuruky@gmail.com"
+                msg['To'] = "contact@jcode.store"
 
                 with smtplib.SMTP(smtp_server, smtp_port) as server:
                     server.starttls()
@@ -372,7 +372,7 @@ Message: {message}""")
     except Exception as e:
         print(f"⚠️ Error in /chatbot: {e}")
         response_data = {
-            "reply": "Je rencontre un problème technique. Contactez-moi directement au 0466/06.22.73 ou matovuruky@gmail.com",
+            "reply": "Je rencontre un problème technique. Contactez-moi directement au 0466/06.22.73 ou contact@jcode.store",
             "lead_captured": False,
             "lead_complete": False,
             "conversation_id": "error"

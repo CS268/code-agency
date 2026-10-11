@@ -1,7 +1,7 @@
 {
   "agency": {
     "name": "JCODE Agency",
-    "email": "matovuruky@gmail.com",
+    "email": "contact@jcode.store",
     "phone": "0466/06.22.73",
     "location": "Mons, Belgique",
     "website": "https://cs268.github.io/code-agency/"
@@ -34,6 +34,6 @@
     "company_number": "[NUMERO BCE]",
     "vat_number": "[NUMERO TVA]",
     "hosting": "GitHub Pages",
-    "dpo_email": "matovuruky@gmail.com"
+    "dpo_email": "contact@jcode.store"
   }
 }

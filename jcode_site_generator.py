@@ -250,7 +250,7 @@ def send_lead_email(lead_name, lead_email, lead_phone, lead_sector, message):
         smtp_user = os.getenv("SMTP_USER")
         smtp_password = os.getenv("SMTP_PASSWORD")
         sender_email = os.getenv("SMTP_USER")
-        recipient_email = "matovuruky@gmail.com"
+        recipient_email = "contact@jcode.store"
 
         if not all([smtp_server, smtp_port, smtp_user, smtp_password, sender_email]):
             print("Variables SMTP manquantes. Email non envoyé.")
