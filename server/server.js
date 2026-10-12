@@ -1,3 +1,4 @@
+import { registerMarketingStudio } from './marketing-studio.js';
 import express from 'express';
 import multer from 'multer';
 import cors from 'cors';
@@ -116,6 +117,7 @@ if (payments) {
 }
 
 app.use(cors());
+registerMarketingStudio(app);
 app.use(express.json());
 app.use('/uploads', express.static(UPLOAD_DIR));
 

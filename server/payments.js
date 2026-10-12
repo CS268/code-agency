@@ -226,7 +226,7 @@ export function createPayments({
     if (event.type === 'payment_intent.amount_capturable_updated') {
       handleAuthorized(event.data.object).catch((err) => console.error('handleAuthorized error:', err?.message));
     }
-    if (event.type === 'checkout.session.completed' || event.type === 'invoice.paid') {
+    if (event.type === 'checkout.session.completed' || event.type === 'invoice.paid' || event.type === 'customer.subscription.deleted') {
       handleMarketingEvent(stripe, event).catch((err) => console.error('marketing event error:', err?.message));
     }
   }

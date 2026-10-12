@@ -8,7 +8,7 @@ const PALIERS = {
   price_1UOGgd2UNDGrRiqnQTh9z66x: { palier: 'agence', quota: 40, label: 'Agence' },
 };
 
-const TOKEN_DAYS = 7;
+const TOKEN_DAYS = 35;
 const MAGIC_BASE_URL = process.env.MARKETING_PUBLIC_URL || 'https://jcode.store/studio/marketing/';
 
 async function handleCheckoutCompleted(stripe, session) {
@@ -71,13 +71,24 @@ async function handleInvoicePaid(invoice) {
   const now = new Date().toISOString();
   const { error } = await supabase
     .from('abonnes_marketing')
-    .update({ videos_utilisees: 0, cycle_debut: now, updated_at: now })
+    .update({ videos_utilisees: 0, cycle_debut: now, updated_at: now, statut: 'actif', magic_token_expires_at: new Date(Date.now() + TOKEN_DAYS * 24 * 60 * 60 * 1000).toISOString() })
     .eq('stripe_subscription_id', subscriptionId);
   if (error) throw new Error(error.message);
   console.log('[MARKETING] quota remis a zero');
 }
 
+async function handleSubscriptionDeleted(subscription) {
+  if (!supabaseEnabled()) return;
+  const { error } = await supabase
+    .from('abonnes_marketing')
+    .update({ statut: 'annule', updated_at: new Date().toISOString() })
+    .eq('stripe_subscription_id', subscription.id);
+  if (error) throw new Error(error.message);
+  console.log('[MARKETING] abonnement annule');
+}
+
 export async function handleMarketingEvent(stripe, event) {
   if (event.type === 'checkout.session.completed') return handleCheckoutCompleted(stripe, event.data.object);
   if (event.type === 'invoice.paid') return handleInvoicePaid(event.data.object);
+  if (event.type === 'customer.subscription.deleted') return handleSubscriptionDeleted(event.data.object);
 }
