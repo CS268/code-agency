@@ -5,7 +5,7 @@ const AGNES_BASE = 'https://apihub.agnes-ai.com/v1';
 const POLL_BASE = 'https://apihub.agnes-ai.com/agnesapi';
 const MODEL = 'agnes-video-2.5';
 const MAX_SECONDS = 12;
-const MAX_GENERATION_MS = 15 * 60 * 1000;
+const MAX_GENERATION_MS = 12 * 60 * 1000;
 
 const jobs = new Map(); // videoId -> { subscriberId, createdAt, refunded }
 

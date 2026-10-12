@@ -722,7 +722,20 @@ const POLL_INTERVAL_SEC = 8;
 const MAX_POLL_ATTEMPTS = 100;
 
 const TIMING_CACHE_KEY = 'agnes_timing_cache_mkt_v1';
-const API_KEY_STORAGE = 'agnes_api_key_mkt';
+const API_KEY_STORAGE = 'jcode_mkt_token';
+(function captureMktToken() {
+    try {
+        const params = new URLSearchParams(location.search);
+        const t = (params.get('token') || '').trim();
+        if (t) {
+            localStorage.setItem(API_KEY_STORAGE, t);
+            params.delete('token');
+            const qs = params.toString();
+            history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+        }
+        localStorage.removeItem('agnes_api_key_mkt');
+    } catch (e) {}
+})();
 const WAKE_LOCK_PREF = 'agnes_wakelock_mkt';
 
 const MAX_VISIBLE_QUEUE = 30;
@@ -1721,7 +1734,7 @@ function getApiKey() {
     try { return (localStorage.getItem(API_KEY_STORAGE) || '').trim(); }
     catch (e) { return ''; }
 }
-function saveApiKey() {
+function _oldSaveApiKey() {
     const input = document.getElementById('api-key-input');
     if (!input) return;
     const key = input.value.trim();
@@ -1741,7 +1754,7 @@ function saveApiKey() {
         input.blur();
     } catch (e) { showToast('Erreur', 'error'); }
 }
-function updateApiPanel() {
+function _oldUpdateApiPanel() {
     const panel = document.getElementById('api-panel');
     const input = document.getElementById('api-key-input');
     const statusLine = document.getElementById('api-status-line');
@@ -1764,7 +1777,107 @@ function updateApiPanel() {
     updateGenerateBtn();
 }
 
+const MKT_API = 'https://video.jcode.store/api/marketing';
+var mktSession = null;
+var mktSessionRequested = false;
+const MKT_PALIERS = { decouverte: 'Découverte', pro: 'Pro', agence: 'Agence' };
+
+function mktHasAccess() {
+    return !!getApiKey() && !!mktSession && !mktSession.error && mktSession.remaining > 0;
+}
+
+function mktAccessMessage() {
+    if (!getApiKey()) return "Ouvrez le lien d'accès reçu par email";
+    if (!mktSession) return 'Vérification de votre accès…';
+    if (mktSession.error === 'network') return 'Connexion impossible, rechargez la page';
+    if (mktSession.error === 'subscription_inactive') return 'Abonnement inactif';
+    if (mktSession.error) return "Lien d'accès invalide ou expiré";
+    if (mktSession.remaining <= 0) return 'Quota mensuel atteint';
+    return '';
+}
+
+function mktFriendlyError(status, text) {
+    let code = '';
+    try { code = (JSON.parse(text) || {}).error || ''; } catch (e) {}
+    const map = {
+        quota_exhausted: 'Quota mensuel atteint',
+        token_expired: "Lien d'accès expiré",
+        invalid_token: "Lien d'accès invalide",
+        subscription_inactive: 'Abonnement inactif',
+        queue_full: "File d'attente pleine, réessayez dans quelques minutes",
+        image_invalid: 'Image invalide ou trop lourde',
+        agnes_error: 'Erreur du service vidéo',
+        agnes_unavailable: 'Service vidéo indisponible'
+    };
+    return map[code] || ('HTTP ' + status + ' — ' + String(text).slice(0, 200));
+}
+
+async function refreshMktSession() {
+    const token = getApiKey();
+    if (!token) { mktSession = null; updateApiPanel(); return; }
+    try {
+        const r = await fetch(MKT_API + '/session', { headers: { 'x-marketing-token': token } });
+        const d = await r.json();
+        mktSession = r.ok ? d : { error: d.error || 'invalid_token' };
+    } catch (e) {
+        mktSession = { error: 'network' };
+    }
+    updateApiPanel();
+}
+
+function saveApiKey() {}
+
+function updateApiPanel() {
+    const panel = document.getElementById('api-panel');
+    const statusLine = document.getElementById('api-status-line');
+    const statusText = document.getElementById('api-status-text');
+    const input = document.getElementById('api-key-input');
+    const saveBtn = document.getElementById('api-save-btn');
+    const hint = document.querySelector('#api-panel .api-hint');
+    if (input) input.style.display = 'none';
+    if (saveBtn) saveBtn.style.display = 'none';
+    if (hint) hint.style.display = 'none';
+    if (getApiKey() && !mktSession && !mktSessionRequested) {
+        mktSessionRequested = true;
+        refreshMktSession();
+    }
+    const ok = mktHasAccess();
+    if (panel) panel.classList.toggle('ok', ok);
+    if (statusLine) statusLine.classList.toggle('ok', ok);
+    if (statusText) {
+        if (mktSession && !mktSession.error) {
+            statusText.textContent = 'Abonnement ' + (MKT_PALIERS[mktSession.palier] || mktSession.palier) +
+                ' · ' + mktSession.remaining + '/' + mktSession.quota + ' vidéos restantes';
+        } else {
+            statusText.textContent = mktAccessMessage();
+        }
+    }
+    updateGenerateBtn();
+}
+
 function updateGenerateBtn() {
+    const btn = document.getElementById('generate-btn');
+    if (!btn) return;
+    const hasImages = state.images.length > 0;
+    const hasKey = mktHasAccess();
+    btn.disabled = !hasImages || !hasKey || state.isRunning || state.isLoadingImages;
+
+    if (state.isLoadingImages) {
+        btn.textContent = mktT('btn_loading_tpl', 'Chargement…') + ' (' + state.images.length + ')';
+    } else if (state.isRunning) {
+        const total = state.queue.length;
+        const done = state.completed + state.failed;
+        btn.textContent = mktT('btn_creating_tpl', 'Création…') + ' (' + done + '/' + total + ')';
+    } else if (!hasKey) {
+        btn.textContent = mktAccessMessage();
+    } else if (!hasImages) {
+        btn.textContent = mktT('btn_add_visuals', 'Ajoutez des visuels');
+    } else {
+        btn.textContent = mktT('generate_btn_tpl', '🎬 Générer') + ' ' + state.images.length + ' ' + (state.images.length > 1 ? mktT('generate_btn_suffix_p', 'pubs') : mktT('generate_btn_suffix_s', 'pub'));
+    }
+}
+
+function _oldUpdateGenerateBtn() {
     const btn = document.getElementById('generate-btn');
     if (!btn) return;
     const hasImages = state.images.length > 0;
@@ -2109,21 +2222,26 @@ async function createVideoTask(imageDataUri, prompt) {
         height: (FORMATS.find(f => f.id === state.selectedFormat) || FORMATS[0]).height,
         resolution: "720P"
     };
-    const res = await apiFetch(API_BASE + '/videos', {
+    const res = await apiFetch(MKT_API + '/generate', {
         method: 'POST',
         headers: {
-            'Authorization': 'Bearer ' + getApiKey(),
+            'x-marketing-token': getApiKey(),
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(body)
     }, 'Création');
     if (!res.ok) {
         const err = await res.text();
-        throw new Error('HTTP ' + res.status + ' — ' + err.slice(0, 200));
+        throw new Error(mktFriendlyError(res.status, err));
     }
     const data = await res.json();
-    const videoId = data.video_id || data.id || data.task_id;
+    const videoId = data.videoId || data.video_id || data.id || data.task_id;
     if (!videoId) throw new Error('Pas de video_id');
+    if (typeof data.remaining === 'number' && mktSession && !mktSession.error) {
+        mktSession.remaining = data.remaining;
+        mktSession.used = mktSession.quota - data.remaining;
+        updateApiPanel();
+    }
     return videoId;
 }
 
@@ -2147,11 +2265,12 @@ async function pollVideo(videoId, onProgress) {
                 r--;
             }
         }
-        const url = POLL_BASE + '?video_id=' + encodeURIComponent(videoId) + '&model_name=' + encodeURIComponent(MODEL_VIDEO);
+        const url = MKT_API + '/status?video_id=' + encodeURIComponent(videoId);
         const res = await apiFetch(url, {
             method: 'GET',
-            headers: { 'Authorization': 'Bearer ' + getApiKey() }
+            headers: { 'x-marketing-token': getApiKey() }
         }, 'Polling');
+        if (res.status === 401 || res.status === 403) throw new Error('Accès expiré ou abonnement inactif');
         const d = await res.json();
         const status = d.status || 'unknown';
         const progress = d.progress || 0;
@@ -2162,6 +2281,7 @@ async function pollVideo(videoId, onProgress) {
             return videoUrl;
         }
         if (status === 'failed' || status === 'error' || status === 'cancelled') {
+            refreshMktSession();
             throw new Error('Échec (' + status + ')');
         }
     }
@@ -2282,9 +2402,8 @@ async function pollTaskAndDisplay(item) {
 // ══════════════════════════════════════════════════════════════════
 async function startGeneration() {
     if (state.isRunning || !state.images.length) return;
-    if (!getApiKey()) {
-        showToast('Ajoutez votre clé API', 'error');
-        document.getElementById('api-key-input').focus();
+    if (!mktHasAccess()) {
+        showToast(mktAccessMessage(), 'error');
         return;
     }
 
