@@ -17,7 +17,10 @@ async function getSubscriber(req) {
     .select('id, palier, quota_mensuel, videos_utilisees, statut, magic_token_expires_at')
     .eq('magic_token', token)
     .maybeSingle();
-  if (error) return { code: 500, error: 'server_error' };
+  if (error) {
+    console.error('[MARKETING-STUDIO] lecture abonne:', error.message, error.code || '', error.details || '');
+    return { code: 500, error: 'server_error' };
+  }
   if (!data) return { code: 401, error: 'invalid_token' };
   if (data.statut !== 'actif') return { code: 403, error: 'subscription_inactive' };
   if (!data.magic_token_expires_at || new Date(data.magic_token_expires_at) < new Date()) {
