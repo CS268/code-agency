@@ -110,6 +110,15 @@ export function registerMarketingStudio(app) {
     if (!(frameRate >= 1 && frameRate <= 60) || !(numFrames >= 1)) return res.status(400).json({ error: 'duration_invalid' });
     if (!(width >= 256 && width <= 2048 && height >= 256 && height <= 2048)) return res.status(400).json({ error: 'size_invalid' });
     numFrames = Math.min(numFrames, MAX_SECONDS * frameRate); // plafond de duree impose par le serveur
+    const seconds = Math.max(1, Math.min(MAX_SECONDS, Math.round(numFrames / frameRate)));
+    const ratio = width / height;
+    const candidates = { '9:16': 9 / 16, '16:9': 16 / 9, '1:1': 1 };
+    let aspectRatio = '9:16';
+    let bestGap = Infinity;
+    for (const [name, value] of Object.entries(candidates)) {
+      const gap = Math.abs(Math.log(ratio / value));
+      if (gap < bestGap) { bestGap = gap; aspectRatio = name; }
+    }
 
     let reserved;
     try { reserved = await changeUsage(auth.sub.id, +1); }
@@ -123,9 +132,13 @@ export function registerMarketingStudio(app) {
         method: 'POST',
         headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: MODEL, prompt, image,
-          num_frames: numFrames, frame_rate: frameRate,
-          resolution: '720P', width, height,
+          model: MODEL,
+          prompt,
+          seconds: String(seconds),
+          size: '720P',
+          aspect_ratio: aspectRatio,
+          mode: 'reference',
+          images: [image],
         }),
       });
       if (!r.ok) {
