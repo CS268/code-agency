@@ -1786,13 +1786,68 @@ function mktHasAccess() {
     return !!getApiKey() && !!mktSession && !mktSession.error && mktSession.remaining > 0;
 }
 
+const MKT_TXT = {
+    fr: {
+        open_link: "Ouvrez le lien d'accès reçu par email pour commencer",
+        checking: 'Vérification de votre accès…',
+        network: 'Connexion impossible, rechargez la page',
+        inactive: "Votre abonnement n'est plus actif. Renouvelez-le pour continuer",
+        invalid: 'Accès non reconnu. Ouvrez le lien de votre dernier email ou contactez-nous',
+        quota: 'Quota du mois atteint, il se renouvelle au prochain paiement',
+        plan: 'Abonnement', left: 'vidéos restantes',
+        p_decouverte: 'Découverte', p_pro: 'Pro', p_agence: 'Agence',
+        queue_full: "File d'attente pleine, réessayez dans quelques minutes",
+        image_invalid: 'Image invalide ou trop lourde',
+        agnes_error: 'Erreur du service vidéo, réessayez',
+        agnes_unavailable: 'Service vidéo indisponible, réessayez'
+    },
+    en: {
+        open_link: 'Open the access link from your email to get started',
+        checking: 'Checking your access…',
+        network: 'Connection failed, please reload the page',
+        inactive: 'Your subscription is no longer active. Renew it to continue',
+        invalid: 'Access not recognised. Open the link from your latest email or contact us',
+        quota: 'Monthly quota reached, it renews with your next payment',
+        plan: 'Plan', left: 'videos left',
+        p_decouverte: 'Discovery', p_pro: 'Pro', p_agence: 'Agency',
+        queue_full: 'Queue is full, please try again in a few minutes',
+        image_invalid: 'Invalid or oversized image',
+        agnes_error: 'Video service error, please try again',
+        agnes_unavailable: 'Video service unavailable, please try again'
+    },
+    nl: {
+        open_link: 'Open de toegangslink uit je e-mail om te beginnen',
+        checking: 'Je toegang wordt gecontroleerd…',
+        network: 'Geen verbinding, laad de pagina opnieuw',
+        inactive: 'Je abonnement is niet meer actief. Verleng het om verder te gaan',
+        invalid: 'Toegang niet herkend. Open de link uit je laatste e-mail of neem contact op',
+        quota: 'Maandquotum bereikt, het wordt vernieuwd bij de volgende betaling',
+        plan: 'Abonnement', left: "video's resterend",
+        p_decouverte: 'Discovery', p_pro: 'Pro', p_agence: 'Agency',
+        queue_full: 'Wachtrij vol, probeer het over enkele minuten opnieuw',
+        image_invalid: 'Ongeldige of te grote afbeelding',
+        agnes_error: 'Fout in de videodienst, probeer opnieuw',
+        agnes_unavailable: 'Videodienst niet beschikbaar, probeer opnieuw'
+    }
+};
+
+function mktLang() {
+    let l = 'fr';
+    try { l = (localStorage.getItem('studio-lang') || document.documentElement.lang || 'fr').toLowerCase().slice(0, 2); } catch (e) {}
+    return MKT_TXT[l] ? l : 'fr';
+}
+
+function mktTx(key) {
+    return (MKT_TXT[mktLang()] || MKT_TXT.fr)[key] || MKT_TXT.fr[key] || '';
+}
+
 function mktAccessMessage() {
-    if (!getApiKey()) return "Ouvrez le lien d'accès reçu par email";
-    if (!mktSession) return 'Vérification de votre accès…';
-    if (mktSession.error === 'network') return 'Connexion impossible, rechargez la page';
-    if (mktSession.error === 'subscription_inactive') return 'Abonnement inactif';
-    if (mktSession.error) return "Lien d'accès invalide ou expiré";
-    if (mktSession.remaining <= 0) return 'Quota mensuel atteint';
+    if (!getApiKey()) return mktTx('open_link');
+    if (!mktSession) return mktTx('checking');
+    if (mktSession.error === 'network') return mktTx('network');
+    if (mktSession.error === 'subscription_inactive') return mktTx('inactive');
+    if (mktSession.error) return mktTx('invalid');
+    if (mktSession.remaining <= 0) return mktTx('quota');
     return '';
 }
 
@@ -1800,16 +1855,12 @@ function mktFriendlyError(status, text) {
     let code = '';
     try { code = (JSON.parse(text) || {}).error || ''; } catch (e) {}
     const map = {
-        quota_exhausted: 'Quota mensuel atteint',
-        token_expired: "Lien d'accès expiré",
-        invalid_token: "Lien d'accès invalide",
-        subscription_inactive: 'Abonnement inactif',
-        queue_full: "File d'attente pleine, réessayez dans quelques minutes",
-        image_invalid: 'Image invalide ou trop lourde',
-        agnes_error: 'Erreur du service vidéo',
-        agnes_unavailable: 'Service vidéo indisponible'
+        quota_exhausted: 'quota', token_expired: 'invalid', invalid_token: 'invalid',
+        subscription_inactive: 'inactive', queue_full: 'queue_full', image_invalid: 'image_invalid',
+        agnes_error: 'agnes_error', agnes_unavailable: 'agnes_unavailable'
     };
-    return map[code] || ('HTTP ' + status + ' — ' + String(text).slice(0, 200));
+    if (map[code]) return mktTx(map[code]);
+    return 'HTTP ' + status + ' — ' + String(text).slice(0, 200);
 }
 
 async function refreshMktSession() {
@@ -1846,8 +1897,8 @@ function updateApiPanel() {
     if (statusLine) statusLine.classList.toggle('ok', ok);
     if (statusText) {
         if (mktSession && !mktSession.error) {
-            statusText.textContent = 'Abonnement ' + (MKT_PALIERS[mktSession.palier] || mktSession.palier) +
-                ' · ' + mktSession.remaining + '/' + mktSession.quota + ' vidéos restantes';
+            statusText.textContent = mktTx('plan') + ' ' + (mktTx('p_' + mktSession.palier) || mktSession.palier) +
+                ' · ' + mktSession.remaining + '/' + mktSession.quota + ' ' + mktTx('left');
         } else {
             statusText.textContent = mktAccessMessage();
         }
@@ -2270,7 +2321,7 @@ async function pollVideo(videoId, onProgress) {
             method: 'GET',
             headers: { 'x-marketing-token': getApiKey() }
         }, 'Polling');
-        if (res.status === 401 || res.status === 403) throw new Error('Accès expiré ou abonnement inactif');
+        if (res.status === 401 || res.status === 403) throw new Error(mktTx('invalid'));
         const d = await res.json();
         const status = d.status || 'unknown';
         const progress = d.progress || 0;
