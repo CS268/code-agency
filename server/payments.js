@@ -4,6 +4,7 @@
 // -> webhook "autorisé" -> appel Agnes -> suivi côté serveur -> capture du paiement si la vidéo est prête,
 // annulation de l'autorisation sinon (le client n'est alors pas débité).
 import Stripe from 'stripe';
+import { handleMarketingEvent } from './marketing-subscriptions.js';
 import { randomUUID } from 'crypto';
 import { unlinkSync, existsSync, readFileSync } from 'fs';
 
@@ -224,6 +225,9 @@ export function createPayments({
     res.json({ received: true });
     if (event.type === 'payment_intent.amount_capturable_updated') {
       handleAuthorized(event.data.object).catch((err) => console.error('handleAuthorized error:', err?.message));
+    }
+    if (event.type === 'checkout.session.completed' || event.type === 'invoice.paid') {
+      handleMarketingEvent(stripe, event).catch((err) => console.error('marketing event error:', err?.message));
     }
   }
 
