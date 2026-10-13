@@ -31,3 +31,18 @@ export async function sendMagicLink(to, link, palier) {
     html: `<p>Bonjour,</p><p>Merci pour votre abonnement <b>${palier}</b>.</p><p><a href="${link}">Accéder au Studio Marketing</a></p><p>Ne partagez pas ce lien.</p><p>jcode.store</p>`,
   });
 }
+
+export async function sendAlert(subject, text) {
+  const t = getTransporter();
+  if (!t) { console.error('[ALERTE]', subject, text); return; }
+  try {
+    await t.sendMail({
+      from: `jcode.store <${process.env.MAGIC_MAIL_USER}>`,
+      to: process.env.ALERT_EMAIL || process.env.MAGIC_MAIL_USER,
+      subject: '[JCODE ALERTE] ' + subject,
+      text,
+    });
+  } catch (err) {
+    console.error('[ALERTE] envoi echoue:', err?.message);
+  }
+}

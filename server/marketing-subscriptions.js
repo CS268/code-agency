@@ -1,6 +1,6 @@
 import crypto from 'node:crypto';
 import { supabase, supabaseEnabled } from './supabase.js';
-import { sendMagicLink } from './mailer.js';
+import { sendMagicLink, sendAlert } from './mailer.js';
 
 const PALIERS = {
   price_1UOGek2UNDGrRiqnd1fNq96S: { palier: 'decouverte', quota: 5, label: 'Découverte' },
@@ -59,6 +59,7 @@ async function handleCheckoutCompleted(stripe, session) {
     console.log('[MARKETING] lien magique envoye');
   } catch (err) {
     console.error('[MARKETING] envoi email echoue:', err?.message);
+    await sendAlert('Lien magique non envoye', 'Client: ' + email + ' (palier ' + plan.palier + ')\nErreur: ' + (err?.message || err) + '\n\nRenvoyer le lien: Stripe > Webhooks > VIDEO JCODE > Event deliveries > Resend');
   }
 }
 
@@ -88,7 +89,13 @@ async function handleSubscriptionDeleted(subscription) {
 }
 
 export async function handleMarketingEvent(stripe, event) {
-  if (event.type === 'checkout.session.completed') return handleCheckoutCompleted(stripe, event.data.object);
-  if (event.type === 'invoice.paid') return handleInvoicePaid(event.data.object);
-  if (event.type === 'customer.subscription.deleted') return handleSubscriptionDeleted(event.data.object);
+  try {
+    if (event.type === 'checkout.session.completed') return await handleCheckoutCompleted(stripe, event.data.object);
+    if (event.type === 'invoice.paid') return await handleInvoicePaid(event.data.object);
+    if (event.type === 'customer.subscription.deleted') return await handleSubscriptionDeleted(event.data.object);
+  } catch (err) {
+    console.error('[MARKETING] erreur evenement', event.type, err?.message);
+    await sendAlert('Erreur Studio Marketing (' + event.type + ')', 'Evenement Stripe: ' + event.id + '\nErreur: ' + (err?.message || err) + '\n\nApres correction, rejouer: Stripe > Webhooks > VIDEO JCODE > Event deliveries > Resend');
+    throw err;
+  }
 }
