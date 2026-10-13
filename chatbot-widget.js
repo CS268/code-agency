@@ -161,7 +161,7 @@
     inputField.style.fontSize = '14px';
 
     const sendButton = document.createElement('button');
-    sendButton.textContent = 'Send';
+    sendButton.textContent = ({fr: "Envoyer", nl: "Verzenden", en: "Send"})[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || "Send";
     sendButton.style.padding = '10px 20px';
     sendButton.style.backgroundColor = config.colors.primary;
     sendButton.style.color = 'white';
@@ -308,13 +308,13 @@
         currentHistory.push(botMessage);
         saveHistory();
     } else {
-        showBotMessage("Désolé, je n'ai pas compris. Pouvez-vous reformuler ?");
+        showBotMessage(({fr: "Désolé, je n'ai pas compris. Pouvez-vous reformuler ?", nl: "Sorry, dat heb ik niet begrepen. Kunt u het anders formuleren?", en: "Sorry, I didn't understand. Could you rephrase?"})[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || "Désolé, je n'ai pas compris. Pouvez-vous reformuler ?");
     }
 })
 .catch(error => {
     console.error('Chatbot error:', error);
     removeTypingIndicator();
-    showBotMessage("Je suis momentanément indisponible. Laissez-moi vos coordonnées (prénom, email, téléphone) et je vous recontacte sous 24h ! 📩");
+    showBotMessage(({fr: "Je suis momentanément indisponible. Laissez-moi vos coordonnées (prénom, email, téléphone) et je vous recontacte sous 24h ! 📩", nl: "Ik ben momenteel niet beschikbaar. Laat uw gegevens achter (voornaam, e-mail, telefoon) en ik neem binnen 24 uur contact met u op! 📩", en: "I'm temporarily unavailable. Leave your details (first name, email, phone) and I'll get back to you within 24 hours! 📩"})[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || "Je suis momentanément indisponible. Laissez-moi vos coordonnées (prénom, email, téléphone) et je vous recontacte sous 24h ! 📩");
 });
 
   }
