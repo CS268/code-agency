@@ -152,7 +152,7 @@
 
     const inputField = document.createElement('input');
     inputField.type = 'text';
-    inputField.placeholder = 'Type your message...';
+    inputField.placeholder = ({fr: "Écrivez votre message...", nl: "Typ uw bericht...", en: "Type your message..."})[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || "Type your message...";
     inputField.style.flex = '1';
     inputField.style.padding = '10px 14px';
     inputField.style.border = '1px solid #d1d5db';
@@ -225,7 +225,7 @@
 
       // Show welcome message if no history
       if (chatHistory.length === 0) {
-        showBotMessage('Welcome to JCODE Assistant! How can I help you today?');
+        showBotMessage(({fr: "Bonjour ! Je suis JCODE Assistant. Sites web, AI Concierge ou Studio Marketing : comment puis-je vous aider ?", nl: "Hallo! Ik ben JCODE Assistant. Websites, AI Concierge of Studio Marketing: waarmee kan ik u helpen?", en: "Hello! I'm JCODE Assistant. Websites, AI Concierge or Studio Marketing: how can I help you today?"})[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || "Hello! I'm JCODE Assistant. How can I help you today?");
       }
     } else {
       chatWindow.style.opacity = '0';
