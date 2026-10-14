@@ -3290,9 +3290,9 @@
     "nl": "Deze gegevens worden doorgestuurd naar onze aanbieder voor videogeneratie, Agnes (platform.agnes-ai.com), die ze in onze opdracht verwerkt. Deze aanbieder kan gegevens buiten de Europese Unie verwerken."
   },
   "privacy_short.studio_retention": {
-    "fr": "Les images et les vidéos ne sont conservées que le temps strictement nécessaire à la fourniture du service, puis supprimées.",
-    "en": "Images and videos are kept only for as long as strictly necessary to provide the service, then deleted.",
-    "nl": "Afbeeldingen en video's worden alleen bewaard zolang dat strikt nodig is om de dienst te leveren, en daarna verwijderd."
+    "fr": "La durée de conservation des images et des vidéos par notre prestataire est régie par sa propre politique de confidentialité.",
+    "en": "How long our provider keeps images and videos is governed by its own privacy policy.",
+    "nl": "Hoe lang onze aanbieder afbeeldingen en video's bewaart, wordt bepaald door zijn eigen privacybeleid."
   },
   "privacy_short.studio_basis": {
     "fr": "Base légale : exécution du contrat (article 6.1.b du RGPD). Vous pouvez exercer vos droits comme indiqué à la section 5.",
