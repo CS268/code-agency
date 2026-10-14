@@ -1439,17 +1439,17 @@ const MARKETING_EFFECTS = [
 // ══════════════════════════════════════════════════════════════════
 const PROMPT_PRESETS = [
     { get label() { return mktT('art_chip_0', '✨ Premium silencieux'); },
-      text: 'Ambiance luxueuse et silencieuse. Le produit reste parfaitement identique à la photo. Lumière dorée, ralenti élégant, reflets subtils. Aucune transformation du sujet.' },
+      get text() { return ({fr: 'Ambiance luxueuse et silencieuse. Le produit reste parfaitement identique à la photo. Lumière dorée, ralenti élégant, reflets subtils. Aucune transformation du sujet.', nl: 'Luxueuze, stille sfeer. Het product blijft perfect identiek aan de foto. Gouden licht, elegante slow motion, subtiele reflecties. Geen enkele verandering van het onderwerp.', en: 'Luxurious, silent atmosphere. The product stays perfectly identical to the photo. Golden light, elegant slow motion, subtle reflections. No transformation of the subject.'})[mktLang()]; } },
     { get label() { return mktT('art_chip_1', '⚡ Impact viral'); },
-      text: 'Style TikTok accrocheur. Mouvement dynamique, lumière pulsée, effet glitch subtil au début. Le sujet reste identique. Conçu pour stopper le scroll.' },
+      get text() { return ({fr: 'Style TikTok accrocheur. Mouvement dynamique, lumière pulsée, effet glitch subtil au début. Le sujet reste identique. Conçu pour stopper le scroll.', nl: 'Opvallende TikTok-stijl. Dynamische beweging, pulserend licht, subtiel glitcheffect aan het begin. Het onderwerp blijft identiek. Gemaakt om het scrollen te stoppen.', en: 'Eye-catching TikTok style. Dynamic movement, pulsing light, subtle glitch effect at the start. The subject stays identical. Designed to stop the scroll.'})[mktLang()]; } },
     { get label() { return mktT('art_chip_2', '🌿 Authentique naturel'); },
-      text: 'Ambiance authentique et naturelle. Lumière douce de jour, mouvement léger, atmosphère chaleureuse et vraie. Le sujet reste identique.' },
+      get text() { return ({fr: 'Ambiance authentique et naturelle. Lumière douce de jour, mouvement léger, atmosphère chaleureuse et vraie. Le sujet reste identique.', nl: 'Authentieke, natuurlijke sfeer. Zacht daglicht, lichte beweging, warme en oprechte uitstraling. Het onderwerp blijft identiek.', en: 'Authentic, natural atmosphere. Soft daylight, light movement, warm and genuine mood. The subject stays identical.'})[mktLang()]; } },
     { get label() { return mktT('art_chip_3', '🎬 Cinématique pub'); },
-      text: 'Qualité cinématographique de publicité nationale. Éclairage dramatique, profondeur de champ, grain film subtil. Le sujet reste parfaitement identique.' },
+      get text() { return ({fr: 'Qualité cinématographique de publicité nationale. Éclairage dramatique, profondeur de champ, grain film subtil. Le sujet reste parfaitement identique.', nl: 'Cinematografische kwaliteit van een nationale reclamecampagne. Dramatische belichting, scherptediepte, subtiele filmkorrel. Het onderwerp blijft perfect identiek.', en: 'Cinematic quality of a national advertising campaign. Dramatic lighting, depth of field, subtle film grain. The subject stays perfectly identical.'})[mktLang()]; } },
     { get label() { return mktT('art_chip_4', '🏆 Énergie sportive'); },
-      text: 'Énergie sportive et performance. Mouvement fort, éclairage contrasté, sensation de puissance. Le sujet reste identique.' },
+      get text() { return ({fr: 'Énergie sportive et performance. Mouvement fort, éclairage contrasté, sensation de puissance. Le sujet reste identique.', nl: 'Sportieve energie en prestatie. Krachtige beweging, contrastrijke belichting, gevoel van kracht. Het onderwerp blijft identiek.', en: 'Sporty energy and performance. Strong movement, contrasting lighting, a sense of power. The subject stays identical.'})[mktLang()]; } },
     { get label() { return mktT('art_chip_5', '🌸 Beauté délicate'); },
-      text: 'Ambiance beauté délicate. Tons pastel, lumière douce et diffuse, atmosphère sophistiquée et féminine. Le sujet reste identique.' }
+      get text() { return ({fr: 'Ambiance beauté délicate. Tons pastel, lumière douce et diffuse, atmosphère sophistiquée et féminine. Le sujet reste identique.', nl: 'Delicate schoonheidssfeer. Pastelkleuren, zacht diffuus licht, verfijnde en vrouwelijke sfeer. Het onderwerp blijft identiek.', en: 'Delicate beauty atmosphere. Pastel tones, soft diffused light, sophisticated and feminine mood. The subject stays identical.'})[mktLang()]; } }
 ];
 
 // ══════════════════════════════════════════════════════════════════
@@ -2122,13 +2122,12 @@ function renderPromptPresets() {
 function renderStyles() {
     const container = document.getElementById('styles-grid');
     let html = '';
-    html += '<div class="no-style-card ' + (state.selectedEffect === null ? 'selected' : '') + '" data-effect="none">' +
-        (state.selectedEffect === null
-            ? mktT('effects_no_effect', '✓ Aucun effet — la campagne seule gère le style')
-            : mktT('effects_no_effect_marketing', '🚫 Aucun effet marketing')) +
-        '</div>';
+    const _eff = state.selectedEffect ? MARKETING_EFFECTS.find(s => s.id === state.selectedEffect) : null;
+    html += _eff
+        ? '<div class="no-style-card selected">' + ({fr: '✓ Effet appliqué : ', nl: '✓ Effect toegepast: ', en: '✓ Effect applied: '})[mktLang()] + esc(mktT('effect_' + _eff.id + '_name', _eff.name)) + '</div>'
+        : '<div class="no-style-card selected" data-effect="none">' + mktT('effects_no_effect', '✓ Aucun effet — la campagne seule gère le style') + '</div>';
     html += '<div class="style-category-header">' + mktT('effects_header', '🎨 Effets marketing') + '</div>';
-    html += '<div class="style-category-desc">Chaque effet donne un ton commercial précis à votre pub.</div>';
+    html += '<div class="style-category-desc">' + ({fr: 'Chaque effet donne un ton commercial précis à votre pub.', nl: 'Elk effect geeft uw advertentie een duidelijke commerciële toon.', en: 'Each effect gives your ad a distinct commercial tone.'})[mktLang()] + '</div>';
     html += MARKETING_EFFECTS.map(s => {
         const sel = state.selectedEffect === s.id ? 'selected' : '';
         return '<div class="style-card ' + sel + '" data-effect="' + s.id + '">' +
@@ -2143,7 +2142,7 @@ function renderStyles() {
     container.querySelectorAll('[data-effect]').forEach(el => {
         el.addEventListener('click', () => {
             const val = el.dataset.effect;
-            state.selectedEffect = (val === 'none') ? null : val;
+            state.selectedEffect = (val === 'none' || val === state.selectedEffect) ? null : val;
             renderStyles();
         });
     });
