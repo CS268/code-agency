@@ -484,7 +484,7 @@ h1 { background: none; -webkit-text-fill-color: #f8fafc; }
         <span class="logo-mark" style="width:34px;height:34px;border-radius:10px;background:var(--grad);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;">J</span>
         <span class="logo-txt" style="color:#fff;font-weight:800;letter-spacing:0.02em;">JCODE</span>
         <span style="width:1px;height:18px;background:var(--border);"></span>
-        <span class="logo-sub" style="color:var(--ink-faint);font-size:0.68rem;letter-spacing:0.18em;font-weight:600;">STUDIO IA VIDÉO</span>
+        <span class="logo-sub" style="color:var(--ink-faint);font-size:0.68rem;letter-spacing:0.18em;font-weight:600;" data-fr="STUDIO IA VIDÉO" data-nl="AI-VIDEOSTUDIO" data-en="AI VIDEO STUDIO">STUDIO IA VIDÉO</span>
     </a>
     <div class="nav-links" style="display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap;">
         <a href="/studio/prompts/" style="color:var(--ink-dim);text-decoration:none;font-size:0.85rem;" data-fr="Studio" data-en="Studio" data-nl="Studio">Studio</a>
@@ -2114,7 +2114,7 @@ function renderPromptPresets() {
             const ta = document.getElementById('main-prompt');
             ta.value = preset.text;
             state.mainPrompt = preset.text;
-            showToast('Exemple appliqué', 'success', 1200);
+            showToast(({fr: 'Exemple appliqué', nl: 'Voorbeeld toegepast', en: 'Example applied'})[mktLang()], 'success', 1200);
         });
     });
 }
@@ -2693,5 +2693,6 @@ function stopGeneration() {
 <!-- i18n-final-v2 -->
 <!-- i18n-final-v4 -->
 <!-- i18n-final-v5 -->
+<div id="legal-links" style="text-align:center;padding:1.2rem 1rem 1.6rem;font-size:0.78rem;color:#64748b;"><a href="/mentions-legales.html" style="color:#94a3b8;text-decoration:none;" data-fr="Mentions légales" data-nl="Juridische vermeldingen" data-en="Legal notice">Mentions légales</a> &nbsp;·&nbsp; <a href="/privacy-policy.html" style="color:#94a3b8;text-decoration:none;" data-fr="Confidentialité" data-nl="Privacybeleid" data-en="Privacy policy">Confidentialité</a> &nbsp;·&nbsp; <a href="/terms.html" style="color:#94a3b8;text-decoration:none;" data-fr="Conditions" data-nl="Voorwaarden" data-en="Terms">Conditions</a></div>
 </body>
 </html>
