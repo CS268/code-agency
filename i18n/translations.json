@@ -3268,5 +3268,65 @@
     "en": "● THE JCODE AGENCY BLOG",
     "nl": "● HET JCODE AGENCY BLOG",
     "fr": ""
+  },
+  "privacy_short.studio_title": {
+    "fr": "10. Studio IA Vidéo",
+    "en": "10. AI Video Studio",
+    "nl": "10. AI-videostudio"
+  },
+  "privacy_short.studio_intro": {
+    "fr": "Lorsque vous utilisez le Studio IA Vidéo, nous traitons les éléments que vous fournissez pour générer votre vidéo :",
+    "en": "When you use the AI Video Studio, we process what you provide in order to generate your video:",
+    "nl": "Wanneer u de AI-videostudio gebruikt, verwerken wij wat u aanlevert om uw video te genereren:"
+  },
+  "privacy_short.studio_data": {
+    "fr": "Vos images et vos textes (message publicitaire, direction artistique, nom de marque). Une image peut contenir des données personnelles, par exemple un visage ; vous ne devez téléverser que des images que vous avez le droit d'utiliser.",
+    "en": "Your images and texts (advertising message, artistic direction, brand name). An image may contain personal data, such as a face; you must only upload images you are entitled to use.",
+    "nl": "Uw afbeeldingen en teksten (reclameboodschap, artistieke richting, merknaam). Een afbeelding kan persoonsgegevens bevatten, bijvoorbeeld een gezicht; u mag alleen afbeeldingen uploaden die u mag gebruiken."
+  },
+  "privacy_short.studio_agnes": {
+    "fr": "Ces éléments sont transmis à notre prestataire de génération vidéo, Agnes (platform.agnes-ai.com), qui les traite pour notre compte. Ce prestataire peut traiter les données en dehors de l'Union européenne.",
+    "en": "These items are sent to our video generation provider, Agnes (platform.agnes-ai.com), which processes them on our behalf. This provider may process data outside the European Union.",
+    "nl": "Deze gegevens worden doorgestuurd naar onze aanbieder voor videogeneratie, Agnes (platform.agnes-ai.com), die ze in onze opdracht verwerkt. Deze aanbieder kan gegevens buiten de Europese Unie verwerken."
+  },
+  "privacy_short.studio_retention": {
+    "fr": "Les images et les vidéos ne sont conservées que le temps strictement nécessaire à la fourniture du service, puis supprimées.",
+    "en": "Images and videos are kept only for as long as strictly necessary to provide the service, then deleted.",
+    "nl": "Afbeeldingen en video's worden alleen bewaard zolang dat strikt nodig is om de dienst te leveren, en daarna verwijderd."
+  },
+  "privacy_short.studio_basis": {
+    "fr": "Base légale : exécution du contrat (article 6.1.b du RGPD). Vous pouvez exercer vos droits comme indiqué à la section 5.",
+    "en": "Legal basis: performance of the contract (Article 6.1.b GDPR). You can exercise your rights as described in section 5.",
+    "nl": "Rechtsgrond: uitvoering van de overeenkomst (artikel 6.1.b AVG). U kunt uw rechten uitoefenen zoals beschreven in sectie 5."
+  },
+  "terms.studio_title": {
+    "fr": "11. Studio IA Vidéo",
+    "en": "11. AI Video Studio",
+    "nl": "11. AI-videostudio"
+  },
+  "terms.studio_sub": {
+    "fr": "L'abonnement au Studio est reconduit automatiquement à chaque échéance jusqu'à sa résiliation. Vous pouvez le résilier à tout moment ; la résiliation prend effet à la fin de la période déjà payée. Les prix affichés sont TTC.",
+    "en": "The Studio subscription renews automatically at each due date until cancelled. You may cancel at any time; cancellation takes effect at the end of the period already paid. Prices shown include VAT.",
+    "nl": "Het abonnement op de studio wordt bij elke vervaldatum automatisch verlengd tot het wordt opgezegd. U kunt op elk moment opzeggen; de opzegging gaat in aan het einde van de reeds betaalde periode. De getoonde prijzen zijn inclusief btw."
+  },
+  "terms.studio_withdrawal": {
+    "fr": "Si vous êtes consommateur, vous disposez de 14 jours pour vous rétracter. Si vous demandez que le service démarre pendant ce délai, vous devrez payer la part du service déjà fournie en cas de rétractation, et vous perdez ce droit une fois le service entièrement exécuté.",
+    "en": "If you are a consumer, you have 14 days to withdraw. If you ask for the service to start during that period, you must pay for the part of the service already provided if you withdraw, and you lose this right once the service has been fully performed.",
+    "nl": "Als u consument bent, heeft u 14 dagen om uw bestelling te herroepen. Als u vraagt dat de dienst al binnen die termijn start, moet u bij herroeping het reeds geleverde deel van de dienst betalen, en verliest u dit recht zodra de dienst volledig is uitgevoerd."
+  },
+  "terms.studio_use": {
+    "fr": "Vous ne devez téléverser que des images dont vous détenez les droits. Lorsqu'une personne est reconnaissable, vous devez avoir obtenu son accord.",
+    "en": "You may only upload images you hold the rights to. Where a person is recognisable, you must have obtained their consent.",
+    "nl": "U mag alleen afbeeldingen uploaden waarvan u de rechten bezit. Als een persoon herkenbaar is, moet u zijn of haar toestemming hebben verkregen."
+  },
+  "terms.studio_misuse": {
+    "fr": "Il est interdit de créer des contenus illicites ou trompeurs, notamment imitant une personne réelle.",
+    "en": "It is forbidden to create unlawful or misleading content, in particular content imitating a real person.",
+    "nl": "Het is verboden onwettige of misleidende content te maken, met name content die een echte persoon nabootst."
+  },
+  "terms.studio_ai": {
+    "fr": "Les vidéos sont générées par intelligence artificielle. Si vous les diffusez et qu'elles montrent des personnes ou des scènes réalistes pouvant passer pour authentiques, vous devez indiquer qu'elles ont été générées ou modifiées par IA.",
+    "en": "Videos are generated by artificial intelligence. If you publish them and they show realistic people or scenes that could pass as authentic, you must state that they were generated or manipulated by AI.",
+    "nl": "De video's worden door kunstmatige intelligentie gegenereerd. Als u ze verspreidt en ze realistische personen of scènes tonen die voor echt kunnen doorgaan, moet u vermelden dat ze door AI zijn gegenereerd of bewerkt."
   }
 }
