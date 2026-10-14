@@ -3330,8 +3330,18 @@
     "nl": "De video's worden door kunstmatige intelligentie gegenereerd. Als u ze verspreidt en ze realistische personen of scènes tonen die voor echt kunnen doorgaan, moet u vermelden dat ze door AI zijn gegenereerd of bewerkt."
   },
   "privacy_short.studio_account": {
-    "fr": "Pour votre abonnement, nous conservons votre adresse e-mail et votre identifiant client Stripe dans notre base de données (Supabase).",
-    "en": "For your subscription, we keep your email address and your Stripe customer ID in our database (Supabase).",
-    "nl": "Voor uw abonnement bewaren wij uw e-mailadres en uw Stripe-klant-ID in onze database (Supabase)."
+    "fr": "Pour votre abonnement, nous conservons votre adresse e-mail, votre identifiant client Stripe et le nombre de vidéos générées dans notre base de données (Supabase).",
+    "en": "For your subscription, we keep your email address, your Stripe customer ID and the number of videos generated in our database (Supabase).",
+    "nl": "Voor uw abonnement bewaren wij uw e-mailadres, uw Stripe-klant-ID en het aantal gegenereerde video's in onze database (Supabase)."
+  },
+  "privacy_short.s4_agnes": {
+    "fr": "<strong>Agnes</strong> — génération des vidéos du Studio (images et textes transmis)",
+    "en": "<strong>Agnes</strong> — generation of the Studio videos (images and texts sent)",
+    "nl": "<strong>Agnes</strong> — generatie van de Studio-video's (afbeeldingen en teksten doorgestuurd)"
+  },
+  "privacy_short.s4_supabase": {
+    "fr": "<strong>Supabase</strong> — base de données des abonnements (e-mail, identifiant Stripe, nombre de vidéos générées)",
+    "en": "<strong>Supabase</strong> — subscriptions database (email, Stripe customer ID, number of videos generated)",
+    "nl": "<strong>Supabase</strong> — database van de abonnementen (e-mail, Stripe-klant-ID, aantal gegenereerde video's)"
   }
 }
