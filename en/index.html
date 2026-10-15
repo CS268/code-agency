@@ -1235,13 +1235,24 @@
 <body>
 
 
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <!-- Google Analytics 4 : charge seulement apres consentement (cookies analytiques acceptes) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
+        function loadGA() {
+            if (window.__gaLoaded) return;
+            window.__gaLoaded = true;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-LYT113PWTZ';
+            document.head.appendChild(s);
+            gtag('js', new Date());
+            gtag('config', 'G-LYT113PWTZ');
+        }
+        try {
+            var c = JSON.parse(localStorage.getItem('cookieConsent') || 'null');
+            if (c && c.analytics) { loadGA(); }
+        } catch (e) {}
     </script>
 
     <!-- Meta Pixel -->
@@ -1849,7 +1860,7 @@
         function cookieChoice(choice) {
             const banner = document.getElementById('cookie-banner');
             if (choice === 'accept') {
-                localStorage.setItem('cookieConsent', JSON.stringify({necessary:true, analytics:true, marketing:true, date:new Date().toISOString()}));
+                localStorage.setItem('cookieConsent', JSON.stringify({necessary:true, analytics:true, marketing:true, date:new Date().toISOString()})); if (typeof loadGA === 'function') { loadGA(); }
                 banner.style.transform = 'translateY(100%)';
                 setTimeout(() => banner.style.display = 'none', 500);
             } else if (choice === 'refuse') {
@@ -1866,7 +1877,7 @@
         function saveCustomize() {
             const analytics = document.getElementById('cookie-analytics').checked;
             const marketing = document.getElementById('cookie-marketing').checked;
-            localStorage.setItem('cookieConsent', JSON.stringify({necessary:true, analytics:analytics, marketing:marketing, date:new Date().toISOString()}));
+            localStorage.setItem('cookieConsent', JSON.stringify({necessary:true, analytics:analytics, marketing:marketing, date:new Date().toISOString()})); if (analytics && typeof loadGA === 'function') { loadGA(); }
             document.getElementById('cookie-customize').style.display = 'none';
             document.getElementById('cookie-banner').style.transform = 'translateY(100%)';
             setTimeout(() => document.getElementById('cookie-banner').style.display = 'none', 500);
