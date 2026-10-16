@@ -111,6 +111,7 @@
         .detail-title { font-weight: 500; font-size: 0.95rem; }
         .detail-law { font-size: 0.8rem; color: var(--purple); margin-bottom: 0.2rem; }
         .detail-tip { font-size: 0.85rem; color: var(--text-muted); }
+        .detail-sanction { font-size: 0.85rem; color: var(--warning); font-weight: 500; margin: 0.3rem 0; }
 
         /* AI Recs */
         .ai-card { grid-column: 1 / -1; }
@@ -326,6 +327,7 @@
                             <span class="status-badge ${statusClass}">${statusText}</span>
                         </div>
                         <div class="detail-law">${item.s} • ${item.law}</div>
+                        ${item.sanction ? `<div class="detail-sanction">⚠️ ${item.sanction}</div>` : ''}
                         <div class="detail-tip">${item.tip}</div>
                     </li>`;
             });
