@@ -1,6 +1,7 @@
 // ConformShop – API d'analyse (Cloudflare Worker). Reçoit { url }, renvoie des lignes JSON en direct.
-const ALLOW = ["https://jcode.store", "https://www.jcode.store", "http://localhost:8000"];
-const MODEL = "claude-3-5-haiku-20241022";
+const ALLOW = ["https://jcode.store", "https://www.jcode.store", "http://localhost:8000", "http://localhost:8123"];
+const LIMIT_IP = 3, LIMIT_ALL = 100; // analyses par jour : par visiteur / au total
+const MODEL = "mistral-small-latest";
 const CMP = /cookiebot|axeptio|onetrust|didomi|tarteaucitron|iubenda|usercentrics|complianz|cookieyes|quantcast|consentmanager|cookie[- ]?consent|(accepter|accept|accepteer)[^<]{0,40}cookies/i;
 
 // [pays, gravité, titre, regex, base légale, conseil, sanction]
@@ -37,6 +38,17 @@ export default {
     try { url = new URL((await req.json()).url.trim().replace(/^(?!https?:)/, "https://")); } catch { return new Response("URL invalide", { status: 400, headers: cors }); }
     const h = url.hostname;
     if (!/^https?:$/.test(url.protocol) || !h.includes(".") || /^[\d.:[]/.test(h) || /(localhost|\.local|\.internal)$/.test(h)) return new Response("URL refusée", { status: 400, headers: cors });
+    if (env.RATE) {
+      const ip = req.headers.get("CF-Connecting-IP") || "inconnu";
+      const day = new Date().toISOString().slice(0, 10);
+      const kIp = "ip:" + ip + ":" + day, kAll = "all:" + day;
+      const nIp = parseInt((await env.RATE.get(kIp)) || "0", 10);
+      const nAll = parseInt((await env.RATE.get(kAll)) || "0", 10);
+      if (nIp >= LIMIT_IP) return new Response("Limite quotidienne atteinte, réessayez demain.", { status: 429, headers: cors });
+      if (nAll >= LIMIT_ALL) return new Response("Service très sollicité, réessayez demain.", { status: 429, headers: cors });
+      await env.RATE.put(kIp, String(nIp + 1), { expirationTtl: 172800 });
+      await env.RATE.put(kAll, String(nAll + 1), { expirationTtl: 172800 });
+    }
     const { readable, writable } = new TransformStream(), w = writable.getWriter(), enc = new TextEncoder();
     const send = x => w.write(enc.encode(JSON.stringify(x) + "\n"));
     (async () => { try { await scan(url, send, env); } catch (e) { await send({ type: "error", msg: "Site injoignable ou analyse impossible." }); } await w.close(); })();
@@ -74,12 +86,12 @@ async function scan(url, send, env) {
   const pts = { ok: 1, warn: .5, ko: 0 }, pc = a => a.length ? Math.round(a.reduce((s, i) => s + pts[i.st], 0) / a.length * 100) : 0;
   const by = {}; det.forEach(c => by[c] = pc(items.filter(i => i.s === c)));
   await send({ type: "result", url: base, det, score: pc(items), by, items, perf });
-  if (env.ANTHROPIC_API_KEY) {
+  if (env.MISTRAL_API_KEY) {
     await send({ type: "step", msg: "Recommandations IA" });
     const bad = items.filter(i => i.st !== "ok").map(i => `${i.st}: ${i.t} (${i.law})`).join("\n") || "Aucun écart détecté";
-    const r = await fetch("https://api.anthropic.com/v1/messages", { method: "POST", headers: { "x-api-key": env.ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" },
+    const r = await fetch("https://api.mistral.ai/v1/chat/completions", { method: "POST", headers: { "Authorization": "Bearer " + env.MISTRAL_API_KEY, "content-type": "application/json" },
       body: JSON.stringify({ model: env.MODEL || MODEL, max_tokens: 900, messages: [{ role: "user", content: `Tu es consultant conformité e-commerce (UE, BE, FR, NL). Site : ${base}\nPoints à traiter :\n${bad}\nDonne 4 recommandations priorisées par risque, JSON strict : [{"titre":"","pourquoi":"","action":"","effort":"faible|moyen|élevé"}]. Français, concret, sans promettre d'éviter une amende.` }] }) });
-    let recs = []; try { recs = JSON.parse((await r.json()).content[0].text.match(/\[[\s\S]*\]/)[0]); } catch {}
+    let recs = []; try { recs = JSON.parse((await r.json()).choices[0].message.content.match(/\[[\s\S]*\]/)[0]); } catch {}
     await send({ type: "ai", recs });
   }
 }

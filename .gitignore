@@ -10,3 +10,4 @@ tiptour-macos/
 docs/_backup/
 wormhole-rescue/
 *.bak-ga
+.dev.vars
