@@ -76,6 +76,7 @@ TEMPLATE = """<!DOCTYPE html>
         "mainEntityOfPage": {"@type": "WebPage", "@id": "@@URL@@"}
     }
     </script>
+    <script src="/consent.js" defer></script>
 </head>
 <body>
     <nav class="navbar">

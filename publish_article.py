@@ -142,6 +142,7 @@ TEMPLATE = '''<!DOCTYPE html>
         "mainEntityOfPage": {{"@type": "WebPage", "@id": "https://jcode.store/blog/{filename}"}}
     }}
     </script>
+    <script src="/consent.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
