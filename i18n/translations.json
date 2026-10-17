@@ -590,9 +590,9 @@
     "nl": "Privacybeleid"
   },
   "privacy_short.subtitle": {
-    "fr": "JCODE Agency — Conformité RGPD & Loi belge du 11/03/2003",
-    "en": "JCODE Agency — GDPR Compliance & Belgian Law of 11/03/2003",
-    "nl": "JCODE Agency — AVG-naleving & Belgische Wet van 11/03/2003"
+    "fr": "JCODE Agency — Conformité RGPD & loi belge du 30 juillet 2018",
+    "en": "JCODE Agency — GDPR compliance & Belgian law of 30 July 2018",
+    "nl": "JCODE Agency — Conform AVG & Belgische wet van 30 juli 2018"
   },
   "privacy_short.s1_title": {
     "fr": "1. Responsable du traitement",
@@ -600,9 +600,9 @@
     "nl": "1. Verwerkingsverantwoordelijke"
   },
   "privacy_short.s1_text": {
-    "fr": "<strong>JCODE Agency</strong><br>Email : <a href='mailto:matovuruky@gmail.com'>matovuruky@gmail.com</a><br>Téléphone : 0466/06.22.73<br>Siège : Mons, Belgique",
-    "en": "<strong>JCODE Agency</strong><br>Email: <a href='mailto:matovuruky@gmail.com'>matovuruky@gmail.com</a><br>Phone: 0466/06.22.73<br>HQ: Mons, Belgium",
-    "nl": "<strong>JCODE Agency</strong><br>E-mail: <a href='mailto:matovuruky@gmail.com'>matovuruky@gmail.com</a><br>Telefoon: 0466/06.22.73<br>Zetel: Bergen, België"
+    "fr": "<strong>JCODE Agency</strong><br>Email : <a href='mailto:contact@jcode.store'>contact@jcode.store</a><br>Téléphone : 0466/06.22.73<br>Siège : Mons, Belgique",
+    "en": "<strong>JCODE Agency</strong><br>Email: <a href='mailto:contact@jcode.store'>contact@jcode.store</a><br>Phone: 0466/06.22.73<br>HQ: Mons, Belgium",
+    "nl": "<strong>JCODE Agency</strong><br>E-mail: <a href='mailto:contact@jcode.store'>contact@jcode.store</a><br>Telefoon: 0466/06.22.73<br>Zetel: Bergen, België"
   },
   "privacy_short.s2_title": {
     "fr": "2. Données collectées",
@@ -690,9 +690,9 @@
     "nl": "5. Uw AVG-rechten (art. 15-22)"
   },
   "privacy_short.s5_intro": {
-    "fr": "Contactez <a href='mailto:matovuruky@gmail.com'>matovuruky@gmail.com</a> pour exercer vos droits :",
-    "en": "Contact <a href='mailto:matovuruky@gmail.com'>matovuruky@gmail.com</a> to exercise your rights:",
-    "nl": "Neem contact op met <a href='mailto:matovuruky@gmail.com'>matovuruky@gmail.com</a> om uw rechten uit te oefenen:"
+    "fr": "Contactez <a href='mailto:contact@jcode.store'>contact@jcode.store</a> pour exercer vos droits :",
+    "en": "Contact <a href='mailto:contact@jcode.store'>contact@jcode.store</a> to exercise your rights:",
+    "nl": "Neem contact op met <a href='mailto:contact@jcode.store'>contact@jcode.store</a> om uw rechten uit te oefenen:"
   },
   "privacy_short.s5_access": {
     "fr": "<strong>Art. 15</strong> — Droit d'accès (copie de vos données)",
@@ -760,9 +760,9 @@
     "nl": "7. Cookies"
   },
   "privacy_short.s7_text": {
-    "fr": "Aucun cookie de traçage (Google Analytics, Facebook Pixel, etc.). Seuls les cookies techniques essentiels sont utilisés (Stripe, session serveur).",
-    "en": "No tracking cookies (Google Analytics, Facebook Pixel, etc.). Only essential technical cookies are used (Stripe, server session).",
-    "nl": "Geen tracking cookies (Google Analytics, Facebook Pixel, enz.). Alleen essentiële technische cookies worden gebruikt (Stripe, serversessie)."
+    "fr": "<strong>Cookies techniques essentiels</strong> (paiement, sécurité) : toujours actifs. <strong>Cookies analytiques (Google Analytics 4) et marketing</strong> : déposés uniquement avec votre consentement via le bandeau cookies. Vous pouvez les refuser ou modifier votre choix à tout moment.",
+    "en": "<strong>Essential technical cookies</strong> (payment, security): always active. <strong>Analytics (Google Analytics 4) and marketing cookies</strong>: only set with your consent via the cookie banner. You can refuse them or change your choice at any time.",
+    "nl": "<strong>Essentiële technische cookies</strong> (betaling, beveiliging): altijd actief. <strong>Analytische cookies (Google Analytics 4) en marketingcookies</strong>: alleen met uw toestemming via de cookiebanner. U kunt ze weigeren of uw keuze op elk moment wijzigen."
   },
   "privacy_short.s8_title": {
     "fr": "8. Réclamation",
@@ -776,13 +776,13 @@
   },
   "privacy_short.s9_title": {
     "fr": "9. Modifications",
-    "en": "9. Modifications",
+    "en": "9. Changes",
     "nl": "9. Wijzigingen"
   },
   "privacy_short.s9_date": {
-    "fr": "<strong>Dernière mise à jour :</strong> 13 juillet 2026",
-    "en": "<strong>Last updated:</strong> July 13, 2026",
-    "nl": "<strong>Laatst bijgewerkt:</strong> 13 juli 2026"
+    "fr": "<strong>Dernière mise à jour :</strong> 17 octobre 2026",
+    "en": "<strong>Last updated:</strong> 17 October 2026",
+    "nl": "<strong>Laatst bijgewerkt:</strong> 17 oktober 2026"
   },
   "privacy_short.footer_copyright": {
     "fr": "© 2026 JCODE Agency —",
