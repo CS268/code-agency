@@ -137,18 +137,49 @@
 
         .hidden { display: none !important; }
     </style>
+<style>
+.lang-sw{display:flex;gap:6px;justify-content:flex-end;margin-bottom:10px}
+.lang-sw button{padding:6px 12px;font-size:.85rem;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);color:inherit;cursor:pointer}
+.lang-sw button[aria-pressed=true]{background:linear-gradient(135deg,#6366f1,#d946ef);border-color:transparent;color:#fff}
+.flag-title{font-weight:700;margin:0 0 8px}
+.flags{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:0 0 14px}
+.flag{display:flex;align-items:center;gap:12px;text-align:left;padding:12px 14px;background:rgba(255,255,255,.04);border:2px solid rgba(255,255,255,.12);border-radius:14px;color:inherit;font:inherit;cursor:pointer}
+.flag img{width:40px;height:auto;border-radius:4px;flex:none}.flag small{display:block;opacity:.7;font-size:.78rem}
+.flag[aria-pressed=true]{border-color:#8b5cf6;background:rgba(139,92,246,.16)}
+</style>
+<style>
+.container{position:relative;z-index:1}
+.floor3d{position:fixed;left:-50%;right:-50%;bottom:0;height:60vh;z-index:0;pointer-events:none;background:linear-gradient(rgba(139,92,246,.28) 1px,transparent 1px) 0 0/100% 46px,linear-gradient(90deg,rgba(139,92,246,.28) 1px,transparent 1px) 0 0/64px 100%;transform:perspective(520px) rotateX(64deg);transform-origin:50% 100%;-webkit-mask-image:linear-gradient(to top,#000 10%,transparent 85%);mask-image:linear-gradient(to top,#000 10%,transparent 85%);animation:floor3d 7s linear infinite}
+@keyframes floor3d{to{background-position:0 46px,0 0}}
+.card,.flag,.upsell{transform-style:preserve-3d;will-change:transform;transition:transform .12s ease-out,box-shadow .3s,border-color .3s}
+.card,.upsell{box-shadow:0 18px 40px -18px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.05)}
+.card:hover,.flag:hover,.upsell:hover{box-shadow:0 30px 60px -20px rgba(99,102,241,.55),0 0 0 1px rgba(139,92,246,.4)}
+.score-circle{transform:translateZ(46px);box-shadow:0 22px 38px -10px rgba(99,102,241,.6),inset 0 2px 6px rgba(255,255,255,.25)}
+.card h3,.upsell h2{transform:translateZ(22px)}
+.flag img{transform:translateZ(28px);box-shadow:0 8px 14px rgba(0,0,0,.45)}
+h1{filter:drop-shadow(0 4px 0 rgba(99,102,241,.4)) drop-shadow(0 16px 20px rgba(0,0,0,.55))}
+@media (prefers-reduced-motion:reduce){.floor3d{animation:none}.card,.flag,.upsell{transition:none}}
+</style>
 </head>
 <body>
+<div class="floor3d" aria-hidden="true"></div>
     <div class="container">
+<div class="lang-sw"><button type="button" data-l="fr" aria-pressed="true">FR</button><button type="button" data-l="nl" aria-pressed="false">NL</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
         <header>
-            <div class="badge">✨ PROPULSÉ PAR L'IA</div>
-            <h1>Votre site marchand est-il en règle ?</h1>
-            <p class="subtitle">Notre analyse lit vos pages légales et vérifie les exigences européennes, belges, françaises et néerlandaises, puis l'IA priorise les corrections.</p>
+            <div class="badge" data-i="badge">✨ PROPULSÉ PAR L'IA</div>
+            <h1 data-i="h1">Votre site marchand est-il en règle ?</h1>
+            <p class="subtitle" data-i="sub">Notre analyse lit vos pages légales et vérifie les exigences européennes, belges, françaises et néerlandaises, puis l'IA priorise les corrections.</p>
         </header>
 
+        <p class="flag-title" data-i="s1">Choisissez la législation à contrôler</p>
+        <div class="flags">
+            <button type="button" class="flag" data-r="EU" aria-pressed="true"><img src="https://flagcdn.com/w80/eu.png" alt=""><span><b data-i="r_EU">Union européenne</b><small data-i="sub_EU">Belgique · France · Pays-Bas</small></span></button>
+            <button type="button" class="flag" data-r="UK" aria-pressed="false"><img src="https://flagcdn.com/w80/gb.png" alt=""><span><b data-i="r_UK">Royaume-Uni</b></span></button>
+            <button type="button" class="flag" data-r="US" aria-pressed="false"><img src="https://flagcdn.com/w80/us.png" alt=""><span><b data-i="r_US">États-Unis</b></span></button>
+        </div>
         <form id="scanForm" class="scan-form">
-            <input type="url" id="urlInput" placeholder="https://votre-boutique.com" required>
-            <button type="submit" class="btn-primary" id="scanBtn">Analyser mon site</button>
+            <input type="text" inputmode="url" id="urlInput" placeholder="https://votre-boutique.com" required>
+            <button type="submit" class="btn-primary" id="scanBtn" data-i="go">Analyser mon site</button>
         </form>
 
         <div id="streamBox" class="stream-box" aria-live="polite">
@@ -157,7 +188,7 @@
 
         <div id="dashboard" class="dashboard hidden">
             <div class="card score-main">
-                <h3>Score Global</h3>
+                <h3 data-i="score">Score Global</h3>
                 <div class="score-circle" id="scoreCircle">
                     <span class="score-val" id="globalScore">0%</span>
                 </div>
@@ -165,29 +196,29 @@
             </div>
 
             <div class="card">
-                <h3>⚡ Performances & Sécurité</h3>
+                <h3 data-i="perf_h">⚡ Performances & Sécurité</h3>
                 <div id="perfStats" style="color: var(--text-muted); font-size: 0.9rem;"></div>
             </div>
 
             <div class="card" style="grid-column: 1 / -1;">
-                <h3>🔍 Détail des contrôles</h3>
+                <h3 data-i="res_h">🔍 Détail des contrôles</h3>
                 <ul class="detail-list" id="detailsList"></ul>
             </div>
 
             <div class="card ai-card hidden" id="aiCard">
-                <h3>🧠 Recommandations de l'IA</h3>
+                <h3 data-i="ai_h">🧠 Recommandations de l'IA</h3>
                 <div class="rec-grid" id="aiRecs"></div>
             </div>
         </div>
 
         <div id="upsellSection" class="upsell hidden">
-            <h2>Passez à l'audit complet : 400 €</h2>
-            <p>Un expert relit vos pages, confirme chaque écart et vous remet un plan d'action priorisé. Les manquements au RGPD peuvent être sanctionnés jusqu'à 20 M€ ou 4 % du chiffre d'affaires : mieux vaut corriger avant un contrôle.</p>
-            <a href="mailto:contact@jcode.store?subject=Audit%20complet%20%E2%80%94%20400%20%E2%82%AC" class="btn-upsell">Réserver mon audit</a>
-            <p style="margin-top:.9rem;font-size:.85rem;opacity:.85">Ou écrivez-nous directement : <a href="mailto:contact@jcode.store" style="color:inherit;text-decoration:underline">contact@jcode.store</a></p>
+            <h2 data-i="cta_h">Passez à l'audit complet : 400 €</h2>
+            <p id="ctaP">Un expert relit vos pages, confirme chaque écart et vous remet un plan d'action priorisé. Les manquements au RGPD peuvent être sanctionnés jusqu'à 20 M€ ou 4 % du chiffre d'affaires : mieux vaut corriger avant un contrôle.</p>
+            <a href="mailto:contact@jcode.store?subject=Audit%20complet%20%E2%80%94%20400%20%E2%82%AC" class="btn-upsell" data-i="cta_b">Réserver mon audit</a>
+            <p style="margin-top:.9rem;font-size:.85rem;opacity:.85"><span data-i="mail">Ou écrivez-nous directement :</span> <a href="mailto:contact@jcode.store" style="color:inherit;text-decoration:underline">contact@jcode.store</a></p>
         </div>
 
-        <p class="disclaimer">Analyse automatique indicative des pages publiques, qui ne constitue pas un avis juridique. Aucun résultat ne garantit l'absence de sanction.</p>
+        <p class="disclaimer" data-i="note">Analyse automatique indicative des pages publiques, qui ne constitue pas un avis juridique. Aucun résultat ne garantit l'absence de sanction.</p>
     </div>
 
     <script>
@@ -195,6 +226,58 @@
         const WORKER_URL = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
     ? 'http://localhost:8787'
     : 'https://conformshop.jcode-agency.workers.dev'; // Exemple local wrangler dev
+
+        // ---- Langues, drapeaux, protection ----
+        const T = {
+          fr: { badge:"✨ PROPULSÉ PAR L'IA", h1:"Votre site marchand est-il en règle ?", sub:"Choisissez votre législation, puis entrez l'adresse de votre site : nous lisons vos pages légales, vérifions les exigences applicables et l'IA priorise les corrections.", s1:"Choisissez la législation à contrôler", r_EU:"Union européenne", sub_EU:"Belgique · France · Pays-Bas", r_UK:"Royaume-Uni", r_US:"États-Unis", go:"Analyser mon site", busy:"Analyse en cours...", ph:"https://votre-boutique.com", score:"Score Global", perf_h:"⚡ Performances & Sécurité", res_h:"🔍 Détail des contrôles", ai_h:"🧠 Recommandations de l'IA", p_ms:"Temps de réponse", p_kb:"Poids de la page", p_sc:"Balises Script", p_ho:"Domaines tiers", p_se:"En-têtes de sécurité", s_ok:"Conforme", s_warn:"Attention", s_ko:"Non conforme", effort:"Effort", action:"Action", err:"Erreur :", neterr:"Erreur réseau ou URL refusée", done:"Analyse terminée !", cta_h:"Passez à l'audit complet : 400 €",
+            cta_EU:"Un expert relit vos pages, confirme chaque écart et vous remet un plan d'action priorisé. Les manquements au RGPD peuvent être sanctionnés jusqu'à 20 M€ ou 4 % du chiffre d'affaires : mieux vaut corriger avant un contrôle.",
+            cta_UK:"Un expert relit vos pages, confirme chaque écart et vous remet un plan d'action priorisé. Le UK GDPR prévoit des amendes jusqu'à 17,5 M£ ou 4 % du chiffre d'affaires mondial : mieux vaut corriger avant un contrôle.",
+            cta_US:"Un expert relit vos pages, confirme chaque écart et vous remet un plan d'action priorisé. Les lois d'État comme la CCPA prévoient des sanctions par infraction et l'accessibilité donne lieu à de nombreuses actions en justice : mieux vaut corriger avant.",
+            cta_b:"Réserver mon audit", mail:"Ou écrivez-nous directement :", note:"Analyse automatique indicative des pages publiques, qui ne constitue pas un avis juridique. Aucun résultat ne garantit l'absence de sanction." },
+          nl: { badge:"✨ AANGEDREVEN DOOR AI", h1:"Is uw webshop in orde?", sub:"Kies uw wetgeving en voer het adres van uw site in: we lezen uw juridische pagina's, controleren de geldende vereisten en de AI rangschikt de verbeteringen op prioriteit.", s1:"Kies de wetgeving om te controleren", r_EU:"Europese Unie", sub_EU:"België · Frankrijk · Nederland", r_UK:"Verenigd Koninkrijk", r_US:"Verenigde Staten", go:"Analyseer mijn site", busy:"Analyse bezig...", ph:"https://uw-webshop.nl", score:"Totaalscore", perf_h:"⚡ Prestaties & beveiliging", res_h:"🔍 Details van de controles", ai_h:"🧠 AI-aanbevelingen", p_ms:"Responstijd", p_kb:"Paginagrootte", p_sc:"Script-tags", p_ho:"Externe domeinen", p_se:"Beveiligingsheaders", s_ok:"Conform", s_warn:"Let op", s_ko:"Niet conform", effort:"Inspanning", action:"Actie", err:"Fout:", neterr:"Netwerkfout of URL geweigerd", done:"Analyse voltooid!", cta_h:"Kies voor de volledige audit: 400 €",
+            cta_EU:"Een expert leest uw pagina's na, bevestigt elke afwijking en levert een geprioriteerd actieplan. AVG-overtredingen kunnen tot 20 miljoen euro of 4 % van de omzet worden bestraft: corrigeer liever vóór een controle.",
+            cta_UK:"Een expert leest uw pagina's na, bevestigt elke afwijking en levert een geprioriteerd actieplan. De UK GDPR voorziet boetes tot 17,5 miljoen pond of 4 % van de wereldwijde omzet: corrigeer liever vóór een controle.",
+            cta_US:"Een expert leest uw pagina's na, bevestigt elke afwijking en levert een geprioriteerd actieplan. Staatswetten zoals de CCPA kennen sancties per overtreding en over toegankelijkheid lopen veel rechtszaken: corrigeer liever vooraf.",
+            cta_b:"Mijn audit boeken", mail:"Of schrijf ons rechtstreeks:", note:"Indicatieve automatische analyse van openbare pagina's, geen juridisch advies. Geen enkel resultaat garandeert de afwezigheid van een sanctie." } };
+        const NM = { fr: { EU:"Union européenne", UK:"Royaume-Uni", US:"États-Unis", BE:"Belgique", FR:"France", NL:"Pays-Bas" }, nl: { EU:"Europese Unie", UK:"Verenigd Koninkrijk", US:"Verenigde Staten", BE:"België", FR:"Frankrijk", NL:"Nederland" } };
+        T.en = { badge:"✨ POWERED BY AI", h1:"Is your online shop compliant?", sub:"Choose your legislation and enter your website address: we read your legal pages, check the applicable requirements and the AI prioritises the fixes.", s1:"Choose the legislation to check", r_EU:"European Union", sub_EU:"Belgium · France · Netherlands", r_UK:"United Kingdom", r_US:"United States", go:"Analyse my site", busy:"Analysis in progress...", ph:"https://your-shop.com", score:"Overall score", perf_h:"⚡ Performance & security", res_h:"🔍 Check details", ai_h:"🧠 AI recommendations", p_ms:"Response time", p_kb:"Page weight", p_sc:"Script tags", p_ho:"Third-party domains", p_se:"Security headers", s_ok:"Compliant", s_warn:"Warning", s_ko:"Non-compliant", effort:"Effort", action:"Action", err:"Error:", neterr:"Network error or URL rejected", done:"Analysis complete!", cta_h:"Upgrade to the full audit: €400",
+  cta_EU:"An expert reviews your pages, confirms each gap and hands you a prioritised action plan. GDPR breaches can be fined up to €20M or 4% of turnover: better to fix before an inspection.",
+  cta_UK:"An expert reviews your pages, confirms each gap and hands you a prioritised action plan. The UK GDPR provides fines of up to £17.5M or 4% of worldwide turnover: better to fix before an inspection.",
+  cta_US:"An expert reviews your pages, confirms each gap and hands you a prioritised action plan. State laws such as the CCPA impose penalties per violation, and accessibility triggers many lawsuits: better to fix first.",
+  cta_b:"Book my audit", mail:"Or write to us directly:", note:"Indicative automatic analysis of public pages, not legal advice. No result guarantees the absence of a penalty." };
+NM.en = { EU:"European Union", UK:"United Kingdom", US:"United States", BE:"Belgium", FR:"France", NL:"Netherlands" };
+const STEP_EN = { "Chargement de la page d'accueil":"Loading the home page", "Analyse de conformité":"Compliance analysis", "Recommandations IA":"AI recommendations" };
+        const STEP_NL = { "Chargement de la page d'accueil":"Startpagina laden", "Analyse de conformité":"Conformiteitsanalyse", "Recommandations IA":"AI-aanbevelingen" };
+        let L = (x => ['nl', 'en'].includes(x) ? x : 'fr')((new URLSearchParams(location.search).get('lang') || navigator.language || 'fr').slice(0, 2)), REG = 'EU';
+        const t = k => T[L][k];
+        const esc = x => String(x == null ? '' : x).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+        const stepT = m => L === 'nl' ? (STEP_NL[m] || m.replace(/^Lecture de /, 'Lezen van ')) : L === 'en' ? (STEP_EN[m] || m.replace(/^Lecture de /, 'Reading ')) : m;
+        function setLang(l) {
+            L = l; document.documentElement.lang = l;
+            document.querySelectorAll('[data-i]').forEach(e => { if (T[l][e.dataset.i] !== undefined) e.textContent = T[l][e.dataset.i]; });
+            document.getElementById('urlInput').placeholder = T[l].ph;
+            const c = document.getElementById('ctaP'); if (c) c.textContent = T[l]['cta_' + REG];
+            document.querySelectorAll('.lang-sw button').forEach(b => b.setAttribute('aria-pressed', b.dataset.l === l));
+        }
+        document.querySelectorAll('.lang-sw button').forEach(b => b.onclick = () => setLang(b.dataset.l));
+        document.querySelectorAll('.flag').forEach(b => b.onclick = () => { REG = b.dataset.r; document.querySelectorAll('.flag').forEach(x => x.setAttribute('aria-pressed', x === b)); setLang(L); document.getElementById('urlInput').focus(); });
+        document.addEventListener('DOMContentLoaded', () => setLang(L));
+
+        // ---- Effet 3D : inclinaison vers le curseur ----
+        (() => {
+            if (matchMedia('(prefers-reduced-motion: reduce)').matches || !matchMedia('(hover: hover)').matches) return;
+            let cur = null; const SEL = '.card,.flag,.upsell';
+            const reset = el => { el.style.transform = ''; };
+            document.addEventListener('pointermove', e => {
+                const el = e.target.closest ? e.target.closest(SEL) : null;
+                if (cur && cur !== el) reset(cur);
+                cur = el; if (!el) return;
+                const r = el.getBoundingClientRect(), k = Math.min(1, 480 / r.width);
+                const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+                el.style.transform = `perspective(900px) rotateX(${(-y * 9 * k).toFixed(2)}deg) rotateY(${(x * 11 * k).toFixed(2)}deg) translateY(-3px)`;
+            });
+            document.addEventListener('pointerleave', () => { if (cur) reset(cur); cur = null; });
+        })();
 
         const form = document.getElementById('scanForm');
         const urlInput = document.getElementById('urlInput');
@@ -211,7 +294,7 @@
 
             // Reset UI
             scanBtn.disabled = true;
-            scanBtn.textContent = 'Analyse en cours...';
+            scanBtn.textContent = t('busy');
             streamBox.classList.add('active');
             streamContent.innerHTML = '';
             dashboard.classList.add('hidden');
@@ -221,10 +304,10 @@
                 const response = await fetch(WORKER_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ url })
+                    body: JSON.stringify({ url, region: REG, lang: L })
                 });
 
-                if (!response.ok) throw new Error('Erreur réseau ou URL refusée');
+                if (!response.ok) throw new Error(t('neterr'));
 
                 const reader = response.body.getReader();
                 const decoder = new TextDecoder();
@@ -249,10 +332,10 @@
                     }
                 }
             } catch (error) {
-                addStreamLine(`❌ Erreur : ${error.message}`, true);
+                addStreamLine(`❌ ${t('err')} ${esc(error.message)}`, true);
             } finally {
                 scanBtn.disabled = false;
-                scanBtn.textContent = 'Analyser mon site';
+                scanBtn.textContent = t('go');
             }
         });
 
@@ -273,11 +356,11 @@
 
         function handleStreamEvent(data) {
             if (data.type === 'step') {
-                addStreamLine(data.msg);
+                addStreamLine(esc(stepT(data.msg)));
             } else if (data.type === 'error') {
-                addStreamLine(`❌ ${data.msg}`, true);
+                addStreamLine(`❌ ${esc(data.msg)}`, true);
             } else if (data.type === 'result') {
-                addStreamLine('Analyse terminée !', true);
+                addStreamLine(t('done'), true);
                 renderResults(data);
             } else if (data.type === 'ai') {
                 renderAI(data.recs);
@@ -299,7 +382,7 @@
             for (const [zone, zScore] of Object.entries(data.by)) {
                 zonesContainer.innerHTML += `
                     <div class="zone">
-                        <div class="zone-tag">${zone}</div>
+                        <div class="zone-tag">${NM[L][zone] || esc(zone)}</div>
                         <div class="zone-score" style="color: ${zScore > 70 ? 'var(--success)' : zScore > 40 ? 'var(--warning)' : 'var(--error)'}">${zScore}%</div>
                     </div>`;
             }
@@ -307,11 +390,11 @@
             // Perf
             const p = data.perf;
             document.getElementById('perfStats').innerHTML = `
-                <p>⏱️ Temps de réponse : <strong>${p.ms} ms</strong></p>
-                <p>📦 Poids de la page : <strong>${p.kb} Ko</strong></p>
-                <p>📜 Balises Script : <strong>${p.scripts}</strong></p>
-                <p>🌐 Hosts tiers : <strong>${p.hosts}</strong></p>
-                <p>🛡️ Headers Sécurité : <strong>${p.sec}/4</strong></p>
+                <p>⏱️ ${t('p_ms')} : <strong>${p.ms} ms</strong></p>
+                <p>📦 ${t('p_kb')} : <strong>${p.kb} Ko</strong></p>
+                <p>📜 ${t('p_sc')} : <strong>${p.scripts}</strong></p>
+                <p>🌐 ${t('p_ho')} : <strong>${p.hosts}</strong></p>
+                <p>🛡️ ${t('p_se')} : <strong>${p.sec}/4</strong></p>
             `;
 
             // Details
@@ -319,17 +402,17 @@
             detailsList.innerHTML = '';
             data.items.forEach(item => {
                 const statusClass = item.st === 'ok' ? 'status-ok' : item.st === 'warn' ? 'status-warn' : 'status-ko';
-                const statusText = item.st === 'ok' ? 'Conforme' : item.st === 'warn' ? 'Attention' : 'Non conforme';
+                const statusText = t('s_' + item.st);
                 
                 detailsList.innerHTML += `
                     <li class="detail-item">
                         <div class="detail-header">
-                            <span class="detail-title">${item.t}</span>
+                            <span class="detail-title">${esc(item.t)}</span>
                             <span class="status-badge ${statusClass}">${statusText}</span>
                         </div>
-                        <div class="detail-law">${item.s} • ${item.law}</div>
-                        ${item.sanction ? `<div class="detail-sanction">⚠️ ${item.sanction}</div>` : ''}
-                        <div class="detail-tip">${item.tip}</div>
+                        <div class="detail-law">${NM[L][item.s] || esc(item.s)} • ${esc(item.law)}</div>
+                        ${item.sanction ? `<div class="detail-sanction">⚠️ ${esc(item.sanction)}</div>` : ''}
+                        <div class="detail-tip">${esc(item.tip)}</div>
                     </li>`;
             });
         }
@@ -344,10 +427,10 @@
             recs.forEach(rec => {
                 aiRecs.innerHTML += `
                     <div class="rec-item">
-                        <div class="rec-title">${rec.titre}</div>
-                        <span class="rec-effort">Effort : ${rec.effort}</span>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">${rec.pourquoi}</p>
-                        <p style="font-size: 0.9rem;"><strong>Action :</strong> ${rec.action}</p>
+                        <div class="rec-title">${esc(rec.titre)}</div>
+                        <span class="rec-effort">${t('effort')} : ${esc(rec.effort)}</span>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">${esc(rec.pourquoi)}</p>
+                        <p style="font-size: 0.9rem;"><strong>${t('action')} :</strong> ${esc(rec.action)}</p>
                     </div>`;
             });
         }
