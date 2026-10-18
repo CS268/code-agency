@@ -94,13 +94,13 @@ async function scan(url, send, env, reg, lang) {
   for (const l of links) { await send({ type: "step", msg: "Lecture de " + new URL(l).pathname }); try { text += "\n" + (await get(l)).h; } catch {} }
   await send({ type: "step", msg: "Analyse de conformité" });
   const det = [reg];
-  if (/\.be$/.test(bh) || /\bBE\s?0\d{3}/.test(text)) det.push("BE");
-  if (/\.fr$/.test(bh) || /\bSIRET|SIREN\b/.test(text)) det.push("FR");
-  if (/\.nl$/.test(bh) || /\bKvK\b/i.test(text)) det.push("NL");
+  if (/\.be$/.test(bh) || /\bBE\s?0\d{3}[. ]?\d{3}[. ]?\d{3}\b|\b0\d{3}[. ]\d{3}[. ]\d{3}\b/.test(text)) det.push("BE");
+  if (/\.fr$/.test(bh) || /\bFR\s?[0-9A-Z]{2}\s?\d{9}\b|SIRET\W{0,12}\d{3}\s?\d{3}\s?\d{3}\s?\d{5}|SIREN\W{0,12}\d{3}\s?\d{3}\s?\d{3}\b/i.test(text)) det.push("FR");
+  if (/\.nl$/.test(bh) || /\bNL\s?\d{9}\s?B\s?\d{2}\b|\bKvK\W{0,12}\d{8}\b/i.test(text)) det.push("NL");
   if (det.length === 1) det.push("BE", "FR", "NL");
   if (reg !== "EU") det.splice(1);
   const items = R.filter(r => det.includes(r[0])).map(r => ({ s: r[0], st: r[3].test(text) ? "ok" : r[1], t: r[2], law: r[4], tip: r[5], sanction: r[6] }));
-  const tr = TR.filter(t => t[1].test(home.h)).map(t => t[0]), seen = [...tr, ...cookies];
+  const tr = [...new Set([...home.h.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)].flatMap(([, a, b]) => (/consent/i.test(b) && !/\bsrc\s*=/i.test(a)) ? [] : TR.filter(t => t[1].test(a + " " + b)).map(t => t[0])))], seen = [...tr, ...cookies];
   items.push({ s: reg, st: !seen.length ? "ok" : CMP.test(text) ? "warn" : "ko", t: seen.length ? "Traceurs ou cookies dès le chargement : " + seen.join(", ") : "Aucun traceur ni cookie avant consentement", law: LAW[reg], tip: "Bloque tout traceur non essentiel jusqu'au consentement.", sanction: "CNIL/APD : jusqu'à 20 M€ ou 4 % du CA (ex: Google 150 M€ en 2022)" });
   items.push({ s: reg, st: base.startsWith("https") ? "ok" : "ko", t: "Connexion sécurisée HTTPS", law: reg === "UK" ? "UK GDPR art. 32" : reg === "US" ? "FTC Act §5" : "RGPD art. 32", tip: "Active HTTPS sur tout le site.", sanction: "RGPD : jusqu'à 20 M€ ou 4 % du CA mondial" });
   if (reg !== "EU") items.slice(-2).forEach(i => i.sanction = SAN[reg]);
