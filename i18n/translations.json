@@ -650,9 +650,9 @@
     "nl": "3. Rechtsgrond"
   },
   "privacy_short.s3_text": {
-    "fr": "Le traitement repose sur <strong>l'article 6.1.b du RGPD</strong> : exécution du contrat. Vous payez 37€ ce mois-ci (code PROMO460, au lieu de 497€) pour un site vitrine personnalisé — les données sont indispensables à ce service.",
-    "en": "Processing is based on <strong>Article 6.1.b of GDPR</strong>: contract performance. You pay €37 this month (code PROMO460, instead of €497) for a personalized showcase site — the data is essential for this service.",
-    "nl": "De verwerking is gebaseerd op <strong>artikel 6.1.b van de AVG</strong>: uitvoering van de overeenkomst. U betaalt 37€ deze maand (code PROMO460, in plaats van €497) voor een gepersonaliseerde vitrine-site — de gegevens zijn onmisbaar voor deze dienst."
+    "fr": "Le traitement repose sur <strong>l'article 6.1.b du RGPD</strong> : exécution du contrat. Les données collectées sont indispensables à la fourniture du service commandé (site vitrine personnalisé).",
+    "en": "Processing is based on <strong>Article 6.1.b of the GDPR</strong>: performance of a contract. The data collected is essential to provide the service you ordered (a personalised showcase website).",
+    "nl": "De verwerking is gebaseerd op <strong>artikel 6.1.b van de AVG</strong>: uitvoering van de overeenkomst. De verzamelde gegevens zijn noodzakelijk voor de levering van de bestelde dienst (gepersonaliseerde etalagesite)."
   },
   "privacy_short.s4_title": {
     "fr": "4. Sous-traitants",
@@ -3343,5 +3343,10 @@
     "fr": "<strong>Supabase</strong> — base de données des abonnements (e-mail, identifiant Stripe, nombre de vidéos générées)",
     "en": "<strong>Supabase</strong> — subscriptions database (email, Stripe customer ID, number of videos generated)",
     "nl": "<strong>Supabase</strong> — database van de abonnementen (e-mail, Stripe-klant-ID, aantal gegenereerde video's)"
+  },
+  "privacy_short.s4_ga": {
+    "fr": "<strong>Google Analytics 4</strong> — statistiques de fréquentation (uniquement avec votre consentement)",
+    "nl": "<strong>Google Analytics 4</strong> — bezoekersstatistieken (alleen met uw toestemming)",
+    "en": "<strong>Google Analytics 4</strong> — visitor statistics (only with your consent)"
   }
 }
