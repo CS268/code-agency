@@ -18,6 +18,12 @@ jobs:
           args: --offline --include-verbatim --root-dir . --exclude-path emails --exclude-path server/public --exclude %22 --exclude videoUrl --exclude img\.thumbnail "**/*.html"
           fail: true
 
+      - name: Vérifier les liens du studio vidéo (server/public)
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --include-verbatim --root-dir server/public "server/public/**/*.html"
+          fail: true
+
       - name: Vérifier la présence des pages clés
         run: |
           test -f index.html
