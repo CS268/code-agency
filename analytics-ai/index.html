@@ -214,7 +214,7 @@ h1{filter:drop-shadow(0 4px 0 rgba(99,102,241,.4)) drop-shadow(0 16px 20px rgba(
         <div id="upsellSection" class="upsell hidden">
             <h2 data-i="cta_h">Passez à l'audit complet : 400 €</h2>
             <p id="ctaP">Un expert relit vos pages, confirme chaque écart et vous remet un plan d'action priorisé. Les manquements au RGPD peuvent être sanctionnés jusqu'à 20 M€ ou 4 % du chiffre d'affaires : mieux vaut corriger avant un contrôle.</p>
-            <a href="mailto:contact@jcode.store?subject=Audit%20complet%20%E2%80%94%20400%20%E2%82%AC" class="btn-upsell" data-i="cta_b">Réserver mon audit</a>
+            <a href="mailto:contact@jcode.store?subject=Audit%20complet%20%E2%80%94%20400%20%E2%82%AC" class="btn-upsell" id="auditBtn" data-i="cta_b">Réserver mon audit</a>
             <p style="margin-top:.9rem;font-size:.85rem;opacity:.85"><span data-i="mail">Ou écrivez-nous directement :</span> <a href="mailto:contact@jcode.store" style="color:inherit;text-decoration:underline">contact@jcode.store</a></p>
         </div>
 
@@ -435,5 +435,97 @@ const STEP_EN = { "Chargement de la page d'accueil":"Loading the home page", "An
             });
         }
     </script>
+<style>
+.am-overlay{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:1rem;background:rgba(5,8,25,.78)}
+.am-overlay[hidden]{display:none}
+.am-box{position:relative;width:100%;max-width:560px;max-height:92vh;overflow:auto;background:#14173a;color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:1.5rem}
+.am-box h3{margin:0 0 .4rem;font-size:1.25rem}
+.am-intro{margin:0 0 1rem;opacity:.8;font-size:.92rem}
+.am-box label{display:block;margin:.8rem 0 .3rem;font-size:.85rem;opacity:.9}
+.am-box input[type=text],.am-box input[type=email],.am-box textarea{width:100%;box-sizing:border-box;padding:.65rem .8rem;border-radius:10px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);color:#fff;font:inherit}
+.am-box textarea{resize:vertical;min-height:140px;font-size:.82rem}
+.am-check{display:flex!important;gap:.5rem;align-items:flex-start;font-size:.82rem}
+.am-check a{color:inherit;text-decoration:underline}
+.am-close{position:absolute;top:.6rem;right:.8rem;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer;line-height:1}
+.am-msg{min-height:1.2rem;margin:.8rem 0 .4rem;font-size:.88rem}
+.am-msg.err{color:#ff9aa8}.am-msg.ok{color:#8ff0b5}
+#amSend{border:0;cursor:pointer;font:inherit}
+#amSend:disabled{opacity:.6;cursor:default}
+</style>
+<div id="auditModal" class="am-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="amTitle">
+  <div class="am-box">
+    <button type="button" class="am-close" id="amClose" aria-label="Close">&times;</button>
+    <h3 id="amTitle"></h3>
+    <p id="amIntro" class="am-intro"></p>
+    <form id="amForm" novalidate>
+      <label for="amSite" id="amLSite"></label>
+      <input id="amSite" type="text" maxlength="300" autocomplete="url">
+      <label for="amEmail" id="amLEmail"></label>
+      <input id="amEmail" type="email" maxlength="200" autocomplete="email">
+      <label for="amAnalysis" id="amLAnalysis"></label>
+      <textarea id="amAnalysis" rows="8" maxlength="20000"></textarea>
+      <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden"><input type="text" id="amWebsite" tabindex="-1" autocomplete="off"></div>
+      <label class="am-check"><input type="checkbox" id="amConsent"> <span id="amLConsent"></span></label>
+      <p class="am-msg" id="amMsg" role="status"></p>
+      <button type="submit" id="amSend" class="btn-upsell"></button>
+    </form>
+  </div>
+</div>
+<script>
+(function () {
+  var API = "https://video.jcode.store/api/audit-request";
+  var FM = {
+    fr: { title:"Réserver mon audit complet", intro:"Laissez-nous votre adresse e-mail : nous vous répondons pour confirmer l'audit.", site:"Adresse de votre site", email:"Votre adresse e-mail", analysis:"Résultat de l'analyse (rempli automatiquement, vous pouvez le modifier)", consent:"J'accepte que ces informations soient utilisées pour répondre à ma demande d'audit. <a href='/privacy-policy.html' target='_blank' rel='noopener'>Politique de confidentialité</a>", send:"Envoyer ma demande", sending:"Envoi en cours…", ok:"Merci, votre demande est envoyée. Nous vous répondons par e-mail.", e_site:"Indiquez l'adresse de votre site.", e_email:"Indiquez une adresse e-mail valide.", e_consent:"Veuillez cocher la case de consentement.", e_rate:"Trop de demandes pour le moment. Écrivez-nous à contact@jcode.store.", e_send:"L'envoi a échoué. Écrivez-nous à contact@jcode.store.", e_net:"Connexion impossible. Écrivez-nous à contact@jcode.store." },
+    nl: { title:"Mijn volledige audit boeken", intro:"Laat uw e-mailadres achter: we antwoorden u om de audit te bevestigen.", site:"Adres van uw website", email:"Uw e-mailadres", analysis:"Resultaat van de analyse (automatisch ingevuld, u kunt het aanpassen)", consent:"Ik ga ermee akkoord dat deze gegevens worden gebruikt om mijn auditaanvraag te beantwoorden. <a href='/privacy-policy.html' target='_blank' rel='noopener'>Privacybeleid</a>", send:"Mijn aanvraag verzenden", sending:"Bezig met verzenden…", ok:"Bedankt, uw aanvraag is verzonden. We antwoorden u per e-mail.", e_site:"Geef het adres van uw website op.", e_email:"Geef een geldig e-mailadres op.", e_consent:"Vink het selectievakje voor toestemming aan.", e_rate:"Te veel aanvragen op dit moment. Schrijf ons op contact@jcode.store.", e_send:"Verzenden is mislukt. Schrijf ons op contact@jcode.store.", e_net:"Geen verbinding. Schrijf ons op contact@jcode.store." },
+    en: { title:"Book my full audit", intro:"Leave us your email address: we will reply to confirm the audit.", site:"Your website address", email:"Your email address", analysis:"Analysis result (filled in automatically, you can edit it)", consent:"I agree that this information may be used to answer my audit request. <a href='/privacy-policy.html' target='_blank' rel='noopener'>Privacy policy</a>", send:"Send my request", sending:"Sending…", ok:"Thank you, your request has been sent. We will reply by email.", e_site:"Enter your website address.", e_email:"Enter a valid email address.", e_consent:"Please tick the consent box.", e_rate:"Too many requests right now. Write to us at contact@jcode.store.", e_send:"Sending failed. Write to us at contact@jcode.store.", e_net:"Connection failed. Write to us at contact@jcode.store." }
+  };
+  function $(id) { return document.getElementById(id); }
+  function lang() { try { return FM[L] ? L : "fr"; } catch (e) { return "fr"; } }
+  function txt(id) { var e = $(id); return e ? (e.innerText || "").trim() : ""; }
+  function collect() {
+    var u = $("urlInput");
+    var parts = ["Site : " + (u ? u.value.trim() : "")];
+    var sc = txt("globalScore"); if (sc) parts.push("Score global : " + sc);
+    var z = txt("zonesContainer"); if (z) parts.push(z);
+    var d = txt("detailsList"); if (d) parts.push("--- Détail des contrôles ---\n" + d);
+    var a = txt("aiRecs"); if (a) parts.push("--- Recommandations IA ---\n" + a);
+    return parts.join("\n\n").slice(0, 19000);
+  }
+  var modal = $("auditModal");
+  function msg(t, kind) { var m = $("amMsg"); m.textContent = t || ""; m.className = "am-msg" + (kind ? " " + kind : ""); }
+  function openModal() {
+    var f = FM[lang()];
+    $("amTitle").textContent = f.title; $("amIntro").textContent = f.intro;
+    $("amLSite").textContent = f.site; $("amLEmail").textContent = f.email; $("amLAnalysis").textContent = f.analysis;
+    $("amLConsent").innerHTML = f.consent; $("amSend").textContent = f.send;
+    var u = $("urlInput"); $("amSite").value = u ? u.value.trim() : "";
+    $("amAnalysis").value = collect();
+    $("amSend").disabled = false; msg("");
+    modal.hidden = false; $("amEmail").focus();
+  }
+  function closeModal() { modal.hidden = true; }
+  $("auditBtn").addEventListener("click", function (e) { e.preventDefault(); openModal(); });
+  $("amClose").addEventListener("click", closeModal);
+  modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !modal.hidden) closeModal(); });
+  $("amForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var f = FM[lang()];
+    var email = $("amEmail").value.trim(), site = $("amSite").value.trim();
+    if (!site) return msg(f.e_site, "err");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return msg(f.e_email, "err");
+    if (!$("amConsent").checked) return msg(f.e_consent, "err");
+    $("amSend").disabled = true; msg(f.sending);
+    fetch(API, { method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email, site: site, analysis: $("amAnalysis").value, consent: true, website: $("amWebsite").value, lang: lang() }) })
+    .then(function (r) {
+      if (r.ok) { msg(f.ok, "ok"); return; }
+      $("amSend").disabled = false;
+      msg(r.status === 429 ? f.e_rate : f.e_send, "err");
+    })
+    .catch(function () { $("amSend").disabled = false; msg(f.e_net, "err"); });
+  });
+})();
+</script>
 </body>
 </html>
