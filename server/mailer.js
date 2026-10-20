@@ -46,3 +46,16 @@ export async function sendAlert(subject, text) {
     console.error('[ALERTE] envoi echoue:', err?.message);
   }
 }
+
+export async function sendAuditRequest({ email, site, analysis, lang }) {
+  const t = getTransporter();
+  if (!t) throw new Error('Envoi email non configure (variables MAGIC_MAIL_*)');
+  const oneLine = (s) => String(s).replace(/[\r\n]+/g, ' ').slice(0, 200);
+  await t.sendMail({
+    from: `jcode.store <${process.env.MAGIC_MAIL_USER}>`,
+    to: process.env.AUDIT_EMAIL || 'contact@jcode.store',
+    replyTo: email,
+    subject: '[Audit complet 400 EUR] ' + oneLine(site),
+    text: `Nouvelle demande d'audit complet (langue : ${lang})\n\nSite : ${site}\nE-mail : ${email}\n\n--- Résultat de l'analyse fourni par le visiteur ---\n${analysis || '(aucun résultat fourni)'}\n`,
+  });
+}

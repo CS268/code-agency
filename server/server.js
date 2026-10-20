@@ -1,4 +1,5 @@
 import { registerMarketingStudio } from './marketing-studio.js';
+import { registerAuditRequest } from './audit-request.js';
 import express from 'express';
 import multer from 'multer';
 import cors from 'cors';
@@ -119,6 +120,7 @@ if (payments) {
 app.use(cors());
 registerMarketingStudio(app);
 app.use(express.json());
+registerAuditRequest(app);
 app.use('/uploads', express.static(UPLOAD_DIR));
 
 // FIX — sert les fichiers du build React (une fois copiés dans FRONTEND_DIST, voir étape de déploiement)
