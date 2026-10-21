@@ -2223,7 +2223,7 @@ function buildPrompt() {
 // ══════════════════════════════════════════════════════════════════
 async function apiFetch(url, options = {}, label = 'API') {
     for (let attempt = 0; attempt < 7; attempt++) {
-        if (state.stopRequested) throw new Error('Arrêt demandé');
+        if (state.stopRequested && label === 'Création') throw new Error('Arrêt demandé');
         try {
             const res = await fetch(url, options);
             if (res.status === 429) {
@@ -2299,17 +2299,14 @@ async function pollVideo(videoId, onProgress) {
     const estimatedMs = estimateGenerationTime(state.durationFrames);
     let remaining = Math.max(20, Math.floor(estimatedMs / 1000 * 0.8));
     while (remaining > 0) {
-        if (state.stopRequested) throw new Error('Arrêt demandé');
         onProgress('Votre pub se prépare… — ' + remaining + 's');
         await sleep(1000);
         remaining--;
     }
     for (let attempt = 0; attempt < MAX_POLL_ATTEMPTS; attempt++) {
-        if (state.stopRequested) throw new Error('Arrêt demandé');
         if (attempt > 0) {
             let r = POLL_INTERVAL_SEC;
             while (r > 0) {
-                if (state.stopRequested) throw new Error('Arrêt demandé');
                 onProgress('Finalisation… — ' + r + 's');
                 await sleep(1000);
                 r--;
@@ -2512,7 +2509,7 @@ async function startGeneration() {
             }
         }
         if (pollingTasks.length > 0) {
-            setStatus('Finalisation…');
+            setStatus(state.stopRequested ? 'Arrêt : on termine les vidéos déjà envoyées…' : 'Finalisation…');
             await Promise.allSettled(pollingTasks);
         }
     } catch (e) {
