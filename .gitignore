@@ -11,3 +11,7 @@ docs/_backup/
 wormhole-rescue/
 *.bak-ga
 .dev.vars
+
+*.backup*
+*.sauvegarde
+.wrangler/
