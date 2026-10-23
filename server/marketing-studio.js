@@ -53,10 +53,32 @@ async function changeUsage(id, delta) {
   throw new Error('conflit de mise a jour du quota');
 }
 
+async function recordVideo(videoId, subscriberId) {
+  try {
+    const { error } = await supabase.from('marketing_videos').insert({ agnes_video_id: videoId, abonne_id: subscriberId });
+    if (error) console.error('[MARKETING-STUDIO] enregistrement video:', error.message);
+  } catch (err) {
+    console.error('[MARKETING-STUDIO] enregistrement video:', err?.message);
+  }
+}
+
+async function saveVideo(videoId, fields) {
+  try {
+    const { error } = await supabase
+      .from('marketing_videos')
+      .update({ ...fields, updated_at: new Date().toISOString() })
+      .eq('agnes_video_id', videoId);
+    if (error) console.error('[MARKETING-STUDIO] maj video:', error.message);
+  } catch (err) {
+    console.error('[MARKETING-STUDIO] maj video:', err?.message);
+  }
+}
+
 async function refundJob(videoId) {
   const job = jobs.get(videoId);
   if (!job || job.refunded) return;
   job.refunded = true;
+  await saveVideo(videoId, { statut: 'echec' });
   try {
     await changeUsage(job.subscriberId, -1);
     console.log('[MARKETING-STUDIO] video rendue au quota');
@@ -152,6 +174,7 @@ export function registerMarketingStudio(app) {
       const videoId = data.video_id || data.id || data.task_id;
       if (!videoId) { await giveBack(); return res.status(502).json({ error: 'agnes_error' }); }
       jobs.set(videoId, { subscriberId: auth.sub.id, createdAt: Date.now(), refunded: false });
+      await recordVideo(videoId, auth.sub.id);
       res.json({
         videoId,
         remaining: Math.max(0, auth.sub.quota_mensuel - auth.sub.videos_utilisees - 1),
@@ -161,6 +184,22 @@ export function registerMarketingStudio(app) {
       await giveBack();
       res.status(502).json({ error: 'agnes_unavailable' });
     }
+  });
+
+  app.get('/api/marketing/videos', async (req, res) => {
+    const auth = await getSubscriber(req);
+    if (!auth.sub) return res.status(auth.code).json({ error: auth.error });
+    const { data, error } = await supabase
+      .from('marketing_videos')
+      .select('agnes_video_id, statut, video_url, created_at')
+      .eq('abonne_id', auth.sub.id)
+      .order('created_at', { ascending: false })
+      .limit(50);
+    if (error) {
+      console.error('[MARKETING-STUDIO] liste videos:', error.message);
+      return res.status(500).json({ error: 'server_error' });
+    }
+    res.json({ videos: data });
   });
 
   app.get('/api/marketing/status', async (req, res) => {
@@ -187,6 +226,7 @@ export function registerMarketingStudio(app) {
         const url = (d.metadata && d.metadata.url) || d.url || (d.output && d.output.url);
         if (!url) { await refundJob(videoId); return res.json({ status: 'failed', error: 'no_url' }); }
         jobs.delete(videoId);
+        await saveVideo(videoId, { statut: 'termine', video_url: url });
         return res.json({ status: 'completed', url });
       }
       if (['failed', 'error', 'cancelled'].includes(status)) {
