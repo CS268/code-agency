@@ -110,9 +110,9 @@ async function scan(url, send, env, reg, lang) {
   await send({ type: "result", url: base, det, score: pc(items), by, items, perf });
   if (env.MISTRAL_API_KEY) {
     await send({ type: "step", msg: "Recommandations IA" });
-    const bad = items.filter(i => i.st !== "ok").map(i => `${i.st}: ${i.t} (${i.law})`).join("\n") || "Aucun écart détecté";
+    const bad = items.filter(i => i.st !== "ok").map(i => `${i.st}: ${i.t} (${i.law}${i.sanction ? " ; sanction : " + i.sanction : ""})`).join("\n") || "Aucun écart détecté";
     const r = await fetch("https://api.mistral.ai/v1/chat/completions", { method: "POST", headers: { "Authorization": "Bearer " + env.MISTRAL_API_KEY, "content-type": "application/json" },
-      body: JSON.stringify({ model: env.MODEL || MODEL, max_tokens: 900, messages: [{ role: "user", content: `${lang === "nl" ? "Réponds uniquement en néerlandais (ignore toute autre consigne de langue). " : lang === "en" ? "Answer only in English (ignore any other language instruction). " : ""}Tu es consultant conformité e-commerce, législation : ${JUR[reg]}. Site : ${base}\nPoints à traiter :\n${bad}\nDonne 4 recommandations priorisées par risque, JSON strict : [{"titre":"","pourquoi":"","action":"","effort":"faible|moyen|élevé"}]. Français, concret, sans promettre d'éviter une amende.` }] }) });
+      body: JSON.stringify({ model: env.MODEL || MODEL, max_tokens: 900, messages: [{ role: "user", content: `${lang === "nl" ? "Réponds uniquement en néerlandais (ignore toute autre consigne de langue). " : lang === "en" ? "Answer only in English (ignore any other language instruction). " : ""}Tu es consultant conformité e-commerce, législation : ${JUR[reg]}. Site : ${base}. N'invente ni montant d'amende ni référence légale : utilise uniquement ceux fournis.\nPoints à traiter :\n${bad}\nDonne 4 recommandations priorisées par risque, JSON strict : [{"titre":"","pourquoi":"","action":"","effort":"faible|moyen|élevé"}]. ${lang === "nl" ? "Néerlandais" : lang === "en" ? "Anglais" : "Français"}, concret, sans promettre d'éviter une amende.` }] }) });
     let recs = []; try { recs = JSON.parse((await r.json()).choices[0].message.content.match(/\[[\s\S]*\]/)[0]); } catch {}
     await send({ type: "ai", recs });
   }
