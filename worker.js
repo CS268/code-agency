@@ -45,7 +45,7 @@ const R = [
 const LAW = { EU: "Directive ePrivacy art. 5(3)", UK: "PECR reg. 6 / UK GDPR", US: "CCPA/CPRA et lois d'État" };
 const JUR = { EU: "UE (BE, FR, NL)", UK: "Royaume-Uni", US: "États-Unis" };
 const SAN = { UK: "ICO : jusqu'à 17,5 M£ ou 4 % du CA mondial (UK GDPR)", US: "CPPA : amende par infraction (CCPA) ; FTC : sanctions" };
-const TR = [["Google Analytics/GTM",/googletagmanager|google-analytics|gtag/i],["Meta Pixel",/fbq\(|connect\.facebook\.net/i],["Hotjar",/hotjar/i],["TikTok Pixel",/analytics\.tiktok/i]];
+const TR = [["Google Analytics/GTM",/googletagmanager\.com\/(gtag\/js|gtm\.js)|google-analytics\.com\/(analytics|ga)\.js/i],["Meta Pixel",/connect\.facebook\.net\/[^"'\s]*fbevents\.js|fbq\(\s*['"]init['"]/i],["Hotjar",/static\.hotjar\.com|hotjar-\d/i],["Microsoft Clarity",/clarity\.ms\/tag/i],["TikTok Pixel",/analytics\.tiktok\.com/i]];
 
 export default {
   async fetch(req, env) {
@@ -94,9 +94,9 @@ async function scan(url, send, env, reg, lang) {
   for (const l of links) { await send({ type: "step", msg: "Lecture de " + new URL(l).pathname }); try { text += "\n" + (await get(l)).h; } catch {} }
   await send({ type: "step", msg: "Analyse de conformité" });
   const det = [reg];
-  if (/\.be$/.test(bh) || /\bBE\s?0\d{3}[. ]?\d{3}[. ]?\d{3}\b|\b0\d{3}[. ]\d{3}[. ]\d{3}\b/.test(text)) det.push("BE");
-  if (/\.fr$/.test(bh) || /\bFR\s?[0-9A-Z]{2}\s?\d{9}\b|SIRET\W{0,12}\d{3}\s?\d{3}\s?\d{3}\s?\d{5}|SIREN\W{0,12}\d{3}\s?\d{3}\s?\d{3}\b/i.test(text)) det.push("FR");
-  if (/\.nl$/.test(bh) || /\bNL\s?\d{9}\s?B\s?\d{2}\b|\bKvK\W{0,12}\d{8}\b/i.test(text)) det.push("NL");
+  if (/\.be$/.test(bh) || /\bBE\s?0\d{3}[. ]?\d{3}[. ]?\d{3}\b|\b0\d{3}[. ]\d{3}[. ]\d{3}\b/.test(text) || /(Si[eè]ge|Zetel|registered office)[^<]{0,80}Belgi/i.test(text)) det.push("BE");
+  if (/\.fr$/.test(bh) || /\bFR\s?[0-9A-Z]{2}\s?\d{9}\b|SIRET\W{0,12}\d{3}\s?\d{3}\s?\d{3}\s?\d{5}|SIREN\W{0,12}\d{3}\s?\d{3}\s?\d{3}\b/i.test(text) || /(Si[eè]ge|registered office)[^<]{0,80}\bFrance\b/i.test(text)) det.push("FR");
+  if (/\.nl$/.test(bh) || /\bNL\s?\d{9}\s?B\s?\d{2}\b|\bKvK\W{0,12}\d{8}\b/i.test(text) || /(Si[eè]ge|Zetel|gevestigd|registered office)[^<]{0,80}(Nederland|Pays-Bas|Netherlands)/i.test(text)) det.push("NL");
   if (det.length === 1) det.push("BE", "FR", "NL");
   if (reg !== "EU") det.splice(1);
   const items = R.filter(r => det.includes(r[0])).map(r => ({ s: r[0], st: r[3].test(text) ? "ok" : r[1], t: r[2], law: r[4], tip: r[5], sanction: r[6] }));
