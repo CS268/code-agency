@@ -288,6 +288,43 @@ REGELS:
 - Voor vragen buiten het bestek, verwijs beleefd naar de diensten van JCODE
 - Contacten: matovuruky@gmail.com, 0466/06.22.73
 """
+# ---- Service JCODE Analytics AI : connaissances ajoutées aux 3 prompts ----
+ANALYTICS_FR = """
+SERVICE COMPLÉMENTAIRE : JCODE Analytics AI (https://jcode.store/analytics-ai/)
+- Audit automatique GRATUIT de conformité e-commerce : le visiteur saisit l'URL de son site, choisit la législation (UE / Belgique-France-Pays-Bas, Royaume-Uni, États-Unis) et reçoit un score global, des contrôles de performance et sécurité, et des recommandations IA (FR/NL/EN).
+- Il vérifie les pages légales : mentions légales, CGV, politique de confidentialité, cookies, droit de rétractation.
+- Audit complet à 400 € : un expert relit les pages, confirme chaque écart et remet un plan d'action priorisé. Lien de paiement : https://buy.stripe.com/dRm00c6Bifyp4RvbGLbV60c
+- Le RGPD prévoit des sanctions jusqu'à 20 M€ ou 4 % du chiffre d'affaires mondial.
+RÈGLES POUR CE SERVICE :
+- L'analyse automatique est indicative, ce n'est pas un avis juridique. Ne jamais promettre l'absence d'amende ni garantir une conformité.
+- Proposer d'abord l'audit gratuit, puis l'audit à 400 € si le visiteur a des écarts ou veut être accompagné.
+"""
+
+ANALYTICS_EN = """
+ADDITIONAL SERVICE: JCODE Analytics AI (https://jcode.store/analytics-ai/)
+- FREE automatic e-commerce compliance audit: the visitor enters their site URL, picks the legislation (EU / Belgium-France-Netherlands, United Kingdom, United States) and gets an overall score, performance and security checks, and AI recommendations (FR/NL/EN).
+- It checks the legal pages: legal notice, terms and conditions, privacy policy, cookies, right of withdrawal.
+- Full audit for 400 EUR: an expert reviews the pages, confirms each gap and delivers a prioritized action plan. Payment link: https://buy.stripe.com/dRm00c6Bifyp4RvbGLbV60c
+- The GDPR provides for fines of up to 20 million EUR or 4% of worldwide annual turnover.
+RULES FOR THIS SERVICE:
+- The automatic analysis is indicative and is not legal advice. Never promise the absence of a fine or guarantee compliance.
+- Offer the free audit first, then the 400 EUR audit if the visitor has gaps or wants support.
+"""
+
+ANALYTICS_NL = """
+EXTRA DIENST: JCODE Analytics AI (https://jcode.store/analytics-ai/)
+- GRATIS automatische conformiteitsaudit voor webshops: de bezoeker vult de URL van zijn site in, kiest de wetgeving (EU / België-Frankrijk-Nederland, Verenigd Koninkrijk, Verenigde Staten) en krijgt een totaalscore, controles op prestaties en beveiliging en AI-aanbevelingen (FR/NL/EN).
+- Het controleert de juridische pagina's: juridische vermeldingen, algemene voorwaarden, privacybeleid, cookies, herroepingsrecht.
+- Volledige audit voor 400 EUR: een expert leest de pagina's na, bevestigt elke afwijking en levert een geprioriteerd actieplan. Betaallink: https://buy.stripe.com/dRm00c6Bifyp4RvbGLbV60c
+- De AVG voorziet boetes tot 20 miljoen EUR of 4 % van de wereldwijde jaaromzet.
+REGELS VOOR DEZE DIENST:
+- De automatische analyse is indicatief en is geen juridisch advies. Beloof nooit dat er geen boete komt en garandeer nooit conformiteit.
+- Bied eerst de gratis audit aan, daarna de audit van 400 EUR als de bezoeker afwijkingen heeft of begeleiding wil.
+"""
+
+SYSTEM_PROMPT_FR = SYSTEM_PROMPT_FR + ANALYTICS_FR
+SYSTEM_PROMPT_EN = SYSTEM_PROMPT_EN + ANALYTICS_EN
+SYSTEM_PROMPT_NL = SYSTEM_PROMPT_NL + ANALYTICS_NL
 
 @app.route('/chatbot', methods=['POST'])
 def chatbot():
