@@ -810,9 +810,9 @@
     "nl": "Wettelijke Vermeldingen & Algemene Voorwaarden"
   },
   "terms.last_update": {
-    "fr": "Dernière mise à jour : 20 juillet 2026",
-    "en": "Last updated: July 20, 2026",
-    "nl": "Laatst bijgewerkt: 20 juli 2026"
+    "fr": "Dernière mise à jour : 24 octobre 2026",
+    "en": "Last updated: 24 October 2026",
+    "nl": "Laatst bijgewerkt: 24 oktober 2026"
   },
   "terms.s1_title": {
     "fr": "1. Éditeur du site",
@@ -3348,5 +3348,25 @@
     "fr": "<strong>Google Analytics 4</strong> — statistiques de fréquentation (uniquement avec votre consentement)",
     "nl": "<strong>Google Analytics 4</strong> — bezoekersstatistieken (alleen met uw toestemming)",
     "en": "<strong>Google Analytics 4</strong> — visitor statistics (only with your consent)"
+  },
+  "terms.s12_title": {
+    "fr": "12. Garantie légale et règlement des litiges",
+    "nl": "12. Wettelijke garantie en geschillenregeling",
+    "en": "12. Legal guarantee and dispute resolution"
+  },
+  "terms.studio_consent": {
+    "fr": "<strong>Exécution immédiate.</strong> En commandant, vous demandez expressément que la génération de vos vidéos commence immédiatement et vous reconnaissez que, pour toute vidéo déjà fournie, vous perdez votre droit de rétractation.",
+    "nl": "<strong>Onmiddellijke uitvoering.</strong> Door te bestellen verzoekt u uitdrukkelijk dat de creatie van uw video's onmiddellijk begint en erkent u dat u, voor elke reeds geleverde video, uw herroepingsrecht verliest.",
+    "en": "<strong>Immediate performance.</strong> By ordering, you expressly request that the generation of your videos starts immediately and you acknowledge that, for any video already delivered, you lose your right of withdrawal."
+  },
+  "terms.s12_warranty": {
+    "fr": "<strong>Garantie légale de conformité.</strong> Pour les contenus et services numériques fournis aux consommateurs, vous bénéficiez de la garantie légale de conformité. En cas de défaut de conformité, vous avez droit à la mise en conformité du service, à une réduction du prix ou à la résolution du contrat, dans les conditions prévues par la loi. Cette garantie s'applique indépendamment de toute garantie commerciale.",
+    "nl": "<strong>Wettelijke conformiteitsgarantie.</strong> Voor digitale inhoud en diensten die aan consumenten worden geleverd, geniet u de wettelijke conformiteitsgarantie. Bij een gebrek aan conformiteit heeft u recht op het conform maken van de dienst, op een prijsvermindering of op beëindiging van de overeenkomst, onder de wettelijke voorwaarden. Deze garantie geldt los van elke commerciële garantie.",
+    "en": "<strong>Legal guarantee of conformity.</strong> For digital content and services supplied to consumers, you benefit from the legal guarantee of conformity. If the service does not conform, you are entitled to have it brought into conformity, to a price reduction or to termination of the contract, under the conditions set by law. This guarantee applies regardless of any commercial guarantee."
+  },
+  "terms.s12_disputes": {
+    "fr": "<strong>Règlement des litiges.</strong> En cas de litige, contactez-nous d'abord à contact@jcode.store. Si aucune solution n'est trouvée, vous pouvez saisir gratuitement le Service de médiation pour le consommateur (www.mediationconsommateur.be, North Gate II, boulevard du Roi Albert II 8 bte 1, 1000 Bruxelles).",
+    "nl": "<strong>Geschillen.</strong> Neem bij een geschil eerst contact met ons op via contact@jcode.store. Wordt er geen oplossing gevonden, dan kunt u gratis een beroep doen op de Consumentenombudsdienst (www.consumentenombudsdienst.be, North Gate II, Koning Albert II-laan 8 bus 1, 1000 Brussel).",
+    "en": "<strong>Dispute resolution.</strong> In the event of a dispute, please contact us first at contact@jcode.store. If no solution is found, you may refer the matter free of charge to the Belgian Consumer Mediation Service (www.mediationconsommateur.be, North Gate II, Boulevard du Roi Albert II 8 bte 1, 1000 Brussels)."
   }
 }
