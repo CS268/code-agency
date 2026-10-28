@@ -1,0 +1,11 @@
+{
+	"name": "conformshop",
+	"main": "worker.js",
+	"compatibility_date": "2026-10-12",
+	"kv_namespaces": [
+		{
+			"binding": "RATE",
+			"id": "1e598e0b137c41fa914010b7d250fa9e"
+		}
+	]
+}
