@@ -15,3 +15,5 @@ wormhole-rescue/
 *.backup*
 *.sauvegarde
 .wrangler/
+temp.html
+wrangler.jsonc
