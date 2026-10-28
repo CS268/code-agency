@@ -2105,9 +2105,9 @@
     "nl": "Analytics AI"
   },
   "index.services.analytics.desc": {
-    "fr": "Collez l'adresse de votre site : l'IA l'analyse et vérifie sa conformité avec la législation européenne et celle de certains États membres.",
-    "en": "Paste your website URL: the AI analyzes your site and checks its compliance with European legislation and that of selected member states.",
-    "nl": "Plak de URL van uw website: de AI analyseert uw site en controleert de naleving van de Europese wetgeving en die van enkele lidstaten."
+    "fr": "Collez l'adresse de votre site : l'IA l'analyse et vérifie sa conformité avec la législation des États-Unis, du Royaume-Uni et de l'Union européenne (États membres proposés selon votre IP).",
+    "en": "Paste your website address: the AI analyses it and checks its compliance with the laws of the United States, the United Kingdom and the European Union (member states offered based on your IP).",
+    "nl": "Plak het adres van uw site: de AI analyseert het en controleert de naleving van de wetgeving van de Verenigde Staten, het Verenigd Koninkrijk en de Europese Unie (beschikbare lidstaten volgens uw IP)."
   },
   "index.services.orchestrator.title": {
     "fr": "Agent Orchestrator",
