@@ -69,39 +69,50 @@ def md_inline(s):
     return s
 
 def md_to_html(md):
-    blocks = md.split('\n\n')
-    html = []
-    in_list = False
-    for block in blocks:
-        block = block.strip()
-        if not block:
-            continue
-        if block.startswith('## '):
-            if in_list:
-                html.append('</ul>'); in_list = False
-            html.append(f'<h2>{md_inline(block[3:].strip())}</h2>')
-        elif block.startswith('# '):
-            continue
-        elif block == '---':
-            if in_list:
-                html.append('</ul>'); in_list = False
-            html.append('<hr>')
-        elif block.startswith('- '):
-            if not in_list:
-                html.append('<ul>'); in_list = True
-            for item in block.split('\n'):
-                if item.startswith('- '):
-                    html.append(f'<li>{md_inline(item[2:].strip())}</li>')
-        else:
-            if in_list:
-                html.append('</ul>'); in_list = False
-            m = re.fullmatch(r'\[([^\]]+)\]\(((?:https?://|/)[^)\s]+)\)', block)
+    html, para, items, kind = [], [], [], None
+    def flush():
+        nonlocal para, items, kind
+        if para:
+            text = ' '.join(para)
+            m = re.fullmatch(r'\[([^\]]+)\]\(((?:https?://|/)[^)\s]+)\)', text)
             if m:
                 html.append('<p><a href="' + m.group(2) + '" style="display: inline-block; padding: 14px 28px; background: var(--primary-indigo); color: #ffffff; border-radius: 10px; text-decoration: none; font-weight: 600;">' + m.group(1) + '</a></p>')
             else:
-                html.append(f'<p>{md_inline(block)}</p>')
-    if in_list:
-        html.append('</ul>')
+                html.append('<p>' + md_inline(text) + '</p>')
+            para = []
+        if items:
+            html.append('<' + kind + '>' + ''.join('<li>' + md_inline(x) + '</li>' for x in items) + '</' + kind + '>')
+            items, kind = [], None
+    for raw in md.split('\n'):
+        line = raw.strip()
+        if not line:
+            flush(); continue
+        h = re.match(r'(#{1,4})\s+(.*)', line)
+        if h:
+            flush()
+            n = len(h.group(1))
+            if n == 1:
+                continue
+            lvl = 2 if n == 2 else 3
+            html.append('<h%d>%s</h%d>' % (lvl, md_inline(h.group(2).strip()), lvl))
+            continue
+        if line == '---':
+            flush(); html.append('<hr>'); continue
+        li = re.match(r'(?:[-*]\s+|(\d+)[.)]\s+)(.*)', line)
+        if li:
+            k = 'ol' if li.group(1) else 'ul'
+            if para or (items and kind != k):
+                flush()
+            kind = k
+            items.append(li.group(2).strip())
+            continue
+        if items and raw[:1] in (' ', '\t'):
+            items[-1] += ' ' + line
+            continue
+        if items:
+            flush()
+        para.append(line)
+    flush()
     return '\n        '.join(html)
 
 article_html = md_to_html(body_md)
