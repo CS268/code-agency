@@ -151,46 +151,53 @@ def md_inline(s):
 
 
 def md_to_html(md):
-    blocks = md.split("\n\n")
-    out = []
-    in_list = False
-    for block in blocks:
-        block = block.strip()
-        if not block:
-            continue
-        if block.startswith("## "):
-            if in_list:
-                out.append("</ul>")
-                in_list = False
-            out.append("<h2>%s</h2>" % md_inline(block[3:].strip()))
-        elif block.startswith("# "):
-            continue
-        elif block == "---":
-            if in_list:
-                out.append("</ul>")
-                in_list = False
-            out.append("<hr>")
-        elif block.startswith("- "):
-            if not in_list:
-                out.append("<ul>")
-                in_list = True
-            for item in block.split("\n"):
-                if item.startswith("- "):
-                    out.append("<li>%s</li>" % md_inline(item[2:].strip()))
-        else:
-            if in_list:
-                out.append("</ul>")
-                in_list = False
-            m = re.fullmatch(r"\[([^\]]+)\]\(((?:https?://|/)[^)\s]+)\)", block)
+    html, para, items, kind = [], [], [], None
+    def flush():
+        nonlocal para, items, kind
+        if para:
+            text = ' '.join(para)
+            m = re.fullmatch(r"\[([^\]]+)\]\(((?:https?://|/)[^)\s]+)\)", text)
             if m:
-                out.append('<p><a href="%s" style="display: inline-block; padding: 14px 28px; '
-                           'background: var(--primary-indigo); color: #ffffff; border-radius: 10px; '
-                           'text-decoration: none; font-weight: 600;">%s</a></p>' % (m.group(2), m.group(1)))
+                html.append('<p><a href="%s" style="display: inline-block; padding: 14px 28px; '
+                            'background: var(--primary-indigo); color: #ffffff; border-radius: 10px; '
+                            'text-decoration: none; font-weight: 600;">%s</a></p>' % (m.group(2), m.group(1)))
             else:
-                out.append("<p>%s</p>" % md_inline(block))
-    if in_list:
-        out.append("</ul>")
-    return "\n        ".join(out)
+                html.append('<p>%s</p>' % md_inline(text))
+            para = []
+        if items:
+            html.append('<%s>%s</%s>' % (kind, ''.join('<li>%s</li>' % md_inline(x) for x in items), kind))
+            items, kind = [], None
+    for raw in md.split('\n'):
+        line = raw.strip()
+        if not line:
+            flush(); continue
+        h = re.match(r'(#{1,4})\s+(.*)', line)
+        if h:
+            flush()
+            n = len(h.group(1))
+            if n == 1:
+                continue
+            lvl = 2 if n == 2 else 3
+            html.append('<h%d>%s</h%d>' % (lvl, md_inline(h.group(2).strip()), lvl))
+            continue
+        if line == '---':
+            flush(); html.append('<hr>'); continue
+        li = re.match(r'(?:[-*]\s+|(\d+)[.)]\s+)(.*)', line)
+        if li:
+            k = 'ol' if li.group(1) else 'ul'
+            if para or (items and kind != k):
+                flush()
+            kind = k
+            items.append(li.group(2).strip())
+            continue
+        if items and raw[:1] in (' ', '\t'):
+            items[-1] += ' ' + line
+            continue
+        if items:
+            flush()
+        para.append(line)
+    flush()
+    return '\n        '.join(html)
 
 
 # ---------- arguments ----------
