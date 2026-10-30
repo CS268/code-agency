@@ -234,7 +234,7 @@
             gap: 1.5rem;
             border-top: 1px solid rgba(255,255,255,0.1);
             box-shadow: var(--shadow-xl);
-            z-index: 9999;
+            z-index: 9000;
         }
         .navbar.scrolled .nav-links.open { background: var(--white); }
         .nav-links.open a { color: var(--white); }
@@ -1944,6 +1944,51 @@ if (host) {
 }
 </script>
 <!-- HERO-3D-END -->
+
+
+<button id="quiz-trigger-btn" aria-label="Vind je pakket in 20s" style="position: fixed; bottom: 30px; right: 30px; background: linear-gradient(90deg, #6366f1, #8b5cf6); color: white; border: none; border-radius: 50px; padding: 15px 25px; font-size: 16px; font-weight: 700; cursor: pointer; box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4); z-index: 9000; display: flex; align-items: center; gap: 10px; transition: transform 0.3s ease;">
+    <span>✨</span> Vind je pakket in 20s
+</button>
+
+<div id="quiz-modal" role="dialog" aria-modal="true" aria-label="Pakket aanbevelingsquiz" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 10000; backdrop-filter: blur(5px); justify-content: center; align-items: center;">
+    <div style="position: relative; width: 95%; max-width: 800px; height: 85vh; background: #0f0c29; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+        <button id="close-quiz-modal" aria-label="Quiz sluiten" style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.1); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 10;">✕</button>
+        <iframe src="/nl/quiz-packs.html" style="width: 100%; height: 100%; border: none;" title="Pakket aanbevelingsquiz"></iframe>
+    </div>
+</div>
+
+<script>
+(function() {
+    const modal = document.getElementById('quiz-modal');
+    const triggerBtn = document.getElementById('quiz-trigger-btn');
+    const closeBtn = document.getElementById('close-quiz-modal');
+    
+    function openModal() { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    function closeModal() { modal.style.display = 'none'; document.body.style.overflow = ''; }
+    
+    triggerBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && modal.style.display === 'flex') closeModal(); });
+    
+    if (!localStorage.getItem('jcode_quiz_seen')) {
+        // Cherche un bouton dont le texte contient "accept" ou "akkoord" (insensible à la casse)
+        const acceptBtn = Array.from(document.querySelectorAll('button, a')).find(b => {
+            const text = b.textContent.toLowerCase().trim();
+            return text.includes('accept') || text.includes('akkoord');
+        });
+        
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', function() {
+                setTimeout(function() {
+                    openModal();
+                    localStorage.setItem('jcode_quiz_seen', 'true');
+                }, 3000);
+            });
+        }
+    }
+})();
+</script>
 
 </body>
 </html>
