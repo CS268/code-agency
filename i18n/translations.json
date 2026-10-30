@@ -1180,9 +1180,9 @@
     "nl": "1:1 strategische sessies om uw automatiseringen vooruit te helpen"
   },
   "concierge.del.voxer.title": {
-    "fr": "Voxer illimité",
-    "en": "Unlimited Voxer",
-    "nl": "Onbeperkt Voxer"
+    "fr": "DM illimité",
+    "en": "Unlimited DM",
+    "nl": "Onbeperkt DM"
   },
   "concierge.del.voxer.desc": {
     "fr": "Questions/réponses asynchrones, réponse sous 12h",
@@ -1270,9 +1270,9 @@
     "nl": "<strong>2 calls</strong> van 45 min/maand"
   },
   "concierge.pricing.starter.f2": {
-    "fr": "<strong>Voxer illimité</strong> (réponse &lt;12h)",
-    "en": "<strong>Unlimited Voxer</strong> (response &lt;12h)",
-    "nl": "<strong>Onbeperkt Voxer</strong> (reactie &lt;12u)"
+    "fr": "<strong>DM illimité</strong> (réponse &lt;12h)",
+    "en": "<strong>Unlimited DM</strong> (response &lt;12h)",
+    "nl": "<strong>Onbeperkt DM</strong> (reactie &lt;12u)"
   },
   "concierge.pricing.starter.f3": {
     "fr": "<strong>Hub Notion</strong> personnalisé",
@@ -1315,9 +1315,9 @@
     "nl": "<strong>Make.com workflows</strong>"
   },
   "concierge.pricing.pro.f4": {
-    "fr": "<strong>Support prioritaire</strong> Voxer (&lt;6h)",
-    "en": "<strong>Priority Voxer support</strong> (&lt;6h)",
-    "nl": "<strong>Prioriteit Voxer support</strong> (&lt;6u)"
+    "fr": "<strong>Support prioritaire</strong> DM (&lt;6h)",
+    "en": "<strong>Priority DM support</strong> (&lt;6h)",
+    "nl": "<strong>Prioriteit DM support</strong> (&lt;6u)"
   },
   "concierge.pricing.pro.f5": {
     "fr": "<strong>Rapports bi-mensuels</strong>",
@@ -1415,9 +1415,9 @@
     "nl": "Welke tools gebruikt u?"
   },
   "concierge.faq.a4": {
-    "fr": "Principalement : Claude AI (skills/prompts), Make.com (automatisations), Notion (hub client), Voxer (communication asynchrone), Vercel (déploiement). Selon vos besoins : Stripe, Gmail, Airtable, Calendly.",
-    "en": "Mainly: Claude AI (skills/prompts), Make.com (automations), Notion (client hub), Voxer (async communication), Vercel (deployment). Depending on your needs: Stripe, Gmail, Airtable, Calendly.",
-    "nl": "Voornamelijk: Claude AI (skills/prompts), Make.com (automatiseringen), Notion (klant hub), Voxer (asynchrone communicatie), Vercel (implementatie). Afhankelijk van uw behoeften: Stripe, Gmail, Airtable, Calendly."
+    "fr": "Principalement : Claude AI (skills/prompts), Make.com (automatisations), Notion (hub client), DM (communication asynchrone), Vercel (déploiement). Selon vos besoins : Stripe, Gmail, Airtable, Calendly.",
+    "en": "Mainly: Claude AI (skills/prompts), Make.com (automations), Notion (client hub), DM (async communication), Vercel (deployment). Depending on your needs: Stripe, Gmail, Airtable, Calendly.",
+    "nl": "Voornamelijk: Claude AI (skills/prompts), Make.com (automatiseringen), Notion (klant hub), DM (asynchrone communicatie), Vercel (implementatie). Afhankelijk van uw behoeften: Stripe, Gmail, Airtable, Calendly."
   },
   "concierge.faq.q5": {
     "fr": "Puis-je annuler à tout moment ?",
@@ -2390,9 +2390,9 @@
     "nl": "Uw partner in IA-automatisering"
   },
   "index.concierge.subtitle_html": {
-    "fr": "Done-with-you : on construit <strong style=\"color:#00f0ff;\">ensemble</strong> votre automatisation. 2 appels de 45 min/mois + Voxer illimité + Hub Notion personnalisé.",
-    "en": "Done-with-you: we build your automation <strong style=\"color:#00f0ff;\">together</strong>. 2 x 45 min calls/month + unlimited Voxer + custom Notion Hub.",
-    "nl": "Done-with-you: samen bouwen we uw automatisering. 2 calls van 45 min/maand + onbeperkt Voxer + gepersonaliseerde Notion Hub."
+    "fr": "Done-with-you : on construit <strong style=\"color:#00f0ff;\">ensemble</strong> votre automatisation. 2 appels de 45 min/mois + DM illimité + Hub Notion personnalisé.",
+    "en": "Done-with-you: we build your automation <strong style=\"color:#00f0ff;\">together</strong>. 2 x 45 min calls/month + unlimited DM + custom Notion Hub.",
+    "nl": "Done-with-you: samen bouwen we uw automatisering. 2 calls van 45 min/maand + onbeperkt DM + gepersonaliseerde Notion Hub."
   },
   "index.concierge.phase1.title": {
     "fr": "1. Audit",
@@ -2440,9 +2440,9 @@
     "nl": "<strong>2 calls</strong> van 45 min/maand"
   },
   "index.concierge.pricing.starter.f2": {
-    "fr": "<strong>Voxer illimité</strong> (réponse &lt;12h)",
-    "en": "<strong>Unlimited Voxer</strong> (response &lt;12h)",
-    "nl": "<strong>Onbeperkt Voxer</strong> (reactie &lt;12u)"
+    "fr": "<strong>DM illimité</strong> (réponse &lt;12h)",
+    "en": "<strong>Unlimited DM</strong> (response &lt;12h)",
+    "nl": "<strong>Onbeperkt DM</strong> (reactie &lt;12u)"
   },
   "index.concierge.pricing.starter.f3": {
     "fr": "<strong>Hub Notion</strong> personnalisé",
@@ -2480,9 +2480,9 @@
     "nl": "<strong>Make.com workflows</strong>"
   },
   "index.concierge.pricing.pro.f4": {
-    "fr": "<strong>Support prioritaire</strong> Voxer",
-    "en": "<strong>Priority Voxer support</strong>",
-    "nl": "<strong>Prioritaire Voxer-support</strong>"
+    "fr": "<strong>Support prioritaire</strong> DM",
+    "en": "<strong>Priority DM support</strong>",
+    "nl": "<strong>Prioritaire DM-support</strong>"
   },
   "index.concierge.pricing.pro.f5": {
     "fr": "<strong>Rapports bi-mensuels</strong>",
@@ -2830,9 +2830,9 @@
     "nl": "AI Concierge — JCODE Agency | IA-automatisering voor lokale bedrijven"
   },
   "concierge.meta.description": {
-    "fr": "Service AI Concierge done-with-you : 2 appels/mois, Voxer illimité, Hub Notion. Automatisez votre commerce avec l'IA.",
-    "en": "AI Concierge done-with-you service: 2 calls/month, unlimited Voxer, Notion Hub. Automate your business with AI.",
-    "nl": "AI Concierge done-with-you service: 2 calls/maand, onbeperkt Voxer, Notion Hub. Automatiseer uw bedrijf met AI."
+    "fr": "Service AI Concierge done-with-you : 2 appels/mois, DM illimité, Hub Notion. Automatisez votre commerce avec l'IA.",
+    "en": "AI Concierge done-with-you service: 2 calls/month, unlimited DM, Notion Hub. Automate your business with AI.",
+    "nl": "AI Concierge done-with-you service: 2 calls/maand, onbeperkt DM, Notion Hub. Automatiseer uw bedrijf met AI."
   },
   "intake.meta.title": {
     "fr": "Formulaire Intake — AI Concierge | JCODE Agency",
@@ -3368,5 +3368,10 @@
     "fr": "<strong>Règlement des litiges.</strong> En cas de litige, contactez-nous d'abord à contact@jcode.store. Si aucune solution n'est trouvée, vous pouvez saisir gratuitement le Service de médiation pour le consommateur (www.mediationconsommateur.be, North Gate II, boulevard du Roi Albert II 8 bte 1, 1000 Bruxelles).",
     "nl": "<strong>Geschillen.</strong> Neem bij een geschil eerst contact met ons op via contact@jcode.store. Wordt er geen oplossing gevonden, dan kunt u gratis een beroep doen op de Consumentenombudsdienst (www.consumentenombudsdienst.be, North Gate II, Koning Albert II-laan 8 bus 1, 1000 Brussel).",
     "en": "<strong>Dispute resolution.</strong> In the event of a dispute, please contact us first at contact@jcode.store. If no solution is found, you may refer the matter free of charge to the Belgian Consumer Mediation Service (www.mediationconsommateur.be, North Gate II, Boulevard du Roi Albert II 8 bte 1, 1000 Brussels)."
+  },
+  "common.nav.website": {
+    "fr": "SITE WEB",
+    "en": "WEBSITE",
+    "nl": "WEBSITE"
   }
 }
