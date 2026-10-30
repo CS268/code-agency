@@ -307,6 +307,13 @@
             color: var(--white);
             margin-bottom: 1.5rem;
         }
+        /* Mise en page : menu sur une ligne, titre du hero plus petit en EN/NL */
+        .logo { white-space: nowrap; }
+        .nav-links a { white-space: nowrap; }
+        @media (max-width: 1280px) { .nav-links { gap: 1.5rem; } }
+        html[lang="fr"] .hero-title,
+        html[lang="en"] .hero-title,
+        html[lang="nl"] .hero-title { font-size: clamp(2rem, 4.2vw, 3rem); }
         .hero-title .gradient-text {
             background: var(--gradient-1);
             -webkit-background-clip: text;
@@ -560,7 +567,7 @@
         }
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
         .service-card {
@@ -1596,8 +1603,8 @@
                     <div class="contact-item">
                         <div class="contact-icon">💳</div>
                         <div>
-                            <h4 data-i18n="index.contact.bookingLabel">Réservation rapide</h4>
-                            <a href="/promo-septembre.html" data-i18n="index.contact.bookingLink">Voir la promo 37€</a>
+                            <h4 data-i18n="index.contact.bookingLabel">Nos offres</h4>
+                            <a href="#services" data-i18n="index.contact.bookingLink">Promo 37€ terminée — voir nos offres</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1647,8 +1654,8 @@
         <div class="cta-container">
             <h2 class="cta-title reveal" data-i18n="index.cta.title">Prêt à automatiser votre commerce ?</h2>
             <p class="cta-subtitle reveal" data-i18n="index.cta.subtitle">Rejoignez les propriétaires intelligents qui laissent l'IA faire le travail pendant qu'ils profitent de la vie.</p>
-            <a href="/promo-septembre.html" class="btn cta-btn reveal" data-i18n="index.cta.button">
-                Profiter de la promo 37€ →
+            <a href="#services" class="btn cta-btn reveal" data-i18n="index.cta.button">
+                La promo 37€ est terminée — découvrir nos offres →
             </a>
         </div>
     </section>

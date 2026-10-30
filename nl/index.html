@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head><base href="/"><style>.lang-btn[data-lang-active]{background:rgba(99,102,241,0.15);border-color:rgba(99,102,241,0.3);color:var(--primary-light);}        /* videocreator-lang-fix */
+<head><base href="/"><script>try{localStorage.setItem('jcode_lang','nl')}catch(e){}</script><style>.lang-btn[data-lang-active]{background:rgba(99,102,241,0.15);border-color:rgba(99,102,241,0.3);color:var(--primary-light);}        /* videocreator-lang-fix */
 
         .lang-btn { color: #ffffff !important; opacity: 0.7; }
         .lang-btn[aria-current="true"] { color: #ffffff !important; opacity: 1; font-weight: 700; }
@@ -307,6 +307,13 @@
             color: var(--white);
             margin-bottom: 1.5rem;
         }
+        /* Mise en page : menu sur une ligne, titre du hero plus petit en EN/NL */
+        .logo { white-space: nowrap; }
+        .nav-links a { white-space: nowrap; }
+        @media (max-width: 1280px) { .nav-links { gap: 1.5rem; } }
+        html[lang="fr"] .hero-title,
+        html[lang="en"] .hero-title,
+        html[lang="nl"] .hero-title { font-size: clamp(2rem, 4.2vw, 3rem); }
         .hero-title .gradient-text {
             background: var(--gradient-1);
             -webkit-background-clip: text;
@@ -560,7 +567,7 @@
         }
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
         .service-card {
@@ -1260,25 +1267,21 @@
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
+            <a href="/nl/#" class="logo">
                 <div class="logo-icon">J</div>
                 JCODE Agency
             </a>
             <div class="nav-links">
-                <a href="#services" data-i18n="common.nav.services">Diensten</a>
-                <a href="/nl/promo-septembre.html" data-i18n="common.nav.offer">PROMO</a>
-                <a href="/nl/ai-concierge.html" style="color:var(--primary);position:relative;">AI Concierge <span style="background:#ff006e;color:#fff;font-size:10px;padding:2px 6px;border-radius:8px;vertical-align:super;font-weight:700;">NEW</span></a>
+                <a href="/ai-concierge.html" style="color:var(--primary);position:relative;">AI Concierge <span style="background:#ff006e;color:#fff;font-size:10px;padding:2px 6px;border-radius:8px;vertical-align:super;font-weight:700;">NEW</span></a>
                 <a href="/studio/index.html?lang=nl" style="color:var(--primary);position:relative;">VIDEOCREATOR <span style="background:#ff006e;color:#fff;font-size:10px;padding:2px 6px;border-radius:8px;vertical-align:super;font-weight:700;">NEW</span></a>
-<a href="/studio/marketing/" style="color:var(--primary);position:relative;">MARKETING <span style="background:#ff006e;color:#fff;font-size:10px;padding:2px 6px;border-radius:8px;vertical-align:super;font-weight:700;">NEW</span></a>
-                <a href="#comment" data-i18n="common.nav.process">Proces</a>
-                <a href="/nl/blog/">Blog</a>
-                <a href="#contact" data-i18n="common.nav.contact">Contact</a>
+                <a href="/studio/marketing/" data-fr="Marketing" data-nl="Marketing" data-en="Marketing" style="color:var(--primary);position:relative;">MARKETING <span style="background:#ff006e;color:#fff;font-size:10px;padding:2px 6px;border-radius:8px;vertical-align:super;font-weight:700;">NEW</span></a>
+                <a href="/blog/">Blog</a>
+                <a href="/nl/#contact" data-i18n="common.nav.contact">Contact</a>
                 <a href="/espace-client.html" data-i18n="common.nav.clientArea">Klantenportaal</a>
-                <a href="/nl/promo-septembre.html" class="nav-cta" data-i18n="common.nav.viewOffers">PROMO 37€</a>
             </div>
             <div class="lang-switcher-nav" style="display:flex; align-items:center; gap:0.4rem; margin-left:0.75rem;">
                 <a href="/" class="lang-btn" data-lang="fr" data-lang-active="fr" aria-current="true">FR</a>
-                <a href="/nl/" class="lang-btn" data-lang="nl" data-lang-active="nl" aria-current="true">NL</a>
+                <a href="/nl/" class="lang-btn" data-lang="nl">NL</a>
                 <a href="/en/" class="lang-btn" data-lang="en">EN</a>
             </div>
             <button class="mobile-menu-btn">☰</button>
@@ -1296,14 +1299,10 @@
                     <span data-i18n="index.hero.badge">8 AI-modules ingezet</span>
                 </div>
                 <h1 class="hero-title animate-fade-in-up delay-2">
-                    <span data-i18n="index.hero.titleLine1">Uw digitale marketing,</span><br>
-                    <span class="gradient-text" data-i18n="index.hero.titleLine2">100% geautomatiseerd</span>
+                    <span data-i18n="index.hero.titleLine1">Een site die verkoopt, een assistent die antwoordt,</span><br>
+                    <span class="gradient-text" data-i18n="index.hero.titleLine2">video's die aantrekken.</span>
                 </h1>
-                <p class="hero-subtitle animate-fade-in-up delay-3" data-i18n="index.hero.subtitle">JCODE Agency boost uw bedrijf (commerce, restaurant, kapper, bakker...) met een leger van AI-agents. Contentgeneratie, klantenprospecting en optimalisatie — alles draait op autopilot.</p>
-                <div class="hero-cta-group animate-fade-in-up delay-4">
-                    <a href="/nl/promo-septembre.html" class="btn btn-primary" data-i18n="index.hero.ctaPrimary">Bekijk promo →</a>
-                    <a href="#services" class="btn btn-secondary" data-i18n="index.hero.ctaSecondary">Bekijk diensten</a>
-                </div>
+                <p class="hero-subtitle animate-fade-in-up delay-3" data-i18n="index.hero.subtitle">Websitecreatie, AI Concierge, VideoCreator, Studio Marketing en AI Analytics: JCODE geeft uw zaak alles wat nodig is om gevonden, gekozen en aanbevolen te worden.</p>
                 <div class="hero-stats animate-fade-in-up delay-5">
                     <div class="stat-item">
                         <div class="stat-number">8</div>
@@ -1363,36 +1362,18 @@
                 <p class="section-subtitle" data-i18n="index.services.subtitle">Elke agent is gespecialiseerd in een specifieke missie om uw bedrijf moeiteloos te laten groeien.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card reveal">
-                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
-                    <h3 data-i18n="index.services.brandbuilder.title">BrandBuilder</h3>
-                    <p data-i18n="index.services.brandbuilder.desc">Volledige visuele identiteit: logo, kleurenpalet, typografie, professionele website met sleutelpagina's en contentkalender op maat.</p>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-                    <h3 data-i18n="index.services.copymaster.title">CopyMaster</h3>
-                    <p data-i18n="index.services.copymaster.desc">SEO-geoptimaliseerd schrijven voor uw bedrijfsvermeldingen, boeiende beschrijvingen en blogcontent die bezoekers converteert.</p>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
-                    <h3 data-i18n="index.services.outreach.title">Outreach Pro</h3>
-                    <p data-i18n="index.services.outreach.desc">Geautomatiseerde prospectie van zelfstandigen: gerichte scraping, gepersonaliseerde e-mails en intelligente leadopvolging.</p>
-                </div>
-                <div class="service-card reveal">
+                <a href="/analytics-ai/" class="service-card reveal" style="text-decoration:none; color:inherit;">
                     <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+                    <span style="display:inline-block;background:linear-gradient(90deg,#ec4899,#d946ef);color:#fff;font-size:.7rem;font-weight:700;padding:.25rem .7rem;border-radius:50px;letter-spacing:.05em;">NEW</span>
                     <h3 data-i18n="index.services.analytics.title">Analytics AI</h3>
                     <p data-i18n="index.services.analytics.desc">Plak het adres van uw website: de AI analyseert het en controleert de naleving van de wetgeving van de Verenigde Staten, het Verenigd Koninkrijk en de Europese Unie.</p>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
-                    <h3 data-i18n="index.services.orchestrator.title">Agent Orchestrator</h3>
-                    <p data-i18n="index.services.orchestrator.desc">Intelligente coördinatie van uw 8 AI-modules. Elk module communiceert, delegeert taken en optimaliseert zijn workflow.</p>
-                </div>
-                <a href="../studio/index.html?lang=nl" class="service-card reveal studio-card" style="display:block; text-decoration:none; color:inherit;">
-                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
-                    <h3>VideoCreator</h3>
-                    <p>Geautomatiseerde videoproductie: visuals van panden, Instagram/TikTok-reels en virale content om je zichtbaarheid te maximaliseren.</p>
                 </a>
+                <a href="studio/index.html?lang=nl" class="service-card reveal studio-card" style="display:block; text-decoration:none; color:inherit;">
+                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+                    <h3 data-i18n="index.services.videocreator.title">VideoCreator</h3>
+                    <p data-i18n="index.services.videocreator.desc">Geautomatiseerde videoproductie: vastgoedbeelden, Instagram/TikTok reels en virale content om uw zichtbaarheid te maximaliseren.</p>
+                </a>
+
                 <a href="/studio/marketing/" class="service-card reveal studio-card" style="display:block; text-decoration:none; color:inherit; position:relative; overflow:hidden;">
                     <div style="position:absolute; top:1.2rem; right:1.2rem; background:linear-gradient(135deg,#6366f1,#d946ef); color:#fff; font-size:10px; padding:3px 8px; border-radius:8px; font-weight:800; letter-spacing:.04em;">NEW</div>
                     <div class="service-icon" style="position:relative;">
@@ -1404,13 +1385,19 @@
                         </svg>
                         <div style="position:absolute; inset:-8px; background:radial-gradient(circle, rgba(99,102,241,.25), transparent 70%); border-radius:50%; pointer-events:none;"></div>
                     </div>
-                    <h3 style="background:linear-gradient(135deg,#6366f1,#8b5cf6 50%,#d946ef); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; font-size:1.35rem; margin-top:.3rem;">Marketing Studio</h3>
-                    <p style="color:var(--muted); margin-top:.4rem;">Kant-en-klare AI-advertenties: 10 campagnetypes, TikTok / Reels / YouTube-formaten, hook en call-to-action inbegrepen.</p>
+                    <h3 style="background:linear-gradient(135deg,#6366f1,#8b5cf6 50%,#d946ef); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; font-size:1.35rem; margin-top:.3rem;">Studio Marketing</h3>
+                    <p style="color:var(--muted); margin-top:.4rem;">Vidéos publicitaires IA prêtes à publier : 10 types de campagne, formats TikTok / Reels / YouTube, accroche et appel à l'action intégrés.</p>
                     <div style="margin-top:.9rem; display:flex; align-items:center; gap:.5rem; font-size:.78rem; color:#c7d2fe; font-weight:600;">
-                        <span style="background:rgba(99,102,241,.15); border:1px solid rgba(99,102,246,.3); padding:.2rem .6rem; border-radius:999px;">vanaf €9,90/maand</span>
+                        <span style="background:rgba(99,102,241,.15); border:1px solid rgba(99,102,246,.3); padding:.2rem .6rem; border-radius:999px;">dès 9,90 €/mois</span>
                         <span style="opacity:.7;">→</span>
                     </div>
                 </a>
+                <a href="/ai-concierge.html" class="service-card reveal" style="text-decoration:none; color:inherit;">
+                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                    <h3>AI Concierge</h3>
+                    <p>Votre partenaire automatisation IA. Done-with-you : on construit ensemble vos workflows, vos skills Claude, vos automatisations.</p>
+                </a>
+
             </div>
         </div>
     </section>
@@ -1420,17 +1407,17 @@
         <div class="offer-container">
             <div class="offer-header reveal">
                 <div class="section-tag" data-i18n="index.offer.tag">Onze Aanbiedingen</div>
-                <h2 class="section-title" data-i18n="index.offer.title">Kies uw pakket</h2>
-                <p class="section-subtitle" data-i18n="index.offer.subtitle">Drie niveaus van AI-kracht om uw bedrijf te boosten. Geen verplichting, op elk moment opzegbaar.</p>
+                <h2 class="section-title" data-i18n="index.offer.title">Een website gemaakt voor uw handelszaak</h2>
+                <p class="section-subtitle" data-i18n="index.offer.subtitle">Kies de formule die bij u past. De website betaalt u eenmalig. Automatische reservatie en de AI-chatbot zijn inbegrepen in Pro Max.</p>
             </div>
             <div class="pricing-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
                 <!-- TEASER -->
                 <div class="offer-card reveal" style="max-width: 100%;">
                     <div class="offer-name" data-i18n="index.offer.teaser.name">Teaser</div>
-                    <p class="offer-desc" data-i18n="index.offer.teaser.desc">De perfecte starter voor lokale ondernemers die de kracht van AI willen testen.</p>
+                    <p class="offer-desc" data-i18n="index.offer.teaser.desc">Uw eerste professionele website, op één pagina, om online zichtbaar te zijn.</p>
                     <div class="offer-price">
                         <span class="price-currency">€</span>
-                        <span class="price-amount is-was">497</span><span class="price-promo">37€</span>
+                        <span class="price-amount">399</span>
                         <span class="price-period" data-i18n="index.offer.teaser.oneTime"> (eenmalige betaling)</span>
                     </div>
                     <ul class="offer-features">
@@ -1440,7 +1427,9 @@
                         <li><span class="feature-check">✓</span><span data-i18n="index.offer.teaser.f4">30 dagen support</span></li>
                     </ul>
                     <a href="https://buy.stripe.com/28EfZabVCfyp0Bf4ejbV600" class="btn btn-primary offer-cta" target="_blank" data-i18n="index.offer.cta.chooseTeaser" style="background: linear-gradient(135deg, var(--gray-light), var(--gray)); box-shadow: 0 4px 20px rgba(100,116,139,0.3);">Kies Teaser →</a>
-                    <div class="offer-guarantee" data-i18n="index.offer.guarantee">🔒 Veilig betalen · Op elk moment opzeggen</div>
+                    <div class="offer-guarantee" data-i18n="index.offer.guarantee">
+                        <span>🔒</span> Paiement sécurisé · Annulation à tout moment
+                    </div>
                 </div>
 
                 <!-- PRO -->
@@ -1450,7 +1439,7 @@
                     <p class="offer-desc" data-i18n="index.offer.pro.desc">Voor ambitieuze zelfstandigen die hun bedrijf willen opschalen.</p>
                     <div class="offer-price">
                         <span class="price-currency">€</span>
-                        <span class="price-amount is-was on-accent">999</span><span class="price-promo">539€</span>
+                        <span class="price-amount">539</span>
                         <span class="price-period" data-i18n="index.offer.teaser.oneTime"> (eenmalige betaling)</span>
                     </div>
                     <ul class="offer-features">
@@ -1461,7 +1450,9 @@
                         <li><span class="feature-check">✓</span><span data-i18n="index.offer.pro.f5">60 dagen support</span></li>
                     </ul>
                     <a href="https://buy.stripe.com/5kQ7sEgbS0Dv0Bf7qvbV603" class="btn btn-primary offer-cta" target="_blank" rel="noopener" data-i18n="index.offer.cta.choosePro" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); box-shadow: 0 4px 20px rgba(99,102,241,0.4);">Kies Pro →</a>
-                    <div class="offer-guarantee" data-i18n="index.offer.guarantee">🔒 Veilig betalen · Op elk moment opzeggen</div>
+                    <div class="offer-guarantee" data-i18n="index.offer.guarantee">
+                        <span>🔒</span> Paiement sécurisé · Annulation à tout moment
+                    </div>
                 </div>
 
                 <!-- PRO MAX -->
@@ -1470,7 +1461,7 @@
                     <p class="offer-desc" data-i18n="index.offer.promax.desc">De ultieme ervaring. Volledige toegang tot 8 AI-modules + VIP-service.</p>
                     <div class="offer-price">
                         <span class="price-currency">€</span>
-                        <span class="price-amount is-was">1,599</span><span class="price-promo">1,139€</span>
+                        <span class="price-amount">1,139</span>
                         <span class="price-period" data-i18n="index.offer.teaser.oneTime"> (eenmalige betaling)</span>
                     </div>
                     <ul class="offer-features">
@@ -1483,7 +1474,9 @@
                         <li><span class="feature-check">✓</span><span data-i18n="index.offer.promax.f7">90 dagen support</span></li>
                     </ul>
                    <a href="https://buy.stripe.com/28E3co2l271Tfw9eSXbV604" class="btn btn-primary offer-cta" target="_blank" rel="noopener" data-i18n="index.offer.cta.chooseProMax" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); box-shadow: 0 4px 20px rgba(99,102,241,0.4);">Kies Pro Max →</a>
-                    <div class="offer-guarantee" data-i18n="index.offer.guarantee">🔒 Veilig betalen · Op elk moment opzeggen</div>
+                    <div class="offer-guarantee" data-i18n="index.offer.guarantee">
+                        <span>🔒</span> Paiement sécurisé · Annulation à tout moment
+                    </div>
                 </div>
             </div>
         </div>
@@ -1516,7 +1509,7 @@
                 <div class="option-icon" style="width: 64px; height: 64px; background: rgba(16,185,129,0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px;">📅</div>
                 <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 12px;" data-i18n="index.options.booking.title">Automatische reservering</h3>
                 <p style="color: #94a3b8; margin-bottom: 24px; line-height: 1.6;" data-i18n="index.options.booking.desc">Uw klanten kiezen hun dienst, datum en tijd. Automatische bevestiging per e-mail. U ontvangt een melding.</p>
-                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;" data-i18n="index.options.booking.price">+€149&lt;span style="font-size: 18px; font-weight: 400; color: #64748b;"&gt;/maand&lt;/span&gt;</div>
+                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;" data-i18n="index.options.booking.price">+€149<span style="font-size: 18px; font-weight: 400; color: #64748b;">/mois</span></div>
                 <div style="color: #64748b; font-size: 14px;" data-i18n="index.options.booking.monthly">Maandelijks abonnement</div>
                                 <div style="margin-top: 24px; max-width: 260px; width: 100%; margin-left: auto; margin-right: auto; background: #1e293b; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; text-align: left;">
                     <div style="background: linear-gradient(135deg, #10b981 0%, #34d399 100%); padding: 10px 14px; display: flex; align-items: center; gap: 8px;">
@@ -1550,7 +1543,7 @@
                 <div class="option-icon" style="width: 64px; height: 64px; background: rgba(245,158,11,0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px;">🤖</div>
                 <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 12px;" data-i18n="index.options.chatbot.title">AI-chatbot</h3>
                 <p style="color: #94a3b8; margin-bottom: 24px; line-height: 1.6;" data-i18n="index.options.chatbot.desc">Een virtuele assistent op uw site die de vragen van uw klanten 24/7 beantwoordt. Openingstijden, prijzen, diensten — alles is gedekt.</p>
-                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;" data-i18n="index.options.chatbot.price">+€99&lt;span style="font-size: 18px; font-weight: 400; color: #64748b;"&gt;/maand&lt;/span&gt;</div>
+                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;" data-i18n="index.options.chatbot.price">+€99<span style="font-size: 18px; font-weight: 400; color: #64748b;">/mois</span></div>
                 <div style="color: #64748b; font-size: 14px;" data-i18n="index.options.chatbot.monthly">Maandelijks abonnement</div>
                 <div style="margin-top: 24px; max-width: 260px; width: 100%; margin-left: auto; margin-right: auto; background: #1e293b; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; text-align: left;">
     <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 10px 14px; display: flex; align-items: center; gap: 8px;">
@@ -1578,38 +1571,6 @@
 </section>
 
 
-    <!-- HOW IT WORKS -->
-    <section class="how-it-works" id="comment">
-        <div class="section-container">
-            <div class="section-header reveal">
-                <div class="section-tag" data-i18n="index.how.tag">Proces</div>
-                <h2 class="section-title" data-i18n="index.how.title">Hoe werkt het?</h2>
-                <p class="section-subtitle" data-i18n="index.how.subtitle">Van aanmelding tot uw eerste resultaten in 4 eenvoudige stappen.</p>
-            </div>
-            <div class="steps-grid">
-                <div class="step-card reveal">
-                    <div class="step-number">1</div>
-                    <h3 data-i18n="index.how.step1.title">Boek uw pakket</h3>
-                    <p data-i18n="index.how.step1.desc">Kies het Teaser Pakket voor 37€ deze maand (code PROMO460, in plaats van €497) en voltooi uw veilige betaling in 2 minuten.</p>
-                </div>
-                <div class="step-card reveal">
-                    <div class="step-number">2</div>
-                    <h3 data-i18n="index.how.step2.title">AI Onboarding</h3>
-                    <p data-i18n="index.how.step2.desc">Onze agents analyseren uw eigendom, uw lokale markt en uw concurrentie.</p>
-                </div>
-                <div class="step-card reveal">
-                    <div class="step-number">3</div>
-                    <h3 data-i18n="index.how.step3.title">Automatische implementatie</h3>
-                    <p data-i18n="index.how.step3.desc">Uw AI-agents gaan aan het werk: content, video's, prospectie — 24/7.</p>
-                </div>
-                <div class="step-card reveal">
-                    <div class="step-number">4</div>
-                    <h3 data-i18n="index.how.step4.title">Gemeten resultaten</h3>
-                    <p data-i18n="index.how.step4.desc">Volg uw prestaties in realtime op uw gepersonaliseerde dashboard.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- CONTACT SECTION -->
     <section class="contact-section" id="contact">
@@ -1633,8 +1594,8 @@
                     <div class="contact-item">
                         <div class="contact-icon">💳</div>
                         <div>
-                            <h4 data-i18n="index.contact.bookingLabel">Snelle reservering</h4>
-                            <a href="/nl/promo-septembre.html" data-i18n="index.contact.bookingLink">Bekijk 37€ promo</a>
+                            <h4 data-i18n="index.contact.bookingLabel">Ons aanbod</h4>
+                            <a href="/nl/#services" data-i18n="index.contact.bookingLink">37€-promo afgelopen — bekijk ons aanbod</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1649,11 +1610,11 @@
                     <form action="mailto:contact@jcode.store" method="post" enctype="text/plain">
                         <div class="form-group">
                             <label for="name" data-i18n="index.contact.form.name">Volledige naam</label>
-                            <input type="text" id="name" name="name" data-i18n-attr="placeholder:index.contact.form.namePlaceholder" placeholder="Uw naam" required>
+                            <input type="text" id="name" name="name" data-i18n-attr="placeholder:index.contact.form.namePlaceholder" placeholder="Votre nom" required>
                         </div>
                         <div class="form-group">
                             <label for="email" data-i18n="index.contact.form.email">E-mail</label>
-                            <input type="email" id="email" name="email" data-i18n-attr="placeholder:index.contact.form.emailPlaceholder" placeholder="uw@email.com" required>
+                            <input type="email" id="email" name="email" data-i18n-attr="placeholder:index.contact.form.emailPlaceholder" placeholder="votre@email.com" required>
                         </div>
                         <div class="form-group">
                             <label for="subject" data-i18n="index.contact.form.subject">Onderwerp</label>
@@ -1668,7 +1629,7 @@
                         </div>
                         <div class="form-group">
                             <label for="message" data-i18n="index.contact.form.message">Bericht</label>
-                            <textarea id="message" name="message" data-i18n-attr="placeholder:index.contact.form.messagePlaceholder" placeholder="Beschrijf uw project..."></textarea>
+                            <textarea id="message" name="message" data-i18n-attr="placeholder:index.contact.form.messagePlaceholder" placeholder="Décrivez votre projet..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary form-submit" data-i18n="index.contact.form.submit">Verstuur bericht →</button>
                     </form>
@@ -1682,7 +1643,7 @@
         <div class="cta-container">
             <h2 class="cta-title reveal" data-i18n="index.cta.title">Klaar om uw bedrijf te automatiseren?</h2>
             <p class="cta-subtitle reveal" data-i18n="index.cta.subtitle">Sluit u aan bij de scherpe zelfstandigen die AI het werk laten doen terwijl ze van het leven genieten.</p>
-            <a href="/nl/promo-septembre.html" class="btn cta-btn reveal" data-i18n="index.cta.button">Profiteer van 37€ promo →</a>
+            <a href="/nl/#services" class="btn cta-btn reveal" data-i18n="index.cta.button">De 37€-promo is afgelopen — ontdek ons aanbod →</a>
         </div>
     </section>
 
@@ -1691,9 +1652,9 @@
 <section class="seo-internal-links" style="max-width:1100px;margin:2.5rem auto;padding:1.5rem 2rem;border-top:1px solid rgba(128,128,128,0.3);">
   <p style="margin:0 0 0.75rem;font-weight:600;">À découvrir chez JCODE</p>
   <ul style="margin:0;padding-left:1.1rem;line-height:1.9;">
-      <li><a href="/nl/ai-concierge.html" style="color:inherit;text-decoration:underline;">AI Concierge : automatiser votre commerce</a></li>
-      <li><a href="/nl/aoa-framework.html" style="color:inherit;text-decoration:underline;">Notre méthode AOA (Audit, Optimize, Automate)</a></li>
-      <li><a href="/nl/blog/" style="color:inherit;text-decoration:underline;">Le blog : conseils web & IA pour PME belges</a></li>
+      <li><a href="/ai-concierge.html" style="color:inherit;text-decoration:underline;">AI Concierge : automatiser votre commerce</a></li>
+      <li><a href="/aoa-framework.html" style="color:inherit;text-decoration:underline;">Notre méthode AOA (Audit, Optimize, Automate)</a></li>
+      <li><a href="/blog/" style="color:inherit;text-decoration:underline;">Le blog : conseils web & IA pour PME belges</a></li>
   </ul>
 </section>
 <!-- SEO-INTERNAL-LINKS:END -->
@@ -1701,35 +1662,35 @@
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo">
+                    <a href="/nl/#" class="logo">
                         <div class="logo-icon">J</div>
                         JCODE Agency
                     </a>
-                    <p data-i18n="common.footer.brandDesc">Het bedrijfsmarketingbureau 100% geautomatiseerd door AI. 8 intelligente modules werken 24/7 voor u.</p>
+                    <p data-i18n="common.footer.brandDesc">Het digitale bureau voor lokale zaken: website, AI Concierge, video's, marketing en analytics.</p>
                 </div>
                 <div class="footer-col">
                     <h4 data-i18n="common.footer.services">Diensten</h4>
                     <ul>
-                        <li><a href="#">BrandBuilder</a></li>
-                        <li><a href="#">VideoCreator</a></li>
-                        <li><a href="#">Outreach Pro</a></li>
-                        <li><a href="#">Analytics AI</a></li>
+                        <li><a href="/nl/#">BrandBuilder</a></li>
+                        <li><a href="/nl/#">VideoCreator</a></li>
+                        <li><a href="/nl/#">Outreach Pro</a></li>
+                        <li><a href="/analytics-ai/">Analytics AI</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4 data-i18n="common.footer.company">Bedrijf</h4>
                     <ul>
-                        <li><a href="#" data-i18n="common.footer.about">Over ons</a></li>
-                        <li><a href="#" data-i18n="common.footer.blog">Blog</a></li>
-                        <li><a href="#" data-i18n="common.footer.careers">Carrières</a></li>
+                        <li><a href="/nl/#" data-i18n="common.footer.about">Over ons</a></li>
+                        <li><a href="/nl/#" data-i18n="common.footer.blog">Blog</a></li>
+                        <li><a href="/nl/#" data-i18n="common.footer.careers">Carrières</a></li>
                         <li><a href="mailto:contact@jcode.store" data-i18n="common.nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4 data-i18n="common.footer.legal">Juridische vermeldingen</h4>
                     <ul>
-                        <li><a href="#" data-i18n="common.footer.tos">AV</a></li>
-                        <li><a href="#" data-i18n="common.footer.privacy">Privacybeleid</a></li>
+                        <li><a href="/nl/#" data-i18n="common.footer.tos">AV</a></li>
+                        <li><a href="/nl/#" data-i18n="common.footer.privacy">Privacybeleid</a></li>
                         <li><a href="/mentions-legales.html" data-i18n="common.footer.legalNotice">Juridische vermeldingen</a></li>
                     </ul>
                 </div>
@@ -1738,16 +1699,16 @@
                 <div class="footer-legal"><a href="/privacy-policy.html" data-i18n="common.footer.privacyPolicy">Privacybeleid</a> | <a href="/terms.html" data-i18n="common.footer.terms">Voorwaarden</a></div>
                 <p data-i18n="common.footer.copyright">© 2026 JCODE Agency. Alle rechten voorbehouden.</p>
                 <div class="footer-social">
-                    <a href="#" aria-label="LinkedIn">in</a>
-                    <a href="#" aria-label="Twitter">𝕏</a>
-                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="/nl/#" aria-label="LinkedIn">in</a>
+                    <a href="/nl/#" aria-label="Twitter">𝕏</a>
+                    <a href="/nl/#" aria-label="Instagram">📷</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- SCROLL TO TOP -->
-    <button class="scroll-top" id="scrollTop" data-i18n-attr="aria-label:index.scrollToTop" aria-label="Terug naar boven">↑</button>
+    <button class="scroll-top" id="scrollTop" data-i18n-attr="aria-label:index.scrollToTop" aria-label="Retour en haut">↑</button>
 
     <!-- CHAT WIDGET -->
     <button class="chat-widget" id="chatWidget" aria-label="Chat">💬</button>
@@ -1811,7 +1772,7 @@
         document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
 
         // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
+        document.querySelectorAll('a[href^="#"]:not([href="/nl/#"])').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const href = this.getAttribute('href');
@@ -1914,7 +1875,75 @@
             </div>
         </div>
     </div>
-<script src="/booking-widget.js?v=2"></script>
-<script src="/chatbot-widget.js?v=4"></script>
+<script src="booking-widget.js?v=2"></script>
+<script src="chatbot-widget.js?v=4"></script>
+<!-- HERO-3D-START -->
+<style>
+.hero-3d { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.hero-3d-host { position: relative; overflow: hidden; }
+.hero-3d-host > *:not(.hero-3d) { position: relative; z-index: 1; }
+</style>
+<script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
+
+const title = document.querySelector('.hero-title');
+const host = title ? (title.closest('section') || title.parentElement) : null;
+if (host) {
+  host.classList.add('hero-3d-host');
+  const canvas = document.createElement('canvas');
+  canvas.className = 'hero-3d';
+  host.prepend(canvas);
+
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const mobile = innerWidth < 768;
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: !mobile });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
+  camera.position.z = 14;
+
+  const colors = [0x7c5cff, 0x8b5cf6, 0x34d399, 0x22d3ee];
+  const shapes = [];
+  const geos = [new THREE.IcosahedronGeometry(1.6, 0), new THREE.OctahedronGeometry(1.4)];
+  const count = mobile ? 6 : 12;
+  for (let i = 0; i < count; i++) {
+    const mat = new THREE.MeshBasicMaterial({ color: colors[Math.floor(i / 2) % colors.length], wireframe: true, transparent: true, opacity: 0.35 });
+    const m = new THREE.Mesh(geos[i % geos.length], mat);
+    m.position.set((Math.random() - 0.5) * 24, (Math.random() - 0.5) * 12, (Math.random() - 0.5) * 8 - 2);
+    m.scale.setScalar(0.5 + Math.random() * 0.9);
+    m.userData = { rx: (Math.random() - 0.5) * 0.004, ry: (Math.random() - 0.5) * 0.004, y0: m.position.y, ph: Math.random() * 6.28 };
+    scene.add(m); shapes.push(m);
+  }
+
+  function resize() {
+    const w = host.clientWidth, h = host.clientHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h; camera.updateProjectionMatrix();
+  }
+  addEventListener('resize', resize); resize();
+
+  let mx = 0, my = 0;
+  addEventListener('pointermove', e => { mx = e.clientX / innerWidth - 0.5; my = e.clientY / innerHeight - 0.5; });
+
+  let visible = true;
+  new IntersectionObserver(([e]) => visible = e.isIntersecting).observe(host);
+
+  function frame(t) {
+    requestAnimationFrame(frame);
+    if (!visible) return;
+    shapes.forEach(s => {
+      s.rotation.x += s.userData.rx; s.rotation.y += s.userData.ry;
+      s.position.y = s.userData.y0 + Math.sin(t / 2000 + s.userData.ph) * 0.4;
+    });
+    camera.position.x += (mx * 2 - camera.position.x) * 0.03;
+    camera.position.y += (-my * 1.2 - camera.position.y) * 0.03;
+    camera.lookAt(0, 0, 0);
+    renderer.render(scene, camera);
+  }
+  reduce ? renderer.render(scene, camera) : requestAnimationFrame(frame);
+}
+</script>
+<!-- HERO-3D-END -->
+
 </body>
 </html>
