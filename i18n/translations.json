@@ -1945,9 +1945,9 @@
     "nl": "JCODE Agency — Websites & Geautomatiseerde Marketing door AI"
   },
   "index.meta.description": {
-    "fr": "JCODE Agency propulse votre commerce (commerce, restaurant, coiffeur, boulanger...) avec 8 modules IA. Vidéos, prospection, copywriting, sites web — 100% automatisé. Package Teaser à 37€ ce mois-ci (code PROMO460, au lieu de 497€).",
-    "en": "JCODE Agency boosts your business (commerce, restaurant, hairdresser, bakery...) with 8 AI modules. Videos, prospecting, copywriting, websites — 100% automated. Teaser Package at €37 this month (code PROMO460, instead of €497).",
-    "nl": "JCODE Agency boost uw bedrijf (commerce, restaurant, kapper, bakker...) met 8 AI-modules. Video's, prospectie, copywriting, websites — 100% geautomatiseerd. Teaser Pakket voor 37€ deze maand (code PROMO460, in plaats van €497)."
+    "fr": "JCODE Agency équipe votre commerce : création de site, AI Concierge, VideoCreator, Studio Marketing et AI Analytics.",
+    "en": "JCODE Agency equips your business: website creation, AI Concierge, VideoCreator, Studio Marketing and AI Analytics.",
+    "nl": "JCODE Agency rust uw zaak uit: websitecreatie, AI Concierge, VideoCreator, Studio Marketing en AI Analytics."
   },
   "index.hero.badge": {
     "fr": "8 modules IA déployés",
@@ -1955,19 +1955,19 @@
     "nl": "8 AI-modules ingezet"
   },
   "index.hero.titleLine1": {
-    "fr": "Votre marketing digital,",
-    "en": "Your digital marketing,",
-    "nl": "Uw digitale marketing,"
+    "fr": "Un site qui vend, un assistant qui répond,",
+    "en": "A website that sells, an assistant that answers,",
+    "nl": "Een site die verkoopt, een assistent die antwoordt,"
   },
   "index.hero.titleLine2": {
-    "fr": "100% automatisé",
-    "en": "100% automated",
-    "nl": "100% geautomatiseerd"
+    "fr": "des vidéos qui attirent.",
+    "en": "videos that attract.",
+    "nl": "video's die aantrekken."
   },
   "index.hero.subtitle": {
-    "fr": "JCODE Agency propulse votre commerce (commerce, restaurant, coiffeur, boulanger...) avec une armée d'agents IA. Génération de contenu, prospection clients, et optimisation — tout tourne en autopilot.",
-    "en": "JCODE Agency boosts your business (commerce, restaurant, hairdresser, bakery...) with an army of AI agents. Content generation, client prospecting, and optimization — everything runs on autopilot.",
-    "nl": "JCODE Agency boost uw bedrijf (commerce, restaurant, kapper, bakker...) met een leger van AI-agents. Contentgeneratie, klantenprospecting en optimalisatie — alles draait op autopilot."
+    "fr": "Création de site, AI Concierge, VideoCreator, Studio Marketing et AI Analytics : JCODE équipe votre commerce de tout ce qu'il faut pour être trouvé, choisi et recommandé.",
+    "en": "Website creation, AI Concierge, VideoCreator, Studio Marketing and AI Analytics: JCODE gives your business everything it needs to be found, chosen and recommended.",
+    "nl": "Websitecreatie, AI Concierge, VideoCreator, Studio Marketing en AI Analytics: JCODE geeft uw zaak alles wat nodig is om gevonden, gekozen en aanbevolen te worden."
   },
   "index.hero.ctaPrimary": {
     "fr": "Voir la promo →",
@@ -2125,14 +2125,14 @@
     "nl": "Onze Aanbiedingen"
   },
   "index.offer.title": {
-    "fr": "Choisissez votre package",
-    "en": "Choose your package",
-    "nl": "Kies uw pakket"
+    "fr": "Un site web pensé pour votre commerce",
+    "en": "A website built for your business",
+    "nl": "Een website gemaakt voor uw handelszaak"
   },
   "index.offer.subtitle": {
-    "fr": "Trois niveaux de puissance IA pour propulser votre commerce. Sans engagement, annulable à tout moment.",
-    "en": "Three levels of AI power to boost your business. No commitment, cancelable anytime.",
-    "nl": "Drie niveaus van AI-kracht om uw bedrijf te boosten. Geen verplichting, op elk moment opzegbaar."
+    "fr": "Choisissez la formule qui vous convient. Le site se paie une seule fois. La réservation automatique et le chatbot IA sont inclus dans Pro Max.",
+    "en": "Choose the plan that suits you. The website is a one-time payment. Automatic booking and the AI chatbot are included in Pro Max.",
+    "nl": "Kies de formule die bij u past. De website betaalt u eenmalig. Automatische reservatie en de AI-chatbot zijn inbegrepen in Pro Max."
   },
   "index.offer.recommended": {
     "fr": "⭐ RECOMMANDÉ",
@@ -2145,9 +2145,9 @@
     "nl": "Teaser"
   },
   "index.offer.teaser.desc": {
-    "fr": "Le starter parfait pour commerçants locaux qui veulent tester la puissance de l'IA.",
-    "en": "The perfect starter for local business owners who want to test the power of AI.",
-    "nl": "De perfecte starter voor lokale ondernemers die de kracht van AI willen testen."
+    "fr": "Votre premier site professionnel, sur une page, pour être visible en ligne.",
+    "en": "Your first professional website, on one page, to be visible online.",
+    "nl": "Uw eerste professionele website, op één pagina, om online zichtbaar te zijn."
   },
   "index.offer.teaser.oneTime": {
     "fr": " (paiement unique)",
@@ -2270,9 +2270,9 @@
     "nl": "Kies Pro Max →"
   },
   "index.offer.guarantee": {
-    "fr": "🔒 Paiement sécurisé · Annulation à tout moment",
-    "en": "🔒 Secure payment · Cancel anytime",
-    "nl": "🔒 Veilig betalen · Op elk moment opzeggen"
+    "fr": "🔒 Paiement sécurisé",
+    "en": "🔒 Secure payment",
+    "nl": "🔒 Veilig betalen"
   },
   "index.options.tag": {
     "fr": "Options supplémentaires",
@@ -2780,9 +2780,9 @@
     "nl": "PROMO 37€"
   },
   "common.footer.brandDesc": {
-    "fr": "L'agence marketing commerce 100% automatisée par IA. 8 modules intelligents travaillent pour vous 24/7.",
-    "en": "The business marketing agency 100% automated by AI. 8 intelligent modules work for you 24/7.",
-    "nl": "Het bedrijfsmarketingbureau 100% geautomatiseerd door AI. 8 intelligente modules werken 24/7 voor u."
+    "fr": "L'agence digitale des commerces : site web, AI Concierge, vidéos, marketing et analytics.",
+    "en": "The digital agency for local businesses: website, AI Concierge, videos, marketing and analytics.",
+    "nl": "Het digitale bureau voor lokale zaken: website, AI Concierge, video's, marketing en analytics."
   },
   "common.footer.services": {
     "fr": "Services",
