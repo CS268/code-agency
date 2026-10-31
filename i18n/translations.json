@@ -2375,9 +2375,9 @@
     "nl": "Maandelijks abonnement"
   },
   "index.options.tip_html": {
-    "fr": "💡 <strong style=\"color: #fff;\">Conseil :</strong> Commencez avec le forfait Teaser à 37€ ce mois-ci (code PROMO460, au lieu de 497€) et ajoutez les options quand vous êtes prêt. Pas d'engagement, évolution à tout moment.",
-    "en": "💡 <strong style=\"color: #fff;\">Tip:</strong> Start with the Teaser plan at €37 this month (code PROMO460, instead of €497) and add options when you're ready. No commitment, upgrade anytime.",
-    "nl": "💡 <strong style=\"color: #fff;\">Tip:</strong> Begin met het Teaser-pakket voor 37€ deze maand (code PROMO460, in plaats van €497) en voeg opties toe wanneer u klaar bent. Geen verplichting, op elk moment upgraden."
+    "fr": "💡 <strong style=\"color: #fff;\">Conseil :</strong> Commencez avec le forfait Teaser à 399€ et ajoutez les options quand vous êtes prêt. Pas d'engagement, évolution à tout moment.",
+    "en": "💡 <strong style=\"color: #fff;\">Tip:</strong> Start with the Teaser plan at €399 and add options when you're ready. No commitment, upgrade anytime.",
+    "nl": "💡 <strong style=\"color: #fff;\">Tip:</strong> Begin met het Teaser-pakket voor 399€ en voeg opties toe wanneer u klaar bent. Geen verplichting, op elk moment upgraden."
   },
   "index.concierge.tag": {
     "fr": "✨ NOUVEAU — AI CONCIERGE",
@@ -2620,9 +2620,9 @@
     "nl": "Ons aanbod"
   },
   "index.contact.bookingLink": {
-    "fr": "Promo 37€ terminée — voir nos offres",
-    "en": "37€ promo ended — see our offers",
-    "nl": "37€-promo afgelopen — bekijk ons aanbod"
+    "fr": "Voir nos offres",
+    "en": "See our offers",
+    "nl": "Bekijk ons aanbod"
   },
   "index.contact.locationLabel": {
     "fr": "Basé en",
@@ -2660,19 +2660,19 @@
     "nl": "Onderwerp"
   },
   "index.contact.form.subjectTeaser": {
-    "fr": "Teaser — 37€ ce mois-ci (code PROMO460, au lieu de 497€)",
-    "en": "Teaser — €37 this month (code PROMO460, instead of €497)",
-    "nl": "Teaser — 37€ deze maand (code PROMO460, in plaats van €497)"
+    "fr": "Teaser — 399€ — paiement unique",
+    "en": "Teaser — €399 — one-time payment",
+    "nl": "Teaser — 399€ — eenmalige betaling"
   },
   "index.contact.form.subjectPro": {
-    "fr": "Pro — 539€ ce mois-ci (code PROMO460, au lieu de 999€) — paiement unique",
-    "en": "Pro — €539 this month (code PROMO460, instead of €999) — one-time payment",
-    "nl": "Pro — 539€ deze maand (code PROMO460, in plaats van €999) — eenmalige betaling"
+    "fr": "Pro — 539€ — paiement unique",
+    "en": "Pro — €539 — one-time payment",
+    "nl": "Pro — 539€ — eenmalige betaling"
   },
   "index.contact.form.subjectProMax": {
-    "fr": "Pro Max — 1 139€ ce mois-ci (code PROMO460, au lieu de 1 599€) — paiement unique",
-    "en": "Pro Max — €1,139 this month (code PROMO460, instead of €1,599) — one-time payment",
-    "nl": "Pro Max — €1.139 deze maand (code PROMO460, in plaats van €1.599) — eenmalige betaling"
+    "fr": "Pro Max — 1 139€ — paiement unique",
+    "en": "Pro Max — €1,139 — one-time payment",
+    "nl": "Pro Max — €1.139 — eenmalige betaling"
   },
   "index.contact.form.subjectCustom": {
     "fr": "Projet sur mesure",
@@ -2715,9 +2715,9 @@
     "nl": "Sluit u aan bij de scherpe zelfstandigen die AI het werk laten doen terwijl ze van het leven genieten."
   },
   "index.cta.button": {
-    "fr": "La promo 37€ est terminée — découvrir nos offres →",
-    "en": "The 37€ promo has ended — discover our offers →",
-    "nl": "De 37€-promo is afgelopen — ontdek ons aanbod →"
+    "fr": "Découvrir nos offres →",
+    "en": "Discover our offers →",
+    "nl": "Ontdek ons aanbod →"
   },
   "index.scrollToTop": {
     "fr": "Retour en haut",
@@ -2807,7 +2807,7 @@
   "common.footer.careers": {
     "fr": "Carrières",
     "en": "Careers",
-    "nl": "Carrières"
+    "nl": "Vacatures"
   },
   "common.footer.tos": {
     "fr": "CGV",
@@ -3373,5 +3373,55 @@
     "fr": "SITE WEB",
     "en": "WEBSITE",
     "nl": "WEBSITE"
+  },
+  "index.cards.studio.desc": {
+    "fr": "Vidéos publicitaires IA prêtes à publier : 10 types de campagne, formats TikTok / Reels / YouTube, accroche et appel à l'action intégrés.",
+    "en": "Ready-to-publish AI video ads: 10 campaign types, TikTok / Reels / YouTube formats, hook and call to action built in.",
+    "nl": "Gebruiksklare AI-reclamevideo's: 10 campagnetypes, TikTok-, Reels- en YouTube-formaten, met ingebouwde hook en call-to-action."
+  },
+  "index.cards.studio.price": {
+    "fr": "dès 9,90 €/mois",
+    "en": "from €9.90/month",
+    "nl": "vanaf €9,90/maand"
+  },
+  "index.cards.concierge.desc": {
+    "fr": "Votre partenaire automatisation IA. Done-with-you : on construit ensemble vos workflows, vos skills Claude, vos automatisations.",
+    "en": "Your AI automation partner. Done-with-you: we build your workflows, Claude skills and automations together.",
+    "nl": "Uw partner voor AI-automatisering. Done-with-you: we bouwen samen uw workflows, Claude-skills en automatiseringen."
+  },
+  "index.offer.guaranteeFull": {
+    "fr": "Paiement sécurisé · Annulation à tout moment",
+    "en": "Secure payment · Cancel anytime",
+    "nl": "Veilig betalen · Op elk moment opzeggen"
+  },
+  "index.concierge.chat1": {
+    "fr": "Bonjour ! Besoin d'un site web pour votre commerce ?",
+    "en": "Hi! Need a website for your business?",
+    "nl": "Hallo! Een website nodig voor uw zaak?"
+  },
+  "index.concierge.chat2": {
+    "fr": "Montrez-moi votre menu",
+    "en": "Show me your menu",
+    "nl": "Laat me uw menu zien"
+  },
+  "index.discover.title": {
+    "fr": "À découvrir chez JCODE",
+    "en": "Discover more at JCODE",
+    "nl": "Ontdek meer bij JCODE"
+  },
+  "index.discover.concierge": {
+    "fr": "AI Concierge : automatiser votre commerce",
+    "en": "AI Concierge: automate your business",
+    "nl": "AI Concierge: automatiseer uw zaak"
+  },
+  "index.discover.aoa": {
+    "fr": "Notre méthode AOA (Audit, Optimize, Automate)",
+    "en": "Our AOA method (Audit, Optimize, Automate)",
+    "nl": "Onze AOA-methode (Audit, Optimize, Automate)"
+  },
+  "index.discover.blog": {
+    "fr": "Le blog : conseils web & IA pour PME belges",
+    "en": "The blog: web & AI tips for Belgian SMEs",
+    "nl": "De blog: web- en AI-tips voor Belgische kmo's"
   }
 }
