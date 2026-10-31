@@ -1,3 +1,6 @@
+# ATTENTION : ne pas lancer ce script en l'état. Il génère des pages en retard sur celles du dépôt
+# (prix cassés par &lt;span, deux boutons de langue actifs, liens et classes retirés).
+# Corrections nl/ et en/ faites à la main ; contrôler avec scripts/verify-lang-pages.mjs.
 import os
 import re
 import io
@@ -10,7 +13,7 @@ from html.parser import HTMLParser
 ROOT = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else "."
 BASE = "https://jcode.store"
 
-PAGES = ["index.html", "ai-concierge.html", "aoa-framework.html", "promo-septembre.html", "blog/index.html"]
+PAGES = ["index.html", "ai-concierge.html", "aoa-framework.html", "blog/index.html"]
 LOCALIZED = set(PAGES)
 
 META = {
