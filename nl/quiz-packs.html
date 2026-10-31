@@ -85,6 +85,16 @@
             if (urlLang === 'en') lang = 'en';
             else if (urlLang === 'nl') lang = 'nl';
             else lang = 'fr';
+            
+            /* jcode-ui-labels */
+            const uiTxt = ({
+                fr: { back: 'Retour', close: 'Fermer', backL: 'Question précédente', closeL: 'Fermer le quiz', resL: 'Résultats du quiz' },
+                en: { back: 'Back', close: 'Close', backL: 'Previous question', closeL: 'Close quiz', resL: 'Quiz results' },
+                nl: { back: 'Terug', close: 'Sluiten', backL: 'Vorige vraag', closeL: 'Quiz sluiten', resL: 'Quizresultaten' }
+            })[lang];
+            backBtn.textContent = uiTxt.back; backBtn.setAttribute('aria-label', uiTxt.backL);
+            closeBtn.textContent = uiTxt.close; closeBtn.setAttribute('aria-label', uiTxt.closeL);
+            resEl.setAttribute('aria-label', uiTxt.resL);
             showQuestion();
             setupEvents();
         }
