@@ -19,10 +19,10 @@
 - Automatisation marketing par IA (21 agents) / Marketingautomatisering door IA / AI marketing automation (21 agents)
 - AI Concierge : accompagnement personnalisé / AI Concierge : persoonlijke begeleiding / AI Concierge : personalized coaching
 
-## Tarifs (paiement unique, avec code promo PROMO460)
-- Teaser : 37€ (au lieu de 497€) — site 1 page
-- Pro : 539€ (au lieu de 999€) — site jusqu'à 3 pages, QR code inclus
-- Pro Max : 1 139€ (au lieu de 1 599€) — site jusqu'à 5 pages, QR code + réservation auto + chatbot IA inclus
+## Tarifs (paiement unique)
+- Teaser : 399€ — site 1 page
+- Pro : 539€ — site jusqu'à 3 pages, QR code inclus
+- Pro Max : 1 139€ — site jusqu'à 5 pages, QR code + réservation auto + chatbot IA inclus
 
 ## Abonnement (mensuel, distinct des forfaits ci-dessus)
 - Pro abonnement : 1 500€/mois — skills illimités + Make.com
