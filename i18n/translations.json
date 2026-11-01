@@ -225,19 +225,19 @@
     "nl": "⏱ Levertijden"
   },
   "merci.delivery_teaser": {
-    "fr": "<strong style='color:#fff;'>Teaser (399€) :</strong> 24 à 48h ouvrées",
-    "en": "<strong style='color:#fff;'>Teaser (€399):</strong> 24 to 48 business hours",
-    "nl": "<strong style='color:#fff;'>Teaser (399€):</strong> 24 tot 48 werkuren"
+    "fr": "<strong style='color:#fff;'>Teaser (399€) :</strong> 2 à 3 jours ouvrables + 30 jours de support",
+    "en": "<strong style='color:#fff;'>Teaser (€399):</strong> 2 to 3 business days + 30 days of support",
+    "nl": "<strong style='color:#fff;'>Teaser (399€):</strong> 2 tot 3 werkdagen + 30 dagen support"
   },
   "merci.delivery_pro": {
-    "fr": "<strong style='color:#fff;'>Pro (539€) :</strong> 48 à 72h ouvrées + mise en place mensuelle",
-    "en": "<strong style='color:#fff;'>Pro (€539):</strong> 48 to 72 business hours + monthly setup",
-    "nl": "<strong style='color:#fff;'>Pro (539€):</strong> 48 tot 72 werkuren + maandelijkse opzet"
+    "fr": "<strong style='color:#fff;'>Pro (539€) :</strong> 2 à 3 jours ouvrables + 60 jours de support",
+    "en": "<strong style='color:#fff;'>Pro (€539):</strong> 2 to 3 business days + 60 days of support",
+    "nl": "<strong style='color:#fff;'>Pro (539€):</strong> 2 tot 3 werkdagen + 60 dagen support"
   },
   "merci.delivery_promax": {
-    "fr": "<strong style='color:#fff;'>Pro Max (€1599/mois) :</strong> 72 à 96h ouvrées + accompagnement prioritaire",
-    "en": "<strong style='color:#fff;'>Pro Max (€1599/month):</strong> 72 to 96 business hours + priority support",
-    "nl": "<strong style='color:#fff;'>Pro Max (€1599/maand):</strong> 72 tot 96 werkuren + prioriteitsbegeleiding"
+    "fr": "<strong style='color:#fff;'>Pro Max (1 139€) :</strong> 2 à 3 jours ouvrables + 90 jours de support + accompagnement prioritaire",
+    "en": "<strong style='color:#fff;'>Pro Max (€1,139):</strong> 2 to 3 business days + 90 days of support + priority support",
+    "nl": "<strong style='color:#fff;'>Pro Max (€1.139):</strong> 2 tot 3 werkdagen + 90 dagen support + prioriteitsbegeleiding"
   },
   "merci.important_title": {
     "fr": "💡 Important",
