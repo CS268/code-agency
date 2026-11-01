@@ -284,7 +284,8 @@
       },
       body: JSON.stringify({
         message: message,
-        history: currentHistory
+        history: currentHistory,
+        lang: (document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()
       })
     })
     .then(response => {
