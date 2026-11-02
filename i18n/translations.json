@@ -2614,6 +2614,11 @@
     "en": "Email",
     "nl": "E-mail"
   },
+  "index.contact.whatsappNote": {
+    "fr": "Une vraie personne vous répond, pas un robot.",
+    "en": "A real person replies, not a bot.",
+    "nl": "Een echt persoon antwoordt, geen bot."
+  },
   "index.contact.bookingLabel": {
     "fr": "Nos offres",
     "en": "Our offers",
