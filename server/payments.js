@@ -29,6 +29,25 @@ export const OFFERS = {
   mix: { cents: 250, label: { fr: 'Mix images + vidéo', en: 'Mix images + video', nl: 'Mix beelden + video' } },
 };
 
+// États internes d'une commande (order.status). Voir STATE_MACHINES.md, section 1.
+export const ORDER_STATUS = Object.freeze({
+  AWAITING_PAYMENT: 'awaiting_payment',
+  SUBMITTING: 'submitting',
+  GENERATING: 'generating',
+  COMPLETED: 'completed',
+  FAILED: 'failed',
+  EXPIRED: 'expired',
+});
+
+// Statuts envoyés au client par getOrderHandler (le client ne voit jamais submitting ni generating).
+export const PUBLIC_STATUS = Object.freeze({
+  AWAITING_PAYMENT: 'awaiting_payment',
+  PROCESSING: 'processing',
+  COMPLETED: 'completed',
+  FAILED: 'failed',
+  EXPIRED: 'expired',
+});
+
 const AWAITING_TTL_MS = 60 * 60 * 1000; // commande non payée : supprimée après 1 h
 const GENERATION_TIMEOUT_MS = 20 * 60 * 1000;
 const KEEP_MS = 24 * 60 * 60 * 1000;
@@ -183,7 +202,7 @@ export function createPayments({
       lang,
       files,
       priceCents: offer.cents,
-      status: 'awaiting_payment',
+      status: ORDER_STATUS.AWAITING_PAYMENT,
       createdAt: Date.now(),
       sessionId: session.id,
       consent: body.consent === 'true',
@@ -200,14 +219,14 @@ export function createPayments({
     if (!order) {
       return res.status(404).json({ error: 'order_not_found', ...msg('Commande introuvable', 'Order not found', 'Bestelling niet gevonden') });
     }
-    let status = 'processing';
-    if (order.status === 'awaiting_payment') status = 'awaiting_payment';
-    else if (order.status === 'expired') status = 'expired';
-    else if (order.status === 'failed') status = 'failed';
-    else if (order.status === 'completed' && order.captured) status = 'completed';
-    const payload = { orderId: order.id, status, progress: status === 'completed' ? 100 : Math.min(order.progress || 0, 99), mode: order.mode };
-    if (status === 'completed') payload.videoUrl = order.videoUrl;
-    if (status === 'failed') {
+    let status = PUBLIC_STATUS.PROCESSING;
+    if (order.status === ORDER_STATUS.AWAITING_PAYMENT) status = PUBLIC_STATUS.AWAITING_PAYMENT;
+    else if (order.status === ORDER_STATUS.EXPIRED) status = PUBLIC_STATUS.EXPIRED;
+    else if (order.status === ORDER_STATUS.FAILED) status = PUBLIC_STATUS.FAILED;
+    else if (order.status === ORDER_STATUS.COMPLETED && order.captured) status = PUBLIC_STATUS.COMPLETED;
+    const payload = { orderId: order.id, status, progress: status === PUBLIC_STATUS.COMPLETED ? 100 : Math.min(order.progress || 0, 99), mode: order.mode };
+    if (status === PUBLIC_STATUS.COMPLETED) payload.videoUrl = order.videoUrl;
+    if (status === PUBLIC_STATUS.FAILED) {
       Object.assign(payload, FAILURE_MESSAGES[order.error] || FAILURE_MESSAGES.default, { error: order.error });
     }
     return res.json(payload);
@@ -242,7 +261,7 @@ export function createPayments({
   }
 
   async function failOrder(order, code) {
-    order.status = 'failed';
+    order.status = ORDER_STATUS.FAILED;
     order.error = code;
     removeFiles(order.files);
     order.files = [];
@@ -254,18 +273,18 @@ export function createPayments({
     const orderId = pi?.metadata?.orderId;
     if (!orderId) return; // paiement sans rapport avec VIDEOCREATOR : on n'y touche pas
     const order = orders.get(orderId);
-    if (!order || order.status === 'expired') {
+    if (!order || order.status === ORDER_STATUS.EXPIRED) {
       await safeCancel(pi.id, 'unknown or expired order');
       return;
     }
-    if (order.status !== 'awaiting_payment') return; // notification en double
+    if (order.status !== ORDER_STATUS.AWAITING_PAYMENT) return; // notification en double
     if (pi.amount_capturable !== order.priceCents || pi.currency !== 'eur') {
       order.paymentIntentId = pi.id;
       await failOrder(order, 'amount_mismatch');
       return;
     }
     order.paymentIntentId = pi.id;
-    order.status = 'submitting';
+    order.status = ORDER_STATUS.SUBMITTING;
     await submitWithRetries(order);
   }
 
@@ -347,7 +366,7 @@ export function createPayments({
       const result = await callAgnes(payload);
       if (result.ok) {
         order.videoId = result.videoId;
-        order.status = 'generating';
+        order.status = ORDER_STATUS.GENERATING;
         order.generatingSince = Date.now();
         order.progress = 0;
         removeFiles(order.files);
@@ -381,7 +400,7 @@ export function createPayments({
       if (!data.url) return failOrder(order, 'no_video_url');
       order.videoUrl = data.url;
       order.progress = 100;
-      order.status = 'completed';
+      order.status = ORDER_STATUS.COMPLETED;
       await tryCapture(order);
     } else if (data.status === 'failed') {
       await failOrder(order, 'generation_failed');
@@ -399,7 +418,7 @@ export function createPayments({
     } catch (err) {
       console.error('Capture failed:', order.id, err?.message);
       if (order.captureAttempts >= CAPTURE_MAX_ATTEMPTS) {
-        order.status = 'failed';
+        order.status = ORDER_STATUS.FAILED;
         order.error = 'payment_capture_failed';
         order.videoUrl = undefined;
       }
@@ -413,16 +432,16 @@ export function createPayments({
       const now = Date.now();
       for (const order of Array.from(orders.values())) {
         try {
-          if (order.status === 'awaiting_payment' && now - order.createdAt > AWAITING_TTL_MS) {
-            order.status = 'expired';
+          if (order.status === ORDER_STATUS.AWAITING_PAYMENT && now - order.createdAt > AWAITING_TTL_MS) {
+            order.status = ORDER_STATUS.EXPIRED;
             removeFiles(order.files);
             order.files = [];
-          } else if (order.status === 'generating') {
+          } else if (order.status === ORDER_STATUS.GENERATING) {
             await pollGenerating(order, now);
-          } else if (order.status === 'completed' && !order.captured) {
+          } else if (order.status === ORDER_STATUS.COMPLETED && !order.captured) {
             await tryCapture(order);
           }
-          if (['completed', 'failed', 'expired'].includes(order.status) && now - order.createdAt > KEEP_MS) {
+          if ([ORDER_STATUS.COMPLETED, ORDER_STATUS.FAILED, ORDER_STATUS.EXPIRED].includes(order.status) && now - order.createdAt > KEEP_MS) {
             orders.delete(order.id);
           }
         } catch (err) {
