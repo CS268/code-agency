@@ -119,7 +119,8 @@ Stockage : mémoire de la page. Un rechargement efface tout.
 | `creating` | « Préparation… » |
 | `processing` | progression |
 | `done` | « Terminé » |
-| `failed` | « Échec » ou « Arrêté » (selon `item.progress`) |
+| `failed` | « Échec » |
+| `cancelled` | « Arrêté » (affiché en grisé comme `pending`) |
 
 ### Drapeaux globaux (`state`)
 
@@ -133,18 +134,19 @@ Stockage : mémoire de la page. Un rechargement efface tout.
 | `pending` | `creating` | `createTaskOnly`, une image toutes les 62 s minimum |
 | `creating` | `processing` | Le serveur renvoie un `videoId` |
 | `creating` | `failed` | Erreur de création : compteur `state.failed` + 1 |
-| `creating` | `failed` « Arrêté » | Arrêt demandé pendant la création : compteur **non** augmenté |
+| `pending` ou `creating` | `cancelled` | Arrêt demandé : la requête n'est pas envoyée au serveur. Le compteur `state.failed` n'augmente pas, mais l'élément compte comme terminé dans l'indicateur |
 | `processing` | `done` | Statut `completed`, `succeeded` ou `done` avec URL : compteur `state.completed` + 1 |
 | `processing` | `failed` | Statut d'échec, délai dépassé (100 essais de 8 s) ou erreur : compteur `state.failed` + 1 |
 
 Arrêt (`stopGeneration`) :
 - Met `stopRequested = true` si `isRunning`.
-- La boucle d'envoi s'arrête. Les éléments jamais commencés restent `pending`.
+- La boucle d'envoi s'arrête. Les éléments pas encore envoyés (`pending`, ou `creating` si l'arrêt tombe pendant une nouvelle tentative après une erreur 429 ou 503) passent à `cancelled`.
+- Seule la création peut être interrompue : le suivi (`Polling`) ne lève jamais « Arrêt demandé ».
 - Les vidéos déjà envoyées continuent d'être suivies jusqu'au bout.
 - À la fin : `isRunning = false` et `stopRequested = false`.
 
 ### Points de risque
 
-- « Arrêté » et « Échec » partagent l'état `failed`. L'affichage utilise `done = completed + failed`, donc les éléments arrêtés ne comptent pas et l'indicateur peut ne jamais afficher « Terminé » après un arrêt.
-- Les éléments restés `pending` après un arrêt n'ont pas d'état « annulé ».
+- Avant la correction, les éléments non envoyés restaient `pending` (« En file ») ou bloqués sur `creating` (« Préparation… ») après un arrêt, et l'indicateur n'affichait jamais « Terminé ». L'état `cancelled` corrige cela.
+- Code inutile : dans `pollTaskAndDisplay`, la branche qui traite « Arrêt demandé » (statut `failed`, texte « Arrêté ») n'est jamais atteinte, car seul `apiFetch` avec l'étiquette `Création` lève cette erreur. Elle a été laissée telle quelle.
 - Plusieurs drapeaux séparés (`isRunning`, `stopRequested`, `isLoadingImages`) décrivent en réalité une seule phase de la page.

@@ -1252,6 +1252,11 @@ Object.assign(MARKETING_I18N, {
     "en": "Loading…",
     "nl": "Laden…"
   },
+  "queue_stopped": {
+    "fr": "Arrêté",
+    "en": "Stopped",
+    "nl": "Gestopt"
+  },
   "btn_creating_tpl": {
     "fr": "Création…",
     "en": "Creating…",
@@ -2343,7 +2348,8 @@ function renderQueue() {
     if (!state.queue.length) { queueEl.style.display = 'none'; return; }
     queueEl.style.display = 'block';
     const total = state.queue.length;
-    const done = state.completed + state.failed;
+    const stopped = state.queue.filter(q => q.status === 'cancelled').length;
+    const done = state.completed + state.failed + stopped;
     const inProgress = state.queue.filter(q => q.status === 'processing').length;
     const pending = total - done - inProgress;
     const estGen = estimateGenerationTime(state.durationFrames) / 1000;
@@ -2362,6 +2368,7 @@ function renderQueue() {
         else if (item.status === 'processing') { icon = '◐'; statusText = item.progress || 'En cours…'; cls = 'processing'; }
         else if (item.status === 'done') { icon = '●'; statusText = 'Terminé'; cls = 'done'; }
         else if (item.status === 'failed') { icon = '✕'; statusText = 'Échec'; cls = 'failed'; }
+        else if (item.status === 'cancelled') { icon = '○'; statusText = mktT('queue_stopped', 'Arrêté'); cls = 'pending'; }
         return '<div class="queue-item ' + cls + '">' +
             '<div class="q-icon">' + icon + '</div>' +
             '<div class="q-name">Visuel ' + (item.imageIndex + 1) + '</div>' +
@@ -2507,6 +2514,12 @@ async function startGeneration() {
                     await sleep(1000);
                 }
             }
+        }
+        if (state.stopRequested) {
+            state.queue.forEach(q => {
+                if (q.status === 'pending' || q.status === 'creating') q.status = 'cancelled';
+            });
+            renderQueue();
         }
         if (pollingTasks.length > 0) {
             setStatus(state.stopRequested ? 'Arrêt : on termine les vidéos déjà envoyées…' : 'Finalisation…');
