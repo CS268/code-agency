@@ -95,12 +95,13 @@ Prérequis : abonné avec `statut = actif` et jeton non expiré (`getSubscriber`
 | En cours | Échec remboursé | Agnes répond `failed`, `error` ou `cancelled` |
 | En cours | Échec remboursé | Statut Agnes terminé mais sans URL (`no_url`) |
 | En cours | Échec remboursé | Plus de 12 min depuis la création (`timeout`) |
+| En cours (après redémarrage) | Échec remboursé | Agnes répond `failed`, `error`, `cancelled`, ou terminé sans URL : le remboursement se fait depuis la table `marketing_videos` (`refundFromDatabase`), une seule fois, et seulement pour le propriétaire de la vidéo |
 | En cours | En cours | Autre statut, ou erreur réseau : le client reçoit `processing`, progression 0 |
 | `jobs` | supprimé | Plus d'1 h (nettoyage toutes les 10 min) |
 
 ### Points de risque
 
-- Après un redémarrage du serveur, `jobs` est vide. `refundJob` s'arrête tout de suite (`if (!job || job.refunded) return`) et le contrôle de 12 min est sauté. Une vidéo qui échoue ensuite ne rend pas le quota.
+- Après un redémarrage du serveur, `jobs` est vide. Le remboursement passe alors par `marketing_videos` : il est fait une seule fois (le statut ne change que si personne ne l'a changé entre-temps) et jamais pour une vidéo déjà `termine` ou `echec`. Limites restantes : le contrôle de 12 min est sauté (il dépend de `jobs`), et si la vidéo n'a pas pu être enregistrée dans `marketing_videos` à la création, aucun remboursement n'est possible.
 - Trois mots différents pour « terminé » (`completed`, `succeeded`, `done`) sont acceptés ici, alors que `server/payments.js` n'accepte que `completed`.
 - `marketing_videos.statut` n'a que deux valeurs écrites par ce code (`termine`, `echec`). La valeur de départ vient de la base, elle n'est pas visible dans ce dépôt.
 

@@ -74,9 +74,38 @@ async function saveVideo(videoId, fields) {
   }
 }
 
-async function refundJob(videoId) {
+// Apres un redemarrage du serveur, `jobs` est vide : on retrouve la video dans marketing_videos.
+// Seul le proprietaire de la video peut la faire rembourser, et le remboursement n'a lieu qu'une fois :
+// le statut ne change que si personne ne l'a change entre-temps (la valeur de depart n'a pas d'importance).
+async function refundFromDatabase(videoId, subscriberId) {
+  try {
+    const { data: row, error } = await supabase
+      .from('marketing_videos')
+      .select('statut')
+      .eq('agnes_video_id', videoId)
+      .eq('abonne_id', subscriberId)
+      .maybeSingle();
+    if (error || !row) return;
+    if (row.statut === 'echec' || row.statut === 'termine') return;
+    let claim = supabase
+      .from('marketing_videos')
+      .update({ statut: 'echec', updated_at: new Date().toISOString() })
+      .eq('agnes_video_id', videoId)
+      .eq('abonne_id', subscriberId);
+    claim = row.statut == null ? claim.is('statut', null) : claim.eq('statut', row.statut);
+    const { data: claimed, error: claimError } = await claim.select('agnes_video_id');
+    if (claimError || !claimed || !claimed.length) return;
+    await changeUsage(subscriberId, -1);
+    console.log('[MARKETING-STUDIO] video rendue au quota (apres redemarrage)');
+  } catch (err) {
+    console.error('[MARKETING-STUDIO] remboursement quota echoue:', err?.message);
+  }
+}
+
+async function refundJob(videoId, subscriberId) {
   const job = jobs.get(videoId);
-  if (!job || job.refunded) return;
+  if (!job) return refundFromDatabase(videoId, subscriberId);
+  if (job.refunded) return;
   job.refunded = true;
   await saveVideo(videoId, { statut: 'echec' });
   try {
@@ -211,7 +240,7 @@ export function registerMarketingStudio(app) {
     if (job && job.subscriberId !== auth.sub.id) return res.status(404).json({ error: 'not_found' });
 
     if (job && Date.now() - job.createdAt > MAX_GENERATION_MS) {
-      await refundJob(videoId);
+      await refundJob(videoId, auth.sub.id);
       return res.json({ status: 'failed', error: 'timeout' });
     }
     try {
@@ -224,13 +253,13 @@ export function registerMarketingStudio(app) {
       const status = d.status || 'unknown';
       if (['completed', 'succeeded', 'done'].includes(status)) {
         const url = (d.metadata && d.metadata.url) || d.url || (d.output && d.output.url);
-        if (!url) { await refundJob(videoId); return res.json({ status: 'failed', error: 'no_url' }); }
+        if (!url) { await refundJob(videoId, auth.sub.id); return res.json({ status: 'failed', error: 'no_url' }); }
         jobs.delete(videoId);
         await saveVideo(videoId, { statut: 'termine', video_url: url });
         return res.json({ status: 'completed', url });
       }
       if (['failed', 'error', 'cancelled'].includes(status)) {
-        await refundJob(videoId);
+        await refundJob(videoId, auth.sub.id);
         return res.json({ status: 'failed' });
       }
       res.json({ status: 'processing', progress: d.progress || 0 });
