@@ -488,9 +488,14 @@
             backdrop-filter: blur(10px);
             animation: float 4s ease-in-out infinite;
         }
+        a.float-el { pointer-events: auto; text-decoration: none; cursor: pointer; white-space: nowrap; transition: background .25s, border-color .25s, box-shadow .25s; }
+        a.float-el:hover, a.float-el:focus-visible { background: rgba(99, 102, 241, 0.28); border-color: rgba(167, 139, 250, 0.7); box-shadow: 0 0 24px rgba(99, 102, 241, 0.45); outline: none; }
         .float-el:nth-child(1) { top: 10%; right: -20px; animation-delay: 0s; }
         .float-el:nth-child(2) { bottom: 20%; left: -30px; animation-delay: 1s; }
         .float-el:nth-child(3) { top: 50%; right: -40px; animation-delay: 2s; }
+        .float-el:nth-child(4) { top: 12%; left: -40px; animation-delay: 3s; }
+        .float-el:nth-child(5) { bottom: 6%; right: -10px; animation-delay: 1.5s; }
+        .float-el:nth-child(6) { top: 42%; left: -50px; animation-delay: 2.5s; }
 
         /* ===== TRUST BAR ===== */
         .trust-bar {
@@ -1287,10 +1292,6 @@
                 JCODE Agency
             </a>
             <div class="nav-links">
-                <a href="/ai-concierge.html" style="color:var(--primary);position:relative;">AI Concierge</a>
-                <a href="/studio/index.html?lang=nl" style="color:var(--primary);position:relative;">VIDEOCREATOR</a>
-                <a href="/studio/marketing/" data-fr="Marketing" data-nl="Marketing" data-en="Marketing" style="color:var(--primary);position:relative;">MARKETING</a>
-                <a href="/site-web.html" data-i18n="common.nav.website" style="color:var(--primary);position:relative;">SITE WEB</a>
                 <a href="/blog/">Blog</a>
                 <a href="/nl/#contact" data-i18n="common.nav.contact">Contact</a>
 </div>
@@ -1311,16 +1312,18 @@
             <div class="hero-content">
                 <div class="hero-badge animate-fade-in-up delay-1">
                     <span class="dot"></span>
-                    <span data-i18n="index.hero.badge">8 AI-modules ingezet</span>
+                    <span data-i18n="index.hero.badge">6 AI-modules ingezet</span>
                 </div>
                 <h1 class="hero-title animate-fade-in-up delay-2">
-                    <span data-i18n="index.hero.titleLine1">Een site die verkoopt, een assistent die antwoordt,</span><br>
-                    <span class="gradient-text" data-i18n="index.hero.titleLine2">video's die aantrekken.</span>
+                    <span data-i18n="index.hero.titleLine1">Je klanten zoeken jou.</span><br>
+                    <span class="gradient-text" data-i18n="index.hero.titleLine2">Je AI-agents vinden hen.</span>
                 </h1>
-                <p class="hero-subtitle animate-fade-in-up delay-3" data-i18n="index.hero.subtitle">Websitecreatie, AI Concierge, VideoCreator, Studio Marketing en AI Analytics: JCODE geeft uw zaak alles wat nodig is om gevonden, gekozen en aanbevolen te worden.</p>
+                <p class="hero-subtitle animate-fade-in-up delay-3" data-i18n="index.hero.subtitle">
+                    Website, video’s, advertenties, compliance-audit, offerteopvolging, automatisaties: JCODE zet een leger van AI-agents voor je aan het werk.
+                </p>
                 <div class="hero-stats animate-fade-in-up delay-5">
                     <div class="stat-item">
-                        <div class="stat-number">8</div>
+                        <div class="stat-number">6</div>
                         <div class="stat-label" data-i18n="index.hero.statAgents">Actieve AI-agents</div>
                     </div>
                     <div class="stat-item">
@@ -1360,9 +1363,12 @@
                     </div>
                 </div>
                 <div class="floating-elements">
-                    <div class="float-el" data-i18n="index.hero.floatCopywriting">🤖 Copywriting Agent</div>
-                    <div class="float-el" data-i18n="index.hero.floatVideo">📹 Video Agent</div>
-                    <div class="float-el" data-i18n="index.hero.floatOutreach">📧 Outreach Agent</div>
+                    <a class="float-el" href="/studio/marketing/" data-i18n="index.hero.floatAds">📣 Ads Agent</a>
+                    <a class="float-el" href="/studio/index.html?lang=nl" data-i18n="index.hero.floatVideo">📹 Video Agent</a>
+                    <a class="float-el" href="/analytics-ai/" data-i18n="index.hero.floatAnalytics">📊 Analytics Agent</a>
+                    <a class="float-el" href="/ai-concierge.html" data-i18n="index.hero.floatConcierge">💬 Concierge Agent</a>
+                    <a class="float-el" href="/nl/btp.html" data-i18n="index.hero.floatAdmin">🧾 Admin Agent</a>
+                    <a class="float-el" href="/nl/site-web.html" data-i18n="index.hero.floatSite">🌐 Website Agent</a>
                 </div>
             </div>
         </div>
@@ -1421,6 +1427,12 @@
                     <h3>Cadence BTP</h3>
                     <p class="svc-hook">Slapen je offertes? Maak ze wakker.</p>
                     <p>Automatische WhatsApp-herinneringen voor Belgische ambachtslui: zet openstaande offertes om in getekende werven. Gratis proef op 2 offertes.</p>
+                </a>
+                <a href="/nl/site-web.html" class="service-card svc-slide" style="display:block; text-decoration:none; color:inherit;">
+                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                    <h3>Website</h3>
+                    <p class="svc-hook">Een website die verkoopt terwijl je slaapt.</p>
+                    <p>Een professionele website voor je zaak, kant-en-klaar. Automatische reservaties en AI-chatbot inbegrepen in het Pro Max-pakket. Vanaf €399, eenmalige betaling.</p>
                 </a>
 
             </div>

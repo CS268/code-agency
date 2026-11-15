@@ -1950,24 +1950,24 @@
     "nl": "JCODE Agency rust uw zaak uit: websitecreatie, AI Concierge, VideoCreator, Studio Marketing en AI Analytics."
   },
   "index.hero.badge": {
-    "fr": "8 modules IA déployés",
-    "en": "8 AI modules deployed",
-    "nl": "8 AI-modules ingezet"
+    "fr": "6 modules IA déployés",
+    "en": "6 AI modules deployed",
+    "nl": "6 AI-modules ingezet"
   },
   "index.hero.titleLine1": {
-    "fr": "Un site qui vend, un assistant qui répond,",
-    "en": "A website that sells, an assistant that answers,",
-    "nl": "Een site die verkoopt, een assistent die antwoordt,"
+    "fr": "Vos clients vous cherchent.",
+    "en": "Your customers are looking for you.",
+    "nl": "Je klanten zoeken jou."
   },
   "index.hero.titleLine2": {
-    "fr": "des vidéos qui attirent.",
-    "en": "videos that attract.",
-    "nl": "video's die aantrekken."
+    "fr": "Vos agents IA les trouvent.",
+    "en": "Your AI agents find them.",
+    "nl": "Je AI-agents vinden hen."
   },
   "index.hero.subtitle": {
-    "fr": "Création de site, AI Concierge, VideoCreator, Studio Marketing et AI Analytics : JCODE équipe votre commerce de tout ce qu'il faut pour être trouvé, choisi et recommandé.",
-    "en": "Website creation, AI Concierge, VideoCreator, Studio Marketing and AI Analytics: JCODE gives your business everything it needs to be found, chosen and recommended.",
-    "nl": "Websitecreatie, AI Concierge, VideoCreator, Studio Marketing en AI Analytics: JCODE geeft uw zaak alles wat nodig is om gevonden, gekozen en aanbevolen te worden."
+    "fr": "Site web, vidéos, pubs, audit de conformité, relances de devis, automatisations : JCODE met une armée d’agents IA au travail pour vous.",
+    "en": "Website, videos, ads, compliance audits, quote follow-ups, automations: JCODE puts an army of AI agents to work for you.",
+    "nl": "Website, video’s, advertenties, compliance-audit, offerteopvolging, automatisaties: JCODE zet een leger van AI-agents voor je aan het werk."
   },
   "index.hero.ctaPrimary": {
     "fr": "Voir la promo →",
@@ -2033,6 +2033,31 @@
     "fr": "📧 Agent Outreach",
     "en": "📧 Outreach Agent",
     "nl": "📧 Outreach Agent"
+  },
+  "index.hero.floatAds": {
+    "fr": "📣 Agent Ads",
+    "en": "📣 Ads Agent",
+    "nl": "📣 Ads Agent"
+  },
+  "index.hero.floatAnalytics": {
+    "fr": "📊 Agent Analytics",
+    "en": "📊 Analytics Agent",
+    "nl": "📊 Analytics Agent"
+  },
+  "index.hero.floatConcierge": {
+    "fr": "💬 Agent Concierge",
+    "en": "💬 Concierge Agent",
+    "nl": "💬 Concierge Agent"
+  },
+  "index.hero.floatAdmin": {
+    "fr": "🧾 Agent Admin",
+    "en": "🧾 Admin Agent",
+    "nl": "🧾 Admin Agent"
+  },
+  "index.hero.floatSite": {
+    "fr": "🌐 Agent Site",
+    "en": "🌐 Website Agent",
+    "nl": "🌐 Website Agent"
   },
   "index.trust.label": {
     "fr": "Propulsé par les meilleures technologies",
