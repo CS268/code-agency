@@ -1384,6 +1384,93 @@
             </div>
         </div>
     </section>
+<!-- OPTIONS ADD-ON -->
+<section class="options" id="options" style="padding: 80px 20px; background: #0f172a;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+            <span class="badge" style="display: inline-block; padding: 8px 20px; background: rgba(99,102,241,0.1); color: #818cf8; border-radius: 50px; font-size: 14px; font-weight: 600; margin-bottom: 20px;" data-i18n="index.options.tag">Additional options</span>
+            <h2 style="font-size: 48px; font-weight: 800; color: #fff; margin-bottom: 16px;" data-i18n="index.options.title">Customize your site</h2>
+            <p style="font-size: 18px; color: #94a3b8; max-width: 600px; margin: 0 auto;" data-i18n="index.options.subtitle">Add these options to any plan to boost your business.</p>
+        </div>
+
+        <div class="options-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 40px;">
+            
+            <!-- Option 1: QR Code -->
+            <div class="option-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 40px; text-align: center;">
+                <div class="option-icon" style="width: 64px; height: 64px; background: rgba(99,102,241,0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px;">📱</div>
+                <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 12px;" data-i18n="index.options.qr.title">QR Code Menu</h3>
+                <p style="color: #94a3b8; margin-bottom: 24px; line-height: 1.6;" data-i18n="index.options.qr.desc">A QR code for your storefront. Your clients scan and see your services, photos and prices directly on their phone.</p>
+                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;" data-i18n="index.options.qr.price">+€99</div>
+            <div style="color: #64748b; font-size: 14px;" data-i18n="index.options.qr.oneTime">One-time payment</div>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&amp;data=https://jcode.store" alt="QR Code jcode.store" style="margin-top: 24px; border-radius: 12px; max-width: 260px; width: 100%;">
+            </div>
+
+            <!-- Option 2: Réservation auto -->
+            <div class="option-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 40px; text-align: center;">
+                <div class="option-icon" style="width: 64px; height: 64px; background: rgba(16,185,129,0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px;">📅</div>
+                <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 12px;" data-i18n="index.options.booking.title">Auto Booking</h3>
+                <p style="color: #94a3b8; margin-bottom: 24px; line-height: 1.6;" data-i18n="index.options.booking.desc">Your clients choose their service, date and time. Automatic confirmation by email. You receive a notification.</p>
+                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;" data-i18n="index.options.booking.price">+€149<span style="font-size: 18px; font-weight: 400; color: #64748b;">/month</span></div>
+                <div style="color: #64748b; font-size: 14px;" data-i18n="index.options.booking.monthly">Monthly subscription</div>
+                                <div style="margin-top: 24px; max-width: 260px; width: 100%; margin-left: auto; margin-right: auto; background: #1e293b; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; text-align: left;">
+                    <div style="background: linear-gradient(135deg, #10b981 0%, #34d399 100%); padding: 10px 14px; display: flex; align-items: center; gap: 8px;">
+                        <span style="width: 8px; height: 8px; border-radius: 50%; background: #22c55e;"></span>
+                        <span style="color: #fff; font-size: 12px; font-weight: 600;">Réservation Auto</span>
+                    </div>
+                    <div style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+                        <div style="background: #334155; border-radius: 8px; padding: 8px 10px;">
+                            <div style="color: #94a3b8; font-size: 10px;" data-i18n="index.options.booking.preview.service">Service</div>
+                            <div style="color: #e2e8f0; font-size: 12px; margin-top: 2px;" data-i18n="index.options.booking.preview.serviceName">Haircut &amp; Styling</div>
+                        </div>
+                        <div style="display: flex; gap: 6px;">
+                            <div style="flex: 1; background: #334155; border-radius: 8px; padding: 8px 10px;">
+                                <div style="color: #94a3b8; font-size: 10px;" data-i18n="index.options.booking.preview.date">Date</div>
+                                <div style="color: #e2e8f0; font-size: 12px; margin-top: 2px;" data-i18n="index.options.booking.preview.dateValue">Mar 12</div>
+                            </div>
+                            <div style="flex: 1; background: #334155; border-radius: 8px; padding: 8px 10px;">
+                                <div style="color: #94a3b8; font-size: 10px;" data-i18n="index.options.booking.preview.time">Time</div>
+                                <div style="color: #e2e8f0; font-size: 12px; margin-top: 2px;" data-i18n="index.options.booking.preview.timeValue">2:30 PM</div>
+                            </div>
+                        </div>
+                        <div style="background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.4); border-radius: 8px; padding: 8px 10px; text-align: center;">
+                            <span style="color: #34d399; font-size: 11px; font-weight: 600;" data-i18n="index.options.booking.preview.confirmed">Booking confirmed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Option 3: Chatbot -->
+            <div class="option-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 40px; text-align: center;">
+                <div class="option-icon" style="width: 64px; height: 64px; background: rgba(245,158,11,0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px;">🤖</div>
+                <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 12px;" data-i18n="index.options.chatbot.title">AI Chatbot</h3>
+                <p style="color: #94a3b8; margin-bottom: 24px; line-height: 1.6;" data-i18n="index.options.chatbot.desc">A virtual assistant on your site that answers your clients' questions 24/7. Hours, prices, services — everything is covered.</p>
+                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;" data-i18n="index.options.chatbot.price">+€99<span style="font-size: 18px; font-weight: 400; color: #64748b;">/month</span></div>
+                <div style="color: #64748b; font-size: 14px;" data-i18n="index.options.chatbot.monthly">Monthly subscription</div>
+                <div style="margin-top: 24px; max-width: 260px; width: 100%; margin-left: auto; margin-right: auto; background: #1e293b; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; text-align: left;">
+    <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 10px 14px; display: flex; align-items: center; gap: 8px;">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: #22c55e;"></span>
+        <span style="color: #fff; font-size: 12px; font-weight: 600;">JCODE Assistant</span>
+    </div>
+    <div style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+        <div style="align-self: flex-start; max-width: 80%; background: #334155; color: #e2e8f0; font-size: 11px; padding: 8px 10px; border-radius: 12px 12px 12px 2px;" data-i18n="index.concierge.chat1">Hi! Need a website for your business?</div>
+        <div style="align-self: flex-end; max-width: 80%; background: #6366f1; color: #fff; font-size: 11px; padding: 8px 10px; border-radius: 12px 12px 2px 12px;" data-i18n="index.concierge.chat2">Show me your menu</div>
+        <div style="align-self: flex-start; display: flex; gap: 3px; padding: 10px; background: #334155; border-radius: 12px 12px 12px 2px;">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #94a3b8; animation: chatTyping 1.2s infinite;"></span>
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #94a3b8; animation: chatTyping 1.2s infinite 0.2s;"></span>
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #94a3b8; animation: chatTyping 1.2s infinite 0.4s;"></span>
+        </div>
+    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align: center; padding: 30px; background: rgba(99,102,241,0.05); border-radius: 16px; border: 1px solid rgba(99,102,241,0.1);">
+            <p style="color: #94a3b8; font-size: 16px; margin: 0;" data-i18n-html="index.options.tip_html">💡 <strong style="color: #fff;">Tip:</strong> Start with the Teaser plan at €399 and add options when you're ready. No commitment, upgrade anytime.</p>
+        </div>
+    </div>
+</section>
+
 <footer class="footer">
         <div class="footer-container">
             <div class="footer-grid">
