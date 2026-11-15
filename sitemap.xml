@@ -556,4 +556,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://jcode.store/btp.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jcode.store/btp.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcode.store/en/btp.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://jcode.store/nl/btp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jcode.store/btp.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jcode.store/en/btp.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jcode.store/btp.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcode.store/en/btp.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://jcode.store/nl/btp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jcode.store/btp.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jcode.store/nl/btp.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jcode.store/btp.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jcode.store/en/btp.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://jcode.store/nl/btp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jcode.store/btp.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

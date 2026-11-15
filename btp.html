@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadence BTP Belgique | Relance de devis et suivi chantier</title>
+  <meta name="description" content="Cadence BTP aide les artisans belges (toiture, châssis, PAC) à transformer leurs devis en chantiers signés grâce à des relances WhatsApp automatiques.">
+  <link rel="canonical" href="https://jcode.store/btp.html">
+  <meta name="robots" content="index, follow">
+  <link rel="alternate" hreflang="fr" href="https://jcode.store/btp.html">
+  <link rel="alternate" hreflang="en" href="https://jcode.store/en/btp.html">
+  <link rel="alternate" hreflang="nl" href="https://jcode.store/nl/btp.html">
+  <link rel="alternate" hreflang="x-default" href="https://jcode.store/btp.html">
+  <meta property="og:title" content="Cadence BTP Belgique | Relance de devis et suivi chantier">
+  <meta property="og:description" content="Transformez vos devis en attente en chantiers signés. Relances WhatsApp automatiques pour artisans belges.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jcode.store/btp.html">
+  <meta property="og:locale" content="fr_BE">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --stone: #F7F6F2;
+      --white: #FFFFFF;
+      --slate: #0F172A;
+      --slate-light: #334155;
+      --slate-muted: #64748B;
+      --copper: #6366f1;
+      --copper-light: #4f46e5;
+      --copper-bg: #e0e7ff;
+      --border: #E2E8F0;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 25px rgba(0,0,0,0.07), 0 4px 10px rgba(0,0,0,0.04);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --radius-lg: 16px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--stone);
+      color: var(--slate);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, h5 { font-family: 'Outfit', sans-serif; line-height: 1.2; }
+    a { color: var(--copper); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--copper-light); }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(247,246,242,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1120px; margin: 0 auto; padding: 0 20px;
+    }
+    .nav-logo {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700; font-size: 1.2rem; color: var(--slate);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .nav-logo svg { width: 28px; height: 28px; }
+    .nav-links { display: none; gap: 24px; align-items: center; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--slate-light); }
+    .nav-links a:hover { color: var(--copper); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--copper); color: var(--white);
+      padding: 10px 18px; border-radius: var(--radius-sm);
+      font-weight: 600; font-size: 0.85rem;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .nav-cta:hover { background: var(--copper-light); color: var(--white); transform: translateY(-1px); }
+    .nav-inner { flex-wrap: wrap; }
+    .nav-links { display: flex; order: 3; width: 100%; gap: 18px; overflow-x: auto; padding-top: 10px; white-space: nowrap; }
+    .nav-links a { flex-shrink: 0; }
+    html { scroll-padding-top: 110px; }
+    @media(min-width:768px) { .nav-links { order: 0; width: auto; padding-top: 0; overflow: visible; } html { scroll-padding-top: 80px; } }
+    .hero { padding: 60px 0 80px; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center;
+    }
+    @media(min-width:768px) {
+      .hero-grid { grid-template-columns: 1fr 1fr; gap: 60px; }
+      .hero { padding: 80px 0 100px; }
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--copper-bg); color: var(--copper);
+      padding: 6px 14px; border-radius: 20px;
+      font-size: 0.8rem; font-weight: 600; margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800; color: var(--slate);
+      margin-bottom: 18px;
+    }
+    .hero h1 span { color: var(--copper); }
+    .hero-sub {
+      font-size: 1.1rem; color: var(--slate-muted);
+      margin-bottom: 30px; max-width: 520px;
+    }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 36px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--copper); color: var(--white);
+      padding: 14px 24px; border-radius: var(--radius-sm);
+      font-weight: 600; font-size: 0.95rem;
+      transition: all 0.2s; border: none; cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--copper-light); color: var(--white); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--white); color: var(--slate);
+      padding: 14px 24px; border-radius: var(--radius-sm);
+      font-weight: 600; font-size: 0.95rem;
+      border: 1.5px solid var(--border);
+      transition: all 0.2s; cursor: pointer;
+    }
+    .btn-secondary:hover { border-color: var(--copper); color: var(--copper); transform: translateY(-2px); }
+    .hero-stats { display: flex; flex-wrap: wrap; gap: 24px; }
+    .stat-item { display: flex; flex-direction: column; }
+    .stat-number {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem; font-weight: 700; color: var(--copper);
+    }
+    .stat-label { font-size: 0.82rem; color: var(--slate-muted); }
+    .hero-visual {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+    }
+    .hero-visual-header {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 18px; padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-visual-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .hero-visual-dot.green { background: #22C55E; }
+    .hero-visual-dot.amber { background: #8b5cf6; }
+    .hero-visual-dot.red { background: #EF4444; }
+    .chat-msg {
+      padding: 12px 16px; border-radius: 12px; margin-bottom: 10px;
+      font-size: 0.88rem; max-width: 85%;
+    }
+    .chat-msg.sent {
+      background: var(--copper); color: var(--white);
+      margin-left: auto; border-bottom-right-radius: 4px;
+    }
+    .chat-msg.received {
+      background: #F1F5F9; color: var(--slate);
+      border-bottom-left-radius: 4px;
+    }
+    .chat-time { font-size: 0.7rem; color: var(--slate-muted); margin-bottom: 12px; text-align: right; }
+    .section { padding: 70px 0; }
+    .section-alt { background: var(--white); }
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 700; color: var(--slate);
+      margin-bottom: 12px; text-align: center;
+    }
+    .section-sub {
+      font-size: 1rem; color: var(--slate-muted);
+      text-align: center; max-width: 600px; margin: 0 auto 40px;
+    }
+    .simulator {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    @media(min-width:768px) { .simulator { padding: 36px; } }
+    .sim-dossier {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 16px; border-radius: var(--radius-sm);
+      border: 1.5px solid var(--border);
+      margin-bottom: 12px; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .sim-dossier:hover { border-color: var(--copper); }
+    .sim-dossier.active { border-color: var(--copper); background: #eef2ff; }
+    .sim-dossier-check {
+      width: 22px; height: 22px; border-radius: 6px;
+      border: 2px solid var(--border); display: flex;
+      align-items: center; justify-content: center;
+      transition: all 0.2s; flex-shrink: 0;
+    }
+    .sim-dossier.active .sim-dossier-check {
+      background: var(--copper); border-color: var(--copper);
+    }
+    .sim-dossier-info { flex: 1; }
+    .sim-dossier-ref { font-weight: 600; font-size: 0.9rem; color: var(--slate); }
+    .sim-dossier-detail { font-size: 0.8rem; color: var(--slate-muted); }
+    .sim-dossier-amount {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700; font-size: 1.1rem; color: var(--copper);
+    }
+    .sim-result {
+      margin-top: 24px; padding: 24px;
+      background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+      border-radius: var(--radius);
+      border: 1px solid #c7d2fe;
+    }
+    .sim-result-grid {
+      display: grid; grid-template-columns: 1fr; gap: 16px;
+    }
+    @media(min-width:600px) { .sim-result-grid { grid-template-columns: 1fr 1fr; } }
+    .sim-result-item { text-align: center; }
+    .sim-result-value {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem; font-weight: 700; color: var(--copper);
+    }
+    .sim-result-label { font-size: 0.82rem; color: var(--slate-muted); margin-top: 2px; }
+    .sim-checklist { margin-top: 20px; }
+    .sim-checklist-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 10px; }
+    .sim-check-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 0; font-size: 0.88rem; color: var(--slate-light);
+    }
+    .sim-check-icon {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: #DCFCE7; display: flex;
+      align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .preview-grid {
+      display: grid; grid-template-columns: 1fr; gap: 24px;
+    }
+    @media(min-width:768px) { .preview-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    .preview-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    .preview-card-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600; font-size: 1rem;
+      margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+    }
+    .preview-devis {
+      background: #FAFAFA; border-radius: var(--radius-sm);
+      padding: 18px; font-size: 0.85rem; border: 1px solid var(--border);
+    }
+    .preview-devis-row {
+      display: flex; justify-content: space-between;
+      padding: 6px 0; border-bottom: 1px dashed #E5E7EB;
+    }
+    .preview-devis-row:last-child { border-bottom: none; font-weight: 700; color: var(--copper); padding-top: 10px; }
+    .preview-whatsapp {
+      background: #E8F5E9; border-radius: var(--radius-sm);
+      padding: 16px; border: 1px solid #C8E6C9;
+    }
+    .wa-msg {
+      background: var(--white); border-radius: 10px;
+      padding: 12px 14px; margin-bottom: 8px;
+      font-size: 0.84rem; box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+      position: relative;
+    }
+    .wa-msg-time { font-size: 0.68rem; color: #999; text-align: right; margin-top: 4px; }
+    .wa-label {
+      font-size: 0.75rem; font-weight: 600; color: #2E7D32;
+      margin-bottom: 6px; display: flex; align-items: center; gap: 4px;
+    }
+    .benefits-grid {
+      display: grid; grid-template-columns: 1fr; gap: 16px;
+    }
+    @media(min-width:600px) { .benefits-grid { grid-template-columns: 1fr 1fr; } }
+    @media(min-width:900px) { .benefits-grid { grid-template-columns: repeat(3, 1fr); } }
+    .benefit-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .benefit-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .benefit-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: var(--copper-bg); display: flex;
+      align-items: center; justify-content: center;
+      margin-bottom: 14px;
+    }
+    .benefit-icon svg { width: 22px; height: 22px; color: var(--copper); }
+    .benefit-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600; font-size: 1rem; margin-bottom: 6px;
+    }
+    .benefit-desc { font-size: 0.85rem; color: var(--slate-muted); line-height: 1.5; }
+    .pricing-grid {
+      display: grid; grid-template-columns: 1fr; gap: 20px;
+      max-width: 900px; margin: 0 auto;
+    }
+    @media(min-width:768px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
+    .pricing-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border: 1.5px solid var(--border);
+      text-align: center;
+      transition: transform 0.2s;
+      position: relative;
+    }
+    .pricing-card:hover { transform: translateY(-4px); }
+    .pricing-card.featured {
+      border-color: var(--copper);
+      box-shadow: var(--shadow-lg);
+    }
+    .pricing-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--copper); color: var(--white);
+      padding: 4px 14px; border-radius: 12px;
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    }
+    .pricing-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600; font-size: 1.1rem; margin-bottom: 6px;
+    }
+    .pricing-price {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem; font-weight: 800; color: var(--copper);
+      margin: 14px 0 4px;
+    }
+    .pricing-price span { font-size: 0.9rem; font-weight: 500; color: var(--slate-muted); }
+    .pricing-desc { font-size: 0.82rem; color: var(--slate-muted); margin-bottom: 18px; }
+    .pricing-features { list-style: none; text-align: left; margin-bottom: 22px; }
+    .pricing-features li {
+      font-size: 0.85rem; padding: 6px 0;
+      display: flex; align-items: flex-start; gap: 8px;
+      color: var(--slate-light);
+    }
+    .pricing-features li svg { width: 16px; height: 16px; color: #22C55E; flex-shrink: 0; margin-top: 2px; }
+    .pricing-btn {
+      display: block; width: 100%; padding: 12px;
+      border-radius: var(--radius-sm); font-weight: 600;
+      font-size: 0.9rem; text-align: center;
+      transition: all 0.2s; cursor: pointer; border: none;
+    }
+    .pricing-btn-primary { background: var(--copper); color: var(--white); }
+    .pricing-btn-primary:hover { background: var(--copper-light); }
+    .pricing-btn-outline { background: transparent; color: var(--copper); border: 1.5px solid var(--copper); }
+    .pricing-btn-outline:hover { background: var(--copper-bg); }
+    .faq-list { max-width: 700px; margin: 0 auto; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 0;
+    }
+    .faq-question {
+      width: 100%; padding: 18px 0;
+      display: flex; align-items: center; justify-content: space-between;
+      background: none; border: none; cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem; font-weight: 600; color: var(--slate);
+      text-align: left; gap: 12px;
+    }
+    .faq-question:hover { color: var(--copper); }
+    .faq-icon {
+      width: 24px; height: 24px; flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 200px; padding-bottom: 18px; }
+    .faq-answer p { font-size: 0.9rem; color: var(--slate-muted); line-height: 1.6; }
+    .form-section {
+      background: linear-gradient(135deg, var(--slate) 0%, #1E293B 100%);
+      padding: 70px 0;
+    }
+    .form-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      max-width: 560px; margin: 0 auto;
+      box-shadow: var(--shadow-lg);
+    }
+    @media(min-width:768px) { .form-card { padding: 40px; } }
+    .form-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem; font-weight: 700;
+      text-align: center; margin-bottom: 6px;
+    }
+    .form-sub {
+      font-size: 0.9rem; color: var(--slate-muted);
+      text-align: center; margin-bottom: 28px;
+    }
+    .form-group { margin-bottom: 16px; }
+    .form-label {
+      display: block; font-size: 0.82rem;
+      font-weight: 600; color: var(--slate);
+      margin-bottom: 6px;
+    }
+    .form-input, .form-select {
+      width: 100%; padding: 12px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem; color: var(--slate);
+      transition: border-color 0.2s;
+      background: var(--white);
+    }
+    .form-input:focus, .form-select:focus {
+      outline: none; border-color: var(--copper);
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+    }
+    .form-submit {
+      width: 100%; padding: 14px;
+      background: var(--copper); color: var(--white);
+      border: none; border-radius: var(--radius-sm);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600; font-size: 1rem;
+      cursor: pointer; transition: all 0.2s;
+      margin-top: 8px;
+    }
+    .form-submit:hover { background: var(--copper-light); transform: translateY(-1px); }
+    .form-confirm {
+      display: none; text-align: center; padding: 20px;
+      background: #F0FDF4; border-radius: var(--radius);
+      border: 1px solid #BBF7D0; margin-top: 16px;
+    }
+    .form-confirm.show { display: block; }
+    .form-confirm p { font-size: 0.9rem; color: #166534; margin-bottom: 8px; }
+    .form-confirm a { font-weight: 600; }
+    .footer {
+      background: var(--slate); color: #94A3B8;
+      padding: 32px 0; text-align: center;
+      font-size: 0.82rem;
+    }
+    .footer a { color: #CBD5E1; }
+    .footer-brand {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600; color: var(--white);
+      font-size: 1rem; margin-bottom: 6px;
+    }
+    .nav-links a.lang-link { font-weight: 700; font-size: 0.8rem; opacity: 0.6; }
+    .nav-links a.lang-link.current { opacity: 1; color: var(--copper); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="28" height="28" rx="7" fill="#6366f1"/>
+          <path d="M8 20V10l6-3 6 3v10" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 20v-5h4v5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Cadence BTP
+      </div>
+      <div class="nav-links">
+        <a href="#simulateur">Simulateur</a>
+        <a href="#methode">Méthode</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#questions">Questions</a>
+        <a href="/btp.html" class="lang-link current" aria-current="true">FR</a>
+        <a href="/nl/btp.html" class="lang-link">NL</a>
+        <a href="/en/btp.html" class="lang-link">EN</a>
+      </div>
+      <a href="#test-gratuit" class="nav-cta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4z"/></svg>
+        Tester sur 2 devis
+      </a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            Conçu pour les artisans belges
+          </div>
+          <h1>Transformez vos devis en attente en <span>chantiers signés</span></h1>
+          <p class="hero-sub">Relances WhatsApp automatiques, devis conformes TVA 6 % et suivi chantier simplifié pour les entrepreneurs en toiture, châssis, HVAC et rénovation en Belgique.</p>
+          <div class="hero-buttons">
+            <a href="#test-gratuit" class="btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4z"/></svg>
+              Tester gratuitement sur 2 devis
+            </a>
+            <a href="#apercu" class="btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Voir un exemple WhatsApp
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">2h</span>
+              <span class="stat-label">gagnées chaque soir (estimation)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">J+2 / J+6</span>
+              <span class="stat-label">relances automatiques</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">0 €</span>
+              <span class="stat-label">pour tester sur 2 devis</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-visual-header">
+            <span class="hero-visual-dot red"></span>
+            <span class="hero-visual-dot amber"></span>
+            <span class="hero-visual-dot green"></span>
+            <span style="font-size:0.78rem;color:var(--slate-muted);margin-left:8px;">WhatsApp — Relance auto</span>
+          </div>
+          <div class="chat-msg received">Bonjour, merci pour le devis toiture. On va en discuter en famille ce week-end.</div>
+          <div class="chat-time">Samedi 10:42</div>
+          <div class="chat-msg sent">Bonjour M. Dupont 👋 Pas de souci, prenez le temps. Je reste dispo si vous avez des questions sur les matériaux ou le planning. Belle journée !</div>
+          <div class="chat-time">Samedi 10:45 (auto)</div>
+          <div class="chat-msg received">Super, merci ! On vous rappelle lundi 👍</div>
+          <div class="chat-time">Samedi 11:02</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="simulateur">
+    <div class="container">
+      <h2 class="section-title">Simulez vos chantiers récupérables</h2>
+      <p class="section-sub">Cochez les devis en attente pour estimer combien de temps et d'argent Cadence BTP peut vous faire gagner.</p>
+      <div class="simulator">
+        <div class="sim-dossier active" data-amount="14800" onclick="toggleDossier(this)">
+          <div class="sim-dossier-check">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="sim-dossier-info">
+            <div class="sim-dossier-ref">DEV-2026-104</div>
+            <div class="sim-dossier-detail">Uccle — Toiture ardoises</div>
+          </div>
+          <div class="sim-dossier-amount">14 800 €</div>
+        </div>
+        <div class="sim-dossier active" data-amount="9450" onclick="toggleDossier(this)">
+          <div class="sim-dossier-check">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="sim-dossier-info">
+            <div class="sim-dossier-ref">DEV-2026-108</div>
+            <div class="sim-dossier-detail">Wavre — Châssis aluminium</div>
+          </div>
+          <div class="sim-dossier-amount">9 450 €</div>
+        </div>
+        <div class="sim-dossier active" data-amount="11200" onclick="toggleDossier(this)">
+          <div class="sim-dossier-check">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="sim-dossier-info">
+            <div class="sim-dossier-ref">DEV-2026-112</div>
+            <div class="sim-dossier-detail">Namur — Pompe à chaleur</div>
+          </div>
+          <div class="sim-dossier-amount">11 200 €</div>
+        </div>
+        <div class="sim-result">
+          <div class="sim-result-grid">
+            <div class="sim-result-item">
+              <div class="sim-result-value" id="sim-total">35 450 €</div>
+              <div class="sim-result-label">Montant de chantiers récupérables</div>
+            </div>
+            <div class="sim-result-item">
+              <div class="sim-result-value" id="sim-hours">6h</div>
+              <div class="sim-result-label">Heures économisées par semaine (estimation)</div>
+            </div>
+          </div>
+          <div class="sim-checklist">
+            <div class="sim-checklist-title">Ce que Cadence fait pour vous :</div>
+            <div class="sim-check-item">
+              <div class="sim-check-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Relances WhatsApp automatiques à J+2 et J+6
+            </div>
+            <div class="sim-check-item">
+              <div class="sim-check-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Mise en forme devis conformes TVA 6 %
+            </div>
+            <div class="sim-check-item">
+              <div class="sim-check-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Tri et suivi des factures Peppol
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="apercu">
+    <div class="container">
+      <h2 class="section-title">Aperçu concret</h2>
+      <p class="section-sub">Voici à quoi ressemble un devis belge conforme et les messages de relance envoyés automatiquement.</p>
+      <div class="preview-grid">
+        <div class="preview-card">
+          <div class="preview-card-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--copper)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Devis conforme Belgique
+          </div>
+          <div class="preview-devis">
+            <div class="preview-devis-row">
+              <span>Entreprise</span>
+              <span style="font-weight:600">Toitures Martin SPRL</span>
+            </div>
+            <div class="preview-devis-row">
+              <span>N° BCE</span>
+              <span>BE 0123.456.789</span>
+            </div>
+            <div class="preview-devis-row">
+              <span>Client</span>
+              <span>M. Dupont — Uccle</span>
+            </div>
+            <div class="preview-devis-row">
+              <span>Réfection toiture ardoises</span>
+              <span>10 200,00 €</span>
+            </div>
+            <div class="preview-devis-row">
+              <span>Zinguerie et évacuation</span>
+              <span>2 100,00 €</span>
+            </div>
+            <div class="preview-devis-row">
+              <span>Sous-total HTVA</span>
+              <span>12 300,00 €</span>
+            </div>
+            <div class="preview-devis-row">
+              <span>TVA 6 % (rénovation)</span>
+              <span>738,00 €</span>
+            </div>
+            <div class="preview-devis-row">
+              <span>Total TVAC</span>
+              <span>13 038,00 €</span>
+            </div>
+          </div>
+        </div>
+        <div class="preview-card">
+          <div class="preview-card-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Relances WhatsApp automatiques
+          </div>
+          <div class="preview-whatsapp">
+            <div class="wa-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              J+2 — Relance douce
+            </div>
+            <div class="wa-msg">
+              <p>Bonjour M. Dupont 👋</p>
+              <p style="margin-top:6px">Je me permets un petit suivi concernant le devis toiture envoyé jeudi. Avez-vous eu l'occasion d'y jeter un œil ? N'hésitez pas si vous avez des questions sur les matériaux ou le planning.</p>
+              <p style="margin-top:6px">Belle journée ! 🏠</p>
+              <div class="wa-msg-time">09:15 ✓✓</div>
+            </div>
+            <div class="wa-label" style="margin-top:14px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              J+6 — Deuxième relance
+            </div>
+            <div class="wa-msg">
+              <p>Bonjour M. Dupont,</p>
+              <p style="margin-top:6px">Sans retour de votre part, je comprends que le projet est peut-être en réflexion. Sachez que nous avons une disponibilité sur le mois prochain si vous souhaitez avancer.</p>
+              <p style="margin-top:6px">Je reste à votre disposition. Bien à vous, Martin 🤝</p>
+              <div class="wa-msg-time">09:15 ✓✓</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="methode">
+    <div class="container">
+      <h2 class="section-title">5 avantages concrets pour votre entreprise</h2>
+      <p class="section-sub">Cadence BTP s'occupe de ce qui vous fait perdre du temps chaque jour.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="benefit-title">Relance auto J+2 / J+6</div>
+          <div class="benefit-desc">Vos clients reçoivent un message WhatsApp poli et humain, au bon moment. Vous ne perdez plus aucun devis.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="benefit-title">Devis conformes TVA 6 % & BCE</div>
+          <div class="benefit-desc">Chaque devis inclut votre numéro BCE, le taux TVA correct (6 % rénovation, 21 % neuf) et la mention légale.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="benefit-title">Facturation Peppol 2026</div>
+          <div class="benefit-desc">Préparez-vous dès maintenant à l'e-facturation obligatoire. Vos factures seront compatibles Peppol sans effort.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <div class="benefit-title">Zéro logiciel compliqué</div>
+          <div class="benefit-desc">Pas de formation, pas d'interface complexe. Tout se passe via WhatsApp, l'outil que vous utilisez déjà chaque jour.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="benefit-title">Accompagnement direct en Belgique</div>
+          <div class="benefit-desc">Équipe basée en Belgique, qui connaît le terrain, les normes et les réalités des artisans du bâtiment.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tarifs">
+    <div class="container">
+      <h2 class="section-title">Tarifs transparents, sans surprise</h2>
+      <p class="section-sub">Commencez gratuitement, évoluez quand vous êtes prêt.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-name">Essai au Résultat</div>
+          <div class="pricing-price">0 €</div>
+          <div class="pricing-desc">Testez sur 2 vrais devis en attente</div>
+          <ul class="pricing-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              2 devis traités gratuitement
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Relances WhatsApp J+2 et J+6
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Sans engagement, sans carte
+            </li>
+          </ul>
+          <a href="#test-gratuit" class="pricing-btn pricing-btn-outline">Commencer l'essai</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-badge">Populaire</div>
+          <div class="pricing-name">Artisan Solo</div>
+          <div class="pricing-price">190 €<span>/mois</span></div>
+          <div class="pricing-desc">Pour l'artisan indépendant</div>
+          <ul class="pricing-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Devis illimités en suivi
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Relances auto + mise en forme devis
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Préparation Peppol incluse
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Sans engagement, arrêt à tout moment
+            </li>
+          </ul>
+          <a href="#test-gratuit" class="pricing-btn pricing-btn-primary">Choisir Solo</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-name">Équipe BTP</div>
+          <div class="pricing-price">340 €<span>/mois</span></div>
+          <div class="pricing-desc">Multi-conducteurs, suivi complet</div>
+          <ul class="pricing-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Tout l'offre Solo +
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Multi-conducteurs de travaux
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Tableau de bord chantier
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Support prioritaire Belgique
+            </li>
+          </ul>
+          <a href="#test-gratuit" class="pricing-btn pricing-btn-outline">Choisir Équipe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="questions">
+    <div class="container">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <p class="section-sub">Les réponses aux questions que se posent les patrons BTP en Belgique.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Mes prix et données clients restent-ils confidentiels ?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Absolument. Vos données sont hébergées en Europe, chiffrées, et ne sont jamais partagées. Les messages WhatsApp sont envoyés depuis votre propre numéro. Vous gardez le contrôle total.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Quel est le ton des messages WhatsApp envoyés ?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Humain, poli et professionnel. Jamais agressif ni insistant. Le ton est adapté à la relation artisan-client en Belgique : respectueux, direct et chaleureux. Vous pouvez personnaliser les messages.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Quel est le délai de mise en place ?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>En général 48 heures. On configure votre compte, on importe vos devis en attente et les premières relances partent. Vous n'avez rien à installer.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Est-ce compatible sur PC et GSM ?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Oui, tout fonctionne via WhatsApp Web et l'app mobile. Vous suivez vos relances depuis votre PC au bureau ou votre GSM sur chantier. Aucune application supplémentaire à installer.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Puis-je arrêter à tout moment ?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Oui, sans aucune condition. Pas d'engagement, pas de frais de résiliation. Vous pouvez arrêter ou reprendre quand vous voulez, en un message.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="test-gratuit">
+    <div class="container">
+      <div class="form-card">
+        <div class="form-title">Testez gratuitement sur 2 devis</div>
+        <div class="form-sub">Remplissez ce formulaire, on s'occupe du reste. Réponse sous 24h.</div>
+        <form id="testForm" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label class="form-label" for="name">Prénom & Entreprise</label>
+            <input class="form-input" type="text" id="name" name="name" placeholder="Ex : Martin — Toitures Martin SPRL" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="metier">Corps de métier</label>
+            <select class="form-select" id="metier" name="metier" required>
+              <option value="">Sélectionnez votre métier</option>
+              <option value="Toiture">Toiture</option>
+              <option value="Châssis">Châssis</option>
+              <option value="Chauffage/PAC">Chauffage / Pompe à chaleur</option>
+              <option value="Rénovation générale">Rénovation générale</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Téléphone WhatsApp</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="Ex : 0475 12 34 56" required>
+          </div>
+          <p style="font-size:0.8rem;color:#64748B;margin-bottom:12px;">Vos données (nom, métier, téléphone) servent uniquement à vous recontacter au sujet de ce test. Contact : contact@jcode.store</p>
+          <button type="submit" class="form-submit">
+            Envoyer ma demande de test gratuit
+          </button>
+        </form>
+        <div class="form-confirm" id="formConfirm">
+          <p><strong>✅ Merci ! Votre demande est prête.</strong></p>
+          <p>Vous allez être redirigé vers WhatsApp. Si ce n'est pas le cas :</p>
+          <a href="mailto:contact@jcode.store">contact@jcode.store</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">Cadence BTP</div>
+      <p>par JCODE — Belgique</p>
+      <p style="margin-top:8px;">
+        <a href="mailto:contact@jcode.store">contact@jcode.store</a> · 
+        <a href="https://jcode.store">jcode.store</a>
+      </p>
+      <p style="margin-top:12px;font-size:0.75rem;color:#64748B;">© 2026 Cadence BTP. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleDossier(el) {
+      el.classList.toggle('active');
+      updateSimulator();
+    }
+    function updateSimulator() {
+      const active = document.querySelectorAll('.sim-dossier.active');
+      let total = 0;
+      active.forEach(d => { total += parseInt(d.dataset.amount); });
+      document.getElementById('sim-total').textContent = total.toLocaleString('fr-BE') + ' €';
+      document.getElementById('sim-hours').textContent = Math.round(active.length * 2) + 'h';
+    }
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    }
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const metier = document.getElementById('metier').value;
+      const phone = document.getElementById('phone').value;
+      const message = encodeURIComponent(
+        `Bonjour ! Je souhaite tester Cadence BTP gratuitement sur 2 devis.\n\n👤 ${name}\n🔧 ${metier}\n📱 ${phone}\n\nMerci de me recontacter !`
+      );
+      document.getElementById('formConfirm').classList.add('show');
+      document.getElementById('testForm').style.display = 'none';
+      window.open(`https://wa.me/32466062273?text=${message}`, '_blank');
+    }
+    updateSimulator();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Cadence BTP",
+    "description": "Relance de devis et suivi chantier pour artisans belges du bâtiment",
+    "provider": {
+      "@type": "Organization",
+      "name": "JCODE",
+      "url": "https://jcode.store"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Belgique"
+    },
+    "url": "https://jcode.store/btp.html"
+  }
+  </script>
+</body>
+</html>
