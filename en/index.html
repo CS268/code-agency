@@ -488,9 +488,14 @@
             backdrop-filter: blur(10px);
             animation: float 4s ease-in-out infinite;
         }
+        a.float-el { pointer-events: auto; text-decoration: none; cursor: pointer; white-space: nowrap; transition: background .25s, border-color .25s, box-shadow .25s; }
+        a.float-el:hover, a.float-el:focus-visible { background: rgba(99, 102, 241, 0.28); border-color: rgba(167, 139, 250, 0.7); box-shadow: 0 0 24px rgba(99, 102, 241, 0.45); outline: none; }
         .float-el:nth-child(1) { top: 10%; right: -20px; animation-delay: 0s; }
         .float-el:nth-child(2) { bottom: 20%; left: -30px; animation-delay: 1s; }
         .float-el:nth-child(3) { top: 50%; right: -40px; animation-delay: 2s; }
+        .float-el:nth-child(4) { top: 12%; left: -40px; animation-delay: 3s; }
+        .float-el:nth-child(5) { bottom: 6%; right: -10px; animation-delay: 1.5s; }
+        .float-el:nth-child(6) { top: 42%; left: -50px; animation-delay: 2.5s; }
 
         /* ===== TRUST BAR ===== */
         .trust-bar {
@@ -1287,10 +1292,6 @@
                 JCODE Agency
             </a>
             <div class="nav-links">
-                <a href="/ai-concierge.html" style="color:var(--primary);position:relative;">AI Concierge</a>
-                <a href="/studio/index.html?lang=en" style="color:var(--primary);position:relative;">VIDEOCREATOR</a>
-                <a href="/studio/marketing/" data-fr="Marketing" data-nl="Marketing" data-en="Marketing" style="color:var(--primary);position:relative;">MARKETING</a>
-                <a href="/site-web.html" data-i18n="common.nav.website" style="color:var(--primary);position:relative;">SITE WEB</a>
                 <a href="/blog/">Blog</a>
                 <a href="/en/#contact" data-i18n="common.nav.contact">Contact</a>
 </div>
@@ -1311,16 +1312,18 @@
             <div class="hero-content">
                 <div class="hero-badge animate-fade-in-up delay-1">
                     <span class="dot"></span>
-                    <span data-i18n="index.hero.badge">8 AI modules deployed</span>
+                    <span data-i18n="index.hero.badge">6 AI modules deployed</span>
                 </div>
                 <h1 class="hero-title animate-fade-in-up delay-2">
-                    <span data-i18n="index.hero.titleLine1">A website that sells, an assistant that answers,</span><br>
-                    <span class="gradient-text" data-i18n="index.hero.titleLine2">videos that attract.</span>
+                    <span data-i18n="index.hero.titleLine1">Your customers are looking for you.</span><br>
+                    <span class="gradient-text" data-i18n="index.hero.titleLine2">Your AI agents find them.</span>
                 </h1>
-                <p class="hero-subtitle animate-fade-in-up delay-3" data-i18n="index.hero.subtitle">Website creation, AI Concierge, VideoCreator, Studio Marketing and AI Analytics: JCODE gives your business everything it needs to be found, chosen and recommended.</p>
+                <p class="hero-subtitle animate-fade-in-up delay-3" data-i18n="index.hero.subtitle">
+                    Website, videos, ads, compliance audits, quote follow-ups, automations: JCODE puts an army of AI agents to work for you.
+                </p>
                 <div class="hero-stats animate-fade-in-up delay-5">
                     <div class="stat-item">
-                        <div class="stat-number">8</div>
+                        <div class="stat-number">6</div>
                         <div class="stat-label" data-i18n="index.hero.statAgents">Active AI agents</div>
                     </div>
                     <div class="stat-item">
@@ -1360,9 +1363,12 @@
                     </div>
                 </div>
                 <div class="floating-elements">
-                    <div class="float-el" data-i18n="index.hero.floatCopywriting">🤖 Copywriting Agent</div>
-                    <div class="float-el" data-i18n="index.hero.floatVideo">📹 Video Agent</div>
-                    <div class="float-el" data-i18n="index.hero.floatOutreach">📧 Outreach Agent</div>
+                    <a class="float-el" href="/studio/marketing/" data-i18n="index.hero.floatAds">📣 Ads Agent</a>
+                    <a class="float-el" href="/studio/index.html?lang=en" data-i18n="index.hero.floatVideo">📹 Video Agent</a>
+                    <a class="float-el" href="/analytics-ai/" data-i18n="index.hero.floatAnalytics">📊 Analytics Agent</a>
+                    <a class="float-el" href="/ai-concierge.html" data-i18n="index.hero.floatConcierge">💬 Concierge Agent</a>
+                    <a class="float-el" href="/en/btp.html" data-i18n="index.hero.floatAdmin">🧾 Admin Agent</a>
+                    <a class="float-el" href="/en/site-web.html" data-i18n="index.hero.floatSite">🌐 Website Agent</a>
                 </div>
             </div>
         </div>
@@ -1422,182 +1428,18 @@
                     <p class="svc-hook">Quotes gathering dust? Wake them up.</p>
                     <p>Automatic WhatsApp follow-ups for Belgian tradespeople: turn pending quotes into signed jobs. Free trial on 2 quotes.</p>
                 </a>
+                <a href="/en/site-web.html" class="service-card svc-slide" style="display:block; text-decoration:none; color:inherit;">
+                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                    <h3>Website</h3>
+                    <p class="svc-hook">A website that sells while you sleep.</p>
+                    <p>A turnkey professional website for your business. Automatic booking and AI chatbot included in the Pro Max pack. From €399, one-time payment.</p>
+                </a>
 
             </div>
                 <button class="svc-nav svc-next" aria-label="Next">&#8250;</button>
             </div>
         </div>
     </section>
-
-    <!-- OFFER / PRICING -->
-    <section class="offer" id="offre">
-        <div class="offer-container">
-            <div class="offer-header reveal">
-                <div class="section-tag" data-i18n="index.offer.tag">Our Offers</div>
-                <h2 class="section-title" data-i18n="index.offer.title">A website built for your business</h2>
-                <p class="section-subtitle" data-i18n="index.offer.subtitle">Choose the plan that suits you. The website is a one-time payment. Automatic booking and the AI chatbot are included in Pro Max.</p>
-            </div>
-            <div class="pricing-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
-                <!-- TEASER -->
-                <div class="offer-card reveal" style="max-width: 100%;">
-                    <div class="offer-name" data-i18n="index.offer.teaser.name">Teaser</div>
-                    <p class="offer-desc" data-i18n="index.offer.teaser.desc">Your first professional website, on one page, to be visible online.</p>
-                    <div class="offer-price">
-                        <span class="price-currency">€</span>
-                        <span class="price-amount">399</span>
-                        <span class="price-period" data-i18n="index.offer.teaser.oneTime"> (one-time payment)</span>
-                    </div>
-                    <ul class="offer-features">
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.teaser.f1">Professional showcase site (1 page)</span></li>
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.teaser.f2">Sector-specific design</span></li>
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.teaser.f3">GDPR cookie + legal notices</span></li>
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.teaser.f4">30-day support</span></li>
-                    </ul>
-                    <a href="https://buy.stripe.com/28EfZabVCfyp0Bf4ejbV600" class="btn btn-primary offer-cta" target="_blank" data-i18n="index.offer.cta.chooseTeaser" style="background: linear-gradient(135deg, var(--gray-light), var(--gray)); box-shadow: 0 4px 20px rgba(100,116,139,0.3);">Choose Teaser →</a>
-                    <div class="offer-guarantee" data-i18n="index.offer.guarantee">
-                        <span>🔒</span> <span data-i18n="index.offer.guaranteeFull">Secure payment · Cancel anytime</span>
-                    </div>
-                </div>
-
-                <!-- PRO -->
-                <div class="offer-card reveal" style="max-width: 100%; border: 2px solid var(--accent); animation: glow 4s ease-in-out infinite;">
-                    <div class="offer-badge" style="background: #10b981; color: white; font-weight: bold; padding: 6px 16px; border-radius: 20px; display: inline-block; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="index.offer.recommended">⭐ RECOMMENDED</div>
-                    <div class="offer-name" data-i18n="index.offer.pro.name">Pro</div>
-                    <p class="offer-desc" data-i18n="index.offer.pro.desc">For ambitious merchants who want to scale their business.</p>
-                    <div class="offer-price">
-                        <span class="price-currency">€</span>
-                        <span class="price-amount">539</span>
-                        <span class="price-period" data-i18n="index.offer.teaser.oneTime"> (one-time payment)</span>
-                    </div>
-                    <ul class="offer-features">
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.pro.f1">Professional showcase site (up to 3 pages)</span></li>
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.pro.f2">Sector-specific design</span></li>
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.pro.f3">GDPR cookie + legal notices</span></li>
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.pro.f4">QR Code included</span></li>
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.pro.f5">60-day support</span></li>
-                    </ul>
-                    <a href="https://buy.stripe.com/5kQ7sEgbS0Dv0Bf7qvbV603" class="btn btn-primary offer-cta" target="_blank" rel="noopener" data-i18n="index.offer.cta.choosePro" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); box-shadow: 0 4px 20px rgba(99,102,241,0.4);">Choose Pro →</a>
-                    <div class="offer-guarantee" data-i18n="index.offer.guarantee">
-                        <span>🔒</span> <span data-i18n="index.offer.guaranteeFull">Secure payment · Cancel anytime</span>
-                    </div>
-                </div>
-
-                <!-- PRO MAX -->
-                <div class="offer-card reveal" style="max-width: 100%; border: 2px solid var(--primary-light);">
-                    <div class="offer-name" data-i18n="index.offer.promax.name">Pro Max</div>
-                    <p class="offer-desc" data-i18n="index.offer.promax.desc">The ultimate experience. Full access to 8 AI modules + VIP service.</p>
-                    <div class="offer-price">
-                        <span class="price-currency">€</span>
-                        <span class="price-amount">1,139</span>
-                        <span class="price-period" data-i18n="index.offer.teaser.oneTime"> (one-time payment)</span>
-                    </div>
-                    <ul class="offer-features">
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.promax.f1">Professional showcase site (up to 5 pages)</span></li>
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.promax.f2">Sector-specific design</span></li>
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.promax.f3">GDPR cookie + legal notices</span></li>
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.promax.f4">QR Code included</span></li>
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.promax.f5">Auto Booking included</span></li>
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.promax.f6">AI Chatbot included</span></li>
-                        <li><span class="feature-check">✓</span><span data-i18n="index.offer.promax.f7">90-day support</span></li>
-                    </ul>
-                   <a href="https://buy.stripe.com/28E3co2l271Tfw9eSXbV604" class="btn btn-primary offer-cta" target="_blank" rel="noopener" data-i18n="index.offer.cta.chooseProMax" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); box-shadow: 0 4px 20px rgba(99,102,241,0.4);">Choose Pro Max →</a>
-                    <div class="offer-guarantee" data-i18n="index.offer.guarantee">
-                        <span>🔒</span> <span data-i18n="index.offer.guaranteeFull">Secure payment · Cancel anytime</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- OPTIONS ADD-ON -->
-<section class="options" style="padding: 80px 20px; background: #0f172a;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
-        <div class="section-header" style="text-align: center; margin-bottom: 60px;">
-            <span class="badge" style="display: inline-block; padding: 8px 20px; background: rgba(99,102,241,0.1); color: #818cf8; border-radius: 50px; font-size: 14px; font-weight: 600; margin-bottom: 20px;" data-i18n="index.options.tag">Additional options</span>
-            <h2 style="font-size: 48px; font-weight: 800; color: #fff; margin-bottom: 16px;" data-i18n="index.options.title">Customize your site</h2>
-            <p style="font-size: 18px; color: #94a3b8; max-width: 600px; margin: 0 auto;" data-i18n="index.options.subtitle">Add these options to any plan to boost your business.</p>
-        </div>
-
-        <div class="options-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 40px;">
-            
-            <!-- Option 1: QR Code -->
-            <div class="option-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 40px; text-align: center;">
-                <div class="option-icon" style="width: 64px; height: 64px; background: rgba(99,102,241,0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px;">📱</div>
-                <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 12px;" data-i18n="index.options.qr.title">QR Code Menu</h3>
-                <p style="color: #94a3b8; margin-bottom: 24px; line-height: 1.6;" data-i18n="index.options.qr.desc">A QR code for your storefront. Your clients scan and see your services, photos and prices directly on their phone.</p>
-                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;" data-i18n="index.options.qr.price">+€99</div>
-            <div style="color: #64748b; font-size: 14px;" data-i18n="index.options.qr.oneTime">One-time payment</div>
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&amp;data=https://jcode.store" alt="QR Code jcode.store" style="margin-top: 24px; border-radius: 12px; max-width: 260px; width: 100%;">
-            </div>
-
-            <!-- Option 2: Réservation auto -->
-            <div class="option-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 40px; text-align: center;">
-                <div class="option-icon" style="width: 64px; height: 64px; background: rgba(16,185,129,0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px;">📅</div>
-                <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 12px;" data-i18n="index.options.booking.title">Auto Booking</h3>
-                <p style="color: #94a3b8; margin-bottom: 24px; line-height: 1.6;" data-i18n="index.options.booking.desc">Your clients choose their service, date and time. Automatic confirmation by email. You receive a notification.</p>
-                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;" data-i18n="index.options.booking.price">+€149<span style="font-size: 18px; font-weight: 400; color: #64748b;">/month</span></div>
-                <div style="color: #64748b; font-size: 14px;" data-i18n="index.options.booking.monthly">Monthly subscription</div>
-                                <div style="margin-top: 24px; max-width: 260px; width: 100%; margin-left: auto; margin-right: auto; background: #1e293b; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; text-align: left;">
-                    <div style="background: linear-gradient(135deg, #10b981 0%, #34d399 100%); padding: 10px 14px; display: flex; align-items: center; gap: 8px;">
-                        <span style="width: 8px; height: 8px; border-radius: 50%; background: #22c55e;"></span>
-                        <span style="color: #fff; font-size: 12px; font-weight: 600;">Réservation Auto</span>
-                    </div>
-                    <div style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
-                        <div style="background: #334155; border-radius: 8px; padding: 8px 10px;">
-                            <div style="color: #94a3b8; font-size: 10px;" data-i18n="index.options.booking.preview.service">Service</div>
-                            <div style="color: #e2e8f0; font-size: 12px; margin-top: 2px;" data-i18n="index.options.booking.preview.serviceName">Haircut &amp; Styling</div>
-                        </div>
-                        <div style="display: flex; gap: 6px;">
-                            <div style="flex: 1; background: #334155; border-radius: 8px; padding: 8px 10px;">
-                                <div style="color: #94a3b8; font-size: 10px;" data-i18n="index.options.booking.preview.date">Date</div>
-                                <div style="color: #e2e8f0; font-size: 12px; margin-top: 2px;" data-i18n="index.options.booking.preview.dateValue">Mar 12</div>
-                            </div>
-                            <div style="flex: 1; background: #334155; border-radius: 8px; padding: 8px 10px;">
-                                <div style="color: #94a3b8; font-size: 10px;" data-i18n="index.options.booking.preview.time">Time</div>
-                                <div style="color: #e2e8f0; font-size: 12px; margin-top: 2px;" data-i18n="index.options.booking.preview.timeValue">2:30 PM</div>
-                            </div>
-                        </div>
-                        <div style="background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.4); border-radius: 8px; padding: 8px 10px; text-align: center;">
-                            <span style="color: #34d399; font-size: 11px; font-weight: 600;" data-i18n="index.options.booking.preview.confirmed">Booking confirmed</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Option 3: Chatbot -->
-            <div class="option-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 40px; text-align: center;">
-                <div class="option-icon" style="width: 64px; height: 64px; background: rgba(245,158,11,0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px;">🤖</div>
-                <h3 style="font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 12px;" data-i18n="index.options.chatbot.title">AI Chatbot</h3>
-                <p style="color: #94a3b8; margin-bottom: 24px; line-height: 1.6;" data-i18n="index.options.chatbot.desc">A virtual assistant on your site that answers your clients' questions 24/7. Hours, prices, services — everything is covered.</p>
-                <div class="option-price" style="font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px;" data-i18n="index.options.chatbot.price">+€99<span style="font-size: 18px; font-weight: 400; color: #64748b;">/month</span></div>
-                <div style="color: #64748b; font-size: 14px;" data-i18n="index.options.chatbot.monthly">Monthly subscription</div>
-                <div style="margin-top: 24px; max-width: 260px; width: 100%; margin-left: auto; margin-right: auto; background: #1e293b; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; text-align: left;">
-    <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 10px 14px; display: flex; align-items: center; gap: 8px;">
-        <span style="width: 8px; height: 8px; border-radius: 50%; background: #22c55e;"></span>
-        <span style="color: #fff; font-size: 12px; font-weight: 600;">JCODE Assistant</span>
-    </div>
-    <div style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
-        <div style="align-self: flex-start; max-width: 80%; background: #334155; color: #e2e8f0; font-size: 11px; padding: 8px 10px; border-radius: 12px 12px 12px 2px;" data-i18n="index.concierge.chat1">Hi! Need a website for your business?</div>
-        <div style="align-self: flex-end; max-width: 80%; background: #6366f1; color: #fff; font-size: 11px; padding: 8px 10px; border-radius: 12px 12px 2px 12px;" data-i18n="index.concierge.chat2">Show me your menu</div>
-        <div style="align-self: flex-start; display: flex; gap: 3px; padding: 10px; background: #334155; border-radius: 12px 12px 12px 2px;">
-            <span style="width: 5px; height: 5px; border-radius: 50%; background: #94a3b8; animation: chatTyping 1.2s infinite;"></span>
-            <span style="width: 5px; height: 5px; border-radius: 50%; background: #94a3b8; animation: chatTyping 1.2s infinite 0.2s;"></span>
-            <span style="width: 5px; height: 5px; border-radius: 50%; background: #94a3b8; animation: chatTyping 1.2s infinite 0.4s;"></span>
-        </div>
-    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div style="text-align: center; padding: 30px; background: rgba(99,102,241,0.05); border-radius: 16px; border: 1px solid rgba(99,102,241,0.1);">
-            <p style="color: #94a3b8; font-size: 16px; margin: 0;" data-i18n-html="index.options.tip_html">💡 <strong style="color: #fff;">Tip:</strong> Start with the Teaser plan at €399 and add options when you're ready. No commitment, upgrade anytime.</p>
-        </div>
-    </div>
-</section>
-
-
 
     <!-- CONTACT SECTION -->
     <section class="contact-section" id="contact">
@@ -1630,7 +1472,7 @@
                         <div class="contact-icon">💳</div>
                         <div>
                             <h4 data-i18n="index.contact.bookingLabel">Our offers</h4>
-                            <a href="/en/#offre" data-i18n="index.contact.bookingLink">See our offers</a>
+                            <a href="/en/site-web.html#offre" data-i18n="index.contact.bookingLink">See our offers</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1678,7 +1520,7 @@
         <div class="cta-container">
             <h2 class="cta-title reveal" data-i18n="index.cta.title">Ready to automate your business?</h2>
             <p class="cta-subtitle reveal" data-i18n="index.cta.subtitle">Join the savvy merchants who let AI do the work while they enjoy life.</p>
-            <a href="/en/#offre" class="btn cta-btn reveal" data-i18n="index.cta.button">Discover our offers →</a>
+            <a href="/en/site-web.html#offre" class="btn cta-btn reveal" data-i18n="index.cta.button">Discover our offers →</a>
         </div>
     </section>
 
