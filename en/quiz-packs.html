@@ -60,9 +60,9 @@
             nl: { q1: "Jouw activiteit?", q2: "Heb je al een website?", q3: "Je belangrijkste doel?", q4: "Wanneer heb je het nodig?", a1: ["Restaurant", "Kappers & Schoonheid", "Winkel", "Ambachtsman / Bouw", "Andere"], a2: ["Nee", "Ja", "Ja, maar moet vernieuwd worden"], a3: ["Gevonden worden op Google", "Oproepen of reserveringen ontvangen", "Online verkopen", "Tijd besparen met AI"], a4: ["Zo snel mogelijk", "Binnen een maand", "Ik oriënteer me"], resTitle: "Jouw ideale pakket is gevonden!", resSub: "Gebaseerd op je antwoorden, hier is onze aanbeveling", rec: "AANBEVOLEN", alt: "Alternatief", why: "Waarom dit pakket?", all: "Bekijk alle pakketten", close: "Sluiten", back: "Terug" }
         };
         const packs = {
-            teaser: { name: { fr: "Teaser", en: "Teaser", nl: "Teaser" }, price: { fr: "399€", en: "€399", nl: "€399" }, period: { fr: "(paiement unique)", en: "(one-time)", nl: "(eenmalig)" }, link: "/#offre" },
-            pro: { name: { fr: "Pro", en: "Pro", nl: "Pro" }, price: { fr: "539€", en: "€539", nl: "€539" }, period: { fr: "(paiement unique)", en: "(one-time)", nl: "(eenmalig)" }, link: "/#offre" },
-            promax: { name: { fr: "Pro Max", en: "Pro Max", nl: "Pro Max" }, price: { fr: "1 139€", en: "€1,139", nl: "€1.139" }, period: { fr: "(paiement unique)", en: "(one-time)", nl: "(eenmalig)" }, link: "/#offre" },
+            teaser: { name: { fr: "Teaser", en: "Teaser", nl: "Teaser" }, price: { fr: "399€", en: "€399", nl: "€399" }, period: { fr: "(paiement unique)", en: "(one-time)", nl: "(eenmalig)" }, link: "/site-web.html#offre" },
+            pro: { name: { fr: "Pro", en: "Pro", nl: "Pro" }, price: { fr: "539€", en: "€539", nl: "€539" }, period: { fr: "(paiement unique)", en: "(one-time)", nl: "(eenmalig)" }, link: "/site-web.html#offre" },
+            promax: { name: { fr: "Pro Max", en: "Pro Max", nl: "Pro Max" }, price: { fr: "1 139€", en: "€1,139", nl: "€1.139" }, period: { fr: "(paiement unique)", en: "(one-time)", nl: "(eenmalig)" }, link: "/site-web.html#offre" },
             aiStarter: { name: { fr: "AI Concierge Starter", en: "AI Concierge Starter", nl: "AI Concierge Starter" }, price: { fr: "1 000€", en: "€1,000", nl: "€1.000" }, period: { fr: "/mois", en: "/month", nl: "/maand" }, link: "/ai-concierge.html" },
             aiPro: { name: { fr: "AI Concierge Pro", en: "AI Concierge Pro", nl: "AI Concierge Pro" }, price: { fr: "1 500€", en: "€1,500", nl: "€1.500" }, period: { fr: "/mois", en: "/month", nl: "/maand" }, link: "/ai-concierge.html" },
             btpTest: { name: { fr: "Cadence BTP — Essai", en: "Cadence BTP — Trial", nl: "Cadence BTP — Proef" }, price: { fr: "0€", en: "€0", nl: "€0" }, period: { fr: "(2 devis offerts)", en: "(2 free quotes)", nl: "(2 gratis offertes)" }, link: "/btp.html#test-gratuit" },
@@ -102,7 +102,7 @@
         }
 
         function t(key) { return translations[lang][key] || translations.fr[key]; }
-        function withLang(l) { return ((l.startsWith("/#") || l.startsWith("/btp.html")) && lang !== "fr") ? "/" + lang + l : l; }
+        function withLang(l) { return ((l.startsWith("/#") || l.startsWith("/btp.html") || l.startsWith("/site-web.html")) && lang !== "fr") ? "/" + lang + l : l; }
 
         function showQuestion() {
             const q = questions[currentQuestion];
@@ -141,9 +141,20 @@
                 const aPack = packs[rec.alt];
                 html += `<div class="pack-card" role="article"><h3 class="pack-name">${aPack.name[lang]}</h3><div class="pack-price">${aPack.price[lang]} <span>${aPack.period[lang]}</span></div><a target="_top" href="${withLang(aPack.link)}" class="pack-btn" style="background: rgba(255,255,255,0.1)">${t('alt')} →</a></div>`;
             }
-            html += `<a target="_top" href="/${lang === 'fr' ? '' : lang}/#offre" class="all-packs-link">${t('all')} →</a>`;
+            html += `<a target="_top" href="${withLang('/site-web.html#offre')}" class="all-packs-link">${t('all')} →</a>`;
             resEl.innerHTML = html;
         }
+
+        const WHY0 = {
+            fr: function (a) { return "Parfait pour " + a + " qui veut être trouvé sur Google rapidement."; },
+            en: function () { return "Ideal to get found on Google quickly."; },
+            nl: function () { return "Ideaal om snel gevonden te worden op Google."; }
+        };
+        const WHY = {
+            fr: ["Optimisé pour générer des appels et réservations automatiquement.", "Solution complète pour vendre en ligne avec marketing vidéo inclus.", "L'IA travaille pour vous 24/7 et répond à vos clients automatiquement."],
+            en: ["Optimized to generate calls and bookings automatically.", "A complete solution to sell online, with video marketing included.", "AI works for you 24/7 and answers your customers automatically."],
+            nl: ["Geoptimaliseerd om automatisch oproepen en reserveringen te genereren.", "Complete oplossing om online te verkopen, inclusief videomarketing.", "AI werkt 24/7 voor je en beantwoordt je klanten automatisch."]
+        };
 
         function getRecommendation() {
             const goal = answers.goal;
@@ -156,10 +167,10 @@
                 };
                 return { rec: 'btpTest', alt: 'btpSolo', why: `${t('why')} ${w[lang]}` };
             }
-            if (goal === 0) { rec = 'pro'; alt = 'teaser'; why = `Parfait pour ${translations[lang].a1[answers.activity].toLowerCase()} qui veut être trouvé sur Google rapidement.`; } 
-            else if (goal === 1) { rec = 'pro'; alt = 'promax'; why = "Optimisé pour générer des appels et réservations automatiquement."; } 
-            else if (goal === 2) { rec = 'promax'; alt = 'marketingPro'; why = "Solution complète pour vendre en ligne avec marketing vidéo inclus."; } 
-            else if (goal === 3) { rec = 'aiPro'; alt = 'aiStarter'; why = "L'IA travaille pour vous 24/7 et répond à vos clients automatiquement."; }
+            if (goal === 0) { rec = 'pro'; alt = 'teaser'; why = WHY0[lang](translations[lang].a1[answers.activity].toLowerCase()); } 
+            else if (goal === 1) { rec = 'pro'; alt = 'promax'; why = WHY[lang][0]; } 
+            else if (goal === 2) { rec = 'promax'; alt = 'marketingPro'; why = WHY[lang][1]; } 
+            else if (goal === 3) { rec = 'aiPro'; alt = 'aiStarter'; why = WHY[lang][2]; }
             return { rec, alt, why: `${t('why')} ${why}` };
         }
 
@@ -168,6 +179,23 @@
             closeBtn.onclick = () => { window.close(); document.body.innerHTML = '<div style="text-align:center;padding:40px;color:white;"><h2>Quiz fermé</h2><p><a target="_top" href="/" style="color:#6366f1">Retour à l\'accueil</a></p></div>'; };
             document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBtn.click(); });
         }
+        // Si la page parente est deja la page cible (quiz ouvert sur Site Web),
+        // on ferme la modale et on defile jusqu'a l'ancre au lieu de ne rien faire.
+        document.addEventListener('click', function (e) {
+            var a = e.target.closest ? e.target.closest('a[target="_top"]') : null;
+            if (!a) return;
+            try {
+                var u = new URL(a.href, location.href), p = window.top.location;
+                var norm = function (x) { return x.replace(/\/$/, '').replace(/\.html$/, ''); };
+                if (u.origin === p.origin && norm(u.pathname) === norm(p.pathname)) {
+                    e.preventDefault();
+                    var cb = window.top.document.getElementById('close-quiz-modal');
+                    if (cb) cb.click();
+                    var tgt = u.hash ? window.top.document.querySelector(u.hash) : null;
+                    if (tgt) setTimeout(function () { tgt.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50);
+                }
+            } catch (err) {}
+        });
         init();
     </script>
 </body>
