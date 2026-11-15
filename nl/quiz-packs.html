@@ -55,9 +55,9 @@
     </div>
     <script>
         const translations = {
-            fr: { q1: "Ton activité ?", q2: "Tu as déjà un site ?", q3: "Ton objectif principal ?", q4: "Pour quand ?", a1: ["Restaurant", "Coiffure et beauté", "Commerce", "Autre"], a2: ["Non", "Oui", "Oui, mais il est à refaire"], a3: ["Être trouvé sur Google", "Recevoir des appels ou réservations", "Vendre en ligne", "Gagner du temps grâce à l'IA"], a4: ["Le plus vite possible", "Dans le mois", "Je me renseigne"], resTitle: "Ton pack idéal est trouvé !", resSub: "Basé sur tes réponses, voici notre recommandation", rec: "RECOMMANDÉ", alt: "Alternative", why: "Pourquoi ce pack ?", all: "Voir tous les packs", close: "Fermer", back: "Retour" },
-            en: { q1: "Your business?", q2: "Do you already have a website?", q3: "Your main goal?", q4: "When do you need it?", a1: ["Restaurant", "Hair & Beauty", "Retail Shop", "Other"], a2: ["No", "Yes", "Yes, but needs redesign"], a3: ["Be found on Google", "Get calls or bookings", "Sell online", "Save time with AI"], a4: ["As soon as possible", "Within a month", "Just browsing"], resTitle: "Your ideal pack is found!", resSub: "Based on your answers, here's our recommendation", rec: "RECOMMENDED", alt: "Alternative", why: "Why this pack?", all: "View all packs", close: "Close", back: "Back" },
-            nl: { q1: "Jouw activiteit?", q2: "Heb je al een website?", q3: "Je belangrijkste doel?", q4: "Wanneer heb je het nodig?", a1: ["Restaurant", "Kappers & Schoonheid", "Winkel", "Andere"], a2: ["Nee", "Ja", "Ja, maar moet vernieuwd worden"], a3: ["Gevonden worden op Google", "Oproepen of reserveringen ontvangen", "Online verkopen", "Tijd besparen met AI"], a4: ["Zo snel mogelijk", "Binnen een maand", "Ik oriënteer me"], resTitle: "Jouw ideale pakket is gevonden!", resSub: "Gebaseerd op je antwoorden, hier is onze aanbeveling", rec: "AANBEVOLEN", alt: "Alternatief", why: "Waarom dit pakket?", all: "Bekijk alle pakketten", close: "Sluiten", back: "Terug" }
+            fr: { q1: "Ton activité ?", q2: "Tu as déjà un site ?", q3: "Ton objectif principal ?", q4: "Pour quand ?", a1: ["Restaurant", "Coiffure et beauté", "Commerce", "Artisan / BTP", "Autre"], a2: ["Non", "Oui", "Oui, mais il est à refaire"], a3: ["Être trouvé sur Google", "Recevoir des appels ou réservations", "Vendre en ligne", "Gagner du temps grâce à l'IA"], a4: ["Le plus vite possible", "Dans le mois", "Je me renseigne"], resTitle: "Ton pack idéal est trouvé !", resSub: "Basé sur tes réponses, voici notre recommandation", rec: "RECOMMANDÉ", alt: "Alternative", why: "Pourquoi ce pack ?", all: "Voir tous les packs", close: "Fermer", back: "Retour" },
+            en: { q1: "Your business?", q2: "Do you already have a website?", q3: "Your main goal?", q4: "When do you need it?", a1: ["Restaurant", "Hair & Beauty", "Retail Shop", "Tradesperson / Construction", "Other"], a2: ["No", "Yes", "Yes, but needs redesign"], a3: ["Be found on Google", "Get calls or bookings", "Sell online", "Save time with AI"], a4: ["As soon as possible", "Within a month", "Just browsing"], resTitle: "Your ideal pack is found!", resSub: "Based on your answers, here's our recommendation", rec: "RECOMMENDED", alt: "Alternative", why: "Why this pack?", all: "View all packs", close: "Close", back: "Back" },
+            nl: { q1: "Jouw activiteit?", q2: "Heb je al een website?", q3: "Je belangrijkste doel?", q4: "Wanneer heb je het nodig?", a1: ["Restaurant", "Kappers & Schoonheid", "Winkel", "Ambachtsman / Bouw", "Andere"], a2: ["Nee", "Ja", "Ja, maar moet vernieuwd worden"], a3: ["Gevonden worden op Google", "Oproepen of reserveringen ontvangen", "Online verkopen", "Tijd besparen met AI"], a4: ["Zo snel mogelijk", "Binnen een maand", "Ik oriënteer me"], resTitle: "Jouw ideale pakket is gevonden!", resSub: "Gebaseerd op je antwoorden, hier is onze aanbeveling", rec: "AANBEVOLEN", alt: "Alternatief", why: "Waarom dit pakket?", all: "Bekijk alle pakketten", close: "Sluiten", back: "Terug" }
         };
         const packs = {
             teaser: { name: { fr: "Teaser", en: "Teaser", nl: "Teaser" }, price: { fr: "399€", en: "€399", nl: "€399" }, period: { fr: "(paiement unique)", en: "(one-time)", nl: "(eenmalig)" }, link: "/#offre" },
@@ -65,6 +65,8 @@
             promax: { name: { fr: "Pro Max", en: "Pro Max", nl: "Pro Max" }, price: { fr: "1 139€", en: "€1,139", nl: "€1.139" }, period: { fr: "(paiement unique)", en: "(one-time)", nl: "(eenmalig)" }, link: "/#offre" },
             aiStarter: { name: { fr: "AI Concierge Starter", en: "AI Concierge Starter", nl: "AI Concierge Starter" }, price: { fr: "1 000€", en: "€1,000", nl: "€1.000" }, period: { fr: "/mois", en: "/month", nl: "/maand" }, link: "/ai-concierge.html" },
             aiPro: { name: { fr: "AI Concierge Pro", en: "AI Concierge Pro", nl: "AI Concierge Pro" }, price: { fr: "1 500€", en: "€1,500", nl: "€1.500" }, period: { fr: "/mois", en: "/month", nl: "/maand" }, link: "/ai-concierge.html" },
+            btpTest: { name: { fr: "Cadence BTP — Essai", en: "Cadence BTP — Trial", nl: "Cadence BTP — Proef" }, price: { fr: "0€", en: "€0", nl: "€0" }, period: { fr: "(2 devis offerts)", en: "(2 free quotes)", nl: "(2 gratis offertes)" }, link: "/btp.html#test-gratuit" },
+            btpSolo: { name: { fr: "Cadence BTP — Artisan Solo", en: "Cadence BTP — Solo Tradesperson", nl: "Cadence BTP — Solo Ambachtsman" }, price: { fr: "190€", en: "€190", nl: "€190" }, period: { fr: "/mois", en: "/month", nl: "/maand" }, link: "/btp.html#tarifs" },
             marketingPro: { name: { fr: "Marketing Pro", en: "Marketing Pro", nl: "Marketing Pro" }, price: { fr: "24,90€", en: "€24.90", nl: "€24,90" }, period: { fr: "/mois", en: "/month", nl: "/maand" }, link: "/studio/marketing/" }
         };
         let currentQuestion = 0;
@@ -100,7 +102,7 @@
         }
 
         function t(key) { return translations[lang][key] || translations.fr[key]; }
-        function withLang(l) { return (l.startsWith("/#") && lang !== "fr") ? "/" + lang + l : l; }
+        function withLang(l) { return ((l.startsWith("/#") || l.startsWith("/btp.html")) && lang !== "fr") ? "/" + lang + l : l; }
 
         function showQuestion() {
             const q = questions[currentQuestion];
@@ -146,6 +148,14 @@
         function getRecommendation() {
             const goal = answers.goal;
             let rec, alt, why;
+            if (answers.activity === 3) {
+                const w = {
+                    fr: "Des relances WhatsApp automatiques pour transformer vos devis en attente en chantiers signés. Testez gratuitement sur 2 devis.",
+                    en: "Automatic WhatsApp follow-ups that turn pending quotes into signed jobs. Try it free on 2 quotes.",
+                    nl: "Automatische WhatsApp-herinneringen die openstaande offertes omzetten in getekende werven. Test gratis op 2 offertes."
+                };
+                return { rec: 'btpTest', alt: 'btpSolo', why: `${t('why')} ${w[lang]}` };
+            }
             if (goal === 0) { rec = 'pro'; alt = 'teaser'; why = `Parfait pour ${translations[lang].a1[answers.activity].toLowerCase()} qui veut être trouvé sur Google rapidement.`; } 
             else if (goal === 1) { rec = 'pro'; alt = 'promax'; why = "Optimisé pour générer des appels et réservations automatiquement."; } 
             else if (goal === 2) { rec = 'promax'; alt = 'marketingPro'; why = "Solution complète pour vendre en ligne avec marketing vidéo inclus."; } 
