@@ -618,6 +618,21 @@
             line-height: 1.7;
         }
 
+        
+        /* ===== SERVICES SLIDER ===== */
+        .svc-slider { position: relative; }
+        .svc-track { display: flex; gap: 2rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding: 12px 4px 32px; }
+        .svc-track::-webkit-scrollbar { display: none; }
+        .svc-slide { flex: 0 0 calc((100% - 2rem) / 2); scroll-snap-align: start; box-sizing: border-box; }
+        .svc-hook { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.05rem; color: #6366f1; margin: 0 0 .5rem; line-height: 1.35; }
+        .svc-nav { position: absolute; top: 42%; transform: translateY(-50%); z-index: 3; width: 44px; height: 44px; border-radius: 50%; border: 0; background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,.18); cursor: pointer; font-size: 24px; line-height: 1; color: #1e1b4b; }
+        .svc-nav:hover { box-shadow: 0 4px 16px rgba(99,102,241,.35); }
+        .svc-prev { left: -18px; } .svc-next { right: -18px; }
+        @media (max-width: 768px) {
+            .svc-slide { flex-basis: 88%; }
+            .svc-prev { left: 4px; } .svc-next { right: 4px; }
+        }
+
         /* ===== OFFER / PRICING ===== */
         .offer {
             padding: 6rem 0;
@@ -1272,10 +1287,10 @@
                 JCODE Agency
             </a>
             <div class="nav-links">
-                <a href="/ai-concierge.html" style="color:var(--primary);position:relative;">AI Concierge <span style="background:#ff006e;color:#fff;font-size:10px;padding:2px 6px;border-radius:8px;vertical-align:super;font-weight:700;">NEW</span></a>
-                <a href="/studio/index.html?lang=fr" style="color:var(--primary);position:relative;">VIDEOCREATOR <span style="background:#ff006e;color:#fff;font-size:10px;padding:2px 6px;border-radius:8px;vertical-align:super;font-weight:700;">NEW</span></a>
-                <a href="/studio/marketing/" data-fr="Marketing" data-nl="Marketing" data-en="Marketing" style="color:var(--primary);position:relative;">MARKETING <span style="background:#ff006e;color:#fff;font-size:10px;padding:2px 6px;border-radius:8px;vertical-align:super;font-weight:700;">NEW</span></a>
-                <a href="/site-web.html" data-i18n="common.nav.website" style="color:var(--primary);position:relative;">SITE WEB <span style="background:#ff006e;color:#fff;font-size:10px;padding:2px 6px;border-radius:8px;vertical-align:super;font-weight:700;">NEW</span></a>
+                <a href="/ai-concierge.html" style="color:var(--primary);position:relative;">AI Concierge</a>
+                <a href="/studio/index.html?lang=fr" style="color:var(--primary);position:relative;">VIDEOCREATOR</a>
+                <a href="/studio/marketing/" data-fr="Marketing" data-nl="Marketing" data-en="Marketing" style="color:var(--primary);position:relative;">MARKETING</a>
+                <a href="/site-web.html" data-i18n="common.nav.website" style="color:var(--primary);position:relative;">SITE WEB</a>
                 <a href="/blog/">Blog</a>
                 <a href="#contact" data-i18n="common.nav.contact">Contact</a>
 </div>
@@ -1363,21 +1378,23 @@
                 <h2 class="section-title" data-i18n="index.services.title">Une armée d'agents IA à votre service</h2>
                 <p class="section-subtitle" data-i18n="index.services.subtitle">Chaque agent est spécialisé dans une mission précise pour faire croître votre commerce sans effort.</p>
             </div>
-            <div class="services-grid">
-                <a href="/analytics-ai/" class="service-card reveal" style="text-decoration:none; color:inherit;">
+            <div class="svc-slider" aria-roledescription="carousel" aria-label="Nos services">
+                <button class="svc-nav svc-prev" aria-label="Précédent">&#8249;</button>
+                <div class="svc-track" id="svcTrack">
+                <a href="/analytics-ai/" class="service-card svc-slide" style="text-decoration:none; color:inherit;">
                     <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#ec4899,#d946ef);color:#fff;font-size:.7rem;font-weight:700;padding:.25rem .7rem;border-radius:50px;letter-spacing:.05em;">NEW</span>
                     <h3 data-i18n="index.services.analytics.title">Analytics AI</h3>
+                    <p class="svc-hook">Votre site est-il en règle ?</p>
                     <p data-i18n="index.services.analytics.desc">Collez l'adresse de votre site : l'IA l'analyse et vérifie sa conformité avec la législation des États-Unis, du Royaume-Uni et de l'Union européenne.</p>
                 </a>
-                <a href="studio/index.html?lang=fr" class="service-card reveal studio-card" style="display:block; text-decoration:none; color:inherit;">
+                <a href="studio/index.html?lang=fr" class="service-card svc-slide studio-card" style="display:block; text-decoration:none; color:inherit;">
                     <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
                     <h3 data-i18n="index.services.videocreator.title">VideoCreator</h3>
+                    <p class="svc-hook">Des vidéos qui vendent, sans tournage</p>
                     <p data-i18n="index.services.videocreator.desc">Production vidéo automatisée : visuels de propriétés, reels Instagram/TikTok, et contenu viral pour maximiser votre visibilité.</p>
                 </a>
 
-                <a href="/studio/marketing/" class="service-card reveal studio-card" style="display:block; text-decoration:none; color:inherit; position:relative; overflow:hidden;">
-                    <div style="position:absolute; top:1.2rem; right:1.2rem; background:linear-gradient(135deg,#6366f1,#d946ef); color:#fff; font-size:10px; padding:3px 8px; border-radius:8px; font-weight:800; letter-spacing:.04em;">NEW</div>
+                <a href="/studio/marketing/" class="service-card svc-slide studio-card" style="display:block; text-decoration:none; color:inherit; position:relative; overflow:hidden;">
                     <div class="service-icon" style="position:relative;">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <circle cx="12" cy="12" r="10"/>
@@ -1388,18 +1405,28 @@
                         <div style="position:absolute; inset:-8px; background:radial-gradient(circle, rgba(99,102,241,.25), transparent 70%); border-radius:50%; pointer-events:none;"></div>
                     </div>
                     <h3 style="background:linear-gradient(135deg,#6366f1,#8b5cf6 50%,#d946ef); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; font-size:1.35rem; margin-top:.3rem;">Studio Marketing</h3>
+                    <p class="svc-hook">10 pubs vidéo prêtes à publier</p>
                     <p style="color:var(--muted); margin-top:.4rem;" data-i18n="index.cards.studio.desc">Vidéos publicitaires IA prêtes à publier : 10 types de campagne, formats TikTok / Reels / YouTube, accroche et appel à l'action intégrés.</p>
                     <div style="margin-top:.9rem; display:flex; align-items:center; gap:.5rem; font-size:.78rem; color:#c7d2fe; font-weight:600;">
                         <span style="background:rgba(99,102,241,.15); border:1px solid rgba(99,102,246,.3); padding:.2rem .6rem; border-radius:999px;" data-i18n="index.cards.studio.price">dès 9,90 €/mois</span>
                         <span style="opacity:.7;">→</span>
                     </div>
                 </a>
-                <a href="/ai-concierge.html" class="service-card reveal" style="text-decoration:none; color:inherit;">
+                <a href="/ai-concierge.html" class="service-card svc-slide" style="text-decoration:none; color:inherit;">
                     <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
                     <h3>AI Concierge</h3>
+                    <p class="svc-hook">On automatise, vous encaissez</p>
                     <p data-i18n="index.cards.concierge.desc">Votre partenaire automatisation IA. Done-with-you : on construit ensemble vos workflows, vos skills Claude, vos automatisations.</p>
                 </a>
+                <a href="/btp.html" class="service-card svc-slide" style="display:block; text-decoration:none; color:inherit;">
+                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V10l7-6 7 6v11"/><path d="M9 21v-6h6v6"/></svg></div>
+                    <h3>Cadence BTP</h3>
+                    <p class="svc-hook">Vos devis dorment ? Réveillez-les.</p>
+                    <p>Relances WhatsApp automatiques pour artisans belges : transformez vos devis en attente en chantiers signés. Essai gratuit sur 2 devis.</p>
+                </a>
 
+            </div>
+                <button class="svc-nav svc-next" aria-label="Suivant">&#8250;</button>
             </div>
         </div>
     </section>
@@ -2001,5 +2028,34 @@ if (host) {
 })();
 </script>
 
+
+<script>
+/* services-slider-autoplay */
+(function () {
+  var t = document.getElementById('svcTrack');
+  if (!t) return;
+  var gap = 32, paused = false, timer;
+  function step() { var s = t.querySelector('.svc-slide'); return s.offsetWidth + gap; }
+  function next() {
+    if (t.scrollLeft + t.clientWidth >= t.scrollWidth - 5) t.scrollTo({ left: 0 });
+    else t.scrollBy({ left: step() });
+  }
+  function prev() { t.scrollBy({ left: -step() }); }
+  function stop() { clearInterval(timer); }
+  function start() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    stop(); timer = setInterval(function () { if (!paused) next(); }, 3500);
+  }
+  var b = document.querySelector('.svc-next'), a = document.querySelector('.svc-prev');
+  if (b) b.addEventListener('click', function () { next(); start(); });
+  if (a) a.addEventListener('click', function () { prev(); start(); });
+  t.addEventListener('mouseenter', function () { paused = true; });
+  t.addEventListener('mouseleave', function () { paused = false; });
+  t.addEventListener('touchstart', function () { paused = true; }, { passive: true });
+  t.addEventListener('touchend', function () { setTimeout(function () { paused = false; }, 2500); });
+  document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
+  start();
+})();
+</script>
 </body>
 </html>
