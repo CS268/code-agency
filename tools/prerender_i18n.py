@@ -15,6 +15,11 @@ BASE = "https://jcode.store"
 
 PAGES = ["index.html", "ai-concierge.html", "aoa-framework.html", "blog/index.html"]
 LOCALIZED = set(PAGES)
+ZH_PAGES = {"index.html", "ai-concierge.html"}  # pages ayant une version chinoise (zh/ maintenue à la main)
+
+
+def zh_canonical(page):
+    return BASE + "/zh/" + public_path(page)
 
 META = {
     "index.html": {
@@ -124,6 +129,8 @@ def hreflang_block(page):
     lines = []
     for lang in ("fr", "en", "nl"):
         lines.append('<link rel="alternate" hreflang="%s" href="%s">' % (lang, canonical(page, lang)))
+    if page in ZH_PAGES:
+        lines.append('<link rel="alternate" hreflang="zh" href="%s">' % zh_canonical(page))
     lines.append('<link rel="alternate" hreflang="x-default" href="%s">' % canonical(page, "fr"))
     return "\n    " + "\n    ".join(lines) + "\n"
 
@@ -451,8 +458,10 @@ def update_sitemap():
     for page in PAGES:
         fr = canonical(page, "fr")
         links = ""
-        for lang in ("fr", "en", "nl", "x-default"):
-            href = canonical(page, "fr") if lang == "x-default" else canonical(page, lang)
+        for lang in ("fr", "en", "nl", "zh", "x-default"):
+            if lang == "zh" and page not in ZH_PAGES:
+                continue
+            href = canonical(page, "fr") if lang == "x-default" else (zh_canonical(page) if lang == "zh" else canonical(page, lang))
             links += '\n    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>' % (lang, href)
         pat = re.compile(r'(<loc>' + re.escape(fr) + r'</loc>(?:\s*<lastmod>[^<]*</lastmod>)?)')
         if pat.search(s):
@@ -462,11 +471,18 @@ def update_sitemap():
             if "<loc>" + loc + "</loc>" not in s:
                 entry = '\n  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.7</priority>%s\n  </url>' % (loc, today, links)
                 s = s.replace("</urlset>", entry + "\n</urlset>", 1)
+        if page in ZH_PAGES:
+            loc = zh_canonical(page)
+            if "<loc>" + loc + "</loc>" not in s:
+                entry = '\n  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.7</priority>%s\n  </url>' % (loc, today, links)
+                s = s.replace("</urlset>", entry + "\n</urlset>", 1)
     with open(path, "w", encoding="utf-8") as f:
         f.write(s)
 
 
 def main():
+    if os.environ.get("PRERENDER_FORCE") != "1":
+        sys.exit("Refus : ce generateur est en retard sur les pages EN/NL/ZH modifiees a la main. PRERENDER_FORCE=1 pour forcer.")
     missing = [p for p in PAGES if not os.path.exists(os.path.join(ROOT, p))]
     if missing:
         print("AUCUNE ECRITURE. Fichier(s) introuvable(s) :")
