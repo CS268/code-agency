@@ -152,7 +152,7 @@
 
     const inputField = document.createElement('input');
     inputField.type = 'text';
-    inputField.placeholder = ({fr: "Écrivez votre message...", nl: "Typ uw bericht...", en: "Type your message..."})[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || "Type your message...";
+    inputField.placeholder = ({zh: "请输入您的消息...", fr: "Écrivez votre message...", nl: "Typ uw bericht...", en: "Type your message..."})[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || "Type your message...";
     inputField.style.flex = '1';
     inputField.style.padding = '10px 14px';
     inputField.style.border = '1px solid #d1d5db';
@@ -161,7 +161,7 @@
     inputField.style.fontSize = '14px';
 
     const sendButton = document.createElement('button');
-    sendButton.textContent = ({fr: "Envoyer", nl: "Verzenden", en: "Send"})[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || "Send";
+    sendButton.textContent = ({zh: "发送", fr: "Envoyer", nl: "Verzenden", en: "Send"})[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || "Send";
     sendButton.style.padding = '10px 20px';
     sendButton.style.backgroundColor = config.colors.primary;
     sendButton.style.color = 'white';
@@ -225,7 +225,7 @@
 
       // Show welcome message if no history
       if (chatHistory.length === 0) {
-        showBotMessage(({fr: "Bonjour ! Je suis JCODE Assistant. Sites web, AI Concierge ou Studio Marketing : comment puis-je vous aider ?", nl: "Hallo! Ik ben JCODE Assistant. Websites, AI Concierge of Studio Marketing: waarmee kan ik u helpen?", en: "Hello! I'm JCODE Assistant. Websites, AI Concierge or Studio Marketing: how can I help you today?"})[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || "Hello! I'm JCODE Assistant. How can I help you today?");
+        showBotMessage(({zh: "您好！我是 JCODE 助手。网站、AI Concierge 或 Studio Marketing：我能为您做些什么？", fr: "Bonjour ! Je suis JCODE Assistant. Sites web, AI Concierge ou Studio Marketing : comment puis-je vous aider ?", nl: "Hallo! Ik ben JCODE Assistant. Websites, AI Concierge of Studio Marketing: waarmee kan ik u helpen?", en: "Hello! I'm JCODE Assistant. Websites, AI Concierge or Studio Marketing: how can I help you today?"})[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || "Hello! I'm JCODE Assistant. How can I help you today?");
       }
     } else {
       chatWindow.style.opacity = '0';
@@ -309,13 +309,13 @@
         currentHistory.push(botMessage);
         saveHistory();
     } else {
-        showBotMessage(({fr: "Désolé, je n'ai pas compris. Pouvez-vous reformuler ?", nl: "Sorry, dat heb ik niet begrepen. Kunt u het anders formuleren?", en: "Sorry, I didn't understand. Could you rephrase?"})[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || "Désolé, je n'ai pas compris. Pouvez-vous reformuler ?");
+        showBotMessage(({zh: "抱歉，我没有理解。您能换一种说法吗？", fr: "Désolé, je n'ai pas compris. Pouvez-vous reformuler ?", nl: "Sorry, dat heb ik niet begrepen. Kunt u het anders formuleren?", en: "Sorry, I didn't understand. Could you rephrase?"})[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || "Désolé, je n'ai pas compris. Pouvez-vous reformuler ?");
     }
 })
 .catch(error => {
     console.error('Chatbot error:', error);
     removeTypingIndicator();
-    showBotMessage(({fr: "Je suis momentanément indisponible. Laissez-moi vos coordonnées (prénom, email, téléphone) et je vous recontacte sous 24h ! 📩", nl: "Ik ben momenteel niet beschikbaar. Laat uw gegevens achter (voornaam, e-mail, telefoon) en ik neem binnen 24 uur contact met u op! 📩", en: "I'm temporarily unavailable. Leave your details (first name, email, phone) and I'll get back to you within 24 hours! 📩"})[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || "Je suis momentanément indisponible. Laissez-moi vos coordonnées (prénom, email, téléphone) et je vous recontacte sous 24h ! 📩");
+    showBotMessage(({zh: "我暂时无法使用。请留下您的联系方式（名字、邮箱、电话），我会在 24 小时内与您联系！📩", fr: "Je suis momentanément indisponible. Laissez-moi vos coordonnées (prénom, email, téléphone) et je vous recontacte sous 24h ! 📩", nl: "Ik ben momenteel niet beschikbaar. Laat uw gegevens achter (voornaam, e-mail, telefoon) en ik neem binnen 24 uur contact met u op! 📩", en: "I'm temporarily unavailable. Leave your details (first name, email, phone) and I'll get back to you within 24 hours! 📩"})[(document.documentElement.lang || 'fr').slice(0, 2).toLowerCase()] || "Je suis momentanément indisponible. Laissez-moi vos coordonnées (prénom, email, téléphone) et je vous recontacte sous 24h ! 📩");
 });
 
   }

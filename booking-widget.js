@@ -25,6 +25,38 @@
     services: ['Site web', 'Chatbot IA', 'Réservation Auto', 'Marketing automatisé', 'Autre']
   };
 
+  // Traductions chinoises (affichage seulement ; les valeurs envoyées au serveur restent en français)
+  const ZH = {
+    'Réserver une démo': '预约演示',
+    'Ouvrir le formulaire de réservation': '打开预约表单',
+    'Réservation Auto': '自动预约',
+    'Fermer': '关闭',
+    'Service': '服务',
+    'Date': '日期',
+    'Heure': '时间',
+    'Nom': '姓名',
+    'Email': '邮箱',
+    'Téléphone': '电话',
+    'Votre nom': '您的姓名',
+    'votre@email.com': '您的邮箱',
+    'Confirmer la réservation': '确认预订',
+    'Envoi en cours...': '发送中...',
+    'Réservation confirmée': '预订已确认',
+    'Un email de confirmation vient de vous être envoyé. Nous vous recontactons très vite !': '确认邮件已发送给您。我们会尽快与您联系！',
+    'Merci de remplir tous les champs (Service, Date, Heure, Nom, Email).': '请填写所有字段（服务、日期、时间、姓名、邮箱）。',
+    'Erreur lors de la réservation. Veuillez réessayer.': '预订时出错，请重试。',
+    'Erreur de connexion. Veuillez réessayer.': '连接错误，请重试。',
+    'Site web': '网站',
+    'Chatbot IA': 'AI 聊天机器人',
+    'Marketing automatisé': '自动化营销',
+    'Autre': '其他',
+    ' à ': ' '
+  };
+  function tr(fr) {
+    var l = (document.documentElement.lang || 'fr').slice(0, 2).toLowerCase();
+    return (l === 'zh' && ZH[fr] !== undefined) ? ZH[fr] : fr;
+  }
+
   // State
   let isOpen = false;
 
@@ -50,8 +82,8 @@
     button.style.justifyContent = 'center';
     button.style.fontSize = '24px';
     button.innerHTML = '📅';
-    button.title = 'Réserver une démo';
-    button.setAttribute('aria-label', 'Ouvrir le formulaire de réservation');
+    button.title = tr('Réserver une démo');
+    button.setAttribute('aria-label', tr('Ouvrir le formulaire de réservation'));
 
     // Booking panel (opens above the mauve button: 20 + 60 + 60 + 24)
     const panel = document.createElement('div');
@@ -92,7 +124,7 @@
     statusDot.style.background = '#22c55e';
 
     const title = document.createElement('h3');
-    title.textContent = 'Réservation Auto';
+    title.textContent = tr('Réservation Auto');
     title.style.margin = '0';
     title.style.fontSize = '16px';
     title.style.fontWeight = '600';
@@ -107,7 +139,7 @@
     closeBtn.style.color = '#fff';
     closeBtn.style.cursor = 'pointer';
     closeBtn.style.fontSize = '18px';
-    closeBtn.title = 'Fermer';
+    closeBtn.title = tr('Fermer');
     closeBtn.addEventListener('click', togglePanel);
 
     header.appendChild(headerTitleWrap);
@@ -164,7 +196,7 @@
       options.forEach(function(opt) {
         const option = document.createElement('option');
         option.value = opt;
-        option.textContent = opt;
+        option.textContent = tr(opt);
         option.style.background = '#1e293b';
         option.style.color = '#e2e8f0';
         select.appendChild(option);
@@ -174,13 +206,13 @@
 
     // Service
     const serviceWrap = document.createElement('div');
-    serviceWrap.appendChild(createLabel('Service'));
+    serviceWrap.appendChild(createLabel(tr('Service')));
     const serviceSelect = createSelect(config.services);
     serviceWrap.appendChild(serviceSelect);
 
     // Date
     const dateWrap = document.createElement('div');
-    dateWrap.appendChild(createLabel('Date'));
+    dateWrap.appendChild(createLabel(tr('Date')));
     const dateInput = createInput('date');
     const today = new Date();
     const todayStr = today.toISOString().split('T')[0];
@@ -189,7 +221,7 @@
 
     // Heure
     const timeWrap = document.createElement('div');
-    timeWrap.appendChild(createLabel('Heure'));
+    timeWrap.appendChild(createLabel(tr('Heure')));
     const timeInput = createInput('time');
     timeInput.min = '09:00';
     timeInput.max = '20:00';
@@ -197,26 +229,26 @@
 
     // Nom
     const nameWrap = document.createElement('div');
-    nameWrap.appendChild(createLabel('Nom'));
-    const nameInput = createInput('text', 'Votre nom');
+    nameWrap.appendChild(createLabel(tr('Nom')));
+    const nameInput = createInput('text', tr('Votre nom'));
     nameWrap.appendChild(nameInput);
 
     // Email
     const emailWrap = document.createElement('div');
-    emailWrap.appendChild(createLabel('Email'));
-    const emailInput = createInput('email', 'votre@email.com');
+    emailWrap.appendChild(createLabel(tr('Email')));
+    const emailInput = createInput('email', tr('votre@email.com'));
     emailWrap.appendChild(emailInput);
 
     // Téléphone
     const phoneWrap = document.createElement('div');
-    phoneWrap.appendChild(createLabel('Téléphone'));
+    phoneWrap.appendChild(createLabel(tr('Téléphone')));
     const phoneInput = createInput('tel', '0470/00.00.00');
     phoneWrap.appendChild(phoneInput);
 
     // Submit button
     const submitBtn = document.createElement('button');
     submitBtn.type = 'button';
-    submitBtn.textContent = 'Confirmer la réservation';
+    submitBtn.textContent = tr('Confirmer la réservation');
     submitBtn.style.width = '100%';
     submitBtn.style.padding = '12px';
     submitBtn.style.background = config.colors.headerGradient;
@@ -252,7 +284,7 @@
     confirmIcon.textContent = '✅';
 
     const confirmTitle = document.createElement('div');
-    confirmTitle.textContent = 'Réservation confirmée';
+    confirmTitle.textContent = tr('Réservation confirmée');
     confirmTitle.style.color = '#34d399';
     confirmTitle.style.fontSize = '16px';
     confirmTitle.style.fontWeight = '700';
@@ -267,10 +299,10 @@
     confirmNote.style.color = config.colors.label;
     confirmNote.style.fontSize = '11px';
     confirmNote.style.lineHeight = '1.5';
-    confirmNote.textContent = 'Un email de confirmation vient de vous être envoyé. Nous vous recontactons très vite !';
+    confirmNote.textContent = tr('Un email de confirmation vient de vous être envoyé. Nous vous recontactons très vite !');
 
     const confirmClose = document.createElement('button');
-    confirmClose.textContent = 'Fermer';
+    confirmClose.textContent = tr('Fermer');
     confirmClose.style.padding = '10px 20px';
     confirmClose.style.background = 'rgba(255,255,255,0.08)';
     confirmClose.style.color = '#fff';
@@ -348,13 +380,13 @@
     const phone = document.querySelector('#jcode-booking-window input[type="tel"]').value;
 
     if (!service || !date || !time || !name || !email) {
-      alert('Merci de remplir tous les champs (Service, Date, Heure, Nom, Email).');
+      alert(tr('Merci de remplir tous les champs (Service, Date, Heure, Nom, Email).'));
       return;
     }
 
     const submitBtn = document.querySelector('#jcode-booking-window button[type="button"]');
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Envoi en cours...';
+    submitBtn.textContent = tr('Envoi en cours...');
 
     const payload = {
       service: service,
@@ -374,18 +406,18 @@
     .then(function(res) { return res.json(); })
     .then(function(data) {
       if (data.status === 'ok') {
-        const summary = service + ' — ' + date + ' à ' + time;
+        const summary = tr(service) + ' — ' + date + tr(' à ') + time;
         showConfirmation(summary);
       } else {
-        alert(data.message || 'Erreur lors de la réservation. Veuillez réessayer.');
+        alert(data.message || tr('Erreur lors de la réservation. Veuillez réessayer.'));
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Confirmer la réservation';
+        submitBtn.textContent = tr('Confirmer la réservation');
       }
     })
     .catch(function() {
-      alert('Erreur de connexion. Veuillez réessayer.');
+      alert(tr('Erreur de connexion. Veuillez réessayer.'));
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Confirmer la réservation';
+      submitBtn.textContent = tr('Confirmer la réservation');
     });
   }
 
