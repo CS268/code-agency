@@ -1032,67 +1032,80 @@
   "common.nav.home": {
     "fr": "Accueil",
     "en": "Home",
-    "nl": "Home"
+    "nl": "Home",
+    "zh": "首页"
   },
   "common.nav.method": {
     "fr": "Méthode",
     "en": "Method",
-    "nl": "Methode"
+    "nl": "Methode",
+    "zh": "方法"
   },
   "common.nav.pricing": {
     "fr": "Tarifs",
     "en": "Pricing",
-    "nl": "Prijzen"
+    "nl": "Prijzen",
+    "zh": "价格"
   },
   "common.nav.faq": {
     "fr": "FAQ",
     "en": "FAQ",
-    "nl": "FAQ"
+    "nl": "FAQ",
+    "zh": "常见问题"
   },
   "common.nav.cta": {
     "fr": "Appel Gratuit",
     "en": "Free Call",
-    "nl": "Gratis Gesprek"
+    "nl": "Gratis Gesprek",
+    "zh": "免费通话"
   },
   "common.footer.location": {
     "fr": "JCODE Agency — Mons, Belgique",
     "en": "JCODE Agency — Mons, Belgium",
-    "nl": "JCODE Agency — Bergen, België"
+    "nl": "JCODE Agency — Bergen, België",
+    "zh": "JCODE Agency — 比利时蒙斯"
   },
   "common.footer.privacy": {
     "fr": "Confidentialité",
     "en": "Privacy Policy",
-    "nl": "Privacybeleid"
+    "nl": "Privacybeleid",
+    "zh": "隐私政策"
   },
   "common.footer.terms": {
     "fr": "Conditions",
     "en": "Terms",
-    "nl": "Voorwaarden"
+    "nl": "Voorwaarden",
+    "zh": "条款"
   },
   "common.footer.legal": {
     "fr": "Mentions légales",
     "en": "Legal Notice",
-    "nl": "Juridische vermeldingen"
+    "nl": "Juridische vermeldingen",
+    "zh": "法律声明"
   },
   "common.footer.copyright": {
     "fr": "© 2026 JCODE Agency. Tous droits réservés.",
     "en": "© 2026 JCODE Agency. All rights reserved.",
-    "nl": "© 2026 JCODE Agency. Alle rechten voorbehouden."
+    "nl": "© 2026 JCODE Agency. Alle rechten voorbehouden.",
+    "zh": "© 2026 JCODE Agency. 保留所有权利。"
   },
   "common.cookie.text": {
     "fr": "Ce site utilise des cookies pour améliorer votre expérience, analyser le trafic et personnaliser le contenu. Vous pouvez choisir d'accepter, de personnaliser ou de refuser.",
     "en": "This site uses cookies to improve your experience, analyze traffic and personalize content. You can choose to accept, customize or decline.",
-    "nl": "Deze site gebruikt cookies om uw ervaring te verbeteren, het verkeer te analyseren en inhoud te personaliseren. U kunt kiezen om te accepteren, aan te passen of te weigeren."
+    "nl": "Deze site gebruikt cookies om uw ervaring te verbeteren, het verkeer te analyseren en inhoud te personaliseren. U kunt kiezen om te accepteren, aan te passen of te weigeren.",
+    "zh": "本网站使用 Cookie 来改善您的体验、分析流量并个性化内容。您可以选择接受、自定义或拒绝。"
   },
   "common.cookie.accept": {
     "fr": "Accepter",
     "en": "Accept",
-    "nl": "Accepteren"
+    "nl": "Accepteren",
+    "zh": "接受"
   },
   "common.cookie.refuse": {
     "fr": "Refuser",
     "en": "Decline",
-    "nl": "Weigeren"
+    "nl": "Weigeren",
+    "zh": "拒绝"
   },
   "common.back": {
     "fr": "← Retour au site",
@@ -1102,402 +1115,482 @@
   "concierge.hero.badge": {
     "fr": "✨ NOUVEAU SERVICE",
     "en": "✨ NEW SERVICE",
-    "nl": "✨ NIEUWE DIENST"
+    "nl": "✨ NIEUWE DIENST",
+    "zh": "✨ 全新服务"
   },
   "concierge.hero.title": {
     "fr": "AI Concierge",
     "en": "AI Concierge",
-    "nl": "AI Concierge"
+    "nl": "AI Concierge",
+    "zh": "AI Concierge"
   },
   "concierge.hero.desc": {
     "fr": "Votre partenaire automatisation IA. Done-with-you : on construit ensemble vos workflows, vos skills Claude, vos automatisations Make.com.",
     "en": "Your AI automation partner. Done-with-you: we build your workflows, Claude skills, and Make.com automations together.",
-    "nl": "Uw partner in IA-automatisering. Done-with-you: samen bouwen we uw workflows, Claude skills en Make.com automatiseringen."
+    "nl": "Uw partner in IA-automatisering. Done-with-you: samen bouwen we uw workflows, Claude skills en Make.com automatiseringen.",
+    "zh": "您的 AI 自动化伙伴。Done-with-you 共创模式：我们与您一起搭建工作流、Claude 技能和 Make.com 自动化。"
   },
   "concierge.hero.cta": {
     "fr": "Réserver un appel découverte gratuit →",
     "en": "Book a free discovery call →",
-    "nl": "Boek een gratis kennismakingsgesprek →"
+    "nl": "Boek een gratis kennismakingsgesprek →",
+    "zh": "预约免费了解通话 →"
   },
   "concierge.aoa.title": {
     "fr": "La Méthode A.O.A.",
     "en": "The A.O.A. Method",
-    "nl": "De A.O.A. Methode"
+    "nl": "De A.O.A. Methode",
+    "zh": "A.O.A. 方法"
   },
   "concierge.aoa.subtitle": {
     "fr": "Chaque session suit un framework éprouvé en 3 phases pour maximiser votre ROI.",
     "en": "Every session follows a proven 3-phase framework to maximize your ROI.",
-    "nl": "Elke sessie volgt een bewezen framework in 3 fasen om uw ROI te maximaliseren."
+    "nl": "Elke sessie volgt een bewezen framework in 3 fasen om uw ROI te maximaliseren.",
+    "zh": "每次辅导都遵循经过验证的三阶段框架，最大化您的投资回报。"
   },
   "concierge.aoa.audit.title": {
     "fr": "Audit",
     "en": "Audit",
-    "nl": "Audit"
+    "nl": "Audit",
+    "zh": "审计"
   },
   "concierge.aoa.audit.desc": {
     "fr": "Cartographie complète de vos processus actuels. Identification des goulots d'étranglement. Score de maturité IA. Quick wins immédiats.",
     "en": "Complete mapping of your current processes. Bottleneck identification. AI maturity score. Immediate quick wins.",
-    "nl": "Volledige mapping van uw huidige processen. Identificatie van knelpunten. IA-rijpheidsscore. Directe quick wins."
+    "nl": "Volledige mapping van uw huidige processen. Identificatie van knelpunten. IA-rijpheidsscore. Directe quick wins.",
+    "zh": "全面梳理您当前的业务流程。识别瓶颈。AI 成熟度评分。立即可见的快速成效。"
   },
   "concierge.aoa.optimize.title": {
     "fr": "Optimize",
     "en": "Optimize",
-    "nl": "Optimize"
+    "nl": "Optimize",
+    "zh": "优化"
   },
   "concierge.aoa.optimize.desc": {
     "fr": "Suppression des étapes inutiles. Standardisation des flux. Documentation des processus. Préparation à l'automatisation.",
     "en": "Remove unnecessary steps. Standardize workflows. Document processes. Prepare for automation.",
-    "nl": "Verwijdering van onnodige stappen. Standaardisatie van workflows. Documentatie van processen. Voorbereiding op automatisering."
+    "nl": "Verwijdering van onnodige stappen. Standaardisatie van workflows. Documentatie van processen. Voorbereiding op automatisering.",
+    "zh": "去除不必要的步骤。规范工作流程。将流程文档化。为自动化做好准备。"
   },
   "concierge.aoa.automate.title": {
     "fr": "Automate",
     "en": "Automate",
-    "nl": "Automate"
+    "nl": "Automate",
+    "zh": "自动化"
   },
   "concierge.aoa.automate.desc": {
     "fr": "Création de skills Claude sur mesure. Déploiement de workflows Make.com. Intégrations (Gmail, Notion, Stripe, Vercel). Formation autonome.",
     "en": "Custom Claude skills. Make.com workflow deployment. Integrations (Gmail, Notion, Stripe, Vercel). Autonomous training.",
-    "nl": "Op maat gemaakte Claude skills. Implementatie van Make.com workflows. Integraties (Gmail, Notion, Stripe, Vercel). Autonome training."
+    "nl": "Op maat gemaakte Claude skills. Implementatie van Make.com workflows. Integraties (Gmail, Notion, Stripe, Vercel). Autonome training.",
+    "zh": "定制 Claude 技能。部署 Make.com 工作流。集成（Gmail、Notion、Stripe、Vercel）。自主上手培训。"
   },
   "concierge.deliverables.title": {
     "fr": "Ce que vous obtenez",
     "en": "What you get",
-    "nl": "Wat u krijgt"
+    "nl": "Wat u krijgt",
+    "zh": "您将获得"
   },
   "concierge.deliverables.subtitle": {
     "fr": "Des livrables concrets, quantifiables, qui vous font gagner du temps chaque semaine.",
     "en": "Concrete, measurable deliverables that save you time every week.",
-    "nl": "Concrete, meetbare deliverables die u elke week tijd besparen."
+    "nl": "Concrete, meetbare deliverables die u elke week tijd besparen.",
+    "zh": "具体、可衡量的成果，每周都为您节省时间。"
   },
   "concierge.del.calls.title": {
     "fr": "2 appels/mois (45 min)",
     "en": "2 calls/month (45 min)",
-    "nl": "2 calls/maand (45 min)"
+    "nl": "2 calls/maand (45 min)",
+    "zh": "每月 2 次通话（每次 45 分钟）"
   },
   "concierge.del.calls.desc": {
     "fr": "Sessions stratégiques 1:1 pour avancer sur vos automatisations",
     "en": "1:1 strategy sessions to advance your automations",
-    "nl": "1:1 strategische sessies om uw automatiseringen vooruit te helpen"
+    "nl": "1:1 strategische sessies om uw automatiseringen vooruit te helpen",
+    "zh": "一对一策略会议，推进您的自动化进程"
   },
   "concierge.del.voxer.title": {
     "fr": "DM illimité",
     "en": "Unlimited DM",
-    "nl": "Onbeperkt DM"
+    "nl": "Onbeperkt DM",
+    "zh": "不限次数私信"
   },
   "concierge.del.voxer.desc": {
     "fr": "Questions/réponses asynchrones, réponse sous 12h",
     "en": "Async Q&A, response within 12h",
-    "nl": "Asynchroon vragen/antwoorden, reactie binnen 12u"
+    "nl": "Asynchroon vragen/antwoorden, reactie binnen 12u",
+    "zh": "异步问答，12 小时内回复"
   },
   "concierge.del.hub.title": {
     "fr": "Hub Notion personnalisé",
     "en": "Custom Notion Hub",
-    "nl": "Gepersonaliseerde Notion Hub"
+    "nl": "Gepersonaliseerde Notion Hub",
+    "zh": "定制 Notion 中枢"
   },
   "concierge.del.hub.desc": {
     "fr": "Dashboard centralisé : appels, action items, deliverables, ROI",
     "en": "Centralized dashboard: calls, action items, deliverables, ROI",
-    "nl": "Gecentraliseerd dashboard: calls, actiepunten, deliverables, ROI"
+    "nl": "Gecentraliseerd dashboard: calls, actiepunten, deliverables, ROI",
+    "zh": "集中式仪表板：通话、待办事项、交付成果、投资回报"
   },
   "concierge.del.skills.title": {
     "fr": "Skills Claude sur mesure",
     "en": "Custom Claude skills",
-    "nl": "Claude skills op maat"
+    "nl": "Claude skills op maat",
+    "zh": "定制 Claude 技能"
   },
   "concierge.del.skills.desc": {
     "fr": "Prompts système optimisés pour VOTRE business",
     "en": "System prompts optimized for YOUR business",
-    "nl": "Geoptimaliseerde systeemprompts voor UW business"
+    "nl": "Geoptimaliseerde systeemprompts voor UW business",
+    "zh": "为您的业务量身优化的系统提示词"
   },
   "concierge.del.workflows.title": {
     "fr": "Workflows Make.com",
     "en": "Make.com workflows",
-    "nl": "Make.com workflows"
+    "nl": "Make.com workflows",
+    "zh": "Make.com 工作流"
   },
   "concierge.del.workflows.desc": {
     "fr": "Automatisations email, CRM, facturation, relances",
     "en": "Email, CRM, invoicing, follow-up automations",
-    "nl": "E-mail, CRM, facturatie, opvolging automatiseringen"
+    "nl": "E-mail, CRM, facturatie, opvolging automatiseringen",
+    "zh": "邮件、客户管理（CRM）、开票、跟进的自动化"
   },
   "concierge.del.reports.title": {
     "fr": "Rapports ROI mensuels",
     "en": "Monthly ROI reports",
-    "nl": "Maandelijkse ROI-rapporten"
+    "nl": "Maandelijkse ROI-rapporten",
+    "zh": "每月投资回报报告"
   },
   "concierge.del.reports.desc": {
     "fr": "Heures économisées × taux horaire = ROI concret",
     "en": "Hours saved × hourly rate = concrete ROI",
-    "nl": "Bespaarde uren × uurtarief = concrete ROI"
+    "nl": "Bespaarde uren × uurtarief = concrete ROI",
+    "zh": "节省的小时数 × 时薪 = 实实在在的投资回报"
   },
   "concierge.pricing.title": {
     "fr": "Choisissez votre formule",
     "en": "Choose your plan",
-    "nl": "Kies uw formule"
+    "nl": "Kies uw formule",
+    "zh": "选择您的套餐"
   },
   "concierge.pricing.subtitle": {
     "fr": "Maximum 6 clients en parallèle pour garantir un accompagnement premium.",
     "en": "Maximum 6 clients at a time to guarantee premium support.",
-    "nl": "Maximaal 6 klanten tegelijk om premium begeleiding te garanderen."
+    "nl": "Maximaal 6 klanten tegelijk om premium begeleiding te garanderen.",
+    "zh": "同时最多服务 6 位客户，以保证高品质支持。"
   },
   "concierge.pricing.popular": {
     "fr": "POPULAIRE",
     "en": "POPULAR",
-    "nl": "POPULAIR"
+    "nl": "POPULAIR",
+    "zh": "热门"
   },
   "concierge.pricing.perMonth": {
     "fr": "/mois",
     "en": "/month",
-    "nl": "/maand"
+    "nl": "/maand",
+    "zh": "/月"
   },
   "concierge.pricing.start": {
     "fr": "Commencer",
     "en": "Get Started",
-    "nl": "Beginnen"
+    "nl": "Beginnen",
+    "zh": "立即开始"
   },
   "concierge.pricing.starter.plan": {
     "fr": "Starter",
     "en": "Starter",
-    "nl": "Starter"
+    "nl": "Starter",
+    "zh": "Starter"
   },
   "concierge.pricing.starter.amount": {
     "fr": "1 000€",
     "en": "€1,000",
-    "nl": "1 000€"
+    "nl": "1 000€",
+    "zh": "€1,000"
   },
   "concierge.pricing.starter.f1": {
     "fr": "<strong>2 appels</strong> de 45 min/mois",
     "en": "<strong>2 calls</strong> x 45 min/month",
-    "nl": "<strong>2 calls</strong> van 45 min/maand"
+    "nl": "<strong>2 calls</strong> van 45 min/maand",
+    "zh": "每月 <strong>2 次通话</strong> × 45 分钟"
   },
   "concierge.pricing.starter.f2": {
     "fr": "<strong>DM illimité</strong> (réponse &lt;12h)",
     "en": "<strong>Unlimited DM</strong> (response &lt;12h)",
-    "nl": "<strong>Onbeperkt DM</strong> (reactie &lt;12u)"
+    "nl": "<strong>Onbeperkt DM</strong> (reactie &lt;12u)",
+    "zh": "<strong>不限次数私信</strong>（&lt;12 小时内回复）"
   },
   "concierge.pricing.starter.f3": {
     "fr": "<strong>Hub Notion</strong> personnalisé",
     "en": "<strong>Custom Notion Hub</strong>",
-    "nl": "<strong>Gepersonaliseerde Notion Hub</strong>"
+    "nl": "<strong>Gepersonaliseerde Notion Hub</strong>",
+    "zh": "<strong>定制 Notion 中枢</strong>"
   },
   "concierge.pricing.starter.f4": {
     "fr": "<strong>2 skills Claude</strong>/mois",
     "en": "<strong>2 Claude skills</strong>/month",
-    "nl": "<strong>2 Claude skills</strong>/maand"
+    "nl": "<strong>2 Claude skills</strong>/maand",
+    "zh": "每月 <strong>2 个 Claude 技能</strong>"
   },
   "concierge.pricing.starter.f5": {
     "fr": "<strong>Email récap</strong> après chaque appel",
     "en": "<strong>Summary email</strong> after each call",
-    "nl": "<strong>Samenvattende e-mail</strong> na elke call"
+    "nl": "<strong>Samenvattende e-mail</strong> na elke call",
+    "zh": "每次通话后发送<strong>总结邮件</strong>"
   },
   "concierge.pricing.pro.plan": {
     "fr": "Pro",
     "en": "Pro",
-    "nl": "Pro"
+    "nl": "Pro",
+    "zh": "Pro"
   },
   "concierge.pricing.pro.amount": {
     "fr": "1 500€",
     "en": "€1,500",
-    "nl": "1 500€"
+    "nl": "1 500€",
+    "zh": "€1,500"
   },
   "concierge.pricing.pro.f1": {
     "fr": "Tout <strong>Starter</strong> +",
     "en": "Everything in <strong>Starter</strong> +",
-    "nl": "Alles van <strong>Starter</strong> +"
+    "nl": "Alles van <strong>Starter</strong> +",
+    "zh": "包含 <strong>Starter</strong> 的全部内容 +"
   },
   "concierge.pricing.pro.f2": {
     "fr": "<strong>Skills Claude illimités</strong>",
     "en": "<strong>Unlimited Claude skills</strong>",
-    "nl": "<strong>Onbeperkte Claude skills</strong>"
+    "nl": "<strong>Onbeperkte Claude skills</strong>",
+    "zh": "<strong>不限数量的 Claude 技能</strong>"
   },
   "concierge.pricing.pro.f3": {
     "fr": "<strong>Workflows Make.com</strong>",
     "en": "<strong>Make.com workflows</strong>",
-    "nl": "<strong>Make.com workflows</strong>"
+    "nl": "<strong>Make.com workflows</strong>",
+    "zh": "<strong>Make.com 工作流</strong>"
   },
   "concierge.pricing.pro.f4": {
     "fr": "<strong>Support prioritaire</strong> DM (&lt;6h)",
     "en": "<strong>Priority DM support</strong> (&lt;6h)",
-    "nl": "<strong>Prioriteit DM support</strong> (&lt;6u)"
+    "nl": "<strong>Prioriteit DM support</strong> (&lt;6u)",
+    "zh": "<strong>优先私信支持</strong>（&lt;6 小时）"
   },
   "concierge.pricing.pro.f5": {
     "fr": "<strong>Rapports bi-mensuels</strong>",
     "en": "<strong>Bi-weekly reports</strong>",
-    "nl": "<strong>Tweewekelijkse rapporten</strong>"
+    "nl": "<strong>Tweewekelijkse rapporten</strong>",
+    "zh": "<strong>双周报告</strong>"
   },
   "concierge.pricing.pro.f6": {
     "fr": "Accès <strong>templates exclusifs</strong>",
     "en": "Access to <strong>exclusive templates</strong>",
-    "nl": "Toegang tot <strong>exclusieve templates</strong>"
+    "nl": "Toegang tot <strong>exclusieve templates</strong>",
+    "zh": "可使用<strong>专属模板</strong>"
   },
   "concierge.pricing.elite.plan": {
     "fr": "Elite",
     "en": "Elite",
-    "nl": "Elite"
+    "nl": "Elite",
+    "zh": "Elite"
   },
   "concierge.pricing.elite.amount": {
     "fr": "2 000€",
     "en": "€2,000",
-    "nl": "2 000€"
+    "nl": "2 000€",
+    "zh": "€2,000"
   },
   "concierge.pricing.elite.f1": {
     "fr": "Tout <strong>Pro</strong> +",
     "en": "Everything in <strong>Pro</strong> +",
-    "nl": "Alles van <strong>Pro</strong> +"
+    "nl": "Alles van <strong>Pro</strong> +",
+    "zh": "包含 <strong>Pro</strong> 的全部内容 +"
   },
   "concierge.pricing.elite.f2": {
     "fr": "<strong>4 appels/mois</strong> (accès prioritaire)",
     "en": "<strong>4 calls/month</strong> (priority access)",
-    "nl": "<strong>4 calls/maand</strong> (prioriteitstoegang)"
+    "nl": "<strong>4 calls/maand</strong> (prioriteitstoegang)",
+    "zh": "<strong>每月 4 次通话</strong>（优先预约）"
   },
   "concierge.pricing.elite.f3": {
     "fr": "<strong>Rapports mensuels</strong> + ROI détaillé",
     "en": "<strong>Monthly reports</strong> + detailed ROI",
-    "nl": "<strong>Maandelijkse rapporten</strong> + gedetailleerde ROI"
+    "nl": "<strong>Maandelijkse rapporten</strong> + gedetailleerde ROI",
+    "zh": "<strong>月度报告</strong> + 详细投资回报分析"
   },
   "concierge.pricing.elite.f4": {
     "fr": "<strong>Stratégie IA trimestrielle</strong>",
     "en": "<strong>Quarterly AI strategy</strong>",
-    "nl": "<strong>Driemaandelijkse IA-strategie</strong>"
+    "nl": "<strong>Driemaandelijkse IA-strategie</strong>",
+    "zh": "<strong>季度 AI 战略</strong>"
   },
   "concierge.pricing.elite.f5": {
     "fr": "<strong>Canal Slack/Discord dédié</strong>",
     "en": "<strong>Dedicated Slack/Discord channel</strong>",
-    "nl": "<strong>Dedicated Slack/Discord kanaal</strong>"
+    "nl": "<strong>Dedicated Slack/Discord kanaal</strong>",
+    "zh": "<strong>专属 Slack/Discord 频道</strong>"
   },
   "concierge.pricing.elite.f6": {
     "fr": "<strong>Déploiement Vercel</strong> inclus",
     "en": "<strong>Vercel deployment</strong> included",
-    "nl": "<strong>Vercel implementatie</strong> inbegrepen"
+    "nl": "<strong>Vercel implementatie</strong> inbegrepen",
+    "zh": "包含 <strong>Vercel 部署</strong>"
   },
   "concierge.faq.title": {
     "fr": "Questions fréquentes",
     "en": "Frequently Asked Questions",
-    "nl": "Veelgestelde vragen"
+    "nl": "Veelgestelde vragen",
+    "zh": "常见问题"
   },
   "concierge.faq.subtitle": {
     "fr": "Tout ce que vous devez savoir avant de commencer.",
     "en": "Everything you need to know before getting started.",
-    "nl": "Alles wat u moet weten voordat u begint."
+    "nl": "Alles wat u moet weten voordat u begint.",
+    "zh": "开始之前您需要了解的一切。"
   },
   "concierge.faq.q1": {
     "fr": "C'est quoi exactement \"done-with-you\" ?",
     "en": "What exactly does \"done-with-you\" mean?",
-    "nl": "Wat betekent \"done-with-you\" precies?"
+    "nl": "Wat betekent \"done-with-you\" precies?",
+    "zh": "“Done-with-you”到底是什么意思？"
   },
   "concierge.faq.a1": {
     "fr": "Contrairement au \"done-for-you\" (on fait tout pour vous) ou \"DIY\" (vous vous débrouillez), le done-with-you signifie qu'on construit ENSEMBLE. Je vous guide, je crée les automatisations, mais vous apprenez à les maintenir. Résultat : vous êtes autonome à la fin.",
     "en": "Unlike \"done-for-you\" (we do everything for you) or \"DIY\" (you figure it out), done-with-you means we build TOGETHER. I guide you, I create the automations, but you learn to maintain them. Result: you're self-sufficient at the end.",
-    "nl": "In tegenstelling tot \"done-for-you\" (wij doen alles voor u) of \"DIY\" (u redt zich zelf), betekent done-with-you dat we SAMEN bouwen. Ik begeleid u, ik maak de automatiseringen, maar u leert ze te onderhouden. Resultaat: u bent zelfstandig aan het eind."
+    "nl": "In tegenstelling tot \"done-for-you\" (wij doen alles voor u) of \"DIY\" (u redt zich zelf), betekent done-with-you dat we SAMEN bouwen. Ik begeleid u, ik maak de automatiseringen, maar u leert ze te onderhouden. Resultaat: u bent zelfstandig aan het eind.",
+    "zh": "与“done-for-you”（我们替您包办一切）或“DIY”（您自己摸索）不同，done-with-you 意味着我们共同搭建。我来指导您，我来创建自动化，但您会学会自己维护。结果：最终您能够独立运作。"
   },
   "concierge.faq.q2": {
     "fr": "Je ne suis pas technique, c'est un problème ?",
     "en": "I'm not technical, is that a problem?",
-    "nl": "Ik ben niet technisch, is dat een probleem?"
+    "nl": "Ik ben niet technisch, is dat een probleem?",
+    "zh": "我不懂技术，会有问题吗？"
   },
   "concierge.faq.a2": {
     "fr": "Absolument pas ! 90% de mes clients n'ont aucune compétence technique. C'est justement pour ça que je m'occupe de la partie technique. Vous n'avez qu'à utiliser les outils qu'on met en place.",
     "en": "Absolutely not! 90% of my clients have no technical skills. That's exactly why I handle the technical side. You just need to use the tools we set up.",
-    "nl": "Absoluut niet! 90% van mijn klanten heeft geen technische kennis. Daarom zorg ik voor het technische gedeelte. U hoeft alleen de tools te gebruiken die we opzetten."
+    "nl": "Absoluut niet! 90% van mijn klanten heeft geen technische kennis. Daarom zorg ik voor het technische gedeelte. U hoeft alleen de tools te gebruiken die we opzetten.",
+    "zh": "完全不是问题！我 90% 的客户都没有技术背景，这正是由我负责技术部分的原因。您只需使用我们搭建好的工具。"
   },
   "concierge.faq.q3": {
     "fr": "Combien de temps avant de voir des résultats ?",
     "en": "How long before I see results?",
-    "nl": "Hoe lang voordat ik resultaten zie?"
+    "nl": "Hoe lang voordat ik resultaten zie?",
+    "zh": "多久能看到效果？"
   },
   "concierge.faq.a3": {
     "fr": "Dès le premier appel, vous repartez avec 2-3 quick wins actionnables. Les premières automatisations sont déployées sous 2 semaines. Le ROI moyen constaté est de 5-10h économisées par mois dès le 2ème mois.",
     "en": "From the first call, you walk away with 2-3 actionable quick wins. The first automations are deployed within 2 weeks. Average ROI is 5-10 hours saved per month from the 2nd month.",
-    "nl": "Vanaf het eerste gesprek gaat u naar huis met 2-3 uitvoerbare quick wins. De eerste automatiseringen worden binnen 2 weken uitgerold. De gemiddelde ROI is 5-10 bespaarde uren per maand vanaf de 2de maand."
+    "nl": "Vanaf het eerste gesprek gaat u naar huis met 2-3 uitvoerbare quick wins. De eerste automatiseringen worden binnen 2 weken uitgerold. De gemiddelde ROI is 5-10 bespaarde uren per maand vanaf de 2de maand.",
+    "zh": "从第一次通话开始，您就能带走 2 到 3 个可立即执行的快速成效。首批自动化会在 2 周内部署。从第二个月起，平均每月可节省 5 至 10 小时。"
   },
   "concierge.faq.q4": {
     "fr": "Quels outils utilisez-vous ?",
     "en": "What tools do you use?",
-    "nl": "Welke tools gebruikt u?"
+    "nl": "Welke tools gebruikt u?",
+    "zh": "你们使用哪些工具？"
   },
   "concierge.faq.a4": {
     "fr": "Principalement : Claude AI (skills/prompts), Make.com (automatisations), Notion (hub client), DM (communication asynchrone), Vercel (déploiement). Selon vos besoins : Stripe, Gmail, Airtable, Calendly.",
     "en": "Mainly: Claude AI (skills/prompts), Make.com (automations), Notion (client hub), DM (async communication), Vercel (deployment). Depending on your needs: Stripe, Gmail, Airtable, Calendly.",
-    "nl": "Voornamelijk: Claude AI (skills/prompts), Make.com (automatiseringen), Notion (klant hub), DM (asynchrone communicatie), Vercel (implementatie). Afhankelijk van uw behoeften: Stripe, Gmail, Airtable, Calendly."
+    "nl": "Voornamelijk: Claude AI (skills/prompts), Make.com (automatiseringen), Notion (klant hub), DM (asynchrone communicatie), Vercel (implementatie). Afhankelijk van uw behoeften: Stripe, Gmail, Airtable, Calendly.",
+    "zh": "主要有：Claude AI（技能/提示词）、Make.com（自动化）、Notion（客户中枢）、私信（异步沟通）、Vercel（部署）。根据您的需求，还可能用到 Stripe、Gmail、Airtable、Calendly。"
   },
   "concierge.faq.q5": {
     "fr": "Puis-je annuler à tout moment ?",
     "en": "Can I cancel anytime?",
-    "nl": "Kan ik op elk moment annuleren?"
+    "nl": "Kan ik op elk moment annuleren?",
+    "zh": "可以随时取消吗？"
   },
   "concierge.faq.a5": {
     "fr": "Oui, engagement mensuel sans durée minimum. Préavis de 30 jours. Tout ce qui a été créé vous appartient (skills, workflows, templates).",
     "en": "Yes, monthly commitment with no minimum duration. 30-day notice. Everything created belongs to you (skills, workflows, templates).",
-    "nl": "Ja, maandelijks abonnement zonder minimumduur. Opzegtermijn van 30 dagen. Alles wat gemaakt is, is van u (skills, workflows, templates)."
+    "nl": "Ja, maandelijks abonnement zonder minimumduur. Opzegtermijn van 30 dagen. Alles wat gemaakt is, is van u (skills, workflows, templates).",
+    "zh": "可以，按月订阅，没有最短期限，提前 30 天通知即可。所有创建的内容都归您所有（技能、工作流、模板）。"
   },
   "concierge.faq.q6": {
     "fr": "Pour quel type de business ?",
     "en": "What type of business is this for?",
-    "nl": "Voor welk type bedrijf?"
+    "nl": "Voor welk type bedrijf?",
+    "zh": "适合哪类企业？"
   },
   "concierge.faq.a6": {
     "fr": "Coiffeurs, boulangers, restaurants, hôtes commerce, indépendants, TPE. Tout commerce local qui perd du temps sur des tâches répétitives : emails, réservations, factures, relances, réseaux sociaux.",
     "en": "Hairdressers, bakers, restaurants, business hosts, freelancers, small businesses. Any local business wasting time on repetitive tasks: emails, bookings, invoices, follow-ups, social media.",
-    "nl": "Kappers, bakkers, restaurants, commerce-hosts, zelfstandigen, KMO's. Elk lokaal bedrijf dat tijd verliest aan repetitieve taken: e-mails, reserveringen, facturen, opvolging, sociale media."
+    "nl": "Kappers, bakkers, restaurants, commerce-hosts, zelfstandigen, KMO's. Elk lokaal bedrijf dat tijd verliest aan repetitieve taken: e-mails, reserveringen, facturen, opvolging, sociale media.",
+    "zh": "理发师、面包师、餐厅、住宿业主、自由职业者、小型企业。任何把时间浪费在重复性工作上的本地企业：邮件、预订、发票、跟进、社交媒体。"
   },
   "concierge.faq.q7": {
     "fr": "Quelle différence avec un freelancer classique ?",
     "en": "How is this different from a regular freelancer?",
-    "nl": "Wat is het verschil met een gewone freelancer?"
+    "nl": "Wat is het verschil met een gewone freelancer?",
+    "zh": "与普通自由职业者有什么不同？"
   },
   "concierge.faq.a7": {
     "fr": "Un freelancer exécute une tâche ponctuelle. L'AI Concierge est un partenaire continu qui comprend votre business en profondeur, anticipe vos besoins, et construit un système d'automatisation complet qui évolue avec vous.",
     "en": "A freelancer handles a one-off task. AI Concierge is a continuous partner who deeply understands your business, anticipates your needs, and builds a complete automation system that evolves with you.",
-    "nl": "Een freelancer voert een eenmalige taak uit. De AI Concierge is een continue partner die uw bedrijf diepgaand begrijpt, uw behoeften anticipeert en een compleet automatiseringssysteem bouwt dat met u meegroeit."
+    "nl": "Een freelancer voert een eenmalige taak uit. De AI Concierge is een continue partner die uw bedrijf diepgaand begrijpt, uw behoeften anticipeert en een compleet automatiseringssysteem bouwt dat met u meegroeit.",
+    "zh": "自由职业者只处理一次性任务。AI Concierge 则是长期合作伙伴：深入了解您的业务，预判您的需求，并搭建一套与您共同成长的完整自动化体系。"
   },
   "concierge.faq.q8": {
     "fr": "Que se passe-t-il pendant l'appel découverte ?",
     "en": "What happens during the discovery call?",
-    "nl": "Wat gebeurt er tijdens het kennismakingsgesprek?"
+    "nl": "Wat gebeurt er tijdens het kennismakingsgesprek?",
+    "zh": "了解通话中会做些什么？"
   },
   "concierge.faq.a8": {
     "fr": "30 minutes gratuites : on discute de votre business, vos douleurs, vos objectifs. Je vous donne déjà 2-3 pistes d'automatisation. Si le fit est bon, on planifie le premier appel Audit. Zéro pression.",
     "en": "30 free minutes: we discuss your business, pain points, and goals. I already give you 2-3 automation ideas. If it's a good fit, we schedule the first Audit call. Zero pressure.",
-    "nl": "30 minuten gratis: we bespreken uw bedrijf, uw pijnpunten, uw doelen. Ik geef u alvast 2-3 automatiseringssuggesties. Als de match goed is, plannen we het eerste Audit-gesprek. Geen druk."
+    "nl": "30 minuten gratis: we bespreken uw bedrijf, uw pijnpunten, uw doelen. Ik geef u alvast 2-3 automatiseringssuggesties. Als de match goed is, plannen we het eerste Audit-gesprek. Geen druk.",
+    "zh": "30 分钟免费：我们聊聊您的业务、痛点和目标，我会当场给您 2 到 3 个自动化思路。如果合适，我们再预约第一次审计通话。毫无压力。"
   },
   "concierge.faq.q9": {
     "fr": "Mes données sont-elles en sécurité ?",
     "en": "Is my data safe?",
-    "nl": "Zijn mijn gegevens veilig?"
+    "nl": "Zijn mijn gegevens veilig?",
+    "zh": "我的数据安全吗？"
   },
   "concierge.faq.a9": {
     "fr": "Oui. RGPD compliant. Vos données restent sur des serveurs européens. Aucun partage avec des tiers. NDA disponible sur demande. Vous gardez la propriété de tout ce qui est créé.",
     "en": "Yes. GDPR compliant. Your data stays on European servers. No sharing with third parties. NDA available on request. You own everything that's created.",
-    "nl": "Ja. AVG-conform. Uw gegevens blijven op Europese servers. Geen deling met derden. NDA beschikbaar op aanvraag. U behoudt het eigendom van alles wat gemaakt is."
+    "nl": "Ja. AVG-conform. Uw gegevens blijven op Europese servers. Geen deling met derden. NDA beschikbaar op aanvraag. U behoudt het eigendom van alles wat gemaakt is.",
+    "zh": "安全。符合 GDPR，您的数据保存在欧洲服务器上，不会与第三方共享，可应要求签署保密协议（NDA）。所有创建的内容都归您所有。"
   },
   "concierge.faq.q10": {
     "fr": "Y a-t-il des frais cachés ?",
     "en": "Are there hidden fees?",
-    "nl": "Zijn er verborgen kosten?"
+    "nl": "Zijn er verborgen kosten?",
+    "zh": "有隐藏费用吗？"
   },
   "concierge.faq.compareLink": {
     "fr": "Envie d'approfondir ? Lisez notre article comparatif freelance vs logiciel DIY vs AI Concierge →",
     "en": "Want to dig deeper? Read our comparison article: freelancer vs DIY software vs AI Concierge →",
-    "nl": "Wil je dieper gaan? Lees ons vergelijkingsartikel: freelancer vs DIY-software vs AI Concierge →"
+    "nl": "Wil je dieper gaan? Lees ons vergelijkingsartikel: freelancer vs DIY-software vs AI Concierge →",
+    "zh": "想深入了解？阅读我们的对比文章：自由职业者 vs 自助软件 vs AI Concierge →"
   },
   "concierge.faq.a10": {
     "fr": "Non. Le prix mensuel inclut tout. Les seuls coûts externes possibles : abonnements Make.com (~9€/mois) et Notion (gratuit pour la plupart). Je vous préviens toujours avant tout coût additionnel.",
     "en": "No. The monthly price includes everything. The only possible external costs: Make.com subscriptions (~€9/month) and Notion (free for most). I always warn you before any additional cost.",
-    "nl": "Nee. De maandprijs is alles-inbegrepen. De enige mogelijke externe kosten: Make.com abonnementen (~9€/maand) en Notion (gratis voor de meesten). Ik waarschuw u altijd voor eventuele bijkomende kosten."
+    "nl": "Nee. De maandprijs is alles-inbegrepen. De enige mogelijke externe kosten: Make.com abonnementen (~9€/maand) en Notion (gratis voor de meesten). Ik waarschuw u altijd voor eventuele bijkomende kosten.",
+    "zh": "没有。月费已包含所有内容。唯一可能的外部费用：Make.com 订阅（约 €9/月）和 Notion（大多数情况下免费）。任何额外费用我都会事先告知您。"
   },
   "concierge.cta.title": {
     "fr": "Prêt à automatiser votre business ?",
     "en": "Ready to automate your business?",
-    "nl": "Klaar om uw bedrijf te automatiseren?"
+    "nl": "Klaar om uw bedrijf te automatiseren?",
+    "zh": "准备好让您的业务自动化了吗？"
   },
   "concierge.cta.subtitle": {
     "fr": "Réservez votre appel découverte gratuit de 30 minutes. Zéro engagement, 100% valeur.",
     "en": "Book your free 30-minute discovery call. Zero commitment, 100% value.",
-    "nl": "Boek uw gratis kennismakingsgesprek van 30 minuten. Geen verplichting, 100% waarde."
+    "nl": "Boek uw gratis kennismakingsgesprek van 30 minuten. Geen verplichting, 100% waarde.",
+    "zh": "预约 30 分钟免费了解通话。无需承诺，价值十足。"
   },
   "concierge.cta.button": {
     "fr": "Réserver mon appel gratuit →",
     "en": "Book my free call →",
-    "nl": "Boek mijn gratis gesprek →"
+    "nl": "Boek mijn gratis gesprek →",
+    "zh": "预约我的免费通话 →"
   },
   "intake.page.title": {
     "fr": "Formulaire Intake — AI Concierge | JCODE Agency",
@@ -1952,22 +2045,26 @@
   "index.hero.badge": {
     "fr": "6 modules IA déployés",
     "en": "6 AI modules deployed",
-    "nl": "6 AI-modules ingezet"
+    "nl": "6 AI-modules ingezet",
+    "zh": "已部署 6 个 AI 模块"
   },
   "index.hero.titleLine1": {
     "fr": "Vos clients vous cherchent.",
     "en": "Your customers are looking for you.",
-    "nl": "Je klanten zoeken jou."
+    "nl": "Je klanten zoeken jou.",
+    "zh": "您的客户正在找您。"
   },
   "index.hero.titleLine2": {
     "fr": "Vos agents IA les trouvent.",
     "en": "Your AI agents find them.",
-    "nl": "Je AI-agents vinden hen."
+    "nl": "Je AI-agents vinden hen.",
+    "zh": "您的 AI 智能体帮您找到他们。"
   },
   "index.hero.subtitle": {
     "fr": "Site web, vidéos, pubs, audit de conformité, relances de devis, automatisations : JCODE met une armée d’agents IA au travail pour vous.",
     "en": "Website, videos, ads, compliance audits, quote follow-ups, automations: JCODE puts an army of AI agents to work for you.",
-    "nl": "Website, video’s, advertenties, compliance-audit, offerteopvolging, automatisaties: JCODE zet een leger van AI-agents voor je aan het werk."
+    "nl": "Website, video’s, advertenties, compliance-audit, offerteopvolging, automatisaties: JCODE zet een leger van AI-agents voor je aan het werk.",
+    "zh": "网站、视频、广告、合规审计、报价跟进、自动化：JCODE 让一支 AI 智能体大军为您工作。"
   },
   "index.hero.ctaPrimary": {
     "fr": "Voir la promo →",
@@ -1982,42 +2079,50 @@
   "index.hero.statAgents": {
     "fr": "Agents IA actifs",
     "en": "Active AI agents",
-    "nl": "Actieve AI-agents"
+    "nl": "Actieve AI-agents",
+    "zh": "活跃的 AI 智能体"
   },
   "index.hero.statPackages": {
     "fr": "Packages disponibles",
     "en": "Packages available",
-    "nl": "Beschikbare pakketten"
+    "nl": "Beschikbare pakketten",
+    "zh": "可选套餐"
   },
   "index.hero.statManual": {
     "fr": "De travail manuel",
     "en": "Of manual work",
-    "nl": "Handmatig werk"
+    "nl": "Handmatig werk",
+    "zh": "手动工作"
   },
   "index.hero.cardDashboard": {
     "fr": "Dashboard IA",
     "en": "AI Dashboard",
-    "nl": "AI Dashboard"
+    "nl": "AI Dashboard",
+    "zh": "AI 仪表盘"
   },
   "index.hero.cardLive": {
     "fr": "Exemple",
     "en": "Example",
-    "nl": "Voorbeeld"
+    "nl": "Voorbeeld",
+    "zh": "示例"
   },
   "index.hero.cardExampleNote": {
     "fr": "Exemple de résultats",
     "en": "Example results",
-    "nl": "Voorbeeld van resultaten"
+    "nl": "Voorbeeld van resultaten",
+    "zh": "示例结果"
   },
   "index.hero.cardVisits": {
     "fr": "Visites",
     "en": "Visits",
-    "nl": "Bezoeken"
+    "nl": "Bezoeken",
+    "zh": "访问量"
   },
   "index.hero.cardReservations": {
     "fr": "Réservations",
     "en": "Bookings",
-    "nl": "Reserveringen"
+    "nl": "Reserveringen",
+    "zh": "预订"
   },
   "index.hero.floatCopywriting": {
     "fr": "🤖 Agent Copywriting",
@@ -2027,7 +2132,8 @@
   "index.hero.floatVideo": {
     "fr": "📹 Agent Vidéo",
     "en": "📹 Video Agent",
-    "nl": "📹 Video Agent"
+    "nl": "📹 Video Agent",
+    "zh": "📹 视频智能体"
   },
   "index.hero.floatOutreach": {
     "fr": "📧 Agent Outreach",
@@ -2037,27 +2143,32 @@
   "index.hero.floatAds": {
     "fr": "📣 Agent Ads",
     "en": "📣 Ads Agent",
-    "nl": "📣 Ads Agent"
+    "nl": "📣 Ads Agent",
+    "zh": "📣 广告智能体"
   },
   "index.hero.floatAnalytics": {
     "fr": "📊 Agent Analytics",
     "en": "📊 Analytics Agent",
-    "nl": "📊 Analytics Agent"
+    "nl": "📊 Analytics Agent",
+    "zh": "📊 数据分析智能体"
   },
   "index.hero.floatConcierge": {
     "fr": "💬 Agent Concierge",
     "en": "💬 Concierge Agent",
-    "nl": "💬 Concierge Agent"
+    "nl": "💬 Concierge Agent",
+    "zh": "💬 Concierge 智能体"
   },
   "index.hero.floatAdmin": {
     "fr": "🧾 Agent Admin",
     "en": "🧾 Admin Agent",
-    "nl": "🧾 Admin Agent"
+    "nl": "🧾 Admin Agent",
+    "zh": "🧾 行政智能体"
   },
   "index.hero.floatSite": {
     "fr": "🌐 Agent Site",
     "en": "🌐 Website Agent",
-    "nl": "🌐 Website Agent"
+    "nl": "🌐 Website Agent",
+    "zh": "🌐 网站智能体"
   },
   "index.trust.label": {
     "fr": "Propulsé par les meilleures technologies",
@@ -2067,17 +2178,20 @@
   "index.services.tag": {
     "fr": "Nos Services",
     "en": "Our Services",
-    "nl": "Onze Diensten"
+    "nl": "Onze Diensten",
+    "zh": "我们的服务"
   },
   "index.services.title": {
     "fr": "Une armée d'agents IA à votre service",
     "en": "An army of AI agents at your service",
-    "nl": "Een leger van AI-agents tot uw dienst"
+    "nl": "Een leger van AI-agents tot uw dienst",
+    "zh": "一支为您服务的 AI 智能体大军"
   },
   "index.services.subtitle": {
     "fr": "Chaque agent est spécialisé dans une mission précise pour faire croître votre commerce sans effort.",
     "en": "Each agent is specialized in a specific mission to grow your business effortlessly.",
-    "nl": "Elke agent is gespecialiseerd in een specifieke missie om uw bedrijf moeiteloos te laten groeien."
+    "nl": "Elke agent is gespecialiseerd in een specifieke missie om uw bedrijf moeiteloos te laten groeien.",
+    "zh": "每个智能体专注于一项明确的任务，轻松助力您的业务增长。"
   },
   "index.services.brandbuilder.title": {
     "fr": "BrandBuilder",
@@ -2102,12 +2216,14 @@
   "index.services.videocreator.title": {
     "fr": "VideoCreator",
     "en": "VideoCreator",
-    "nl": "VideoCreator"
+    "nl": "VideoCreator",
+    "zh": "VideoCreator"
   },
   "index.services.videocreator.desc": {
     "fr": "Production vidéo automatisée : visuels de propriétés, reels Instagram/TikTok, et contenu viral pour maximiser votre visibilité.",
     "en": "Automated video production: property visuals, Instagram/TikTok reels, and viral content to maximize your visibility.",
-    "nl": "Geautomatiseerde videoproductie: vastgoedbeelden, Instagram/TikTok reels en virale content om uw zichtbaarheid te maximaliseren."
+    "nl": "Geautomatiseerde videoproductie: vastgoedbeelden, Instagram/TikTok reels en virale content om uw zichtbaarheid te maximaliseren.",
+    "zh": "自动化视频制作：房源视觉素材、Instagram/TikTok 短视频，以及能最大化您曝光度的爆款内容。"
   },
   "index.services.videocreator.badge": {
     "fr": "⏳ Bientôt disponible — Q1 2027",
@@ -2127,12 +2243,14 @@
   "index.services.analytics.title": {
     "fr": "Analytics AI",
     "en": "Analytics AI",
-    "nl": "Analytics AI"
+    "nl": "Analytics AI",
+    "zh": "Analytics AI"
   },
   "index.services.analytics.desc": {
     "fr": "Collez l'adresse de votre site : l'IA l'analyse et vérifie sa conformité avec la législation des États-Unis, du Royaume-Uni et de l'Union européenne.",
     "en": "Paste your website address: the AI analyses it and checks its compliance with the laws of the United States, the United Kingdom and the European Union.",
-    "nl": "Plak het adres van uw website: de AI analyseert het en controleert de naleving van de wetgeving van de Verenigde Staten, het Verenigd Koninkrijk en de Europese Unie."
+    "nl": "Plak het adres van uw website: de AI analyseert het en controleert de naleving van de wetgeving van de Verenigde Staten, het Verenigd Koninkrijk en de Europese Unie.",
+    "zh": "粘贴您的网站地址：AI 会对其进行分析，并检查其是否符合美国、英国和欧盟的法律法规。"
   },
   "index.services.orchestrator.title": {
     "fr": "Agent Orchestrator",
@@ -2147,262 +2265,314 @@
   "index.offer.tag": {
     "fr": "Nos Offres",
     "en": "Our Offers",
-    "nl": "Onze Aanbiedingen"
+    "nl": "Onze Aanbiedingen",
+    "zh": "我们的方案"
   },
   "index.offer.title": {
     "fr": "Un site web pensé pour votre commerce",
     "en": "A website built for your business",
-    "nl": "Een website gemaakt voor uw handelszaak"
+    "nl": "Een website gemaakt voor uw handelszaak",
+    "zh": "为您的生意量身打造的网站"
   },
   "index.offer.subtitle": {
     "fr": "Choisissez la formule qui vous convient. Le site se paie une seule fois. La réservation automatique et le chatbot IA sont inclus dans Pro Max.",
     "en": "Choose the plan that suits you. The website is a one-time payment. Automatic booking and the AI chatbot are included in Pro Max.",
-    "nl": "Kies de formule die bij u past. De website betaalt u eenmalig. Automatische reservatie en de AI-chatbot zijn inbegrepen in Pro Max."
+    "nl": "Kies de formule die bij u past. De website betaalt u eenmalig. Automatische reservatie en de AI-chatbot zijn inbegrepen in Pro Max.",
+    "zh": "选择适合您的套餐。网站为一次性付款。自动预订和 AI 聊天机器人包含在 Pro Max 中。"
   },
   "index.offer.recommended": {
     "fr": "⭐ RECOMMANDÉ",
     "en": "⭐ RECOMMENDED",
-    "nl": "⭐ AANBEVOLEN"
+    "nl": "⭐ AANBEVOLEN",
+    "zh": "⭐ 推荐"
   },
   "index.offer.teaser.name": {
     "fr": "Teaser",
     "en": "Teaser",
-    "nl": "Teaser"
+    "nl": "Teaser",
+    "zh": "Teaser"
   },
   "index.offer.teaser.desc": {
     "fr": "Votre premier site professionnel, sur une page, pour être visible en ligne.",
     "en": "Your first professional website, on one page, to be visible online.",
-    "nl": "Uw eerste professionele website, op één pagina, om online zichtbaar te zijn."
+    "nl": "Uw eerste professionele website, op één pagina, om online zichtbaar te zijn.",
+    "zh": "您的第一个专业网站，单页呈现，让您在网上被看见。"
   },
   "index.offer.teaser.oneTime": {
     "fr": " (paiement unique)",
     "en": " (one-time payment)",
-    "nl": " (eenmalige betaling)"
+    "nl": " (eenmalige betaling)",
+    "zh": " （一次性付款）"
   },
   "index.offer.teaser.f1": {
     "fr": "Site vitrine professionnel (1 page)",
     "en": "Professional showcase site (1 page)",
-    "nl": "Professionele vitrine-site (1 pagina)"
+    "nl": "Professionele vitrine-site (1 pagina)",
+    "zh": "专业展示网站（1 页）"
   },
   "index.offer.teaser.f2": {
     "fr": "Design secteur-spécifique",
     "en": "Sector-specific design",
-    "nl": "Sector-specifiek ontwerp"
+    "nl": "Sector-specifiek ontwerp",
+    "zh": "针对行业定制的设计"
   },
   "index.offer.teaser.f3": {
     "fr": "Cookie RGPD + mentions légales",
     "en": "GDPR cookie + legal notices",
-    "nl": "AVG-cookie + juridische vermeldingen"
+    "nl": "AVG-cookie + juridische vermeldingen",
+    "zh": "GDPR Cookie 与法律声明"
   },
   "index.offer.teaser.f4": {
     "fr": "Support 30 jours",
     "en": "30-day support",
-    "nl": "30 dagen support"
+    "nl": "30 dagen support",
+    "zh": "30 天支持"
   },
   "index.offer.pro.name": {
     "fr": "Pro",
     "en": "Pro",
-    "nl": "Pro"
+    "nl": "Pro",
+    "zh": "Pro"
   },
   "index.offer.pro.desc": {
     "fr": "Pour les commerçants ambitieux qui veulent scaler leur commerce.",
     "en": "For ambitious merchants who want to scale their business.",
-    "nl": "Voor ambitieuze zelfstandigen die hun bedrijf willen opschalen."
+    "nl": "Voor ambitieuze zelfstandigen die hun bedrijf willen opschalen.",
+    "zh": "为希望扩大业务规模、雄心勃勃的商家而设。"
   },
   "index.offer.pro.f1": {
     "fr": "Site vitrine professionnel (jusqu'à 3 pages)",
     "en": "Professional showcase site (up to 3 pages)",
-    "nl": "Professionele vitrine-site (tot 3 pagina's)"
+    "nl": "Professionele vitrine-site (tot 3 pagina's)",
+    "zh": "专业展示网站（最多 3 页）"
   },
   "index.offer.pro.f2": {
     "fr": "Design secteur-spécifique",
     "en": "Sector-specific design",
-    "nl": "Sector-specifiek ontwerp"
+    "nl": "Sector-specifiek ontwerp",
+    "zh": "针对行业定制的设计"
   },
   "index.offer.pro.f3": {
     "fr": "Cookie RGPD + mentions légales",
     "en": "GDPR cookie + legal notices",
-    "nl": "AVG-cookie + juridische vermeldingen"
+    "nl": "AVG-cookie + juridische vermeldingen",
+    "zh": "GDPR Cookie 与法律声明"
   },
   "index.offer.pro.f4": {
     "fr": "QR Code inclus",
     "en": "QR Code included",
-    "nl": "QR-code inbegrepen"
+    "nl": "QR-code inbegrepen",
+    "zh": "含二维码"
   },
   "index.offer.pro.f5": {
     "fr": "Support 60 jours",
     "en": "60-day support",
-    "nl": "60 dagen support"
+    "nl": "60 dagen support",
+    "zh": "60 天支持"
   },
   "index.offer.promax.name": {
     "fr": "Pro Max",
     "en": "Pro Max",
-    "nl": "Pro Max"
+    "nl": "Pro Max",
+    "zh": "Pro Max"
   },
   "index.offer.promax.desc": {
     "fr": "L'expérience ultime. Accès complet aux 8 modules IA + service VIP.",
     "en": "The ultimate experience. Full access to 8 AI modules + VIP service.",
-    "nl": "De ultieme ervaring. Volledige toegang tot 8 AI-modules + VIP-service."
+    "nl": "De ultieme ervaring. Volledige toegang tot 8 AI-modules + VIP-service.",
+    "zh": "终极体验。完整使用 8 个 AI 模块 + VIP 服务。"
   },
   "index.offer.promax.f1": {
     "fr": "Site vitrine professionnel (jusqu'à 5 pages)",
     "en": "Professional showcase site (up to 5 pages)",
-    "nl": "Professionele vitrine-site (tot 5 pagina's)"
+    "nl": "Professionele vitrine-site (tot 5 pagina's)",
+    "zh": "专业展示网站（最多 5 页）"
   },
   "index.offer.promax.f2": {
     "fr": "Design secteur-spécifique",
     "en": "Sector-specific design",
-    "nl": "Sector-specifiek ontwerp"
+    "nl": "Sector-specifiek ontwerp",
+    "zh": "针对行业定制的设计"
   },
   "index.offer.promax.f3": {
     "fr": "Cookie RGPD + mentions légales",
     "en": "GDPR cookie + legal notices",
-    "nl": "AVG-cookie + juridische vermeldingen"
+    "nl": "AVG-cookie + juridische vermeldingen",
+    "zh": "GDPR Cookie 与法律声明"
   },
   "index.offer.promax.f4": {
     "fr": "QR Code inclus",
     "en": "QR Code included",
-    "nl": "QR-code inbegrepen"
+    "nl": "QR-code inbegrepen",
+    "zh": "含二维码"
   },
   "index.offer.promax.f5": {
     "fr": "Réservation Auto inclus",
     "en": "Auto Booking included",
-    "nl": "Automatische reservering inbegrepen"
+    "nl": "Automatische reservering inbegrepen",
+    "zh": "含自动预订"
   },
   "index.offer.promax.f6": {
     "fr": "Chatbot IA inclus",
     "en": "AI Chatbot included",
-    "nl": "AI-chatbot inbegrepen"
+    "nl": "AI-chatbot inbegrepen",
+    "zh": "含 AI 聊天机器人"
   },
   "index.offer.promax.f7": {
     "fr": "Support 90 jours",
     "en": "90-day support",
-    "nl": "90 dagen support"
+    "nl": "90 dagen support",
+    "zh": "90 天支持"
   },
   "index.offer.cta.chooseTeaser": {
     "fr": "Choisir Teaser →",
     "en": "Choose Teaser →",
-    "nl": "Kies Teaser →"
+    "nl": "Kies Teaser →",
+    "zh": "选择 Teaser →"
   },
   "index.offer.cta.choosePro": {
     "fr": "Choisir Pro →",
     "en": "Choose Pro →",
-    "nl": "Kies Pro →"
+    "nl": "Kies Pro →",
+    "zh": "选择 Pro →"
   },
   "index.offer.cta.chooseProMax": {
     "fr": "Choisir Pro Max →",
     "en": "Choose Pro Max →",
-    "nl": "Kies Pro Max →"
+    "nl": "Kies Pro Max →",
+    "zh": "选择 Pro Max →"
   },
   "index.offer.guarantee": {
     "fr": "🔒 Paiement sécurisé",
     "en": "🔒 Secure payment",
-    "nl": "🔒 Veilig betalen"
+    "nl": "🔒 Veilig betalen",
+    "zh": "🔒 安全支付"
   },
   "index.options.tag": {
     "fr": "Options supplémentaires",
     "en": "Additional options",
-    "nl": "Extra opties"
+    "nl": "Extra opties",
+    "zh": "附加选项"
   },
   "index.options.title": {
     "fr": "Personnalisez votre site",
     "en": "Customize your site",
-    "nl": "Pas uw site aan"
+    "nl": "Pas uw site aan",
+    "zh": "定制您的网站"
   },
   "index.options.subtitle": {
     "fr": "Ajoutez ces options à n'importe quel forfait pour booster votre commerce.",
     "en": "Add these options to any plan to boost your business.",
-    "nl": "Voeg deze opties toe aan elk pakket om uw bedrijf te boosten."
+    "nl": "Voeg deze opties toe aan elk pakket om uw bedrijf te boosten.",
+    "zh": "在任意套餐中添加这些选项，助力您的业务增长。"
   },
   "index.options.qr.title": {
     "fr": "Menu QR Code",
     "en": "QR Code Menu",
-    "nl": "QR-code Menu"
+    "nl": "QR-code Menu",
+    "zh": "二维码菜单"
   },
   "index.options.qr.desc": {
     "fr": "Un QR code pour votre vitrine. Vos clients scannent et voient vos services, photos et prix directement sur leur téléphone.",
     "en": "A QR code for your storefront. Your clients scan and see your services, photos and prices directly on their phone.",
-    "nl": "Een QR-code voor uw etalage. Uw klanten scannen en bekijken uw diensten, foto's en prijzen rechtstreeks op hun telefoon."
+    "nl": "Een QR-code voor uw etalage. Uw klanten scannen en bekijken uw diensten, foto's en prijzen rechtstreeks op hun telefoon.",
+    "zh": "为您的店面准备的二维码。客户扫码，即可在手机上直接查看您的服务、照片和价格。"
   },
   "index.options.qr.price": {
     "fr": "+€99",
     "en": "+€99",
-    "nl": "+€99"
+    "nl": "+€99",
+    "zh": "+€99"
   },
   "index.options.qr.oneTime": {
     "fr": "Paiement unique",
     "en": "One-time payment",
-    "nl": "Eenmalige betaling"
+    "nl": "Eenmalige betaling",
+    "zh": "一次性付款"
   },
   "index.options.booking.title": {
     "fr": "Réservation Auto",
     "en": "Auto Booking",
-    "nl": "Automatische reservering"
+    "nl": "Automatische reservering",
+    "zh": "自动预订"
   },
   "index.options.booking.desc": {
     "fr": "Vos clients choisissent leur service, date et heure. Confirmation automatique par email. Vous recevez une notification.",
     "en": "Your clients choose their service, date and time. Automatic confirmation by email. You receive a notification.",
-    "nl": "Uw klanten kiezen hun dienst, datum en tijd. Automatische bevestiging per e-mail. U ontvangt een melding."
+    "nl": "Uw klanten kiezen hun dienst, datum en tijd. Automatische bevestiging per e-mail. U ontvangt een melding.",
+    "zh": "您的客户自行选择服务、日期和时间，系统通过邮件自动确认，您会收到通知。"
   },
   "index.options.booking.monthly": {
     "fr": "Abonnement mensuel",
     "en": "Monthly subscription",
-    "nl": "Maandelijks abonnement"
+    "nl": "Maandelijks abonnement",
+    "zh": "按月订阅"
   },
   "index.options.booking.preview.service": {
     "fr": "Service",
     "en": "Service",
-    "nl": "Dienst"
+    "nl": "Dienst",
+    "zh": "服务"
   },
   "index.options.booking.preview.serviceName": {
     "fr": "Coupe & Coiffage",
     "en": "Haircut & Styling",
-    "nl": "Knippen & Stylen"
+    "nl": "Knippen & Stylen",
+    "zh": "理发与造型"
   },
   "index.options.booking.preview.date": {
     "fr": "Date",
     "en": "Date",
-    "nl": "Datum"
+    "nl": "Datum",
+    "zh": "日期"
   },
   "index.options.booking.preview.dateValue": {
     "fr": "Mar 12",
     "en": "Mar 12",
-    "nl": "Mrt 12"
+    "nl": "Mrt 12",
+    "zh": "3 月 12 日"
   },
   "index.options.booking.preview.time": {
     "fr": "Heure",
     "en": "Time",
-    "nl": "Tijd"
+    "nl": "Tijd",
+    "zh": "时间"
   },
   "index.options.booking.preview.timeValue": {
     "fr": "14h30",
     "en": "2:30 PM",
-    "nl": "14:30"
+    "nl": "14:30",
+    "zh": "下午 2:30"
   },
   "index.options.booking.preview.confirmed": {
     "fr": "Réservation confirmée",
     "en": "Booking confirmed",
-    "nl": "Reservering bevestigd"
+    "nl": "Reservering bevestigd",
+    "zh": "预订已确认"
   },
   "index.options.chatbot.title": {
     "fr": "Chatbot IA",
     "en": "AI Chatbot",
-    "nl": "AI-chatbot"
+    "nl": "AI-chatbot",
+    "zh": "AI 聊天机器人"
   },
   "index.options.chatbot.desc": {
     "fr": "Un assistant virtuel sur votre site qui répond aux questions de vos clients 24h/24 et 7j/7. Horaires, prix, services — tout est couvert.",
     "en": "A virtual assistant on your site that answers your clients' questions 24/7. Hours, prices, services — everything is covered.",
-    "nl": "Een virtuele assistent op uw site die de vragen van uw klanten 24/7 beantwoordt. Openingstijden, prijzen, diensten — alles is gedekt."
+    "nl": "Een virtuele assistent op uw site die de vragen van uw klanten 24/7 beantwoordt. Openingstijden, prijzen, diensten — alles is gedekt.",
+    "zh": "您网站上的虚拟助手，全天候 24/7 回答客户的问题。营业时间、价格、服务，一应俱全。"
   },
   "index.options.chatbot.monthly": {
     "fr": "Abonnement mensuel",
     "en": "Monthly subscription",
-    "nl": "Maandelijks abonnement"
+    "nl": "Maandelijks abonnement",
+    "zh": "按月订阅"
   },
   "index.options.tip_html": {
     "fr": "💡 <strong style=\"color: #fff;\">Conseil :</strong> Commencez avec le forfait Teaser à 399€ et ajoutez les options quand vous êtes prêt. Pas d'engagement, évolution à tout moment.",
     "en": "💡 <strong style=\"color: #fff;\">Tip:</strong> Start with the Teaser plan at €399 and add options when you're ready. No commitment, upgrade anytime.",
-    "nl": "💡 <strong style=\"color: #fff;\">Tip:</strong> Begin met het Teaser-pakket voor 399€ en voeg opties toe wanneer u klaar bent. Geen verplichting, op elk moment upgraden."
+    "nl": "💡 <strong style=\"color: #fff;\">Tip:</strong> Begin met het Teaser-pakket voor 399€ en voeg opties toe wanneer u klaar bent. Geen verplichting, op elk moment upgraden.",
+    "zh": "💡 <strong style=\"color: #fff;\">提示：</strong>先从 €399 的 Teaser 套餐开始，准备好后再添加选项。无需承诺，随时升级。"
   },
   "index.concierge.tag": {
     "fr": "✨ NOUVEAU — AI CONCIERGE",
@@ -2612,172 +2782,206 @@
   "index.contact.tag": {
     "fr": "Contact",
     "en": "Contact",
-    "nl": "Contact"
+    "nl": "Contact",
+    "zh": "联系我们"
   },
   "index.contact.title": {
     "fr": "Parlons de votre projet",
     "en": "Let's talk about your project",
-    "nl": "Laten we over uw project praten"
+    "nl": "Laten we over uw project praten",
+    "zh": "聊聊您的项目"
   },
   "index.contact.subtitle": {
     "fr": "Une question ? Un projet spécifique ? Contactez-nous directement.",
     "en": "A question? A specific project? Contact us directly.",
-    "nl": "Een vraag? Een specifiek project? Neem rechtstreeks contact met ons op."
+    "nl": "Een vraag? Een specifiek project? Neem rechtstreeks contact met ons op.",
+    "zh": "有疑问？有具体项目？请直接联系我们。"
   },
   "index.contact.heading": {
     "fr": "Discutons ensemble",
     "en": "Let's chat",
-    "nl": "Laten we praten"
+    "nl": "Laten we praten",
+    "zh": "让我们聊聊"
   },
   "index.contact.desc": {
     "fr": "Que vous gériez un seul établissement ou un réseau de commerces, nous avons la solution IA adaptée à vos besoins.",
     "en": "Whether you run a single venue or a network of businesses, we have the AI solution tailored to your needs.",
-    "nl": "Of u nu één vestiging of een netwerk van bedrijven beheert, wij hebben de AI-oplossing op maat van uw behoeften."
+    "nl": "Of u nu één vestiging of een netwerk van bedrijven beheert, wij hebben de AI-oplossing op maat van uw behoeften.",
+    "zh": "无论您经营单家门店还是连锁商家网络，我们都有适合您需求的 AI 解决方案。"
   },
   "index.contact.emailLabel": {
     "fr": "Email",
     "en": "Email",
-    "nl": "E-mail"
+    "nl": "E-mail",
+    "zh": "电子邮件"
   },
   "index.contact.whatsappNote": {
     "fr": "Une vraie personne vous répond, pas un robot.",
     "en": "A real person replies, not a bot.",
-    "nl": "Een echt persoon antwoordt, geen bot."
+    "nl": "Een echt persoon antwoordt, geen bot.",
+    "zh": "回复您的是真人，而不是机器人。"
   },
   "index.contact.bookingLabel": {
     "fr": "Nos offres",
     "en": "Our offers",
-    "nl": "Ons aanbod"
+    "nl": "Ons aanbod",
+    "zh": "我们的方案"
   },
   "index.contact.bookingLink": {
     "fr": "Voir nos offres",
     "en": "See our offers",
-    "nl": "Bekijk ons aanbod"
+    "nl": "Bekijk ons aanbod",
+    "zh": "查看我们的方案"
   },
   "index.contact.locationLabel": {
     "fr": "Basé en",
     "en": "Based in",
-    "nl": "Gevestigd in"
+    "nl": "Gevestigd in",
+    "zh": "公司所在地"
   },
   "index.contact.locationValue": {
     "fr": "Belgique — Service Europe",
     "en": "Belgium — Europe service",
-    "nl": "België — Service Europa"
+    "nl": "België — Service Europa",
+    "zh": "比利时 — 服务欧洲"
   },
   "index.contact.form.name": {
     "fr": "Nom complet",
     "en": "Full name",
-    "nl": "Volledige naam"
+    "nl": "Volledige naam",
+    "zh": "姓名"
   },
   "index.contact.form.namePlaceholder": {
     "fr": "Votre nom",
     "en": "Your name",
-    "nl": "Uw naam"
+    "nl": "Uw naam",
+    "zh": "您的姓名"
   },
   "index.contact.form.email": {
     "fr": "Email",
     "en": "Email",
-    "nl": "E-mail"
+    "nl": "E-mail",
+    "zh": "电子邮件"
   },
   "index.contact.form.emailPlaceholder": {
     "fr": "votre@email.com",
     "en": "your@email.com",
-    "nl": "uw@email.com"
+    "nl": "uw@email.com",
+    "zh": "your@email.com"
   },
   "index.contact.form.subject": {
     "fr": "Sujet",
     "en": "Subject",
-    "nl": "Onderwerp"
+    "nl": "Onderwerp",
+    "zh": "主题"
   },
   "index.contact.form.subjectTeaser": {
     "fr": "Teaser — 399€ — paiement unique",
     "en": "Teaser — €399 — one-time payment",
-    "nl": "Teaser — 399€ — eenmalige betaling"
+    "nl": "Teaser — 399€ — eenmalige betaling",
+    "zh": "Teaser — €399 — 一次性付款"
   },
   "index.contact.form.subjectPro": {
     "fr": "Pro — 539€ — paiement unique",
     "en": "Pro — €539 — one-time payment",
-    "nl": "Pro — 539€ — eenmalige betaling"
+    "nl": "Pro — 539€ — eenmalige betaling",
+    "zh": "Pro — €539 — 一次性付款"
   },
   "index.contact.form.subjectProMax": {
     "fr": "Pro Max — 1 139€ — paiement unique",
     "en": "Pro Max — €1,139 — one-time payment",
-    "nl": "Pro Max — €1.139 — eenmalige betaling"
+    "nl": "Pro Max — €1.139 — eenmalige betaling",
+    "zh": "Pro Max — €1,139 — 一次性付款"
   },
   "index.contact.form.subjectCustom": {
     "fr": "Projet sur mesure",
     "en": "Custom project",
-    "nl": "Project op maat"
+    "nl": "Project op maat",
+    "zh": "定制项目"
   },
   "index.contact.form.subjectPartnership": {
     "fr": "Partenariat",
     "en": "Partnership",
-    "nl": "Partnerschap"
+    "nl": "Partnerschap",
+    "zh": "合作"
   },
   "index.contact.form.subjectQuestion": {
     "fr": "Question générale",
     "en": "General question",
-    "nl": "Algemene vraag"
+    "nl": "Algemene vraag",
+    "zh": "一般问题"
   },
   "index.contact.form.message": {
     "fr": "Message",
     "en": "Message",
-    "nl": "Bericht"
+    "nl": "Bericht",
+    "zh": "留言"
   },
   "index.contact.form.messagePlaceholder": {
     "fr": "Décrivez votre projet...",
     "en": "Describe your project...",
-    "nl": "Beschrijf uw project..."
+    "nl": "Beschrijf uw project...",
+    "zh": "请描述您的项目……"
   },
   "index.contact.form.submit": {
     "fr": "Envoyer le message →",
     "en": "Send message →",
-    "nl": "Verstuur bericht →"
+    "nl": "Verstuur bericht →",
+    "zh": "发送留言 →"
   },
   "index.cta.title": {
     "fr": "Prêt à automatiser votre commerce ?",
     "en": "Ready to automate your business?",
-    "nl": "Klaar om uw bedrijf te automatiseren?"
+    "nl": "Klaar om uw bedrijf te automatiseren?",
+    "zh": "准备好让您的生意自动化了吗？"
   },
   "index.cta.subtitle": {
     "fr": "Rejoignez les commerçants avisés qui laissent l'IA faire le travail pendant qu'ils profitent de la vie.",
     "en": "Join the savvy merchants who let AI do the work while they enjoy life.",
-    "nl": "Sluit u aan bij de scherpe zelfstandigen die AI het werk laten doen terwijl ze van het leven genieten."
+    "nl": "Sluit u aan bij de scherpe zelfstandigen die AI het werk laten doen terwijl ze van het leven genieten.",
+    "zh": "加入那些精明的商家：让 AI 去工作，自己享受生活。"
   },
   "index.cta.button": {
     "fr": "Découvrir nos offres →",
     "en": "Discover our offers →",
-    "nl": "Ontdek ons aanbod →"
+    "nl": "Ontdek ons aanbod →",
+    "zh": "了解我们的方案 →"
   },
   "index.scrollToTop": {
     "fr": "Retour en haut",
     "en": "Back to top",
-    "nl": "Terug naar boven"
+    "nl": "Terug naar boven",
+    "zh": "返回顶部"
   },
   "common.cookie.title": {
     "fr": "🍪 Nous utilisons des cookies",
     "en": "🍪 We use cookies",
-    "nl": "🍪 Wij gebruiken cookies"
+    "nl": "🍪 Wij gebruiken cookies",
+    "zh": "🍪 我们使用 Cookie"
   },
   "common.cookie.customize": {
     "fr": "Personnaliser",
     "en": "Customize",
-    "nl": "Aanpassen"
+    "nl": "Aanpassen",
+    "zh": "自定义"
   },
   "common.cookie.customizeTitle": {
     "fr": "Personnaliser les cookies",
     "en": "Customize cookies",
-    "nl": "Cookies aanpassen"
+    "nl": "Cookies aanpassen",
+    "zh": "自定义 Cookie"
   },
   "common.cookie.cancel": {
     "fr": "Annuler",
     "en": "Cancel",
-    "nl": "Annuleren"
+    "nl": "Annuleren",
+    "zh": "取消"
   },
   "common.cookie.save": {
     "fr": "Enregistrer mes choix",
     "en": "Save my choices",
-    "nl": "Mijn keuzes opslaan"
+    "nl": "Mijn keuzes opslaan",
+    "zh": "保存我的选择"
   },
   "common.nav.services": {
     "fr": "Services",
@@ -2797,7 +3001,8 @@
   "common.nav.contact": {
     "fr": "Contact",
     "en": "Contact",
-    "nl": "Contact"
+    "nl": "Contact",
+    "zh": "联系我们"
   },
   "common.nav.clientArea": {
     "fr": "Espace Client",
@@ -2812,47 +3017,56 @@
   "common.footer.brandDesc": {
     "fr": "L'agence digitale des commerces : site web, AI Concierge, vidéos, marketing et analytics.",
     "en": "The digital agency for local businesses: website, AI Concierge, videos, marketing and analytics.",
-    "nl": "Het digitale bureau voor lokale zaken: website, AI Concierge, video's, marketing en analytics."
+    "nl": "Het digitale bureau voor lokale zaken: website, AI Concierge, video's, marketing en analytics.",
+    "zh": "面向本地商家的数字化机构：网站、AI Concierge、视频、营销与数据分析。"
   },
   "common.footer.services": {
     "fr": "Services",
     "en": "Services",
-    "nl": "Diensten"
+    "nl": "Diensten",
+    "zh": "服务"
   },
   "common.footer.company": {
     "fr": "Entreprise",
     "en": "Company",
-    "nl": "Bedrijf"
+    "nl": "Bedrijf",
+    "zh": "公司"
   },
   "common.footer.about": {
     "fr": "À propos",
     "en": "About",
-    "nl": "Over ons"
+    "nl": "Over ons",
+    "zh": "关于我们"
   },
   "common.footer.blog": {
     "fr": "Blog",
     "en": "Blog",
-    "nl": "Blog"
+    "nl": "Blog",
+    "zh": "博客"
   },
   "common.footer.careers": {
     "fr": "Carrières",
     "en": "Careers",
-    "nl": "Vacatures"
+    "nl": "Vacatures",
+    "zh": "招聘信息"
   },
   "common.footer.tos": {
     "fr": "CGV",
     "en": "T&Cs",
-    "nl": "AV"
+    "nl": "AV",
+    "zh": "销售条款"
   },
   "common.footer.legalNotice": {
     "fr": "Mentions légales",
     "en": "Legal notices",
-    "nl": "Juridische vermeldingen"
+    "nl": "Juridische vermeldingen",
+    "zh": "法律声明"
   },
   "common.footer.privacyPolicy": {
     "fr": "Politique de confidentialité",
     "en": "Privacy policy",
-    "nl": "Privacybeleid"
+    "nl": "Privacybeleid",
+    "zh": "隐私政策"
   },
   "concierge.meta.title": {
     "fr": "AI Concierge — JCODE Agency | Automatisation IA pour commerces locaux",
@@ -2912,27 +3126,32 @@
   "common.cookie.necessary": {
     "fr": "<strong style=\"color:white;\">Nécessaires</strong> — Requis pour le fonctionnement du site",
     "en": "<strong style=\"color:white;\">Necessary</strong> — Required for site operation",
-    "nl": "<strong style=\"color:white;\">Noodzakelijk</strong> — Vereist voor de werking van de site"
+    "nl": "<strong style=\"color:white;\">Noodzakelijk</strong> — Vereist voor de werking van de site",
+    "zh": "<strong style=\"color:white;\">必要类</strong> — 网站运行所必需"
   },
   "common.cookie.analytics": {
     "fr": "<strong style=\"color:white;\">Analytiques</strong> — Google Analytics, Meta Pixel",
     "en": "<strong style=\"color:white;\">Analytics</strong> — Google Analytics, Meta Pixel",
-    "nl": "<strong style=\"color:white;\">Analytisch</strong> — Google Analytics, Meta Pixel"
+    "nl": "<strong style=\"color:white;\">Analytisch</strong> — Google Analytics, Meta Pixel",
+    "zh": "<strong style=\"color:white;\">分析类</strong> — Google Analytics、Meta Pixel"
   },
   "common.cookie.marketing": {
     "fr": "<strong style=\"color:white;\">Marketing</strong> — Publicités ciblées et remarketing",
     "en": "<strong style=\"color:white;\">Marketing</strong> — Targeted ads and remarketing",
-    "nl": "<strong style=\"color:white;\">Marketing</strong> — Gerichte advertenties en remarketing"
+    "nl": "<strong style=\"color:white;\">Marketing</strong> — Gerichte advertenties en remarketing",
+    "zh": "<strong style=\"color:white;\">营销类</strong> — 定向广告与再营销"
   },
   "index.options.booking.price": {
     "fr": "+€149<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/mois</span>",
     "en": "+€149<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/month</span>",
-    "nl": "+€149<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/maand</span>"
+    "nl": "+€149<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/maand</span>",
+    "zh": "+€149<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/月</span>"
   },
   "index.options.chatbot.price": {
     "fr": "+€99<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/mois</span>",
     "en": "+€99<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/month</span>",
-    "nl": "+€99<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/maand</span>"
+    "nl": "+€99<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/maand</span>",
+    "zh": "+€99<span style=\"font-size: 18px; font-weight: 400; color: #64748b;\">/月</span>"
   },
   "promo.a1": {
     "fr": "Oui, vous obtenez un design premium, responsive et conforme aux normes RGPD. Le site est généré par notre IA avec les mêmes standards que nos forfaits premium.",
@@ -3402,56 +3621,67 @@
   "common.nav.website": {
     "fr": "SITE WEB",
     "en": "WEBSITE",
-    "nl": "WEBSITE"
+    "nl": "WEBSITE",
+    "zh": "网站"
   },
   "index.cards.studio.desc": {
     "fr": "Vidéos publicitaires IA prêtes à publier : 10 types de campagne, formats TikTok / Reels / YouTube, accroche et appel à l'action intégrés.",
     "en": "Ready-to-publish AI video ads: 10 campaign types, TikTok / Reels / YouTube formats, hook and call to action built in.",
-    "nl": "Gebruiksklare AI-reclamevideo's: 10 campagnetypes, TikTok-, Reels- en YouTube-formaten, met ingebouwde hook en call-to-action."
+    "nl": "Gebruiksklare AI-reclamevideo's: 10 campagnetypes, TikTok-, Reels- en YouTube-formaten, met ingebouwde hook en call-to-action.",
+    "zh": "可直接发布的 AI 视频广告：10 种广告活动类型，适配 TikTok / Reels / YouTube 格式，内置开场钩子和行动号召。"
   },
   "index.cards.studio.price": {
     "fr": "dès 9,90 €/mois",
     "en": "from €9.90/month",
-    "nl": "vanaf €9,90/maand"
+    "nl": "vanaf €9,90/maand",
+    "zh": "每月 €9.90 起"
   },
   "index.cards.concierge.desc": {
     "fr": "Votre partenaire automatisation IA. Done-with-you : on construit ensemble vos workflows, vos skills Claude, vos automatisations.",
     "en": "Your AI automation partner. Done-with-you: we build your workflows, Claude skills and automations together.",
-    "nl": "Uw partner voor AI-automatisering. Done-with-you: we bouwen samen uw workflows, Claude-skills en automatiseringen."
+    "nl": "Uw partner voor AI-automatisering. Done-with-you: we bouwen samen uw workflows, Claude-skills en automatiseringen.",
+    "zh": "您的 AI 自动化伙伴。Done-with-you 共创模式：我们与您一起搭建工作流、Claude 技能和自动化。"
   },
   "index.offer.guaranteeFull": {
     "fr": "Paiement sécurisé · Annulation à tout moment",
     "en": "Secure payment · Cancel anytime",
-    "nl": "Veilig betalen · Op elk moment opzeggen"
+    "nl": "Veilig betalen · Op elk moment opzeggen",
+    "zh": "安全支付 · 随时取消"
   },
   "index.concierge.chat1": {
     "fr": "Bonjour ! Besoin d'un site web pour votre commerce ?",
     "en": "Hi! Need a website for your business?",
-    "nl": "Hallo! Een website nodig voor uw zaak?"
+    "nl": "Hallo! Een website nodig voor uw zaak?",
+    "zh": "您好！需要为您的生意做一个网站吗？"
   },
   "index.concierge.chat2": {
     "fr": "Montrez-moi votre menu",
     "en": "Show me your menu",
-    "nl": "Laat me uw menu zien"
+    "nl": "Laat me uw menu zien",
+    "zh": "给我看看你们的菜单"
   },
   "index.discover.title": {
     "fr": "À découvrir chez JCODE",
     "en": "Discover more at JCODE",
-    "nl": "Ontdek meer bij JCODE"
+    "nl": "Ontdek meer bij JCODE",
+    "zh": "更多 JCODE 内容"
   },
   "index.discover.concierge": {
     "fr": "AI Concierge : automatiser votre commerce",
     "en": "AI Concierge: automate your business",
-    "nl": "AI Concierge: automatiseer uw zaak"
+    "nl": "AI Concierge: automatiseer uw zaak",
+    "zh": "AI Concierge：让您的生意自动化"
   },
   "index.discover.aoa": {
     "fr": "Notre méthode AOA (Audit, Optimize, Automate)",
     "en": "Our AOA method (Audit, Optimize, Automate)",
-    "nl": "Onze AOA-methode (Audit, Optimize, Automate)"
+    "nl": "Onze AOA-methode (Audit, Optimize, Automate)",
+    "zh": "我们的 AOA 方法（审计、优化、自动化）"
   },
   "index.discover.blog": {
     "fr": "Le blog : conseils web & IA pour PME belges",
     "en": "The blog: web & AI tips for Belgian SMEs",
-    "nl": "De blog: web- en AI-tips voor Belgische kmo's"
+    "nl": "De blog: web- en AI-tips voor Belgische kmo's",
+    "zh": "博客：面向比利时中小企业的网站与 AI 建议"
   }
 }
