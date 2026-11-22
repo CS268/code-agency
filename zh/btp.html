@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadence BTP 比利时 | 报价单跟进与工地跟踪</title>
+  <meta name="description" content="Cadence BTP 帮助比利时工匠（屋顶、门窗、热泵）通过自动 WhatsApp 跟进，把待处理的报价单变成已签约的工程。">
+  <link rel="canonical" href="https://jcode.store/zh/btp.html">
+  <link rel="alternate" hreflang="fr" href="https://jcode.store/btp.html">
+  <link rel="alternate" hreflang="en" href="https://jcode.store/en/btp.html">
+  <link rel="alternate" hreflang="nl" href="https://jcode.store/nl/btp.html">
+  <link rel="alternate" hreflang="zh" href="https://jcode.store/zh/btp.html">
+  <link rel="alternate" hreflang="x-default" href="https://jcode.store/btp.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Cadence BTP 比利时 | 报价单跟进与工地跟踪">
+  <meta property="og:description" content="把您待处理的报价单变成已签约的工程。为比利时工匠提供自动 WhatsApp 跟进。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jcode.store/zh/btp.html">
+  <meta property="og:locale" content="en_GB">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --stone: #F7F6F2;
+      --white: #FFFFFF;
+      --slate: #0F172A;
+      --slate-light: #334155;
+      --slate-muted: #64748B;
+      --copper: #6366f1;
+      --copper-light: #4f46e5;
+      --copper-bg: #e0e7ff;
+      --border: #E2E8F0;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 25px rgba(0,0,0,0.07), 0 4px 10px rgba(0,0,0,0.04);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --radius-lg: 16px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--stone);
+      color: var(--slate);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, h5 { font-family: 'Outfit', sans-serif; line-height: 1.2; }
+    a { color: var(--copper); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--copper-light); }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(247,246,242,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1120px; margin: 0 auto; padding: 0 20px;
+    }
+    .nav-logo {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700; font-size: 1.2rem; color: var(--slate);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .nav-logo svg { width: 28px; height: 28px; }
+    .nav-links { display: none; gap: 24px; align-items: center; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--slate-light); }
+    .nav-links a:hover { color: var(--copper); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--copper); color: var(--white);
+      padding: 10px 18px; border-radius: var(--radius-sm);
+      font-weight: 600; font-size: 0.85rem;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .nav-cta:hover { background: var(--copper-light); color: var(--white); transform: translateY(-1px); }
+    .nav-inner { flex-wrap: wrap; }
+    .nav-links { display: flex; order: 3; width: 100%; gap: 18px; overflow-x: auto; padding-top: 10px; white-space: nowrap; }
+    .nav-links a { flex-shrink: 0; }
+    html { scroll-padding-top: 110px; }
+    @media(min-width:768px) { .nav-links { order: 0; width: auto; padding-top: 0; overflow: visible; } html { scroll-padding-top: 80px; } }
+    .hero { padding: 60px 0 80px; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center;
+    }
+    @media(min-width:768px) {
+      .hero-grid { grid-template-columns: 1fr 1fr; gap: 60px; }
+      .hero { padding: 80px 0 100px; }
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--copper-bg); color: var(--copper);
+      padding: 6px 14px; border-radius: 20px;
+      font-size: 0.8rem; font-weight: 600; margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800; color: var(--slate);
+      margin-bottom: 18px;
+    }
+    .hero h1 span { color: var(--copper); }
+    .hero-sub {
+      font-size: 1.1rem; color: var(--slate-muted);
+      margin-bottom: 30px; max-width: 520px;
+    }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 36px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--copper); color: var(--white);
+      padding: 14px 24px; border-radius: var(--radius-sm);
+      font-weight: 600; font-size: 0.95rem;
+      transition: all 0.2s; border: none; cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--copper-light); color: var(--white); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--white); color: var(--slate);
+      padding: 14px 24px; border-radius: var(--radius-sm);
+      font-weight: 600; font-size: 0.95rem;
+      border: 1.5px solid var(--border);
+      transition: all 0.2s; cursor: pointer;
+    }
+    .btn-secondary:hover { border-color: var(--copper); color: var(--copper); transform: translateY(-2px); }
+    .hero-stats { display: flex; flex-wrap: wrap; gap: 24px; }
+    .stat-item { display: flex; flex-direction: column; }
+    .stat-number {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem; font-weight: 700; color: var(--copper);
+    }
+    .stat-label { font-size: 0.82rem; color: var(--slate-muted); }
+    .hero-visual {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+    }
+    .hero-visual-header {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 18px; padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-visual-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .hero-visual-dot.green { background: #22C55E; }
+    .hero-visual-dot.amber { background: #8b5cf6; }
+    .hero-visual-dot.red { background: #EF4444; }
+    .chat-msg {
+      padding: 12px 16px; border-radius: 12px; margin-bottom: 10px;
+      font-size: 0.88rem; max-width: 85%;
+    }
+    .chat-msg.sent {
+      background: var(--copper); color: var(--white);
+      margin-left: auto; border-bottom-right-radius: 4px;
+    }
+    .chat-msg.received {
+      background: #F1F5F9; color: var(--slate);
+      border-bottom-left-radius: 4px;
+    }
+    .chat-time { font-size: 0.7rem; color: var(--slate-muted); margin-bottom: 12px; text-align: right; }
+    .section { padding: 70px 0; }
+    .section-alt { background: var(--white); }
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 700; color: var(--slate);
+      margin-bottom: 12px; text-align: center;
+    }
+    .section-sub {
+      font-size: 1rem; color: var(--slate-muted);
+      text-align: center; max-width: 600px; margin: 0 auto 40px;
+    }
+    .simulator {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    @media(min-width:768px) { .simulator { padding: 36px; } }
+    .sim-dossier {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 16px; border-radius: var(--radius-sm);
+      border: 1.5px solid var(--border);
+      margin-bottom: 12px; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .sim-dossier:hover { border-color: var(--copper); }
+    .sim-dossier.active { border-color: var(--copper); background: #eef2ff; }
+    .sim-dossier-check {
+      width: 22px; height: 22px; border-radius: 6px;
+      border: 2px solid var(--border); display: flex;
+      align-items: center; justify-content: center;
+      transition: all 0.2s; flex-shrink: 0;
+    }
+    .sim-dossier.active .sim-dossier-check {
+      background: var(--copper); border-color: var(--copper);
+    }
+    .sim-dossier-info { flex: 1; }
+    .sim-dossier-ref { font-weight: 600; font-size: 0.9rem; color: var(--slate); }
+    .sim-dossier-detail { font-size: 0.8rem; color: var(--slate-muted); }
+    .sim-dossier-amount {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700; font-size: 1.1rem; color: var(--copper);
+    }
+    .sim-result {
+      margin-top: 24px; padding: 24px;
+      background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+      border-radius: var(--radius);
+      border: 1px solid #c7d2fe;
+    }
+    .sim-result-grid {
+      display: grid; grid-template-columns: 1fr; gap: 16px;
+    }
+    @media(min-width:600px) { .sim-result-grid { grid-template-columns: 1fr 1fr; } }
+    .sim-result-item { text-align: center; }
+    .sim-result-value {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem; font-weight: 700; color: var(--copper);
+    }
+    .sim-result-label { font-size: 0.82rem; color: var(--slate-muted); margin-top: 2px; }
+    .sim-checklist { margin-top: 20px; }
+    .sim-checklist-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 10px; }
+    .sim-check-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 0; font-size: 0.88rem; color: var(--slate-light);
+    }
+    .sim-check-icon {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: #DCFCE7; display: flex;
+      align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .preview-grid {
+      display: grid; grid-template-columns: 1fr; gap: 24px;
+    }
+    @media(min-width:768px) { .preview-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    .preview-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    .preview-card-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600; font-size: 1rem;
+      margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+    }
+    .preview-devis {
+      background: #FAFAFA; border-radius: var(--radius-sm);
+      padding: 18px; font-size: 0.85rem; border: 1px solid var(--border);
+    }
+    .preview-devis-row {
+      display: flex; justify-content: space-between;
+      padding: 6px 0; border-bottom: 1px dashed #E5E7EB;
+    }
+    .preview-devis-row:last-child { border-bottom: none; font-weight: 700; color: var(--copper); padding-top: 10px; }
+    .preview-whatsapp {
+      background: #E8F5E9; border-radius: var(--radius-sm);
+      padding: 16px; border: 1px solid #C8E6C9;
+    }
+    .wa-msg {
+      background: var(--white); border-radius: 10px;
+      padding: 12px 14px; margin-bottom: 8px;
+      font-size: 0.84rem; box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+      position: relative;
+    }
+    .wa-msg-time { font-size: 0.68rem; color: #999; text-align: right; margin-top: 4px; }
+    .wa-label {
+      font-size: 0.75rem; font-weight: 600; color: #2E7D32;
+      margin-bottom: 6px; display: flex; align-items: center; gap: 4px;
+    }
+    .benefits-grid {
+      display: grid; grid-template-columns: 1fr; gap: 16px;
+    }
+    @media(min-width:600px) { .benefits-grid { grid-template-columns: 1fr 1fr; } }
+    @media(min-width:900px) { .benefits-grid { grid-template-columns: repeat(3, 1fr); } }
+    .benefit-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .benefit-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .benefit-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: var(--copper-bg); display: flex;
+      align-items: center; justify-content: center;
+      margin-bottom: 14px;
+    }
+    .benefit-icon svg { width: 22px; height: 22px; color: var(--copper); }
+    .benefit-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600; font-size: 1rem; margin-bottom: 6px;
+    }
+    .benefit-desc { font-size: 0.85rem; color: var(--slate-muted); line-height: 1.5; }
+    .pricing-grid {
+      display: grid; grid-template-columns: 1fr; gap: 20px;
+      max-width: 900px; margin: 0 auto;
+    }
+    @media(min-width:768px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
+    .pricing-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border: 1.5px solid var(--border);
+      text-align: center;
+      transition: transform 0.2s;
+      position: relative;
+    }
+    .pricing-card:hover { transform: translateY(-4px); }
+    .pricing-card.featured {
+      border-color: var(--copper);
+      box-shadow: var(--shadow-lg);
+    }
+    .pricing-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--copper); color: var(--white);
+      padding: 4px 14px; border-radius: 12px;
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    }
+    .pricing-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600; font-size: 1.1rem; margin-bottom: 6px;
+    }
+    .pricing-price {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem; font-weight: 800; color: var(--copper);
+      margin: 14px 0 4px;
+    }
+    .pricing-price span { font-size: 0.9rem; font-weight: 500; color: var(--slate-muted); }
+    .pricing-desc { font-size: 0.82rem; color: var(--slate-muted); margin-bottom: 18px; }
+    .pricing-features { list-style: none; text-align: left; margin-bottom: 22px; }
+    .pricing-features li {
+      font-size: 0.85rem; padding: 6px 0;
+      display: flex; align-items: flex-start; gap: 8px;
+      color: var(--slate-light);
+    }
+    .pricing-features li svg { width: 16px; height: 16px; color: #22C55E; flex-shrink: 0; margin-top: 2px; }
+    .pricing-btn {
+      display: block; width: 100%; padding: 12px;
+      border-radius: var(--radius-sm); font-weight: 600;
+      font-size: 0.9rem; text-align: center;
+      transition: all 0.2s; cursor: pointer; border: none;
+    }
+    .pricing-btn-primary { background: var(--copper); color: var(--white); }
+    .pricing-btn-primary:hover { background: var(--copper-light); }
+    .pricing-btn-outline { background: transparent; color: var(--copper); border: 1.5px solid var(--copper); }
+    .pricing-btn-outline:hover { background: var(--copper-bg); }
+    .faq-list { max-width: 700px; margin: 0 auto; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 0;
+    }
+    .faq-question {
+      width: 100%; padding: 18px 0;
+      display: flex; align-items: center; justify-content: space-between;
+      background: none; border: none; cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem; font-weight: 600; color: var(--slate);
+      text-align: left; gap: 12px;
+    }
+    .faq-question:hover { color: var(--copper); }
+    .faq-icon {
+      width: 24px; height: 24px; flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 200px; padding-bottom: 18px; }
+    .faq-answer p { font-size: 0.9rem; color: var(--slate-muted); line-height: 1.6; }
+    .form-section {
+      background: linear-gradient(135deg, var(--slate) 0%, #1E293B 100%);
+      padding: 70px 0;
+    }
+    .form-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      max-width: 560px; margin: 0 auto;
+      box-shadow: var(--shadow-lg);
+    }
+    @media(min-width:768px) { .form-card { padding: 40px; } }
+    .form-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem; font-weight: 700;
+      text-align: center; margin-bottom: 6px;
+    }
+    .form-sub {
+      font-size: 0.9rem; color: var(--slate-muted);
+      text-align: center; margin-bottom: 28px;
+    }
+    .form-group { margin-bottom: 16px; }
+    .form-label {
+      display: block; font-size: 0.82rem;
+      font-weight: 600; color: var(--slate);
+      margin-bottom: 6px;
+    }
+    .form-input, .form-select {
+      width: 100%; padding: 12px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem; color: var(--slate);
+      transition: border-color 0.2s;
+      background: var(--white);
+    }
+    .form-input:focus, .form-select:focus {
+      outline: none; border-color: var(--copper);
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+    }
+    .form-submit {
+      width: 100%; padding: 14px;
+      background: var(--copper); color: var(--white);
+      border: none; border-radius: var(--radius-sm);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600; font-size: 1rem;
+      cursor: pointer; transition: all 0.2s;
+      margin-top: 8px;
+    }
+    .form-submit:hover { background: var(--copper-light); transform: translateY(-1px); }
+    .form-confirm {
+      display: none; text-align: center; padding: 20px;
+      background: #F0FDF4; border-radius: var(--radius);
+      border: 1px solid #BBF7D0; margin-top: 16px;
+    }
+    .form-confirm.show { display: block; }
+    .form-confirm p { font-size: 0.9rem; color: #166534; margin-bottom: 8px; }
+    .form-confirm a { font-weight: 600; }
+    .footer {
+      background: var(--slate); color: #94A3B8;
+      padding: 32px 0; text-align: center;
+      font-size: 0.82rem;
+    }
+    .footer a { color: #CBD5E1; }
+    .footer-brand {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600; color: var(--white);
+      font-size: 1rem; margin-bottom: 6px;
+    }
+    .nav-links a.lang-link { font-weight: 700; font-size: 0.8rem; opacity: 0.6; }
+    .nav-links a.lang-link.current { opacity: 1; color: var(--copper); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="28" height="28" rx="7" fill="#6366f1"/>
+          <path d="M8 20V10l6-3 6 3v10" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 20v-5h4v5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Cadence BTP
+      </div>
+      <div class="nav-links">
+        <a href="#simulateur">模拟器</a>
+        <a href="#methode">方法</a>
+        <a href="#tarifs">价格</a>
+        <a href="#questions">常见问题</a>
+        <a href="/btp.html" class="lang-link">FR</a>
+        <a href="/nl/btp.html" class="lang-link">NL</a>
+        <a href="/en/btp.html" class="lang-link">EN</a>
+        <a href="/zh/btp.html" class="lang-link current" aria-current="true">中文</a>
+      </div>
+      <a href="#test-gratuit" class="nav-cta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4z"/></svg>
+        用 2 份报价单试用
+      </a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            专为比利时工匠打造
+          </div>
+          <h1>把您待处理的报价单变成 <span>已签约的工程</span></h1>
+          <p class="hero-sub">为比利时的屋顶、门窗、暖通和翻新承包商提供自动 WhatsApp 跟进、符合 6% 增值税的报价单以及简化的工地跟踪。</p>
+          <div class="hero-buttons">
+            <a href="#test-gratuit" class="btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4z"/></svg>
+              免费试用 2 份报价单
+            </a>
+            <a href="#apercu" class="btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              查看 WhatsApp 示例
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">2h</span>
+              <span class="stat-label">每晚节省（估算）</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">D+2 / D+6</span>
+              <span class="stat-label">自动跟进</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">0 €</span>
+              <span class="stat-label">可试用 2 份报价单</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-visual-header">
+            <span class="hero-visual-dot red"></span>
+            <span class="hero-visual-dot amber"></span>
+            <span class="hero-visual-dot green"></span>
+            <span style="font-size:0.78rem;color:var(--slate-muted);margin-left:8px;">WhatsApp — 自动跟进</span>
+          </div>
+          <div class="chat-msg received">您好，谢谢您的屋顶报价单。我们这个周末全家商量一下。</div>
+          <div class="chat-time">周六 10:42</div>
+          <div class="chat-msg sent">您好 Dupont 先生 👋 没关系，请慢慢考虑。如果您对材料或工期有任何疑问，我随时都在。祝您愉快！</div>
+          <div class="chat-time">周六 10:45（自动）</div>
+          <div class="chat-msg received">好的，谢谢！我们周一给您回电 👍</div>
+          <div class="chat-time">周六 11:02</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="simulateur">
+    <div class="container">
+      <h2 class="section-title">模拟您可挽回的工程</h2>
+      <p class="section-sub">勾选待处理的报价单，估算 Cadence BTP 能为您节省多少时间、带来多少收益。</p>
+      <div class="simulator">
+        <div class="sim-dossier active" data-amount="14800" onclick="toggleDossier(this)">
+          <div class="sim-dossier-check">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="sim-dossier-info">
+            <div class="sim-dossier-ref">DEV-2026-104</div>
+            <div class="sim-dossier-detail">Uccle — 石板屋顶</div>
+          </div>
+          <div class="sim-dossier-amount">14 800 €</div>
+        </div>
+        <div class="sim-dossier active" data-amount="9450" onclick="toggleDossier(this)">
+          <div class="sim-dossier-check">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="sim-dossier-info">
+            <div class="sim-dossier-ref">DEV-2026-108</div>
+            <div class="sim-dossier-detail">Wavre — 铝合金窗</div>
+          </div>
+          <div class="sim-dossier-amount">9 450 €</div>
+        </div>
+        <div class="sim-dossier active" data-amount="11200" onclick="toggleDossier(this)">
+          <div class="sim-dossier-check">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="sim-dossier-info">
+            <div class="sim-dossier-ref">DEV-2026-112</div>
+            <div class="sim-dossier-detail">Namur — 热泵</div>
+          </div>
+          <div class="sim-dossier-amount">11 200 €</div>
+        </div>
+        <div class="sim-result">
+          <div class="sim-result-grid">
+            <div class="sim-result-item">
+              <div class="sim-result-value" id="sim-total">35 450 €</div>
+              <div class="sim-result-label">可挽回的工程金额</div>
+            </div>
+            <div class="sim-result-item">
+              <div class="sim-result-value" id="sim-hours">6h</div>
+              <div class="sim-result-label">每周节省工时（估算）</div>
+            </div>
+          </div>
+          <div class="sim-checklist">
+            <div class="sim-checklist-title">Cadence 为您做的事：</div>
+            <div class="sim-check-item">
+              <div class="sim-check-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              在第 2 天和第 6 天自动发送 WhatsApp 跟进
+            </div>
+            <div class="sim-check-item">
+              <div class="sim-check-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              生成符合 6% 增值税的报价单格式
+            </div>
+            <div class="sim-check-item">
+              <div class="sim-check-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Peppol 发票的分类与跟踪
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="apercu">
+    <div class="container">
+      <h2 class="section-title">直观预览</h2>
+      <p class="section-sub">以下是符合比利时规范的报价单，以及自动发送的跟进消息的样子。</p>
+      <div class="preview-grid">
+        <div class="preview-card">
+          <div class="preview-card-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--copper)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            符合比利时规范的报价单
+          </div>
+          <div class="preview-devis">
+            <div class="preview-devis-row">
+              <span>公司</span>
+              <span style="font-weight:600">Toitures Martin SPRL</span>
+            </div>
+            <div class="preview-devis-row">
+              <span>企业编号（BCE）</span>
+              <span>BE 0123.456.789</span>
+            </div>
+            <div class="preview-devis-row">
+              <span>客户</span>
+              <span>Dupont 先生 — Uccle</span>
+            </div>
+            <div class="preview-devis-row">
+              <span>石板屋顶翻新</span>
+              <span>10 200,00 €</span>
+            </div>
+            <div class="preview-devis-row">
+              <span>锌板工程与排水</span>
+              <span>2 100,00 €</span>
+            </div>
+            <div class="preview-devis-row">
+              <span>不含增值税小计</span>
+              <span>12 300,00 €</span>
+            </div>
+            <div class="preview-devis-row">
+              <span>增值税 6%（翻新）</span>
+              <span>738,00 €</span>
+            </div>
+            <div class="preview-devis-row">
+              <span>含增值税总计</span>
+              <span>13 038,00 €</span>
+            </div>
+          </div>
+        </div>
+        <div class="preview-card">
+          <div class="preview-card-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            自动 WhatsApp 跟进
+          </div>
+          <div class="preview-whatsapp">
+            <div class="wa-label">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              第 2 天 — 温和提醒
+            </div>
+            <div class="wa-msg">
+              <p>您好 Dupont 先生 👋</p>
+              <p style="margin-top:6px">我想跟进一下周四发出的屋顶报价单。您看过了吗？如果您对材料或工期有任何疑问，欢迎随时问我。</p>
+              <p style="margin-top:6px">祝您愉快！🏠</p>
+              <div class="wa-msg-time">09:15 ✓✓</div>
+            </div>
+            <div class="wa-label" style="margin-top:14px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              第 6 天 — 第二次提醒
+            </div>
+            <div class="wa-msg">
+              <p>您好 Dupont 先生，</p>
+              <p style="margin-top:6px">由于尚未收到回复，我理解您可能仍在考虑这个项目。我们下个月有档期，如果您想推进，随时告诉我。</p>
+              <p style="margin-top:6px">随时听候您的安排。此致，Martin 🤝</p>
+              <div class="wa-msg-time">09:15 ✓✓</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="methode">
+    <div class="container">
+      <h2 class="section-title">为您的业务带来的 5 大实际好处</h2>
+      <p class="section-sub">Cadence BTP 接手每天耗费您时间的事务。</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="benefit-title">自动跟进 第 2 天 / 第 6 天</div>
+          <div class="benefit-desc">您的客户会在恰当的时机收到礼貌、有人情味的 WhatsApp 消息。您不会再漏掉任何一份报价单。</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="benefit-title">符合 6% 增值税与 BCE 要求的报价单</div>
+          <div class="benefit-desc">每份报价单都包含您的 BCE 编号、正确的增值税率（翻新 6%，新建 21%）以及法定声明。</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="benefit-title">Peppol 2026 电子开票</div>
+          <div class="benefit-desc">现在就为强制电子发票做好准备。您的发票将轻松兼容 Peppol。</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <div class="benefit-title">无需复杂软件</div>
+          <div class="benefit-desc">无需培训，没有复杂界面。一切都通过您每天都在用的 WhatsApp 完成。</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="benefit-title">比利时本地直接支持</div>
+          <div class="benefit-desc">比利时本地团队，了解行业现场、规范和建筑行业的实际情况。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tarifs">
+    <div class="container">
+      <h2 class="section-title">价格透明，没有意外</h2>
+      <p class="section-sub">免费开始，准备好了再升级。</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-name">按效果试用</div>
+          <div class="pricing-price">0 €</div>
+          <div class="pricing-desc">用 2 份真实的待处理报价单试用</div>
+          <ul class="pricing-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              免费处理 2 份报价单
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              第 2 天和第 6 天的 WhatsApp 跟进
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              无需承诺，无需银行卡
+            </li>
+          </ul>
+          <a href="#test-gratuit" class="pricing-btn pricing-btn-outline">开始试用</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-badge">热门</div>
+          <div class="pricing-name">个体工匠版</div>
+          <div class="pricing-price">190 €<span>/月</span></div>
+          <div class="pricing-desc">适合独立工匠</div>
+          <ul class="pricing-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              不限数量的报价单跟踪
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              自动跟进 + 报价单格式化
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              含 Peppol 准备
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              无需承诺，随时可停
+            </li>
+          </ul>
+          <a href="#test-gratuit" class="pricing-btn pricing-btn-primary">选择个体版</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-name">建筑团队版</div>
+          <div class="pricing-price">340 €<span>/月</span></div>
+          <div class="pricing-desc">多名工地负责人，完整跟踪</div>
+          <ul class="pricing-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              包含个体版全部功能 +
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              多名工地负责人
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              工地仪表盘
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              比利时优先支持
+            </li>
+          </ul>
+          <a href="#test-gratuit" class="pricing-btn pricing-btn-outline">选择团队版</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="questions">
+    <div class="container">
+      <h2 class="section-title">常见问题</h2>
+      <p class="section-sub">比利时建筑企业主常问的问题解答。</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            我的价格和客户数据会保密吗？
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>当然。您的数据托管在欧洲，经过加密，绝不共享。WhatsApp 消息从您自己的号码发出，您完全掌控。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            发送的 WhatsApp 消息语气如何？
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>有人情味、礼貌且专业，绝不咄咄逼人。语气贴合比利时工匠与客户之间的关系：尊重、直接、温暖。您可以个性化这些消息。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            设置需要多久？
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>通常 48 小时。我们为您开通账户、导入待处理的报价单，随后发出第一批跟进消息。您无需安装任何东西。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            电脑和手机都能用吗？
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>可以，一切都通过 WhatsApp 网页版和手机应用运行。您可以在办公室用电脑、在工地用手机查看提醒，无需额外安装应用。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            我可以随时停止吗？
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>可以，没有任何条件。无需承诺，无取消费用。您随时可以停止或恢复，只需发一条消息。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="test-gratuit">
+    <div class="container">
+      <div class="form-card">
+        <div class="form-title">免费测试 2 份报价单</div>
+        <div class="form-sub">填写此表单，其余交给我们。24 小时内回复。</div>
+        <form id="testForm" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label class="form-label" for="name">名字和公司</label>
+            <input class="form-input" type="text" id="name" name="name" placeholder="例如：Martin — Toitures Martin SPRL" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="metier">行业</label>
+            <select class="form-select" id="metier" name="metier" required>
+              <option value="">请选择您的行业</option>
+              <option value="Roofing">屋顶</option>
+              <option value="Windows">门窗</option>
+              <option value="Heating/Heat pump">暖气 / 热泵</option>
+              <option value="General renovation">综合翻新</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">WhatsApp 电话号码</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="E.g.: 0475 12 34 56" required>
+          </div>
+          <p style="font-size:0.8rem;color:#64748B;margin-bottom:12px;">您的数据（姓名、行业、电话）仅用于就本次测试联系您。联系邮箱：contact@jcode.store</p>
+          <button type="submit" class="form-submit">
+            发送我的免费测试申请
+          </button>
+        </form>
+        <div class="form-confirm" id="formConfirm">
+          <p><strong>✅ 谢谢！您的申请已准备好。</strong></p>
+          <p>正在跳转到 WhatsApp。如未跳转：</p>
+          <a href="mailto:contact@jcode.store">contact@jcode.store</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">Cadence BTP</div>
+      <p>由 JCODE 提供 — 比利时</p>
+      <p style="margin-top:8px;">
+        <a href="mailto:contact@jcode.store">contact@jcode.store</a> · 
+        <a href="https://jcode.store">jcode.store</a>
+      </p>
+      <p style="margin-top:12px;font-size:0.75rem;color:#64748B;">© 2026 Cadence BTP. 版权所有。</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleDossier(el) {
+      el.classList.toggle('active');
+      updateSimulator();
+    }
+    function updateSimulator() {
+      const active = document.querySelectorAll('.sim-dossier.active');
+      let total = 0;
+      active.forEach(d => { total += parseInt(d.dataset.amount); });
+      document.getElementById('sim-total').textContent = total.toLocaleString('fr-BE') + ' €';
+      document.getElementById('sim-hours').textContent = Math.round(active.length * 2) + 'h';
+    }
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    }
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const metier = document.getElementById('metier').value;
+      const phone = document.getElementById('phone').value;
+      const message = encodeURIComponent(
+        `Hello! I'd like to try Cadence BTP for free on 2 quotes.\n\n👤 ${name}\n🔧 ${metier}\n📱 ${phone}\n\nPlease get back to me. Thank you!`
+      );
+      document.getElementById('formConfirm').classList.add('show');
+      document.getElementById('testForm').style.display = 'none';
+      window.open(`https://wa.me/32466062273?text=${message}`, '_blank');
+    }
+    updateSimulator();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Cadence BTP",
+    "description": "为比利时建筑行业工匠提供报价单跟进与工地跟踪",
+    "provider": {
+      "@type": "Organization",
+      "name": "JCODE",
+      "url": "https://jcode.store"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Belgium"
+    },
+    "url": "https://jcode.store/zh/btp.html"
+  }
+  </script>
+</body>
+</html>
