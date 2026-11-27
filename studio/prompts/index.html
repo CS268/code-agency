@@ -200,9 +200,10 @@ footer a:hover{color:#fff}
 </head>
 <body>
 <div id="studioLangBar" style="position:fixed; top:96px; right:20px; background:rgba(15,23,42,0.95); padding:10px 16px; border-radius:50px; box-shadow:0 10px 40px rgba(0,0,0,0.15); z-index:9999; display:flex; gap:8px; backdrop-filter:blur(10px); align-items:center;">
-    <button data-lang="fr" onclick="applyStudioLang('fr')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;" data-fr="FR" data-nl="FR" data-en="FR">FR</button>
-    <button data-lang="nl" onclick="applyStudioLang('nl')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;" data-fr="NL" data-nl="NL" data-en="NL">NL</button>
-    <button data-lang="en" onclick="applyStudioLang('en')" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:12px; color:#fff;" data-fr="EN" data-nl="EN" data-en="EN">EN</button>
+<button data-lang="en" onclick="applyStudioLang('en')" aria-label="English" title="English" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:4px 10px; cursor:pointer; font-size:20px; line-height:1.2; color:#fff;">🇺🇸</button>
+<button data-lang="zh" onclick="applyStudioLang('zh')" aria-label="中文" title="中文" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:4px 10px; cursor:pointer; font-size:20px; line-height:1.2; color:#fff;">🇨🇳</button>
+<button data-lang="fr" onclick="applyStudioLang('fr')" aria-label="Français" title="Français" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:4px 10px; cursor:pointer; font-size:20px; line-height:1.2; color:#fff;">🇫🇷</button>
+<button data-lang="nl" onclick="applyStudioLang('nl')" aria-label="Nederlands" title="Nederlands" style="background:none; border:1px solid rgba(255,255,255,0.2); border-radius:50px; padding:4px 10px; cursor:pointer; font-size:20px; line-height:1.2; color:#fff;">🇳🇱</button>
 </div>
 
 <div class="aurora"></div>
@@ -213,23 +214,23 @@ footer a:hover{color:#fff}
     <a href="#" class="logo">
       <div class="logo-mark">J</div>
       <div class="logo-txt">J<span>CODE</span></div>
-      <div class="logo-sub" data-fr="Studio IA Vidéo" data-nl="AI-videostudio" data-en="AI Video Studio">Studio IA Vidéo</div>
+      <div class="logo-sub" data-fr="Studio IA Vidéo" data-nl="AI-videostudio" data-en="AI Video Studio" data-zh="AI 视频工作室">Studio IA Vidéo</div>
     </a>
         
     <div class="nav-spacer"></div>
     <div class="nav-links">
-      <a href="#studio" data-fr="Studio" data-nl="Studio" data-en="Studio">Studio</a>
-      <a href="#categories" data-fr="Catégories" data-nl="Categorieën" data-en="Categories">Catégories</a>
-      <a href="#comment" data-fr="Comment ça marche" data-nl="Hoe het werkt" data-en="How it works">Comment ça marche</a>
-      <a href="/studio/marketing/" data-fr="Marketing" data-nl="Marketing" data-en="Marketing" style="color:#c7d2fe;font-weight:700;">Marketing <span style="background:linear-gradient(135deg,#6366f1,#d946ef);color:#fff;font-size:9px;padding:2px 6px;border-radius:8px;vertical-align:super;font-weight:800;">NEW</span></a>
+      <a href="#studio" data-fr="Studio" data-nl="Studio" data-en="Studio" data-zh="工作室">Studio</a>
+      <a href="#categories" data-fr="Catégories" data-nl="Categorieën" data-en="Categories" data-zh="分类">Catégories</a>
+      <a href="#comment" data-fr="Comment ça marche" data-nl="Hoe het werkt" data-en="How it works" data-zh="使用方法">Comment ça marche</a>
+      <a href="/studio/marketing/" data-fr="Marketing" data-nl="Marketing" data-en="Marketing" style="color:#c7d2fe;font-weight:700;" data-zh="营销">Marketing <span style="background:linear-gradient(135deg,#6366f1,#d946ef);color:#fff;font-size:9px;padding:2px 6px;border-radius:8px;vertical-align:super;font-weight:800;">NEW</span></a>
     </div>
     <a href="https://jcode.store" target="_blank" rel="noopener" class="btn btn-primary">jcode.store ↗</a>
   </div>
 </nav>
 
 <header class="hero wrap" id="studio">
-  <div class="pill"><span class="pill-dot"></span><b id="pillCount">—</b> <span data-fr="effets cinématiques · moteur de prompts IA" data-nl="cinematische effecten · AI-promptmotor" data-en="cinematic effects · AI prompt engine">effets cinématiques · moteur de prompts IA</span></div>
-  <h1><span data-fr="Génère des vidéos IA" data-nl="Genereer AI-video&#x27;s" data-en="Generate AI videos">Génère des vidéos IA</span><br><span class="grad" data-fr="au niveau cinéma." data-nl="op bioscoopniveau." data-en="at a cinematic level.">au niveau cinéma.</span></h1>
+  <div class="pill"><span class="pill-dot"></span><b id="pillCount">—</b> <span data-fr="effets cinématiques · moteur de prompts IA" data-nl="cinematische effecten · AI-promptmotor" data-en="cinematic effects · AI prompt engine" data-zh="电影级特效 · AI 提示词引擎">effets cinématiques · moteur de prompts IA</span></div>
+  <h1><span data-fr="Génère des vidéos IA" data-nl="Genereer AI-video&#x27;s" data-en="Generate AI videos" data-zh="生成 AI 视频">Génère des vidéos IA</span><br><span class="grad" data-fr="au niveau cinéma." data-nl="op bioscoopniveau." data-en="at a cinematic level." data-zh="达到电影级水准。">au niveau cinéma.</span></h1>
 <div class="demo12" id="demo">
 <style>
 .demo12{padding:24px 0 8px;text-align:center}
@@ -241,50 +242,50 @@ footer a:hover{color:#fff}
 </div>
 </div>
 
-  <p data-fr="Sélectionne des actions, des mouvements de caméra, des effets VFX et des directions artistiques. Le studio assemble un prompt structuré, prêt à coller dans Sora, Runway, Kling ou Veo." data-nl="Selecteer acties, camerabewegingen, VFX-effecten en artistieke richtingen. De studio bouwt een gestructureerde prompt, klaar om te plakken in Sora, Runway, Kling of Veo." data-en="Select actions, camera moves, VFX and art directions. The studio builds a structured prompt, ready to paste into Sora, Runway, Kling or Veo.">Sélectionne des actions, des mouvements de caméra, des effets VFX et des directions artistiques. Le studio assemble un prompt structuré, prêt à coller dans Sora, Runway, Kling ou Veo.</p>
+  <p data-fr="Sélectionne des actions, des mouvements de caméra, des effets VFX et des directions artistiques. Le studio assemble un prompt structuré, prêt à coller dans Sora, Runway, Kling ou Veo." data-nl="Selecteer acties, camerabewegingen, VFX-effecten en artistieke richtingen. De studio bouwt een gestructureerde prompt, klaar om te plakken in Sora, Runway, Kling of Veo." data-en="Select actions, camera moves, VFX and art directions. The studio builds a structured prompt, ready to paste into Sora, Runway, Kling or Veo." data-zh="选择动作、镜头运动、VFX 特效和艺术风格。工作室会生成结构化提示词，可直接粘贴到 Sora、Runway、Kling 或 Veo。">Sélectionne des actions, des mouvements de caméra, des effets VFX et des directions artistiques. Le studio assemble un prompt structuré, prêt à coller dans Sora, Runway, Kling ou Veo.</p>
 
   <div class="searchbar">
     <span class="ico">⌕</span>
-    <input id="search" type="text" placeholder="Rechercher un effet, un style, une émotion…" data-fr-placeholder="Rechercher un effet, un style, une émotion…" data-nl-placeholder="Zoek een effect, stijl of emotie…" data-en-placeholder="Search for an effect, style or emotion…" autocomplete="off" spellcheck="false">
+    <input id="search" type="text" placeholder="Rechercher un effet, un style, une émotion…" data-fr-placeholder="Rechercher un effet, un style, une émotion…" data-nl-placeholder="Zoek een effect, stijl of emotie…" data-en-placeholder="Search for an effect, style or emotion…" autocomplete="off" spellcheck="false" data-zh-placeholder="搜索效果、风格、情绪…">
     <kbd>/</kbd>
   </div>
 
   <div class="hero-actions">
-    <button class="btn btn-primary" id="btnRandom" data-fr="⚡ Combo aléatoire" data-nl="⚡ Willekeurige combo" data-en="⚡ Random combo">⚡ Combo aléatoire</button>
-    <button class="btn btn-ghost" id="btnFav"><span data-fr="★ Mes favoris" data-nl="★ Mijn favorieten" data-en="★ My favorites">★ Mes favoris</span> <span id="favCount" style="opacity:.6">(0)</span></button>
-    <button class="btn btn-ghost" id="btnReset" data-fr="Réinitialiser" data-nl="Resetten" data-en="Reset">Réinitialiser</button>
+    <button class="btn btn-primary" id="btnRandom" data-fr="⚡ Combo aléatoire" data-nl="⚡ Willekeurige combo" data-en="⚡ Random combo" data-zh="⚡ 随机组合">⚡ Combo aléatoire</button>
+    <button class="btn btn-ghost" id="btnFav"><span data-fr="★ Mes favoris" data-nl="★ Mijn favorieten" data-en="★ My favorites" data-zh="★ 我的收藏">★ Mes favoris</span> <span id="favCount" style="opacity:.6">(0)</span></button>
+    <button class="btn btn-ghost" id="btnReset" data-fr="Réinitialiser" data-nl="Resetten" data-en="Reset" data-zh="重置">Réinitialiser</button>
   </div>
 
   <div class="stats">
-    <div class="stat"><div class="stat-v" id="statTotal">—</div><div class="stat-l" data-fr="Effets" data-nl="Effecten" data-en="Effects">Effets</div></div>
-    <div class="stat"><div class="stat-v">23</div><div class="stat-l" data-fr="Catégories" data-nl="Categorieën" data-en="Categories">Catégories</div></div>
-    <div class="stat"><div class="stat-v" id="statSel">0</div><div class="stat-l" data-fr="Sélectionnés" data-nl="Geselecteerd" data-en="Selected">Sélectionnés</div></div>
-    <div class="stat"><div class="stat-v">5</div><div class="stat-l" data-fr="Modèles IA" data-nl="AI-modellen" data-en="AI models">Modèles IA</div></div>
+    <div class="stat"><div class="stat-v" id="statTotal">—</div><div class="stat-l" data-fr="Effets" data-nl="Effecten" data-en="Effects" data-zh="效果">Effets</div></div>
+    <div class="stat"><div class="stat-v">23</div><div class="stat-l" data-fr="Catégories" data-nl="Categorieën" data-en="Categories" data-zh="分类">Catégories</div></div>
+    <div class="stat"><div class="stat-v" id="statSel">0</div><div class="stat-l" data-fr="Sélectionnés" data-nl="Geselecteerd" data-en="Selected" data-zh="已选择">Sélectionnés</div></div>
+    <div class="stat"><div class="stat-v">5</div><div class="stat-l" data-fr="Modèles IA" data-nl="AI-modellen" data-en="AI models" data-zh="AI 模型">Modèles IA</div></div>
   </div>
 </header>
 
 <div class="mkt-banner">
   <span class="orb orb1"></span><span class="orb orb2"></span>
   <div class="inner">
-    <span class="mkt-eyebrow"><span class="pulse"></span> <span data-fr="Nouveau" data-nl="Nieuw" data-en="New">Nouveau</span></span>
-    <div class="mkt-title"><span data-fr="Studio Marketing — " data-nl="Marketing Studio — " data-en="Marketing Studio — ">Studio Marketing — </span><span class="grad" data-fr="des pubs IA prêtes à publier" data-nl="AI-advertenties klaar om te publiceren" data-en="AI ads ready to publish">des pubs IA prêtes à publier</span></div>
-    <div class="mkt-desc" data-fr="10 types de campagne, accroche des 3 premières secondes et appel à l'action intégrés. Ton produit reste identique à ta photo." data-nl="10 campagnetypes, hook in de eerste 3 seconden en ingebouwde call-to-action. Je product blijft identiek aan je foto." data-en="10 campaign types, hook in the first 3 seconds and built-in call to action. Your product stays true to your photo.">10 types de campagne, accroche des 3 premières secondes et appel à l'action intégrés. Ton produit reste identique à ta photo.</div>
+    <span class="mkt-eyebrow"><span class="pulse"></span> <span data-fr="Nouveau" data-nl="Nieuw" data-en="New" data-zh="新">Nouveau</span></span>
+    <div class="mkt-title"><span data-fr="Studio Marketing — " data-nl="Marketing Studio — " data-en="Marketing Studio — " data-zh="营销工作室 —">Studio Marketing — </span><span class="grad" data-fr="des pubs IA prêtes à publier" data-nl="AI-advertenties klaar om te publiceren" data-en="AI ads ready to publish" data-zh="可直接发布的 AI 广告">des pubs IA prêtes à publier</span></div>
+    <div class="mkt-desc" data-fr="10 types de campagne, accroche des 3 premières secondes et appel à l'action intégrés. Ton produit reste identique à ta photo." data-nl="10 campagnetypes, hook in de eerste 3 seconden en ingebouwde call-to-action. Je product blijft identiek aan je foto." data-en="10 campaign types, hook in the first 3 seconds and built-in call to action. Your product stays true to your photo." data-zh="10 种广告类型，内置前 3 秒钩子和行动号召。你的产品与照片保持完全一致。">10 types de campagne, accroche des 3 premières secondes et appel à l'action intégrés. Ton produit reste identique à ta photo.</div>
     <div class="mkt-chips"><span class="mkt-chip">📱 9:16 TikTok / Reels</span><span class="mkt-chip">⬛ 1:1 Instagram</span><span class="mkt-chip">🖥️ 16:9 YouTube</span><span class="mkt-chip">⚡ 6,4 s</span></div>
   </div>
-  <a class="mkt-cta" href="/studio/marketing/"><span data-fr="Essayer maintenant" data-nl="Nu proberen" data-en="Try now">Essayer maintenant</span> <span class="arr">→</span><span class="mkt-price" data-fr="dès 9,90 €/mois" data-nl="vanaf € 9,90/maand" data-en="from €9.90/month">dès 9,90 €/mois</span></a>
+  <a class="mkt-cta" href="/studio/marketing/"><span data-fr="Essayer maintenant" data-nl="Nu proberen" data-en="Try now" data-zh="立即试用">Essayer maintenant</span> <span class="arr">→</span><span class="mkt-price" data-fr="dès 9,90 €/mois" data-nl="vanaf € 9,90/maand" data-en="from €9.90/month" data-zh="每月 9.90 欧元起">dès 9,90 €/mois</span></a>
 </div>
 
 
 <section class="wrap" id="categories">
   <div class="filters" id="filters"></div>
   <div class="toolbar">
-    <div class="tb-count"><b id="shown">—</b> <span data-fr="effets affichés" data-nl="weergegeven effecten" data-en="effects shown">effets affichés</span></div>
+    <div class="tb-count"><b id="shown">—</b> <span data-fr="effets affichés" data-nl="weergegeven effecten" data-en="effects shown" data-zh="个效果已显示">effets affichés</span></div>
     <div class="tb-spacer"></div>
     <select class="mini" id="sort">
-      <option value="num" data-fr="Tri · Numéro" data-nl="Sorteer · Nummer" data-en="Sort · Number">Tri · Numéro</option>
-      <option value="num-desc" data-fr="Tri · Numéro inversé" data-nl="Sorteer · Nummer aflopend" data-en="Sort · Number reversed">Tri · Numéro inversé</option>
-      <option value="az" data-fr="Tri · A → Z" data-nl="Sorteer · A → Z" data-en="Sort · A → Z">Tri · A → Z</option>
-      <option value="cat" data-fr="Tri · Catégorie" data-nl="Sorteer · Categorie" data-en="Sort · Category">Tri · Catégorie</option>
+      <option value="num" data-fr="Tri · Numéro" data-nl="Sorteer · Nummer" data-en="Sort · Number" data-zh="排序 · 编号">Tri · Numéro</option>
+      <option value="num-desc" data-fr="Tri · Numéro inversé" data-nl="Sorteer · Nummer aflopend" data-en="Sort · Number reversed" data-zh="排序 · 编号倒序">Tri · Numéro inversé</option>
+      <option value="az" data-fr="Tri · A → Z" data-nl="Sorteer · A → Z" data-en="Sort · A → Z" data-zh="排序 · A → Z">Tri · A → Z</option>
+      <option value="cat" data-fr="Tri · Catégorie" data-nl="Sorteer · Categorie" data-en="Sort · Category" data-zh="排序 · 分类">Tri · Catégorie</option>
     </select>
   </div>
   <div class="grid" id="grid"></div>
@@ -293,96 +294,96 @@ footer a:hover{color:#fff}
 <!-- FIX #2 — vraie section "comment ça marche", bon endroit pour le SEO -->
 <section class="howto" id="comment">
   <div class="wrap">
-    <h2 data-fr="Comment ça marche" data-nl="Hoe het werkt" data-en="How it works">Comment ça marche</h2>
+    <h2 data-fr="Comment ça marche" data-nl="Hoe het werkt" data-en="How it works" data-zh="使用方法">Comment ça marche</h2>
     <div class="howto-grid">
       <div class="howto-step">
-        <div class="n" data-fr="ÉTAPE 1" data-nl="STAP 1" data-en="STEP 1">ÉTAPE 1</div>
-        <h3 data-fr="Sélectionne des effets" data-nl="Selecteer effecten" data-en="Select effects">Sélectionne des effets</h3>
-        <p data-fr="Parcours 260 effets cinématiques classés par catégorie — action, caméra, VFX, style, genre. Clique pour ajouter un effet à ta combinaison." data-nl="Blader door 260 cinematische effecten per categorie — actie, camera, VFX, stijl, genre. Klik om een effect aan je combinatie toe te voegen." data-en="Browse 260 cinematic effects by category — action, camera, VFX, style, genre. Click to add an effect to your combo.">Parcours 260 effets cinématiques classés par catégorie — action, caméra, VFX, style, genre. Clique pour ajouter un effet à ta combinaison.</p>
+        <div class="n" data-fr="ÉTAPE 1" data-nl="STAP 1" data-en="STEP 1" data-zh="步骤 1">ÉTAPE 1</div>
+        <h3 data-fr="Sélectionne des effets" data-nl="Selecteer effecten" data-en="Select effects" data-zh="选择效果">Sélectionne des effets</h3>
+        <p data-fr="Parcours 260 effets cinématiques classés par catégorie — action, caméra, VFX, style, genre. Clique pour ajouter un effet à ta combinaison." data-nl="Blader door 260 cinematische effecten per categorie — actie, camera, VFX, stijl, genre. Klik om een effect aan je combinatie toe te voegen." data-en="Browse 260 cinematic effects by category — action, camera, VFX, style, genre. Click to add an effect to your combo." data-zh="浏览按类别分类的 260 个电影级效果——动作、镜头、VFX、风格、类型。点击即可将效果添加到你的组合。">Parcours 260 effets cinématiques classés par catégorie — action, caméra, VFX, style, genre. Clique pour ajouter un effet à ta combinaison.</p>
       </div>
       <div class="howto-step">
-        <div class="n" data-fr="ÉTAPE 2" data-nl="STAP 2" data-en="STEP 2">ÉTAPE 2</div>
-        <h3 data-fr="Choisis ton modèle" data-nl="Kies je model" data-en="Choose your model">Choisis ton modèle</h3>
-        <p data-fr="Sora 2, Runway Gen-4, Kling 2.0, Veo 3 ou Luma — chaque modèle a ses forces. Le studio adapte le format et la durée à ton choix." data-nl="Sora 2, Runway Gen-4, Kling 2.0, Veo 3 of Luma — elk model heeft zijn sterktes. De studio past formaat en duur aan jouw keuze aan." data-en="Sora 2, Runway Gen-4, Kling 2.0, Veo 3 or Luma — each model has its strengths. The studio adapts format and duration to your choice.">Sora 2, Runway Gen-4, Kling 2.0, Veo 3 ou Luma — chaque modèle a ses forces. Le studio adapte le format et la durée à ton choix.</p>
+        <div class="n" data-fr="ÉTAPE 2" data-nl="STAP 2" data-en="STEP 2" data-zh="步骤 2">ÉTAPE 2</div>
+        <h3 data-fr="Choisis ton modèle" data-nl="Kies je model" data-en="Choose your model" data-zh="选择你的模型">Choisis ton modèle</h3>
+        <p data-fr="Sora 2, Runway Gen-4, Kling 2.0, Veo 3 ou Luma — chaque modèle a ses forces. Le studio adapte le format et la durée à ton choix." data-nl="Sora 2, Runway Gen-4, Kling 2.0, Veo 3 of Luma — elk model heeft zijn sterktes. De studio past formaat en duur aan jouw keuze aan." data-en="Sora 2, Runway Gen-4, Kling 2.0, Veo 3 or Luma — each model has its strengths. The studio adapts format and duration to your choice." data-zh="Sora 2、Runway Gen-4、Kling 2.0、Veo 3 或 Luma——每个模型各有所长。工作室会根据你的选择调整格式和时长。">Sora 2, Runway Gen-4, Kling 2.0, Veo 3 ou Luma — chaque modèle a ses forces. Le studio adapte le format et la durée à ton choix.</p>
       </div>
       <div class="howto-step">
-        <div class="n" data-fr="ÉTAPE 3" data-nl="STAP 3" data-en="STEP 3">ÉTAPE 3</div>
-        <h3 data-fr="Génère et colle" data-nl="Genereer en plak" data-en="Generate and paste">Génère et colle</h3>
-        <p data-fr="Le studio assemble un prompt long, une version courte optimisée mots-clés, et un negative prompt. Copie et colle dans ton générateur préféré." data-nl="De studio bouwt een lange prompt, een korte keyword-versie en een negative prompt. Kopieer en plak in je favoriete generator." data-en="The studio builds a long prompt, a short keyword version, and a negative prompt. Copy and paste into your preferred generator.">Le studio assemble un prompt long, une version courte optimisée mots-clés, et un negative prompt. Copie et colle dans ton générateur préféré.</p>
+        <div class="n" data-fr="ÉTAPE 3" data-nl="STAP 3" data-en="STEP 3" data-zh="步骤 3">ÉTAPE 3</div>
+        <h3 data-fr="Génère et colle" data-nl="Genereer en plak" data-en="Generate and paste" data-zh="生成并粘贴">Génère et colle</h3>
+        <p data-fr="Le studio assemble un prompt long, une version courte optimisée mots-clés, et un negative prompt. Copie et colle dans ton générateur préféré." data-nl="De studio bouwt een lange prompt, een korte keyword-versie en een negative prompt. Kopieer en plak in je favoriete generator." data-en="The studio builds a long prompt, a short keyword version, and a negative prompt. Copy and paste into your preferred generator." data-zh="工作室会生成一个完整的长提示词、一个优化关键词的精简版本，以及一个负面提示词。复制并粘贴到你喜欢的生成器中。">Le studio assemble un prompt long, une version courte optimisée mots-clés, et un negative prompt. Copie et colle dans ton générateur préféré.</p>
       </div>
     </div>
     <div class="kbd-list">
-      <span><kbd>/</kbd> <span data-fr="rechercher" data-nl="zoeken" data-en="search">rechercher</span></span>
-      <span><kbd>Shift</kbd>+<kbd>R</kbd> <span data-fr="combo aléatoire" data-nl="willekeurige combo" data-en="random combo">combo aléatoire</span></span>
-      <span><kbd>⌘</kbd>+<kbd>Enter</kbd> <span data-fr="générer le prompt" data-nl="prompt genereren" data-en="generate prompt">générer le prompt</span></span>
-      <span><kbd>Échap</kbd> <span data-fr="fermer" data-nl="sluiten" data-en="close">fermer</span></span>
-      <span data-fr="clic droit ou bouton ★ au survol · ajouter aux favoris" data-nl="rechterklik of ★-knop bij hover · toevoegen aan favorieten" data-en="right-click or ★ button on hover · add to favorites">clic droit ou bouton ★ au survol · ajouter aux favoris</span>
+      <span><kbd>/</kbd> <span data-fr="rechercher" data-nl="zoeken" data-en="search" data-zh="搜索">rechercher</span></span>
+      <span><kbd>Shift</kbd>+<kbd>R</kbd> <span data-fr="combo aléatoire" data-nl="willekeurige combo" data-en="random combo" data-zh="随机组合">combo aléatoire</span></span>
+      <span><kbd>⌘</kbd>+<kbd>Enter</kbd> <span data-fr="générer le prompt" data-nl="prompt genereren" data-en="generate prompt" data-zh="生成提示词">générer le prompt</span></span>
+      <span><kbd>Échap</kbd> <span data-fr="fermer" data-nl="sluiten" data-en="close" data-zh="关闭">fermer</span></span>
+      <span data-fr="clic droit ou bouton ★ au survol · ajouter aux favoris" data-nl="rechterklik of ★-knop bij hover · toevoegen aan favorieten" data-en="right-click or ★ button on hover · add to favorites" data-zh="右键单击或悬停时点击 ★ 按钮 · 添加到收藏">clic droit ou bouton ★ au survol · ajouter aux favoris</span>
     </div>
   </div>
 </section>
 
 <div class="dock" id="dock">
   <div class="dock-info">
-    <div class="dock-n"><span id="dockCount">0</span> <span data-fr="élément(s) sélectionné(s)" data-nl="geselecteerde item(s)" data-en="item(s) selected">élément(s) sélectionné(s)</span></div>
+    <div class="dock-n"><span id="dockCount">0</span> <span data-fr="élément(s) sélectionné(s)" data-nl="geselecteerde item(s)" data-en="item(s) selected" data-zh="个已选元素">élément(s) sélectionné(s)</span></div>
     <div class="dock-preview" id="dockPreview"></div>
   </div>
-  <button class="dock-clear" id="dockClear" data-fr="Vider" data-nl="Leegmaken" data-en="Clear">Vider</button>
-  <button class="btn btn-primary" id="btnGenerate" data-fr="Générer le prompt ✦" data-nl="Prompt genereren ✦" data-en="Generate prompt ✦">Générer le prompt ✦</button>
+  <button class="dock-clear" id="dockClear" data-fr="Vider" data-nl="Leegmaken" data-en="Clear" data-zh="清空">Vider</button>
+  <button class="btn btn-primary" id="btnGenerate" data-fr="Générer le prompt ✦" data-nl="Prompt genereren ✦" data-en="Generate prompt ✦" data-zh="生成提示词 ✦">Générer le prompt ✦</button>
 </div>
 
 <div class="overlay" id="overlay">
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-head">
       <div style="flex:1">
-        <h2 id="modalTitle" data-fr="Prompt vidéo IA" data-nl="AI-videoprompt" data-en="AI video prompt">Prompt vidéo IA</h2>
+        <h2 id="modalTitle" data-fr="Prompt vidéo IA" data-nl="AI-videoprompt" data-en="AI video prompt" data-zh="AI 视频提示词">Prompt vidéo IA</h2>
         <div class="sub" id="modalSub">—</div>
       </div>
-      <button class="x" id="modalClose" aria-label="Fermer" data-fr="Fermer" data-nl="Sluiten" data-en="Close">✕</button>
+      <button class="x" id="modalClose" aria-label="Fermer" data-fr="Fermer" data-nl="Sluiten" data-en="Close" data-zh="关闭">✕</button>
     </div>
     <div class="modal-body">
       <div class="opts">
         <div class="opt">
-          <label for="oModel" data-fr="Modèle cible" data-nl="Doelmodel" data-en="Target model">Modèle cible</label>
+          <label for="oModel" data-fr="Modèle cible" data-nl="Doelmodel" data-en="Target model" data-zh="目标模型">Modèle cible</label>
           <select id="oModel">
             <option>Sora 2</option><option>Runway Gen-4</option><option>Kling 2.0</option><option>Google Veo 3</option><option>Luma Dream Machine</option>
           </select>
         </div>
         <div class="opt">
-          <label for="oRatio" data-fr="Format" data-nl="Formaat" data-en="Format">Format</label>
+          <label for="oRatio" data-fr="Format" data-nl="Formaat" data-en="Format" data-zh="格式">Format</label>
           <select id="oRatio">
-            <option value="16:9" data-fr="16:9 — Cinéma / YouTube" data-nl="16:9 — Bioscoop / YouTube" data-en="16:9 — Cinema / YouTube">16:9 — Cinéma / YouTube</option>
-            <option value="9:16" data-fr="9:16 — TikTok / Reels" data-nl="9:16 — TikTok / Reels" data-en="9:16 — TikTok / Reels">9:16 — TikTok / Reels</option>
-            <option value="1:1" data-fr="1:1 — Carré" data-nl="1:1 — Vierkant" data-en="1:1 — Square">1:1 — Carré</option>
-            <option value="2.39:1" data-fr="2.39:1 — Anamorphique" data-nl="2.39:1 — Anamorfisch" data-en="2.39:1 — Anamorphic">2.39:1 — Anamorphique</option>
+            <option value="16:9" data-fr="16:9 — Cinéma / YouTube" data-nl="16:9 — Bioscoop / YouTube" data-en="16:9 — Cinema / YouTube" data-zh="16:9 — 电影 / YouTube">16:9 — Cinéma / YouTube</option>
+            <option value="9:16" data-fr="9:16 — TikTok / Reels" data-nl="9:16 — TikTok / Reels" data-en="9:16 — TikTok / Reels" data-zh="9:16 — TikTok / Reels">9:16 — TikTok / Reels</option>
+            <option value="1:1" data-fr="1:1 — Carré" data-nl="1:1 — Vierkant" data-en="1:1 — Square" data-zh="1:1 — 方形">1:1 — Carré</option>
+            <option value="2.39:1" data-fr="2.39:1 — Anamorphique" data-nl="2.39:1 — Anamorfisch" data-en="2.39:1 — Anamorphic" data-zh="2.39:1 — 变形宽银幕">2.39:1 — Anamorphique</option>
           </select>
         </div>
         <div class="opt">
-          <label for="oDur" data-fr="Durée" data-nl="Duur" data-en="Duration">Durée</label>
+          <label for="oDur" data-fr="Durée" data-nl="Duur" data-en="Duration" data-zh="时长">Durée</label>
           <select id="oDur">
-            <option value="5 s" data-fr="5 secondes" data-nl="5 seconden" data-en="5 seconds">5 secondes</option>
-            <option value="10 s" selected data-fr="10 secondes" data-nl="10 seconden" data-en="10 seconds">10 secondes</option>
-            <option value="15 s" data-fr="15 secondes" data-nl="15 seconden" data-en="15 seconds">15 secondes</option>
-            <option value="30 s" data-fr="30 secondes" data-nl="30 seconden" data-en="30 seconds">30 secondes</option>
+            <option value="5 s" data-fr="5 secondes" data-nl="5 seconden" data-en="5 seconds" data-zh="5 秒">5 secondes</option>
+            <option value="10 s" selected data-fr="10 secondes" data-nl="10 seconden" data-en="10 seconds" data-zh="10 秒">10 secondes</option>
+            <option value="15 s" data-fr="15 secondes" data-nl="15 seconden" data-en="15 seconds" data-zh="15 秒">15 secondes</option>
+            <option value="30 s" data-fr="30 secondes" data-nl="30 seconden" data-en="30 seconds" data-zh="30 秒">30 secondes</option>
           </select>
         </div>
       </div>
       <div class="prompt-out" id="promptOut"></div>
       <div class="modal-actions">
-        <button class="btn btn-primary" id="btnCopy" data-fr="⧉ Copier le prompt" data-nl="⧉ Prompt kopiëren" data-en="⧉ Copy prompt">⧉ Copier le prompt</button>
-        <a class="btn btn-primary" id="btnOpenStudio" href="https://video.jcode.store" target="_blank" rel="noopener" data-fr="GÉNÉRER" data-nl="GENEREREN" data-en="GENERATE">GÉNÉRER</a>
-        <button class="btn btn-ghost" id="btnDownload" data-fr="↓ Télécharger .txt" data-nl="↓ Download .txt" data-en="↓ Download .txt">↓ Télécharger .txt</button>
-        <button class="btn btn-ghost" id="btnShuffle" data-fr="⟳ Variante" data-nl="⟳ Variant" data-en="⟳ Variant">⟳ Variante</button>
+        <button class="btn btn-primary" id="btnCopy" data-fr="⧉ Copier le prompt" data-nl="⧉ Prompt kopiëren" data-en="⧉ Copy prompt" data-zh="⧉ 复制提示词">⧉ Copier le prompt</button>
+        <a class="btn btn-primary" id="btnOpenStudio" href="https://video.jcode.store" target="_blank" rel="noopener" data-fr="GÉNÉRER" data-nl="GENEREREN" data-en="GENERATE" data-zh="生成">GÉNÉRER</a>
+        <button class="btn btn-ghost" id="btnDownload" data-fr="↓ Télécharger .txt" data-nl="↓ Download .txt" data-en="↓ Download .txt" data-zh="↓ 下载 .txt">↓ Télécharger .txt</button>
+        <button class="btn btn-ghost" id="btnShuffle" data-fr="⟳ Variante" data-nl="⟳ Variant" data-en="⟳ Variant" data-zh="⟳ 变体">⟳ Variante</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="toast" id="toast"><span class="dot"></span><span id="toastMsg" data-fr="Copié !" data-nl="Gekopieerd!" data-en="Copied!">Copié !</span></div>
+<div class="toast" id="toast"><span class="dot"></span><span id="toastMsg" data-fr="Copié !" data-nl="Gekopieerd!" data-en="Copied!" data-zh="已复制！">Copié !</span></div>
 
 <footer>
   <div class="wrap">
-    <p>JCODE Studio — <span id="footTotal">260</span> <span data-fr="effets cinématiques pour la génération vidéo IA." data-nl="cinematische effecten voor AI-videogeneratie." data-en="cinematic effects for AI video generation.">effets cinématiques pour la génération vidéo IA.</span></p>
-    <p style="font-size:12px;color:var(--txt-3);margin-bottom:0"><span data-fr="Propulsé par" data-nl="Aangedreven door" data-en="Powered by">Propulsé par</span> <a href="https://jcode.store" target="_blank" rel="noopener">jcode.store</a> · <span data-fr="Agence de contenu & motion design" data-nl="Content- &amp; motiondesignbureau" data-en="Content &amp; motion design agency">Agence de contenu & motion design</span></p>
+    <p>JCODE Studio — <span id="footTotal">260</span> <span data-fr="effets cinématiques pour la génération vidéo IA." data-nl="cinematische effecten voor AI-videogeneratie." data-en="cinematic effects for AI video generation." data-zh="个电影级特效，用于 AI 视频生成。">effets cinématiques pour la génération vidéo IA.</span></p>
+    <p style="font-size:12px;color:var(--txt-3);margin-bottom:0"><span data-fr="Propulsé par" data-nl="Aangedreven door" data-en="Powered by" data-zh="技术支持：">Propulsé par</span> <a href="https://jcode.store" target="_blank" rel="noopener">jcode.store</a> · <span data-fr="Agence de contenu & motion design" data-nl="Content- &amp; motiondesignbureau" data-en="Content &amp; motion design agency" data-zh="内容与动态设计机构">Agence de contenu & motion design</span></p>
   </div>
 </footer>
 
@@ -420,6 +421,15 @@ const CATS_I18N = {
     business:"Business", voyage:"Reizen & Toerisme", epoque:"Tijdperken & Geschiedenis", art:"Kunststromingen",
     illusion:"Illusies & Optiek", social:"Sociale Formats", science:"Wetenschap & Toekomst", mytho:"Fantasie & Mythologie",
     genre:"Filmgenres", style:"Stijleffecten", systeme:"Volledige Systemen"
+  },
+  zh: {
+    all:"全部",
+    action:"动作与格斗", danse:"舞蹈与动作", camera:"镜头运动", cut:"剪辑与蒙太奇",
+    vfx:"特效", nature:"自然灾害", sport:"运动与表现", vehicule:"车辆与机械",
+    emotion:"情绪与表情", gaming:"游戏与虚拟", musique:"音乐与音频", education:"教育",
+    business:"商业", voyage:"旅行与旅游", epoque:"时代与历史", art:"艺术流派",
+    illusion:"错觉与光学", social:"社交媒体格式", science:"科学与未来", mytho:"奇幻与神话",
+    genre:"电影类型", style:"风格特效", systeme:"完整系统"
   }
 };
 
@@ -771,6 +781,26 @@ const UI_I18N = {
     seedLabel: "Seed", seedVal: "willekeurig, daarna vastgezet na validatie",
     variants: "Genereer 3 varianten, behoud de beste, itereer met kleine aanpassingen",
     modalSub: (n, model, ratio) => `${n} element(en) · ${model} · ${ratio}`
+  },
+  zh: {
+    brief: "🎬  AI 视频简报 — JCODE STUDIO",
+    modelLabel: "目标模型", formatLabel: "格式", durationLabel: "时长", elementsLabel: "组合元素",
+    partLabels: { sujet:"主体与动作", genre:"类型与基调", camera:"镜头", montage:"剪辑与节奏", vfx:"视觉特效", art:"艺术指导", audio:"声音设计" },
+    groupLabels: { sujet:"主体与动作", camera:"镜头运动", montage:"剪辑与节奏", vfx:"特效与 VFX", art:"艺术指导", genre:"类型与基调", audio:"音频", system:"格式 / 系统" },
+    promptHeader: "提示词 — 粘贴到生成器中",
+    scenePrefix: "电影级镜头。",
+    sceneSuffix: "照片级真实渲染，体积光，明显的景深，电影级调色，细腻的胶片颗粒，4K 清晰度，每秒 24 帧，细节丰富的纹理，精致的构图，平滑且有动机的镜头运动，完美的时间连贯性，ARRI Alexa 画质。",
+    formatDur: (ratio, dur) => `格式 ${ratio}，时长 ${dur}。`,
+    shortHeader: "精简版本（最大化模型注意力）",
+    styleHeader: "STYLE KEYWORDS",
+    negativeHeader: "NEGATIVE PROMPT",
+    negative: "模糊，手部变形，面部扭曲，多余肢体，数字伪影，水印，无法辨认的文字，徽标，低分辨率，卡顿，不必要的变形，眼睛不对称，塑料质感皮肤，过曝",
+    settingsHeader: "推荐设置",
+    motionLabel: "Motion strength", motionHigh: "高", motionMed: "中",
+    coherenceLabel: "主体连贯性", coherenceVal: "高",
+    seedLabel: "Seed", seedVal: "随机，验证后锁定",
+    variants: "生成 3 个变体，保留最佳的一个，通过小幅调整反复迭代",
+    modalSub: (n, model, ratio) => `${n} 个元素 · ${model} · ${ratio}`
   }
 };
 
@@ -843,7 +873,7 @@ function renderGrid(){
   $("#shown").textContent = list.length;
 
   if (!list.length) {
-    grid.innerHTML = `<div class="empty"><div class="em">🔍</div><h3>Aucun effet trouvé</h3><p>Essaie un autre mot-clé ou change de catégorie.</p></div>`;
+    grid.innerHTML = `<div class="empty"><div class="em">🔍</div>${currentLang()==="zh" ? "<h3>未找到效果</h3><p>试试其他关键词，或切换分类。</p>" : "<h3>Aucun effet trouvé</h3><p>Essaie un autre mot-clé ou change de catégorie.</p>"}</div>`;
     animIdx = 0; return;
   }
 
@@ -1037,8 +1067,14 @@ function download(){
 }
 
 let toastTimer;
+const TOAST_ZH = {
+  "Ajouté aux favoris ★":"已添加到收藏 ★", "Retiré des favoris":"已从收藏中移除",
+  "Sélectionne au moins un effet ✦":"请至少选择一个效果 ✦", "Combo aléatoire généré ⚡":"已生成随机组合 ⚡",
+  "Fichier téléchargé ↓":"文件已下载 ↓", "Affichage des favoris ★":"显示收藏 ★",
+  "Affichage complet":"显示全部", "Studio réinitialisé":"工作室已重置", "Prompt copié ✓":"提示词已复制 ✓"
+};
 function toast(msg){
-  $("#toastMsg").textContent = msg;
+  $("#toastMsg").textContent = (currentLang()==="zh" && TOAST_ZH[msg]) || msg;
   const t = $("#toast"); t.classList.add("show");
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => t.classList.remove("show"), 2400);
@@ -1094,14 +1130,14 @@ console.log(`%cJCODE STUDIO%c  ${TOTAL} effets chargés · prêt.`, "background:
 // Lecture du paramètre lang dans l'URL (ex: ?lang=en)
 const params = new URLSearchParams(window.location.search);
 const urlLang = params.get('lang');
-if (urlLang && ['fr','nl','en'].includes(urlLang)) {
+if (urlLang && ['fr','nl','en','zh'].includes(urlLang)) {
     localStorage.setItem('studio-lang', urlLang);
 }
     const LANG_KEY = 'studio-lang';
     let LANG = (localStorage.getItem(LANG_KEY) || document.documentElement.lang || 'fr').toLowerCase();
 
     function applyLang(lang) {
-        if (!['fr','nl','en'].includes(lang)) lang = 'fr';
+        if (!['fr','nl','en','zh'].includes(lang)) lang = 'fr';
         LANG = lang;
         localStorage.setItem(LANG_KEY, lang);
         document.documentElement.lang = lang;
@@ -1136,6 +1172,6 @@ if (urlLang && ['fr','nl','en'].includes(urlLang)) {
     });
 })();
 </script>
-<div id="legal-links" style="text-align:center;padding:1.2rem 1rem 1.6rem;font-size:0.78rem;color:#64748b;"><a href="/mentions-legales.html" style="color:#94a3b8;text-decoration:none;" data-fr="Mentions légales" data-nl="Juridische vermeldingen" data-en="Legal notice">Mentions légales</a> &nbsp;·&nbsp; <a href="/privacy-policy.html" style="color:#94a3b8;text-decoration:none;" data-fr="Confidentialité" data-nl="Privacybeleid" data-en="Privacy policy">Confidentialité</a> &nbsp;·&nbsp; <a href="/terms.html" style="color:#94a3b8;text-decoration:none;" data-fr="Conditions" data-nl="Voorwaarden" data-en="Terms">Conditions</a></div>
+<div id="legal-links" style="text-align:center;padding:1.2rem 1rem 1.6rem;font-size:0.78rem;color:#64748b;"><a href="/mentions-legales.html" style="color:#94a3b8;text-decoration:none;" data-fr="Mentions légales" data-nl="Juridische vermeldingen" data-en="Legal notice" data-zh="法律声明">Mentions légales</a> &nbsp;·&nbsp; <a href="/privacy-policy.html" style="color:#94a3b8;text-decoration:none;" data-fr="Confidentialité" data-nl="Privacybeleid" data-en="Privacy policy" data-zh="隐私政策">Confidentialité</a> &nbsp;·&nbsp; <a href="/terms.html" style="color:#94a3b8;text-decoration:none;" data-fr="Conditions" data-nl="Voorwaarden" data-en="Terms" data-zh="条款">Conditions</a></div>
 </body>
 </html>

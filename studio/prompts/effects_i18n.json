@@ -7,6 +7,10 @@
     "nl": {
       "t": "Cinematische Kung Fu",
       "d": "Vloeiende kungfubewegingen, sprongen, trappen, Matrix-achtige slow motion."
+    },
+    "zh": {
+      "t": "功夫电影",
+      "d": "流畅的功夫动作、跳跃、踢腿，黑客帝国式慢动作。"
     }
   },
   "42": {
@@ -17,6 +21,10 @@
     "nl": {
       "t": "Karate Impact",
       "d": "Krachtige klappen, schokgolven, snelheidseffecten."
+    },
+    "zh": {
+      "t": "空手道冲击",
+      "d": "有力的出击、冲击波、速度特效。"
     }
   },
   "43": {
@@ -27,6 +35,10 @@
     "nl": {
       "t": "Boksen / MMA",
       "d": "Ontwijkingen, klappen, zweet, dramatische slow motion."
+    },
+    "zh": {
+      "t": "拳击 / MMA",
+      "d": "闪避、出拳、汗水、戏剧化慢动作。"
     }
   },
   "44": {
@@ -37,6 +49,10 @@
     "nl": {
       "t": "Samoerai / Katana",
       "d": "Zwaardduel, kersenbloesemblaadjes, spanning."
+    },
+    "zh": {
+      "t": "武士 / 武士刀",
+      "d": "剑斗、樱花花瓣、紧张感。"
     }
   },
   "45": {
@@ -47,6 +63,10 @@
     "nl": {
       "t": "Stiekeme Ninja",
       "d": "Geluidloze bewegingen, rook, shurikens."
+    },
+    "zh": {
+      "t": "潜行忍者",
+      "d": "无声的动作、烟雾、手里剑。"
     }
   },
   "46": {
@@ -57,6 +77,10 @@
     "nl": {
       "t": "Fantasy Vechtkunst",
       "d": "Energie-aura, vliegen, magische projectielen."
+    },
+    "zh": {
+      "t": "奇幻武术",
+      "d": "能量光环、飞行、魔法弹。"
     }
   },
   "47": {
@@ -67,6 +91,10 @@
     "nl": {
       "t": "Achtervolgingsscène met Auto",
       "d": "Stedelijke voertuigachtervolging, sprongen, stunts."
+    },
+    "zh": {
+      "t": "飙车追逐",
+      "d": "城市载具追逐、跳跃、特技。"
     }
   },
   "48": {
@@ -77,6 +105,10 @@
     "nl": {
       "t": "Gevecht in Slow Motion",
       "d": "Slow-motion impact, 300/Matrix-stijl."
+    },
+    "zh": {
+      "t": "慢动作格斗",
+      "d": "慢动作冲击，《300》/黑客帝国风格。"
     }
   },
   "49": {
@@ -87,6 +119,10 @@
     "nl": {
       "t": "Wuxia",
       "d": "Luchtgevechten in bamboebossen, visuele poëzie."
+    },
+    "zh": {
+      "t": "武侠",
+      "d": "竹林空中格斗，视觉诗意。"
     }
   },
   "50": {
@@ -97,6 +133,10 @@
     "nl": {
       "t": "Straatgevecht",
       "d": "Ruwe straatgevechten, handheld camera."
+    },
+    "zh": {
+      "t": "街头格斗",
+      "d": "原始的街头搏斗，手持镜头。"
     }
   },
   "51": {
@@ -107,6 +147,10 @@
     "nl": {
       "t": "Hip-Hop / Breakdance",
       "d": "Urban moves, freezes, battles."
+    },
+    "zh": {
+      "t": "嘻哈 / 街舞",
+      "d": "都市舞步、定格、斗舞。"
     }
   },
   "52": {
@@ -117,6 +161,10 @@
     "nl": {
       "t": "Klassiek Ballet",
       "d": "Gratie, pirouettes, podiumverlichting."
+    },
+    "zh": {
+      "t": "古典芭蕾",
+      "d": "优雅、旋转、舞台灯光。"
     }
   },
   "53": {
@@ -127,6 +175,10 @@
     "nl": {
       "t": "Hedendaagse Dans",
       "d": "Vloeiende bewegingen, emotie, stoffen."
+    },
+    "zh": {
+      "t": "现代舞",
+      "d": "流畅的动作、情感、织物。"
     }
   },
   "54": {
@@ -137,6 +189,10 @@
     "nl": {
       "t": "K-pop Choreografie",
       "d": "Perfecte synchronisatie, neon, podium."
+    },
+    "zh": {
+      "t": "K-pop 编舞",
+      "d": "完美同步、霓虹、舞台。"
     }
   },
   "55": {
@@ -147,6 +203,10 @@
     "nl": {
       "t": "Salsa / Tango",
       "d": "Passie, nabijheid, heupbewegingen."
+    },
+    "zh": {
+      "t": "萨尔萨 / 探戈",
+      "d": "激情、亲密、胯部动作。"
     }
   },
   "56": {
@@ -157,6 +217,10 @@
     "nl": {
       "t": "Tapdansen",
       "d": "Ritme, voetenwerk, geluid."
+    },
+    "zh": {
+      "t": "踢踏舞",
+      "d": "节奏、步法、声音。"
     }
   },
   "57": {
@@ -167,6 +231,10 @@
     "nl": {
       "t": "Tribale Vuurdans",
       "d": "Vuur, hypnotiserende bewegingen, percussie."
+    },
+    "zh": {
+      "t": "部落火舞",
+      "d": "火焰、催眠般的动作、打击乐。"
     }
   },
   "58": {
@@ -177,6 +245,10 @@
     "nl": {
       "t": "Vogue / Ballroom",
       "d": "Poses, attitude, strut, catwalk."
+    },
+    "zh": {
+      "t": "Vogue / 舞厅舞",
+      "d": "姿势、气场、昂首阔步、T 台。"
     }
   },
   "59": {
@@ -187,6 +259,10 @@
     "nl": {
       "t": "Bollywooddans",
       "d": "Kleuren, energie, groepsbewegingen."
+    },
+    "zh": {
+      "t": "宝莱坞舞蹈",
+      "d": "色彩、活力、群舞。"
     }
   },
   "60": {
@@ -197,6 +273,10 @@
     "nl": {
       "t": "Slow Motion Dans",
       "d": "Dans in slow motion met deeltjes."
+    },
+    "zh": {
+      "t": "慢动作舞蹈",
+      "d": "带粒子效果的慢动作舞蹈。"
     }
   },
   "61": {
@@ -207,6 +287,10 @@
     "nl": {
       "t": "Dolly Zoom (Vertigo)",
       "d": "Hitchcock-effect, perspectiefvervorming."
+    },
+    "zh": {
+      "t": "滑动变焦（眩晕效应）",
+      "d": "希区柯克效果，透视畸变。"
     }
   },
   "62": {
@@ -217,6 +301,10 @@
     "nl": {
       "t": "360° Orbit",
       "d": "De camera draait rond het onderwerp."
+    },
+    "zh": {
+      "t": "360° 环绕",
+      "d": "镜头围绕主体旋转。"
     }
   },
   "63": {
@@ -227,6 +315,10 @@
     "nl": {
       "t": "Luchtdrone",
       "d": "Uitzicht vanuit de lucht, overvlucht, landschapsonthulling."
+    },
+    "zh": {
+      "t": "航拍无人机",
+      "d": "天空视角、飞越、风景揭示。"
     }
   },
   "64": {
@@ -237,6 +329,10 @@
     "nl": {
       "t": "Kraanshot",
       "d": "Dramatische verticale stijging."
+    },
+    "zh": {
+      "t": "摇臂镜头",
+      "d": "戏剧性的垂直升起。"
     }
   },
   "65": {
@@ -247,6 +343,10 @@
     "nl": {
       "t": "Vloeiende Steadicam",
       "d": "Het onderwerp volgen zonder schokken."
+    },
+    "zh": {
+      "t": "平稳斯坦尼康",
+      "d": "跟随主体，无抖动。"
     }
   },
   "66": {
@@ -257,6 +357,10 @@
     "nl": {
       "t": "Snorricam",
       "d": "Camera bevestigd aan het onderwerp, draaiende wereld."
+    },
+    "zh": {
+      "t": "Snorricam 绑拍",
+      "d": "镜头固定在主体身上，世界旋转。"
     }
   },
   "67": {
@@ -267,6 +371,10 @@
     "nl": {
       "t": "Dramatische Push-In",
       "d": "Langzame zoom naar het gezicht."
+    },
+    "zh": {
+      "t": "戏剧性推镜",
+      "d": "缓慢推向面部。"
     }
   },
   "68": {
@@ -277,6 +385,10 @@
     "nl": {
       "t": "Onthullende Pull-Out",
       "d": "Uitzoomen dat de context onthult."
+    },
+    "zh": {
+      "t": "拉镜揭示",
+      "d": "拉远镜头以展现环境。"
     }
   },
   "69": {
@@ -287,6 +399,10 @@
     "nl": {
       "t": "Whip Pan",
       "d": "Snelle rotatie tussen twee scènes."
+    },
+    "zh": {
+      "t": "甩镜头",
+      "d": "两个场景之间的快速旋转。"
     }
   },
   "70": {
@@ -297,6 +413,10 @@
     "nl": {
       "t": "Rack Focus",
       "d": "Scherp/onscherp overgang tussen voor- en achtergrond."
+    },
+    "zh": {
+      "t": "拉焦",
+      "d": "前景与背景之间清晰/模糊的切换。"
     }
   },
   "71": {
@@ -307,6 +427,10 @@
     "nl": {
       "t": "2.5D Parallax",
       "d": "Diepte gecreëerd vanuit een 2D-beeld."
+    },
+    "zh": {
+      "t": "2.5D 视差",
+      "d": "由 2D 图像生成景深。"
     }
   },
   "72": {
@@ -317,6 +441,10 @@
     "nl": {
       "t": "Tilt Up / Tilt Down",
       "d": "Verticale onthulling."
+    },
+    "zh": {
+      "t": "上摇 / 下摇",
+      "d": "垂直揭示。"
     }
   },
   "73": {
@@ -327,6 +455,10 @@
     "nl": {
       "t": "Zijwaartse Tracking Shot",
       "d": "Vloeiende horizontale beweging."
+    },
+    "zh": {
+      "t": "横向移动跟拍",
+      "d": "平滑的水平移动。"
     }
   },
   "74": {
@@ -337,6 +469,10 @@
     "nl": {
       "t": "Point of View (POV)",
       "d": "Zien door de ogen van het onderwerp."
+    },
+    "zh": {
+      "t": "主观视角（POV）",
+      "d": "透过主体的眼睛观看。"
     }
   },
   "75": {
@@ -347,6 +483,10 @@
     "nl": {
       "t": "Handheld Camera",
       "d": "Organische trilling, urgentie."
+    },
+    "zh": {
+      "t": "手持摄影",
+      "d": "自然的晃动，紧迫感。"
     }
   },
   "76": {
@@ -357,6 +497,10 @@
     "nl": {
       "t": "Jump Cut",
       "d": "Ritmische harde overgangen."
+    },
+    "zh": {
+      "t": "跳切",
+      "d": "有节奏的硬切。"
     }
   },
   "77": {
@@ -367,6 +511,10 @@
     "nl": {
       "t": "Match Cut",
       "d": "Overgang tussen twee vergelijkbare vormen."
+    },
+    "zh": {
+      "t": "匹配剪辑",
+      "d": "两个相似形状之间的转场。"
     }
   },
   "78": {
@@ -377,6 +525,10 @@
     "nl": {
       "t": "Cut on Action",
       "d": "Overgang op het moment van een beweging."
+    },
+    "zh": {
+      "t": "动作剪辑",
+      "d": "在动作发生的瞬间切换。"
     }
   },
   "79": {
@@ -387,6 +539,10 @@
     "nl": {
       "t": "Smash Cut",
       "d": "Abrupte verandering van toon/sfeer."
+    },
+    "zh": {
+      "t": "硬切（Smash Cut）",
+      "d": "基调/情绪的突然转变。"
     }
   },
   "80": {
@@ -397,6 +553,10 @@
     "nl": {
       "t": "Cross Cutting",
       "d": "Afwisselen tussen twee parallelle scènes."
+    },
+    "zh": {
+      "t": "交叉剪辑",
+      "d": "在两个平行场景之间交替。"
     }
   },
   "81": {
@@ -407,6 +567,10 @@
     "nl": {
       "t": "Snelle Montage",
       "d": "Reeks korte, intense shots."
+    },
+    "zh": {
+      "t": "快速蒙太奇",
+      "d": "一连串简短而强烈的镜头。"
     }
   },
   "82": {
@@ -417,6 +581,10 @@
     "nl": {
       "t": "Seriële Montage",
       "d": "Opeenstapeling van beelden om een idee op te bouwen."
+    },
+    "zh": {
+      "t": "系列蒙太奇",
+      "d": "堆叠画面以构建一个观点。"
     }
   },
   "83": {
@@ -427,6 +595,10 @@
     "nl": {
       "t": "Beat Cut",
       "d": "Overgangen gesynchroniseerd met de muziek."
+    },
+    "zh": {
+      "t": "卡点剪辑",
+      "d": "剪辑与音乐同步。"
     }
   },
   "84": {
@@ -437,6 +609,10 @@
     "nl": {
       "t": "Flitsovergang",
       "d": "Witte flits tussen twee shots."
+    },
+    "zh": {
+      "t": "闪白转场",
+      "d": "两个镜头之间的白色闪光。"
     }
   },
   "85": {
@@ -447,6 +623,10 @@
     "nl": {
       "t": "Glitch-overgang",
       "d": "Digitale storing, vervorming."
+    },
+    "zh": {
+      "t": "故障转场",
+      "d": "数字破碎、失真。"
     }
   },
   "86": {
@@ -457,6 +637,10 @@
     "nl": {
       "t": "Morphing-overgang",
       "d": "Vloeiende transformatie van het ene beeld naar het andere."
+    },
+    "zh": {
+      "t": "变形转场",
+      "d": "从一幅图像平滑变形为另一幅。"
     }
   },
   "87": {
@@ -467,6 +651,10 @@
     "nl": {
       "t": "Match Color-overgang",
       "d": "Overgang op een gedeelde kleur."
+    },
+    "zh": {
+      "t": "同色转场",
+      "d": "在共同的颜色上切换。"
     }
   },
   "88": {
@@ -477,6 +665,10 @@
     "nl": {
       "t": "Object-overgang",
       "d": "Een object bedekt het scherm en verandert de scène."
+    },
+    "zh": {
+      "t": "物体转场",
+      "d": "物体遮住屏幕并切换场景。"
     }
   },
   "89": {
@@ -487,6 +679,10 @@
     "nl": {
       "t": "Zoom Cut",
       "d": "Snelle zoom die overgaat in het volgende shot."
+    },
+    "zh": {
+      "t": "变焦剪辑",
+      "d": "快速变焦并成为下一个镜头。"
     }
   },
   "90": {
@@ -497,6 +693,10 @@
     "nl": {
       "t": "Cut to Black",
       "d": "Volledige duisternis, daarna terugkeer."
+    },
+    "zh": {
+      "t": "切黑",
+      "d": "完全黑暗，然后恢复。"
     }
   },
   "91": {
@@ -507,6 +707,10 @@
     "nl": {
       "t": "Cinematische Explosie",
       "d": "Vuurbal, schokgolf, puin."
+    },
+    "zh": {
+      "t": "电影级爆炸",
+      "d": "火球、冲击波、碎片。"
     }
   },
   "92": {
@@ -517,6 +721,10 @@
     "nl": {
       "t": "Superspeed",
       "d": "Flash-achtig effect, sporen, vervorming."
+    },
+    "zh": {
+      "t": "超级速度",
+      "d": "闪电侠式效果、拖尾、扭曲。"
     }
   },
   "93": {
@@ -527,6 +735,10 @@
     "nl": {
       "t": "Onzichtbare Kracht",
       "d": "Telekinese, vliegende voorwerpen."
+    },
+    "zh": {
+      "t": "无形之力",
+      "d": "念力、飞舞的物体。"
     }
   },
   "94": {
@@ -537,6 +749,10 @@
     "nl": {
       "t": "Vuurbal / Energie",
       "d": "Energieprojectie tussen de handen."
+    },
+    "zh": {
+      "t": "火球 / 能量",
+      "d": "双手之间的能量释放。"
     }
   },
   "95": {
@@ -547,6 +763,10 @@
     "nl": {
       "t": "Bliksem / Donder",
       "d": "Elektrische kracht, gloeiende ogen."
+    },
+    "zh": {
+      "t": "闪电 / 雷霆",
+      "d": "电力、发光的双眼。"
     }
   },
   "96": {
@@ -557,6 +777,10 @@
     "nl": {
       "t": "IJs / Vorst",
       "d": "IJskracht, kristallen, koude adem."
+    },
+    "zh": {
+      "t": "冰 / 霜",
+      "d": "冰之力量、水晶、寒气。"
     }
   },
   "97": {
@@ -567,6 +791,10 @@
     "nl": {
       "t": "Teleportatie",
       "d": "Verdwijnen/verschijnen met rook."
+    },
+    "zh": {
+      "t": "瞬间移动",
+      "d": "伴随烟雾消失/出现。"
     }
   },
   "98": {
@@ -577,6 +805,10 @@
     "nl": {
       "t": "Levitatie",
       "d": "Het onderwerp zweeft in de lucht."
+    },
+    "zh": {
+      "t": "悬浮",
+      "d": "主体漂浮在空中。"
     }
   },
   "99": {
@@ -587,6 +819,10 @@
     "nl": {
       "t": "Transformatie",
       "d": "Het onderwerp verandert (mens → dier, enz.)."
+    },
+    "zh": {
+      "t": "变身",
+      "d": "主体发生变身（人类 → 动物等）。"
     }
   },
   "100": {
@@ -597,6 +833,10 @@
     "nl": {
       "t": "Oproeping",
       "d": "Een wezen of element verschijnt."
+    },
+    "zh": {
+      "t": "召唤",
+      "d": "生物或元素出现。"
     }
   },
   "101": {
@@ -607,6 +847,10 @@
     "nl": {
       "t": "Magisch Schild",
       "d": "Beschermende energiekoepel."
+    },
+    "zh": {
+      "t": "魔法护盾",
+      "d": "保护性能量罩。"
     }
   },
   "102": {
@@ -617,6 +861,10 @@
     "nl": {
       "t": "Regeneratie",
       "d": "Een wond die in versnelde tijd geneest."
+    },
+    "zh": {
+      "t": "再生",
+      "d": "伤口以快动作愈合。"
     }
   },
   "103": {
@@ -627,6 +875,10 @@
     "nl": {
       "t": "Tijdcontrole",
       "d": "Bevriezen, terugspoelen, versnellen."
+    },
+    "zh": {
+      "t": "时间控制",
+      "d": "定格、倒带、快进。"
     }
   },
   "104": {
@@ -637,6 +889,10 @@
     "nl": {
       "t": "Dimensionaal Portaal",
       "d": "Opening naar een andere wereld."
+    },
+    "zh": {
+      "t": "次元传送门",
+      "d": "通往另一个世界的入口。"
     }
   },
   "105": {
@@ -647,6 +903,10 @@
     "nl": {
       "t": "Meteorenregen",
       "d": "Een hemel die vlam vat."
+    },
+    "zh": {
+      "t": "陨石雨",
+      "d": "被点燃的天空。"
     }
   },
   "106": {
@@ -657,6 +917,10 @@
     "nl": {
       "t": "Tornado",
       "d": "Heftige wind, puin, zwarte lucht."
+    },
+    "zh": {
+      "t": "龙卷风",
+      "d": "狂风、碎片、黑色天空。"
     }
   },
   "107": {
@@ -667,6 +931,10 @@
     "nl": {
       "t": "Tsunami",
       "d": "Een reusachtige golf die nadert."
+    },
+    "zh": {
+      "t": "海啸",
+      "d": "逼近的巨浪。"
     }
   },
   "108": {
@@ -677,6 +945,10 @@
     "nl": {
       "t": "Aardbeving",
       "d": "Trillende grond, scheuren."
+    },
+    "zh": {
+      "t": "地震",
+      "d": "颤抖的大地、裂缝。"
     }
   },
   "109": {
@@ -687,6 +959,10 @@
     "nl": {
       "t": "Vulkaanuitbarsting",
       "d": "Lava, rook, as."
+    },
+    "zh": {
+      "t": "火山喷发",
+      "d": "熔岩、烟、火山灰。"
     }
   },
   "110": {
@@ -697,6 +973,10 @@
     "nl": {
       "t": "Zandstorm",
       "d": "Een oprukkende stofmuur."
+    },
+    "zh": {
+      "t": "沙尘暴",
+      "d": "推进的尘土之墙。"
     }
   },
   "111": {
@@ -707,6 +987,10 @@
     "nl": {
       "t": "Sneeuwstorm",
       "d": "Zware sneeuw, ijzige wind."
+    },
+    "zh": {
+      "t": "暴风雪",
+      "d": "大雪、刺骨寒风。"
     }
   },
   "112": {
@@ -717,6 +1001,10 @@
     "nl": {
       "t": "Elektrische Storm",
       "d": "Meerdere bliksemschichten, gietende regen."
+    },
+    "zh": {
+      "t": "雷暴",
+      "d": "多道闪电、倾盆大雨。"
     }
   },
   "113": {
@@ -727,6 +1015,10 @@
     "nl": {
       "t": "Noorderlicht",
       "d": "Bewegende groene/roze hemel."
+    },
+    "zh": {
+      "t": "极光",
+      "d": "流动的绿/粉色天空。"
     }
   },
   "114": {
@@ -737,6 +1029,10 @@
     "nl": {
       "t": "Eclips",
       "d": "Zwarte zon, vreemde sfeer."
+    },
+    "zh": {
+      "t": "日食",
+      "d": "黑色的太阳、诡异的氛围。"
     }
   },
   "115": {
@@ -747,6 +1043,10 @@
     "nl": {
       "t": "Vallende Sterrenregen",
       "d": "Magische nachtelijke hemel."
+    },
+    "zh": {
+      "t": "流星雨",
+      "d": "魔幻夜空。"
     }
   },
   "116": {
@@ -757,6 +1057,10 @@
     "nl": {
       "t": "Voetbal",
       "d": "Doelpunt, viering, slow motion."
+    },
+    "zh": {
+      "t": "足球",
+      "d": "进球、庆祝、慢动作。"
     }
   },
   "117": {
@@ -767,6 +1071,10 @@
     "nl": {
       "t": "Basketbal",
       "d": "Dunk, hangtijd, publiek."
+    },
+    "zh": {
+      "t": "篮球",
+      "d": "扣篮、滞空、观众。"
     }
   },
   "118": {
@@ -777,6 +1085,10 @@
     "nl": {
       "t": "Tennis",
       "d": "Snelle rally, smash."
+    },
+    "zh": {
+      "t": "网球",
+      "d": "快速对攻、扣杀。"
     }
   },
   "119": {
@@ -787,6 +1099,10 @@
     "nl": {
       "t": "Hardlopen",
       "d": "Sprint, zweet, inhalen."
+    },
+    "zh": {
+      "t": "跑步",
+      "d": "冲刺、汗水、超越。"
     }
   },
   "120": {
@@ -797,6 +1113,10 @@
     "nl": {
       "t": "Zwemmen",
       "d": "Duik, vloeiende bewegingen, spatten."
+    },
+    "zh": {
+      "t": "游泳",
+      "d": "跳水、流畅的动作、水花。"
     }
   },
   "121": {
@@ -807,6 +1127,10 @@
     "nl": {
       "t": "Skateboarden",
       "d": "Truc, grind, val."
+    },
+    "zh": {
+      "t": "滑板",
+      "d": "技巧、磨轨、摔倒。"
     }
   },
   "122": {
@@ -817,6 +1141,10 @@
     "nl": {
       "t": "Surfen",
       "d": "Golf, tube, spray."
+    },
+    "zh": {
+      "t": "冲浪",
+      "d": "海浪、浪筒、浪花。"
     }
   },
   "123": {
@@ -827,6 +1155,10 @@
     "nl": {
       "t": "Klimmen",
       "d": "Beklimming, inspanning, top."
+    },
+    "zh": {
+      "t": "攀岩",
+      "d": "攀登、用力、登顶。"
     }
   },
   "124": {
@@ -837,6 +1169,10 @@
     "nl": {
       "t": "Gymnastiek",
       "d": "Sprongen, rotaties, gratie."
+    },
+    "zh": {
+      "t": "体操",
+      "d": "跳跃、旋转、优雅。"
     }
   },
   "125": {
@@ -847,6 +1183,10 @@
     "nl": {
       "t": "MMA-kooi",
       "d": "Ronde, KO, slow motion, kooi."
+    },
+    "zh": {
+      "t": "MMA 八角笼",
+      "d": "回合、KO、慢动作、笼子。"
     }
   },
   "126": {
@@ -857,6 +1197,10 @@
     "nl": {
       "t": "Wielrennen",
       "d": "Afdaling, snelheid, landschap."
+    },
+    "zh": {
+      "t": "骑行",
+      "d": "下坡、速度、风景。"
     }
   },
   "127": {
@@ -867,6 +1211,10 @@
     "nl": {
       "t": "Ski / Snowboard",
       "d": "Poedersneeuw, sprong, berg."
+    },
+    "zh": {
+      "t": "滑雪 / 单板滑雪",
+      "d": "粉雪、跳跃、山地。"
     }
   },
   "128": {
@@ -877,6 +1225,10 @@
     "nl": {
       "t": "Formule 1",
       "d": "Snelheid, inhalen, pitstop."
+    },
+    "zh": {
+      "t": "一级方程式",
+      "d": "速度、超车、进站。"
     }
   },
   "129": {
@@ -887,6 +1239,10 @@
     "nl": {
       "t": "Parkour",
       "d": "Stedelijke sprongen te voet, obstakels overwinnen, vloeiendheid."
+    },
+    "zh": {
+      "t": "跑酷",
+      "d": "徒步城市跳跃、跨越障碍、流畅。"
     }
   },
   "130": {
@@ -897,6 +1253,10 @@
     "nl": {
       "t": "Yoga",
       "d": "Houdingen, ademhaling, sereniteit."
+    },
+    "zh": {
+      "t": "瑜伽",
+      "d": "姿势、呼吸、宁静。"
     }
   },
   "131": {
@@ -907,6 +1267,10 @@
     "nl": {
       "t": "Sportwagen",
       "d": "Drift, acceleratie, reflecties."
+    },
+    "zh": {
+      "t": "跑车",
+      "d": "漂移、加速、倒影。"
     }
   },
   "132": {
@@ -917,6 +1281,10 @@
     "nl": {
       "t": "Motorfiets",
       "d": "Wheelie, bocht, snelheid."
+    },
+    "zh": {
+      "t": "摩托车",
+      "d": "翘头、转弯、速度。"
     }
   },
   "133": {
@@ -927,6 +1295,10 @@
     "nl": {
       "t": "Vliegtuig",
       "d": "Opstijgen, wolken, cockpitzicht."
+    },
+    "zh": {
+      "t": "飞机",
+      "d": "起飞、云层、驾驶舱视角。"
     }
   },
   "134": {
@@ -937,6 +1309,10 @@
     "nl": {
       "t": "Helikopter",
       "d": "Overvlucht, rotatie, windstoot."
+    },
+    "zh": {
+      "t": "直升机",
+      "d": "飞越、旋翼、强风。"
     }
   },
   "135": {
@@ -947,6 +1323,10 @@
     "nl": {
       "t": "Boot",
       "d": "Golven, snelheid, sproeiwater."
+    },
+    "zh": {
+      "t": "船",
+      "d": "海浪、速度、浪花。"
     }
   },
   "136": {
@@ -957,6 +1337,10 @@
     "nl": {
       "t": "Trein",
       "d": "Voorbijkomen, voorbijglijdend landschap."
+    },
+    "zh": {
+      "t": "火车",
+      "d": "驶过、风景流动。"
     }
   },
   "137": {
@@ -967,6 +1351,10 @@
     "nl": {
       "t": "Fiets",
       "d": "Tochtje, wiel, pad."
+    },
+    "zh": {
+      "t": "自行车",
+      "d": "骑行、车轮、小路。"
     }
   },
   "138": {
@@ -977,6 +1365,10 @@
     "nl": {
       "t": "Tractor / Landbouw",
       "d": "Veld, ploegen, seizoen."
+    },
+    "zh": {
+      "t": "拖拉机 / 农业",
+      "d": "田野、耕地、季节。"
     }
   },
   "139": {
@@ -987,6 +1379,10 @@
     "nl": {
       "t": "Robot / Mecha",
       "d": "Lopen, transformatie, gevecht."
+    },
+    "zh": {
+      "t": "机器人 / 机甲",
+      "d": "行走、变形、战斗。"
     }
   },
   "140": {
@@ -997,6 +1393,10 @@
     "nl": {
       "t": "Ruimteschip",
       "d": "Opstijgen, hyperruimte, planeet."
+    },
+    "zh": {
+      "t": "宇宙飞船",
+      "d": "起飞、超空间、星球。"
     }
   },
   "141": {
@@ -1007,6 +1407,10 @@
     "nl": {
       "t": "Vreugde",
       "d": "Glimlach, lachen, sprankelende ogen."
+    },
+    "zh": {
+      "t": "喜悦",
+      "d": "微笑、欢笑、闪亮的眼睛。"
     }
   },
   "142": {
@@ -1017,6 +1421,10 @@
     "nl": {
       "t": "Verdriet",
       "d": "Traan, neergeslagen blik, regen."
+    },
+    "zh": {
+      "t": "悲伤",
+      "d": "泪水、低垂的目光、雨。"
     }
   },
   "143": {
@@ -1027,6 +1435,10 @@
     "nl": {
       "t": "Woede",
       "d": "Intense blik, gebalde vuisten, rood."
+    },
+    "zh": {
+      "t": "愤怒",
+      "d": "凌厉的注视、握紧的拳头、红色。"
     }
   },
   "144": {
@@ -1037,6 +1449,10 @@
     "nl": {
       "t": "Angst",
       "d": "Trillen, terugdeinzen, schaduw."
+    },
+    "zh": {
+      "t": "恐惧",
+      "d": "颤抖、退缩、阴影。"
     }
   },
   "145": {
@@ -1047,6 +1463,10 @@
     "nl": {
       "t": "Verrassing",
       "d": "Schrikken, wijd opengesperde ogen, open mond."
+    },
+    "zh": {
+      "t": "惊讶",
+      "d": "惊吓、睁大的眼睛、张开的嘴。"
     }
   },
   "146": {
@@ -1057,6 +1477,10 @@
     "nl": {
       "t": "Liefde",
       "d": "Tedere blik, nabijheid, warm licht."
+    },
+    "zh": {
+      "t": "爱",
+      "d": "温柔的目光、亲密、温暖的光。"
     }
   },
   "147": {
@@ -1067,6 +1491,10 @@
     "nl": {
       "t": "Nostalgie",
       "d": "Herinnering, wazig, sepia."
+    },
+    "zh": {
+      "t": "怀旧",
+      "d": "回忆、模糊、褐色调。"
     }
   },
   "148": {
@@ -1077,6 +1505,10 @@
     "nl": {
       "t": "Vastberadenheid",
       "d": "Vaste blik, gespannen kaak, opzwellende muziek."
+    },
+    "zh": {
+      "t": "决心",
+      "d": "坚定的目光、紧咬的下颌、渐强的音乐。"
     }
   },
   "149": {
@@ -1087,6 +1519,10 @@
     "nl": {
       "t": "Waanzin",
       "d": "Nerveus gelach, onstabiele blik, vervorming."
+    },
+    "zh": {
+      "t": "疯狂",
+      "d": "神经质的笑、不稳定的眼神、扭曲。"
     }
   },
   "150": {
@@ -1097,6 +1533,10 @@
     "nl": {
       "t": "Sereniteit",
       "d": "Langzame ademhaling, ogen sluiten, vrede."
+    },
+    "zh": {
+      "t": "宁静",
+      "d": "缓慢的呼吸、闭上的双眼、平和。"
     }
   },
   "151": {
@@ -1107,6 +1547,10 @@
     "nl": {
       "t": "Let's Play",
       "d": "Reagerende avatar, webcam, gameplay."
+    },
+    "zh": {
+      "t": "游戏实况",
+      "d": "反应头像、摄像头、游戏画面。"
     }
   },
   "152": {
@@ -1117,6 +1561,10 @@
     "nl": {
       "t": "Game Cinematic",
       "d": "Epische AAA-stijl intro."
+    },
+    "zh": {
+      "t": "游戏过场动画",
+      "d": "史诗级 3A 风格开场。"
     }
   },
   "153": {
@@ -1127,6 +1575,10 @@
     "nl": {
       "t": "RPG-personage",
       "d": "Pratend portret, statistieken, inventaris."
+    },
+    "zh": {
+      "t": "RPG 角色",
+      "d": "会说话的肖像、属性、背包。"
     }
   },
   "154": {
@@ -1137,6 +1589,10 @@
     "nl": {
       "t": "Spelkaart",
       "d": "Geanimeerde kaart, eenheden, spreuken."
+    },
+    "zh": {
+      "t": "游戏卡牌",
+      "d": "动画卡牌、单位、法术。"
     }
   },
   "155": {
@@ -1147,6 +1603,10 @@
     "nl": {
       "t": "Streaming Overlay",
       "d": "Geanimeerde achtergrond, meldingen, webcam."
+    },
+    "zh": {
+      "t": "直播叠加层",
+      "d": "动态背景、提醒、摄像头。"
     }
   },
   "156": {
@@ -1157,6 +1617,10 @@
     "nl": {
       "t": "VTuber-avatar",
       "d": "2D/3D-personage dat praat en beweegt."
+    },
+    "zh": {
+      "t": "虚拟主播形象",
+      "d": "会说话、会动的 2D/3D 角色。"
     }
   },
   "157": {
@@ -1167,6 +1631,10 @@
     "nl": {
       "t": "Voxelwereld",
       "d": "Geanimeerde Minecraft-stijl."
+    },
+    "zh": {
+      "t": "体素世界",
+      "d": "动画版 Minecraft 风格。"
     }
   },
   "158": {
@@ -1177,6 +1645,10 @@
     "nl": {
       "t": "Low Poly-wereld",
       "d": "Minimalistische geometrische stijl."
+    },
+    "zh": {
+      "t": "低多边形世界",
+      "d": "极简几何风格。"
     }
   },
   "159": {
@@ -1187,6 +1659,10 @@
     "nl": {
       "t": "Augmented Reality",
       "d": "3D-object in een echte foto."
+    },
+    "zh": {
+      "t": "增强现实",
+      "d": "真实照片中的 3D 物体。"
     }
   },
   "160": {
@@ -1197,6 +1673,10 @@
     "nl": {
       "t": "Virtual Reality",
       "d": "Meeslepend 360°-zicht."
+    },
+    "zh": {
+      "t": "虚拟现实",
+      "d": "沉浸式 360° 视角。"
     }
   },
   "161": {
@@ -1207,6 +1687,10 @@
     "nl": {
       "t": "Rapclip",
       "d": "Stedelijke sfeer, kettingen, neon."
+    },
+    "zh": {
+      "t": "说唱视频",
+      "d": "都市氛围、金链、霓虹。"
     }
   },
   "162": {
@@ -1217,6 +1701,10 @@
     "nl": {
       "t": "Popclip",
       "d": "Felle kleuren, dans, confetti."
+    },
+    "zh": {
+      "t": "流行音乐视频",
+      "d": "明亮色彩、舞蹈、彩纸。"
     }
   },
   "163": {
@@ -1227,6 +1715,10 @@
     "nl": {
       "t": "Rockclip",
       "d": "Gitaar, rook, podium."
+    },
+    "zh": {
+      "t": "摇滚视频",
+      "d": "吉他、烟雾、舞台。"
     }
   },
   "164": {
@@ -1237,6 +1729,10 @@
     "nl": {
       "t": "Electroclip",
       "d": "Neon, lasers, menigte."
+    },
+    "zh": {
+      "t": "电子音乐视频",
+      "d": "霓虹、激光、人群。"
     }
   },
   "165": {
@@ -1247,6 +1743,10 @@
     "nl": {
       "t": "Jazzclip",
       "d": "Donkere club, saxofoon, rook."
+    },
+    "zh": {
+      "t": "爵士视频",
+      "d": "昏暗的俱乐部、萨克斯、烟雾。"
     }
   },
   "166": {
@@ -1257,6 +1757,10 @@
     "nl": {
       "t": "Klassieke Clip",
       "d": "Orkest, kroonluchters, elegantie."
+    },
+    "zh": {
+      "t": "古典音乐视频",
+      "d": "管弦乐团、吊灯、优雅。"
     }
   },
   "167": {
@@ -1267,6 +1771,10 @@
     "nl": {
       "t": "Reggaetonclip",
       "d": "Strand, dans, warme kleuren."
+    },
+    "zh": {
+      "t": "雷鬼顿视频",
+      "d": "海滩、舞蹈、暖色调。"
     }
   },
   "168": {
@@ -1277,6 +1785,10 @@
     "nl": {
       "t": "Countryclip",
       "d": "Weg, platteland, zonsondergang."
+    },
+    "zh": {
+      "t": "乡村音乐视频",
+      "d": "公路、乡野、日落。"
     }
   },
   "169": {
@@ -1287,6 +1799,10 @@
     "nl": {
       "t": "Metalclip",
       "d": "Vuur, chaos, contrast."
+    },
+    "zh": {
+      "t": "金属乐视频",
+      "d": "火焰、混乱、强对比。"
     }
   },
   "170": {
@@ -1297,6 +1813,10 @@
     "nl": {
       "t": "Lo-Fi Clip",
       "d": "Rustige sfeer, anime, regen."
+    },
+    "zh": {
+      "t": "Lo-Fi 视频",
+      "d": "平静的氛围、动漫、雨。"
     }
   },
   "171": {
@@ -1307,6 +1827,10 @@
     "nl": {
       "t": "Wetenschappelijke Uitleg",
       "d": "Geanimeerd diagram, deeltjes, DNA."
+    },
+    "zh": {
+      "t": "科学讲解",
+      "d": "动画图解、粒子、DNA。"
     }
   },
   "172": {
@@ -1317,6 +1841,10 @@
     "nl": {
       "t": "Geschiedenis",
       "d": "Reconstructie van een historische periode."
+    },
+    "zh": {
+      "t": "历史",
+      "d": "历史时期再现。"
     }
   },
   "173": {
@@ -1327,6 +1855,10 @@
     "nl": {
       "t": "Aardrijkskunde",
       "d": "Ontvouwende kaart, 3D-reliëf."
+    },
+    "zh": {
+      "t": "地理",
+      "d": "展开的地图、3D 地形。"
     }
   },
   "174": {
@@ -1337,6 +1869,10 @@
     "nl": {
       "t": "Wiskunde",
       "d": "Vormen, vergelijkingen, demonstratie."
+    },
+    "zh": {
+      "t": "数学",
+      "d": "图形、公式、演示。"
     }
   },
   "175": {
@@ -1347,6 +1883,10 @@
     "nl": {
       "t": "Talen",
       "d": "Geïllustreerd woord, uitspraak, context."
+    },
+    "zh": {
+      "t": "语言",
+      "d": "配图单词、发音、语境。"
     }
   },
   "176": {
@@ -1357,6 +1897,10 @@
     "nl": {
       "t": "Koken",
       "d": "Geanimeerd stap-voor-stap recept."
+    },
+    "zh": {
+      "t": "烹饪",
+      "d": "动画分步食谱。"
     }
   },
   "177": {
@@ -1367,6 +1911,10 @@
     "nl": {
       "t": "Doe-het-zelf",
       "d": "Visuele tutorial, handen, gereedschap."
+    },
+    "zh": {
+      "t": "DIY 手工",
+      "d": "可视化教程、双手、工具。"
     }
   },
   "178": {
@@ -1377,6 +1925,10 @@
     "nl": {
       "t": "Medisch",
       "d": "Anatomie, orgaan, bloedsomloop."
+    },
+    "zh": {
+      "t": "医学",
+      "d": "解剖、器官、循环。"
     }
   },
   "179": {
@@ -1387,6 +1939,10 @@
     "nl": {
       "t": "Astronomie",
       "d": "Planeten, sterrenstelsels, zwarte gaten."
+    },
+    "zh": {
+      "t": "天文",
+      "d": "行星、星系、黑洞。"
     }
   },
   "180": {
@@ -1397,6 +1953,10 @@
     "nl": {
       "t": "Natuurdocumentaire",
       "d": "Dier, plant, ecosysteem."
+    },
+    "zh": {
+      "t": "自然纪录片",
+      "d": "动物、植物、生态系统。"
     }
   },
   "181": {
@@ -1407,6 +1967,10 @@
     "nl": {
       "t": "Productpresentatie",
       "d": "Rotatie, zoom, kernpunten."
+    },
+    "zh": {
+      "t": "产品展示",
+      "d": "旋转、放大、要点。"
     }
   },
   "182": {
@@ -1417,6 +1981,10 @@
     "nl": {
       "t": "Klantgetuigenis",
       "d": "Pratend portret, citaat."
+    },
+    "zh": {
+      "t": "客户评价",
+      "d": "会说话的肖像、引语。"
     }
   },
   "183": {
@@ -1427,6 +1995,10 @@
     "nl": {
       "t": "Bedrijfsaankondiging",
       "d": "Geanimeerd logo, team, visie."
+    },
+    "zh": {
+      "t": "公司公告",
+      "d": "动画标志、团队、愿景。"
     }
   },
   "184": {
@@ -1437,6 +2009,10 @@
     "nl": {
       "t": "Werving",
       "d": "Kantoor, team, bedrijfscultuur."
+    },
+    "zh": {
+      "t": "招聘",
+      "d": "办公室、团队、企业文化。"
     }
   },
   "185": {
@@ -1447,6 +2023,10 @@
     "nl": {
       "t": "Interne Training",
       "d": "Geanimeerde slides, schema's."
+    },
+    "zh": {
+      "t": "内部培训",
+      "d": "动画幻灯片、图表。"
     }
   },
   "186": {
@@ -1457,6 +2037,10 @@
     "nl": {
       "t": "Jaarverslag",
       "d": "Cijfers, grafieken, groei."
+    },
+    "zh": {
+      "t": "年度报告",
+      "d": "数据、图表、增长。"
     }
   },
   "187": {
@@ -1467,6 +2051,10 @@
     "nl": {
       "t": "Vastgoed",
       "d": "Virtuele rondleiding, plattegronden, buurt."
+    },
+    "zh": {
+      "t": "房地产",
+      "d": "虚拟看房、户型图、社区。"
     }
   },
   "188": {
@@ -1477,6 +2065,10 @@
     "nl": {
       "t": "Restaurant",
       "d": "Gerecht, sfeer, service."
+    },
+    "zh": {
+      "t": "餐厅",
+      "d": "菜品、氛围、服务。"
     }
   },
   "189": {
@@ -1487,6 +2079,10 @@
     "nl": {
       "t": "Hotel",
       "d": "Kamer, zwembad, uitzicht."
+    },
+    "zh": {
+      "t": "酒店",
+      "d": "客房、泳池、景观。"
     }
   },
   "190": {
@@ -1497,6 +2093,10 @@
     "nl": {
       "t": "Winkel",
       "d": "Etalage, product, promotie."
+    },
+    "zh": {
+      "t": "商店",
+      "d": "店面、产品、促销。"
     }
   },
   "191": {
@@ -1507,6 +2107,10 @@
     "nl": {
       "t": "Geanimeerde Ansichtkaart",
       "d": "Een monument dat tot leven komt."
+    },
+    "zh": {
+      "t": "动态明信片",
+      "d": "活起来的名胜古迹。"
     }
   },
   "192": {
@@ -1517,6 +2121,10 @@
     "nl": {
       "t": "Toeristische Gids",
       "d": "Plek, geschiedenis, tips."
+    },
+    "zh": {
+      "t": "旅游向导",
+      "d": "地点、历史、贴士。"
     }
   },
   "193": {
@@ -1527,6 +2135,10 @@
     "nl": {
       "t": "Road Trip",
       "d": "Weg, landschap, stops."
+    },
+    "zh": {
+      "t": "公路旅行",
+      "d": "道路、风景、停靠站。"
     }
   },
   "194": {
@@ -1537,6 +2149,10 @@
     "nl": {
       "t": "Cruise",
       "d": "Zee, dek, tussenstops."
+    },
+    "zh": {
+      "t": "邮轮",
+      "d": "大海、甲板、停靠港。"
     }
   },
   "195": {
@@ -1547,6 +2163,10 @@
     "nl": {
       "t": "Safari",
       "d": "Dieren, savanne, zonsondergang."
+    },
+    "zh": {
+      "t": "野生动物园",
+      "d": "动物、草原、日落。"
     }
   },
   "196": {
@@ -1557,6 +2177,10 @@
     "nl": {
       "t": "Berg",
       "d": "Top, sneeuw, wandeling."
+    },
+    "zh": {
+      "t": "山",
+      "d": "山顶、雪、徒步。"
     }
   },
   "197": {
@@ -1567,6 +2191,10 @@
     "nl": {
       "t": "Paradijselijk Strand",
       "d": "Zand, palmbomen, golven."
+    },
+    "zh": {
+      "t": "天堂海滩",
+      "d": "沙滩、棕榈树、海浪。"
     }
   },
   "198": {
@@ -1577,6 +2205,10 @@
     "nl": {
       "t": "Stad bij Nacht",
       "d": "Lichten, verkeer, leven."
+    },
+    "zh": {
+      "t": "夜晚的城市",
+      "d": "灯光、车流、生活。"
     }
   },
   "199": {
@@ -1587,6 +2219,10 @@
     "nl": {
       "t": "Traditioneel Dorp",
       "d": "Huizen, steegjes, ambacht."
+    },
+    "zh": {
+      "t": "传统村落",
+      "d": "房屋、小巷、手工艺。"
     }
   },
   "200": {
@@ -1597,6 +2233,10 @@
     "nl": {
       "t": "Extreem Avontuur",
       "d": "Sprong, waterval, adrenaline."
+    },
+    "zh": {
+      "t": "极限冒险",
+      "d": "跳跃、瀑布、肾上腺素。"
     }
   },
   "201": {
@@ -1607,6 +2247,10 @@
     "nl": {
       "t": "Prehistorie",
       "d": "Dinosaurussen, vulkanen, wilde natuur."
+    },
+    "zh": {
+      "t": "史前时代",
+      "d": "恐龙、火山、野性自然。"
     }
   },
   "202": {
@@ -1617,6 +2261,10 @@
     "nl": {
       "t": "Oud-Egypte",
       "d": "Piramides, hiërogliefen, farao."
+    },
+    "zh": {
+      "t": "古埃及",
+      "d": "金字塔、象形文字、法老。"
     }
   },
   "203": {
@@ -1627,6 +2275,10 @@
     "nl": {
       "t": "Oud-Griekenland",
       "d": "Tempel, filosofen, mythologie."
+    },
+    "zh": {
+      "t": "古希腊",
+      "d": "神庙、哲学家、神话。"
     }
   },
   "204": {
@@ -1637,6 +2289,10 @@
     "nl": {
       "t": "Oud-Rome",
       "d": "Colosseum, legioenen, keizer."
+    },
+    "zh": {
+      "t": "古罗马",
+      "d": "斗兽场、军团、皇帝。"
     }
   },
   "205": {
@@ -1647,6 +2303,10 @@
     "nl": {
       "t": "Middeleeuwen",
       "d": "Kasteel, ridders, toernooi."
+    },
+    "zh": {
+      "t": "中世纪",
+      "d": "城堡、骑士、比武。"
     }
   },
   "206": {
@@ -1657,6 +2317,10 @@
     "nl": {
       "t": "Renaissance",
       "d": "Kunst, uitvinders, steden."
+    },
+    "zh": {
+      "t": "文艺复兴",
+      "d": "艺术、发明家、城市。"
     }
   },
   "207": {
@@ -1667,6 +2331,10 @@
     "nl": {
       "t": "18e Eeuw",
       "d": "Versailles, koetsen, lichten."
+    },
+    "zh": {
+      "t": "18 世纪",
+      "d": "凡尔赛、马车、灯火。"
     }
   },
   "208": {
@@ -1677,6 +2345,10 @@
     "nl": {
       "t": "Jaren 1920",
       "d": "Charleston, Art Deco, jazz."
+    },
+    "zh": {
+      "t": "1920 年代",
+      "d": "查尔斯顿舞、装饰艺术、爵士。"
     }
   },
   "209": {
@@ -1687,6 +2359,10 @@
     "nl": {
       "t": "Jaren 1950",
       "d": "Rock-'n-roll, auto's, drive-in."
+    },
+    "zh": {
+      "t": "1950 年代",
+      "d": "摇滚乐、汽车、露天电影院。"
     }
   },
   "210": {
@@ -1697,6 +2373,10 @@
     "nl": {
       "t": "Jaren 1980",
       "d": "Neon, VHS, synthwave."
+    },
+    "zh": {
+      "t": "1980 年代",
+      "d": "霓虹、VHS、合成波。"
     }
   },
   "211": {
@@ -1707,6 +2387,10 @@
     "nl": {
       "t": "Jaren 2000",
       "d": "Y2K, MSN, mode."
+    },
+    "zh": {
+      "t": "2000 年代",
+      "d": "千禧年风格、MSN、时尚。"
     }
   },
   "212": {
@@ -1717,6 +2401,10 @@
     "nl": {
       "t": "Toekomst 2100",
       "d": "High-tech stad, AI, robots."
+    },
+    "zh": {
+      "t": "未来 2100",
+      "d": "高科技城市、AI、机器人。"
     }
   },
   "213": {
@@ -1727,6 +2415,10 @@
     "nl": {
       "t": "Impressionisme",
       "d": "Penseelstreken, licht, natuur."
+    },
+    "zh": {
+      "t": "印象派",
+      "d": "笔触、光线、自然。"
     }
   },
   "214": {
@@ -1737,6 +2429,10 @@
     "nl": {
       "t": "Kubisme",
       "d": "Geometrische vormen, meerdere gezichtspunten."
+    },
+    "zh": {
+      "t": "立体主义",
+      "d": "几何形状、多重视角。"
     }
   },
   "215": {
@@ -1747,6 +2443,10 @@
     "nl": {
       "t": "Surrealisme",
       "d": "Droom, absurditeit, Dalí."
+    },
+    "zh": {
+      "t": "超现实主义",
+      "d": "梦境、荒诞、达利。"
     }
   },
   "216": {
@@ -1757,6 +2457,10 @@
     "nl": {
       "t": "Pop Art",
       "d": "Felle kleuren, Warhol, strips."
+    },
+    "zh": {
+      "t": "波普艺术",
+      "d": "明亮色彩、沃霍尔、漫画。"
     }
   },
   "217": {
@@ -1767,6 +2471,10 @@
     "nl": {
       "t": "Art Nouveau",
       "d": "Krommen, bloemen, Mucha."
+    },
+    "zh": {
+      "t": "新艺术运动",
+      "d": "曲线、花卉、穆夏。"
     }
   },
   "218": {
@@ -1777,6 +2485,10 @@
     "nl": {
       "t": "Art Deco",
       "d": "Geometrie, goud, jaren 20."
+    },
+    "zh": {
+      "t": "装饰艺术",
+      "d": "几何、金色、1920 年代。"
     }
   },
   "219": {
@@ -1787,6 +2499,10 @@
     "nl": {
       "t": "Bauhaus",
       "d": "Minimalisme, functie, vormen."
+    },
+    "zh": {
+      "t": "包豪斯",
+      "d": "极简、功能、形状。"
     }
   },
   "220": {
@@ -1797,6 +2513,10 @@
     "nl": {
       "t": "Expressionisme",
       "d": "Rauwe emotie, intense kleuren."
+    },
+    "zh": {
+      "t": "表现主义",
+      "d": "原始情感、强烈色彩。"
     }
   },
   "221": {
@@ -1807,6 +2527,10 @@
     "nl": {
       "t": "Minimalisme",
       "d": "Strak, stil, essentieel."
+    },
+    "zh": {
+      "t": "极简主义",
+      "d": "干净、安静、本质。"
     }
   },
   "222": {
@@ -1817,6 +2541,10 @@
     "nl": {
       "t": "Barok",
       "d": "Weelde, beweging, theatraliteit."
+    },
+    "zh": {
+      "t": "巴洛克",
+      "d": "奢华、动感、戏剧性。"
     }
   },
   "223": {
@@ -1827,6 +2555,10 @@
     "nl": {
       "t": "Trompe-l'œil",
       "d": "Het beeld lijkt uit het kader te breken."
+    },
+    "zh": {
+      "t": "错视画",
+      "d": "画面仿佛要冲出画框。"
     }
   },
   "224": {
@@ -1837,6 +2569,10 @@
     "nl": {
       "t": "Anamorfose",
       "d": "Vervormd beeld dat vanuit een hoek zichtbaar wordt."
+    },
+    "zh": {
+      "t": "变形画",
+      "d": "从特定角度才能还原的扭曲图像。"
     }
   },
   "225": {
@@ -1847,6 +2583,10 @@
     "nl": {
       "t": "Dubbele Betekenis",
       "d": "Twee beelden in één."
+    },
+    "zh": {
+      "t": "双关图像",
+      "d": "一幅画里有两个图像。"
     }
   },
   "226": {
@@ -1857,6 +2597,10 @@
     "nl": {
       "t": "Escher",
       "d": "Onmogelijke trappen, lussen."
+    },
+    "zh": {
+      "t": "埃舍尔",
+      "d": "不可能的楼梯、循环。"
     }
   },
   "227": {
@@ -1867,6 +2611,10 @@
     "nl": {
       "t": "Optische Illusie",
       "d": "Waargenomen beweging zonder echte beweging."
+    },
+    "zh": {
+      "t": "视错觉",
+      "d": "没有真实运动却感知到的运动。"
     }
   },
   "228": {
@@ -1877,6 +2625,10 @@
     "nl": {
       "t": "Forced Perspective",
       "d": "Grootte vervormd door perspectief."
+    },
+    "zh": {
+      "t": "强制透视",
+      "d": "透视造成的尺寸扭曲。"
     }
   },
   "229": {
@@ -1887,6 +2639,10 @@
     "nl": {
       "t": "Oneindige Reflectie",
       "d": "Spiegels, herhaling."
+    },
+    "zh": {
+      "t": "无限反射",
+      "d": "镜子、重复。"
     }
   },
   "230": {
@@ -1897,6 +2653,10 @@
     "nl": {
       "t": "Compositieportret",
       "d": "Een gezicht gemaakt van andere beelden."
+    },
+    "zh": {
+      "t": "拼贴肖像",
+      "d": "由其他图像组成的面孔。"
     }
   },
   "231": {
@@ -1907,6 +2667,10 @@
     "nl": {
       "t": "TikTok Hook",
       "d": "3 seconden om te boeien."
+    },
+    "zh": {
+      "t": "TikTok 开场钩子",
+      "d": "3 秒抓住注意力。"
     }
   },
   "232": {
@@ -1917,6 +2681,10 @@
     "nl": {
       "t": "Reel-overgang",
       "d": "Virale overgang."
+    },
+    "zh": {
+      "t": "Reels 转场",
+      "d": "爆款转场。"
     }
   },
   "233": {
@@ -1927,6 +2695,10 @@
     "nl": {
       "t": "YouTube-intro",
       "d": "Geanimeerd logo, muziek."
+    },
+    "zh": {
+      "t": "YouTube 片头",
+      "d": "动画标志、音乐。"
     }
   },
   "234": {
@@ -1937,6 +2709,10 @@
     "nl": {
       "t": "Virale Short",
       "d": "Perfecte loop."
+    },
+    "zh": {
+      "t": "爆款短视频",
+      "d": "完美循环。"
     }
   },
   "235": {
@@ -1947,6 +2723,10 @@
     "nl": {
       "t": "Instagram Story",
       "d": "Poll, vraag, swipe."
+    },
+    "zh": {
+      "t": "Instagram 快拍",
+      "d": "投票、提问、滑动。"
     }
   },
   "236": {
@@ -1957,6 +2737,10 @@
     "nl": {
       "t": "Livestream",
       "d": "Overlay, chat, meldingen."
+    },
+    "zh": {
+      "t": "直播",
+      "d": "叠加层、聊天、提醒。"
     }
   },
   "237": {
@@ -1967,6 +2751,10 @@
     "nl": {
       "t": "Podcast Visual",
       "d": "Golfvormen, citaat, gast."
+    },
+    "zh": {
+      "t": "播客视觉",
+      "d": "声波、引语、嘉宾。"
     }
   },
   "238": {
@@ -1977,6 +2765,10 @@
     "nl": {
       "t": "Meme Trend",
       "d": "Actueel format met een twist."
+    },
+    "zh": {
+      "t": "热门梗",
+      "d": "当下流行格式的搞笑改编。"
     }
   },
   "239": {
@@ -1987,6 +2779,10 @@
     "nl": {
       "t": "Voor / Na",
       "d": "Opvallende transformatie."
+    },
+    "zh": {
+      "t": "前后对比",
+      "d": "惊人的转变。"
     }
   },
   "240": {
@@ -1997,6 +2793,10 @@
     "nl": {
       "t": "Day in the Life",
       "d": "Versnelde routine."
+    },
+    "zh": {
+      "t": "日常一天",
+      "d": "快进的日常。"
     }
   },
   "241": {
@@ -2007,6 +2807,10 @@
     "nl": {
       "t": "DNA",
       "d": "Draaiende dubbele helix."
+    },
+    "zh": {
+      "t": "DNA",
+      "d": "旋转的双螺旋。"
     }
   },
   "242": {
@@ -2017,6 +2821,10 @@
     "nl": {
       "t": "Cel",
       "d": "Mitose, organellen, beweging."
+    },
+    "zh": {
+      "t": "细胞",
+      "d": "有丝分裂、细胞器、运动。"
     }
   },
   "243": {
@@ -2027,6 +2835,10 @@
     "nl": {
       "t": "Brein",
       "d": "Neuronen, synapsen, activiteit."
+    },
+    "zh": {
+      "t": "大脑",
+      "d": "神经元、突触、活动。"
     }
   },
   "244": {
@@ -2037,6 +2849,10 @@
     "nl": {
       "t": "Ruimte",
       "d": "Melkwegstelsel, zwart gat, nevel."
+    },
+    "zh": {
+      "t": "太空",
+      "d": "星系、黑洞、星云。"
     }
   },
   "245": {
@@ -2047,6 +2863,10 @@
     "nl": {
       "t": "Robotica",
       "d": "Arm, drone, AI."
+    },
+    "zh": {
+      "t": "机器人技术",
+      "d": "机械臂、无人机、AI。"
     }
   },
   "246": {
@@ -2057,6 +2877,10 @@
     "nl": {
       "t": "Nanotechnologie",
       "d": "Microscopische schaal."
+    },
+    "zh": {
+      "t": "纳米技术",
+      "d": "微观尺度。"
     }
   },
   "247": {
@@ -2067,6 +2891,10 @@
     "nl": {
       "t": "Kwantumrealiteit",
       "d": "Deeltjes, superpositie."
+    },
+    "zh": {
+      "t": "量子现实",
+      "d": "粒子、叠加态。"
     }
   },
   "248": {
@@ -2077,6 +2905,10 @@
     "nl": {
       "t": "Klonen",
       "d": "Duplicatie van het onderwerp."
+    },
+    "zh": {
+      "t": "克隆",
+      "d": "主体的复制。"
     }
   },
   "249": {
@@ -2087,6 +2919,10 @@
     "nl": {
       "t": "Terraforming",
       "d": "Een planeet die bewoonbaar wordt."
+    },
+    "zh": {
+      "t": "地球化改造",
+      "d": "星球变得宜居。"
     }
   },
   "250": {
@@ -2097,6 +2933,10 @@
     "nl": {
       "t": "Post-apocalyptisch",
       "d": "Ruïnes, overleven, natuur die terugkeert."
+    },
+    "zh": {
+      "t": "后末日",
+      "d": "废墟、生存、自然夺回。"
     }
   },
   "251": {
@@ -2107,6 +2947,10 @@
     "nl": {
       "t": "Draak",
       "d": "Vlucht, vuur, schubben."
+    },
+    "zh": {
+      "t": "龙",
+      "d": "飞行、火焰、鳞片。"
     }
   },
   "252": {
@@ -2117,6 +2961,10 @@
     "nl": {
       "t": "Eenhoorn",
       "d": "Magisch bos, regenboog."
+    },
+    "zh": {
+      "t": "独角兽",
+      "d": "魔法森林、彩虹。"
     }
   },
   "253": {
@@ -2127,6 +2975,10 @@
     "nl": {
       "t": "Zeemeermin",
       "d": "Oceaan, gezang, staart."
+    },
+    "zh": {
+      "t": "美人鱼",
+      "d": "海洋、歌声、鱼尾。"
     }
   },
   "254": {
@@ -2137,6 +2989,10 @@
     "nl": {
       "t": "Feniks",
       "d": "Wedergeboorte in vlammen."
+    },
+    "zh": {
+      "t": "凤凰",
+      "d": "浴火重生。"
     }
   },
   "255": {
@@ -2147,6 +3003,10 @@
     "nl": {
       "t": "Weerwolf",
       "d": "Transformatie, volle maan."
+    },
+    "zh": {
+      "t": "狼人",
+      "d": "变身、满月。"
     }
   },
   "256": {
@@ -2157,6 +3017,10 @@
     "nl": {
       "t": "Vampier",
       "d": "Nacht, kasteel, slagtanden."
+    },
+    "zh": {
+      "t": "吸血鬼",
+      "d": "夜晚、城堡、獠牙。"
     }
   },
   "257": {
@@ -2167,6 +3031,10 @@
     "nl": {
       "t": "Spook",
       "d": "Verschijning, transparantie, kou."
+    },
+    "zh": {
+      "t": "幽灵",
+      "d": "显现、透明、寒意。"
     }
   },
   "258": {
@@ -2177,6 +3045,10 @@
     "nl": {
       "t": "Engel / Demon",
       "d": "Vleugels, halo, contrast."
+    },
+    "zh": {
+      "t": "天使 / 恶魔",
+      "d": "翅膀、光环、对比。"
     }
   },
   "259": {
@@ -2187,6 +3059,10 @@
     "nl": {
       "t": "Noorse God",
       "d": "Donder, hamer, Walhalla."
+    },
+    "zh": {
+      "t": "北欧神明",
+      "d": "雷霆、战锤、英灵殿。"
     }
   },
   "260": {
@@ -2197,6 +3073,10 @@
     "nl": {
       "t": "Wezen uit de Diepzee",
       "d": "Diepte, tentakels, duisternis."
+    },
+    "zh": {
+      "t": "深渊生物",
+      "d": "深海、触手、黑暗。"
     }
   },
   "261": {
@@ -2207,6 +3087,10 @@
     "nl": {
       "t": "Western",
       "d": "Duel, stof, zonsondergang."
+    },
+    "zh": {
+      "t": "西部片",
+      "d": "决斗、尘土、日落。"
     }
   },
   "262": {
@@ -2217,6 +3101,10 @@
     "nl": {
       "t": "Misdaadfilm",
       "d": "Onderzoek, regen, regenjas."
+    },
+    "zh": {
+      "t": "黑色犯罪",
+      "d": "调查、雨、风衣。"
     }
   },
   "263": {
@@ -2227,6 +3115,10 @@
     "nl": {
       "t": "Horror",
       "d": "Schrikmoment, schaduw, stilte."
+    },
+    "zh": {
+      "t": "恐怖",
+      "d": "突然惊吓、阴影、寂静。"
     }
   },
   "264": {
@@ -2237,6 +3129,10 @@
     "nl": {
       "t": "Komedie",
       "d": "Gag, timing, expressie."
+    },
+    "zh": {
+      "t": "喜剧",
+      "d": "笑料、节奏、表情。"
     }
   },
   "265": {
@@ -2247,6 +3143,10 @@
     "nl": {
       "t": "Romantiek",
       "d": "Blik, regen, kus."
+    },
+    "zh": {
+      "t": "爱情",
+      "d": "对视、雨、亲吻。"
     }
   },
   "266": {
@@ -2257,6 +3157,10 @@
     "nl": {
       "t": "Sciencefiction",
       "d": "Toekomst, technologie, vraag."
+    },
+    "zh": {
+      "t": "科幻",
+      "d": "未来、科技、疑问。"
     }
   },
   "267": {
@@ -2267,6 +3171,10 @@
     "nl": {
       "t": "Fantasy",
       "d": "Queeste, magie, wezen."
+    },
+    "zh": {
+      "t": "奇幻",
+      "d": "探险、魔法、生物。"
     }
   },
   "268": {
@@ -2277,6 +3185,10 @@
     "nl": {
       "t": "Thriller",
       "d": "Spanning, achtervolging, twist."
+    },
+    "zh": {
+      "t": "惊悚",
+      "d": "紧张、追逐、反转。"
     }
   },
   "269": {
@@ -2287,6 +3199,10 @@
     "nl": {
       "t": "Documentaire",
       "d": "Echte beelden, getuigenis, archief."
+    },
+    "zh": {
+      "t": "纪录片",
+      "d": "真实影像、证词、档案。"
     }
   },
   "270": {
@@ -2297,6 +3213,10 @@
     "nl": {
       "t": "Film Noir",
       "d": "Schaduw, sigaret, femme fatale."
+    },
+    "zh": {
+      "t": "黑色电影",
+      "d": "阴影、香烟、蛇蝎美人。"
     }
   },
   "271": {
@@ -2307,6 +3227,10 @@
     "nl": {
       "t": "Musical",
       "d": "Dans, zang, kleur."
+    },
+    "zh": {
+      "t": "音乐剧",
+      "d": "舞蹈、歌唱、色彩。"
     }
   },
   "272": {
@@ -2317,6 +3241,10 @@
     "nl": {
       "t": "Oorlog",
       "d": "Slagveld, soldaat, opoffering."
+    },
+    "zh": {
+      "t": "战争",
+      "d": "战场、士兵、牺牲。"
     }
   },
   "273": {
@@ -2327,6 +3255,10 @@
     "nl": {
       "t": "Spionage",
       "d": "Gadget, infiltratie, twist."
+    },
+    "zh": {
+      "t": "谍战",
+      "d": "装备、潜入、反转。"
     }
   },
   "274": {
@@ -2337,6 +3269,10 @@
     "nl": {
       "t": "Ramp",
       "d": "Chaos, overleven, redding."
+    },
+    "zh": {
+      "t": "灾难",
+      "d": "混乱、生存、救援。"
     }
   },
   "275": {
@@ -2347,6 +3283,10 @@
     "nl": {
       "t": "Biopic",
       "d": "Leven, tijdperk, transformatie."
+    },
+    "zh": {
+      "t": "传记片",
+      "d": "人生、时代、蜕变。"
     }
   },
   "276": {
@@ -2357,6 +3297,10 @@
     "nl": {
       "t": "Rotoscoop",
       "d": "Animatie over echte beelden."
+    },
+    "zh": {
+      "t": "转描技术",
+      "d": "在真实影像上绘制动画。"
     }
   },
   "277": {
@@ -2367,6 +3311,10 @@
     "nl": {
       "t": "Cel Shading",
       "d": "3D-cartoonweergave."
+    },
+    "zh": {
+      "t": "赛璐珞渲染",
+      "d": "3D 卡通渲染。"
     }
   },
   "278": {
@@ -2377,6 +3325,10 @@
     "nl": {
       "t": "Low Poly",
       "d": "Geometrische facetten."
+    },
+    "zh": {
+      "t": "低多边形",
+      "d": "几何切面。"
     }
   },
   "279": {
@@ -2387,6 +3339,10 @@
     "nl": {
       "t": "Pixel Art",
       "d": "8/16-bit-stijl."
+    },
+    "zh": {
+      "t": "像素艺术",
+      "d": "8/16 位风格。"
     }
   },
   "280": {
@@ -2397,6 +3353,10 @@
     "nl": {
       "t": "Vector",
       "d": "Plat, scherpe contouren."
+    },
+    "zh": {
+      "t": "矢量",
+      "d": "扁平、锐利的轮廓。"
     }
   },
   "281": {
@@ -2407,6 +3367,10 @@
     "nl": {
       "t": "Gravure",
       "d": "Arcering, inkt, antiek."
+    },
+    "zh": {
+      "t": "版画",
+      "d": "排线、墨水、古旧。"
     }
   },
   "282": {
@@ -2417,6 +3381,10 @@
     "nl": {
       "t": "Glas-in-lood",
       "d": "Lood, kleur, licht."
+    },
+    "zh": {
+      "t": "彩色玻璃",
+      "d": "铅条、色彩、光线。"
     }
   },
   "283": {
@@ -2427,6 +3395,10 @@
     "nl": {
       "t": "Mozaïek",
       "d": "Tesserae, antiek."
+    },
+    "zh": {
+      "t": "马赛克",
+      "d": "镶嵌片、古风。"
     }
   },
   "284": {
@@ -2437,6 +3409,10 @@
     "nl": {
       "t": "Origami",
       "d": "Gevouwen papier, hoeken."
+    },
+    "zh": {
+      "t": "折纸",
+      "d": "折叠的纸、棱角。"
     }
   },
   "285": {
@@ -2447,6 +3423,10 @@
     "nl": {
       "t": "Papercut",
       "d": "Uitgesneden papier, schaduwen."
+    },
+    "zh": {
+      "t": "剪纸",
+      "d": "剪裁的纸、阴影。"
     }
   },
   "286": {
@@ -2457,6 +3437,10 @@
     "nl": {
       "t": "Neonbord",
       "d": "Gloeiende buis, nacht."
+    },
+    "zh": {
+      "t": "霓虹灯牌",
+      "d": "发光灯管、夜晚。"
     }
   },
   "287": {
@@ -2467,6 +3451,10 @@
     "nl": {
       "t": "Hologram",
       "d": "Transparantie, scanlines."
+    },
+    "zh": {
+      "t": "全息影像",
+      "d": "透明、扫描线。"
     }
   },
   "288": {
@@ -2477,6 +3465,10 @@
     "nl": {
       "t": "Röntgen",
       "d": "Zicht door materie."
+    },
+    "zh": {
+      "t": "X 光",
+      "d": "透视物质。"
     }
   },
   "289": {
@@ -2487,6 +3479,10 @@
     "nl": {
       "t": "Thermisch",
       "d": "Infraroodcamera."
+    },
+    "zh": {
+      "t": "热成像",
+      "d": "红外摄像机。"
     }
   },
   "290": {
@@ -2497,6 +3493,10 @@
     "nl": {
       "t": "Sonar / Radar",
       "d": "Detectie, golven."
+    },
+    "zh": {
+      "t": "声呐 / 雷达",
+      "d": "探测、波。"
     }
   },
   "291": {
@@ -2507,6 +3507,10 @@
     "nl": {
       "t": "Volledige Creatieve Studio",
       "d": "Alle effecten in één app met categorieën."
+    },
+    "zh": {
+      "t": "全能创意工作室",
+      "d": "所有效果集于一个应用，按类别分类。"
     }
   },
   "292": {
@@ -2517,6 +3521,10 @@
     "nl": {
       "t": "Volledig Willekeurige Modus",
       "d": "De AI kiest stijl, beweging, camera, belichting."
+    },
+    "zh": {
+      "t": "全随机模式",
+      "d": "AI 选择风格、动作、镜头、灯光。"
     }
   },
   "293": {
@@ -2527,6 +3535,10 @@
     "nl": {
       "t": "YouTube-kanaalmodus",
       "d": "Genereert intro + video + outro."
+    },
+    "zh": {
+      "t": "YouTube 频道模式",
+      "d": "生成片头 + 视频 + 片尾。"
     }
   },
   "294": {
@@ -2537,6 +3549,10 @@
     "nl": {
       "t": "Advertentiemodus",
       "d": "Hook + product + CTA."
+    },
+    "zh": {
+      "t": "广告模式",
+      "d": "钩子 + 产品 + 行动号召。"
     }
   },
   "295": {
@@ -2547,6 +3563,10 @@
     "nl": {
       "t": "5-Shot Story-modus",
       "d": "Automatische opdeling."
+    },
+    "zh": {
+      "t": "5 镜头故事模式",
+      "d": "自动拆解。"
     }
   },
   "296": {
@@ -2557,6 +3577,10 @@
     "nl": {
       "t": "Muziekvideomodus",
       "d": "Beat-synchronisatie + overgangen."
+    },
+    "zh": {
+      "t": "音乐视频模式",
+      "d": "节拍同步 + 剪辑。"
     }
   },
   "297": {
@@ -2567,6 +3591,10 @@
     "nl": {
       "t": "Levend Portret-modus",
       "d": "Ogen, mond, ademhaling."
+    },
+    "zh": {
+      "t": "生动肖像模式",
+      "d": "眼睛、嘴巴、呼吸。"
     }
   },
   "298": {
@@ -2577,6 +3605,10 @@
     "nl": {
       "t": "Oude Foto-modus",
       "d": "Restauratie + animatie."
+    },
+    "zh": {
+      "t": "老照片模式",
+      "d": "修复 + 动画。"
     }
   },
   "299": {
@@ -2587,6 +3619,10 @@
     "nl": {
       "t": "Pratende Avatar-modus",
       "d": "TTS + lipsynchronisatie."
+    },
+    "zh": {
+      "t": "说话头像模式",
+      "d": "TTS + 口型同步。"
     }
   },
   "300": {
@@ -2597,6 +3633,10 @@
     "nl": {
       "t": "Multi-Beeld → 1 Video-modus",
       "d": "Cinematische diavoorstelling."
+    },
+    "zh": {
+      "t": "多图 → 1 视频模式",
+      "d": "电影感幻灯片。"
     }
   }
 }
