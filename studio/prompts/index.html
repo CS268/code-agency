@@ -805,7 +805,7 @@ const UI_I18N = {
 };
 
 let EFFECTS_I18N = {};
-fetch("effects_i18n.json").then(r => r.json()).then(j => {
+fetch("effects_i18n.json?v=zh1").then(r => r.json()).then(j => {
   EFFECTS_I18N = j;
   renderGrid();
   updateDock();
